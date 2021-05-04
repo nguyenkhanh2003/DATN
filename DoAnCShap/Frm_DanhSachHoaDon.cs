@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace DoAnCShap
 {
-    public partial class Login : Form
+    public partial class Frm_DanhSachHoaDon : Form
     {
-        public Login()
+        public Frm_DanhSachHoaDon()
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+       
+        private void btnLapHoaDon_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Frm_HoaDonBanHang hoaDonBanHang = new Frm_HoaDonBanHang();
+          
+            hoaDonBanHang.ShowDialog();
+            
         }
     }
 }

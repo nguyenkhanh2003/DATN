@@ -89,5 +89,21 @@ namespace DoAnCShap
         {
             openChildForm(new Frm_NhapLinhKien());
         }
+
+        private void pictureBoxLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+           // login.TopLevel = false;
+           // panelChildForm.Controls.Add(login);
+           // login.Dock = DockStyle.None;
+            login.BringToFront();
+            
+            login.ShowDialog();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Frm_DanhSachHoaDon());
+        }
     }
 }

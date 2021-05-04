@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnCShap
 {
-    public partial class Login : Form
+    public partial class Frm_ChiTietHoaDon : Form
     {
-        public Login()
+        public Frm_ChiTietHoaDon()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

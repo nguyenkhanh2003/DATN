@@ -54,11 +54,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>Frm_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DanhSachHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DanhSachHoaDon.Designer.cs">
+      <DependentUpon>Frm_DanhSachHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_DSTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_DSTaiKhoan.Designer.cs">
       <DependentUpon>Frm_DSTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_HoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_HoaDonBanHang.Designer.cs">
+      <DependentUpon>Frm_HoaDonBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_KH.cs">
       <SubType>Form</SubType>
@@ -113,8 +131,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ChiTietHoaDon.resx">
+      <DependentUpon>Frm_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DanhSachHoaDon.resx">
+      <DependentUpon>Frm_DanhSachHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_DSTaiKhoan.resx">
       <DependentUpon>Frm_DSTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_HoaDonBanHang.resx">
+      <DependentUpon>Frm_HoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_KH.resx">
       <DependentUpon>Frm_KH.cs</DependentUpon>
