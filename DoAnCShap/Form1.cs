@@ -87,7 +87,7 @@ namespace DoAnCShap
 
         private void btnPhieuNhap_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_NhapLinhKien());
+            openChildForm(new Frm_DanhSachNhapPhieu());
         }
 
         private void pictureBoxLogin_Click(object sender, EventArgs e)
