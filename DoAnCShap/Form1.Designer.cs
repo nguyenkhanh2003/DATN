@@ -31,7 +31,6 @@ namespace DoAnCShap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.pictureBoxLogin = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnBaoHanh = new System.Windows.Forms.Button();
@@ -47,8 +46,8 @@ namespace DoAnCShap
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).BeginInit();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,8 +55,9 @@ namespace DoAnCShap
             // 
             // panelSideMenu
             // 
+            this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
-            this.panelSideMenu.Controls.Add(this.pictureBoxLogin);
+            this.panelSideMenu.Controls.Add(this.button1);
             this.panelSideMenu.Controls.Add(this.btnExit);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
             this.panelSideMenu.Controls.Add(this.btnBaoHanh);
@@ -72,20 +72,8 @@ namespace DoAnCShap
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(208, 627);
+            this.panelSideMenu.Size = new System.Drawing.Size(218, 627);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // pictureBoxLogin
-            // 
-            this.pictureBoxLogin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogin.Image")));
-            this.pictureBoxLogin.Location = new System.Drawing.Point(67, 98);
-            this.pictureBoxLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBoxLogin.Name = "pictureBoxLogin";
-            this.pictureBoxLogin.Size = new System.Drawing.Size(74, 64);
-            this.pictureBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogin.TabIndex = 13;
-            this.pictureBoxLogin.TabStop = false;
-            this.pictureBoxLogin.Click += new System.EventHandler(this.pictureBoxLogin_Click);
             // 
             // btnExit
             // 
@@ -99,7 +87,7 @@ namespace DoAnCShap
             this.btnExit.Location = new System.Drawing.Point(0, 582);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(208, 45);
+            this.btnExit.Size = new System.Drawing.Size(218, 45);
             this.btnExit.TabIndex = 12;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
@@ -108,6 +96,7 @@ namespace DoAnCShap
             // btnThongKe
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnThongKe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -116,10 +105,10 @@ namespace DoAnCShap
             this.btnThongKe.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 589);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 452);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnThongKe.Size = new System.Drawing.Size(214, 34);
+            this.btnThongKe.Size = new System.Drawing.Size(218, 46);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,6 +117,7 @@ namespace DoAnCShap
             // btnBaoHanh
             // 
             this.btnBaoHanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnBaoHanh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBaoHanh.FlatAppearance.BorderSize = 0;
             this.btnBaoHanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnBaoHanh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -136,10 +126,10 @@ namespace DoAnCShap
             this.btnBaoHanh.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnBaoHanh.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoHanh.Image")));
             this.btnBaoHanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaoHanh.Location = new System.Drawing.Point(0, 526);
+            this.btnBaoHanh.Location = new System.Drawing.Point(0, 407);
             this.btnBaoHanh.Name = "btnBaoHanh";
             this.btnBaoHanh.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnBaoHanh.Size = new System.Drawing.Size(214, 45);
+            this.btnBaoHanh.Size = new System.Drawing.Size(218, 45);
             this.btnBaoHanh.TabIndex = 2;
             this.btnBaoHanh.Text = "Bảo Hành";
             this.btnBaoHanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -148,6 +138,7 @@ namespace DoAnCShap
             // btnNCC
             // 
             this.btnNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnNCC.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNCC.FlatAppearance.BorderSize = 0;
             this.btnNCC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnNCC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -156,10 +147,10 @@ namespace DoAnCShap
             this.btnNCC.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnNCC.Image = ((System.Drawing.Image)(resources.GetObject("btnNCC.Image")));
             this.btnNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNCC.Location = new System.Drawing.Point(0, 424);
+            this.btnNCC.Location = new System.Drawing.Point(0, 362);
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnNCC.Size = new System.Drawing.Size(214, 45);
+            this.btnNCC.Size = new System.Drawing.Size(218, 45);
             this.btnNCC.TabIndex = 2;
             this.btnNCC.Text = "Quản Lý Nhà Cung Cấp";
             this.btnNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -169,6 +160,7 @@ namespace DoAnCShap
             // btnLinhKien
             // 
             this.btnLinhKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnLinhKien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLinhKien.FlatAppearance.BorderSize = 0;
             this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnLinhKien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -177,10 +169,10 @@ namespace DoAnCShap
             this.btnLinhKien.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnLinhKien.Image = ((System.Drawing.Image)(resources.GetObject("btnLinhKien.Image")));
             this.btnLinhKien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLinhKien.Location = new System.Drawing.Point(0, 322);
+            this.btnLinhKien.Location = new System.Drawing.Point(0, 317);
             this.btnLinhKien.Name = "btnLinhKien";
             this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnLinhKien.Size = new System.Drawing.Size(214, 45);
+            this.btnLinhKien.Size = new System.Drawing.Size(218, 45);
             this.btnLinhKien.TabIndex = 2;
             this.btnLinhKien.Text = "Quản Lý Linh Kiện";
             this.btnLinhKien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -189,9 +181,8 @@ namespace DoAnCShap
             // 
             // btnPhieuNhap
             // 
-            this.btnPhieuNhap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPhieuNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhieuNhap.FlatAppearance.BorderSize = 0;
             this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnPhieuNhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -200,10 +191,10 @@ namespace DoAnCShap
             this.btnPhieuNhap.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuNhap.Image")));
             this.btnPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhieuNhap.Location = new System.Drawing.Point(0, 475);
+            this.btnPhieuNhap.Location = new System.Drawing.Point(0, 272);
             this.btnPhieuNhap.Name = "btnPhieuNhap";
             this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnPhieuNhap.Size = new System.Drawing.Size(208, 45);
+            this.btnPhieuNhap.Size = new System.Drawing.Size(218, 45);
             this.btnPhieuNhap.TabIndex = 2;
             this.btnPhieuNhap.Text = "Phiếu Nhập";
             this.btnPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -212,9 +203,8 @@ namespace DoAnCShap
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -223,10 +213,10 @@ namespace DoAnCShap
             this.btnHoaDon.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Image")));
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.Location = new System.Drawing.Point(0, 373);
+            this.btnHoaDon.Location = new System.Drawing.Point(0, 227);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnHoaDon.Size = new System.Drawing.Size(208, 45);
+            this.btnHoaDon.Size = new System.Drawing.Size(218, 45);
             this.btnHoaDon.TabIndex = 2;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -235,9 +225,8 @@ namespace DoAnCShap
             // 
             // btnKhachHang
             // 
-            this.btnKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhachHang.FlatAppearance.BorderSize = 0;
             this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -246,10 +235,10 @@ namespace DoAnCShap
             this.btnKhachHang.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 271);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 182);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnKhachHang.Size = new System.Drawing.Size(208, 45);
+            this.btnKhachHang.Size = new System.Drawing.Size(218, 45);
             this.btnKhachHang.TabIndex = 2;
             this.btnKhachHang.Text = "Quản Lý Khách Hàng";
             this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -259,6 +248,7 @@ namespace DoAnCShap
             // btnNhanVien
             // 
             this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -267,10 +257,10 @@ namespace DoAnCShap
             this.btnNhanVien.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 219);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 137);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnNhanVien.Size = new System.Drawing.Size(214, 45);
+            this.btnNhanVien.Size = new System.Drawing.Size(218, 45);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Quản Lý Nhân Viên";
             this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -279,9 +269,8 @@ namespace DoAnCShap
             // 
             // btn_TaiKhoan
             // 
-            this.btn_TaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_TaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.btn_TaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_TaiKhoan.FlatAppearance.BorderSize = 0;
             this.btn_TaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btn_TaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -290,10 +279,10 @@ namespace DoAnCShap
             this.btn_TaiKhoan.ForeColor = System.Drawing.Color.Goldenrod;
             this.btn_TaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoan.Image")));
             this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(0, 168);
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(0, 92);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             this.btn_TaiKhoan.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_TaiKhoan.Size = new System.Drawing.Size(208, 45);
+            this.btn_TaiKhoan.Size = new System.Drawing.Size(218, 45);
             this.btn_TaiKhoan.TabIndex = 2;
             this.btn_TaiKhoan.Text = "Quản Lý Tài Khoản";
             this.btn_TaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -306,7 +295,7 @@ namespace DoAnCShap
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(208, 92);
+            this.panelLogo.Size = new System.Drawing.Size(218, 92);
             this.panelLogo.TabIndex = 1;
             // 
             // pictureBox1
@@ -316,7 +305,7 @@ namespace DoAnCShap
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(218, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -326,9 +315,9 @@ namespace DoAnCShap
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(208, 582);
+            this.panel2.Location = new System.Drawing.Point(218, 582);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(820, 45);
+            this.panel2.Size = new System.Drawing.Size(810, 45);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -347,11 +336,29 @@ namespace DoAnCShap
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(208, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(218, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(820, 582);
+            this.panelChildForm.Size = new System.Drawing.Size(810, 582);
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 498);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 53);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Login";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -368,7 +375,6 @@ namespace DoAnCShap
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSideMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).EndInit();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -395,7 +401,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnPhieuNhap;
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.PictureBox pictureBoxLogin;
+        private System.Windows.Forms.Button button1;
     }
 }
 
