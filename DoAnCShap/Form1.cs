@@ -105,5 +105,10 @@ namespace DoAnCShap
         {
             openChildForm(new Frm_DanhSachHoaDon());
         }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
