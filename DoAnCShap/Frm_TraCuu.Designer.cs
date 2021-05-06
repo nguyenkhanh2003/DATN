@@ -73,7 +73,7 @@ namespace DoAnCShap
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(960, 74);
@@ -129,7 +129,7 @@ namespace DoAnCShap
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(13, 179);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(676, 165);
@@ -141,7 +141,7 @@ namespace DoAnCShap
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(13, 374);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(959, 223);
@@ -155,7 +155,7 @@ namespace DoAnCShap
             this.groupBox4.Controls.Add(this.radioButton7);
             this.groupBox4.Controls.Add(this.radioButton6);
             this.groupBox4.Controls.Add(this.radioButton5);
-            this.groupBox4.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox4.ForeColor = System.Drawing.Color.Black;
             this.groupBox4.Location = new System.Drawing.Point(708, 179);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(124, 165);

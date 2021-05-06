@@ -110,5 +110,10 @@ namespace DoAnCShap
         {
 
         }
+
+        private void btnBaoHanh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

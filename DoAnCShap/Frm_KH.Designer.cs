@@ -52,7 +52,7 @@ namespace DoAnCShap
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -68,7 +68,7 @@ namespace DoAnCShap
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -84,7 +84,7 @@ namespace DoAnCShap
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -100,7 +100,7 @@ namespace DoAnCShap
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,7 +115,7 @@ namespace DoAnCShap
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -132,7 +132,7 @@ namespace DoAnCShap
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
