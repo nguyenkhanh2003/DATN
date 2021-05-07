@@ -75,6 +75,7 @@ namespace DoAnCShap
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.Teal;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
@@ -88,7 +89,7 @@ namespace DoAnCShap
             this.btnExit.Size = new System.Drawing.Size(218, 45);
             this.btnExit.TabIndex = 12;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnThongKe
