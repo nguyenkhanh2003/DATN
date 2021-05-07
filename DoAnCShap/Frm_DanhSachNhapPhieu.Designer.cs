@@ -48,10 +48,10 @@
             // 
             this.labelDanhSachHoaDon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelDanhSachHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDanhSachHoaDon.ForeColor = System.Drawing.Color.Goldenrod;
+            this.labelDanhSachHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDanhSachHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelDanhSachHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.labelDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.labelDanhSachHoaDon.Name = "labelDanhSachHoaDon";
             this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 57);
             this.labelDanhSachHoaDon.TabIndex = 2;
@@ -66,9 +66,9 @@
             this.groupBoxLapPhieuNhap.Controls.Add(this.label2);
             this.groupBoxLapPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxLapPhieuNhap.Location = new System.Drawing.Point(0, 57);
-            this.groupBoxLapPhieuNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxLapPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxLapPhieuNhap.Name = "groupBoxLapPhieuNhap";
-            this.groupBoxLapPhieuNhap.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxLapPhieuNhap.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxLapPhieuNhap.Size = new System.Drawing.Size(984, 48);
             this.groupBoxLapPhieuNhap.TabIndex = 3;
             this.groupBoxLapPhieuNhap.TabStop = false;
@@ -81,7 +81,7 @@
             this.btnLapHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
             this.btnLapHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLapHoaDon.Location = new System.Drawing.Point(768, 5);
-            this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnLapHoaDon.Name = "btnLapHoaDon";
             this.btnLapHoaDon.Size = new System.Drawing.Size(207, 34);
             this.btnLapHoaDon.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(115, 11);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 28);
             this.textBox1.TabIndex = 1;
@@ -114,9 +114,9 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 105);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(984, 556);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -127,7 +127,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.groupBoxLapPhieuNhap);
             this.Controls.Add(this.labelDanhSachHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_DanhSachNhapPhieu";
             this.Text = "Frm_DanhSachNhapPhieu";
             this.groupBoxLapPhieuNhap.ResumeLayout(false);
