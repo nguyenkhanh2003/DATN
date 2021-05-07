@@ -118,26 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAyxJREFUaEPt2VnIjUEcx/FDkhQhpESWCJG1LFG2LEmUiHKBlJIi2bJExIUtFy6E
-        RHJDoZQSZUlcWqKsKYULIdkK4fu7+Ne/p+ec8zxz3nPmvDq/+tyMZ+adOc8zzzMzCo00Un/pgNk4hrt4
-        ice4gK3oi7pOO6zCW/wt4xJ6o+7SGdeQ1ulSlqFu0hV6hHwHP+II1NHJWIBNSF4nSxA9LaBn33fsFDqi
-        WGbhO+z6PxiBqFkJP4jdyJJOeAWr9x7R0hpPYJ05izwZDqsrixElI+E7Mgh5cxRW/5wKYmQdrBNXVRCQ
-        mbA2PqsgRk7DOnFQBQFpA2tDeqLm0ZywDmxQQWC+wdoZqIIy6Q6tFH5gjAoqzXFYB7apICBaDVgb0gvl
-        shq+zgxUlO2wxq6oICBTYW18QluUS3/8gtXTnZmI4IyDNfYTIc/3Xlgbl1WQMeNh9aTiwfiPmr7weaLX
-        te6C1V+IPNFgkncmeM5onWQNyQpkSRdowlq9Z9DyP2+GwQ9Ggu6M1lq34BvS3CmVCXgOu/435iA0yTsj
-        QYPRL/kQviHtSXZiGvQIjcUi3IC/TnRdpUmbM0GPWQ/4RyWLr9Cr1GcwDuNMgEfw7Wsw+gGDol/XN1bM
-        TYxGMlrqpF0fSi+T4LSCtrx6nb6GfvkPuI/90K9U7HtxHmkdCvUUUaKtwUZsDnAHfhAv0AfNKmvgd53v
-        EDw/YiU5CO02h6BZRR/g5J3INAg9w/rYHMBt6MOmZUpT0MtAy5y1KHV4YUkOIvOcmI57sIrVdgjFkjYn
-        yt6JltgHvwGqFd3xAfBJHidlnhN74Bv/Ap0qrscU6FGr1CRoCbMLb+D/nr5BWjlYdOhn/5Z5TsyHb1SP
-        1ihUOzvg/+4DWLS20+70OjKdH7eHTtL9IEKW2qGZBz+Y4KPVpbBGtGYZilpHi0Hrg5Y7QfFnuidUECHa
-        gFkfJOj/VvRutwbmqiBSfD+WqyBv/Ou2nwoiRUep1o8tKsgbqyxZzpuqlZOwfpTbRqemMZAmTmMglv9y
-        IPqqpq2RauEimmwg9SJoIDoBTGsspuQ5WKboUFmHbn4XF5O2Dt3QSCPxUyj8AzaoTwMQtcz3AAAAAElF
-        TkSuQmCC
-</value>
-  </data>
   <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
