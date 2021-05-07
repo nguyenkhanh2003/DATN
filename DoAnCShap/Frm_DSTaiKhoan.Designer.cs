@@ -28,40 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThemTaiKhoan = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelX1
-            // 
-            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(984, 57);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "DANH SÁCH TÀI KHOẢN";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.labelX1.Click += new System.EventHandler(this.labelX1_Click);
             // 
             // groupBox1
             // 
@@ -70,7 +49,7 @@
             this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 57);
+            this.groupBox1.Location = new System.Drawing.Point(0, 50);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -88,7 +67,7 @@
             this.btnThemTaiKhoan.Location = new System.Drawing.Point(811, 26);
             this.btnThemTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
-            this.btnThemTaiKhoan.Size = new System.Drawing.Size(162, 44);
+            this.btnThemTaiKhoan.Size = new System.Drawing.Size(162, 574);
             this.btnThemTaiKhoan.TabIndex = 2;
             this.btnThemTaiKhoan.Text = "Thêm Tài Khoản";
             this.btnThemTaiKhoan.UseVisualStyleBackColor = false;
@@ -118,11 +97,11 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 138);
+            this.groupBox2.Location = new System.Drawing.Point(0, 131);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(984, 523);
+            this.groupBox2.Size = new System.Drawing.Size(984, 530);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -137,8 +116,29 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(979, 449);
+            this.dataGridView1.Size = new System.Drawing.Size(979, 456);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // labelX1
+            // 
+            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.labelX1.Location = new System.Drawing.Point(0, 0);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(984, 50);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "DANH SÁCH TÀI KHOẢN";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.labelX1.Click += new System.EventHandler(this.labelX1_Click);
             // 
             // panel1
             // 
@@ -148,7 +148,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 57);
+            this.panel1.Size = new System.Drawing.Size(984, 50);
             this.panel1.TabIndex = 0;
             // 
             // Frm_DSTaiKhoan
@@ -175,13 +175,13 @@
         }
 
         #endregion
-        private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThemTaiKhoan;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.Panel panel1;
     }
 }
