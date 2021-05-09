@@ -15,11 +15,17 @@ namespace DoAnCShap
         public Frm_NhanVien()
         {
             InitializeComponent();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

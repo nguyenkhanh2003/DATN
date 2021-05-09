@@ -26,5 +26,40 @@ namespace DoAnCShap
         {
 
         }
+
+        private void btnLoadAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog o = new OpenFileDialog();
+
+            o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
+
+            if (o.ShowDialog() == DialogResult.Cancel)
+            {
+                MessageBox.Show("Bạn Chưa Chọn Ảnh");
+
+            }
+
+            else
+            {
+
+
+                foreach (string ten in o.FileNames)
+                {
+                    string[] tenhinh = ten.Split('\\');
+                    txtHinhSP.Text = tenhinh[tenhinh.Length - 1];
+
+                    PictureBox p = new PictureBox();
+
+                    Size s = new Size(200, 250);
+                    p.Size = s;
+
+                    pictureBox1.Controls.Add(p);
+                    Bitmap a = new Bitmap(ten);
+                    p.Image = a;
+                    p.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                }
+            }
+        }
     }
 }
