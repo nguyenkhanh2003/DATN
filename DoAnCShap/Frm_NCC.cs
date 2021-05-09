@@ -26,5 +26,10 @@ namespace DoAnCShap
         {
 
         }
+
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -157,7 +157,7 @@ namespace DoAnCShap
             this.comboBox1.Items.AddRange(new object[] {
             "Nam ",
             "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(95, 145);
+            this.comboBox1.Location = new System.Drawing.Point(95, 156);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 3;

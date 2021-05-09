@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_DanhSachHoaDon));
             this.labelDanhSachHoaDon = new DevComponents.DotNetBar.LabelX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLapHoaDon = new System.Windows.Forms.Button();
@@ -92,12 +93,14 @@
             this.btnLapHoaDon.AutoSize = true;
             this.btnLapHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
             this.btnLapHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnLapHoaDon.Image")));
             this.btnLapHoaDon.Location = new System.Drawing.Point(813, 5);
             this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnLapHoaDon.Name = "btnLapHoaDon";
             this.btnLapHoaDon.Size = new System.Drawing.Size(162, 76);
             this.btnLapHoaDon.TabIndex = 2;
             this.btnLapHoaDon.Text = "Lập Hóa Đơn";
+            this.btnLapHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLapHoaDon.UseVisualStyleBackColor = false;
             this.btnLapHoaDon.Click += new System.EventHandler(this.btnLapHoaDon_Click);
             // 
