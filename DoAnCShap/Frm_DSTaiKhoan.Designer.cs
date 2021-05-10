@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_DSTaiKhoan));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThemTaiKhoan = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -64,12 +65,14 @@
             this.btnThemTaiKhoan.AutoSize = true;
             this.btnThemTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
             this.btnThemTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemTaiKhoan.Location = new System.Drawing.Point(811, 26);
+            this.btnThemTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTaiKhoan.Image")));
+            this.btnThemTaiKhoan.Location = new System.Drawing.Point(772, 26);
             this.btnThemTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
-            this.btnThemTaiKhoan.Size = new System.Drawing.Size(162, 574);
+            this.btnThemTaiKhoan.Size = new System.Drawing.Size(201, 51);
             this.btnThemTaiKhoan.TabIndex = 2;
             this.btnThemTaiKhoan.Text = "Thêm Tài Khoản";
+            this.btnThemTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemTaiKhoan.UseVisualStyleBackColor = false;
             this.btnThemTaiKhoan.Click += new System.EventHandler(this.button1_Click);
             // 
