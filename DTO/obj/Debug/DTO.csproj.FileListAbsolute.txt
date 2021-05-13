@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\bin\Debug\DTO.dll
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\bin\Debug\DTO.pdb
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.dll
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.pdb
+=======
+C:\Users\Nguyen Khanh\source\repos\DATN\DTO\bin\Debug\DTO.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\DTO\bin\Debug\DTO.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.pdb
+>>>>>>> b8505cad04bb00abb90e94b9feba451b57dc2486

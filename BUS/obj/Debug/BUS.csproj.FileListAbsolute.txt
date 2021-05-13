@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\BUS.dll
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\BUS.pdb
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\DAL.dll
@@ -9,3 +10,16 @@ C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileIn
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.dll
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.pdb
+=======
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\BUS.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\BUS.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DAL.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DTO.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DAL.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DTO.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.pdb
+>>>>>>> b8505cad04bb00abb90e94b9feba451b57dc2486
