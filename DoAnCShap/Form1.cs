@@ -121,5 +121,10 @@ namespace DoAnCShap
             Form1 frm1 = new Form1();
             frm1.ShowDialog();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Frm_TraCuu());
+        }
     }
 }
