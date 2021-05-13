@@ -1,0 +1,6 @@
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\bin\Debug\DTO.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\bin\Debug\DTO.pdb
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DTO\obj\Debug\DTO.pdb

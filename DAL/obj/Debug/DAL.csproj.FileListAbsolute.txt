@@ -1,0 +1,9 @@
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\bin\Debug\DAL.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\bin\Debug\DAL.pdb
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\bin\Debug\DTO.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\bin\Debug\DTO.pdb
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\obj\Debug\DAL.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\DAL\obj\Debug\DAL.pdb

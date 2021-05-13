@@ -1,0 +1,11 @@
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\BUS.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\BUS.pdb
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\DAL.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\DTO.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\DAL.pdb
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\bin\Debug\DTO.pdb
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.dll
+C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.pdb
