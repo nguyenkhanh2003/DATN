@@ -54,6 +54,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BanHang.Designer.cs">
+      <DependentUpon>Frm_BanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BanHang.resx">
+      <DependentUpon>Frm_BanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ChiTietHoaDon.resx">
       <DependentUpon>Frm_ChiTietHoaDon.cs</DependentUpon>

@@ -126,5 +126,10 @@ namespace DoAnCShap
         {
             openChildForm(new Frm_TraCuu());
         }
+
+        private void btn_BanHang_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Frm_BanHang());
+        }
     }
 }
