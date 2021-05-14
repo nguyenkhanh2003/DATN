@@ -129,6 +129,7 @@ namespace DoAnCShap
             catch
             {
                 MessageBox.Show("Không thể xóa !");
+                //test
             }
         }
 
