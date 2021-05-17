@@ -393,7 +393,7 @@ namespace DoAnCShap
             this.panel1.Location = new System.Drawing.Point(218, 582);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(810, 45);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 22;
             // 
             // label1
             // 
