@@ -153,7 +153,7 @@ namespace DoAnCShap
             this.btnLoadAnh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadAnh.Location = new System.Drawing.Point(892, 227);
             this.btnLoadAnh.Name = "btnLoadAnh";
-            this.btnLoadAnh.Size = new System.Drawing.Size(32, 20);
+            this.btnLoadAnh.Size = new System.Drawing.Size(50, 20);
             this.btnLoadAnh.TabIndex = 4;
             this.btnLoadAnh.Text = "...";
             this.btnLoadAnh.UseVisualStyleBackColor = true;

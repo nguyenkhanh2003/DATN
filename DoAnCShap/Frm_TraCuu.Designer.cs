@@ -44,8 +44,11 @@ namespace DoAnCShap
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -141,10 +144,11 @@ namespace DoAnCShap
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(13, 374);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(959, 223);
+            this.groupBox3.Size = new System.Drawing.Size(959, 239);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kết Quả Tra Cứu";
@@ -222,6 +226,14 @@ namespace DoAnCShap
             this.btnThoat.TabIndex = 6;
             this.btnThoat.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(947, 198);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // Frm_TraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,8 +251,10 @@ namespace DoAnCShap
             this.Text = "Frm_TraCuu";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +275,6 @@ namespace DoAnCShap
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
