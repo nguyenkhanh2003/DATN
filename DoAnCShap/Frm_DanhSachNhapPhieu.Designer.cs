@@ -53,7 +53,7 @@
             this.labelDanhSachHoaDon.Location = new System.Drawing.Point(0, 0);
             this.labelDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.labelDanhSachHoaDon.Name = "labelDanhSachHoaDon";
-            this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 57);
+            this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 50);
             this.labelDanhSachHoaDon.TabIndex = 2;
             this.labelDanhSachHoaDon.Text = "DANH SÁCH NHẬP PHIẾU";
             this.labelDanhSachHoaDon.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -65,7 +65,7 @@
             this.groupBoxLapPhieuNhap.Controls.Add(this.textBox1);
             this.groupBoxLapPhieuNhap.Controls.Add(this.label2);
             this.groupBoxLapPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxLapPhieuNhap.Location = new System.Drawing.Point(0, 57);
+            this.groupBoxLapPhieuNhap.Location = new System.Drawing.Point(0, 50);
             this.groupBoxLapPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxLapPhieuNhap.Name = "groupBoxLapPhieuNhap";
             this.groupBoxLapPhieuNhap.Padding = new System.Windows.Forms.Padding(2);
@@ -113,11 +113,11 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 105);
+            this.groupBox2.Location = new System.Drawing.Point(0, 98);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(984, 556);
+            this.groupBox2.Size = new System.Drawing.Size(984, 563);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 

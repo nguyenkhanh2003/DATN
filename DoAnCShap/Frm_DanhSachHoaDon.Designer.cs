@@ -60,7 +60,7 @@
             this.labelDanhSachHoaDon.Location = new System.Drawing.Point(0, 0);
             this.labelDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.labelDanhSachHoaDon.Name = "labelDanhSachHoaDon";
-            this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 57);
+            this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 50);
             this.labelDanhSachHoaDon.TabIndex = 1;
             this.labelDanhSachHoaDon.Text = "DANH SÁCH HÓA ĐƠN";
             this.labelDanhSachHoaDon.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -78,7 +78,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 57);
+            this.groupBox1.Location = new System.Drawing.Point(0, 50);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -188,11 +188,11 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 138);
+            this.groupBox2.Location = new System.Drawing.Point(0, 131);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(984, 523);
+            this.groupBox2.Size = new System.Drawing.Size(984, 530);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -207,7 +207,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(980, 449);
+            this.dataGridView1.Size = new System.Drawing.Size(980, 456);
             this.dataGridView1.TabIndex = 0;
             // 
             // Frm_DanhSachHoaDon

@@ -36,11 +36,11 @@ namespace DoAnCShap
             // 
             this.label1.BackColor = System.Drawing.Color.Cyan;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(984, 36);
+            this.label1.Size = new System.Drawing.Size(984, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bán Hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
