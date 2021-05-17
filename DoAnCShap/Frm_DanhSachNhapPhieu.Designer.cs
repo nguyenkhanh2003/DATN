@@ -69,7 +69,7 @@
             this.groupBoxLapPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxLapPhieuNhap.Name = "groupBoxLapPhieuNhap";
             this.groupBoxLapPhieuNhap.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxLapPhieuNhap.Size = new System.Drawing.Size(984, 48);
+            this.groupBoxLapPhieuNhap.Size = new System.Drawing.Size(984, 68);
             this.groupBoxLapPhieuNhap.TabIndex = 3;
             this.groupBoxLapPhieuNhap.TabStop = false;
             // 
@@ -83,7 +83,7 @@
             this.btnLapHoaDon.Location = new System.Drawing.Point(768, 5);
             this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnLapHoaDon.Name = "btnLapHoaDon";
-            this.btnLapHoaDon.Size = new System.Drawing.Size(207, 34);
+            this.btnLapHoaDon.Size = new System.Drawing.Size(207, 54);
             this.btnLapHoaDon.TabIndex = 2;
             this.btnLapHoaDon.Text = "Lập Phiếu Nhập Hàng";
             this.btnLapHoaDon.UseVisualStyleBackColor = false;
@@ -113,11 +113,11 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 98);
+            this.groupBox2.Location = new System.Drawing.Point(0, 118);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(984, 563);
+            this.groupBox2.Size = new System.Drawing.Size(984, 543);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 

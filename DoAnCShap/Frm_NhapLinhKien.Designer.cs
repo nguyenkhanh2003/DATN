@@ -29,6 +29,7 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NhapLinhKien));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLapHoaDon = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@ namespace DoAnCShap
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1000, 50);
+            this.label1.Size = new System.Drawing.Size(984, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập Linh Kiện";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,7 +80,7 @@ namespace DoAnCShap
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1000, 146);
+            this.groupBox1.Size = new System.Drawing.Size(984, 146);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Chung";
@@ -91,12 +92,15 @@ namespace DoAnCShap
             this.btnLapHoaDon.AutoSize = true;
             this.btnLapHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
             this.btnLapHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLapHoaDon.Location = new System.Drawing.Point(819, 22);
+            this.btnLapHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnLapHoaDon.Image")));
+            this.btnLapHoaDon.Location = new System.Drawing.Point(763, 22);
             this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnLapHoaDon.Name = "btnLapHoaDon";
-            this.btnLapHoaDon.Size = new System.Drawing.Size(110, 79);
+            this.btnLapHoaDon.Size = new System.Drawing.Size(150, 79);
             this.btnLapHoaDon.TabIndex = 37;
             this.btnLapHoaDon.Text = "Lập Phiếu ";
+            this.btnLapHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLapHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLapHoaDon.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
@@ -183,7 +187,7 @@ namespace DoAnCShap
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(413, 591);
+            this.textBox13.Location = new System.Drawing.Point(448, 546);
             this.textBox13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(151, 26);
@@ -193,7 +197,7 @@ namespace DoAnCShap
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(320, 597);
+            this.label14.Location = new System.Drawing.Point(316, 549);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(79, 20);
@@ -207,27 +211,30 @@ namespace DoAnCShap
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(716, 564);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(670, 546);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 121);
+            this.button1.Size = new System.Drawing.Size(147, 71);
             this.button1.TabIndex = 38;
             this.button1.Text = "Tạo Phiếu";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.AutoSize = true;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(819, 564);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(838, 544);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 123);
+            this.button2.Size = new System.Drawing.Size(128, 73);
             this.button2.TabIndex = 38;
             this.button2.Text = "Hủy Phiếu";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // groupBox2
@@ -237,7 +244,7 @@ namespace DoAnCShap
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(0, 232);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(988, 250);
+            this.groupBox2.Size = new System.Drawing.Size(972, 250);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Sản Phẩm";
@@ -256,7 +263,7 @@ namespace DoAnCShap
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

@@ -141,5 +141,10 @@ namespace DoAnCShap
         {
 
         }
+
+        private void btn_HoaDonBan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Frm_HoaDonBanHang());
+        }
     }
 }

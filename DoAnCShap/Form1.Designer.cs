@@ -47,6 +47,7 @@ namespace DoAnCShap
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btn_HoaDonBan = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +57,7 @@ namespace DoAnCShap
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelSideMenu.Controls.Add(this.btn_HoaDonBan);
             this.panelSideMenu.Controls.Add(this.btn_BanHang);
             this.panelSideMenu.Controls.Add(this.btnTimKiem);
             this.panelSideMenu.Controls.Add(this.btnExit);
@@ -123,7 +125,7 @@ namespace DoAnCShap
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 590);
+            this.btnExit.Location = new System.Drawing.Point(0, 636);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(201, 45);
@@ -373,6 +375,24 @@ namespace DoAnCShap
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
+            // btn_HoaDonBan
+            // 
+            this.btn_HoaDonBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_HoaDonBan.FlatAppearance.BorderSize = 0;
+            this.btn_HoaDonBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoaDonBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoaDonBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_HoaDonBan.Image = ((System.Drawing.Image)(resources.GetObject("btn_HoaDonBan.Image")));
+            this.btn_HoaDonBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HoaDonBan.Location = new System.Drawing.Point(0, 590);
+            this.btn_HoaDonBan.Name = "btn_HoaDonBan";
+            this.btn_HoaDonBan.Size = new System.Drawing.Size(201, 46);
+            this.btn_HoaDonBan.TabIndex = 15;
+            this.btn_HoaDonBan.Text = "Hóa Đơn Bán";
+            this.btn_HoaDonBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_HoaDonBan.UseVisualStyleBackColor = true;
+            this.btn_HoaDonBan.Click += new System.EventHandler(this.btn_HoaDonBan_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,6 +434,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btn_BanHang;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_HoaDonBan;
     }
 }
 
