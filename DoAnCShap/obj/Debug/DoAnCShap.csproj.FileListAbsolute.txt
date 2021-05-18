@@ -202,3 +202,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DAL.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DAL.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_BanHang.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\FontAwesome.Sharp.dll

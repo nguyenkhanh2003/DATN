@@ -156,5 +156,11 @@ namespace DoAnCShap
             openChildForm(new Frm_HoaDonBanHang());
             lbl_HienThiForm.Text = "Hóa Đơn Bán Hàng";
         }
+
+        private void iconBtn_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Frm_DSTaiKhoan());
+            lbl_HienThiForm.Text = "Danh Sách Tài Khoản";
+        }
     }
 }
