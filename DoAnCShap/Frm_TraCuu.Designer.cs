@@ -150,7 +150,7 @@ namespace DoAnCShap
             this.groupBox4.Controls.Add(this.radioButton6);
             this.groupBox4.Controls.Add(this.radioButton5);
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(708, 179);
+            this.groupBox4.Location = new System.Drawing.Point(709, 137);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(124, 165);
             this.groupBox4.TabIndex = 4;
@@ -197,11 +197,12 @@ namespace DoAnCShap
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.Silver;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(866, 185);
+            this.btnSearch.Location = new System.Drawing.Point(866, 137);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 60);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnThoat
             // 
@@ -210,7 +211,7 @@ namespace DoAnCShap
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.ForeColor = System.Drawing.Color.Silver;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(866, 267);
+            this.btnThoat.Location = new System.Drawing.Point(866, 241);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 61);
             this.btnThoat.TabIndex = 6;
