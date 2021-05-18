@@ -31,15 +31,10 @@ namespace DoAnCShap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_HienThiForm = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.btn_HoaDonBan = new System.Windows.Forms.Button();
             this.btn_BanHang = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnBaoHanh = new System.Windows.Forms.Button();
             this.btnNCC = new System.Windows.Forms.Button();
@@ -49,8 +44,14 @@ namespace DoAnCShap
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconBtn_Close = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.lbl_HienThiForm = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,79 +81,6 @@ namespace DoAnCShap
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(218, 627);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Teal;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.Silver;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 636);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(201, 45);
-            this.btnExit.TabIndex = 12;
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(201, 92);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(201, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.panel2.Controls.Add(this.iconButton2);
-            this.panel2.Controls.Add(this.iconButton1);
-            this.panel2.Controls.Add(this.lbl_HienThiForm);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(218, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(810, 50);
-            this.panel2.TabIndex = 23;
-            // 
-            // lbl_HienThiForm
-            // 
-            this.lbl_HienThiForm.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_HienThiForm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HienThiForm.ForeColor = System.Drawing.Color.White;
-            this.lbl_HienThiForm.Location = new System.Drawing.Point(79, 9);
-            this.lbl_HienThiForm.Name = "lbl_HienThiForm";
-            this.lbl_HienThiForm.Size = new System.Drawing.Size(238, 28);
-            this.lbl_HienThiForm.TabIndex = 0;
-            this.lbl_HienThiForm.Text = "\r\nHome";
-            this.lbl_HienThiForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(218, 50);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(810, 577);
-            this.panelChildForm.TabIndex = 24;
             // 
             // btn_HoaDonBan
             // 
@@ -216,6 +144,25 @@ namespace DoAnCShap
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Silver;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(0, 636);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(201, 45);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnThongKe
             // 
@@ -415,21 +362,57 @@ namespace DoAnCShap
             this.btn_TaiKhoan.UseVisualStyleBackColor = false;
             this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
             // 
-            // iconButton1
+            // panelLogo
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(563, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(52, 41);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(201, 92);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.iconBtn_Close);
+            this.panel2.Controls.Add(this.iconButton2);
+            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.lbl_HienThiForm);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(218, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(810, 50);
+            this.panel2.TabIndex = 23;
+            // 
+            // iconBtn_Close
+            // 
+            this.iconBtn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconBtn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtn_Close.ForeColor = System.Drawing.Color.Black;
+            this.iconBtn_Close.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconBtn_Close.IconColor = System.Drawing.Color.White;
+            this.iconBtn_Close.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtn_Close.IconSize = 35;
+            this.iconBtn_Close.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconBtn_Close.Location = new System.Drawing.Point(672, 3);
+            this.iconBtn_Close.Name = "iconBtn_Close";
+            this.iconBtn_Close.Size = new System.Drawing.Size(45, 41);
+            this.iconBtn_Close.TabIndex = 1;
+            this.iconBtn_Close.UseVisualStyleBackColor = true;
+            this.iconBtn_Close.Click += new System.EventHandler(this.iconBtn_Close_Click);
             // 
             // iconButton2
             // 
@@ -446,6 +429,42 @@ namespace DoAnCShap
             this.iconButton2.Size = new System.Drawing.Size(45, 41);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.Black;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconButton1.Location = new System.Drawing.Point(563, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(52, 41);
+            this.iconButton1.TabIndex = 1;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // lbl_HienThiForm
+            // 
+            this.lbl_HienThiForm.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_HienThiForm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_HienThiForm.ForeColor = System.Drawing.Color.White;
+            this.lbl_HienThiForm.Location = new System.Drawing.Point(79, 9);
+            this.lbl_HienThiForm.Name = "lbl_HienThiForm";
+            this.lbl_HienThiForm.Size = new System.Drawing.Size(238, 28);
+            this.lbl_HienThiForm.TabIndex = 0;
+            this.lbl_HienThiForm.Text = "\r\nHome";
+            this.lbl_HienThiForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(218, 50);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(810, 577);
+            this.panelChildForm.TabIndex = 24;
             // 
             // Form1
             // 
@@ -473,7 +492,6 @@ namespace DoAnCShap
         #endregion
 
         private System.Windows.Forms.Panel panelSideMenu;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -493,6 +511,8 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btn_TaiKhoan;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconBtn_Close;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

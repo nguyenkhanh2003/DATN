@@ -162,5 +162,16 @@ namespace DoAnCShap
             openChildForm(new Frm_DSTaiKhoan());
             lbl_HienThiForm.Text = "Danh Sách Tài Khoản";
         }
+
+        private void iconBtn_Close_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn Có Muốn Thoát Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                //Do something here if OK was clicked.
+                Application.Exit();
+            }
+        }
+
+       
     }
 }
