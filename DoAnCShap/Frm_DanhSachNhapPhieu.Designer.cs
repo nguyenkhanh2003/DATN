@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelDanhSachHoaDon = new DevComponents.DotNetBar.LabelX();
             this.groupBoxLapPhieuNhap = new System.Windows.Forms.GroupBox();
             this.btnLapHoaDon = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,24 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelDanhSachHoaDon
-            // 
-            this.labelDanhSachHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.labelDanhSachHoaDon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelDanhSachHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDanhSachHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelDanhSachHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.labelDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(2);
-            this.labelDanhSachHoaDon.Name = "labelDanhSachHoaDon";
-            this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 50);
-            this.labelDanhSachHoaDon.TabIndex = 2;
-            this.labelDanhSachHoaDon.Text = "DANH SÁCH NHẬP PHIẾU";
-            this.labelDanhSachHoaDon.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // groupBoxLapPhieuNhap
             // 
             this.groupBoxLapPhieuNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
@@ -65,7 +46,7 @@
             this.groupBoxLapPhieuNhap.Controls.Add(this.textBox1);
             this.groupBoxLapPhieuNhap.Controls.Add(this.label2);
             this.groupBoxLapPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxLapPhieuNhap.Location = new System.Drawing.Point(0, 50);
+            this.groupBoxLapPhieuNhap.Location = new System.Drawing.Point(0, 0);
             this.groupBoxLapPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxLapPhieuNhap.Name = "groupBoxLapPhieuNhap";
             this.groupBoxLapPhieuNhap.Padding = new System.Windows.Forms.Padding(2);
@@ -113,11 +94,11 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 118);
+            this.groupBox2.Location = new System.Drawing.Point(0, 68);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(984, 543);
+            this.groupBox2.Size = new System.Drawing.Size(984, 593);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -142,7 +123,6 @@
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxLapPhieuNhap);
-            this.Controls.Add(this.labelDanhSachHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_DanhSachNhapPhieu";
@@ -156,8 +136,6 @@
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.LabelX labelDanhSachHoaDon;
         private System.Windows.Forms.GroupBox groupBoxLapPhieuNhap;
         private System.Windows.Forms.Button btnLapHoaDon;
         private System.Windows.Forms.TextBox textBox1;

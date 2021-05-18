@@ -63,31 +63,37 @@ namespace DoAnCShap
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_DSTaiKhoan());
+            lbl_HienThiForm.Text = "Danh Sách Tài Khoản";
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_NhanVien());
+            lbl_HienThiForm.Text = "Quản Lý Nhân Viên";
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_KH());
+            lbl_HienThiForm.Text = "Quản Lý Khách Hàng";
         }
 
         private void btnLinhKien_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_SanPham());
+            lbl_HienThiForm.Text = "Quản Lý Linh Kiện";
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_NCC());
+            lbl_HienThiForm.Text = "Quản Lý Nhà Cung Cấp";
         }
 
         private void btnPhieuNhap_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_DanhSachNhapPhieu());
+            lbl_HienThiForm.Text = "Quản Lý Phiếu Nhập";
         }
 
         private void pictureBoxLogin_Click(object sender, EventArgs e)
@@ -97,13 +103,13 @@ namespace DoAnCShap
            // panelChildForm.Controls.Add(login);
            // login.Dock = DockStyle.None;
             login.BringToFront();
-            
             login.ShowDialog();
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_DanhSachHoaDon());
+            lbl_HienThiForm.Text = "Quản Lý Hóa Đơn";
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
@@ -120,16 +126,19 @@ namespace DoAnCShap
         {
             Form1 frm1 = new Form1();
             frm1.ShowDialog();
+            lbl_HienThiForm.Text = "Trang Chủ";
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_TraCuu());
+            lbl_HienThiForm.Text = "Tra Cưu Tổng Hợp";
         }
 
         private void btn_BanHang_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_BanHang());
+            lbl_HienThiForm.Text = "Bán Hàng";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -145,6 +154,7 @@ namespace DoAnCShap
         private void btn_HoaDonBan_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_HoaDonBanHang());
+            lbl_HienThiForm.Text = "Hóa Đơn Bán Hàng";
         }
     }
 }

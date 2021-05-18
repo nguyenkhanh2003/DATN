@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_DanhSachHoaDon));
-            this.labelDanhSachHoaDon = new DevComponents.DotNetBar.LabelX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLapHoaDon = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -47,24 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelDanhSachHoaDon
-            // 
-            this.labelDanhSachHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.labelDanhSachHoaDon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelDanhSachHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDanhSachHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelDanhSachHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.labelDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(2);
-            this.labelDanhSachHoaDon.Name = "labelDanhSachHoaDon";
-            this.labelDanhSachHoaDon.Size = new System.Drawing.Size(984, 50);
-            this.labelDanhSachHoaDon.TabIndex = 1;
-            this.labelDanhSachHoaDon.Text = "DANH SÁCH HÓA ĐƠN";
-            this.labelDanhSachHoaDon.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
@@ -78,7 +59,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 50);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -188,11 +169,11 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 131);
+            this.groupBox2.Location = new System.Drawing.Point(0, 81);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(984, 530);
+            this.groupBox2.Size = new System.Drawing.Size(984, 580);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -207,7 +188,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(980, 456);
+            this.dataGridView1.Size = new System.Drawing.Size(980, 506);
             this.dataGridView1.TabIndex = 0;
             // 
             // Frm_DanhSachHoaDon
@@ -218,7 +199,6 @@
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.labelDanhSachHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_DanhSachHoaDon";
@@ -232,8 +212,6 @@
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.LabelX labelDanhSachHoaDon;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLapHoaDon;
         private System.Windows.Forms.GroupBox groupBox2;
