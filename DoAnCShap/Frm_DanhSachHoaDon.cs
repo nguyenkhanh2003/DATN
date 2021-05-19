@@ -16,13 +16,12 @@ namespace DoAnCShap
         {
             InitializeComponent();
         }
-       
+
+        Form1 frm = new Form1();
         private void btnLapHoaDon_Click(object sender, EventArgs e)
         {
-            Frm_HoaDonBanHang hoaDonBanHang = new Frm_HoaDonBanHang();
-          
-            hoaDonBanHang.ShowDialog();
-            
+            Frm_HoaDonBanHang HDB = new Frm_HoaDonBanHang();
+            HDB.ShowDialog();
         }
     }
 }

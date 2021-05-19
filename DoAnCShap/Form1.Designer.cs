@@ -31,7 +31,6 @@ namespace DoAnCShap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btn_HoaDonBan = new System.Windows.Forms.Button();
             this.btn_BanHang = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -48,12 +47,11 @@ namespace DoAnCShap
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconBtn_Close = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelBot = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,7 +63,6 @@ namespace DoAnCShap
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.panelSideMenu.Controls.Add(this.btn_HoaDonBan);
             this.panelSideMenu.Controls.Add(this.btn_BanHang);
             this.panelSideMenu.Controls.Add(this.btnTimKiem);
             this.panelSideMenu.Controls.Add(this.btnExit);
@@ -84,27 +81,6 @@ namespace DoAnCShap
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(218, 627);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // btn_HoaDonBan
-            // 
-            this.btn_HoaDonBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.btn_HoaDonBan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_HoaDonBan.FlatAppearance.BorderSize = 0;
-            this.btn_HoaDonBan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_HoaDonBan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_HoaDonBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HoaDonBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HoaDonBan.ForeColor = System.Drawing.Color.White;
-            this.btn_HoaDonBan.Image = ((System.Drawing.Image)(resources.GetObject("btn_HoaDonBan.Image")));
-            this.btn_HoaDonBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDonBan.Location = new System.Drawing.Point(0, 590);
-            this.btn_HoaDonBan.Name = "btn_HoaDonBan";
-            this.btn_HoaDonBan.Size = new System.Drawing.Size(201, 46);
-            this.btn_HoaDonBan.TabIndex = 15;
-            this.btn_HoaDonBan.Text = "Hóa Đơn Bán";
-            this.btn_HoaDonBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_HoaDonBan.UseVisualStyleBackColor = false;
-            this.btn_HoaDonBan.Click += new System.EventHandler(this.btn_HoaDonBan_Click);
             // 
             // btn_BanHang
             // 
@@ -158,7 +134,7 @@ namespace DoAnCShap
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 636);
+            this.btnExit.Location = new System.Drawing.Point(0, 590);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(201, 45);
@@ -391,7 +367,6 @@ namespace DoAnCShap
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.iconBtn_Close);
-            this.panel2.Controls.Add(this.iconButton2);
             this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.lbl_HienThiForm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -410,28 +385,12 @@ namespace DoAnCShap
             this.iconBtn_Close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtn_Close.IconSize = 35;
             this.iconBtn_Close.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconBtn_Close.Location = new System.Drawing.Point(672, 3);
+            this.iconBtn_Close.Location = new System.Drawing.Point(753, 3);
             this.iconBtn_Close.Name = "iconBtn_Close";
             this.iconBtn_Close.Size = new System.Drawing.Size(45, 41);
             this.iconBtn_Close.TabIndex = 1;
             this.iconBtn_Close.UseVisualStyleBackColor = true;
             this.iconBtn_Close.Click += new System.EventHandler(this.iconBtn_Close_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.Black;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Bell;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton2.Location = new System.Drawing.Point(621, 3);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(45, 41);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // iconButton1
             // 
@@ -443,7 +402,7 @@ namespace DoAnCShap
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(563, 3);
+            this.iconButton1.Location = new System.Drawing.Point(695, 3);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(52, 41);
             this.iconButton1.TabIndex = 1;
@@ -471,14 +430,6 @@ namespace DoAnCShap
             this.panelBot.Size = new System.Drawing.Size(810, 45);
             this.panelBot.TabIndex = 24;
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(218, 50);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(810, 532);
-            this.panelChildForm.TabIndex = 25;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -489,6 +440,14 @@ namespace DoAnCShap
             this.label1.Size = new System.Drawing.Size(320, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phần Mềm Bán Linh Kiện Máy Tính";
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(218, 50);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(810, 532);
+            this.panelChildForm.TabIndex = 25;
             // 
             // Form1
             // 
@@ -523,7 +482,6 @@ namespace DoAnCShap
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_HienThiForm;
-        private System.Windows.Forms.Button btn_HoaDonBan;
         private System.Windows.Forms.Button btn_BanHang;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnThongKe;
@@ -535,7 +493,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btn_TaiKhoan;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconBtn_Close;
         private System.Windows.Forms.Button btnExit;

@@ -46,8 +46,8 @@ namespace DoAnCShap
                 subMenu.Visible = false;
         }
 
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public Form activeForm = null;
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
             activeForm = childForm;
