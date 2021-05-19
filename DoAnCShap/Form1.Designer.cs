@@ -46,7 +46,6 @@ namespace DoAnCShap
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconBtn_Close = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelBot = new System.Windows.Forms.Panel();
@@ -366,7 +365,6 @@ namespace DoAnCShap
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.panel2.Controls.Add(this.iconBtn_Close);
             this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.lbl_HienThiForm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -375,26 +373,8 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(810, 50);
             this.panel2.TabIndex = 23;
             // 
-            // iconBtn_Close
-            // 
-            this.iconBtn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconBtn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtn_Close.ForeColor = System.Drawing.Color.Black;
-            this.iconBtn_Close.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconBtn_Close.IconColor = System.Drawing.Color.White;
-            this.iconBtn_Close.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtn_Close.IconSize = 35;
-            this.iconBtn_Close.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconBtn_Close.Location = new System.Drawing.Point(753, 3);
-            this.iconBtn_Close.Name = "iconBtn_Close";
-            this.iconBtn_Close.Size = new System.Drawing.Size(45, 41);
-            this.iconBtn_Close.TabIndex = 1;
-            this.iconBtn_Close.UseVisualStyleBackColor = true;
-            this.iconBtn_Close.Click += new System.EventHandler(this.iconBtn_Close_Click);
-            // 
             // iconButton1
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.ForeColor = System.Drawing.Color.Black;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Bars;
@@ -402,7 +382,7 @@ namespace DoAnCShap
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(695, 3);
+            this.iconButton1.Location = new System.Drawing.Point(6, 3);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(52, 41);
             this.iconButton1.TabIndex = 1;
@@ -494,7 +474,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btn_TaiKhoan;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconBtn_Close;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelBot;
         private System.Windows.Forms.Panel panelChildForm;
