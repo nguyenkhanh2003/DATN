@@ -51,11 +51,14 @@ namespace DoAnCShap
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
+            this.panelBot = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelBot.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -458,13 +461,34 @@ namespace DoAnCShap
             this.lbl_HienThiForm.Text = "\r\nHome";
             this.lbl_HienThiForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelBot
+            // 
+            this.panelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelBot.Controls.Add(this.label1);
+            this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBot.Location = new System.Drawing.Point(218, 582);
+            this.panelBot.Name = "panelBot";
+            this.panelBot.Size = new System.Drawing.Size(810, 45);
+            this.panelBot.TabIndex = 24;
+            // 
             // panelChildForm
             // 
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(218, 50);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(810, 577);
-            this.panelChildForm.TabIndex = 24;
+            this.panelChildForm.Size = new System.Drawing.Size(810, 532);
+            this.panelChildForm.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(17, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(320, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Phần Mềm Bán Linh Kiện Máy Tính";
             // 
             // Form1
             // 
@@ -474,6 +498,7 @@ namespace DoAnCShap
             this.ClientSize = new System.Drawing.Size(1028, 627);
             this.ControlBox = false;
             this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.panelBot);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -485,6 +510,8 @@ namespace DoAnCShap
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panelBot.ResumeLayout(false);
+            this.panelBot.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -495,7 +522,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label lbl_HienThiForm;
         private System.Windows.Forms.Button btn_HoaDonBan;
         private System.Windows.Forms.Button btn_BanHang;
@@ -513,6 +539,9 @@ namespace DoAnCShap
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconBtn_Close;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panelBot;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Label label1;
     }
 }
 
