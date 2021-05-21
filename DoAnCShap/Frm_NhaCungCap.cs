@@ -17,6 +17,8 @@ namespace DoAnCShap
         public Frm_NhaCungCap()
         {
             InitializeComponent();
+            AnButton();
+            Display();
         }
         NhaCungCap_BUS bus = new NhaCungCap_BUS();
         NhaCungCap ncc = new NhaCungCap();
@@ -96,7 +98,7 @@ namespace DoAnCShap
             btnSave.Enabled = true;
 
         }
-
+        //hien du lieu tu datatable len button
         private void dataGridViewNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaNCC.Enabled = false;
@@ -110,6 +112,11 @@ namespace DoAnCShap
             txtDienThoai.Text = row.Cells[3].Value.ToString();
             txtEmail.Text = row.Cells[4].Value.ToString();
             txtTrangThai.Text = row.Cells[5].Value.ToString();
+            HienButton();
+            btnDelete.Enabled = true;
+            btnCancel.Enabled = true;
+            btnSave.Enabled = true;
+
 
         }
 
@@ -134,6 +141,32 @@ namespace DoAnCShap
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtMaNCC.Text == "")
+            {
+                MessageBox.Show("Lỗi mã nhà cung cấp !");
+                return;
+            }
+            if (txtTenNCC.Text == "")
+            {
+                MessageBox.Show("Xin mời nhập lại tên nhà cung cấp !");
+                return;
+            }
+            if (txtDienThoai.Text == "")
+            {
+                MessageBox.Show("Xin mời nhập lại số điện thoại của nhà cung cấp !");
+                return;
+            }
+            if (txtTrangThai.Text == "")
+            {
+                MessageBox.Show("Xin mời nhập lại trạng thái của nhà cung cấp !");
+                return;
+            }
+
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Chưa nhập địa chỉ");
+                return;
+            }
             if (addnew == true)
             {
                 try
@@ -204,7 +237,12 @@ namespace DoAnCShap
 
         private void Frm_NhaCungCap_Load(object sender, EventArgs e)
         {
-            Display();
+          //  Display();
+        }
+
+        private void dataGridViewNhaCungCap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
