@@ -239,3 +239,4 @@ C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.CoreComp
 C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.CopyComplete
 C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe
 C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.pdb
+C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_NhaCungCap.resources

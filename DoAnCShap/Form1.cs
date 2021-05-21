@@ -86,7 +86,7 @@ namespace DoAnCShap
 
         private void btnNCC_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_NCC());
+            openChildForm(new Frm_NhaCungCap());
             lbl_HienThiForm.Text = "Quản Lý Nhà Cung Cấp";
         }
 
