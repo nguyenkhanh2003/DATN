@@ -13,3 +13,9 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.csproj.CoreCompileInpu
 C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DTO\obj\Debug\DTO.pdb
 >>>>>>> b8505cad04bb00abb90e94b9feba451b57dc2486
+C:\Users\PHI\Documents\GitHub\DATN\DTO\bin\Debug\DTO.dll
+C:\Users\PHI\Documents\GitHub\DATN\DTO\bin\Debug\DTO.pdb
+C:\Users\PHI\Documents\GitHub\DATN\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\PHI\Documents\GitHub\DATN\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\PHI\Documents\GitHub\DATN\DTO\obj\Debug\DTO.dll
+C:\Users\PHI\Documents\GitHub\DATN\DTO\obj\Debug\DTO.pdb

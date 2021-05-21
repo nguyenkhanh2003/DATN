@@ -23,3 +23,14 @@ C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.pdb
 >>>>>>> b8505cad04bb00abb90e94b9feba451b57dc2486
+C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\BUS.dll
+C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\BUS.pdb
+C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\DAL.dll
+C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\DTO.dll
+C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\DAL.pdb
+C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\DTO.pdb
+C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.dll
+C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.pdb
