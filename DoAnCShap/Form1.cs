@@ -172,6 +172,16 @@ namespace DoAnCShap
             }
         }
 
-       
+        private void iconBtnThuNho_Click(object sender, EventArgs e)
+        {
+           if(panelSideMenu.Visible)
+            {
+                panelSideMenu.Hide();
+            }
+           else
+            {
+                panelSideMenu.Show();
+            }    
+        }
     }
 }

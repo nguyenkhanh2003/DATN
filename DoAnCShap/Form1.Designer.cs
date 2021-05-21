@@ -46,7 +46,7 @@ namespace DoAnCShap
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelBot = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@ namespace DoAnCShap
             // 
             // btn_BanHang
             // 
-            this.btn_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btn_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btn_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_BanHang.FlatAppearance.BorderSize = 0;
             this.btn_BanHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -104,7 +104,7 @@ namespace DoAnCShap
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
             this.btnTimKiem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -144,7 +144,7 @@ namespace DoAnCShap
             // 
             // btnThongKe
             // 
-            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -165,7 +165,7 @@ namespace DoAnCShap
             // 
             // btnBaoHanh
             // 
-            this.btnBaoHanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnBaoHanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnBaoHanh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBaoHanh.FlatAppearance.BorderSize = 0;
             this.btnBaoHanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -187,7 +187,7 @@ namespace DoAnCShap
             // 
             // btnNCC
             // 
-            this.btnNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnNCC.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNCC.FlatAppearance.BorderSize = 0;
             this.btnNCC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -209,7 +209,7 @@ namespace DoAnCShap
             // 
             // btnLinhKien
             // 
-            this.btnLinhKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnLinhKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnLinhKien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLinhKien.FlatAppearance.BorderSize = 0;
             this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -231,7 +231,7 @@ namespace DoAnCShap
             // 
             // btnPhieuNhap
             // 
-            this.btnPhieuNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnPhieuNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhieuNhap.FlatAppearance.BorderSize = 0;
             this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -253,7 +253,7 @@ namespace DoAnCShap
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -275,7 +275,7 @@ namespace DoAnCShap
             // 
             // btnKhachHang
             // 
-            this.btnKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhachHang.FlatAppearance.BorderSize = 0;
             this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -297,7 +297,7 @@ namespace DoAnCShap
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -319,7 +319,7 @@ namespace DoAnCShap
             // 
             // btn_TaiKhoan
             // 
-            this.btn_TaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.btn_TaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btn_TaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_TaiKhoan.FlatAppearance.BorderSize = 0;
             this.btn_TaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -365,7 +365,7 @@ namespace DoAnCShap
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.iconBtnThuNho);
             this.panel2.Controls.Add(this.lbl_HienThiForm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(218, 0);
@@ -373,20 +373,21 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(810, 50);
             this.panel2.TabIndex = 23;
             // 
-            // iconButton1
+            // iconBtnThuNho
             // 
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(6, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(52, 41);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconBtnThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnThuNho.ForeColor = System.Drawing.Color.Black;
+            this.iconBtnThuNho.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.iconBtnThuNho.IconColor = System.Drawing.Color.White;
+            this.iconBtnThuNho.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnThuNho.IconSize = 35;
+            this.iconBtnThuNho.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconBtnThuNho.Location = new System.Drawing.Point(6, 3);
+            this.iconBtnThuNho.Name = "iconBtnThuNho";
+            this.iconBtnThuNho.Size = new System.Drawing.Size(52, 41);
+            this.iconBtnThuNho.TabIndex = 1;
+            this.iconBtnThuNho.UseVisualStyleBackColor = true;
+            this.iconBtnThuNho.Click += new System.EventHandler(this.iconBtnThuNho_Click);
             // 
             // lbl_HienThiForm
             // 
@@ -473,7 +474,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btn_TaiKhoan;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconBtnThuNho;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelBot;
         private System.Windows.Forms.Panel panelChildForm;
