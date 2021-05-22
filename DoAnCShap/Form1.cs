@@ -119,7 +119,7 @@ namespace DoAnCShap
 
         private void btnBaoHanh_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Frm_BaoHanh());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
