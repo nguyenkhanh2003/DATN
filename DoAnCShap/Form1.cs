@@ -119,6 +119,7 @@ namespace DoAnCShap
 
         private void btnBaoHanh_Click(object sender, EventArgs e)
         {
+            lbl_HienThiForm.Text = "Bảo Hành";
             openChildForm(new Frm_BaoHanh());
         }
 
