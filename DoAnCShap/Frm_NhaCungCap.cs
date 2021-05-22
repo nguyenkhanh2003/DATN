@@ -244,5 +244,25 @@ namespace DoAnCShap
         {
 
         }
+
+        private void dataGridViewX1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtTenNCC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaNCC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTrangThai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
