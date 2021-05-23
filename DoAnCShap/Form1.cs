@@ -92,7 +92,8 @@ namespace DoAnCShap
 
         private void btnPhieuNhap_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_DanhSachNhapPhieu());
+            //openChildForm(new Frm_DanhSachNhapPhieu());
+            openChildForm(new Frm_NhapLinhKien());
             lbl_HienThiForm.Text = "Quản Lý Phiếu Nhập";
         }
 
@@ -108,7 +109,8 @@ namespace DoAnCShap
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_DanhSachHoaDon());
+            //openChildForm(new Frm_DanhSachHoaDon());
+            openChildForm(new Frm_HoaDonBanHang());
             lbl_HienThiForm.Text = "Quản Lý Hóa Đơn";
         }
 

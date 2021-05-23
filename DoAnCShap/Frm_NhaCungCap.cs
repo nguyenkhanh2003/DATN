@@ -33,7 +33,7 @@ namespace DoAnCShap
             txtTrangThai.Enabled = false;
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
+            //btnUpdate.Enabled = false;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
         }
@@ -47,7 +47,7 @@ namespace DoAnCShap
             txtTrangThai.Enabled = true;
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
+            //btnUpdate.Enabled = false;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
         }

@@ -33,6 +33,8 @@ namespace DoAnCShap
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -52,8 +54,6 @@ namespace DoAnCShap
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.txtMaNCC = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -103,6 +103,24 @@ namespace DoAnCShap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1184, 50);
             this.panel1.TabIndex = 22;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(521, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(88, 31);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Tìm Kiếm";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(190, 12);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 31);
+            this.textBox1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -299,24 +317,6 @@ namespace DoAnCShap
             this.txtMaNCC.Size = new System.Drawing.Size(194, 28);
             this.txtMaNCC.TabIndex = 19;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(190, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 31);
-            this.textBox1.TabIndex = 0;
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(521, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 31);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Tìm Kiếm";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
@@ -348,7 +348,7 @@ namespace DoAnCShap
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(98, 50);
             this.button5.TabIndex = 12;
-            this.button5.Text = "Thoát";
+            this.button5.Text = "Đóng";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             // 
