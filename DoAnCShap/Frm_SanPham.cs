@@ -27,7 +27,9 @@ namespace DoAnCShap
 
         }
 
-        private void btnLoadAnh_Click(object sender, EventArgs e)
+       
+
+        private void btnChonAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog o = new OpenFileDialog();
 

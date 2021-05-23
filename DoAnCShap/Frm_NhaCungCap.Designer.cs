@@ -45,13 +45,11 @@ namespace DoAnCShap
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.txtMaNCC = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewNhaCungCap = new System.Windows.Forms.DataGridView();
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,15 +57,18 @@ namespace DoAnCShap
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTHoat = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhaCungCap)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtDiaChi);
@@ -82,9 +83,9 @@ namespace DoAnCShap
             this.panel1.Controls.Add(this.txtMaNCC);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 141);
+            this.panel1.Size = new System.Drawing.Size(1000, 141);
             this.panel1.TabIndex = 0;
             // 
             // label8
@@ -198,21 +199,6 @@ namespace DoAnCShap
             this.txtMaNCC.TabIndex = 4;
             this.txtMaNCC.TextChanged += new System.EventHandler(this.txtMaNCC_TextChanged);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 488);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 81);
-            this.panel2.TabIndex = 1;
-            // 
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -223,7 +209,7 @@ namespace DoAnCShap
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Green;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(10, 15);
+            this.btnAdd.Location = new System.Drawing.Point(17, 19);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(117, 50);
             this.btnAdd.TabIndex = 11;
@@ -243,7 +229,7 @@ namespace DoAnCShap
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Green;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(284, 20);
+            this.btnDelete.Location = new System.Drawing.Point(397, 20);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 50);
             this.btnDelete.TabIndex = 9;
@@ -262,7 +248,7 @@ namespace DoAnCShap
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Green;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(146, 17);
+            this.btnUpdate.Location = new System.Drawing.Point(205, 20);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 50);
             this.btnUpdate.TabIndex = 10;
@@ -281,7 +267,7 @@ namespace DoAnCShap
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Green;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(430, 20);
+            this.btnSave.Location = new System.Drawing.Point(550, 19);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 50);
             this.btnSave.TabIndex = 7;
@@ -300,7 +286,7 @@ namespace DoAnCShap
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Green;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(588, 20);
+            this.btnCancel.Location = new System.Drawing.Point(714, 19);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 50);
             this.btnCancel.TabIndex = 8;
@@ -308,22 +294,12 @@ namespace DoAnCShap
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel3.Controls.Add(this.dataGridViewNhaCungCap);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 141);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(750, 347);
-            this.panel3.TabIndex = 2;
-            // 
             // dataGridViewNhaCungCap
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dataGridViewNhaCungCap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewNhaCungCap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewNhaCungCap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -342,12 +318,11 @@ namespace DoAnCShap
             this.TrangThai,
             this.DiaChi});
             this.dataGridViewNhaCungCap.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridViewNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewNhaCungCap.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewNhaCungCap.Location = new System.Drawing.Point(12, 29);
             this.dataGridViewNhaCungCap.Name = "dataGridViewNhaCungCap";
             this.dataGridViewNhaCungCap.RowHeadersWidth = 51;
             this.dataGridViewNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewNhaCungCap.Size = new System.Drawing.Size(750, 347);
+            this.dataGridViewNhaCungCap.Size = new System.Drawing.Size(982, 353);
             this.dataGridViewNhaCungCap.TabIndex = 2;
             this.dataGridViewNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhaCungCap_CellClick);
             this.dataGridViewNhaCungCap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhaCungCap_CellContentClick);
@@ -358,6 +333,7 @@ namespace DoAnCShap
             this.MaNCC.HeaderText = "Mã Nhà Cung Cấp";
             this.MaNCC.MinimumWidth = 6;
             this.MaNCC.Name = "MaNCC";
+            this.MaNCC.Width = 158;
             // 
             // TenNCC
             // 
@@ -365,6 +341,7 @@ namespace DoAnCShap
             this.TenNCC.HeaderText = "Tên Nhà Cung Cấp";
             this.TenNCC.MinimumWidth = 6;
             this.TenNCC.Name = "TenNCC";
+            this.TenNCC.Width = 158;
             // 
             // DienThoai
             // 
@@ -372,6 +349,7 @@ namespace DoAnCShap
             this.DienThoai.HeaderText = "Điện Thoại";
             this.DienThoai.MinimumWidth = 6;
             this.DienThoai.Name = "DienThoai";
+            this.DienThoai.Width = 158;
             // 
             // Email
             // 
@@ -379,6 +357,7 @@ namespace DoAnCShap
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
+            this.Email.Width = 157;
             // 
             // TrangThai
             // 
@@ -386,6 +365,7 @@ namespace DoAnCShap
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.MinimumWidth = 6;
             this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Width = 158;
             // 
             // DiaChi
             // 
@@ -393,25 +373,72 @@ namespace DoAnCShap
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 158;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnTHoat);
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.btnUpdate);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Location = new System.Drawing.Point(0, 600);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1000, 100);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnTHoat
+            // 
+            this.btnTHoat.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnTHoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnTHoat.FlatAppearance.BorderSize = 0;
+            this.btnTHoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.btnTHoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTHoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHoat.ForeColor = System.Drawing.Color.Green;
+            this.btnTHoat.Image = ((System.Drawing.Image)(resources.GetObject("btnTHoat.Image")));
+            this.btnTHoat.Location = new System.Drawing.Point(857, 19);
+            this.btnTHoat.Name = "btnTHoat";
+            this.btnTHoat.Size = new System.Drawing.Size(100, 50);
+            this.btnTHoat.TabIndex = 8;
+            this.btnTHoat.Text = "Thoát";
+            this.btnTHoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTHoat.UseVisualStyleBackColor = false;
+            this.btnTHoat.Click += new System.EventHandler(this.btnTHoat_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dataGridViewNhaCungCap);
+            this.groupBox2.Location = new System.Drawing.Point(0, 164);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1000, 411);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông Tin Nhà Cung Cấp";
             // 
             // Frm_NhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 569);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_NhaCungCap";
             this.Text = "Frm_NhaCungCap";
             this.Load += new System.EventHandler(this.Frm_NhaCungCap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhaCungCap)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -419,8 +446,6 @@ namespace DoAnCShap
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridViewNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNCC;
@@ -445,5 +470,8 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnTHoat;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

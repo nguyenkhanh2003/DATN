@@ -23,9 +23,25 @@ namespace DoAnCShap
             this.Close();
         }
 
-        private void btnImage_Click(object sender, EventArgs e)
+      
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaNCC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
             OpenFileDialog o = new OpenFileDialog();
 
             o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
@@ -38,12 +54,10 @@ namespace DoAnCShap
 
             else
             {
-
-
                 foreach (string ten in o.FileNames)
                 {
                     string[] tenhinh = ten.Split('\\');
-                    txtHinhSP.Text = tenhinh[tenhinh.Length - 1];
+                    txtHinhNhanVien.Text = tenhinh[tenhinh.Length - 1];
 
                     PictureBox p = new PictureBox();
 
@@ -59,14 +73,9 @@ namespace DoAnCShap
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
