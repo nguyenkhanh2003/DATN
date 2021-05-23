@@ -133,7 +133,7 @@ namespace DoAnCShap
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             openChildForm(new Frm_TraCuu());
-            lbl_HienThiForm.Text = "Tra Cưu Tổng Hợp";
+            lbl_HienThiForm.Text = "Tra Cứu Tổng Hợp";
         }
 
         private void btn_BanHang_Click(object sender, EventArgs e)
