@@ -751,7 +751,7 @@
         vHcBb4hJtgl91EH9XAvXE5t6MVQtlJdRtpadMGBbJU654Zt1qiNQYEccrMaOAttinUEURP8A2NX/2Q==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAcJJREFUSEvtlb0rR1EYx3+LgcVLNvKSLAoLg5RFzMqKWEwGmyivpQyKwagMikKU

@@ -186,5 +186,18 @@ namespace DoAnCShap
                 panelSideMenu.Show();
             }    
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.ShowDialog();
+            this.Visible = false;
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Thống Kê";
+            openChildForm(new Frm_ThongKe());
+        }
     }
 }
