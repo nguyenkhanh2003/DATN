@@ -87,7 +87,7 @@ namespace DoAnCShap
             this.groupBox1.Size = new System.Drawing.Size(927, 292);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh Sách Các Mặt Hàng  Của Khách Hàng Hiện Tại";
+            this.groupBox1.Text = "Danh Sách Hóa Đơn";
             // 
             // dataGridView1
             // 
