@@ -77,5 +77,10 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
