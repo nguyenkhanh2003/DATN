@@ -81,5 +81,15 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_HoaDonBanHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
