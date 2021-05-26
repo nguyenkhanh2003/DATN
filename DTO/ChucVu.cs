@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class ChucVu
+     class ChucVu
     {
         public string TenCV { get; set; }
         public string MaCV { get; set; }

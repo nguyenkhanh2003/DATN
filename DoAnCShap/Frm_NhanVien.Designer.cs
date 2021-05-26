@@ -319,9 +319,9 @@ namespace DoAnCShap
             this.label1.Location = new System.Drawing.Point(325, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 29);
+            this.label1.Size = new System.Drawing.Size(151, 29);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Mã CV";
+            this.label1.Text = "Tên Chức Vụ";
             // 
             // textBox3
             // 
