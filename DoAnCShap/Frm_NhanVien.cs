@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace DoAnCShap
 {
@@ -15,15 +17,20 @@ namespace DoAnCShap
         public Frm_NhanVien()
         {
             InitializeComponent();
+            Display();
             
         }
-
+        NhanVien_BUS bus = new NhanVien_BUS();
+        NhanVien nv = new NhanVien();
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        void Display()
+        {
+            dataGridViewNhanVien.DataSource = bus.GetData("");
+        }
 
-      
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -79,6 +86,16 @@ namespace DoAnCShap
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Frm_NhanVien_Load(object sender, EventArgs e)
         {
 
         }

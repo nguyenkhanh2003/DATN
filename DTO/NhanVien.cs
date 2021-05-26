@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class NhanVien
+   public class NhanVien
     {
         public string MaNV { get; set; }
         public string TenNV { get; set; }
@@ -19,5 +19,7 @@ namespace DTO
         public string HinhAnh { get; set; }
         public string TrangThai { get; set; }
         public string MaCV { get; set; }
+        public string TenTK { get; set; }
+        public string MatKhau { get; set; }
     }
 }
