@@ -67,6 +67,13 @@ namespace DoAnCShap
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -130,20 +137,30 @@ namespace DoAnCShap
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.listBox1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 71);
+            this.groupBox3.Location = new System.Drawing.Point(0, 56);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(194, 264);
+            this.groupBox3.Size = new System.Drawing.Size(229, 279);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Danh Sách Linh Kiện";
+            this.groupBox3.Text = "Thông Tin Sản Phẩm";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 24);
+            this.listBox1.Items.AddRange(new object[] {
+            "Chuột",
+            "Bàn Phím"});
+            this.listBox1.Location = new System.Drawing.Point(122, 10);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(182, 225);
+            this.listBox1.Size = new System.Drawing.Size(101, 30);
             this.listBox1.TabIndex = 0;
             // 
             // groupBox4
@@ -502,11 +519,72 @@ namespace DoAnCShap
             this.label7.TabIndex = 0;
             this.label7.Text = "Tổng Thanh Toán";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(6, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 21);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Tên Linh Kiện";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 58);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 21);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Số Lượng";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(122, 58);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(6, 96);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(67, 21);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Đơn Giá";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(122, 97);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(6, 133);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(86, 21);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Thành Tiền";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(122, 136);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 2;
+            // 
             // Frm_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
@@ -521,6 +599,7 @@ namespace DoAnCShap
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -572,5 +651,12 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }
