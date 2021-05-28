@@ -51,6 +51,7 @@ namespace DoAnCShap
             this.panelBot = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnPhanQuyen = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@ namespace DoAnCShap
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
             this.panelSideMenu.Controls.Add(this.btn_BanHang);
             this.panelSideMenu.Controls.Add(this.btnExit);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
@@ -76,7 +78,7 @@ namespace DoAnCShap
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(218, 627);
+            this.panelSideMenu.Size = new System.Drawing.Size(229, 627);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btn_BanHang
@@ -93,7 +95,7 @@ namespace DoAnCShap
             this.btn_BanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_BanHang.Location = new System.Drawing.Point(0, 453);
             this.btn_BanHang.Name = "btn_BanHang";
-            this.btn_BanHang.Size = new System.Drawing.Size(218, 46);
+            this.btn_BanHang.Size = new System.Drawing.Size(229, 46);
             this.btn_BanHang.TabIndex = 14;
             this.btn_BanHang.Text = "Bán Hàng";
             this.btn_BanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,7 +115,7 @@ namespace DoAnCShap
             this.btnExit.Location = new System.Drawing.Point(0, 582);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(218, 45);
+            this.btnExit.Size = new System.Drawing.Size(229, 45);
             this.btnExit.TabIndex = 12;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -134,7 +136,7 @@ namespace DoAnCShap
             this.btnThongKe.Location = new System.Drawing.Point(0, 407);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(5);
-            this.btnThongKe.Size = new System.Drawing.Size(218, 46);
+            this.btnThongKe.Size = new System.Drawing.Size(229, 46);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -156,7 +158,7 @@ namespace DoAnCShap
             this.btnBaoHanh.Location = new System.Drawing.Point(0, 362);
             this.btnBaoHanh.Name = "btnBaoHanh";
             this.btnBaoHanh.Padding = new System.Windows.Forms.Padding(5);
-            this.btnBaoHanh.Size = new System.Drawing.Size(218, 45);
+            this.btnBaoHanh.Size = new System.Drawing.Size(229, 45);
             this.btnBaoHanh.TabIndex = 2;
             this.btnBaoHanh.Text = "Bảo Hành";
             this.btnBaoHanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -178,7 +180,7 @@ namespace DoAnCShap
             this.btnNCC.Location = new System.Drawing.Point(0, 317);
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.Padding = new System.Windows.Forms.Padding(5);
-            this.btnNCC.Size = new System.Drawing.Size(218, 45);
+            this.btnNCC.Size = new System.Drawing.Size(229, 45);
             this.btnNCC.TabIndex = 2;
             this.btnNCC.Text = "Quản Lý Nhà Cung Cấp";
             this.btnNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -200,7 +202,7 @@ namespace DoAnCShap
             this.btnLinhKien.Location = new System.Drawing.Point(0, 272);
             this.btnLinhKien.Name = "btnLinhKien";
             this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5);
-            this.btnLinhKien.Size = new System.Drawing.Size(218, 45);
+            this.btnLinhKien.Size = new System.Drawing.Size(229, 45);
             this.btnLinhKien.TabIndex = 2;
             this.btnLinhKien.Text = "Quản Lý Linh Kiện";
             this.btnLinhKien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -222,7 +224,7 @@ namespace DoAnCShap
             this.btnPhieuNhap.Location = new System.Drawing.Point(0, 227);
             this.btnPhieuNhap.Name = "btnPhieuNhap";
             this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5);
-            this.btnPhieuNhap.Size = new System.Drawing.Size(218, 45);
+            this.btnPhieuNhap.Size = new System.Drawing.Size(229, 45);
             this.btnPhieuNhap.TabIndex = 2;
             this.btnPhieuNhap.Text = "Phiếu Nhập";
             this.btnPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -244,7 +246,7 @@ namespace DoAnCShap
             this.btnHoaDon.Location = new System.Drawing.Point(0, 182);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5);
-            this.btnHoaDon.Size = new System.Drawing.Size(218, 45);
+            this.btnHoaDon.Size = new System.Drawing.Size(229, 45);
             this.btnHoaDon.TabIndex = 2;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,7 +268,7 @@ namespace DoAnCShap
             this.btnKhachHang.Location = new System.Drawing.Point(0, 137);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5);
-            this.btnKhachHang.Size = new System.Drawing.Size(218, 45);
+            this.btnKhachHang.Size = new System.Drawing.Size(229, 45);
             this.btnKhachHang.TabIndex = 2;
             this.btnKhachHang.Text = "Quản Lý Khách Hàng";
             this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -288,7 +290,7 @@ namespace DoAnCShap
             this.btnNhanVien.Location = new System.Drawing.Point(0, 92);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5);
-            this.btnNhanVien.Size = new System.Drawing.Size(218, 45);
+            this.btnNhanVien.Size = new System.Drawing.Size(229, 45);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Quản Lý Nhân Viên";
             this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -301,7 +303,7 @@ namespace DoAnCShap
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(218, 92);
+            this.panelLogo.Size = new System.Drawing.Size(229, 92);
             this.panelLogo.TabIndex = 1;
             // 
             // pictureBox1
@@ -311,7 +313,7 @@ namespace DoAnCShap
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -325,9 +327,9 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.iconBtnThuNho);
             this.panel2.Controls.Add(this.lbl_HienThiForm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(218, 0);
+            this.panel2.Location = new System.Drawing.Point(229, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(810, 50);
+            this.panel2.Size = new System.Drawing.Size(799, 50);
             this.panel2.TabIndex = 23;
             // 
             // label2
@@ -335,7 +337,7 @@ namespace DoAnCShap
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(635, 6);
+            this.label2.Location = new System.Drawing.Point(624, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 35);
             this.label2.TabIndex = 4;
@@ -348,7 +350,7 @@ namespace DoAnCShap
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(748, 6);
+            this.btnLogout.Location = new System.Drawing.Point(737, 6);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(50, 35);
             this.btnLogout.TabIndex = 2;
@@ -388,9 +390,9 @@ namespace DoAnCShap
             this.panelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.panelBot.Controls.Add(this.label1);
             this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBot.Location = new System.Drawing.Point(218, 582);
+            this.panelBot.Location = new System.Drawing.Point(229, 582);
             this.panelBot.Name = "panelBot";
-            this.panelBot.Size = new System.Drawing.Size(810, 45);
+            this.panelBot.Size = new System.Drawing.Size(799, 45);
             this.panelBot.TabIndex = 24;
             // 
             // label1
@@ -407,10 +409,28 @@ namespace DoAnCShap
             // panelChildForm
             // 
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(218, 50);
+            this.panelChildForm.Location = new System.Drawing.Point(229, 50);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(810, 532);
+            this.panelChildForm.Size = new System.Drawing.Size(799, 532);
             this.panelChildForm.TabIndex = 25;
+            // 
+            // btnPhanQuyen
+            // 
+            this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanQuyen.FlatAppearance.BorderSize = 0;
+            this.btnPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanQuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanQuyen.ForeColor = System.Drawing.Color.White;
+            this.btnPhanQuyen.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.Image")));
+            this.btnPhanQuyen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanQuyen.Location = new System.Drawing.Point(0, 499);
+            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.Size = new System.Drawing.Size(229, 46);
+            this.btnPhanQuyen.TabIndex = 15;
+            this.btnPhanQuyen.Text = "Phân Quyền";
+            this.btnPhanQuyen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPhanQuyen.UseVisualStyleBackColor = true;
+            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click);
             // 
             // Form1
             // 
@@ -461,6 +481,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPhanQuyen;
     }
 }
 

@@ -199,5 +199,10 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Thống Kê";
             openChildForm(new Frm_ThongKe());
         }
+
+        private void btnPhanQuyen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
