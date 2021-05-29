@@ -269,5 +269,10 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
