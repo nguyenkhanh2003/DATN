@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCShap
 {
-    public partial class Frm_NhapLinhKien : Form
+    public partial class Frm_HoaDonNhap : Form
     {
-        public Frm_NhapLinhKien()
+        public Frm_HoaDonNhap()
         {
             InitializeComponent();
         }
@@ -45,6 +45,16 @@ namespace DoAnCShap
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

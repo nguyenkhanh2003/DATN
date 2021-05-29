@@ -20,7 +20,7 @@ namespace DoAnCShap
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Muốn Thoát Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Bạn Có Muốn Thoát Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 //Do something here if OK was clicked.
                 Application.Exit();
@@ -93,7 +93,7 @@ namespace DoAnCShap
         private void btnPhieuNhap_Click(object sender, EventArgs e)
         {
             //openChildForm(new Frm_DanhSachNhapPhieu());
-            openChildForm(new Frm_NhapLinhKien());
+            openChildForm(new Frm_HoaDonNhap());
             lbl_HienThiForm.Text = "Quản Lý Phiếu Nhập";
         }
 

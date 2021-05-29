@@ -19,7 +19,7 @@ namespace DoAnCShap
 
         private void btnLapHoaDon_Click(object sender, EventArgs e)
         {
-            Frm_NhapLinhKien nhapLinhKien = new Frm_NhapLinhKien();
+            Frm_HoaDonNhap nhapLinhKien = new Frm_HoaDonNhap();
             nhapLinhKien.ShowDialog();
         }
     }
