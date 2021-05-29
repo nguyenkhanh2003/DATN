@@ -46,7 +46,6 @@ namespace DoAnCShap
             this.HinhAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -89,6 +88,7 @@ namespace DoAnCShap
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
@@ -246,7 +246,7 @@ namespace DoAnCShap
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -255,23 +255,12 @@ namespace DoAnCShap
             this.panel1.Size = new System.Drawing.Size(1184, 50);
             this.panel1.TabIndex = 23;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(563, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 40);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Tìm Kiếm";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(248, 3);
+            this.textBox8.Location = new System.Drawing.Point(362, 9);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(288, 41);
+            this.textBox8.Size = new System.Drawing.Size(288, 34);
             this.textBox8.TabIndex = 0;
             // 
             // panel2
@@ -752,6 +741,16 @@ namespace DoAnCShap
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(222, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(126, 21);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Tìm Kiếm Nhanh";
+            // 
             // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -807,7 +806,6 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txtMaNCC;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -840,5 +838,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label14;
     }
 }

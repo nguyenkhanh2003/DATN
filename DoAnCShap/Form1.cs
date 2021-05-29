@@ -202,7 +202,8 @@ namespace DoAnCShap
 
         private void btnPhanQuyen_Click(object sender, EventArgs e)
         {
-
+            lbl_HienThiForm.Text = "Phân Quyền Tài Khoản";
+            openChildForm(new Frm_PhanQuyen());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

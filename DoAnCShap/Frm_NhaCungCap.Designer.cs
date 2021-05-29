@@ -35,7 +35,6 @@ namespace DoAnCShap
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -64,6 +63,7 @@ namespace DoAnCShap
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -74,33 +74,21 @@ namespace DoAnCShap
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1333, 62);
+            this.panel1.Size = new System.Drawing.Size(1000, 50);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(749, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 44);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 9);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(354, 9);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 42);
+            this.textBox1.Size = new System.Drawing.Size(324, 35);
             this.textBox1.TabIndex = 0;
             // 
             // btnAdd
@@ -113,10 +101,9 @@ namespace DoAnCShap
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Green;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(23, 23);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(17, 19);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(156, 62);
+            this.btnAdd.Size = new System.Drawing.Size(117, 50);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,10 +121,9 @@ namespace DoAnCShap
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Green;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(341, 25);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(256, 20);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(133, 62);
+            this.btnDelete.Size = new System.Drawing.Size(100, 50);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -154,10 +140,9 @@ namespace DoAnCShap
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Green;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(621, 25);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(466, 20);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(133, 62);
+            this.btnSave.Size = new System.Drawing.Size(100, 50);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -174,10 +159,9 @@ namespace DoAnCShap
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Green;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(923, 23);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(692, 19);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(133, 62);
+            this.btnCancel.Size = new System.Drawing.Size(100, 50);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -191,11 +175,9 @@ namespace DoAnCShap
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 739);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 509);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1333, 123);
+            this.groupBox1.Size = new System.Drawing.Size(1000, 100);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -209,10 +191,9 @@ namespace DoAnCShap
             this.btnTHoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTHoat.ForeColor = System.Drawing.Color.Green;
             this.btnTHoat.Image = ((System.Drawing.Image)(resources.GetObject("btnTHoat.Image")));
-            this.btnTHoat.Location = new System.Drawing.Point(1143, 23);
-            this.btnTHoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTHoat.Location = new System.Drawing.Point(857, 19);
             this.btnTHoat.Name = "btnTHoat";
-            this.btnTHoat.Size = new System.Drawing.Size(133, 62);
+            this.btnTHoat.Size = new System.Drawing.Size(100, 50);
             this.btnTHoat.TabIndex = 8;
             this.btnTHoat.Text = "Đóng";
             this.btnTHoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -225,11 +206,9 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dataGridViewNhaCungCap);
-            this.groupBox2.Location = new System.Drawing.Point(0, 254);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 206);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1333, 468);
+            this.groupBox2.Size = new System.Drawing.Size(1000, 380);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Nhà Cung Cấp";
@@ -265,8 +244,7 @@ namespace DoAnCShap
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewNhaCungCap.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewNhaCungCap.Location = new System.Drawing.Point(4, 19);
-            this.dataGridViewNhaCungCap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewNhaCungCap.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewNhaCungCap.Name = "dataGridViewNhaCungCap";
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,7 +256,7 @@ namespace DoAnCShap
             this.dataGridViewNhaCungCap.RowHeadersVisible = false;
             this.dataGridViewNhaCungCap.RowHeadersWidth = 51;
             this.dataGridViewNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewNhaCungCap.Size = new System.Drawing.Size(1325, 445);
+            this.dataGridViewNhaCungCap.Size = new System.Drawing.Size(994, 361);
             this.dataGridViewNhaCungCap.TabIndex = 2;
             this.dataGridViewNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhaCungCap_CellClick);
             this.dataGridViewNhaCungCap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhaCungCap_CellContentClick);
@@ -341,20 +319,18 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtTenNCC);
             this.panel2.Controls.Add(this.txtMaNCC);
-            this.panel2.Location = new System.Drawing.Point(0, 79);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1325, 167);
+            this.panel2.Size = new System.Drawing.Size(994, 136);
             this.panel2.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(695, 122);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(521, 99);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 29);
+            this.label8.Size = new System.Drawing.Size(70, 24);
             this.label8.TabIndex = 25;
             this.label8.Text = "Địa Chỉ";
             // 
@@ -362,39 +338,35 @@ namespace DoAnCShap
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 123);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(22, 100);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 29);
+            this.label6.Size = new System.Drawing.Size(102, 24);
             this.label6.TabIndex = 26;
             this.label6.Text = "Trạng Thái";
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(893, 118);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Location = new System.Drawing.Point(670, 96);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(348, 34);
+            this.txtDiaChi.Size = new System.Drawing.Size(262, 28);
             this.txtDiaChi.TabIndex = 23;
             // 
             // txtTrangThai
             // 
             this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.Location = new System.Drawing.Point(287, 118);
-            this.txtTrangThai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTrangThai.Location = new System.Drawing.Point(215, 96);
             this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(345, 34);
+            this.txtTrangThai.Size = new System.Drawing.Size(260, 28);
             this.txtTrangThai.TabIndex = 24;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(695, 68);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(521, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 29);
+            this.label5.Size = new System.Drawing.Size(57, 24);
             this.label5.TabIndex = 21;
             this.label5.Text = "Email";
             // 
@@ -402,39 +374,35 @@ namespace DoAnCShap
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(695, 15);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(521, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 29);
+            this.label4.Size = new System.Drawing.Size(130, 24);
             this.label4.TabIndex = 22;
             this.label4.Text = "Số Điện Thoại";
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(893, 63);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(670, 51);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(348, 34);
+            this.txtEmail.Size = new System.Drawing.Size(262, 28);
             this.txtEmail.TabIndex = 19;
             // 
             // txtDienThoai
             // 
             this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDienThoai.Location = new System.Drawing.Point(893, 10);
-            this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDienThoai.Location = new System.Drawing.Point(670, 8);
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(348, 34);
+            this.txtDienThoai.Size = new System.Drawing.Size(262, 28);
             this.txtDienThoai.TabIndex = 20;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 66);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(22, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 29);
+            this.label3.Size = new System.Drawing.Size(174, 24);
             this.label3.TabIndex = 17;
             this.label3.Text = "Tên Nhà Cung Cấp";
             // 
@@ -442,41 +410,48 @@ namespace DoAnCShap
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(22, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 29);
+            this.label2.Size = new System.Drawing.Size(166, 24);
             this.label2.TabIndex = 18;
             this.label2.Text = "Mã Nhà Cung Cấp";
             // 
             // txtTenNCC
             // 
             this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNCC.Location = new System.Drawing.Point(287, 62);
-            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNCC.Location = new System.Drawing.Point(215, 50);
             this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(345, 34);
+            this.txtTenNCC.Size = new System.Drawing.Size(260, 28);
             this.txtTenNCC.TabIndex = 15;
             // 
             // txtMaNCC
             // 
             this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNCC.Location = new System.Drawing.Point(287, 17);
-            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNCC.Location = new System.Drawing.Point(215, 14);
             this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.Size = new System.Drawing.Size(345, 34);
+            this.txtMaNCC.Size = new System.Drawing.Size(260, 28);
             this.txtMaNCC.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(198, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 21);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Tìm Kiếm Nhanh";
             // 
             // Frm_NhaCungCap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 862);
+            this.ClientSize = new System.Drawing.Size(1000, 609);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_NhaCungCap";
             this.Text = "Frm_NhaCungCap";
             this.Load += new System.EventHandler(this.Frm_NhaCungCap_Load);
@@ -508,7 +483,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
@@ -523,5 +497,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenNCC;
         private System.Windows.Forms.TextBox txtMaNCC;
+        private System.Windows.Forms.Label label10;
     }
 }

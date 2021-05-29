@@ -33,7 +33,6 @@ namespace DoAnCShap
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -60,6 +59,7 @@ namespace DoAnCShap
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -96,7 +96,7 @@ namespace DoAnCShap
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -104,19 +104,9 @@ namespace DoAnCShap
             this.panel1.Size = new System.Drawing.Size(1184, 50);
             this.panel1.TabIndex = 22;
             // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(521, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 31);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Tìm Kiếm";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 12);
+            this.textBox1.Location = new System.Drawing.Point(344, 8);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(306, 31);
@@ -398,6 +388,16 @@ namespace DoAnCShap
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(199, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 21);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Tìm Kiếm Nhanh";
+            // 
             // Frm_KH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,7 +444,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenNCC;
         private System.Windows.Forms.TextBox txtMaNCC;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnClose;
@@ -452,5 +451,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label10;
     }
 }

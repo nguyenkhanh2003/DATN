@@ -243,3 +243,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_ThongK
 C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_BaoHanh.resources
 C:\Users\PHI\Documents\GitHub\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_ThongKe.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_HoaDonNhap.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_PhanQuyen.resources

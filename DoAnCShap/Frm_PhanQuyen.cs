@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnCShap
 {
-    public partial class Frm_ThongKe : Form
+    public partial class Frm_PhanQuyen : Form
     {
-        public Frm_ThongKe()
+        public Frm_PhanQuyen()
         {
             InitializeComponent();
-        }
-
-        private void Frm_ThongKe_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
