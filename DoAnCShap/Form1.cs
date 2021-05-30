@@ -121,8 +121,7 @@ namespace DoAnCShap
 
         private void btnBaoHanh_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Bảo Hành";
-            openChildForm(new Frm_BaoHanh());
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -196,19 +195,53 @@ namespace DoAnCShap
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Thống Kê";
-            openChildForm(new Frm_ThongKe());
+           
         }
 
         private void btnPhanQuyen_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Phân Quyền Tài Khoản";
-            openChildForm(new Frm_PhanQuyen());
+            
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Nhà Cung Cấp";
+            openChildForm(new Frm_NhaCungCap());
+        }
+
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Bán Hàng";
+            openChildForm(new Frm_BanHang());
+        }
+
+        private void btnBaohanh_Click_1(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Bảo Hành";
+            openChildForm(new Frm_BaoHanh());
+        }
+
+        private void btnThongKe_Click_1(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Thống Kê";
+            openChildForm(new Frm_ThongKe());
+        }
+
+        private void btnPhanQuyen_Click_1(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Phân Quyền Tài Khoản";
+            openChildForm(new Frm_PhanQuyen());
+        }
+
+        private void btnLoaiLK_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Loại Linh Kiện";
+            openChildForm(new Frm_LLinhKien());
         }
     }
 }
