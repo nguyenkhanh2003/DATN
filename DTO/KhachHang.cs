@@ -11,7 +11,7 @@ namespace DTO
         public string MaKH { get; set; }
         public string TenKH { get; set; }
         public string GioiTinh { get; set; }
-        public DateTime? NgaySinh { get; set; }
+        //public DateTime? NgaySinh { get; set; }
         public string Email { get; set; }
         public string DienThoai { get; set; }
         public string CMND { get; set; }
