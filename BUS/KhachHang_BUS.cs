@@ -30,6 +30,6 @@ namespace BUS
         {
             bus.DeleteData(ex);
         }
-
+       
     }
 }

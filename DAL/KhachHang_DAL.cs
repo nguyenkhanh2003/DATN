@@ -36,5 +36,10 @@ namespace DAL
         {
             KetNoi.ExecuteReader(@"DELETE FROM KhachHang Where MaKH=N'" + ex.MaKH + "'");
         }
+        //Tìm Kiếm
+        //public void SearchData(KhachHang ex)
+        //{
+        //    KetNoi.ExecuteReader(@"Select * FROM KhachHang Where TenKH LIKE N'%" + ex.TenKH + "')");
+        //}
     }
 }

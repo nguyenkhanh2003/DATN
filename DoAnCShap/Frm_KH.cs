@@ -22,36 +22,13 @@ namespace DoAnCShap
 
         KhachHang_BUS bus = new KhachHang_BUS();
         KhachHang kh = new KhachHang();
-        DataSet ds = new DataSet();
+        DataTable ds = new DataTable();
         int flag = 0;
         bool addnew;
         void Display()
         {
             dataGridViewKH.DataSource = bus.GetData("");
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        string PhatSinh_Ma(DataSet ds)
-        {
-            int sodong = ds.Tables[0].Rows.Count;
-            string macuoi;
-            if (sodong > 9)
-                macuoi = ds.Tables[0].Rows[sodong - 1]["MaKH"].ToString().Substring(2, 2);
-            else
-                macuoi = ds.Tables[0].Rows[sodong - 1]["MaKH"].ToString().Substring(3, 1);
-            return (int.Parse(macuoi) + 1).ToString();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-     
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -163,6 +140,12 @@ namespace DoAnCShap
                 MessageBox.Show("Xóa Dữ Liệu Thành Công");
             }
             Display();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            kh.TenKH = txtTenkh.Text;
+           
         }
     }
 }
