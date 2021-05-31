@@ -51,5 +51,36 @@ namespace DoAnCShap
         {
             this.Close();
         }
+        public void xulytextbox(Boolean b1,Boolean b2)
+        {
+            txtMaKh.Enabled =b1;
+            txtTenkh.Enabled =b1;
+            cboGioiTinh.Enabled =b1;
+            dateNS.Enabled = b1;
+            txtEmail.Enabled = b1;
+            txtSdt.Enabled =b1;
+            txtCMND.Enabled = b1;
+            txtDiaChi.Enabled =b1;
+            cboTrangThai.Enabled =b1;
+        }
+        public void xulychucnang(Boolean b1,Boolean b2)
+        {
+            btnThem.Enabled =b1;
+            btnXoa.Enabled = b2;
+            btnLuu.Enabled = b2;
+            btnHuy.Enabled = b2;
+        }
+
+        private void Frm_KH_Load(object sender, EventArgs e)
+        {
+            xulytextbox(false,true);
+            xulychucnang(true,false);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            xulychucnang(false, true);
+            xulytextbox(true, false);
+        }
     }
 }
