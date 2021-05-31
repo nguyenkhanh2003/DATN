@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
-
 namespace DAL
 {
     public class KhachHang_DAL
@@ -16,7 +15,7 @@ namespace DAL
         public DataTable GetData(string Condition)
         {
             return KetNoi.GetDataTable("Select * from KhachHang" + Condition);
-        }
+        }   
         // THÊM DỮ LIỆU
         public void AddData(KhachHang ex)
         {
@@ -37,9 +36,9 @@ namespace DAL
             KetNoi.ExecuteReader(@"DELETE FROM KhachHang Where MaKH=N'" + ex.MaKH + "'");
         }
         //Tìm Kiếm
-        //public void SearchData(KhachHang ex)
-        //{
-        //    KetNoi.ExecuteReader(@"Select * FROM KhachHang Where TenKH LIKE N'%" + ex.TenKH + "')");
-        //}
+        public void SearchData(KhachHang ex)
+        {
+            KetNoi.ExecuteReader(@"Select * FROM KhachHang Where TenKH LIKE N'%" + ex.TenKH+ "%')");
+        }
     }
 }

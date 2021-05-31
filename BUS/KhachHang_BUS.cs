@@ -30,6 +30,9 @@ namespace BUS
         {
             bus.DeleteData(ex);
         }
-       
+        public void SearchData(KhachHang ex)
+        {
+            bus.SearchData(ex);
+        }
     }
 }

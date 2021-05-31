@@ -22,6 +22,7 @@ namespace DoAnCShap
 
         KhachHang_BUS bus = new KhachHang_BUS();
         KhachHang kh = new KhachHang();
+        
         DataTable ds = new DataTable();
         int flag = 0;
         bool addnew;
@@ -29,7 +30,7 @@ namespace DoAnCShap
         {
             dataGridViewKH.DataSource = bus.GetData("");
         }
-
+      
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -144,8 +145,9 @@ namespace DoAnCShap
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            kh.TenKH = txtTenkh.Text;
-           
+            kh.TenKH = txtMaKh.Text;
+            bus.SearchData(kh);
+            Display();
         }
     }
 }
