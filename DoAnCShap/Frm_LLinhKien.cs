@@ -22,6 +22,9 @@ namespace DoAnCShap
 
         LoaiLinhKien_BUS bus = new LoaiLinhKien_BUS();
         LoaiLinhKien llk = new LoaiLinhKien();
+
+        QLBLK ql = new QLBLK();
+        DataSet ds = new DataSet();
         int flag = 0;
          public void Display()
         {
@@ -36,10 +39,10 @@ namespace DoAnCShap
             
         }
 
-        public void xulychucnang(Boolean b1, Boolean b2)
+        public void xulychucnang(Boolean b1, Boolean b2,Boolean b3)
         {
             btnThem.Enabled = b1;
-            btnXoa.Enabled = b2;
+            btnXoa.Enabled = b3;
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
@@ -51,17 +54,23 @@ namespace DoAnCShap
             cboTrangThai.Text = "";
         }
 
+       public void AutoCodoe()
+        {
+           
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            xulychucnang(false, true);
+            xulychucnang(false, true,false);
             xulytextbox(true, false);
+            AutoCodoe();
             flag = 1;
         }
 
         private void Frm_LLinhKien_Load(object sender, EventArgs e)
         {
             xulytextbox(false, true);
-            xulychucnang(true, false);
+            xulychucnang(true, false,false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -99,7 +108,7 @@ namespace DoAnCShap
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
             xulytextbox(true, false);
-            xulychucnang(false, true);
+            xulychucnang(false, true,true);
             flag = 2;
         }
 
@@ -129,6 +138,11 @@ namespace DoAnCShap
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
