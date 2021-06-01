@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class LoaiLinhKien
+   public class LoaiLinhKien
     { 
         public string MaLLK { get; set; }
         public string TenLLK { get; set; }
+        public string TrangThai { get; set; }
     }
 }
