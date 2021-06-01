@@ -46,15 +46,15 @@ namespace DoAnCShap
             this.txtMaLoai = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewKH = new System.Windows.Forms.DataGridView();
+            this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -227,6 +227,28 @@ namespace DoAnCShap
             this.dataGridViewKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewKH.Size = new System.Drawing.Size(673, 191);
             this.dataGridViewKH.TabIndex = 4;
+            this.dataGridViewKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKH_CellClick);
+            this.dataGridViewKH.DoubleClick += new System.EventHandler(this.dataGridViewKH_DoubleClick);
+            // 
+            // MaLLK
+            // 
+            this.MaLLK.DataPropertyName = "MaLLK";
+            this.MaLLK.HeaderText = "Mã Loại";
+            this.MaLLK.MinimumWidth = 6;
+            this.MaLLK.Name = "MaLLK";
+            // 
+            // TenLLK
+            // 
+            this.TenLLK.DataPropertyName = "TenLLK";
+            this.TenLLK.HeaderText = "Tên Loại";
+            this.TenLLK.MinimumWidth = 6;
+            this.TenLLK.Name = "TenLLK";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
             // 
             // groupBox4
             // 
@@ -252,6 +274,7 @@ namespace DoAnCShap
             this.btnClose.Text = "Đóng";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnHuy
             // 
@@ -276,6 +299,7 @@ namespace DoAnCShap
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -288,6 +312,7 @@ namespace DoAnCShap
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -302,26 +327,6 @@ namespace DoAnCShap
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // MaLLK
-            // 
-            this.MaLLK.DataPropertyName = "MaLLK";
-            this.MaLLK.HeaderText = "Mã Loại";
-            this.MaLLK.MinimumWidth = 6;
-            this.MaLLK.Name = "MaLLK";
-            // 
-            // TenLLK
-            // 
-            this.TenLLK.DataPropertyName = "TenLLK";
-            this.TenLLK.HeaderText = "Tên Loại";
-            this.TenLLK.MinimumWidth = 6;
-            this.TenLLK.Name = "TenLLK";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            // 
             // Frm_LLinhKien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +338,7 @@ namespace DoAnCShap
             this.Controls.Add(this.panel1);
             this.Name = "Frm_LLinhKien";
             this.Text = "Frm_LLinhKien";
+            this.Load += new System.EventHandler(this.Frm_LLinhKien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

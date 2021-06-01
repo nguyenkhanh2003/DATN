@@ -3,10 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
+using DAL;
+using System.Data;
 
 namespace BUS
 {
-    class LoaiLinhKien_BUS
+   public class LoaiLinhKien_BUS
     {
+        LoaiLinhKien_DAL bus = new LoaiLinhKien_DAL();
+        //  LẤY DỮ LIỆU
+        public DataTable GetData(string Condition)
+        {
+            return bus.GetData(Condition);
+        }
+        // THEM DATA
+        public void AddData(LoaiLinhKien ex)
+        {
+            bus.AddData(ex);
+        }
+        public void EditData(LoaiLinhKien ex)
+        {
+            bus.EditData(ex);
+        }
+        public void DeleteData(LoaiLinhKien ex)
+        {
+            bus.DeleteData(ex);
+        }
     }
 }
