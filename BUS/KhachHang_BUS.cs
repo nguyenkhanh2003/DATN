@@ -11,7 +11,9 @@ namespace BUS
 {
    public class KhachHang_BUS
     {
+        KetNoiDatabase c = new KetNoiDatabase();
         KhachHang_DAL bus = new KhachHang_DAL();
+        DataTable da = new DataTable();
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
@@ -33,6 +35,11 @@ namespace BUS
         public void SearchData(KhachHang ex)
         {
             bus.SearchData(ex);
+        }
+
+        public void HienThiSearch(string a)
+        {
+            da = c.GetDataTable("select * from KHACHHANG where TenKH LIKE N'%" + a + "%'");
         }
     }
 }

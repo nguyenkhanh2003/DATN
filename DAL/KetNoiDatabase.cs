@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class KetNoiDatabase
+  public class KetNoiDatabase
     {
         public static SqlConnection ConnectDB;
+
         // MỞ KẾT NỐI TỚI SQL SERVER
         public void OpenConnect()
         {
@@ -61,7 +62,6 @@ namespace DAL
 
             }
         }
-
 
     }
 }

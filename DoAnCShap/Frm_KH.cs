@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
-
 namespace DoAnCShap
 {
     public partial class Frm_KH : Form
@@ -22,10 +21,16 @@ namespace DoAnCShap
 
         KhachHang_BUS bus = new KhachHang_BUS();
         KhachHang kh = new KhachHang();
-        
-        DataTable ds = new DataTable();
+        QLBLK c = new QLBLK();
+        DataSet ds = new DataSet();
         int flag = 0;
         bool addnew;
+
+        public void HienThiSearch(String a)
+        {
+            ds = c.LayDuLieu("select * from KHACHHANG where TenKH LIKE N'%" + a + "%'");
+            dataGridViewKH.DataSource = ds.Tables[0];
+        }
         void Display()
         {
             dataGridViewKH.DataSource = bus.GetData("");
@@ -143,11 +148,17 @@ namespace DoAnCShap
             Display();
         }
 
+
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            kh.TenKH = txtMaKh.Text;
-            bus.SearchData(kh);
-            Display();
+            String a = txtSearch.Text;
+            HienThiSearch(a);
         }
     }
 }
