@@ -16,6 +16,21 @@ namespace BUS
         public DataTable GetData(string condition)
         {
             return bus.GetData(condition);
-        } 
+        }
+        // THEM DATA
+        public void AddData(NhanVien ex)
+        {
+            bus.AddData(ex);
+        }
+        public void EditData(NhanVien ex)
+        {
+            bus.EditData(ex);
+        }
+        public void DeleteData(NhanVien ex)
+        {
+            bus.DeleteData(ex);
+        }
+       
+
     }
 }
