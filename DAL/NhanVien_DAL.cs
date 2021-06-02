@@ -18,6 +18,10 @@ namespace DAL
             return KetNoi.GetDataTable("select * from NhanVien" + condition);
         }
 
+        //public DataTable GetChucVu(string condition)
+        //{
+        //    return KetNoi.GetDataTable("select TenCV from ChucVu" + condition);
+        //}
 
         // THÊM DỮ LIỆU
         public void AddData(NhanVien ex)

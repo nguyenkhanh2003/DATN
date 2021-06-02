@@ -18,22 +18,47 @@ namespace DoAnCShap
         {
             InitializeComponent();
             Display();
+            hienthichucvu();
             
         }
         NhanVien_BUS bus = new NhanVien_BUS();
+        ChucVu_BUS buss = new ChucVu_BUS();
         NhanVien nv = new NhanVien();
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
+       
+        public void xulytextbox(Boolean b1, Boolean b2)
+        {
+            txtMaNV.Enabled = b1;
+            cboChucVu.Enabled = b1;
+            txtHinhNhanVien.Enabled = b1;
+            txtUserName.Enabled = b1;
+            txtPassWord.Enabled = b1;
+            txtTenNV.Enabled = b1;
+            cboGioiTinh.Enabled = b1;
+            txtEmail.Enabled = b1;
+            txtSDT.Enabled = b1;
+            txtCMND.Enabled = b1;
+            txtDiaChi.Enabled = b1;
+            cboTrangThai.Enabled = b1;
+        }
+      
+        public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
+        {
+            btnThem.Enabled = b1;
+            btnXoa.Enabled = b3;
+            btnLuu.Enabled = b2;
+            btnHuy.Enabled = b2;
+        }
         int flag = 0;
         void Display()
         {
             dataGridViewNhanVien.DataSource = bus.GetData("");
         }
 
-      
+        public void hienthichucvu()
+        {
+            cboChucVu.DataSource = buss.GetChucVu("");
+        }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog o = new OpenFileDialog();
@@ -72,17 +97,19 @@ namespace DoAnCShap
             this.Close();
         }
 
-      
-
 
         private void Frm_NhanVien_Load(object sender, EventArgs e)
         {
-
+            xulytextbox(false,true);
+            xulychucnang(true, false, false);
+            //hienthichucvu();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
+            xulytextbox(true, false);
+            xulychucnang(false, true, true);
         }
 
         private void btnChonAnh_Click_1(object sender, EventArgs e)
@@ -139,6 +166,11 @@ namespace DoAnCShap
                 MessageBox.Show("Thêm Nhân Viên Thành Công");
             }
             Display();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

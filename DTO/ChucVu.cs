@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-     class ChucVu
+   public  class ChucVu
     {
         public string TenCV { get; set; }
         public string MaCV { get; set; }
+        public string TrangThai { get; set; }
     }
 }
