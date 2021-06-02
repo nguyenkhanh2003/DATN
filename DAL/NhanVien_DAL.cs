@@ -15,7 +15,7 @@ namespace DAL
         public DataTable GetData(string condition)
         {
             //return KetNoi.GetDataTable("select * from NhanVien where NhanVien.MaCV = ChucVu.MaCV" + condition);
-            return KetNoi.GetDataTable("select * from NhanVien" + condition);
+            return KetNoi.GetDataTable("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV" + condition);
         }
 
         //public DataTable GetChucVu(string condition)

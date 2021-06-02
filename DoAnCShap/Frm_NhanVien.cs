@@ -58,6 +58,8 @@ namespace DoAnCShap
         public void hienthichucvu()
         {
             cboChucVu.DataSource = buss.GetChucVu("");
+            cboChucVu.DisplayMember = "TenCV";
+            cboChucVu.ValueMember = "MaCV";
         }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
@@ -151,7 +153,7 @@ namespace DoAnCShap
             {
                 nv.MaNV = txtMaNV.Text;
                 // nv.MaCV = cboChucVu.SelectedValue.ToString();
-                nv.MaCV = cboChucVu.Text;
+                nv.MaCV = cboChucVu.SelectedValue.ToString();
                 nv.TenNV = txtTenNV.Text;
                 nv.GioiTinh = cboGioiTinh.Text;
                 nv.Email = txtEmail.Text;

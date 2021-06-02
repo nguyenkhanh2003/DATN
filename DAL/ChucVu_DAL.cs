@@ -14,7 +14,7 @@ namespace DAL
         public DataTable GetChucVu(string condition)
         {
             //return KetNoi.GetDataTable("select * from NhanVien where NhanVien.MaCV = ChucVu.MaCV" + condition);
-            return KetNoi.GetDataTable("select TenCV from ChucVu" + condition);
+            return KetNoi.GetDataTable("select MaCV,TenCV from ChucVu" + condition);
         }
     }
 }
