@@ -134,35 +134,7 @@ namespace DoAnCShap
 
         private void btnChonAnh_Click_1(object sender, EventArgs e)
         {
-            OpenFileDialog o = new OpenFileDialog();
 
-            o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
-
-            if (o.ShowDialog() == DialogResult.Cancel)
-            {
-                MessageBox.Show("Bạn Chưa Chọn Ảnh");
-
-            }
-
-            else
-            {
-                foreach (string ten in o.FileNames)
-                {
-                    string[] tenhinh = ten.Split('\\');
-                    txtHinhNhanVien.Text = tenhinh[tenhinh.Length - 1];
-
-                    PictureBox p = new PictureBox();
-
-                    Size s = new Size(200, 250);
-                    p.Size = s;
-
-                    pictureBox1.Controls.Add(p);
-                    Bitmap a = new Bitmap(ten);
-                    p.Image = a;
-                    p.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                }
-            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -210,5 +182,15 @@ namespace DoAnCShap
             txtUserName.Text = row.Cells[9].Value.ToString();
             txtPassWord.Text = row.Cells[10].Value.ToString();
             cboTrangThai.Text = row.Cells[11].Value.ToString();        }
+
+        private void btnChonAnh_Click_2(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if(open.ShowDialog()==DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(open.FileName);
+                this.Text = open.FileName;
+            }    
+        }
     }
 }
