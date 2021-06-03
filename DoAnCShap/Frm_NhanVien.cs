@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace DoAnCShap
             hienthichucvu();
             
         }
+        MD5 md = MD5.Create();
         NhanVien_BUS bus = new NhanVien_BUS();
         ChucVu_BUS buss = new ChucVu_BUS();
         NhanVien nv = new NhanVien();
@@ -63,6 +65,18 @@ namespace DoAnCShap
             cboChucVu.DataSource = buss.GetChucVu("");
             cboChucVu.DisplayMember = "TenCV";
             cboChucVu.ValueMember = "MaCV";
+        }
+
+        public void MaHoa()
+        {
+            byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(txtPassWord.Text);
+            byte[] hask = md.ComputeHash(inputstr);
+            StringBuilder sb = new StringBuilder();
+            for(int i=0;i<hask.Length;i++)
+            {
+                sb.Append(hask[i].ToString("X2"));
+            }
+            txtPassWord.Text = sb.ToString();
         }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
@@ -155,6 +169,7 @@ namespace DoAnCShap
         {
             if(flag==1)
             {
+                MaHoa();
                 nv.MaNV = txtMaNV.Text;
                 // nv.MaCV = cboChucVu.SelectedValue.ToString();
                 nv.MaCV = cboChucVu.SelectedValue.ToString();
