@@ -30,8 +30,11 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NhanVien));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -76,11 +79,11 @@ namespace DoAnCShap
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,12 +93,12 @@ namespace DoAnCShap
             this.PassWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -111,32 +114,6 @@ namespace DoAnCShap
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Nhân Viên";
-            // 
-            // dataGridViewNhanVien
-            // 
-            this.dataGridViewNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.MaCV,
-            this.TenNV,
-            this.GioiTinh,
-            this.NgaySinh,
-            this.Email,
-            this.DienThoai,
-            this.CMND,
-            this.DiaChi,
-            this.HinhAnh,
-            this.UserName,
-            this.PassWord,
-            this.TrangThai});
-            this.dataGridViewNhanVien.Location = new System.Drawing.Point(6, 19);
-            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
-            this.dataGridViewNhanVien.RowHeadersWidth = 51;
-            this.dataGridViewNhanVien.Size = new System.Drawing.Size(1142, 245);
-            this.dataGridViewNhanVien.TabIndex = 0;
             // 
             // panel1
             // 
@@ -668,13 +645,67 @@ namespace DoAnCShap
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // dataGridViewNhanVien
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNV,
+            this.MaCV,
+            this.TenNV,
+            this.GioiTinh,
+            this.Email,
+            this.DienThoai,
+            this.CMND,
+            this.DiaChi,
+            this.HinhAnh,
+            this.UserName,
+            this.PassWord,
+            this.TrangThai});
+            this.dataGridViewNhanVien.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewNhanVien.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewNhanVien.RowHeadersVisible = false;
+            this.dataGridViewNhanVien.RowHeadersWidth = 51;
+            this.dataGridViewNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewNhanVien.Size = new System.Drawing.Size(1148, 260);
+            this.dataGridViewNhanVien.TabIndex = 5;
+            this.dataGridViewNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhanVien_CellClick_1);
+            // 
             // MaNV
             // 
             this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã Nhân Vien";
+            this.MaNV.HeaderText = "Mã Nhân Viên";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 125;
             // 
             // MaCV
             // 
@@ -686,70 +717,48 @@ namespace DoAnCShap
             // 
             this.TenNV.DataPropertyName = "TenNV";
             this.TenNV.HeaderText = "Tên Nhân Viên";
-            this.TenNV.MinimumWidth = 6;
             this.TenNV.Name = "TenNV";
-            this.TenNV.Width = 125;
             // 
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới Tính";
-            this.GioiTinh.MinimumWidth = 6;
             this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Width = 125;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.MinimumWidth = 6;
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Width = 125;
             // 
             // Email
             // 
             this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
-            this.Email.Width = 125;
             // 
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "DienThoai";
             this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.MinimumWidth = 6;
             this.DienThoai.Name = "DienThoai";
-            this.DienThoai.Width = 125;
             // 
             // CMND
             // 
             this.CMND.DataPropertyName = "CMND";
             this.CMND.HeaderText = "CMND";
-            this.CMND.MinimumWidth = 6;
             this.CMND.Name = "CMND";
-            this.CMND.Width = 125;
             // 
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 125;
             // 
             // HinhAnh
             // 
             this.HinhAnh.DataPropertyName = "HinhAnh";
             this.HinhAnh.HeaderText = "Hình Ảnh";
-            this.HinhAnh.MinimumWidth = 6;
             this.HinhAnh.Name = "HinhAnh";
-            this.HinhAnh.Width = 125;
             // 
             // UserName
             // 
             this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "UserName";
+            this.UserName.HeaderText = "Tên Đăng Nhập";
             this.UserName.Name = "UserName";
             // 
             // PassWord
@@ -762,9 +771,7 @@ namespace DoAnCShap
             // 
             this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.MinimumWidth = 6;
             this.TrangThai.Name = "TrangThai";
-            this.TrangThai.Width = 125;
             // 
             // Frm_NhanVien
             // 
@@ -781,7 +788,6 @@ namespace DoAnCShap
             this.Text = "Frm_NhanVien";
             this.Load += new System.EventHandler(this.Frm_NhanVien_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -789,6 +795,7 @@ namespace DoAnCShap
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -796,7 +803,6 @@ namespace DoAnCShap
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnChonAnh;
@@ -841,11 +847,11 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn CMND;

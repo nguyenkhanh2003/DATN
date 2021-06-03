@@ -24,8 +24,8 @@ namespace DoAnCShap
         NhanVien_BUS bus = new NhanVien_BUS();
         ChucVu_BUS buss = new ChucVu_BUS();
         NhanVien nv = new NhanVien();
+        int flag = 0;
 
-       
         public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMaNV.Enabled = b1;
@@ -49,10 +49,13 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
-        int flag = 0;
+
+        
+       
         void Display()
         {
             dataGridViewNhanVien.DataSource = bus.GetData("");
+            
         }
 
         public void hienthichucvu()
@@ -110,6 +113,7 @@ namespace DoAnCShap
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
+           
             xulytextbox(true, false);
             xulychucnang(false, true, true);
         }
@@ -174,5 +178,22 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+       
+        private void dataGridViewNhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewNhanVien.Rows[e.RowIndex];
+            txtMaNV.Text = row.Cells[0].Value.ToString();
+            cboChucVu.Text = row.Cells[1].Value.ToString();
+            txtTenNV.Text = row.Cells[2].Value.ToString();
+            cboGioiTinh.Text = row.Cells[3].Value.ToString();
+            txtEmail.Text = row.Cells[4].Value.ToString();
+            txtSDT.Text = row.Cells[5].Value.ToString();
+            txtCMND.Text = row.Cells[6].Value.ToString();
+            txtDiaChi.Text = row.Cells[7].Value.ToString();
+            txtHinhNhanVien.Text = row.Cells[8].Value.ToString();
+            txtUserName.Text = row.Cells[9].Value.ToString();
+            txtPassWord.Text = row.Cells[10].Value.ToString();
+            cboTrangThai.Text = row.Cells[11].Value.ToString();        }
     }
 }
