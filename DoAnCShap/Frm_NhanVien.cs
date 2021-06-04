@@ -127,9 +127,20 @@ namespace DoAnCShap
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
-           
             xulytextbox(true, false);
             xulychucnang(false, true, true);
+            int count = 0;
+            count = dataGridViewNhanVien.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+            if (chuoi2 + 1 < 10)
+                txtMaNV.Text = "NV0" + (chuoi2 - 1).ToString();
+            else if (chuoi2 + 1 < 100)
+                txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
+
+
         }
 
         private void btnChonAnh_Click_1(object sender, EventArgs e)
@@ -155,7 +166,7 @@ namespace DoAnCShap
                 nv.UserName = txtUserName.Text;
                 nv.PassWord = txtPassWord.Text;
                 nv.TrangThai = cboTrangThai.Text;
-                bus.AddData(nv); ;
+                bus.AddData(nv);
                 MessageBox.Show("Thêm Nhân Viên Thành Công");
             }
             Display();
@@ -185,12 +196,35 @@ namespace DoAnCShap
 
         private void btnChonAnh_Click_2(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if(open.ShowDialog()==DialogResult.OK)
+           OpenFileDialog o = new OpenFileDialog();
+
+            o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
+
+            if (o.ShowDialog() == DialogResult.Cancel)
             {
-                pictureBox1.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
-            }    
+                MessageBox.Show("Bạn Chưa Chọn Ảnh");
+
+            }
+
+            else
+            {
+                foreach (string ten in o.FileNames)
+                {
+                    string[] tenhinh = ten.Split('\\');
+                    txtHinhNhanVien.Text = tenhinh[tenhinh.Length - 1];
+
+                    PictureBox p = new PictureBox();
+
+                    Size s = new Size(200, 250);
+                    p.Size = s;
+
+                    pictureBox1.Controls.Add(p);
+                    Bitmap a = new Bitmap(ten);
+                    p.Image = a;
+                    p.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                }
+            }
         }
     }
 }

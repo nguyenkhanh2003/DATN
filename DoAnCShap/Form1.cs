@@ -47,6 +47,7 @@ namespace DoAnCShap
         }
 
         public Form activeForm = null;
+
         public void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
