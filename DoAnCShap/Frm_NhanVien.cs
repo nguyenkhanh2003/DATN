@@ -59,6 +59,10 @@ namespace DoAnCShap
             count = dataGridViewNhanVien.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
+            if((chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value)) !="")
+            {
+                txtMaNV.Text = "NV00";
+            }    
             chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
             chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
             if (chuoi2 + 1 < 10)
