@@ -12,7 +12,7 @@ namespace DTO
         public string MaCV { get; set; }
         public string TenNV { get; set; }
         public string GioiTinh { get; set; }
-        //public DateTime? NgaySinh { get; set; }
+        public string NgaySinh { get; set; }
         public string Email { get; set; }
         public string DienThoai { get; set; }
         public string CMND { get; set; }

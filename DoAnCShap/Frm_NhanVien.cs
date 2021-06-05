@@ -145,7 +145,7 @@ namespace DoAnCShap
             flag = 1;
             xulytextbox(true, false);
             xulychucnang(false, true, true);
-            PhatSinhMa();
+            //PhatSinhMa();
         }
 
         private void btnChonAnh_Click_1(object sender, EventArgs e)
@@ -157,6 +157,7 @@ namespace DoAnCShap
         {
             if(flag==1)
             {
+               
                 MaHoa();
                 nv.MaNV = txtMaNV.Text;
                 // nv.MaCV = cboChucVu.SelectedValue.ToString();
@@ -164,6 +165,7 @@ namespace DoAnCShap
                 nv.TenNV = txtTenNV.Text;
                 nv.GioiTinh = cboGioiTinh.Text;
                 nv.Email = txtEmail.Text;
+                nv.NgaySinh = dateTirmNgaySinh.Text;
                 nv.DienThoai = txtSDT.Text;
                 nv.CMND = txtCMND.Text;
                 nv.DiaChi = txtDiaChi.Text;
@@ -175,6 +177,28 @@ namespace DoAnCShap
                 MessageBox.Show("Thêm Nhân Viên Thành Công");
                 xulychucnang(true, false, false);
             }
+            if(flag==2)
+            {
+                MaHoa();
+                nv.MaNV = txtMaNV.Text;
+                // nv.MaCV = cboChucVu.SelectedValue.ToString();
+                nv.MaCV = cboChucVu.SelectedValue.ToString();
+                nv.TenNV = txtTenNV.Text;
+                nv.GioiTinh = cboGioiTinh.Text;
+                nv.Email = txtEmail.Text;
+                nv.NgaySinh = dateTirmNgaySinh.Text;
+                nv.DienThoai = txtSDT.Text;
+                nv.CMND = txtCMND.Text;
+                nv.DiaChi = txtDiaChi.Text;
+                nv.HinhAnh = txtHinhNhanVien.Text;
+                nv.UserName = txtUserName.Text;
+                nv.PassWord = txtPassWord.Text;
+                nv.TrangThai = cboTrangThai.Text;
+                bus.EditData(nv);
+                MessageBox.Show("Sửa Nhân Viên Thành Công");
+                xulychucnang(true, false, false);
+            }
+            
             Display();
         }
 
@@ -192,13 +216,14 @@ namespace DoAnCShap
             txtTenNV.Text = row.Cells[2].Value.ToString();
             cboGioiTinh.Text = row.Cells[3].Value.ToString();
             txtEmail.Text = row.Cells[4].Value.ToString();
-            txtSDT.Text = row.Cells[5].Value.ToString();
-            txtCMND.Text = row.Cells[6].Value.ToString();
-            txtDiaChi.Text = row.Cells[7].Value.ToString();
-            txtHinhNhanVien.Text = row.Cells[8].Value.ToString();
-            txtUserName.Text = row.Cells[9].Value.ToString();
-            txtPassWord.Text = row.Cells[10].Value.ToString();
-            cboTrangThai.Text = row.Cells[11].Value.ToString();        }
+            dateTirmNgaySinh.Text = row.Cells[5].Value.ToString();
+            txtSDT.Text = row.Cells[6].Value.ToString();
+            txtCMND.Text = row.Cells[7].Value.ToString();
+            txtDiaChi.Text = row.Cells[8].Value.ToString();
+            txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
+            txtUserName.Text = row.Cells[10].Value.ToString();
+            txtPassWord.Text = row.Cells[11].Value.ToString();
+            cboTrangThai.Text = row.Cells[12].Value.ToString();        }
 
         private void btnChonAnh_Click_2(object sender, EventArgs e)
         {
@@ -231,6 +256,21 @@ namespace DoAnCShap
 
                 }
             }
+        }
+
+        private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
+        {
+            xulychucnang(false, true, true);
+            xulytextbox(true,false);
+            flag = 2;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            nv.MaNV = txtMaNV.Text;
+            bus.DeleteData(nv);
+            MessageBox.Show("Xóa Nhân Viên Thành Công");
+            Display();
         }
     }
 }
