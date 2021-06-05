@@ -58,6 +58,19 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
+        public void PhatSinhMa()
+        {
+            int count = 0;
+            count = dataGridViewKH.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+            if (chuoi2 + 1 < 10)
+                txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
+            else if (chuoi2 + 1 < 100)
+                txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
+        }
 
         public void hienthibutton()
         {
@@ -74,6 +87,7 @@ namespace DoAnCShap
             xulychucnang(false, true);
             xulytextbox(true, false);
             flag = 1;
+            PhatSinhMa();
            
         }
 

@@ -52,8 +52,20 @@ namespace DoAnCShap
             btnHuy.Enabled = b2;
         }
 
-        
-       
+
+        public void PhatSinhMa()
+        {
+            int count = 0;
+            count = dataGridViewNhanVien.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+            if (chuoi2 + 1 < 10)
+                txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
+            else if (chuoi2 + 1 < 100)
+                txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
+        }
         void Display()
         {
             dataGridViewNhanVien.DataSource = bus.GetData("");
@@ -129,18 +141,7 @@ namespace DoAnCShap
             flag = 1;
             xulytextbox(true, false);
             xulychucnang(false, true, true);
-            int count = 0;
-            count = dataGridViewNhanVien.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-            if (chuoi2 + 1 < 10)
-                txtMaNV.Text = "NV0" + (chuoi2 - 1).ToString();
-            else if (chuoi2 + 1 < 100)
-                txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
-
-
+            PhatSinhMa();
         }
 
         private void btnChonAnh_Click_1(object sender, EventArgs e)
@@ -168,6 +169,7 @@ namespace DoAnCShap
                 nv.TrangThai = cboTrangThai.Text;
                 bus.AddData(nv);
                 MessageBox.Show("Thêm Nhân Viên Thành Công");
+                xulychucnang(true, false, false);
             }
             Display();
         }
