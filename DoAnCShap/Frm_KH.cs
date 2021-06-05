@@ -64,16 +64,23 @@ namespace DoAnCShap
             count = dataGridViewKH.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count == null)
+            //if (dataGridViewKH.Rows.Count==0)
+            //{
+            //    txtMaKh.Text = "KH00";
+            //}
+            if (dataGridViewKH.ColumnCount != null)
             {
                 txtMaKh.Text = "KH00";
-            }    
-            chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-            if (chuoi2 + 1 < 10)
-                txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
-            else if (chuoi2 + 1 < 100)
-                txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
+                //MessageBox.Show("AA");
+            }
+          
+            
+            //chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
+            //chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+            //if (chuoi2 + 1 < 10)
+            //    txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
+            //else if (chuoi2 + 1 < 100)
+            //    txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
         }
 
         public void hienthibutton()
@@ -92,7 +99,6 @@ namespace DoAnCShap
             xulytextbox(true, false);
             flag = 1;
             PhatSinhMa();
-           
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
