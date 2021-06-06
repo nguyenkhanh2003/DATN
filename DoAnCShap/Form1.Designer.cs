@@ -54,6 +54,7 @@ namespace DoAnCShap
             this.panelBot = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnNhaSanXuat = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +66,7 @@ namespace DoAnCShap
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelSideMenu.Controls.Add(this.btnNhaSanXuat);
             this.panelSideMenu.Controls.Add(this.btnSetting);
             this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
@@ -207,7 +209,7 @@ namespace DoAnCShap
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 638);
+            this.btnExit.Location = new System.Drawing.Point(0, 684);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(212, 45);
@@ -465,6 +467,23 @@ namespace DoAnCShap
             this.panelChildForm.Size = new System.Drawing.Size(799, 532);
             this.panelChildForm.TabIndex = 25;
             // 
+            // btnNhaSanXuat
+            // 
+            this.btnNhaSanXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhaSanXuat.FlatAppearance.BorderSize = 0;
+            this.btnNhaSanXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhaSanXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhaSanXuat.ForeColor = System.Drawing.Color.White;
+            this.btnNhaSanXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaSanXuat.Image")));
+            this.btnNhaSanXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhaSanXuat.Location = new System.Drawing.Point(0, 638);
+            this.btnNhaSanXuat.Name = "btnNhaSanXuat";
+            this.btnNhaSanXuat.Size = new System.Drawing.Size(212, 46);
+            this.btnNhaSanXuat.TabIndex = 19;
+            this.btnNhaSanXuat.Text = "Nhà Sản Xuất";
+            this.btnNhaSanXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNhaSanXuat.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,6 +536,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnBaohanh;
         public System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Button btnNhaSanXuat;
     }
 }
 

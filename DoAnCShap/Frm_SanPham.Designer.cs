@@ -36,6 +36,18 @@ namespace DoAnCShap
             this.label13 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnChonAnh = new System.Windows.Forms.Button();
@@ -57,18 +69,6 @@ namespace DoAnCShap
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -167,6 +167,138 @@ namespace DoAnCShap
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1184, 266);
             this.panel2.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(254, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 28);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Bảo Hành";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(254, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 28);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Tên Linh Kiện";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(254, 222);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 28);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Ngày Sản Xuất";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(254, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 28);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Nhà Sản Xuất";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Mã Loại ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(736, 224);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 28);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Trạng Thái";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(736, 182);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 28);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Hình Ảnh";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(736, 137);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(131, 28);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Số Lượng";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(736, 93);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 28);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Đơn Giá";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(736, 51);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 28);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Đơn Vị Tính";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(736, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 28);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Tình Trạng";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(254, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 28);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Mã Linh Kiện";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // comboBox2
             // 
@@ -382,138 +514,6 @@ namespace DoAnCShap
             this.button5.Text = "Thêm";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(254, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 28);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Mã Linh Kiện";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 28);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Mã Loại ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(254, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 28);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Nhà Cung Cấp";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(254, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 28);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Tên Linh Kiện";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(254, 179);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 28);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Bảo Hành";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(254, 222);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 28);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Ngày Sản Xuất";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(736, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 28);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Tình Trạng";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(736, 51);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 28);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "Đơn Vị Tính";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(736, 93);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 28);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Đơn Giá";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(736, 137);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 28);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Số Lượng";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(736, 182);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 28);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Hình Ảnh";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(736, 224);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 28);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Trạng Thái";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Frm_SanPham
             // 
