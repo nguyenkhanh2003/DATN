@@ -240,7 +240,7 @@ namespace DoAnCShap
             for (int i = 0; i < n; i++)
             {
                 PictureBox p = new PictureBox();
-                Size s = new Size(50, 50);
+                Size s = new Size(150, 150);
                 p.Size = s;
                 pictureBox1.Controls.Add(p);
                 Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
