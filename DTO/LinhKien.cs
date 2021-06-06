@@ -9,6 +9,7 @@ namespace DTO
     class LinhKien
     {
         public string MaLK { get; set; }
+        public string MaLLK { get; set; }
         public string TenLK { get; set; }
         public string BaoHanh { get; set; }
         public DateTime? NgaySanXuat { get; set; }
@@ -18,7 +19,6 @@ namespace DTO
         public int? SoLuong { get; set; }
         public string HinhAnh { get; set; }
         public string TrangThai { get; set; }
-        public string MaLLK { get; set; }
         public string MaNSX { get; set; }
     }
 }
