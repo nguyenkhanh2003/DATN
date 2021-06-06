@@ -246,3 +246,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_HoaDon
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_PhanQuyen.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_LLinhKien.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_Setting.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_NSX.resources

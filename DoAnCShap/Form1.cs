@@ -244,5 +244,11 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Loại Linh Kiện";
             openChildForm(new Frm_LLinhKien());
         }
+
+        private void btnNhaSanXuat_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Nhà Sản Xuất";
+            openChildForm(new Frm_NSX());
+        }
     }
 }
