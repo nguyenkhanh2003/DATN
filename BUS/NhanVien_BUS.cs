@@ -18,10 +18,10 @@ namespace BUS
             return bus.GetData(condition);
         }
 
-        //public DataTable GetChucVu(string condition)
-        //{
-        //    return bus.GetChucVu(condition);
-        //}
+        public DataTable GetTimKiem(string condition)
+        {
+            return bus.GetTimKiem(condition);
+        }
         // THEM DATA
         public void AddData(NhanVien ex)
         {

@@ -286,6 +286,8 @@ namespace DoAnCShap
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.btnClose);
             this.groupBox4.Controls.Add(this.btnHuy);
             this.groupBox4.Controls.Add(this.btnLuu);

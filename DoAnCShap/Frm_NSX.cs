@@ -25,7 +25,10 @@ namespace DoAnCShap
             dataGridViewNSX.DataSource = bus.GetData("");
         }
 
-       
+        public void HienThiSearch(string Condition)
+        {
+            dataGridViewNSX.DataSource = bus.GetTimKiem("Select * From NhaSanXuat Where TenNSX Like N'%"+Condition+"%'");
+        }
         public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMansx.Enabled = b1;
@@ -133,7 +136,8 @@ namespace DoAnCShap
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            dataGridViewNSX.DataSource = bus.GetSearch("Select * From NhaSanXuat Where TenNSX Like N'%" + txtSearch.Text + "'");
+            String Condition = txtSearch.Text;
+            HienThiSearch(Condition);
         }
     }
 }

@@ -18,10 +18,11 @@ namespace DAL
             return KetNoi.GetDataTable("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV" + condition);
         }
 
-        //public DataTable GetChucVu(string condition)
-        //{
-        //    return KetNoi.GetDataTable("select TenCV from ChucVu" + condition);
-        //}
+       //Hien Thị Tìm Kiếm
+        public DataTable GetTimKiem(string Condition)
+        {
+            return KetNoi.GetDataTable(""+Condition);
+        }
 
         // THÊM DỮ LIỆU
         public void AddData(NhanVien ex)

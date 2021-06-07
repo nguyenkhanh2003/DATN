@@ -29,10 +29,13 @@ namespace BUS
         {
             bus.DeleteData(ex);
         }
-
-        public DataTable GetSearch(string condition)
+        public DataTable GetTimKiem(string Condition)
         {
-            return bus.GetSearch(condition);
+           return bus.GetTimKiem(Condition);
+        }
+       public void TimKiem(NhaSanXuat ex)
+        {
+            bus.TimKiem(ex);
         }
     }
 }

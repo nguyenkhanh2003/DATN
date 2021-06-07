@@ -79,6 +79,10 @@ namespace DoAnCShap
             
         }
 
+        public void HienThiSearch(string Condition)
+        {
+            dataGridViewNhanVien.DataSource = bus.GetTimKiem("Select * From NhanVien Where TenNV Like N'%" + Condition + "%'");
+        }
         public void hienthichucvu()
         {
             cboChucVu.DataSource = buss.GetChucVu("");
@@ -301,6 +305,12 @@ namespace DoAnCShap
             bus.DeleteData(nv);
             MessageBox.Show("Xóa Nhân Viên Thành Công");
             Display();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string Condition = txtSearch.Text;
+            HienThiSearch(Condition);
         }
     }
 }

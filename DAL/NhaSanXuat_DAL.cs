@@ -17,6 +17,11 @@ namespace DAL
             return KetNoi.GetDataTable("Select * from NhaSanXuat" + Condition);
         }
 
+        //Hien Thị Tìm Kiếm
+        public DataTable GetTimKiem(string Condition)
+        {
+            return KetNoi.GetDataTable(""+Condition);
+        }
 
         // THÊM DỮ LIỆU
         public void AddData(NhaSanXuat ex)
@@ -37,9 +42,10 @@ namespace DAL
         }
 
         // Search
-       public DataTable GetSearch(string condition)
+        public void TimKiem(NhaSanXuat ex)
         {
-            return KetNoi.GetDataTable("" + condition);
+            KetNoi.ExecuteReader(@"Select * From NhaSanXuat Where TenNSX Like N'%" + ex.TenNSX + "'");
         }
+       
     }
 }
