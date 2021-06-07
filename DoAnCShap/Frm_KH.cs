@@ -49,27 +49,45 @@ namespace DoAnCShap
             txtDiaChi.Enabled =b1;
             cboTrangThai.Enabled =b1;
         }
-        public void xulychucnang(Boolean b1,Boolean b2)
+        public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
         {
-            btnThem.Enabled =b1;
-            btnXoa.Enabled = b2;
+            btnThem.Enabled = b1;
+            btnXoa.Enabled = b3;
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
-        //public void PhatSinhMa()
-        //{
-        //    int count = 0;
-        //    count = dataGridViewKH.Rows.Count;
-        //    string chuoi = "";
-        //    int chuoi2 = 0;
-        //    chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
-        //    chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-        //    if (chuoi2 + 1 < 10)
-        //        txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
-        //    else if (chuoi2 + 1 < 100)
-        //        txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
-        //}
 
+        public void Clear()
+        {
+            txtMaKh.Clear();
+            txtTenkh.Clear();
+            txtCMND.Clear();
+            txtDiaChi.Clear();
+            txtEmail.Clear();
+            txtSdt.Clear();
+            cboGioiTinh.Text="";
+            cboTrangThai.Text="";
+        }
+        public void PhatSinhMa()
+        {
+            int count = 0;
+            count = dataGridViewKH.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            if (count <= 1)
+            {
+                txtMaKh.Text = "KH00";
+            }
+            else
+            {
+                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
+            }
+        }
         public String PhatSinhMa(DataTable dt)
         {
             int sodong = dataGridViewKH.Rows.Count;
@@ -88,18 +106,15 @@ namespace DoAnCShap
         private void Frm_KH_Load(object sender, EventArgs e)
         {
             xulytextbox(false,true);
-            xulychucnang(true,false);
+            xulychucnang(true,false,false);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            xulychucnang(false, true);
+            xulychucnang(false, true,false);
             xulytextbox(true, false);
             flag = 1;
-            if (int.Parse(PhatSinhMa(dt)) < 10)
-                txtMaKh.Text = "KH0" + PhatSinhMa(dt);
-            else
-                txtMaKh.Text = "KH" + PhatSinhMa(dt);
+            PhatSinhMa();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -116,6 +131,8 @@ namespace DoAnCShap
                 kh.TrangThai = cboTrangThai.Text;
                 bus.AddData(kh); ;
                 MessageBox.Show("Thêm Khách Hàng Thành Công");
+                xulychucnang(true,false,false);
+                Clear();
             }
             if(flag==2)
             {
@@ -128,6 +145,8 @@ namespace DoAnCShap
                 kh.TrangThai = cboTrangThai.Text;
                 bus.EditData(kh); ;
                 MessageBox.Show("Sửa Dữ Liệu Thành Công");
+                xulychucnang(true,false,false);
+                Clear();
             }
       
             Display();
@@ -152,7 +171,7 @@ namespace DoAnCShap
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
             xulytextbox(true, false);
-            xulychucnang(false,true);
+            xulychucnang(false,true,true);
             flag = 2;
         }
 
@@ -169,6 +188,7 @@ namespace DoAnCShap
                 kh.MaKH = txtMaKh.Text;
                 bus.DeleteData(kh);
                 MessageBox.Show("Xóa Dữ Liệu Thành Công");
+                Clear();
             }
             Display();
         }

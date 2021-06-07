@@ -59,17 +59,33 @@ namespace DoAnCShap
             cboTrangThai.Text = "";
         }
 
-       public void AutoCodoe()
+        public void PhatSinhMa()
         {
-           
+            int count = 0;
+            count = dataGridViewKH.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            if (count <= 1)
+            {
+                txtMaLoai.Text = "LLK00";
+            }
+            else
+            {
+                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    txtMaLoai.Text = "LLK0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMaLoai.Text = "LLK" + (chuoi2 + 1).ToString();
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             xulychucnang(false, true,false);
             xulytextbox(true, false);
-            AutoCodoe();
             flag = 1;
+            PhatSinhMa();
         }
 
         private void Frm_LLinhKien_Load(object sender, EventArgs e)
@@ -90,6 +106,7 @@ namespace DoAnCShap
                     llk.TrangThai = cboTrangThai.Text;
                     bus.AddData(llk); ;
                     MessageBox.Show("Thêm Loại Linh Kiện Thành Công");
+                    xulychucnang(true,false,false);
                 }
                 clear();
                         }
@@ -106,6 +123,8 @@ namespace DoAnCShap
                 llk.TrangThai = cboTrangThai.Text;
                 bus.EditData(llk);
                 MessageBox.Show("Sửa Loại linh Kiện Thành Công");
+                xulychucnang(true,false,false);
+                clear();
             }    
             Display();
         }
