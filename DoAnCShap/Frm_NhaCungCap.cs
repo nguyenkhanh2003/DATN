@@ -56,6 +56,11 @@ namespace DoAnCShap
         {
             dataGridViewNhaCungCap.DataSource = bus.GetData("");
         }
+
+        public void HienThiSearch(string condition)
+        {
+            dataGridViewNhaCungCap.DataSource = bus.GetSearch("Select * from NhaCungCap Where TenNCC Like N'%" + condition + "%'");
+        }
         void AllTextBoxNull()
         {
             txtMaNCC.Text = "";
@@ -239,40 +244,17 @@ namespace DoAnCShap
         {
           //  Display();
         }
-
-        private void dataGridViewNhaCungCap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            string condition = txtSearch.Text;
+            HienThiSearch(condition);
         }
-
-        private void dataGridViewX1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtTenNCC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaNCC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTrangThai_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btnTHoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtDiaChi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

@@ -17,6 +17,11 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select * from NhaCungCap" + Condition);
         }
+        // Tim Kiem
+        public DataTable GetSearch(string condition)
+        {
+            return KetNoi.GetDataTable(""+condition);
+        }
         // THÊM DỮ LIỆU
         public void AddData(NhaCungCap ex)
         {

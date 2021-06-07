@@ -21,15 +21,13 @@ namespace DoAnCShap
 
         KhachHang_BUS bus = new KhachHang_BUS();
         KhachHang kh = new KhachHang();
-        QLBLK c = new QLBLK();
-        DataSet ds = new DataSet();
+        DataTable dt;
         int flag = 0;
         bool addnew;
 
-        public void HienThiSearch(String a)
+        public void HienThiSearch(String Condition)
         {
-            ds = c.LayDuLieu("select * from KHACHHANG where TenKH LIKE N'%" + a + "%'");
-            dataGridViewKH.DataSource = ds.Tables[0];
+            dataGridViewKH.DataSource = bus.GetSearch("Select * From KhachHang Where TenKH Like N'%" + Condition + "%'");
         }
         void Display()
         {
@@ -58,29 +56,29 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
-        public void PhatSinhMa()
+        //public void PhatSinhMa()
+        //{
+        //    int count = 0;
+        //    count = dataGridViewKH.Rows.Count;
+        //    string chuoi = "";
+        //    int chuoi2 = 0;
+        //    chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
+        //    chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+        //    if (chuoi2 + 1 < 10)
+        //        txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
+        //    else if (chuoi2 + 1 < 100)
+        //        txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
+        //}
+
+        public String PhatSinhMa(DataTable dt)
         {
-            int count = 0;
-            count = dataGridViewKH.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            //if (dataGridViewKH.Rows.Count==0)
-            //{
-            //    txtMaKh.Text = "KH00";
-            //}
-            if (dataGridViewKH.ColumnCount != null)
-            {
-                txtMaKh.Text = "KH00";
-                //MessageBox.Show("AA");
-            }
-          
-            
-            //chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
-            //chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-            //if (chuoi2 + 1 < 10)
-            //    txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
-            //else if (chuoi2 + 1 < 100)
-            //    txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
+            int sodong = dataGridViewKH.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = dt.Rows[0].ToString().Substring(2, 2);
+            else
+                macuoi = dt.Rows[sodong - 1][0].ToString().Substring(3, 1);
+            return (int.Parse(macuoi) + 1).ToString();
         }
 
         public void hienthibutton()
@@ -98,7 +96,10 @@ namespace DoAnCShap
             xulychucnang(false, true);
             xulytextbox(true, false);
             flag = 1;
-            PhatSinhMa();
+            if (int.Parse(PhatSinhMa(dt)) < 10)
+                txtMaKh.Text = "KH0" + PhatSinhMa(dt);
+            else
+                txtMaKh.Text = "KH" + PhatSinhMa(dt);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -181,8 +182,8 @@ namespace DoAnCShap
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            String a = txtSearch.Text;
-            HienThiSearch(a);
+            string Condition = txtSearch.Text;
+            HienThiSearch(Condition);
         }
     }
 }

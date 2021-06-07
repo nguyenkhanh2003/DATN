@@ -19,6 +19,11 @@ namespace BUS
         {
             return bus.GetData(Condition);
         }
+
+        public DataTable GetSearch(string condition)
+        {
+            return bus.GetSearch(condition);
+        }
         // THEM DATA
         public void AddData(KhachHang ex)
         {
@@ -31,15 +36,6 @@ namespace BUS
         public void DeleteData(KhachHang ex)
         {
             bus.DeleteData(ex);
-        }
-        public void SearchData(KhachHang ex)
-        {
-            bus.SearchData(ex);
-        }
-
-        public void HienThiSearch(string a)
-        {
-            da = c.GetDataTable("select * from KHACHHANG where TenKH LIKE N'%" + a + "%'");
         }
     }
 }

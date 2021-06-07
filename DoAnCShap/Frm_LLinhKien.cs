@@ -31,6 +31,11 @@ namespace DoAnCShap
 
             dataGridViewKH.DataSource = bus.GetData("");
         }
+
+        public void HienThiSearch(string condition)
+        {
+            dataGridViewKH.DataSource = bus.GetSearch("Select * from LoaiLinhKien Where TenLLK Like N'%" + condition + "%'");
+        }
         public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMaLoai.Enabled = b1;
@@ -142,7 +147,8 @@ namespace DoAnCShap
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            string condition = txtSearch.Text;
+            HienThiSearch(condition);
         }
     }
 }

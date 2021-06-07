@@ -16,7 +16,11 @@ namespace DAL
             return KetNoi.GetDataTable("Select * from LoaiLinhKien" + Condition);
         }
 
-
+        //Tim Kiem
+        public DataTable GetSearch(string condition)
+        {
+            return KetNoi.GetDataTable(""+condition);
+        }
         // THÊM DỮ LIỆU
         public void AddData(LoaiLinhKien ex)
         {

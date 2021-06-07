@@ -17,7 +17,10 @@ namespace DAL
             return KetNoi.GetDataTable("Select * from KhachHang" + Condition);
         }
        
-
+       public DataTable GetSearch(string Condition)
+       {
+           return KetNoi.GetDataTable(""+Condition);
+       }
         // THÊM DỮ LIỆU
         public void AddData(KhachHang ex)
         {
