@@ -58,8 +58,30 @@ namespace DoAnCShap
             flag = 1;
             xulychucnang(false,true,true);
             xulytextbox(true, false);
+            PhatSinhMa();
         }
 
+
+        public void PhatSinhMa()
+        {
+            int count = 0;
+            count = dataGridViewNSX.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            if (count <= 1)
+            {
+                txtMansx.Text = "NSX01";
+            }
+            else
+            {
+                chuoi = Convert.ToString(dataGridViewNSX.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    txtMansx.Text = "NSX0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMansx.Text = "NSX" + (chuoi2 + 1).ToString();
+            }
+        }
         private void Frm_NSX_Load(object sender, EventArgs e)
         {
             DisPlay();

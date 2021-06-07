@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using System.Diagnostics;
 
 namespace DoAnCShap
 {
@@ -62,16 +63,14 @@ namespace DoAnCShap
             count = dataGridViewNhanVien.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if((chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value)) !="")
-            {
-                txtMaNV.Text = "NV00";
-            }    
-            chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-            if (chuoi2 + 1 < 10)
-                txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
-            else if (chuoi2 + 1 < 100)
-                txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
+            
+                chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                if (chuoi2 + 1 < 10)
+                    txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
+            
         }
         void Display()
         {
