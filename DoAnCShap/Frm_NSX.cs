@@ -25,6 +25,7 @@ namespace DoAnCShap
             dataGridViewNSX.DataSource = bus.GetData("");
         }
 
+       
         public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMansx.Enabled = b1;
@@ -41,16 +42,26 @@ namespace DoAnCShap
             btnHuy.Enabled = b2;
         }
 
+        public void Clear()
+        {
+            txtMansx.Clear();
+            txtTenNSX.Clear();
+            txtDiaChi.Clear();
+            cboTrangThai.Text = "";
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
             xulychucnang(false,true,true);
+            xulytextbox(true, false);
         }
 
         private void Frm_NSX_Load(object sender, EventArgs e)
         {
             DisPlay();
             xulychucnang(true, false, false);
+            xulytextbox(false, true);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -65,7 +76,9 @@ namespace DoAnCShap
                     nsx.TrangThai = cboTrangThai.Text;
                     bus.AddData(nsx);
                     MessageBox.Show("Thêm Nhà Sản Xuất Thành Công");
-            
+                    Clear();
+                    xulychucnang(true, false, false);
+                    xulytextbox(false, true);
                 }
                 else
                 {
@@ -80,6 +93,9 @@ namespace DoAnCShap
                 nsx.TrangThai = cboTrangThai.Text;
                 bus.EditData(nsx);
                 MessageBox.Show("Thành Công");
+                Clear();
+                xulychucnang(true, false, false);
+                xulytextbox(false, true);
             }
             DisPlay();
         }
@@ -110,6 +126,14 @@ namespace DoAnCShap
             bus.DeleteData(nsx);
             MessageBox.Show("Thanh Cong");
             DisPlay();
+            Clear();
+            xulychucnang(true, false, false);
+            xulytextbox(false, true);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewNSX.DataSource = bus.GetSearch("Select * From NhaSanXuat Where TenNSX Like N'%" + txtSearch.Text + "'");
         }
     }
 }

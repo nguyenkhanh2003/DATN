@@ -12,6 +12,6 @@ namespace DTO
         public string TenNSX { get; set; }
         public string DiaChi { get; set; }
         public string TrangThai { get; set; }
-
+        public string Search { get; set; }
     }
 }

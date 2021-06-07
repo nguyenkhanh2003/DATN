@@ -29,5 +29,10 @@ namespace BUS
         {
             bus.DeleteData(ex);
         }
+
+        public DataTable GetSearch(string condition)
+        {
+            return bus.GetSearch(condition);
+        }
     }
 }

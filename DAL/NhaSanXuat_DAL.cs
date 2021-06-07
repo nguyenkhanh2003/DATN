@@ -27,13 +27,19 @@ namespace DAL
         //  SỬA DỮ LIỆU
         public void EditData(NhaSanXuat ex)
         {
-            KetNoi.ExecuteReader(@"UPDATE NhaSanXuat SET TenNSX=N'" + ex.TenNSX + "',DiaChi=N'" + ex.DiaChi + "',TrangThai=N'" + ex.TrangThai + "' Whhere MaNSX=N'" + ex.MaNSX + "' ");
+            KetNoi.ExecuteReader(@"update NhaSanXuat SET TenNSX=N'"+ex.TenNSX+"',DiaChi=N'"+ex.DiaChi+"',TrangThai=N'"+ex.TrangThai+"' Where MaNSX='"+ex.MaNSX+"'");
 
         }
         //  XÓA DỮ LIỆU
         public void DeleteData(NhaSanXuat ex)
         {
             KetNoi.ExecuteReader(@"DELETE FROM NhaSanXuat Where MaNSX=N'" + ex.MaNSX + "' ");
+        }
+
+        // Search
+       public DataTable GetSearch(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
         }
     }
 }
