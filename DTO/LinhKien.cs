@@ -15,8 +15,8 @@ namespace DTO
         public DateTime? NgaySanXuat { get; set; }
         public string TinhTrang { get; set; }
         public string DonViTinh { get; set; }
-        public decimal? DonGia { get; set; }
-        public int? SoLuong { get; set; }
+        public string DonGia { get; set; }
+        public string SoLuong { get; set; }
         public string HinhAnh { get; set; }
         public string TrangThai { get; set; }
         public string MaNSX { get; set; }

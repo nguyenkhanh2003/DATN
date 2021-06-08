@@ -34,6 +34,12 @@ namespace DoAnCShap
             comboBoxNSX.DisplayMember = "TenNSX";
             comboBoxNSX.ValueMember = "MaNSX";
         }
+        public void HienThiLoaiLK()
+        {
+            cboMaLoai.DataSource = llk.GetData("");
+            cboMaLoai.DisplayMember = "TenLK";
+            cboMaLoai.ValueMember = "MaLLK";
+        }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
         {
             btnThem.Enabled = b1;
@@ -110,6 +116,8 @@ namespace DoAnCShap
         {
             xulychucnang(true, false, false);
             HienThiNSX();
+            HienThiLoaiLK();
+            DisPlay();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -123,9 +131,15 @@ namespace DoAnCShap
                 lk.BaoHanh = txtBaoHanh.Text;
                 lk.NgaySanXuat = dateNSX.Value;
                 lk.TinhTrang = txtTinhTrang.Text;
-                lk.DonViTinh = txtDonGia.Text;
-
-            }    
+                lk.DonViTinh = txtDonViTinh.Text;
+                lk.DonGia = txtDonGia.Text;
+                lk.SoLuong = txtSoLuong.Text;
+                lk.HinhAnh = txtHinhSP.Text;
+                lk.TrangThai = cboTrangThai.Text;
+                bus.AddData(lk);
+                MessageBox.Show("Thành Công");
+            }
+            DisPlay();
         }
     }
 }
