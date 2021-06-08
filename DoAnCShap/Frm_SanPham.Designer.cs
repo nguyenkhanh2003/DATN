@@ -31,7 +31,7 @@ namespace DoAnCShap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SanPham));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLK = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -48,6 +48,7 @@ namespace DoAnCShap
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxNSX = new System.Windows.Forms.ComboBox();
             this.cboMaLoai = new System.Windows.Forms.ComboBox();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.btnChonAnh = new System.Windows.Forms.Button();
@@ -64,11 +65,10 @@ namespace DoAnCShap
             this.txtMaLinhKien = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBoxNSX = new System.Windows.Forms.ComboBox();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +82,7 @@ namespace DoAnCShap
             this.HinhAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLK)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,7 +93,7 @@ namespace DoAnCShap
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridViewLK);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 322);
             this.groupBox1.Name = "groupBox1";
@@ -102,13 +102,13 @@ namespace DoAnCShap
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Linh Kiện";
             // 
-            // dataGridView1
+            // dataGridViewLK
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewLK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewLK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLK,
             this.MaLLK,
             this.MaNSX,
@@ -121,11 +121,11 @@ namespace DoAnCShap
             this.SoLuong,
             this.HinhAnh,
             this.TrangThai});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 277);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewLK.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewLK.Name = "dataGridViewLK";
+            this.dataGridViewLK.RowHeadersWidth = 51;
+            this.dataGridViewLK.Size = new System.Drawing.Size(1160, 277);
+            this.dataGridViewLK.TabIndex = 0;
             // 
             // panel1
             // 
@@ -325,6 +325,15 @@ namespace DoAnCShap
             this.label2.Text = "Mã Linh Kiện";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // comboBoxNSX
+            // 
+            this.comboBoxNSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNSX.FormattingEnabled = true;
+            this.comboBoxNSX.Location = new System.Drawing.Point(406, 93);
+            this.comboBoxNSX.Name = "comboBoxNSX";
+            this.comboBoxNSX.Size = new System.Drawing.Size(302, 28);
+            this.comboBoxNSX.TabIndex = 36;
+            // 
             // cboMaLoai
             // 
             this.cboMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,7 +437,6 @@ namespace DoAnCShap
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(252, 28);
             this.txtDonGia.TabIndex = 12;
-            this.txtDonGia.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // txtDonViTinh
             // 
@@ -461,10 +469,10 @@ namespace DoAnCShap
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnClose);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.button5);
+            this.groupBox4.Controls.Add(this.btnHuy);
+            this.groupBox4.Controls.Add(this.btnLuu);
+            this.groupBox4.Controls.Add(this.btnXoa);
+            this.groupBox4.Controls.Add(this.btnThem);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox4.Location = new System.Drawing.Point(0, 647);
             this.groupBox4.Name = "groupBox4";
@@ -484,62 +492,55 @@ namespace DoAnCShap
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnHuy
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(776, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 39);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Hủy";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(776, 19);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(91, 39);
+            this.btnHuy.TabIndex = 0;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuy.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnLuu
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(559, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(559, 19);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(91, 39);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // button2
+            // btnXoa
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(308, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 39);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(308, 19);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(91, 39);
+            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnThem
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(39, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 39);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Thêm";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxNSX
-            // 
-            this.comboBoxNSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxNSX.FormattingEnabled = true;
-            this.comboBoxNSX.Location = new System.Drawing.Point(406, 93);
-            this.comboBoxNSX.Name = "comboBoxNSX";
-            this.comboBoxNSX.Size = new System.Drawing.Size(302, 28);
-            this.comboBoxNSX.TabIndex = 36;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(39, 19);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(91, 39);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // MaLK
             // 
@@ -555,7 +556,7 @@ namespace DoAnCShap
             // 
             // MaNSX
             // 
-            this.MaNSX.DataPropertyName = "NhaSanXuat";
+            this.MaNSX.DataPropertyName = "TenNSX";
             this.MaNSX.HeaderText = "Nhà Sản Xuất";
             this.MaNSX.Name = "MaNSX";
             // 
@@ -625,8 +626,9 @@ namespace DoAnCShap
             this.Controls.Add(this.groupBox1);
             this.Name = "Frm_SanPham";
             this.Text = "Frm_SanPham";
+            this.Load += new System.EventHandler(this.Frm_SanPham_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLK)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -640,7 +642,7 @@ namespace DoAnCShap
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewLK;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnChonAnh;
@@ -660,10 +662,10 @@ namespace DoAnCShap
         private System.Windows.Forms.ComboBox cboMaLoai;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
