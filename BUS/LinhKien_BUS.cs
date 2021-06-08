@@ -18,6 +18,11 @@ namespace BUS
         {
             return bus.GetData(Condition);
         }
+        //Tim Kiem
+        public DataTable GetSearch(string Condition)
+        {
+            return bus.GetSearch(Condition);
+        }
         // THEM DATA
         public void AddData(LinhKien ex)
         {

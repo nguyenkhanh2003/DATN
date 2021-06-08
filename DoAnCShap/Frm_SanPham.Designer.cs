@@ -32,9 +32,21 @@ namespace DoAnCShap
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SanPham));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewLK = new System.Windows.Forms.DataGridView();
+            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BaoHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HinhAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,18 +81,6 @@ namespace DoAnCShap
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BaoHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HinhAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLK)).BeginInit();
             this.panel1.SuspendLayout();
@@ -126,12 +126,86 @@ namespace DoAnCShap
             this.dataGridViewLK.RowHeadersWidth = 51;
             this.dataGridViewLK.Size = new System.Drawing.Size(1160, 277);
             this.dataGridViewLK.TabIndex = 0;
+            this.dataGridViewLK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLK_CellClick);
+            this.dataGridViewLK.DoubleClick += new System.EventHandler(this.dataGridViewLK_DoubleClick);
+            // 
+            // MaLK
+            // 
+            this.MaLK.DataPropertyName = "MaLK";
+            this.MaLK.HeaderText = "Mã Linh Kiện";
+            this.MaLK.Name = "MaLK";
+            // 
+            // MaLLK
+            // 
+            this.MaLLK.DataPropertyName = "MaLLK";
+            this.MaLLK.HeaderText = "Loại Linh Kiện";
+            this.MaLLK.Name = "MaLLK";
+            // 
+            // MaNSX
+            // 
+            this.MaNSX.DataPropertyName = "TenNSX";
+            this.MaNSX.HeaderText = "Nhà Sản Xuất";
+            this.MaNSX.Name = "MaNSX";
+            // 
+            // TenLK
+            // 
+            this.TenLK.DataPropertyName = "TenLK";
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
+            // 
+            // BaoHanh
+            // 
+            this.BaoHanh.DataPropertyName = "BaoHanh";
+            this.BaoHanh.HeaderText = "Bảo Hành";
+            this.BaoHanh.Name = "BaoHanh";
+            // 
+            // NgaySanXuat
+            // 
+            this.NgaySanXuat.DataPropertyName = "NgaySanXuat";
+            this.NgaySanXuat.HeaderText = "NgaySanXuat";
+            this.NgaySanXuat.Name = "NgaySanXuat";
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.DataPropertyName = "TinhTrang";
+            this.TinhTrang.HeaderText = "Tình Trạng";
+            this.TinhTrang.Name = "TinhTrang";
+            // 
+            // DonViTinh
+            // 
+            this.DonViTinh.DataPropertyName = "DonViTinh";
+            this.DonViTinh.HeaderText = "Đơn Vị Tính";
+            this.DonViTinh.Name = "DonViTinh";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // HinhAnh
+            // 
+            this.HinhAnh.DataPropertyName = "HinhAnh";
+            this.HinhAnh.HeaderText = "Hình Ảnh";
+            this.HinhAnh.Name = "HinhAnh";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -149,13 +223,14 @@ namespace DoAnCShap
             this.label13.TabIndex = 2;
             this.label13.Text = "Tìm Kiếm Nhanh";
             // 
-            // textBox8
+            // txtSearch
             // 
-            this.textBox8.Location = new System.Drawing.Point(387, 10);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(310, 32);
-            this.textBox8.TabIndex = 0;
+            this.txtSearch.Location = new System.Drawing.Point(387, 10);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(310, 32);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel2
             // 
@@ -491,6 +566,7 @@ namespace DoAnCShap
             this.btnClose.Text = "Đóng";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnHuy
             // 
@@ -528,6 +604,7 @@ namespace DoAnCShap
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -541,78 +618,6 @@ namespace DoAnCShap
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // MaLK
-            // 
-            this.MaLK.DataPropertyName = "MaLK";
-            this.MaLK.HeaderText = "Mã Linh Kiện";
-            this.MaLK.Name = "MaLK";
-            // 
-            // MaLLK
-            // 
-            this.MaLLK.DataPropertyName = "MaLLK";
-            this.MaLLK.HeaderText = "Loại Linh Kiện";
-            this.MaLLK.Name = "MaLLK";
-            // 
-            // MaNSX
-            // 
-            this.MaNSX.DataPropertyName = "TenNSX";
-            this.MaNSX.HeaderText = "Nhà Sản Xuất";
-            this.MaNSX.Name = "MaNSX";
-            // 
-            // TenLK
-            // 
-            this.TenLK.DataPropertyName = "TenLK";
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            // 
-            // BaoHanh
-            // 
-            this.BaoHanh.DataPropertyName = "BaoHanh";
-            this.BaoHanh.HeaderText = "Bảo Hành";
-            this.BaoHanh.Name = "BaoHanh";
-            // 
-            // NgaySanXuat
-            // 
-            this.NgaySanXuat.DataPropertyName = "NgaySanXuat";
-            this.NgaySanXuat.HeaderText = "NgaySanXuat";
-            this.NgaySanXuat.Name = "NgaySanXuat";
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.HeaderText = "Tình Trạng";
-            this.TinhTrang.Name = "TinhTrang";
-            // 
-            // DonViTinh
-            // 
-            this.DonViTinh.DataPropertyName = "DonViTinh";
-            this.DonViTinh.HeaderText = "Đơn Vị Tính";
-            this.DonViTinh.Name = "DonViTinh";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // HinhAnh
-            // 
-            this.HinhAnh.DataPropertyName = "HinhAnh";
-            this.HinhAnh.HeaderText = "Hình Ảnh";
-            this.HinhAnh.Name = "HinhAnh";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
             // 
             // Frm_SanPham
             // 
@@ -658,7 +663,7 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox txtTinhTrang;
         private System.Windows.Forms.TextBox txtMaLinhKien;
         private System.Windows.Forms.ComboBox cboTrangThai;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cboMaLoai;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnClose;

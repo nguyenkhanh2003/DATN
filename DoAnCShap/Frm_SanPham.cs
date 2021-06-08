@@ -24,9 +24,15 @@ namespace DoAnCShap
         NhaSanXuat_BUS nsx = new NhaSanXuat_BUS();
         LoaiLinhKien_BUS llk = new LoaiLinhKien_BUS();
         int flag = 0;
+
         public void DisPlay()
         {
             dataGridViewLK.DataSource = bus.GetData("");
+        }
+
+        public void HienThiTimKiem(string condition)
+        {
+            dataGridViewLK.DataSource = bus.GetSearch("select * from LinhKien Where TenLK Like N'%"+condition+"%'");
         }
         public void HienThiNSX()
         {
@@ -138,8 +144,67 @@ namespace DoAnCShap
                 lk.TrangThai = cboTrangThai.Text;
                 bus.AddData(lk);
                 MessageBox.Show("Thành Công");
+                xulychucnang(true, false, false);
+                
             }
             DisPlay();
+        }
+
+        private void dataGridViewLK_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtMaLinhKien.Enabled = false;
+                if (e.RowIndex == -1) return;
+                DataGridViewRow row = dataGridViewLK.Rows[e.RowIndex];
+                txtMaLinhKien.Text = row.Cells[0].Value.ToString();
+                cboMaLoai.Text = row.Cells[1].Value.ToString();
+                comboBoxNSX.Text = row.Cells[2].Value.ToString();
+                txtTenLinhKien.Text = row.Cells[3].Value.ToString();
+                txtBaoHanh.Text = row.Cells[4].Value.ToString();
+                dateNSX.Text = row.Cells[5].Value.ToString();
+                txtTinhTrang.Text = row.Cells[6].Value.ToString();
+                txtDonViTinh.Text = row.Cells[7].Value.ToString();
+                txtDonGia.Text = row.Cells[8].Value.ToString();
+                txtSoLuong.Text = row.Cells[9].Value.ToString();
+                txtHinhSP.Text = row.Cells[10].Value.ToString();
+                cboTrangThai.Text = row.Cells[11].Value.ToString();
+            }
+            catch
+            {
+                
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lk.MaLK = txtMaLinhKien.Text;
+                bus.DeleteData(lk);
+                MessageBox.Show("Xóa Linh Kiện Thành Công");
+                DisPlay();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void dataGridViewLK_DoubleClick(object sender, EventArgs e)
+        {
+            xulychucnang(false, true, true);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string condition = txtSearch.Text;
+            HienThiTimKiem(condition);
         }
     }
 }

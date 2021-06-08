@@ -34,7 +34,7 @@ namespace DAL
         //  XÓA DỮ LIỆU
         public void DeleteData(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"");
+            KetNoi.ExecuteReader(@"DELETE From LinhKien Where MaLK=N'"+ex.MaLK+"'");
         }
     }
 }
