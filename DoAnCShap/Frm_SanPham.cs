@@ -147,6 +147,25 @@ namespace DoAnCShap
                 xulychucnang(true, false, false);
                 
             }
+            if(flag==2)
+            {
+
+                lk.MaLK = txtMaLinhKien.Text;
+                lk.MaLLK = cboMaLoai.SelectedValue.ToString();
+                lk.MaNSX = comboBoxNSX.SelectedValue.ToString();
+                lk.TenLK = txtTenLinhKien.Text;
+                lk.BaoHanh = txtBaoHanh.Text;
+                lk.NgaySanXuat = dateNSX.Value;
+                lk.TinhTrang = txtTinhTrang.Text;
+                lk.DonViTinh = txtDonViTinh.Text;
+                lk.DonGia = txtDonGia.Text;
+                lk.SoLuong = txtSoLuong.Text;
+                lk.HinhAnh = txtHinhSP.Text;
+                lk.TrangThai = cboTrangThai.Text;
+                bus.EditData(lk);
+                MessageBox.Show("Thành Công");
+                xulychucnang(true, false, false);
+            }    
             DisPlay();
         }
 
@@ -193,6 +212,7 @@ namespace DoAnCShap
 
         private void dataGridViewLK_DoubleClick(object sender, EventArgs e)
         {
+            flag = 2;
             xulychucnang(false, true, true);
         }
 
