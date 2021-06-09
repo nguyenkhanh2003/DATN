@@ -63,14 +63,19 @@ namespace DoAnCShap
             count = dataGridViewNhanVien.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            
+            if(count<=1)
+            {
+                txtMaNV.Text="1";
+            }
+            else
+            {
                 chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
                 if (chuoi2 + 1 < 10)
-                    txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
+                    txtMaNV.Text = 1 + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
-                    txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
-            
+                    txtMaNV.Text = 1 + (chuoi2 + 1).ToString();
+            }
         }
         void Display()
         {
@@ -151,7 +156,7 @@ namespace DoAnCShap
             flag = 1;
             xulytextbox(true, false);
             xulychucnang(false, true, true);
-            //PhatSinhMa();
+            PhatSinhMa();
         }
 
         private void btnChonAnh_Click_1(object sender, EventArgs e)
