@@ -26,7 +26,7 @@ namespace DoAnCShap
         QLBLK ql = new QLBLK();
         DataSet ds = new DataSet();
         int flag = 0;
-         public void Display()
+        public void Display()
         {
 
             dataGridViewKH.DataSource = bus.GetData("");
@@ -41,10 +41,10 @@ namespace DoAnCShap
             txtMaLoai.Enabled = b1;
             txtTenLoai.Enabled = b1;
             cboTrangThai.Enabled = b1;
-            
+
         }
 
-        public void xulychucnang(Boolean b1, Boolean b2,Boolean b3)
+        public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
         {
             btnThem.Enabled = b1;
             btnXoa.Enabled = b3;
@@ -82,7 +82,7 @@ namespace DoAnCShap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            xulychucnang(false, true,false);
+            xulychucnang(false, true, false);
             xulytextbox(true, false);
             flag = 1;
             PhatSinhMa();
@@ -91,48 +91,46 @@ namespace DoAnCShap
         private void Frm_LLinhKien_Load(object sender, EventArgs e)
         {
             xulytextbox(false, true);
-            xulychucnang(true, false,false);
+            xulychucnang(true, false, false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-         
-            if (txtMaLoai.Text != "" && txtTenLoai.Text != "" &&cboTrangThai.Text !="")
-              {
-                if (flag == 1)
+
+            if (flag == 1)
+            {
+                try
                 {
                     llk.MaLLK = txtMaLoai.Text;
                     llk.TenLLK = txtTenLoai.Text;
                     llk.TrangThai = cboTrangThai.Text;
                     bus.AddData(llk); ;
                     MessageBox.Show("Thêm Loại Linh Kiện Thành Công");
-                    xulychucnang(true,false,false);
+                    xulychucnang(true, false, false);
+                    clear();
                 }
-                clear();
-                        }
-            else
-            {
-                MessageBox.Show("Dữ liệu không được để trống");
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-             
-           
-            if(flag==2)
+            if (flag == 2)
             {
                 llk.MaLLK = txtMaLoai.Text;
                 llk.TenLLK = txtTenLoai.Text;
                 llk.TrangThai = cboTrangThai.Text;
                 bus.EditData(llk);
                 MessageBox.Show("Sửa Loại linh Kiện Thành Công");
-                xulychucnang(true,false,false);
+                xulychucnang(true, false, false);
                 clear();
-            }    
+            }
             Display();
         }
 
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
             xulytextbox(true, false);
-            xulychucnang(false, true,true);
+            xulychucnang(false, true, true);
             flag = 2;
         }
 
@@ -155,6 +153,7 @@ namespace DoAnCShap
                 bus.DeleteData(llk);
                 MessageBox.Show("Xóa Dữ Liệu Thành Công");
                 clear();
+                xulychucnang(true, false, false);
             }
             Display();
         }
