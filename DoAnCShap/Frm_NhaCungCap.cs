@@ -57,6 +57,27 @@ namespace DoAnCShap
             dataGridViewNhaCungCap.DataSource = bus.GetData("");
         }
 
+        public void PhatSinhMa()
+        {
+            int count = 0;
+            count = dataGridViewNhaCungCap.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            if (count <= 1)
+            {
+                txtMaNCC.Text = "NCC00";
+            }
+            else
+            {
+                chuoi = Convert.ToString(dataGridViewNhaCungCap.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    txtMaNCC.Text = "NCC0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMaNCC.Text = "NCC" + (chuoi2 + 1).ToString();
+            }
+        }
+
         public void HienThiSearch(string condition)
         {
             dataGridViewNhaCungCap.DataSource = bus.GetSearch("Select * from NhaCungCap Where TenNCC Like N'%" + condition + "%'");
@@ -98,6 +119,7 @@ namespace DoAnCShap
         {
             HienButton();
             AllTextBoxNull();
+            PhatSinhMa();
             addnew = true;
             btnCancel.Enabled = true;
             btnSave.Enabled = true;
@@ -255,6 +277,6 @@ namespace DoAnCShap
             this.Close();
         }
 
-      
+       
     }
 }
