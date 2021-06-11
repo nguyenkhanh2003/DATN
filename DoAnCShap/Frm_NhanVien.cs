@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BUS;
 using DTO;
 using System.Diagnostics;
+using System.IO;
 
 namespace DoAnCShap
 {
@@ -65,16 +66,16 @@ namespace DoAnCShap
             int chuoi2 = 0;
             if(count<=1)
             {
-                txtMaNV.Text="1";
+                txtMaNV.Text="NV00";
             }
             else
             {
                 chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
                 if (chuoi2 + 1 < 10)
-                    txtMaNV.Text = 1 + (chuoi2 + 1).ToString();
+                    txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
-                    txtMaNV.Text = 1 + (chuoi2 + 1).ToString();
+                    txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
             }
         }
         void Display()
@@ -108,34 +109,33 @@ namespace DoAnCShap
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog o = new OpenFileDialog();
-
             o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
 
-            if (o.ShowDialog() == DialogResult.Cancel)
+            //if (o.ShowDialog() == DialogResult.Cancel)
+            //{
+            //    MessageBox.Show("Bạn Chưa Chọn Ảnh");
+            //}
+
+            if(o.ShowDialog()==DialogResult.OK)
             {
-                MessageBox.Show("Bạn Chưa Chọn Ảnh");
-
-            }
-
-            else
-            {
-                foreach (string ten in o.FileNames)
-                {
-                    string[] tenhinh = ten.Split('\\');
-                    txtHinhNhanVien.Text = tenhinh[tenhinh.Length - 1];
-
-                    PictureBox p = new PictureBox();
-
-                    Size s = new Size(200, 250);
-                    p.Size = s;
-
-                    pictureBox1.Controls.Add(p);
-                    Bitmap a = new Bitmap(ten);
-                    p.Image = a;
-                    p.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                }
-            }
+                txtHinhNhanVien.Text = o.FileName;
+                pictureBox1.Image = new Bitmap(o.FileName);
+            }    
+            //else
+            //{
+            //    foreach (string ten in o.FileNames)
+            //    {
+            //        string[] tenhinh = ten.Split('\\');
+            //        txtHinhNhanVien.Text = tenhinh[tenhinh.Length - 1];
+            //        PictureBox p = new PictureBox();
+            //        Size s = new Size(150,150);
+            //        p.Size = s;
+            //        pictureBox1.Controls.Add(p);
+            //        Bitmap a = new Bitmap(ten);
+            //        p.Image = a;
+            //        p.SizeMode = PictureBoxSizeMode.StretchImage;
+            //    }
+            //}
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -168,13 +168,13 @@ namespace DoAnCShap
         {
             if (flag == 1)
             {
-                if (txtMaNV.Text !="" && cboChucVu.SelectedValue != "" && txtTenNV.Text != "" &&
-                   txtEmail.Text != "" && txtSDT.Text != "" && txtCMND.Text != "" && txtDiaChi.Text != "" && txtUserName.Text != "" && txtPassWord.Text != "")
+                if (txtMaNV.Text !="" || cboChucVu.SelectedValue != "" || txtTenNV.Text != "" ||
+                   txtEmail.Text != "" || txtSDT.Text != "" || txtCMND.Text != "" || txtDiaChi.Text != "" || txtUserName.Text != "" || txtPassWord.Text != "")
                 {
                     MaHoa();
                     nv.MaNV = txtMaNV.Text;
-                    // nv.MaCV = cboChucVu.SelectedValue.ToString();
-                    nv.MaCV = cboChucVu.ToString();
+                    nv.MaCV = cboChucVu.SelectedValue.ToString();
+                   // nv.MaCV = cboChucVu.ToString();
                     nv.TenNV = txtTenNV.Text;
                     nv.GioiTinh = cboGioiTinh.Text;
                     nv.Email = txtEmail.Text;
@@ -182,7 +182,8 @@ namespace DoAnCShap
                     nv.DienThoai = txtSDT.Text;
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
-                    nv.HinhAnh = TenHinh;
+                    nv.HinhAnh = txtHinhNhanVien.Text;
+                    File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
@@ -239,62 +240,28 @@ namespace DoAnCShap
             txtCMND.Text = row.Cells[7].Value.ToString();
             txtDiaChi.Text = row.Cells[8].Value.ToString();
             string[] b = row.Cells[9].Value.ToString().Split(';');
-            pictureBox1.Controls.Clear();
-            int n;
-            if (b.Length == 1)
-                n = b.Length;
-            else
-                n = b.Length - 1;
-            for (int i = 0; i < n; i++)
-            {
-                PictureBox p = new PictureBox();
-                Size s = new Size(150, 150);
-                p.Size = s;
-                pictureBox1.Controls.Add(p);
-                Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
-                p.Image = a;
-                p.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-            //txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
+            //pictureBox1.Controls.Clear();
+            //int n;
+            //if (b.Length == 1)
+            //    n = b.Length;
+            //else
+            //    n = b.Length - 1;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    PictureBox p = new PictureBox();
+            //    Size s = new Size(150, 150);
+            //    p.Size = s;
+            //    pictureBox1.Controls.Add(p);
+            //    Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+            //    p.Image = a;
+            //    p.SizeMode = PictureBoxSizeMode.StretchImage;
+            //}
+            txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
             txtUserName.Text = row.Cells[10].Value.ToString();
             txtPassWord.Text = row.Cells[11].Value.ToString();
             cboTrangThai.Text = row.Cells[12].Value.ToString();        }
 
-        private void btnChonAnh_Click_2(object sender, EventArgs e)
-        {
-            OpenFileDialog o = new OpenFileDialog();
-            o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jepg|(*.png)|*.png";
-            if (o.ShowDialog() == DialogResult.Cancel)
-            {
-                do
-                {
-                    MessageBox.Show("Bạn phải chọn ảnh");
-                    o.ShowDialog();
-                } while (o.ShowDialog() == DialogResult.Cancel);
-            }
-            else
-            {
-                foreach (string ten in o.FileNames)
-                {
-                    string[] b;
-                    b = o.FileName.Split('\\');
-                    PictureBox p = new PictureBox();
-                    Size s = new Size(50, 50);
-                    p.Size = s;
-                    pictureBox1.Controls.Add(p);
-                    Bitmap a = new Bitmap(ten);
-                    p.Image = a;
-                    p.SizeMode = PictureBoxSizeMode.StretchImage;
-                    String x = "";
-                    for (int i = 0; i < b.Length - 1; i++)
-                    {
-                        x += b[i] + "\\";
-                    }
-                    DuongDan = x.ToString();
-                    TenHinh += b[b.Length - 1] + ";";
-                }
-            }
-        }
+      
 
         private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
         {
