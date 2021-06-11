@@ -239,7 +239,7 @@ namespace DoAnCShap
             txtSDT.Text = row.Cells[6].Value.ToString();
             txtCMND.Text = row.Cells[7].Value.ToString();
             txtDiaChi.Text = row.Cells[8].Value.ToString();
-            string[] b = row.Cells[9].Value.ToString().Split(';');
+            //string[] b = row.Cells[9].Value.ToString().Split(';');
             //pictureBox1.Controls.Clear();
             //int n;
             //if (b.Length == 1)
@@ -256,6 +256,7 @@ namespace DoAnCShap
             //    p.Image = a;
             //    p.SizeMode = PictureBoxSizeMode.StretchImage;
             //}
+            pictureBox1.Image = Image.FromFile("C:\\Users\\Nguyen Khanh\\source\\repos\\DATN\\DoAnCShap\\Image\\"+txtHinhNhanVien.Text);
             txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
             txtUserName.Text = row.Cells[10].Value.ToString();
             txtPassWord.Text = row.Cells[11].Value.ToString();
