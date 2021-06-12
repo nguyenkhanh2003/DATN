@@ -31,7 +31,7 @@ namespace DoAnCShap
         ChucVu_BUS buss = new ChucVu_BUS();
         NhanVien nv = new NhanVien();
         int flag = 0;
-
+      
         public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMaNV.Enabled = b1;
@@ -109,6 +109,7 @@ namespace DoAnCShap
             cboChucVu.ValueMember = "MaCV";
         }
 
+     
         public void MaHoa()
         {
             byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(txtPassWord.Text);
@@ -122,36 +123,9 @@ namespace DoAnCShap
         }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog o = new OpenFileDialog();
-            o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
 
-            //if (o.ShowDialog() == DialogResult.Cancel)
-            //{
-            //    MessageBox.Show("Bạn Chưa Chọn Ảnh");
-            //}
-
-            if(o.ShowDialog()==DialogResult.OK)
-            {
-                txtHinhNhanVien.Text = o.FileName;
-                pictureBox1.Image = new Bitmap(o.FileName);
-            }    
-            //else
-            //{
-            //    foreach (string ten in o.FileNames)
-            //    {
-            //        string[] tenhinh = ten.Split('\\');
-            //        txtHinhNhanVien.Text = tenhinh[tenhinh.Length - 1];
-            //        PictureBox p = new PictureBox();
-            //        Size s = new Size(150,150);
-            //        p.Size = s;
-            //        pictureBox1.Controls.Add(p);
-            //        Bitmap a = new Bitmap(ten);
-            //        p.Image = a;
-            //        p.SizeMode = PictureBoxSizeMode.StretchImage;
-            //    }
-            //}
         }
-
+      
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -163,6 +137,7 @@ namespace DoAnCShap
             xulytextbox(false,true);
             xulychucnang(true, false, false);
             //hienthichucvu();
+           
         }
 
         private void btnThem_Click(object sender, EventArgs e)

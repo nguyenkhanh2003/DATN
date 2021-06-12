@@ -40,6 +40,7 @@ namespace DoAnCShap
         }
         public void xulytextbox(Boolean b1,Boolean b2)
         {
+            txtMaKh.ReadOnly = b1;
             txtMaKh.Enabled =b1;
             txtTenkh.Enabled =b1;
             cboGioiTinh.Enabled =b1;
@@ -121,18 +122,18 @@ namespace DoAnCShap
         {
             if(flag==1)
             {
-                kh.MaKH =txtMaKh.Text;
-                kh.TenKH = txtTenkh.Text;
-                kh.GioiTinh = cboGioiTinh.Text;
-                kh.Email = txtEmail.Text;
-                kh.DienThoai = txtSdt.Text;
-                kh.CMND = txtCMND.Text;
-                kh.DiaChi = txtDiaChi.Text;
-                kh.TrangThai = cboTrangThai.Text;
-                bus.AddData(kh); ;
-                MessageBox.Show("Thêm Khách Hàng Thành Công");
-                xulychucnang(true,false,false);
-                Clear();
+                    kh.MaKH = txtMaKh.Text;
+                    kh.TenKH = txtTenkh.Text;
+                    kh.GioiTinh = cboGioiTinh.Text;
+                    kh.Email = txtEmail.Text;
+                    kh.DienThoai = txtSdt.Text;
+                    kh.CMND = txtCMND.Text;
+                    kh.DiaChi = txtDiaChi.Text;
+                    kh.TrangThai = cboTrangThai.Text;
+                    bus.AddData(kh); ;
+                    MessageBox.Show("Thêm Khách Hàng Thành Công");
+                    xulychucnang(true, false, false);
+                    Clear();
             }
             if(flag==2)
             {
@@ -204,6 +205,11 @@ namespace DoAnCShap
         {
             string Condition = txtSearch.Text;
             HienThiSearch(Condition);
+        }
+
+        private void txtSdt_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
