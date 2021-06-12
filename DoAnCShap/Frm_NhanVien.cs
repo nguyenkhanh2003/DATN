@@ -24,8 +24,8 @@ namespace DoAnCShap
             hienthichucvu();
             
         }
-        String TenHinh = "";
-        String DuongDan = "";
+
+        String DuongDanFolderHinh = @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Image";
         MD5 md = MD5.Create();
         NhanVien_BUS bus = new NhanVien_BUS();
         ChucVu_BUS buss = new ChucVu_BUS();
@@ -50,6 +50,7 @@ namespace DoAnCShap
       
         public void Clear()
         {
+            pictureBox1.Controls.Clear();
             txtMaNV.Clear();
             cboChucVu.Text = "";
             txtHinhNhanVien.Clear();
@@ -123,7 +124,36 @@ namespace DoAnCShap
         }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
+            OpenFileDialog opFile = new OpenFileDialog();
+            opFile.Title = "Select a Image";
+            opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
 
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Image\"; // <---
+            if (Directory.Exists(appPath) == false)                                              // <---
+            {                                                                                    // <---
+                Directory.CreateDirectory(appPath);                                              // <---
+            }                                                                                    // <---
+
+            if (opFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string iName = opFile.SafeFileName;   // <---
+                    string filepath = opFile.FileName;    // <---
+                    File.Copy(filepath, appPath + iName); // <---
+                    pictureBox1.Image = new Bitmap(opFile.OpenFile());
+                    txtHinhNhanVien.Text = iName;
+                }
+                catch (Exception exp)
+                {
+                    //MessageBox.Show("Ảnh đã tồn tại !" + exp.Message);
+                    MessageBox.Show("Ảnh đã tồn tại !");
+                }
+            }
+            else
+            {
+                opFile.Dispose();
+            }
         }
       
         private void btnThoat_Click(object sender, EventArgs e)
@@ -172,12 +202,14 @@ namespace DoAnCShap
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
                     nv.HinhAnh = txtHinhNhanVien.Text;
-                    File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
+                    //File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
                     bus.AddData(nv);
                     MessageBox.Show("Thêm Nhân Viên Thành Công");
+                    Clear();
+                    xulytextbox(false, true);
                     xulychucnang(true, false, false);
                 }
                 else
@@ -238,10 +270,10 @@ namespace DoAnCShap
             for (int i = 0; i < n; i++)
             {
                 PictureBox p = new PictureBox();
-                Size s = new Size(150, 150);
+                Size s = new Size(180, 180);
                 p.Size = s;
                 pictureBox1.Controls.Add(p);
-                Bitmap a = new Bitmap(DuongDan + "" + b[i]);
+                Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
                 p.Image = a;
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
             }
@@ -267,6 +299,8 @@ namespace DoAnCShap
             nv.MaNV = txtMaNV.Text;
             bus.DeleteData(nv);
             MessageBox.Show("Xóa Nhân Viên Thành Công");
+            xulychucnang(true, false, false);
+            xulytextbox(false, true);
             Display();
             }
             else
