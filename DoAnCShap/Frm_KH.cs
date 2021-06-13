@@ -189,6 +189,8 @@ namespace DoAnCShap
                 kh.MaKH = txtMaKh.Text;
                 bus.DeleteData(kh);
                 MessageBox.Show("Xóa Dữ Liệu Thành Công");
+                xulychucnang(true,false,false);
+                xulytextbox(true,false);
                 Clear();
             }
             Display();
