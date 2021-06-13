@@ -12,13 +12,13 @@ namespace DTO
         public string MaLLK { get; set; }
         public string TenLK { get; set; }
         public string BaoHanh { get; set; }
-        public DateTime? NgaySanXuat { get; set; }
+        public string XuatXu { get; set; }
         public string TinhTrang { get; set; }
         public string DonViTinh { get; set; }
         public string DonGia { get; set; }
         public string SoLuong { get; set; }
         public string HinhAnh { get; set; }
         public string TrangThai { get; set; }
-        public string MaNSX { get; set; }
+        public string MaNCC { get; set; }
     }
 }

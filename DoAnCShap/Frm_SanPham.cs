@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using System.IO;
 
 namespace DoAnCShap
 {
@@ -22,9 +23,10 @@ namespace DoAnCShap
         LinhKien_BUS bus = new LinhKien_BUS();
         LinhKien lk = new LinhKien();
         NhaSanXuat_BUS nsx = new NhaSanXuat_BUS();
+        NhaCungCap_BUS ncc = new NhaCungCap_BUS();
         LoaiLinhKien_BUS llk = new LoaiLinhKien_BUS();
         int flag = 0;
-
+        public String DuongDanFolderHinh= @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ImageLK";
         public void DisPlay()
         {
             dataGridViewLK.DataSource = bus.GetData("");
@@ -36,14 +38,21 @@ namespace DoAnCShap
         }
         public void HienThiNSX()
         {
-            comboBoxNSX.DataSource = nsx.GetData("");
-            comboBoxNSX.DisplayMember = "TenNSX";
-            comboBoxNSX.ValueMember = "MaNSX";
+            comboBoxNCC.DataSource = nsx.GetData("");
+            comboBoxNCC.DisplayMember = "TenNSX";
+            comboBoxNCC.ValueMember = "MaNSX";
+        }
+
+        public void HienThiNhaCungCap()
+        {
+            comboBoxNCC.DataSource = ncc.GetData("");
+            comboBoxNCC.DisplayMember = "TenNCC";
+            comboBoxNCC.ValueMember = "MaNCC";
         }
         public void HienThiLoaiLK()
         {
             cboMaLoai.DataSource = llk.GetData("");
-            cboMaLoai.DisplayMember = "TenLK";
+            cboMaLoai.DisplayMember = "TenLLK";
             cboMaLoai.ValueMember = "MaLLK";
         }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
@@ -54,6 +63,40 @@ namespace DoAnCShap
             btnHuy.Enabled = b2;
         }
 
+        public void XuLyTextBox(Boolean b1,Boolean b2)
+        {
+            txtMaLinhKien.Enabled = b1;
+            txtTenLinhKien.Enabled = b1;
+            cboMaLoai.Enabled = b1;
+            comboBoxNCC.Enabled = b1;
+            txtDonViTinh.Enabled = b1;
+            txtSoLuong.Enabled = b1;
+            txtDonGia.Enabled = b1;
+            txtHinhSP.Enabled = b1;
+            txtTinhTrang.Enabled = b1;
+            cboTrangThai.Enabled = b1;
+            txtMaLinhKien.ReadOnly = b1;
+            txtBaoHanh.Enabled = b1;
+            txtXuatXu.Enabled = b1;
+        }
+
+        public void Clear()
+        {
+            pictureBox1.Controls.Clear();
+            txtMaLinhKien.Clear();
+            txtTenLinhKien.Clear();
+            cboMaLoai.Text = "";
+            comboBoxNCC.Text = "";
+            txtDonViTinh.Clear();
+            txtSoLuong.Clear();
+            txtDonGia.Clear();
+            txtHinhSP.Clear();
+            txtTinhTrang.Clear();
+            cboTrangThai.Text = "";
+            txtMaLinhKien.Clear();
+            txtBaoHanh.Clear();
+            txtXuatXu.Clear();
+        }
         public void PhatSinhMa()
         {
             int count = 0;
@@ -78,42 +121,42 @@ namespace DoAnCShap
 
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog o = new OpenFileDialog();
+            OpenFileDialog opFile = new OpenFileDialog();
+            opFile.Title = "Select a Image";
+            opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
 
-            o.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\ImageLK\"; // <---
+            if (Directory.Exists(appPath) == false)                                              // <---
+            {                                                                                    // <---
+                Directory.CreateDirectory(appPath);                                              // <---
+            }                                                                                    // <---
 
-            if (o.ShowDialog() == DialogResult.Cancel)
+            if (opFile.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Bạn Chưa Chọn Ảnh");
-
+                try
+                {
+                    string iName = opFile.SafeFileName;   // <---
+                    string filepath = opFile.FileName;    // <---
+                    File.Copy(filepath, appPath + iName); // <---
+                    pictureBox1.Image = new Bitmap(opFile.OpenFile());
+                    txtHinhSP.Text = iName;
+                }
+                catch (Exception exp)
+                {
+                    //MessageBox.Show("Ảnh đã tồn tại !" + exp.Message);
+                    MessageBox.Show("Ảnh đã tồn tại !");
+                }
             }
-
             else
             {
-
-
-                foreach (string ten in o.FileNames)
-                {
-                    string[] tenhinh = ten.Split('\\');
-                    txtHinhSP.Text = tenhinh[tenhinh.Length - 1];
-
-                    PictureBox p = new PictureBox();
-
-                    Size s = new Size(200, 250);
-                    p.Size = s;
-
-                    pictureBox1.Controls.Add(p);
-                    Bitmap a = new Bitmap(ten);
-                    p.Image = a;
-                    p.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                }
+                opFile.Dispose();
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             xulychucnang(false, true, true);
+            XuLyTextBox(true, false);
             PhatSinhMa();
             flag = 1;
         }
@@ -121,7 +164,9 @@ namespace DoAnCShap
         private void Frm_SanPham_Load(object sender, EventArgs e)
         {
             xulychucnang(true, false, false);
-            HienThiNSX();
+            //HienThiNSX();
+            XuLyTextBox(false, true);
+            HienThiNhaCungCap();
             HienThiLoaiLK();
             DisPlay();
         }
@@ -132,10 +177,10 @@ namespace DoAnCShap
             {
                 lk.MaLK = txtMaLinhKien.Text;
                 lk.MaLLK = cboMaLoai.SelectedValue.ToString();
-                lk.MaNSX = comboBoxNSX.SelectedValue.ToString();
+                lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
                 lk.TenLK = txtTenLinhKien.Text;
                 lk.BaoHanh = txtBaoHanh.Text;
-                lk.NgaySanXuat = dateNSX.Value;
+                lk.XuatXu = txtXuatXu.Text;
                 lk.TinhTrang = txtTinhTrang.Text;
                 lk.DonViTinh = txtDonViTinh.Text;
                 lk.DonGia = txtDonGia.Text;
@@ -145,17 +190,18 @@ namespace DoAnCShap
                 bus.AddData(lk);
                 MessageBox.Show("Thành Công");
                 xulychucnang(true, false, false);
-                
+                XuLyTextBox(false, true);
+                Clear();
             }
             if(flag==2)
             {
 
                 lk.MaLK = txtMaLinhKien.Text;
                 lk.MaLLK = cboMaLoai.SelectedValue.ToString();
-                lk.MaNSX = comboBoxNSX.SelectedValue.ToString();
+                lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
                 lk.TenLK = txtTenLinhKien.Text;
                 lk.BaoHanh = txtBaoHanh.Text;
-                lk.NgaySanXuat = dateNSX.Value;
+                lk.XuatXu = txtXuatXu.Text;
                 lk.TinhTrang = txtTinhTrang.Text;
                 lk.DonViTinh = txtDonViTinh.Text;
                 lk.DonGia = txtDonGia.Text;
@@ -165,34 +211,52 @@ namespace DoAnCShap
                 bus.EditData(lk);
                 MessageBox.Show("Thành Công");
                 xulychucnang(true, false, false);
+                XuLyTextBox(false, true);
+                Clear();
             }    
             DisPlay();
         }
 
         private void dataGridViewLK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+           if(e.RowIndex>=0)
             {
-                txtMaLinhKien.Enabled = false;
-                if (e.RowIndex == -1) return;
-                DataGridViewRow row = dataGridViewLK.Rows[e.RowIndex];
+                DataGridViewRow row = this.dataGridViewLK.Rows[e.RowIndex];
                 txtMaLinhKien.Text = row.Cells[0].Value.ToString();
                 cboMaLoai.Text = row.Cells[1].Value.ToString();
-                comboBoxNSX.Text = row.Cells[2].Value.ToString();
+                comboBoxNCC.Text = row.Cells[2].Value.ToString();
                 txtTenLinhKien.Text = row.Cells[3].Value.ToString();
                 txtBaoHanh.Text = row.Cells[4].Value.ToString();
-                dateNSX.Text = row.Cells[5].Value.ToString();
+                txtXuatXu.Text = row.Cells[5].Value.ToString();
                 txtTinhTrang.Text = row.Cells[6].Value.ToString();
                 txtDonViTinh.Text = row.Cells[7].Value.ToString();
                 txtDonGia.Text = row.Cells[8].Value.ToString();
                 txtSoLuong.Text = row.Cells[9].Value.ToString();
                 txtHinhSP.Text = row.Cells[10].Value.ToString();
+                string[] b = row.Cells[10].Value.ToString().Split(';');
+                pictureBox1.Controls.Clear();
+                int n;
+                if (b.Length == 1)
+                    n = b.Length;
+                else
+                    n = b.Length - 1;
+                for (int i = 0; i < n; i++)
+                {
+                    PictureBox p = new PictureBox();
+                    Size s = new Size(180, 180);
+                    p.Size = s;
+                    pictureBox1.Controls.Add(p);
+                    Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                    p.Image = a;
+                    p.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
                 cboTrangThai.Text = row.Cells[11].Value.ToString();
             }
-            catch
+           else
             {
-                
-            }
+               
+            }    
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -202,6 +266,9 @@ namespace DoAnCShap
                 lk.MaLK = txtMaLinhKien.Text;
                 bus.DeleteData(lk);
                 MessageBox.Show("Xóa Linh Kiện Thành Công");
+                xulychucnang(true, false, false);
+                XuLyTextBox(false, true);
+                Clear();
                 DisPlay();
             }
             catch
@@ -225,6 +292,28 @@ namespace DoAnCShap
         {
             string condition = txtSearch.Text;
             HienThiTimKiem(condition);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (KQ == DialogResult.Yes)
+            {
+                xulychucnang(true, false, false);
+                XuLyTextBox(false, true);
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show("Dừng hủy !");
+            }
+        }
+
+        private void dataGridViewLK_DoubleClick_1(object sender, EventArgs e)
+        {
+            xulychucnang(false, true, true);
+            XuLyTextBox(true,false);
+            flag = 2;
         }
     }
 }
