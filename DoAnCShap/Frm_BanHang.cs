@@ -21,11 +21,7 @@ namespace DoAnCShap
 
         public void loadImage()
         {
-            for(int i=1;i<9;i++)
-            {
-
-                pictureBoxHinhSP.BackColor = Color.Red;
-            }    
+           
         }
 
         private void Frm_BanHang_Load(object sender, EventArgs e)
