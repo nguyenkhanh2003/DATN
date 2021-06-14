@@ -189,7 +189,8 @@ namespace DoAnCShap
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            
+            Form1 form1 = new Form1();
+            this.Hide();
             Login lg = new Login();
             lg.ShowDialog();
             this.Visible = false;

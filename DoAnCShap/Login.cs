@@ -17,11 +17,24 @@ namespace DoAnCShap
             InitializeComponent();
         }
 
-    
+        private static bool _exiting;
 
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            if (!_exiting && MessageBox.Show("Are you sure want to exit?",
+                          "My First Application",
+                           MessageBoxButtons.OKCancel,
+                           MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                _exiting = true;
+                // this.Close(); // you don't need that, it's already closing
+                Environment.Exit(1);
+            }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

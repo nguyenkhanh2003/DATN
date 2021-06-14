@@ -17,24 +17,20 @@ namespace DoAnCShap
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        List<PictureBox> pictureBoxes = new List<PictureBox>();
 
+        public void loadImage()
+        {
+            for(int i=1;i<9;i++)
+            {
+
+                pictureBoxHinhSP.BackColor = Color.Red;
+            }    
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Frm_BanHang_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnThoat_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
+            loadImage();
         }
     }
 }
