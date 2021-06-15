@@ -19,22 +19,21 @@ namespace DoAnCShap
         }
 
         BanHang_BUS bh = new BanHang_BUS();
-
+        QLBLK c = new QLBLK();
         public void HienThiSP()
         {
             listBoxDSSP.DataSource = bh.GetData("");
             listBoxDSSP.DisplayMember = "TenLK";
         }
 
+
+
         public void HienThiTimKiem(String Condition)
         {
             listBoxDSSP.DataSource = bh.GetTimKiem("Select TenLK from LinhKien Where TenLK Like N'%"+Condition+"%'");
         }
 
-        public void HienThiDS(string condition)
-        {
-            DataTable dssp = bh.GetDSSP("Select DonGia From LinhKien Where TenLK='" + condition + "'");
-        }
+       
 
         private void Frm_BanHang_Load(object sender, EventArgs e)
         {
@@ -54,8 +53,17 @@ namespace DoAnCShap
 
         private void listBoxDSSP_DoubleClick(object sender, EventArgs e)
         {
-            string condition = listBoxDSSP.Items.ToString();
-            HienThiDS(condition);
+            DataTable dssp = bh.GetDSSP("Select * from LinhKien where TenSp = '" + listBoxDSSP.Text + "'");
+            txtDonGia.Text = dssp.Rows[0]["DonGia"].ToString();
+        }
+
+        private void comboBoxTest_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+             
+               
+            }
         }
     }
 }
