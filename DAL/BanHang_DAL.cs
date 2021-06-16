@@ -22,6 +22,10 @@ namespace DAL
             return KetNoi.GetDataTable(""+Condition);
         }
 
+        public DataTable GetNhanVien(string Condition)
+        {
+            return KetNoi.GetDataTable(""+Condition);
+        }
         public DataTable GetDSkH(string Condition)
         {
             return KetNoi.GetDataTable(""+Condition);

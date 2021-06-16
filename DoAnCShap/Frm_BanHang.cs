@@ -29,10 +29,43 @@ namespace DoAnCShap
             comboBoxSP.ValueMember = "MaLK";
         }
 
+        public void HienThiNhanVien()
+        {
+            comboBoxNV.DataSource = bh.GetNhanVien("Select MaNV,TenNV From NhanVien");
+            comboBoxNV.DisplayMember = "TenNV";
+            comboBoxNV.ValueMember = "MaNV";
+        }
+
+        public void XuLyChucNang(Boolean b1,Boolean b2)
+        {
+
+        }
+        public void PhatSinhMaHD()
+        {
+
+            int count = 0;
+            count = dataGridViewHD.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            if (count <= 1)
+            {
+                txtMaHD.Text = "HD00";
+            }
+            else
+            {
+                chuoi = Convert.ToString(dataGridViewHD.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    txtMaHD.Text = "HD0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMaHD.Text = "HD" + (chuoi2 + 1).ToString();
+            }
+        }
      
         private void Frm_BanHang_Load(object sender, EventArgs e)
         {
             HienThiSanPham();
+            HienThiNhanVien();
         }
 
         private void btnTimSP_Click(object sender, EventArgs e)
@@ -70,6 +103,7 @@ namespace DoAnCShap
                     {
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
                         txtSL.Text = DSSP.Rows[0]["SoLuong"].ToString();
+                       
                     }
 
                 }
@@ -90,6 +124,35 @@ namespace DoAnCShap
                     }
 
                 }
+            }
+        }
+
+        
+        private void btnThemHD_Click(object sender, EventArgs e)
+        {
+            PhatSinhMaHD();
+        }
+
+        private void btnChonMua_Click(object sender, EventArgs e)
+        {
+
+        }
+        double tongtien = 0;
+        private void txtSL_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtKhuyenMai_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSL.Text != "" || txtKhuyenMai.Text != "" || txtDonGia.Text != "")
+            {
+                double tt = 0;//thanhtien
+                double km = 0; //khuyen mai
+                double sl = 0;
+                tt = double.Parse(txtDonGia.Text) * int.Parse(txtSL.Text) - double.Parse(txtKhuyenMai.Text);
+                tongtien = tt;
+                labelThanhTien.Text = tongtien.ToString();
             }
         }
     }

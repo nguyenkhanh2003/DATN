@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnChonMua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAQRJREFUSEvtkjEOAUEUhvco3ESCUEg4AbVOlBLX0CoUKmdwBHdQaBXb41t5Iy+b
@@ -128,7 +128,7 @@
         yNNKDSz1yeuRGlhuk6d50yqQzL4uNRQyciB9OfrTFLLsAWaqr7RqHLQFAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnThemKH.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAe1JREFUSEu9l7FLAlEcxx2ENmn3zxFsVTGClpZq1KUlaHCKhkKDlpaahaChrcGg
@@ -142,7 +142,7 @@
         aMSnni+FN4BLj8cp/7hxidwCbr0rIIEwlfoFTpOrw2gKH+kAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLuuHd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAe9JREFUSEvt1k0oBGEYwPGZlY+TjxTlI3ISNyVtST4uRCIOFAcfhYNwcsKBonxG
@@ -156,7 +156,7 @@
         pAgWBpOnzzeFyWIOLExaoXA0aTZAsI1kNmnY5B990wqIe0dpeAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnInHD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAk1JREFUSEvF1t9LU2Ecx/Fd9Ad01Y1QWEFIP5AwEEmwy67ypoJQChKvRxFRNw1a
@@ -197,6 +197,9 @@
   <metadata name="NgayLap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="TenLK.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="DonGia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -206,4 +209,19 @@
   <metadata name="ThanhTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="btnThemHD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAgJJREFUSEvdlU1LG1EUhse0cW1/QCHQleAPcKfSLqxIiIqa4gcuumrARsWFkI2N
+        iyqCoX4sFELRVLFMiZSKYLBtIoIuNCQ1XzYSFCHtCIb+AU/PJEd6uXNnkgld+cIDA3PP807OJEQqRlYe
+        IbvIHwQMiWcjpSGzkZU1jUyPTAakQuwbTZqIrEQ1Mj1KJSp7NF1hqisxWWSmJJ5lS1SWyVImZkq2foGU
+        PAPpMvmP8/QEmQxipkRMlkwGuZ8lgQuwzES0zB3yYhZzJQ+8Iai1e7R0T4H0Mc/L7/j/66oL5mAs7Iev
+        URckfvRD6rQPbn+2BJEhMgrClNQsxcD6yq/Ls7UA5FMOVapHFKknMxOmxDJ/DA/dH4S8nh+GQuypSMxT
+        QBrITqlgXbbPCbhJt4uEemTITmFf/OQO1Ha90eB97xKJYNVvh4Pt58J7yAtqwLCfZOMKLG+/a8id2EUS
+        GBzphYVF3Xe0SQ2YMuuyfsprBMGNdpj1dUDTQB90u5zF65NQK3+O+d8pU6J+Zblh8E53wsvxHrC1DkGj
+        s794ra6OOxemBoysRHgxz3WqqnWtUwNGVpp5Kc/KkVckAd87B+xttQnvIT3UQJGVx0gv4hThCH1xCiRG
+        pJA6slceHHIzEiPUH2MLjZkPDnsYmYjfiIOOVx+UPEHmkDRyi6hPvo+MItyKJOkvmUeZARYqvHYAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
 </root>
