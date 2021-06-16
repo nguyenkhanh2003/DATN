@@ -22,6 +22,14 @@ namespace BUS
             return bus.GetDSSP(Condition);
         }
 
+        public void AddHoaDon(HoaDonBanHang ex)
+        {
+             bus.AddHoaDon(ex);
+        }
+        public void AddCTHD(CT_HoaDonBanHang exx)
+        {
+             bus.AddCTHD(exx);
+        }
         public DataTable GetDSkH(string Condition)
         {
             return bus.GetDSkH(Condition);

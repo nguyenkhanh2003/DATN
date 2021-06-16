@@ -17,6 +17,17 @@ namespace DAL
             return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien" + Condition);
         }
 
+         public void AddHoaDon(HoaDonBanHang ex)
+        {
+            KetNoi.ExecuteReader(@"INSERT INTO HoaDonBanHang(MaHDBH,MaKH,MaNV,NgayLapHDBH,ThanhTien,TrangThai)      
+                                   VALUES(N'" + ex.MaHDBH + "',N'" + ex.MaKH + "',N'" + ex.MaNV +
+                                    "',N'" + ex.NgayLapHDBH + "'," + ex.ThanhTien + ",N'"+ex.TrangThai+"')");
+        }
+
+        public void AddCTHD(CT_HoaDonBanHang exx)
+        {
+            KetNoi.ExecuteReader(@"Insert InTo CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong) VALUES(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+"')");
+        }
         public DataTable GetDSSP(string Condition)
         {
             return KetNoi.GetDataTable(""+Condition);

@@ -53,10 +53,10 @@ namespace DoAnCShap
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenkH = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnThemKH = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxNV = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -72,15 +72,16 @@ namespace DoAnCShap
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThemHD = new System.Windows.Forms.Button();
-            this.comboBoxNV = new System.Windows.Forms.ComboBox();
+            this.comboBoxKH = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -268,7 +269,7 @@ namespace DoAnCShap
             this.groupBox2.Controls.Add(this.txtDiaChi);
             this.groupBox2.Controls.Add(this.txtTenkH);
             this.groupBox2.Controls.Add(this.txtSDT);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.comboBoxKH);
             this.groupBox2.Location = new System.Drawing.Point(353, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(412, 279);
@@ -345,14 +346,6 @@ namespace DoAnCShap
             this.txtSDT.TabIndex = 2;
             this.txtSDT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSDT_KeyDown);
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(177, 19);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 24);
-            this.textBox4.TabIndex = 2;
-            // 
             // btnThemKH
             // 
             this.btnThemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -370,7 +363,7 @@ namespace DoAnCShap
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.comboBoxNV);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dateTimePickerNgayLap);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
@@ -388,16 +381,27 @@ namespace DoAnCShap
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Hóa Đơn";
             // 
-            // dateTimePicker1
+            // comboBoxNV
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(229, 26);
-            this.dateTimePicker1.TabIndex = 3;
+            this.comboBoxNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNV.FormattingEnabled = true;
+            this.comboBoxNV.Location = new System.Drawing.Point(152, 62);
+            this.comboBoxNV.Name = "comboBoxNV";
+            this.comboBoxNV.Size = new System.Drawing.Size(229, 24);
+            this.comboBoxNV.TabIndex = 4;
+            // 
+            // dateTimePickerNgayLap
+            // 
+            this.dateTimePickerNgayLap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(152, 105);
+            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
+            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(229, 26);
+            this.dateTimePickerNgayLap.TabIndex = 3;
             // 
             // label17
             // 
@@ -516,6 +520,7 @@ namespace DoAnCShap
             this.btnLuuHd.Text = "Lưu Hóa Đơn";
             this.btnLuuHd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuuHd.UseVisualStyleBackColor = true;
+            this.btnLuuHd.Click += new System.EventHandler(this.btnLuuHd_Click);
             // 
             // btnInHD
             // 
@@ -567,12 +572,54 @@ namespace DoAnCShap
             this.NgayLap,
             this.TenLK,
             this.DonGia,
+            this.SoLuong,
             this.KhuyenMai,
             this.ThanhTien});
             this.dataGridViewHD.Location = new System.Drawing.Point(10, 19);
             this.dataGridViewHD.Name = "dataGridViewHD";
             this.dataGridViewHD.Size = new System.Drawing.Size(820, 333);
             this.dataGridViewHD.TabIndex = 0;
+            // 
+            // MaHD
+            // 
+            this.MaHD.DataPropertyName = "MaHDBH";
+            this.MaHD.HeaderText = "Mã Hóa Đơn";
+            this.MaHD.Name = "MaHD";
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLap";
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.Name = "NgayLap";
+            // 
+            // TenLK
+            // 
+            this.TenLK.DataPropertyName = "TenlK";
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "DonGia";
+            this.DonGia.Name = "DonGia";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // groupBox5
             // 
@@ -590,36 +637,6 @@ namespace DoAnCShap
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             // 
-            // MaHD
-            // 
-            this.MaHD.HeaderText = "Mã Hóa Đơn";
-            this.MaHD.Name = "MaHD";
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // TenLK
-            // 
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "DonGia";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "ThanhTien";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
             // btnThemHD
             // 
             this.btnThemHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -633,16 +650,17 @@ namespace DoAnCShap
             this.btnThemHD.UseVisualStyleBackColor = true;
             this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
             // 
-            // comboBoxNV
+            // comboBoxKH
             // 
-            this.comboBoxNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxNV.FormattingEnabled = true;
-            this.comboBoxNV.Location = new System.Drawing.Point(152, 62);
-            this.comboBoxNV.Name = "comboBoxNV";
-            this.comboBoxNV.Size = new System.Drawing.Size(229, 24);
-            this.comboBoxNV.TabIndex = 4;
+            this.comboBoxKH.DisplayMember = "TenKH";
+            this.comboBoxKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxKH.FormattingEnabled = true;
+            this.comboBoxKH.Location = new System.Drawing.Point(177, 19);
+            this.comboBoxKH.Name = "comboBoxKH";
+            this.comboBoxKH.Size = new System.Drawing.Size(229, 24);
+            this.comboBoxKH.TabIndex = 0;
+            this.comboBoxKH.ValueMember = "MakH";
+            this.comboBoxKH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
             // 
             // Frm_BanHang
             // 
@@ -697,11 +715,10 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenkH;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label labelThanhTien;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -718,13 +735,15 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnThemHD;
+        private System.Windows.Forms.ComboBox comboBoxNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.Button btnThemHD;
-        private System.Windows.Forms.ComboBox comboBoxNV;
+        private System.Windows.Forms.ComboBox comboBoxKH;
     }
 }
