@@ -14,10 +14,15 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select TenLK from LinhKien" + Condition);
+            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien" + Condition);
         }
 
         public DataTable GetDSSP(string Condition)
+        {
+            return KetNoi.GetDataTable(""+Condition);
+        }
+
+        public DataTable GetDSkH(string Condition)
         {
             return KetNoi.GetDataTable(""+Condition);
         }

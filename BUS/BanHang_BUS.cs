@@ -22,6 +22,11 @@ namespace BUS
             return bus.GetDSSP(Condition);
         }
 
+        public DataTable GetDSkH(string Condition)
+        {
+            return bus.GetDSkH(Condition);
+        }
+
         public DataTable GetTimKiem(string Condition)
         {
             return bus.GetTimKiem(Condition);
