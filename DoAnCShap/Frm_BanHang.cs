@@ -147,7 +147,7 @@ namespace DoAnCShap
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             txtTongThanhToan.Text = tongtien.ToString();
-            object[] t = { txtMaHD.Text, dateTimePickerNgayLap.Text,comboBoxSP.Text, txtDonGia.Text, txtSL.Text, KM.ToString(), labelThanhTien.Text };
+            object[] t = { txtMaHD.Text, comboBoxSP.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
             dataGridViewHD.Rows.Add(t);
         }
         double tongtien = 0;
@@ -176,21 +176,25 @@ namespace DoAnCShap
                 hdbh.MaHDBH = txtMaHD.Text;
                 hdbh.MaKH = comboBoxKH.Text;
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
-                hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value;
-                hdbh.ThanhTien = labelThanhTien.Text;
-                hdbh.TrangThai = "1";
-                for (int i = 0; i < dataGridViewHD.Rows.Count - 1; i++)
-                {
-                    string malk = dataGridViewHD.Rows[i].Cells[3].Value.ToString();
-                    string dongia = dataGridViewHD.Rows[i].Cells[4].Value.ToString();
-                    string soluong = dataGridViewHD.Rows[i].Cells[5].Value.ToString();
-                    string khuyenmai = dataGridViewHD.Rows[i].Cells[6].Value.ToString();
-                    string tongtien = dataGridViewHD.Rows[i].Cells[7].Value.ToString();
-                    cthdbh.MaHDBH = txtMaHD.Text;
-                    cthdbh.MaLK = malk;
-                    cthdbh.SoLuong = soluong;
-                    MessageBox.Show("Thành Công");
-                }
+                hdbh.NgayLapHDBH = dateTimePickerNgayLap.Text;
+                hdbh.TongTien = labelThanhTien.Text;
+                hdbh.TrangThai = txtMaHD.Text;
+                //for (int i = 0; i < dataGridViewHD.Rows.Count - 1; i++)
+                //{
+                //    string malk = dataGridViewHD.Rows[i].Cells[1].Value.ToString();
+                //    string soluong = dataGridViewHD.Rows[i].Cells[2].Value.ToString();
+                //    string dongia = dataGridViewHD.Rows[i].Cells[3].Value.ToString();
+                //    string khuyenmai = dataGridViewHD.Rows[i].Cells[4].Value.ToString();
+                //    string thanhtien = dataGridViewHD.Rows[i].Cells[5].Value.ToString();
+                //    cthdbh.MaHDBH = txtMaHD.Text;
+                //    cthdbh.MaLK = malk;
+                //    cthdbh.SoLuong = soluong;
+                //    cthdbh.DonGia = dongia;
+                //    cthdbh.KhuyenMai = khuyenmai;
+                //    cthdbh.ThanhTien = thanhtien;
+                //    MessageBox.Show("Thành Công");
+                //}
+                MessageBox.Show("Thành Công !");
             }    
         }
     }

@@ -19,14 +19,14 @@ namespace DAL
 
          public void AddHoaDon(HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"INSERT INTO HoaDonBanHang(MaHDBH,MaKH,MaNV,NgayLapHDBH,ThanhTien,TrangThai)      
+            KetNoi.ExecuteReader(@"INSERT INTO HoaDonBanHang(MaHDBH,MaKH,MaNV,NgayLapHDBH,TongTien,TrangThai)      
                                    VALUES(N'" + ex.MaHDBH + "',N'" + ex.MaKH + "',N'" + ex.MaNV +
-                                    "',N'" + ex.NgayLapHDBH + "'," + ex.ThanhTien + ",N'"+ex.TrangThai+"')");
+                                    "',N'" + ex.NgayLapHDBH + "'," + ex.TongTien + ",N'"+ex.TrangThai+"')");
         }
 
         public void AddCTHD(CT_HoaDonBanHang exx)
         {
-            KetNoi.ExecuteReader(@"Insert InTo CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong) VALUES(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+"')");
+            KetNoi.ExecuteReader(@"Insert InTo CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai) VALUES(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+"',"+exx.DonGia+","+exx.KhuyenMai+","+exx.ThanhTien+",N'"+exx.TrangThai+"')");
         }
         public DataTable GetDSSP(string Condition)
         {

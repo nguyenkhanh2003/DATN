@@ -53,6 +53,7 @@ namespace DoAnCShap
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenkH = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
+            this.comboBoxKH = new System.Windows.Forms.ComboBox();
             this.btnThemKH = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBoxNV = new System.Windows.Forms.ComboBox();
@@ -72,16 +73,15 @@ namespace DoAnCShap
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThemHD = new System.Windows.Forms.Button();
-            this.comboBoxKH = new System.Windows.Forms.ComboBox();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -303,7 +303,7 @@ namespace DoAnCShap
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 67);
+            this.label6.Location = new System.Drawing.Point(22, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 20);
             this.label6.TabIndex = 1;
@@ -314,7 +314,7 @@ namespace DoAnCShap
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 23);
+            this.label5.Location = new System.Drawing.Point(22, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
             this.label5.TabIndex = 1;
@@ -339,12 +339,22 @@ namespace DoAnCShap
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(177, 63);
+            this.txtSDT.Location = new System.Drawing.Point(177, 21);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(229, 24);
             this.txtSDT.TabIndex = 2;
             this.txtSDT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSDT_KeyDown);
+            // 
+            // comboBoxKH
+            // 
+            this.comboBoxKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxKH.FormattingEnabled = true;
+            this.comboBoxKH.Location = new System.Drawing.Point(177, 63);
+            this.comboBoxKH.Name = "comboBoxKH";
+            this.comboBoxKH.Size = new System.Drawing.Size(229, 24);
+            this.comboBoxKH.TabIndex = 0;
+            this.comboBoxKH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
             // 
             // btnThemKH
             // 
@@ -569,57 +579,16 @@ namespace DoAnCShap
             this.dataGridViewHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHD,
-            this.NgayLap,
-            this.TenLK,
-            this.DonGia,
+            this.MaLK,
             this.SoLuong,
+            this.DonGia,
             this.KhuyenMai,
-            this.ThanhTien});
+            this.ThanhTien,
+            this.TrangThai});
             this.dataGridViewHD.Location = new System.Drawing.Point(10, 19);
             this.dataGridViewHD.Name = "dataGridViewHD";
             this.dataGridViewHD.Size = new System.Drawing.Size(820, 333);
             this.dataGridViewHD.TabIndex = 0;
-            // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MaHDBH";
-            this.MaHD.HeaderText = "Mã Hóa Đơn";
-            this.MaHD.Name = "MaHD";
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLap";
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // TenLK
-            // 
-            this.TenLK.DataPropertyName = "TenlK";
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "DonGia";
-            this.DonGia.Name = "DonGia";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
             // 
             // groupBox5
             // 
@@ -650,17 +619,46 @@ namespace DoAnCShap
             this.btnThemHD.UseVisualStyleBackColor = true;
             this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
             // 
-            // comboBoxKH
+            // MaHD
             // 
-            this.comboBoxKH.DisplayMember = "TenKH";
-            this.comboBoxKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxKH.FormattingEnabled = true;
-            this.comboBoxKH.Location = new System.Drawing.Point(177, 19);
-            this.comboBoxKH.Name = "comboBoxKH";
-            this.comboBoxKH.Size = new System.Drawing.Size(229, 24);
-            this.comboBoxKH.TabIndex = 0;
-            this.comboBoxKH.ValueMember = "MakH";
-            this.comboBoxKH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
+            this.MaHD.DataPropertyName = "MaHDBH";
+            this.MaHD.HeaderText = "Mã Hóa Đơn";
+            this.MaHD.Name = "MaHD";
+            // 
+            // MaLK
+            // 
+            this.MaLK.DataPropertyName = "MaLK";
+            this.MaLK.HeaderText = "Tên Linh Kiện";
+            this.MaLK.Name = "MaLK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
             // 
             // Frm_BanHang
             // 
@@ -737,13 +735,13 @@ namespace DoAnCShap
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnThemHD;
         private System.Windows.Forms.ComboBox comboBoxNV;
+        private System.Windows.Forms.ComboBox comboBoxKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.ComboBox comboBoxKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

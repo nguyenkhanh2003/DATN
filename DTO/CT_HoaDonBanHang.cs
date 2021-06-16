@@ -11,6 +11,9 @@ namespace DTO
         public string MaHDBH { get; set; }
         public string MaLK { get; set; }
         public string SoLuong { get; set; }
-        public decimal? DonGia { get; set; }
+        public string DonGia { get; set; }
+        public string KhuyenMai{get;set;}
+        public string ThanhTien{get;set;}
+        public string TrangThai{get;set;}
     }
 }
