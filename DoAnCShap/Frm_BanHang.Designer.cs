@@ -65,7 +65,7 @@ namespace DoAnCShap
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.txtTongThanhToan = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.btnLuuHd = new System.Windows.Forms.Button();
@@ -76,7 +76,7 @@ namespace DoAnCShap
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThemHD = new System.Windows.Forms.Button();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -381,7 +381,7 @@ namespace DoAnCShap
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.txtTienKhachDua);
             this.groupBox3.Controls.Add(this.txtTongThanhToan);
             this.groupBox3.Controls.Add(this.txtMaHD);
             this.groupBox3.Location = new System.Drawing.Point(771, 56);
@@ -489,15 +489,15 @@ namespace DoAnCShap
             this.textBox12.Size = new System.Drawing.Size(229, 24);
             this.textBox12.TabIndex = 2;
             // 
-            // textBox11
+            // txtTienKhachDua
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTienKhachDua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(152, 195);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(229, 24);
-            this.textBox11.TabIndex = 2;
+            this.txtTienKhachDua.Location = new System.Drawing.Point(152, 195);
+            this.txtTienKhachDua.Multiline = true;
+            this.txtTienKhachDua.Name = "txtTienKhachDua";
+            this.txtTienKhachDua.Size = new System.Drawing.Size(229, 24);
+            this.txtTienKhachDua.TabIndex = 2;
             // 
             // txtTongThanhToan
             // 
@@ -576,10 +576,11 @@ namespace DoAnCShap
             this.dataGridViewHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHD.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHD,
-            this.MaLK,
+            this.TenLK,
             this.SoLuong,
             this.DonGia,
             this.KhuyenMai,
@@ -587,7 +588,7 @@ namespace DoAnCShap
             this.TrangThai});
             this.dataGridViewHD.Location = new System.Drawing.Point(10, 19);
             this.dataGridViewHD.Name = "dataGridViewHD";
-            this.dataGridViewHD.Size = new System.Drawing.Size(820, 333);
+            this.dataGridViewHD.Size = new System.Drawing.Size(834, 333);
             this.dataGridViewHD.TabIndex = 0;
             // 
             // groupBox5
@@ -625,11 +626,11 @@ namespace DoAnCShap
             this.MaHD.HeaderText = "Mã Hóa Đơn";
             this.MaHD.Name = "MaHD";
             // 
-            // MaLK
+            // TenLK
             // 
-            this.MaLK.DataPropertyName = "MaLK";
-            this.MaLK.HeaderText = "Tên Linh Kiện";
-            this.MaLK.Name = "MaLK";
+            this.TenLK.DataPropertyName = "MaLK";
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
             // 
             // SoLuong
             // 
@@ -728,7 +729,7 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridView dataGridViewHD;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtTienKhachDua;
         private System.Windows.Forms.TextBox txtTongThanhToan;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox12;
@@ -737,7 +738,7 @@ namespace DoAnCShap
         private System.Windows.Forms.ComboBox comboBoxNV;
         private System.Windows.Forms.ComboBox comboBoxKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;

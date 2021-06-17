@@ -19,9 +19,8 @@ namespace DAL
 
          public void AddHoaDon(HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"INSERT INTO HoaDonBanHang(MaHDBH,MaKH,MaNV,NgayLapHDBH,TongTien,TrangThai)      
-                                   VALUES(N'" + ex.MaHDBH + "',N'" + ex.MaKH + "',N'" + ex.MaNV +
-                                    "',N'" + ex.NgayLapHDBH + "'," + ex.TongTien + ",N'"+ex.TrangThai+"')");
+            KetNoi.ExecuteReader(@"insert into HoaDonBanHang(MaHDBH,MaKH,MaNV,NgayLapHDBH,TongTien,TrangThai)
+Values(N'"+ex.MaHDBH+"',N'"+ex.MaKH+"',N'"+ex.MaNV+"','"+ex.NgayLapHDBH+"',"+ex.TongTien+",N'"+ex.TrangThai+"')");
         }
 
         public void AddCTHD(CT_HoaDonBanHang exx)
