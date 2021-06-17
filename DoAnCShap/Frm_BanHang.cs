@@ -34,8 +34,8 @@ namespace DoAnCShap
         public void HienThiNhanVien()
         {
             comboBoxNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien");
-            comboBoxNV.DisplayMember = "MaNV";
-            //comboBoxNV.ValueMember = "MaNV";
+            comboBoxNV.DisplayMember = "TenNV";
+            comboBoxNV.ValueMember = "MaNV";
         }
 
         public void XuLyChucNang(Boolean b1,Boolean b2)
@@ -181,7 +181,7 @@ namespace DoAnCShap
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 hdbh.NgayLapHDBH = dateTimePickerNgayLap.Text;
                 hdbh.TongTien = txtTongThanhToan.Text;
-                hdbh.TrangThai = txtTienKhachDua.Text;
+                //hdbh.TrangThai = txtTienKhachDua.Text;
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');
                 for (int i = 0; i < dataGridViewHD.Rows.Count - 1; i++)
@@ -197,9 +197,10 @@ namespace DoAnCShap
                     cthdbh.DonGia = dongia;
                     cthdbh.KhuyenMai = khuyenmai;
                     cthdbh.ThanhTien = thanhtien;
+                    cthdbh.TrangThai = "1";
                     bus.AddCTHD(cthdbh);
                 }
-               
+
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
             }    
         }

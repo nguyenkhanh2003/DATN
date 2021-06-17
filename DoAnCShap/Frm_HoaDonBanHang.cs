@@ -45,9 +45,9 @@ namespace DoAnCShap
 
         public void HienThiLinhKien()
         {
-            comboBoxMaLK.DataSource = bus.GetLinhKien("");
-            comboBoxMaLK.DisplayMember = "TenLK";
-            comboBoxMaLK.ValueMember = "MaLK";
+            comboBoxLK.DataSource = bus.GetLinhKien("");
+            comboBoxLK.DisplayMember = "TenLK";
+            comboBoxLK.ValueMember = "MaLK";
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {

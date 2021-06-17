@@ -37,8 +37,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
+            this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTHD = new System.Windows.Forms.DataGridView();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThaii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerNgaylap = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
@@ -53,6 +66,7 @@
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBoxLK = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -64,20 +78,6 @@
             this.textBoxKhuyenMai = new System.Windows.Forms.TextBox();
             this.textBoxdonGia = new System.Windows.Forms.TextBox();
             this.textBoxSL = new System.Windows.Forms.TextBox();
-            this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThaii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxMaLK = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
@@ -195,6 +195,42 @@
             this.dataGridViewHD.Size = new System.Drawing.Size(639, 302);
             this.dataGridViewHD.TabIndex = 0;
             // 
+            // MaHDBH
+            // 
+            this.MaHDBH.DataPropertyName = "MaHDBH";
+            this.MaHDBH.HeaderText = "Mã Hóa Đơn";
+            this.MaHDBH.Name = "MaHDBH";
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "TenKH";
+            this.MaKH.HeaderText = "Khách Hàng";
+            this.MaKH.Name = "MaKH";
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "TenNV";
+            this.MaNV.HeaderText = "Nhân Viên";
+            this.MaNV.Name = "MaNV";
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLapHDBH";
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.Name = "NgayLap";
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.Name = "TongTien";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -228,6 +264,48 @@
             this.dataGridViewCTHD.Size = new System.Drawing.Size(497, 301);
             this.dataGridViewCTHD.TabIndex = 0;
             // 
+            // MaHD
+            // 
+            this.MaHD.DataPropertyName = "MaHDBH";
+            this.MaHD.HeaderText = "Mã Hóa Đơn";
+            this.MaHD.Name = "MaHD";
+            // 
+            // MaLK
+            // 
+            this.MaLK.DataPropertyName = "TenLK";
+            this.MaLK.HeaderText = "Mã Linh Kiện";
+            this.MaLK.Name = "MaLK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // TrangThaii
+            // 
+            this.TrangThaii.DataPropertyName = "TrangThai";
+            this.TrangThaii.HeaderText = "Trạng Thái";
+            this.TrangThaii.Name = "TrangThaii";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dateTimePickerNgaylap);
@@ -244,7 +322,7 @@
             this.groupBox4.Controls.Add(this.txtMaHD);
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(670, 277);
+            this.groupBox4.Size = new System.Drawing.Size(383, 277);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Hóa Đơn";
@@ -255,7 +333,7 @@
             this.dateTimePickerNgaylap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerNgaylap.Location = new System.Drawing.Point(167, 145);
             this.dateTimePickerNgaylap.Name = "dateTimePickerNgaylap";
-            this.dateTimePickerNgaylap.Size = new System.Drawing.Size(255, 29);
+            this.dateTimePickerNgaylap.Size = new System.Drawing.Size(202, 29);
             this.dateTimePickerNgaylap.TabIndex = 34;
             // 
             // comboBoxTrangThai
@@ -264,7 +342,7 @@
             this.comboBoxTrangThai.FormattingEnabled = true;
             this.comboBoxTrangThai.Location = new System.Drawing.Point(166, 231);
             this.comboBoxTrangThai.Name = "comboBoxTrangThai";
-            this.comboBoxTrangThai.Size = new System.Drawing.Size(254, 29);
+            this.comboBoxTrangThai.Size = new System.Drawing.Size(203, 29);
             this.comboBoxTrangThai.TabIndex = 33;
             // 
             // comboBoxKH
@@ -273,7 +351,7 @@
             this.comboBoxKH.FormattingEnabled = true;
             this.comboBoxKH.Location = new System.Drawing.Point(166, 64);
             this.comboBoxKH.Name = "comboBoxKH";
-            this.comboBoxKH.Size = new System.Drawing.Size(254, 29);
+            this.comboBoxKH.Size = new System.Drawing.Size(203, 29);
             this.comboBoxKH.TabIndex = 33;
             // 
             // comboBoxNhanVien
@@ -282,7 +360,7 @@
             this.comboBoxNhanVien.FormattingEnabled = true;
             this.comboBoxNhanVien.Location = new System.Drawing.Point(167, 104);
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
-            this.comboBoxNhanVien.Size = new System.Drawing.Size(254, 29);
+            this.comboBoxNhanVien.Size = new System.Drawing.Size(202, 29);
             this.comboBoxNhanVien.TabIndex = 33;
             // 
             // label6
@@ -358,7 +436,7 @@
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(167, 191);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(255, 28);
+            this.txtTongTien.Size = new System.Drawing.Size(202, 28);
             this.txtTongTien.TabIndex = 31;
             // 
             // txtMaHD
@@ -368,14 +446,14 @@
             this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHD.Location = new System.Drawing.Point(167, 24);
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(255, 28);
+            this.txtMaHD.Size = new System.Drawing.Size(202, 28);
             this.txtMaHD.TabIndex = 31;
             // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.comboBoxMaLK);
+            this.groupBox5.Controls.Add(this.comboBoxLK);
             this.groupBox5.Controls.Add(this.comboBox3);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label11);
@@ -387,20 +465,33 @@
             this.groupBox5.Controls.Add(this.textBoxKhuyenMai);
             this.groupBox5.Controls.Add(this.textBoxdonGia);
             this.groupBox5.Controls.Add(this.textBoxSL);
-            this.groupBox5.Location = new System.Drawing.Point(689, 13);
+            this.groupBox5.Location = new System.Drawing.Point(669, 13);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(483, 276);
+            this.groupBox5.Size = new System.Drawing.Size(497, 276);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chi Tiết Hóa Đơn";
             // 
+            // comboBoxLK
+            // 
+            this.comboBoxLK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxLK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLK.FormattingEnabled = true;
+            this.comboBoxLK.Location = new System.Drawing.Point(181, 22);
+            this.comboBoxLK.Name = "comboBoxLK";
+            this.comboBoxLK.Size = new System.Drawing.Size(296, 28);
+            this.comboBoxLK.TabIndex = 33;
+            // 
             // comboBox3
             // 
+            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(180, 231);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(254, 28);
+            this.comboBox3.Size = new System.Drawing.Size(297, 28);
             this.comboBox3.TabIndex = 33;
             // 
             // label12
@@ -466,7 +557,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 28);
             this.label7.TabIndex = 32;
-            this.label7.Text = "Mã Linh Kiện";
+            this.label7.Text = "Linh Kiện";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // textBoxThanhTien
@@ -476,7 +567,7 @@
             this.textBoxThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxThanhTien.Location = new System.Drawing.Point(179, 189);
             this.textBoxThanhTien.Name = "textBoxThanhTien";
-            this.textBoxThanhTien.Size = new System.Drawing.Size(255, 28);
+            this.textBoxThanhTien.Size = new System.Drawing.Size(298, 28);
             this.textBoxThanhTien.TabIndex = 31;
             // 
             // textBoxKhuyenMai
@@ -486,7 +577,7 @@
             this.textBoxKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKhuyenMai.Location = new System.Drawing.Point(180, 144);
             this.textBoxKhuyenMai.Name = "textBoxKhuyenMai";
-            this.textBoxKhuyenMai.Size = new System.Drawing.Size(255, 28);
+            this.textBoxKhuyenMai.Size = new System.Drawing.Size(297, 28);
             this.textBoxKhuyenMai.TabIndex = 31;
             // 
             // textBoxdonGia
@@ -496,7 +587,7 @@
             this.textBoxdonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxdonGia.Location = new System.Drawing.Point(180, 103);
             this.textBoxdonGia.Name = "textBoxdonGia";
-            this.textBoxdonGia.Size = new System.Drawing.Size(255, 28);
+            this.textBoxdonGia.Size = new System.Drawing.Size(297, 28);
             this.textBoxdonGia.TabIndex = 31;
             // 
             // textBoxSL
@@ -506,95 +597,8 @@
             this.textBoxSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSL.Location = new System.Drawing.Point(180, 63);
             this.textBoxSL.Name = "textBoxSL";
-            this.textBoxSL.Size = new System.Drawing.Size(255, 28);
+            this.textBoxSL.Size = new System.Drawing.Size(297, 28);
             this.textBoxSL.TabIndex = 31;
-            // 
-            // MaHDBH
-            // 
-            this.MaHDBH.DataPropertyName = "MaHDBH";
-            this.MaHDBH.HeaderText = "Mã Hóa Đơn";
-            this.MaHDBH.Name = "MaHDBH";
-            // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "TenKH";
-            this.MaKH.HeaderText = "Khách Hàng";
-            this.MaKH.Name = "MaKH";
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "TenNV";
-            this.MaNV.HeaderText = "Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLapHDBH";
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng Tiền";
-            this.TongTien.Name = "TongTien";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MaHDBH";
-            this.MaHD.HeaderText = "Mã Hóa Đơn";
-            this.MaHD.Name = "MaHD";
-            // 
-            // MaLK
-            // 
-            this.MaLK.DataPropertyName = "TenLK";
-            this.MaLK.HeaderText = "Mã Linh Kiện";
-            this.MaLK.Name = "MaLK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // TrangThaii
-            // 
-            this.TrangThaii.DataPropertyName = "TrangThai";
-            this.TrangThaii.HeaderText = "Trạng Thái";
-            this.TrangThaii.Name = "TrangThaii";
-            // 
-            // comboBoxMaLK
-            // 
-            this.comboBoxMaLK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMaLK.FormattingEnabled = true;
-            this.comboBoxMaLK.Location = new System.Drawing.Point(181, 22);
-            this.comboBoxMaLK.Name = "comboBoxMaLK";
-            this.comboBoxMaLK.Size = new System.Drawing.Size(254, 28);
-            this.comboBoxMaLK.TabIndex = 33;
             // 
             // Frm_HoaDonBanHang
             // 
@@ -674,6 +678,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaii;
-        private System.Windows.Forms.ComboBox comboBoxMaLK;
+        private System.Windows.Forms.ComboBox comboBoxLK;
     }
 }

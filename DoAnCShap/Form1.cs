@@ -220,7 +220,8 @@ namespace DoAnCShap
         private void btnBanHang_Click(object sender, EventArgs e)
         {
             lbl_HienThiForm.Text = "Bán Hàng";
-            openChildForm(new Frm_BanHang());
+            //openChildForm(new Frm_BanHang());
+            openChildForm(new Frm_BanHan());
         }
 
         private void btnBaohanh_Click_1(object sender, EventArgs e)
