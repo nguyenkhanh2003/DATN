@@ -545,7 +545,6 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenkh;
-        private System.Windows.Forms.TextBox txtMaKh;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnHuy;
@@ -561,7 +560,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridViewKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
@@ -571,5 +569,7 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         public System.Windows.Forms.TextBox txtSearch;
+        public System.Windows.Forms.TextBox txtMaKh;
+        public System.Windows.Forms.DataGridView dataGridViewKH;
     }
 }

@@ -322,7 +322,7 @@
             this.groupBox4.Controls.Add(this.txtMaHD);
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(383, 277);
+            this.groupBox4.Size = new System.Drawing.Size(382, 277);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Hóa Đơn";
@@ -436,7 +436,7 @@
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(167, 191);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(202, 28);
+            this.txtTongTien.Size = new System.Drawing.Size(201, 28);
             this.txtTongTien.TabIndex = 31;
             // 
             // txtMaHD
@@ -446,7 +446,7 @@
             this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHD.Location = new System.Drawing.Point(167, 24);
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(202, 28);
+            this.txtMaHD.Size = new System.Drawing.Size(201, 28);
             this.txtMaHD.TabIndex = 31;
             // 
             // groupBox5
@@ -632,7 +632,6 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridViewHD;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridViewCTHD;
         private System.Windows.Forms.Button btnDong;
@@ -679,5 +678,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaii;
         private System.Windows.Forms.ComboBox comboBoxLK;
+        public System.Windows.Forms.DataGridView dataGridViewHD;
     }
 }

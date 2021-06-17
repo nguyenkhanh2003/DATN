@@ -17,8 +17,9 @@ namespace DoAnCShap
         public Frm_HoaDonBanHang()
         {
             InitializeComponent();
+            HienThiHoaDon();
+            
         }
-
         HoaDon_BUS bus = new HoaDon_BUS();
 
         public void HienThiHoaDon()
