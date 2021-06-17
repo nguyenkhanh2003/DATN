@@ -25,7 +25,8 @@ Values(N'"+ex.MaHDBH+"',N'"+ex.MaKH+"',N'"+ex.MaNV+"','"+ex.NgayLapHDBH+"',"+ex.
 
         public void AddCTHD(CT_HoaDonBanHang exx)
         {
-            KetNoi.ExecuteReader(@"Insert InTo CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai) VALUES(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+"',"+exx.DonGia+","+exx.KhuyenMai+","+exx.ThanhTien+",N'"+exx.TrangThai+"')");
+            KetNoi.ExecuteReader(@"insert into CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai)
+values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.KhuyenMai+","+exx.ThanhTien+",'"+exx.TrangThai+"')");
         }
         public DataTable GetDSSP(string Condition)
         {

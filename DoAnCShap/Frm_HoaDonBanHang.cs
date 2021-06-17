@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace DoAnCShap
 {
@@ -17,84 +19,47 @@ namespace DoAnCShap
             InitializeComponent();
         }
 
-        private void btnThemTaiKhoan_Click(object sender, EventArgs e)
-        {
+        HoaDon_BUS bus = new HoaDon_BUS();
 
+        public void HienThiHoaDon()
+        {
+            dataGridViewHD.DataSource = bus.GetHoaDon("");
+        }
+        public void HienThiCTHD()
+        {
+            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("");
+        }
+        public void HienThiNhanVien()
+        {
+            comboBoxNhanVien.DataSource = bus.GetNhanVien("");
+            comboBoxNhanVien.DisplayMember = "TenNV";
+            comboBoxNhanVien.ValueMember = "MaNV";
         }
 
-        private void labelX3_Click(object sender, EventArgs e)
+        public void HienThiKhachHang()
         {
-
+            comboBoxKH.DataSource = bus.GetKhachHang("");
+            comboBoxKH.DisplayMember = "TenKH";
+            comboBoxKH.ValueMember = "MaKH";
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        public void HienThiLinhKien()
         {
-
+            comboBoxMaLK.DataSource = bus.GetLinhKien("");
+            comboBoxMaLK.DisplayMember = "TenLK";
+            comboBoxMaLK.ValueMember = "MaLK";
         }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void Frm_HoaDonBanHang_Load(object sender, EventArgs e)
         {
-
+            HienThiHoaDon();
+            HienThiCTHD();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

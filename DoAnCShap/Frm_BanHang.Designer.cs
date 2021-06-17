@@ -75,7 +75,6 @@ namespace DoAnCShap
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThemHD = new System.Windows.Forms.Button();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -579,7 +578,6 @@ namespace DoAnCShap
             this.dataGridViewHD.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHD,
             this.TenLK,
             this.SoLuong,
             this.DonGia,
@@ -619,12 +617,6 @@ namespace DoAnCShap
             this.btnThemHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemHD.UseVisualStyleBackColor = true;
             this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
-            // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MaHDBH";
-            this.MaHD.HeaderText = "Mã Hóa Đơn";
-            this.MaHD.Name = "MaHD";
             // 
             // TenLK
             // 
@@ -737,7 +729,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThemHD;
         private System.Windows.Forms.ComboBox comboBoxNV;
         private System.Windows.Forms.ComboBox comboBoxKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;

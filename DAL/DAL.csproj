@@ -44,6 +44,7 @@
     <Compile Include="BanHang_DAL.cs" />
     <Compile Include="ChucVu_DAL.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="HoaDon_DAL.cs" />
     <Compile Include="KetNoiDatabase.cs" />
     <Compile Include="KhachHang_DAL.cs" />
     <Compile Include="LoaiLinhKien_DAL.cs" />
