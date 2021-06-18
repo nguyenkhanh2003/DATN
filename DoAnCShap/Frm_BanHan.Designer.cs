@@ -65,6 +65,7 @@ namespace DoAnCShap
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnLuuKH = new System.Windows.Forms.Button();
+            this.btnXoaSP = new System.Windows.Forms.Button();
             this.btnChonMua = new System.Windows.Forms.Button();
             this.btnThemHD = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -85,7 +86,6 @@ namespace DoAnCShap
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnXoaSP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -123,6 +123,7 @@ namespace DoAnCShap
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(324, 27);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox3
             // 
@@ -500,6 +501,19 @@ namespace DoAnCShap
             this.btnLuuKH.UseVisualStyleBackColor = true;
             this.btnLuuKH.Click += new System.EventHandler(this.btnLuuKH_Click);
             // 
+            // btnXoaSP
+            // 
+            this.btnXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
+            this.btnXoaSP.Location = new System.Drawing.Point(802, 14);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(130, 41);
+            this.btnXoaSP.TabIndex = 3;
+            this.btnXoaSP.Text = "Xóa SP Đã Chọn";
+            this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoaSP.UseVisualStyleBackColor = true;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
+            // 
             // btnChonMua
             // 
             this.btnChonMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -542,9 +556,10 @@ namespace DoAnCShap
             // 
             // btnLuuHd
             // 
+            this.btnLuuHd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLuuHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuHd.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuHd.Image")));
-            this.btnLuuHd.Location = new System.Drawing.Point(26, 214);
+            this.btnLuuHd.Location = new System.Drawing.Point(23, 296);
             this.btnLuuHd.Name = "btnLuuHd";
             this.btnLuuHd.Size = new System.Drawing.Size(144, 41);
             this.btnLuuHd.TabIndex = 3;
@@ -556,9 +571,11 @@ namespace DoAnCShap
             // 
             // btnInHD
             // 
+            this.btnInHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInHD.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.Image")));
-            this.btnInHD.Location = new System.Drawing.Point(219, 214);
+            this.btnInHD.Location = new System.Drawing.Point(219, 296);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(144, 41);
             this.btnInHD.TabIndex = 3;
@@ -716,19 +733,6 @@ namespace DoAnCShap
             this.label15.TabIndex = 5;
             this.label15.Text = "Tổng Thanh Toán";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.Location = new System.Drawing.Point(802, 14);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(130, 41);
-            this.btnXoaSP.TabIndex = 3;
-            this.btnXoaSP.Text = "Xóa SP Đã Chọn";
-            this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoaSP.UseVisualStyleBackColor = true;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
             // 
             // Frm_BanHan
             // 
