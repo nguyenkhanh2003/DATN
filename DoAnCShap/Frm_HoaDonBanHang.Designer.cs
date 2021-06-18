@@ -110,7 +110,7 @@
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.Location = new System.Drawing.Point(517, 20);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(91, 44);
+            this.btnXoa.Size = new System.Drawing.Size(105, 44);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,7 +122,7 @@
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.Location = new System.Drawing.Point(1014, 19);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(82, 44);
+            this.btnDong.Size = new System.Drawing.Size(95, 44);
             this.btnDong.TabIndex = 0;
             this.btnDong.Text = "Đóng";
             this.btnDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,7 +134,7 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(780, 20);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 44);
+            this.button3.Size = new System.Drawing.Size(100, 44);
             this.button3.TabIndex = 0;
             this.button3.Text = "Reset";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -144,9 +144,9 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(241, 20);
+            this.button2.Location = new System.Drawing.Point(274, 20);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 44);
+            this.button2.Size = new System.Drawing.Size(106, 44);
             this.button2.TabIndex = 0;
             this.button2.Text = "In Hóa Đơn";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -158,7 +158,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(37, 20);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 44);
+            this.button1.Size = new System.Drawing.Size(103, 44);
             this.button1.TabIndex = 0;
             this.button1.Text = "Lưu";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

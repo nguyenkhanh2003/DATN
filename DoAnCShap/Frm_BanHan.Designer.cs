@@ -85,6 +85,7 @@ namespace DoAnCShap
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnXoaSP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -463,11 +464,11 @@ namespace DoAnCShap
             // 
             // comboBoxSP
             // 
-            this.comboBoxSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSP.FormattingEnabled = true;
             this.comboBoxSP.Location = new System.Drawing.Point(152, 19);
             this.comboBoxSP.Name = "comboBoxSP";
-            this.comboBoxSP.Size = new System.Drawing.Size(222, 24);
+            this.comboBoxSP.Size = new System.Drawing.Size(222, 28);
             this.comboBoxSP.TabIndex = 4;
             this.comboBoxSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
             // 
@@ -476,6 +477,7 @@ namespace DoAnCShap
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.btnLuuKH);
+            this.groupBox5.Controls.Add(this.btnXoaSP);
             this.groupBox5.Controls.Add(this.btnChonMua);
             this.groupBox5.Controls.Add(this.btnThemHD);
             this.groupBox5.Controls.Add(this.btnClose);
@@ -489,7 +491,7 @@ namespace DoAnCShap
             // 
             this.btnLuuKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuKH.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKH.Image")));
-            this.btnLuuKH.Location = new System.Drawing.Point(403, 14);
+            this.btnLuuKH.Location = new System.Drawing.Point(266, 14);
             this.btnLuuKH.Name = "btnLuuKH";
             this.btnLuuKH.Size = new System.Drawing.Size(132, 41);
             this.btnLuuKH.TabIndex = 3;
@@ -502,9 +504,9 @@ namespace DoAnCShap
             // 
             this.btnChonMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChonMua.Image = ((System.Drawing.Image)(resources.GetObject("btnChonMua.Image")));
-            this.btnChonMua.Location = new System.Drawing.Point(720, 14);
+            this.btnChonMua.Location = new System.Drawing.Point(537, 14);
             this.btnChonMua.Name = "btnChonMua";
-            this.btnChonMua.Size = new System.Drawing.Size(105, 41);
+            this.btnChonMua.Size = new System.Drawing.Size(115, 41);
             this.btnChonMua.TabIndex = 3;
             this.btnChonMua.Text = "Chọn Mua";
             this.btnChonMua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -715,6 +717,19 @@ namespace DoAnCShap
             this.label15.Text = "Tổng Thanh Toán";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // btnXoaSP
+            // 
+            this.btnXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
+            this.btnXoaSP.Location = new System.Drawing.Point(802, 14);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(130, 41);
+            this.btnXoaSP.TabIndex = 3;
+            this.btnXoaSP.Text = "Xóa SP Đã Chọn";
+            this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoaSP.UseVisualStyleBackColor = true;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
+            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,5 +816,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnThenKH;
         private System.Windows.Forms.Button btnTimKH;
+        private System.Windows.Forms.Button btnXoaSP;
     }
 }

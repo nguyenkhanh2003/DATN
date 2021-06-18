@@ -47,6 +47,7 @@ namespace DoAnCShap
             btnChonMua.Enabled = b2;
             btnLuuHd.Enabled = b2;
             btnInHD.Enabled = b2;
+            btnXoaSP.Enabled = b2;
             btnLuuKH.Enabled = b2;
             btnTimKH.Enabled = b2;
         }
@@ -280,6 +281,12 @@ namespace DoAnCShap
                 bus.AddKH(AddKH);
                 MessageBox.Show("Thêm Khách Hàng Thành Công !");
             }
+        }
+
+        private void btnXoaSP_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridViewHDBH.CurrentCell.RowIndex;
+            dataGridViewHDBH.Rows.RemoveAt(rowIndex);
         }
     }
 }
