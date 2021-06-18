@@ -17,7 +17,7 @@ namespace DAL
         }
         public DataTable GetCtHoaDon(string Condition)
         {
-            return KetNoi.GetDataTable("select CT_HoaDonBanHang.MaHDBH,TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien,CT_HoaDonBanHang.TrangThai from CT_HoaDonBanHang,LinhKien,HoaDonBanHang Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=HoaDonBanHang.MaHDBH "+Condition);
+            return KetNoi.GetDataTable(""+Condition);
 
         }
         public DataTable GetNhanVien(string conditon)

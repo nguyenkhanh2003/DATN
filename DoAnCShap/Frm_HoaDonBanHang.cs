@@ -26,10 +26,10 @@ namespace DoAnCShap
         {
             dataGridViewHD.DataSource = bus.GetHoaDon("");
         }
-        public void HienThiCTHD()
-        {
-            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("");
-        }
+        //public void HienThiCTHD()
+        //{
+        //    dataGridViewCTHD.DataSource = bus.GetCtHoaDon("");
+        //}
         public void HienThiNhanVien()
         {
             comboBoxNhanVien.DataSource = bus.GetNhanVien("");
@@ -50,6 +50,24 @@ namespace DoAnCShap
             comboBoxLK.DisplayMember = "TenLK";
             comboBoxLK.ValueMember = "MaLK";
         }
+
+        public void HienThiHoaDonTextBox(int vitri,DataTable d)
+        {
+            try
+            {
+                txtMaHD.Text = d.Rows[vitri]["MaHDBH"].ToString();
+                comboBoxKH.Text = d.Rows[vitri]["TenKH"].ToString();
+                comboBoxNhanVien.Text = d.Rows[vitri]["TenNV"].ToString();
+                dateTimePickerNgaylap.Text = d.Rows[vitri]["NgayLapHDBH"].ToString();
+                labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
+                comboBoxTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
+                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien,CT_HoaDonBanHang.TrangThai from CT_HoaDonBanHang,LinhKien,HoaDonBanHang Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text+"'");
+            }
+            catch
+            {
+
+            }
+        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -58,9 +76,15 @@ namespace DoAnCShap
         private void Frm_HoaDonBanHang_Load(object sender, EventArgs e)
         {
             HienThiHoaDon();
-            HienThiCTHD();
+            //HienThiCTHD();
         }
 
-      
+        private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                int vitri = dataGridViewHD.CurrentCell.RowIndex;
+                HienThiHoaDonTextBox(vitri,bus.GetHoaDon(""));
+            }
+        }
     }
 }
