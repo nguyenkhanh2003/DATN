@@ -28,6 +28,13 @@ Values(N'"+ex.MaHDBH+"',N'"+ex.MaKH+"',N'"+ex.MaNV+"','"+ex.NgayLapHDBH+"',"+ex.
             KetNoi.ExecuteReader(@"insert into CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai)
 values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.KhuyenMai+","+exx.ThanhTien+",'"+exx.TrangThai+"')");
         }
+
+         public void AddKH(KhachHang ex)
+        {
+            KetNoi.ExecuteReader(@"INSERT INTO KhachHang(MaKH,TenKH,GioiTinh,Email,DienThoai,CMND,DiaChi,TrangThai)      
+                                   VALUES(N'" + ex.MaKH + "',N'" + ex.TenKH + "',N'" + ex.GioiTinh +
+                                    "',N'" + ex.Email + "',N'" + ex.DienThoai + "',N'"+ex.CMND+"',N'"+ex.DiaChi+"',N'"+ex.TrangThai+"')");
+        }
         public DataTable GetDSSP(string Condition)
         {
             return KetNoi.GetDataTable(""+Condition);

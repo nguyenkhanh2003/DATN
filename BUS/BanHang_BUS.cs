@@ -30,6 +30,11 @@ namespace BUS
         {
              bus.AddCTHD(exx);
         }
+
+        public void AddKH(KhachHang ex)
+        {
+            bus.AddKH(ex);
+        }
         public DataTable GetDSkH(string Condition)
         {
             return bus.GetDSkH(Condition);

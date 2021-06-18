@@ -24,6 +24,7 @@ namespace DoAnCShap
         BanHang_BUS bus = new BanHang_BUS();
         HoaDonBanHang hdbh = new HoaDonBanHang();
         CT_HoaDonBanHang cthdbh = new CT_HoaDonBanHang();
+        KhachHang AddKH = new KhachHang();
         string MaLK = "";
         public void HienThiSanPham()
         {
@@ -132,8 +133,8 @@ namespace DoAnCShap
 
         private void btnChonMua_Click(object sender, EventArgs e)
         {
-            MaLK = comboBoxSP.SelectedValue.ToString();
-            int tt;
+            MaLK += comboBoxSP.SelectedValue.ToString() + ";";
+            int tt=0;
             int KM = 0;
             if (txtKhuyenMai.Text != "")
                 KM = int.Parse(txtKhuyenMai.Text);
@@ -141,7 +142,7 @@ namespace DoAnCShap
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             labelTongThanhToan.Text = tongtien.ToString();
-            object[] t = { MaLK, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
+            object[] t = { comboBoxSP.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
             dataGridViewHDBH.Rows.Add(t);
         }
         double tongtien = 0;
@@ -152,15 +153,15 @@ namespace DoAnCShap
 
         private void txtKhuyenMai_TextChanged(object sender, EventArgs e)
         {
-            if (txtSL.Text != "" || txtKhuyenMai.Text != "" || txtDonGia.Text != "")
-            {
-                double tt = 0;//thanhtien
-                double km = 0; //khuyen mai
-                double sl = 0;
-                tt = double.Parse(txtDonGia.Text) * int.Parse(txtSL.Text) - double.Parse(txtKhuyenMai.Text);
-                tongtien = tt;
-                labelThanhTien.Text = tongtien.ToString();
-            }
+            //if (txtSL.Text != "" || txtKhuyenMai.Text != "" || txtDonGia.Text != "")
+            //{
+            //    double tt = 0;//thanhtien
+            //    double km = 0; //khuyen mai
+            //    double sl = 0;
+            //    tt = double.Parse(txtDonGia.Text) * int.Parse(txtSL.Text) - double.Parse(txtKhuyenMai.Text);
+            //    tongtien = tt;
+            //    labelThanhTien.Text = tongtien.ToString();
+            //}
         }
 
         private void btnLuuHd_Click(object sender, EventArgs e)
@@ -178,7 +179,8 @@ namespace DoAnCShap
                 string[] b = MaLK.Split(';');
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
                 {
-                    string malk = dataGridViewHDBH.Rows[i].Cells[0].Value.ToString();
+                    string malk = b[i];
+                    //string malk = dataGridViewHDBH.Rows[i].Cells[0].Value.ToString();
                     string soluong = dataGridViewHDBH.Rows[i].Cells[1].Value.ToString();
                     string dongia = dataGridViewHDBH.Rows[i].Cells[2].Value.ToString();
                     string khuyenmai = dataGridViewHDBH.Rows[i].Cells[3].Value.ToString();
@@ -240,9 +242,11 @@ namespace DoAnCShap
 
             }
         }
+        bool add;
         private void btnThenKH_Click(object sender, EventArgs e)
         {
             PhatSinhMa();
+            add = true;
         }
 
         private void Frm_BanHan_Load(object sender, EventArgs e)
@@ -251,6 +255,31 @@ namespace DoAnCShap
             HienThiNhanVien();
             XuLyChucNang(true, false);
         }
-        
+
+        private void txtTienKhachDua_TextChanged(object sender, EventArgs e)
+        {
+            double TienThua = 0;
+            double TongThanhToan = 0; //khuyen mai
+            double TienKhachDua = 0;
+            TienThua = double.Parse(txtTienKhachDua.Text) - int.Parse(labelTongThanhToan.Text);
+            labelThoiLaiKhach.Text = TienThua.ToString();
+        }
+
+        private void btnLuuKH_Click(object sender, EventArgs e)
+        {
+            if (add == true)
+            {
+                AddKH.MaKH = comboBoxKH.Text;
+                AddKH.TenKH = txtTenkH.Text;
+                AddKH.GioiTinh = "Nam";
+                AddKH.Email = "12345@gmail.com";
+                AddKH.DienThoai = txtSDT.Text;
+                AddKH.CMND = "272721655";
+                AddKH.DiaChi = txtDiaChi.Text;
+                AddKH.TrangThai = "Mới";
+                bus.AddKH(AddKH);
+                MessageBox.Show("Thêm Khách Hàng Thành Công !");
+            }
+        }
     }
 }

@@ -79,8 +79,8 @@ namespace DoAnCShap
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.txtTienKhachDua = new System.Windows.Forms.TextBox();
+            this.labelThoiLaiKhach = new System.Windows.Forms.Label();
             this.labelTongThanhToan = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -385,7 +385,6 @@ namespace DoAnCShap
             this.txtKhuyenMai.Size = new System.Drawing.Size(222, 24);
             this.txtKhuyenMai.TabIndex = 10;
             this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKhuyenMai.TextChanged += new System.EventHandler(this.txtKhuyenMai_TextChanged);
             // 
             // txtSL
             // 
@@ -497,6 +496,7 @@ namespace DoAnCShap
             this.btnLuuKH.Text = "Lưu  Khách Hàng";
             this.btnLuuKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuuKH.UseVisualStyleBackColor = true;
+            this.btnLuuKH.Click += new System.EventHandler(this.btnLuuKH_Click);
             // 
             // btnChonMua
             // 
@@ -583,6 +583,7 @@ namespace DoAnCShap
             this.dataGridViewHDBH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHDBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHDBH.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewHDBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHDBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -637,8 +638,8 @@ namespace DoAnCShap
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnLuuHd);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.txtTienKhachDua);
+            this.groupBox2.Controls.Add(this.labelThoiLaiKhach);
             this.groupBox2.Controls.Add(this.labelTongThanhToan);
             this.groupBox2.Controls.Add(this.btnInHD);
             this.groupBox2.Controls.Add(this.label18);
@@ -652,23 +653,24 @@ namespace DoAnCShap
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Thanh Toán";
             // 
-            // textBox1
+            // txtTienKhachDua
             // 
-            this.textBox1.Location = new System.Drawing.Point(164, 88);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 31);
-            this.textBox1.TabIndex = 15;
+            this.txtTienKhachDua.Location = new System.Drawing.Point(164, 88);
+            this.txtTienKhachDua.Multiline = true;
+            this.txtTienKhachDua.Name = "txtTienKhachDua";
+            this.txtTienKhachDua.Size = new System.Drawing.Size(213, 31);
+            this.txtTienKhachDua.TabIndex = 15;
+            this.txtTienKhachDua.TextChanged += new System.EventHandler(this.txtTienKhachDua_TextChanged);
             // 
-            // label19
+            // labelThoiLaiKhach
             // 
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(161, 145);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(216, 32);
-            this.label19.TabIndex = 14;
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelThoiLaiKhach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelThoiLaiKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThoiLaiKhach.Location = new System.Drawing.Point(161, 145);
+            this.labelThoiLaiKhach.Name = "labelThoiLaiKhach";
+            this.labelThoiLaiKhach.Size = new System.Drawing.Size(216, 32);
+            this.labelThoiLaiKhach.TabIndex = 14;
+            this.labelThoiLaiKhach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTongThanhToan
             // 
@@ -793,8 +795,8 @@ namespace DoAnCShap
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label labelTongThanhToan;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtTienKhachDua;
+        private System.Windows.Forms.Label labelThoiLaiKhach;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnThenKH;
