@@ -46,8 +46,8 @@ namespace DoAnCShap
             cboGioiTinh.Enabled =b1;
             txtEmail.Enabled = b1;
             txtSdt.Enabled =b1;
-            txtCMND.Enabled = b1;
-            txtDiaChi.Enabled =b1;
+            //txtCMND.Enabled = b1;
+            txtDiaCh.Enabled = b1;
             cboTrangThai.Enabled =b1;
         }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
@@ -62,7 +62,7 @@ namespace DoAnCShap
         {
             txtMaKh.Clear();
             txtTenkh.Clear();
-            txtCMND.Clear();
+            txtDiaCh.Clear();
             txtDiaChi.Clear();
             txtEmail.Clear();
             txtSdt.Clear();
@@ -127,7 +127,7 @@ namespace DoAnCShap
                     kh.GioiTinh = cboGioiTinh.Text;
                     kh.Email = txtEmail.Text;
                     kh.DienThoai = txtSdt.Text;
-                    kh.CMND = txtCMND.Text;
+                   
                     kh.DiaChi = txtDiaChi.Text;
                     kh.TrangThai = cboTrangThai.Text;
                     bus.AddData(kh); ;
@@ -141,7 +141,7 @@ namespace DoAnCShap
                 kh.GioiTinh = cboGioiTinh.Text;
                 kh.Email = txtEmail.Text;
                 kh.DienThoai = txtSdt.Text;
-                kh.CMND = txtCMND.Text;
+               
                 kh.DiaChi = txtDiaChi.Text;
                 kh.TrangThai = cboTrangThai.Text;
                 bus.EditData(kh); ;
@@ -163,9 +163,9 @@ namespace DoAnCShap
             cboGioiTinh.Text = row.Cells[2].Value.ToString();
             txtEmail.Text = row.Cells[3].Value.ToString();
             txtSdt.Text = row.Cells[4].Value.ToString();
-            txtCMND.Text = row.Cells[5].Value.ToString();
-            txtDiaChi.Text = row.Cells[6].Value.ToString();
-            cboTrangThai.Text = row.Cells[7].Value.ToString();
+           
+            txtDiaCh.Text = row.Cells[5].Value.ToString();
+            cboTrangThai.Text = row.Cells[6].Value.ToString();
             xulytextbox(false,true);
         }
 

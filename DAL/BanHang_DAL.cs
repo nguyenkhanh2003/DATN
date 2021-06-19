@@ -33,7 +33,7 @@ values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.Kh
         {
             KetNoi.ExecuteReader(@"INSERT INTO KhachHang(MaKH,TenKH,GioiTinh,Email,DienThoai,CMND,DiaChi,TrangThai)      
                                    VALUES(N'" + ex.MaKH + "',N'" + ex.TenKH + "',N'" + ex.GioiTinh +
-                                    "',N'" + ex.Email + "',N'" + ex.DienThoai + "',N'"+ex.CMND+"',N'"+ex.DiaChi+"',N'"+ex.TrangThai+"')");
+                                    "',N'" + ex.Email + "',N'" + ex.DienThoai + "',N'"+ex.DiaChi+"',N'"+ex.TrangThai+"')");
         }
         public DataTable GetDSSP(string Condition)
         {

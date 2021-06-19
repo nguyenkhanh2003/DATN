@@ -105,7 +105,7 @@ namespace DoAnCShap
         private void Frm_HoaDonBanHang_Load(object sender, EventArgs e)
         {
             HienThiHoaDon();
-            //HienThiCTHD();
+            HienThiLinhKien();
             HienThiNhanVien();
             HienThiKhachHang();
             XulyTextBox(true, false);
@@ -152,6 +152,66 @@ namespace DoAnCShap
                 MessageBox.Show("Thành Công !");
             }
             HienThiHoaDon();
+        }
+
+        string MaLinhKien = "";
+        int tongtien = 0;
+        private void btnChonMua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MaLinhKien += comboBoxLK.SelectedValue.ToString() + ";";
+                int tt = 0;
+                int KM = 0;
+                if (txtKhuyenMai.Text != "")
+                    KM = int.Parse(txtKhuyenMai.Text);
+                tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+                tongtien += tt;
+                labelThanhTien.Text = tt.ToString();
+                labelTongThanhToan.Text = tongtien.ToString();
+                object[] t = { comboBoxLK.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
+                dataGridViewCTHD.Rows.Add(t);
+            }
+            catch
+            {
+                MessageBox.Show("Fail !");
+            }
+        }
+
+        private void comboBoxLK_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                DataTable DSSP = bus.GetLinhKienT("Select * From LinhKien Where TenLK=N'" + comboBoxLK.Text + "'");
+                if (DSSP.Rows.Count > 0)
+                {
+                    //if(comboBoxSP.Text==DSSP.Rows[0]["MaLK"].ToString())
+                    if (comboBoxLK.Text == DSSP.Rows[0]["TenLK"].ToString())
+                    {
+                        txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
+                        txtSL.Text = DSSP.Rows[0]["SoLuong"].ToString();
+
+                    }
+
+                }
+            }
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            int tt = 0;
+            int KM = 0;
+            if (txtKhuyenMai.Text != "")
+                KM = int.Parse(txtKhuyenMai.Text);
+            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+            tongtien += tt;
+            labelThanhTien.Text = tt.ToString();
+            labelTongThanhToan.Text = tongtien.ToString();
         }
     }
 }

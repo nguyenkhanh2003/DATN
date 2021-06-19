@@ -35,9 +35,14 @@ namespace DAL
             return KetNoi.GetDataTable("Select MaLK,TenLK From LinhKien"+condition);
         }
 
+        public DataTable GetLinhKienT(string condition)
+        {
+            return KetNoi.GetDataTable(""+condition);
+        }
         public void UpdateHoaDon(HoaDonBanHang ex)
         {
             KetNoi.ExecuteReader(@"update HoaDonBanHang Set MaKH=N'"+ex.MaKH+"',MaNV=N'"+ex.MaNV+"',NgayLapHDBH=N'"+ex.NgayLapHDBH+"',TongTien="+ex.TongTien+",TrangThai=N'"+ex.TrangThai+"' Where MaHDBH=N'"+ex.MaHDBH+"'");
         }
+
     }
 }
