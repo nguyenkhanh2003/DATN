@@ -147,6 +147,7 @@ namespace DoAnCShap
         private void Form1_Load(object sender, EventArgs e)
         {
             lbl_HienThiForm.Text = "Home";
+            fillChart();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -252,6 +253,18 @@ namespace DoAnCShap
         {
             lbl_HienThiForm.Text = "Nhà Sản Xuất";
             openChildForm(new Frm_NSX());
+        }
+
+        private void fillChart()
+        {
+            //AddXY value in chart1 in series named as Salary  
+            chart1.Series["Salary"].Points.AddXY("Ajay", "10000");
+            chart1.Series["Salary"].Points.AddXY("Ramesh", "8000");
+            chart1.Series["Salary"].Points.AddXY("Ankit", "7000");
+            chart1.Series["Salary"].Points.AddXY("Gurmeet", "10000");
+            chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
+            //chart title  
+            chart1.Titles.Add("Salary Chart");
         }
     }
 }

@@ -18,7 +18,6 @@ namespace DoAnCShap
         {
             InitializeComponent();
             HienThiHoaDon();
-            
         }
         HoaDon_BUS bus = new HoaDon_BUS();
 
@@ -28,7 +27,7 @@ namespace DoAnCShap
         }
         //public void HienThiCTHD()
         //{
-        //    dataGridViewCTHD.DataSource = bus.GetCtHoaDon("");
+        //    dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH");
         //}
         public void HienThiNhanVien()
         {
@@ -61,13 +60,32 @@ namespace DoAnCShap
                 dateTimePickerNgaylap.Text = d.Rows[vitri]["NgayLapHDBH"].ToString();
                 labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
                 comboBoxTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
-                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien,CT_HoaDonBanHang.TrangThai from CT_HoaDonBanHang,LinhKien,HoaDonBanHang Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text+"'");
+                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+txtMaHD.Text+"'");
             }
             catch
             {
 
             }
         }
+
+        public void HienThiCTHoaDonTextBox(int vitri , DataTable d)
+        {
+            try
+            {
+                comboBoxLK.Text = d.Rows[vitri]["TenLK"].ToString();
+                txtSL.Text = d.Rows[vitri]["SoLuong"].ToString();
+                txtDonGia.Text = d.Rows[vitri]["DonGia"].ToString();
+                txtKhuyenMai.Text = d.Rows[vitri]["KhuyenMai"].ToString();
+                labelThanhTien.Text = d.Rows[vitri]["ThanhTien"].ToString();
+                CboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
+            }
+            catch
+            {
+
+            }
+        }    
+
+       
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,6 +102,19 @@ namespace DoAnCShap
             {
                 int vitri = dataGridViewHD.CurrentCell.RowIndex;
                 HienThiHoaDonTextBox(vitri,bus.GetHoaDon(""));
+            }
+        }
+
+        private void dataGridViewCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           try
+            {
+                int vitri = dataGridViewCTHD.CurrentCell.RowIndex;
+                HienThiCTHoaDonTextBox(vitri, bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK"));
+            }
+            catch
+            {
+                MessageBox.Show("Không có dữ liệu !");
             }
         }
     }
