@@ -20,7 +20,7 @@ namespace DoAnCShap
             HienThiHoaDon();
         }
         HoaDon_BUS bus = new HoaDon_BUS();
-
+        HoaDonBanHang hdbh = new HoaDonBanHang();
         public void HienThiHoaDon()
         {
             dataGridViewHD.DataSource = bus.GetHoaDon("");
@@ -50,6 +50,17 @@ namespace DoAnCShap
             comboBoxLK.ValueMember = "MaLK";
         }
 
+        public void XulyTextBox(Boolean b1, Boolean b2)
+        {
+            txtMaHD.Enabled = b2;
+            comboBoxKH.Enabled = b2;
+            comboBoxNhanVien.Enabled = b2;
+            dateTimePickerNgaylap.Enabled = b2;
+            comboBoxTrangThai.Enabled = b2;
+            labelTongThanhToan.Enabled = b2;
+        }
+
+        int flag = 0;
         public void HienThiHoaDonTextBox(int vitri,DataTable d)
         {
             try
@@ -95,6 +106,9 @@ namespace DoAnCShap
         {
             HienThiHoaDon();
             //HienThiCTHD();
+            HienThiNhanVien();
+            HienThiKhachHang();
+            XulyTextBox(true, false);
         }
 
         private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -116,6 +130,28 @@ namespace DoAnCShap
             {
                 MessageBox.Show("Không có dữ liệu !");
             }
+        }
+
+        private void dataGridViewHD_DoubleClick(object sender, EventArgs e)
+        {
+            flag = 1;
+            XulyTextBox(false, true);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if(flag==1)
+            {
+                hdbh.MaHDBH = txtMaHD.Text;
+                hdbh.MaKH = comboBoxKH.SelectedValue.ToString();
+                hdbh.MaNV = comboBoxNhanVien.SelectedValue.ToString();
+                hdbh.NgayLapHDBH = dateTimePickerNgaylap.Text;
+                hdbh.TongTien = labelTongThanhToan.Text;
+                hdbh.TrangThai = comboBoxTrangThai.Text;
+                bus.UpdateHoaDon(hdbh);
+                MessageBox.Show("Thành Công !");
+            }
+            HienThiHoaDon();
         }
     }
 }

@@ -31,5 +31,10 @@ namespace BUS
         {
             return bus.GetLinhKien(condition);
         }
+
+        public void UpdateHoaDon(HoaDonBanHang ex)
+        {
+            bus.UpdateHoaDon(ex);
+        }
     }
 }

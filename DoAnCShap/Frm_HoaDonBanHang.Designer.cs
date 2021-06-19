@@ -34,7 +34,7 @@
             this.btnDong = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
             this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +45,13 @@
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTHD = new System.Windows.Forms.DataGridView();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThaii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerNgaylap = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
@@ -71,13 +78,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThaii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
@@ -94,7 +94,7 @@
             this.groupBox3.Controls.Add(this.btnDong);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
@@ -152,17 +152,18 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnLuu
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(37, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(37, 20);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(103, 44);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu Hóa Đơn";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // groupBox1
             // 
@@ -196,6 +197,7 @@
             this.dataGridViewHD.Size = new System.Drawing.Size(639, 302);
             this.dataGridViewHD.TabIndex = 0;
             this.dataGridViewHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHD_CellClick);
+            this.dataGridViewHD.DoubleClick += new System.EventHandler(this.dataGridViewHD_DoubleClick);
             // 
             // MaHDBH
             // 
@@ -266,6 +268,48 @@
             this.dataGridViewCTHD.Size = new System.Drawing.Size(497, 301);
             this.dataGridViewCTHD.TabIndex = 0;
             this.dataGridViewCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTHD_CellClick);
+            // 
+            // MaHD
+            // 
+            this.MaHD.DataPropertyName = "MaHDBH";
+            this.MaHD.HeaderText = "Mã Hóa Đơn";
+            this.MaHD.Name = "MaHD";
+            // 
+            // MaLK
+            // 
+            this.MaLK.DataPropertyName = "TenLK";
+            this.MaLK.HeaderText = "Tên Linh Kiện";
+            this.MaLK.Name = "MaLK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // TrangThaii
+            // 
+            this.TrangThaii.DataPropertyName = "TrangThai";
+            this.TrangThaii.HeaderText = "Trạng Thái";
+            this.TrangThaii.Name = "TrangThaii";
             // 
             // groupBox4
             // 
@@ -561,48 +605,6 @@
             this.txtSL.Size = new System.Drawing.Size(297, 28);
             this.txtSL.TabIndex = 31;
             // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MaHDBH";
-            this.MaHD.HeaderText = "Mã Hóa Đơn";
-            this.MaHD.Name = "MaHD";
-            // 
-            // MaLK
-            // 
-            this.MaLK.DataPropertyName = "TenLK";
-            this.MaLK.HeaderText = "Tên Linh Kiện";
-            this.MaLK.Name = "MaLK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // TrangThaii
-            // 
-            this.TrangThaii.DataPropertyName = "TrangThai";
-            this.TrangThaii.HeaderText = "Trạng Thái";
-            this.TrangThaii.Name = "TrangThaii";
-            // 
             // Frm_HoaDonBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,7 +642,7 @@
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaylap;
         private System.Windows.Forms.ComboBox comboBoxNhanVien;
