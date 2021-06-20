@@ -21,6 +21,7 @@ namespace DoAnCShap
         }
         HoaDon_BUS bus = new HoaDon_BUS();
         HoaDonBanHang hdbh = new HoaDonBanHang();
+        CT_HoaDonBanHang cthd = new CT_HoaDonBanHang();
         public void HienThiHoaDon()
         {
             dataGridViewHD.DataSource = bus.GetHoaDon("");
@@ -121,6 +122,7 @@ namespace DoAnCShap
 
         private void dataGridViewCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            flag = 2;
            try
             {
                 int vitri = dataGridViewCTHD.CurrentCell.RowIndex;
@@ -203,6 +205,23 @@ namespace DoAnCShap
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            if(flag==2)
+            {
+                cthd.MaHDBH = txtMaHD.Text;
+                cthd.MaLK = comboBoxLK.SelectedValue.ToString();
+                cthd.SoLuong = txtSL.Text;
+                cthd.DonGia = txtDonGia.Text;
+                cthd.KhuyenMai = txtKhuyenMai.Text;
+                cthd.ThanhTien = labelThanhTien.Text;
+                cthd.TrangThai = comboBoxTrangThai.Text;
+                bus.UpdateCTHoaDon(cthd);
+                MessageBox.Show("Thành Công !");
+            }
+           
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
         {
             int tt = 0;
             int KM = 0;

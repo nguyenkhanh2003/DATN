@@ -40,5 +40,10 @@ namespace BUS
         {
             bus.UpdateHoaDon(ex);
         }
+
+        public void UpdateCTHoaDon(CT_HoaDonBanHang exx)
+        {
+            bus.UpdateCTHoaDon(exx);
+        }
     }
 }
