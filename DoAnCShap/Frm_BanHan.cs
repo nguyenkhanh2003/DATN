@@ -146,7 +146,7 @@ namespace DoAnCShap
             tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
-            labelTongThanhToan.Text = tongtien.ToString();
+            String.Format("{0:#,##0.##}", (labelTongThanhToan.Text) = tongtien.ToString());
             object[] t = { comboBoxSP.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
             dataGridViewHDBH.Rows.Add(t);
         }
