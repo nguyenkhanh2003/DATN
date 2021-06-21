@@ -45,5 +45,9 @@ namespace BUS
         {
             bus.UpdateCTHoaDon(exx);
         }
+        public DataTable GetSearch(string condition)
+        {
+            return bus.GetSearch(condition);
+        }
     }
 }

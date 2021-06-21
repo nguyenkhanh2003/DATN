@@ -49,5 +49,10 @@ namespace DAL
             KetNoi.ExecuteReader(@"Update CT_HoaDonBanHang Set SoLuong="+exx.SoLuong+",DonGia="+exx.DonGia+",KhuyenMai="+exx.KhuyenMai+",ThanhTien="+exx.ThanhTien+",TrangThai=N'"+exx.TrangThai+"'Where MaLK=N'"+exx.MaLK+ "' and  MaHDBH=N'" + exx.MaHDBH + "'");
         }
 
+       public DataTable GetSearch(string Condition)
+       {
+           return KetNoi.GetDataTable(""+Condition);
+       }
+
     }
 }
