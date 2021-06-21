@@ -31,7 +31,7 @@ values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.Kh
 
          public void AddKH(KhachHang ex)
         {
-            KetNoi.ExecuteReader(@"INSERT INTO KhachHang(MaKH,TenKH,GioiTinh,Email,DienThoai,CMND,DiaChi,TrangThai)      
+            KetNoi.ExecuteReader(@"INSERT INTO KhachHang(MaKH,TenKH,GioiTinh,Email,DienThoai,DiaChi,TrangThai)      
                                    VALUES(N'" + ex.MaKH + "',N'" + ex.TenKH + "',N'" + ex.GioiTinh +
                                     "',N'" + ex.Email + "',N'" + ex.DienThoai + "',N'"+ex.DiaChi+"',N'"+ex.TrangThai+"')");
         }

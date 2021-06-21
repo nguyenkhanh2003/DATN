@@ -234,6 +234,7 @@ namespace DoAnCShap
             this.Close();
         }
 
+        int TongThanhToan = 0;
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
                 cthd.MaHDBH = txtMaHD.Text;
@@ -245,6 +246,14 @@ namespace DoAnCShap
                 cthd.TrangThai = comboBoxTrangThai.Text;
                 bus.UpdateCTHoaDon(cthd);
                 MessageBox.Show("Cập Nhật Chi Tiết Hóa Đơn Thành Công !");
+                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text + "'");
+                for(int i=0;i<dataGridViewCTHD.Rows.Count-1;i++)
+                {
+                int SL = Int32.Parse(dataGridViewCTHD.Rows[i].Cells[3].Value.ToString());
+                int DonGia = Int32.Parse(dataGridViewCTHD.Rows[i].Cells[6].Value.ToString());
+                TongThanhToan += SL * DonGia;
+                labelTongThanhToan.Text = TongThanhToan.ToString();
+                }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -270,7 +279,7 @@ namespace DoAnCShap
                 tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
                 tongtien = +tt;
                 labelThanhTien.Text = tt.ToString();
-                labelTongThanhToan.Text = tongtien.ToString();
+                labelTongThanhToan.Text = tongtien.ToString();  
             }
             catch
             {
@@ -293,6 +302,11 @@ namespace DoAnCShap
         private void dataGridViewCTHD_DoubleClick(object sender, EventArgs e)
         {
             XulyTextBox(false, true);
+        }
+
+        private void txtSL_ImeModeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

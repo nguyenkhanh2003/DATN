@@ -606,6 +606,7 @@
             this.txtSL.TabIndex = 31;
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSL_KeyDown);
+            this.txtSL.ImeModeChanged += new System.EventHandler(this.txtSL_ImeModeChanged);
             // 
             // groupBox6
             // 

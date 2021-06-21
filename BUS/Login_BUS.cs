@@ -11,9 +11,9 @@ namespace BUS
    public  class Login_BUS
     {
         Login bus = new Login();
-        public DataTable GetLoGin(string username,string password)
-        {
-            return bus.GetLogin(username, password);
-        }
+        //public DataTable GetLoGin(string username,string password)
+        //{
+        //    return bus.GetLogin(username, password);
+        //}
     }
 }

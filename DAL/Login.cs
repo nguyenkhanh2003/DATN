@@ -10,9 +10,6 @@ namespace DAL
     public class Login
     {
         KetNoiDatabase KetNoi = new KetNoiDatabase();
-        public DataTable GetLogin(string username,string password)
-        {
-            return KetNoi.GetDataTable("Select * From NhanVien Where UserName=N'" + username + "' and PassWord=N'"+password+"'");
-        }
+       
     }
 }

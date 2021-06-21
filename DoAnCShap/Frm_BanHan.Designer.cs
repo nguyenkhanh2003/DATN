@@ -86,6 +86,9 @@ namespace DoAnCShap
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.checkBoxNam = new System.Windows.Forms.CheckBox();
+            this.checkBoxNu = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -129,8 +132,11 @@ namespace DoAnCShap
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.checkBoxNu);
+            this.groupBox3.Controls.Add(this.checkBoxNam);
             this.groupBox3.Controls.Add(this.btnThenKH);
             this.groupBox3.Controls.Add(this.btnTimKH);
+            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
@@ -160,7 +166,7 @@ namespace DoAnCShap
             this.btnThenKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThenKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThenKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThenKH.Image")));
-            this.btnThenKH.Location = new System.Drawing.Point(693, 66);
+            this.btnThenKH.Location = new System.Drawing.Point(704, 65);
             this.btnThenKH.Name = "btnThenKH";
             this.btnThenKH.Size = new System.Drawing.Size(37, 24);
             this.btnThenKH.TabIndex = 13;
@@ -173,7 +179,7 @@ namespace DoAnCShap
             this.btnTimKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKH.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKH.Image")));
-            this.btnTimKH.Location = new System.Drawing.Point(693, 23);
+            this.btnTimKH.Location = new System.Drawing.Point(704, 23);
             this.btnTimKH.Name = "btnTimKH";
             this.btnTimKH.Size = new System.Drawing.Size(37, 24);
             this.btnTimKH.TabIndex = 13;
@@ -509,7 +515,7 @@ namespace DoAnCShap
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.Size = new System.Drawing.Size(130, 41);
             this.btnXoaSP.TabIndex = 3;
-            this.btnXoaSP.Text = "Xóa SP Đã Chọn";
+            this.btnXoaSP.Text = "Xóa Sản Phẩm";
             this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoaSP.UseVisualStyleBackColor = true;
             this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
@@ -735,6 +741,37 @@ namespace DoAnCShap
             this.label15.Text = "Tổng Thanh Toán";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(327, 206);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 20);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Giới Tính";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // checkBoxNam
+            // 
+            this.checkBoxNam.AutoSize = true;
+            this.checkBoxNam.Location = new System.Drawing.Point(458, 208);
+            this.checkBoxNam.Name = "checkBoxNam";
+            this.checkBoxNam.Size = new System.Drawing.Size(56, 20);
+            this.checkBoxNam.TabIndex = 14;
+            this.checkBoxNam.Text = "Nam";
+            this.checkBoxNam.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNu
+            // 
+            this.checkBoxNu.AutoSize = true;
+            this.checkBoxNu.Location = new System.Drawing.Point(529, 208);
+            this.checkBoxNu.Name = "checkBoxNu";
+            this.checkBoxNu.Size = new System.Drawing.Size(44, 20);
+            this.checkBoxNu.TabIndex = 14;
+            this.checkBoxNu.Text = "Nữ";
+            this.checkBoxNu.UseVisualStyleBackColor = true;
+            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,5 +859,8 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThenKH;
         private System.Windows.Forms.Button btnTimKH;
         private System.Windows.Forms.Button btnXoaSP;
+        private System.Windows.Forms.CheckBox checkBoxNu;
+        private System.Windows.Forms.CheckBox checkBoxNam;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -48,8 +48,9 @@ namespace DoAnCShap
         {
             string username = txtTenDangNhap.Text;
             string password = txtMatKhau.Text;
-            bus.GetLoGin("" + username, password);
-
+            //bus.GetLoGin("Select * From NhanVien Where UserName = N'" + username+"' and PassWord = N'"+password+"'");
+            Form1 f = new Form1();
+            f.ShowDialog();
         }
     }
 }

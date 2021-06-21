@@ -63,7 +63,7 @@ namespace DoAnCShap
             txtMaKh.Clear();
             txtTenkh.Clear();
             txtDiaCh.Clear();
-            txtDiaChi.Clear();
+            txtDiaCh.Clear();
             txtEmail.Clear();
             txtSdt.Clear();
             cboGioiTinh.Text="";
@@ -127,8 +127,7 @@ namespace DoAnCShap
                     kh.GioiTinh = cboGioiTinh.Text;
                     kh.Email = txtEmail.Text;
                     kh.DienThoai = txtSdt.Text;
-                   
-                    kh.DiaChi = txtDiaChi.Text;
+                    kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = cboTrangThai.Text;
                     bus.AddData(kh); ;
                     MessageBox.Show("Thêm Khách Hàng Thành Công");

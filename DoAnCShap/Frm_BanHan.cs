@@ -276,10 +276,17 @@ namespace DoAnCShap
             {
                 AddKH.MaKH = comboBoxKH.Text;
                 AddKH.TenKH = txtTenkH.Text;
-                AddKH.GioiTinh = "Nam";
+                if (checkBoxNam.Checked == true)
+                {
+                    AddKH.GioiTinh = checkBoxNam.Text;
+                }
+                else
+                {
+                    AddKH.GioiTinh = checkBoxNu.Text;
+                }
+                //AddKH.GioiTinh = "Nam";
                 AddKH.Email = "12345@gmail.com";
                 AddKH.DienThoai = txtSDT.Text;
-                //AddKH.CMND = "272721655";
                 AddKH.DiaChi = txtDiaChi.Text;
                 AddKH.TrangThai = "Mới";
                 bus.AddKH(AddKH);
