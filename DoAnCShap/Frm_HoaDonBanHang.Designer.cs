@@ -100,17 +100,18 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(0, 641);
+            this.groupBox3.Location = new System.Drawing.Point(0, 652);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1184, 70);
+            this.groupBox3.Size = new System.Drawing.Size(1184, 59);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             // 
             // btnXoa
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(745, 20);
+            this.btnXoa.Location = new System.Drawing.Point(743, 12);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(105, 44);
             this.btnXoa.TabIndex = 1;
@@ -121,8 +122,9 @@
             // btnDong
             // 
             this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
-            this.btnDong.Location = new System.Drawing.Point(1035, 20);
+            this.btnDong.Location = new System.Drawing.Point(1035, 12);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(95, 44);
             this.btnDong.TabIndex = 0;
@@ -134,8 +136,9 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(382, 20);
+            this.button2.Location = new System.Drawing.Point(382, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 44);
             this.button2.TabIndex = 0;
@@ -146,8 +149,9 @@
             // btnLuu
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(37, 20);
+            this.btnLuu.Location = new System.Drawing.Point(37, 12);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(115, 44);
             this.btnLuu.TabIndex = 0;
@@ -259,6 +263,7 @@
             this.dataGridViewCTHD.Size = new System.Drawing.Size(497, 301);
             this.dataGridViewCTHD.TabIndex = 0;
             this.dataGridViewCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTHD_CellClick);
+            this.dataGridViewCTHD.DoubleClick += new System.EventHandler(this.dataGridViewCTHD_DoubleClick);
             // 
             // MaHD
             // 

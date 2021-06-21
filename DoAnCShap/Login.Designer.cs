@@ -36,8 +36,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -83,8 +83,8 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtMatKhau);
+            this.panel1.Controls.Add(this.txtTenDangNhap);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnThoat);
@@ -99,7 +99,6 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label7.Location = new System.Drawing.Point(61, 281);
@@ -131,25 +130,26 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(24, 228);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(309, 31);
-            this.textBox2.TabIndex = 4;
+            this.txtMatKhau.BackColor = System.Drawing.SystemColors.Control;
+            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(24, 228);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(309, 31);
+            this.txtMatKhau.TabIndex = 4;
             // 
-            // textBox1
+            // txtTenDangNhap
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 149);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 31);
-            this.textBox1.TabIndex = 4;
+            this.txtTenDangNhap.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(24, 149);
+            this.txtTenDangNhap.Multiline = true;
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(309, 31);
+            this.txtTenDangNhap.TabIndex = 4;
             // 
             // label4
             // 
@@ -166,12 +166,11 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label3.Location = new System.Drawing.Point(20, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 21);
+            this.label3.Size = new System.Drawing.Size(151, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên Đăng Nhập";
             // 
@@ -190,7 +189,6 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label2.Location = new System.Drawing.Point(120, 64);
@@ -233,8 +231,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }

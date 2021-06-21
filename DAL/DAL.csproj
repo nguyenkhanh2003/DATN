@@ -48,6 +48,7 @@
     <Compile Include="KetNoiDatabase.cs" />
     <Compile Include="KhachHang_DAL.cs" />
     <Compile Include="LoaiLinhKien_DAL.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="NhaCungCap_DAL.cs" />
     <Compile Include="NhanVien_DAL.cs" />
     <Compile Include="NhaSanXuat_DAL.cs" />

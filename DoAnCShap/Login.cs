@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
+using DTO;
 namespace DoAnCShap
 {
     public partial class Login : Form
@@ -17,7 +18,9 @@ namespace DoAnCShap
             InitializeComponent();
         }
 
-        private static bool _exiting;
+        Login_BUS bus = new Login_BUS();
+        NhanVien nv = new NhanVien();
+            private static bool _exiting;
 
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
@@ -37,10 +40,16 @@ namespace DoAnCShap
             
         }
 
+        public void DangNhap(string username,string password)
+        {
+           
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
-            frm1.ShowDialog();
+            string username = txtTenDangNhap.Text;
+            string password = txtMatKhau.Text;
+            bus.GetLoGin("" + username, password);
+
         }
     }
 }

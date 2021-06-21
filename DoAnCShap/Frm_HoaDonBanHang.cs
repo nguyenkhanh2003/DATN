@@ -289,5 +289,10 @@ namespace DoAnCShap
             labelThanhTien.Text = tt.ToString();
             labelTongThanhToan.Text = tongtien.ToString();
         }
+
+        private void dataGridViewCTHD_DoubleClick(object sender, EventArgs e)
+        {
+            XulyTextBox(false, true);
+        }
     }
 }
