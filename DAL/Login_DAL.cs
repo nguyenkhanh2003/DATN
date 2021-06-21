@@ -7,9 +7,9 @@ using DTO;
 using System.Data;
 namespace DAL
 {
-    public class Login
+    public class Login_DAL
     {
         KetNoiDatabase KetNoi = new KetNoiDatabase();
-       
+        
     }
 }

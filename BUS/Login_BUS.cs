@@ -10,10 +10,7 @@ namespace BUS
 {
    public  class Login_BUS
     {
-        Login bus = new Login();
-        //public DataTable GetLoGin(string username,string password)
-        //{
-        //    return bus.GetLogin(username, password);
-        //}
+        Login_DAL bus = new Login_DAL();
+       
     }
 }
