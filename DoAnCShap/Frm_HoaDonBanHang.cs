@@ -60,19 +60,23 @@ namespace DoAnCShap
         {
             dataGridViewHD.DataSource = bus.GetSearch("Select * From HoaDonBanHang Where MaHDBH Like N'%" + condition + "%'");
         }
-        public void XulyTextBox(Boolean b1, Boolean b2)
+        public void XulyTextBoxCTHD(Boolean b1, Boolean b2)
         {
-            comboBoxMaHD.Enabled = b2;
-            comboBoxKH.Enabled = b2;
-            comboBoxNhanVien.Enabled = b2;
-            dateTimePickerNgaylap.Enabled = b2;
-            comboBoxTrangThai.Enabled = b2;
+           
             labelTongThanhToan.Enabled = b2;
             comboBoxLK.Enabled = b2;
             txtSL.Enabled = b2;
             txtDonGia.Enabled = b2;
             txtKhuyenMai.Enabled = b2;
             CboTrangThai.Enabled = b2;
+        }
+        public void XuLyTextBoxHD(Boolean b1,Boolean b2)
+        {
+            comboBoxMaHD.Enabled = b2;
+            comboBoxKH.Enabled = b2;
+            comboBoxNhanVien.Enabled = b2;
+            dateTimePickerNgaylap.Enabled = b2;
+            comboBoxTrangThai.Enabled = b2;
         }
 
         public void ClearTextBoxHD()
@@ -158,7 +162,7 @@ namespace DoAnCShap
             HienThiLinhKien();
             HienThiNhanVien();
             HienThiKhachHang();
-            XulyTextBox(true, false);
+            XuLyTextBoxHD(true, false);
             comboBoxLK.Text = null;
             XuLyChucNang(true, false);
         }
@@ -194,7 +198,7 @@ namespace DoAnCShap
         private void dataGridViewHD_DoubleClick(object sender, EventArgs e)
         {
             //flag = 1;
-            XulyTextBox(false, true);
+            //XulyTextBox(false, true);
             //XuLyChucNang(false, true);
         }
 
@@ -210,6 +214,7 @@ namespace DoAnCShap
                 MessageBox.Show("Lưu Hóa Đơn Thành Công !");
                 ClearTextBoxHD();
                 HienThiHoaDon();
+            XuLyChucNang(true, false);
         }
 
         string MaLinhKien = "";
@@ -219,7 +224,7 @@ namespace DoAnCShap
             flag = 3;
             ClearTextBoxCTHD();
             XuLyChucNang(false, true);
-            XulyTextBox(false, true);
+            XulyTextBoxCTHD(false, true);
         }
 
         private void comboBoxLK_KeyDown(object sender, KeyEventArgs e)
@@ -333,7 +338,7 @@ namespace DoAnCShap
 
         private void dataGridViewCTHD_DoubleClick(object sender, EventArgs e)
         {
-            XulyTextBox(false, true);
+            XulyTextBoxCTHD(false, true);
             XuLyChucNang(false, true);
             flag = 5;
         }
@@ -353,15 +358,16 @@ namespace DoAnCShap
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
                 bus.DeleteCTHd(cthd);
                 MessageBox.Show("Xóa SP Thành Công !");
-                TongThanhToan();
+                ClearTextBoxCTHD();
             }
             HienThiCTHD_TheoMa();
+            TongThanhToan();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             XuLyChucNang(true, false);
-            XulyTextBox(true, false);
+            XulyTextBoxCTHD(true, false);
             ClearTextBoxCTHD();
             ClearTextBoxHD();
 
