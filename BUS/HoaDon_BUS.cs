@@ -50,6 +50,10 @@ namespace BUS
         {
             bus.ThemCTHD(ex);
         }
+        public void DeleteCTHd(CT_HoaDonBanHang ex)
+        {
+            bus.DeleteCTHd(ex);
+        }
         public DataTable GetSearch(string condition)
         {
             return bus.GetSearch(condition);

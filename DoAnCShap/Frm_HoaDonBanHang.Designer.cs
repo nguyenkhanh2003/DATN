@@ -54,6 +54,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerNgaylap = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaHD = new System.Windows.Forms.ComboBox();
             this.comboBoxKH = new System.Windows.Forms.ComboBox();
             this.comboBoxNhanVien = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -82,7 +83,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.comboBoxMaHD = new System.Windows.Forms.ComboBox();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
@@ -97,7 +98,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.btnXoa);
+            this.groupBox3.Controls.Add(this.btnHuy);
             this.groupBox3.Controls.Add(this.btnDong);
             this.groupBox3.Controls.Add(this.btnIn);
             this.groupBox3.Controls.Add(this.btnLuu);
@@ -115,13 +116,14 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(743, 12);
+            this.btnXoa.Location = new System.Drawing.Point(20, 183);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(105, 44);
+            this.btnXoa.Size = new System.Drawing.Size(127, 44);
             this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Text = "Xóa Sản Phẩm";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnDong
             // 
@@ -142,7 +144,7 @@
             this.btnIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(382, 12);
+            this.btnIn.Location = new System.Drawing.Point(415, 12);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(115, 44);
             this.btnIn.TabIndex = 0;
@@ -349,6 +351,15 @@
             this.comboBoxTrangThai.Name = "comboBoxTrangThai";
             this.comboBoxTrangThai.Size = new System.Drawing.Size(233, 29);
             this.comboBoxTrangThai.TabIndex = 33;
+            // 
+            // comboBoxMaHD
+            // 
+            this.comboBoxMaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMaHD.FormattingEnabled = true;
+            this.comboBoxMaHD.Location = new System.Drawing.Point(166, 22);
+            this.comboBoxMaHD.Name = "comboBoxMaHD";
+            this.comboBoxMaHD.Size = new System.Drawing.Size(233, 29);
+            this.comboBoxMaHD.TabIndex = 33;
             // 
             // comboBoxKH
             // 
@@ -602,11 +613,12 @@
             this.txtSL.TabIndex = 31;
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSL_KeyDown);
-            this.txtSL.ImeModeChanged += new System.EventHandler(this.txtSL_ImeModeChanged);
+//            this.txtSL.ImeModeChanged += new System.EventHandler(this.txtSL_ImeModeChanged);
             // 
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.btnXoa);
             this.groupBox6.Controls.Add(this.btnCapNhat);
             this.groupBox6.Controls.Add(this.btnChonMua);
             this.groupBox6.Location = new System.Drawing.Point(983, 49);
@@ -672,14 +684,18 @@
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // comboBoxMaHD
+            // btnHuy
             // 
-            this.comboBoxMaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMaHD.FormattingEnabled = true;
-            this.comboBoxMaHD.Location = new System.Drawing.Point(166, 22);
-            this.comboBoxMaHD.Name = "comboBoxMaHD";
-            this.comboBoxMaHD.Size = new System.Drawing.Size(233, 29);
-            this.comboBoxMaHD.TabIndex = 33;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(737, 12);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(115, 44);
+            this.btnHuy.TabIndex = 1;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // Frm_HoaDonBanHang
             // 
@@ -769,5 +785,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox comboBoxMaHD;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

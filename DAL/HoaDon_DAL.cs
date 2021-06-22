@@ -54,6 +54,11 @@ namespace DAL
             KetNoi.ExecuteReader(@"Insert Into CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai) Values(N'"+ex.MaHDBH+"',N'"+ex.MaLK+"',"+ex.SoLuong+","+ex.DonGia+","+ex.KhuyenMai+","+ex.ThanhTien+",N'"+ex.TrangThai+"')");
         }
 
+        public void DeleteCTHd(CT_HoaDonBanHang ex)
+        {
+            KetNoi.ExecuteReader(@"Delete From CT_HoaDonBanhang Where MaHDBH=N'"+ex.MaHDBH+"' and MaLK='"+ex.MaLK+"'");
+        }
+
        public DataTable GetSearch(string Condition)
        {
            return KetNoi.GetDataTable(""+Condition);
