@@ -65,16 +65,17 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(52, 314);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 44);
+            this.label1.Size = new System.Drawing.Size(229, 44);
             this.label1.TabIndex = 1;
-            this.label1.Text = "We Create, We Design\r\n       We Develop";
+            this.label1.Text = "Phần Mềm Bán Linh Kiện \r\n          Máy Tính\r\n";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(66, 103);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(190, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

@@ -29,10 +29,10 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NhanVien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
@@ -62,18 +62,6 @@ namespace DoAnCShap
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHinhNhanVien = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -93,6 +81,18 @@ namespace DoAnCShap
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
@@ -118,20 +118,20 @@ namespace DoAnCShap
             // 
             // dataGridViewNhanVien
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridViewNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -148,23 +148,23 @@ namespace DoAnCShap
             this.PassWord,
             this.TrangThai});
             this.dataGridViewNhanVien.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewNhanVien.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewNhanVien.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewNhanVien.RowHeadersVisible = false;
             this.dataGridViewNhanVien.RowHeadersWidth = 51;
             this.dataGridViewNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -285,6 +285,7 @@ namespace DoAnCShap
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.cboChucVu);
             this.panel2.Controls.Add(this.cboGioiTinh);
             this.panel2.Controls.Add(this.cboTrangThai);
@@ -294,18 +295,18 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.txtTenNV);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtHinhNhanVien);
             this.panel2.Controls.Add(this.txtDiaChi);
@@ -321,11 +322,11 @@ namespace DoAnCShap
             // 
             // cboChucVu
             // 
-            this.cboChucVu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboChucVu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboChucVu.FormattingEnabled = true;
-            this.cboChucVu.Location = new System.Drawing.Point(389, 45);
+            this.cboChucVu.Location = new System.Drawing.Point(389, 42);
             this.cboChucVu.Name = "cboChucVu";
-            this.cboChucVu.Size = new System.Drawing.Size(222, 25);
+            this.cboChucVu.Size = new System.Drawing.Size(222, 29);
             this.cboChucVu.TabIndex = 35;
             // 
             // cboGioiTinh
@@ -342,14 +343,14 @@ namespace DoAnCShap
             // 
             // cboTrangThai
             // 
-            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTrangThai.FormattingEnabled = true;
             this.cboTrangThai.Items.AddRange(new object[] {
             "Mới",
             "Cũ"});
-            this.cboTrangThai.Location = new System.Drawing.Point(875, 214);
+            this.cboTrangThai.Location = new System.Drawing.Point(878, 253);
             this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(246, 24);
+            this.cboTrangThai.Size = new System.Drawing.Size(246, 28);
             this.cboTrangThai.TabIndex = 34;
             // 
             // btnChonAnh
@@ -385,10 +386,11 @@ namespace DoAnCShap
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(389, 249);
+            this.txtUserName.Location = new System.Drawing.Point(389, 255);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(222, 28);
             this.txtUserName.TabIndex = 16;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // txtEmail
             // 
@@ -406,142 +408,10 @@ namespace DoAnCShap
             this.txtTenNV.Size = new System.Drawing.Size(222, 28);
             this.txtTenNV.TabIndex = 18;
             // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(708, 211);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 28);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Trạng Thái";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(708, 171);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 28);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Hình Ảnh";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(708, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 28);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Địa Chỉ";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(708, 84);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 28);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "CMND";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(708, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 28);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Điện Thoại";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(708, 4);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 28);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Mật Khẩu";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(244, 248);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 28);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Username";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(244, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 28);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Email";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(244, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 28);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Ngày Sinh";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(244, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 28);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Giới Tính";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(244, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 28);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Tên Nhân Viên";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 28);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Chức Vụ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(244, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 28);
@@ -552,7 +422,7 @@ namespace DoAnCShap
             // txtHinhNhanVien
             // 
             this.txtHinhNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHinhNhanVien.Location = new System.Drawing.Point(875, 171);
+            this.txtHinhNhanVien.Location = new System.Drawing.Point(875, 214);
             this.txtHinhNhanVien.Name = "txtHinhNhanVien";
             this.txtHinhNhanVien.Size = new System.Drawing.Size(246, 28);
             this.txtHinhNhanVien.TabIndex = 13;
@@ -561,8 +431,9 @@ namespace DoAnCShap
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(875, 126);
+            this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(246, 28);
+            this.txtDiaChi.Size = new System.Drawing.Size(246, 71);
             this.txtDiaChi.TabIndex = 12;
             // 
             // txtCMND
@@ -785,6 +656,138 @@ namespace DoAnCShap
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Chức Vụ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(244, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 28);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Tên Nhân Viên";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(244, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 28);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Giới Tính";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(244, 171);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 28);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Email";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(244, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 28);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Ngày Sinh";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(244, 255);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 28);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Tên Đăng Nhập";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(708, 4);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 28);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Mật Khẩu";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(708, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 28);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Số Điện Thoại";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(708, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 28);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "CMND";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(708, 145);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 28);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Địa Chỉ";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(708, 215);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(131, 28);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Hình Ảnh";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(708, 253);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 28);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Trạng Thái";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -847,18 +850,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboChucVu;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
@@ -873,5 +864,17 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label13;
     }
 }
