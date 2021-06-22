@@ -197,45 +197,6 @@
   <metadata name="TrangThai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="MaHDBH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaKH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaNV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NgayLap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TongTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TrangThai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaHD.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaLK.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SoLuong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DonGia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="KhuyenMai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ThanhTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TrangThaii.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="MaHD.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -277,11 +238,15 @@
   <data name="btnChonMua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAQRJREFUSEvtkjEOAUEUhvco3ESCUEg4AbVOlBLX0CoUKmdwBHdQaBXb41t5Iy+b
-        mdlhZiUrvuSPmPnf+xIj+/NTtDf5gOzJSo7qB9mS3FWOclUfFqnJVirpYblLWiSXWlpY7JMWOUk1HSyt
-        kl5JV+ppYGGIdCL1NLCwYVIuOmROWnIUBP0o6VoVi/Tkygu9KOlCFXW8cu7j3pTLiyqXY5VzHv9HonBW
-        A+XcyFCqT/geIh1J3Q2lsRqy5SXnM43UQHmqhl3ZWc503pMaGAqRu1L9pj4Y/kQeJzWw5B35Zz+vC5aF
-        yNNKDSz1yeuRGlhuk6d50yqQzL4uNRQyciB9OfrTFLLsAWaqr7RqHLQFAAAAAElFTkSuQmCC
+        wwAADsMBx2+oZAAAAe1JREFUSEu9l7FLAlEcxx2ENmn3zxFsVTGClpZq1KUlaHCKhkKDlpaahaChrcGg
+        IWhpci8ksotMApe0uL7f83dwPt/5Tt+rH3zg/L3f+304vffemUoSnWx2GeTAIXgAr2AAvuX6EpyCskyx
+        CzSicB+wuZ+QL1CXFvMHJq+DrjRbhD5Yk3bmQHEGNGSyC8x3jyJK+XvpGtjQEoU+UHCsTHDJhWgmAwMV
+        pTAWr1z23yuVgG4up62JoSC6cSDBp7cXKZjJoNn0w+C1riYGPnBp0QbiWmTQiIWY7IZS3u1zZMCIpbgf
+        igvKgBFLMdmg+FxJGnEgPqD4WkkacSBuUfyoJAO8YjFoqmPU6YjWD651NcQrlab6Cn2KecJMDXKN2kav
+        Wp3qKwwpHinJgD8W/1DMRT012M3ntV8fiX7Vw3ZbW0O4w+l6gyeK75WkETYNg9e6GgN3FNeVpBEH4jrF
+        q0rSiANxgeIl8J9b5htYDrfNo8iAEUtxLZAy8IEHxUtkcCYWYg+M7zYMJBIfFtyRuEbJjN1Jx5boJgMD
+        Z0qhSxqi0QcKrpQJLuAJmBFFfKDoJDLJFr4qm6VhoHgbfMjkReDcTWk3X2BiGuyAT6BrroPCPTD59C4a
+        aMSnni+FN4BLj8cp/7hxidwCbr0rIIEwlfoFTpOrw2gKH+kAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

@@ -49,6 +49,11 @@ namespace DAL
             KetNoi.ExecuteReader(@"Update CT_HoaDonBanHang Set SoLuong="+exx.SoLuong+",DonGia="+exx.DonGia+",KhuyenMai="+exx.KhuyenMai+",ThanhTien="+exx.ThanhTien+",TrangThai=N'"+exx.TrangThai+"'Where MaLK=N'"+exx.MaLK+ "' and  MaHDBH=N'" + exx.MaHDBH + "'");
         }
 
+        public void ThemCTHD(CT_HoaDonBanHang ex)
+        {
+            KetNoi.ExecuteReader(@"Insert Into CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai) Values(N'"+ex.MaHDBH+"',N'"+ex.MaLK+"',"+ex.SoLuong+","+ex.DonGia+","+ex.KhuyenMai+","+ex.ThanhTien+",N'"+ex.TrangThai+"')");
+        }
+
        public DataTable GetSearch(string Condition)
        {
            return KetNoi.GetDataTable(""+Condition);

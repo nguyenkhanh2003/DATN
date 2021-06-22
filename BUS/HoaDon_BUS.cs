@@ -45,6 +45,11 @@ namespace BUS
         {
             bus.UpdateCTHoaDon(exx);
         }
+
+        public void ThemCTHD(CT_HoaDonBanHang ex)
+        {
+            bus.ThemCTHD(ex);
+        }
         public DataTable GetSearch(string condition)
         {
             return bus.GetSearch(condition);
