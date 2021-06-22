@@ -214,7 +214,7 @@ namespace DoAnCShap
                 MessageBox.Show("Lưu Hóa Đơn Thành Công !");
                 ClearTextBoxHD();
                 HienThiHoaDon();
-            XuLyChucNang(true, false);
+                XuLyChucNang(true, false);
         }
 
         string MaLinhKien = "";
@@ -262,7 +262,7 @@ namespace DoAnCShap
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            if (flag == 4)
+            if (flag ==5)
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
@@ -371,6 +371,11 @@ namespace DoAnCShap
             ClearTextBoxCTHD();
             ClearTextBoxHD();
 
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+           
         }
     }
 }

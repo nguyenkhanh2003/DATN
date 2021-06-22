@@ -74,12 +74,12 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnChonMua = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
@@ -100,7 +100,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(19, 148);
+            this.btnXoa.Location = new System.Drawing.Point(18, 187);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(127, 44);
             this.btnXoa.TabIndex = 1;
@@ -560,7 +560,6 @@
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Controls.Add(this.btnLuu);
             this.groupBox6.Controls.Add(this.btnXoa);
             this.groupBox6.Controls.Add(this.btnCapNhat);
             this.groupBox6.Controls.Add(this.btnChonMua);
@@ -570,11 +569,25 @@
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(61, 10);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(128, 40);
+            this.btnLuu.TabIndex = 6;
+            this.btnLuu.Text = "Lưu Hóa Đơn";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // btnCapNhat
             // 
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
-            this.btnCapNhat.Location = new System.Drawing.Point(20, 83);
+            this.btnCapNhat.Location = new System.Drawing.Point(19, 105);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(126, 44);
             this.btnCapNhat.TabIndex = 5;
@@ -587,9 +600,9 @@
             // 
             this.btnChonMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChonMua.Image = ((System.Drawing.Image)(resources.GetObject("btnChonMua.Image")));
-            this.btnChonMua.Location = new System.Drawing.Point(20, 20);
+            this.btnChonMua.Location = new System.Drawing.Point(19, 20);
             this.btnChonMua.Name = "btnChonMua";
-            this.btnChonMua.Size = new System.Drawing.Size(126, 43);
+            this.btnChonMua.Size = new System.Drawing.Size(127, 43);
             this.btnChonMua.TabIndex = 4;
             this.btnChonMua.Text = "Thêm";
             this.btnChonMua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -627,23 +640,10 @@
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnLuu
-            // 
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(19, 216);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(128, 44);
-            this.btnLuu.TabIndex = 6;
-            this.btnLuu.Text = "Lưu Hóa Đơn";
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnHuy);
             this.groupBox3.Controls.Add(this.btnDong);
             this.groupBox3.Controls.Add(this.btnIn);
@@ -659,7 +659,7 @@
             // 
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(557, 10);
+            this.btnHuy.Location = new System.Drawing.Point(634, 10);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(115, 40);
             this.btnHuy.TabIndex = 1;
@@ -687,7 +687,7 @@
             this.btnIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(82, 10);
+            this.btnIn.Location = new System.Drawing.Point(359, 10);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(115, 40);
             this.btnIn.TabIndex = 0;
