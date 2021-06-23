@@ -82,6 +82,7 @@ namespace DoAnCShap
         public static string SetValueForText1 = "";
 
         public static string BtnPhanQuyen;
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String username = txtTenDangNhap.Text;
@@ -96,6 +97,7 @@ namespace DoAnCShap
             {
                 MessageBox.Show("Đăng Nhập Thành Công");
                 {
+                    
                     Form1 f = new Form1();
                     SetValueForText1 = username;
                     f.ShowDialog();

@@ -34,8 +34,11 @@ namespace DoAnCShap
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxNu = new System.Windows.Forms.CheckBox();
+            this.checkBoxNam = new System.Windows.Forms.CheckBox();
             this.btnThenKH = new System.Windows.Forms.Button();
             this.btnTimKH = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -86,9 +89,8 @@ namespace DoAnCShap
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.checkBoxNam = new System.Windows.Forms.CheckBox();
-            this.checkBoxNu = new System.Windows.Forms.CheckBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -161,6 +163,26 @@ namespace DoAnCShap
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Chung";
             // 
+            // checkBoxNu
+            // 
+            this.checkBoxNu.AutoSize = true;
+            this.checkBoxNu.Location = new System.Drawing.Point(529, 208);
+            this.checkBoxNu.Name = "checkBoxNu";
+            this.checkBoxNu.Size = new System.Drawing.Size(44, 20);
+            this.checkBoxNu.TabIndex = 14;
+            this.checkBoxNu.Text = "Nữ";
+            this.checkBoxNu.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNam
+            // 
+            this.checkBoxNam.AutoSize = true;
+            this.checkBoxNam.Location = new System.Drawing.Point(458, 208);
+            this.checkBoxNam.Name = "checkBoxNam";
+            this.checkBoxNam.Size = new System.Drawing.Size(56, 20);
+            this.checkBoxNam.TabIndex = 14;
+            this.checkBoxNam.Text = "Nam";
+            this.checkBoxNam.UseVisualStyleBackColor = true;
+            // 
             // btnThenKH
             // 
             this.btnThenKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -186,6 +208,17 @@ namespace DoAnCShap
             this.btnTimKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKH.UseVisualStyleBackColor = true;
             this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(327, 206);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 20);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Giới Tính";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label8
             // 
@@ -588,6 +621,7 @@ namespace DoAnCShap
             this.btnInHD.Text = "In Hóa Đơn";
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInHD.UseVisualStyleBackColor = true;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // groupBox4
             // 
@@ -741,36 +775,13 @@ namespace DoAnCShap
             this.label15.Text = "Tổng Thanh Toán";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label16
+            // printDocument1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(327, 206);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 20);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Giới Tính";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // checkBoxNam
+            // printDialog1
             // 
-            this.checkBoxNam.AutoSize = true;
-            this.checkBoxNam.Location = new System.Drawing.Point(458, 208);
-            this.checkBoxNam.Name = "checkBoxNam";
-            this.checkBoxNam.Size = new System.Drawing.Size(56, 20);
-            this.checkBoxNam.TabIndex = 14;
-            this.checkBoxNam.Text = "Nam";
-            this.checkBoxNam.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNu
-            // 
-            this.checkBoxNu.AutoSize = true;
-            this.checkBoxNu.Location = new System.Drawing.Point(529, 208);
-            this.checkBoxNu.Name = "checkBoxNu";
-            this.checkBoxNu.Size = new System.Drawing.Size(44, 20);
-            this.checkBoxNu.TabIndex = 14;
-            this.checkBoxNu.Text = "Nữ";
-            this.checkBoxNu.UseVisualStyleBackColor = true;
+            this.printDialog1.UseEXDialog = true;
             // 
             // Frm_BanHan
             // 
@@ -862,5 +873,7 @@ namespace DoAnCShap
         private System.Windows.Forms.CheckBox checkBoxNu;
         private System.Windows.Forms.CheckBox checkBoxNam;
         private System.Windows.Forms.Label label16;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

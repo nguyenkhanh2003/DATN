@@ -305,6 +305,17 @@ namespace DoAnCShap
             string condition = txtSearch.Text;
             HienThiTimKiem(condition);
         }
-       
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(txtTienKhachDua.Text, new Font("Microsoft Sans Serif", 18, FontStyle.Bold), Brushes.Black, new Point(10, 10));
+
+        }
+
+        private void btnInHD_Click(object sender, EventArgs e)
+        {
+            printDialog1.Document = printDocument1;
+            printDialog1.ShowDialog();
+        }
     }
 }
