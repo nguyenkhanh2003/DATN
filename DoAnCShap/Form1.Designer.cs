@@ -51,7 +51,7 @@ namespace DoAnCShap
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelHienThiTenDangNhap = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
@@ -406,7 +406,7 @@ namespace DoAnCShap
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(110)))));
-            this.panelTop.Controls.Add(this.label2);
+            this.panelTop.Controls.Add(this.labelHienThiTenDangNhap);
             this.panelTop.Controls.Add(this.btnLogout);
             this.panelTop.Controls.Add(this.iconBtnThuNho);
             this.panelTop.Controls.Add(this.lbl_HienThiForm);
@@ -416,18 +416,17 @@ namespace DoAnCShap
             this.panelTop.Size = new System.Drawing.Size(799, 50);
             this.panelTop.TabIndex = 23;
             // 
-            // label2
+            // labelHienThiTenDangNhap
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(624, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 35);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Admin";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelHienThiTenDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelHienThiTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.labelHienThiTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHienThiTenDangNhap.ForeColor = System.Drawing.Color.White;
+            this.labelHienThiTenDangNhap.Location = new System.Drawing.Point(624, 6);
+            this.labelHienThiTenDangNhap.Name = "labelHienThiTenDangNhap";
+            this.labelHienThiTenDangNhap.Size = new System.Drawing.Size(100, 35);
+            this.labelHienThiTenDangNhap.TabIndex = 4;
+            this.labelHienThiTenDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
@@ -566,7 +565,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnNhaCungCap;
         private System.Windows.Forms.Button btnBanHang;
         private System.Windows.Forms.Button btnSetting;
@@ -576,6 +574,7 @@ namespace DoAnCShap
         public System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btnNhaSanXuat;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public System.Windows.Forms.Label labelHienThiTenDangNhap;
     }
 }
 

@@ -18,6 +18,11 @@ namespace DoAnCShap
             hideSubMenu();
         }
 
+        public void funData(TextBox txtTenHienThi)
+        {
+            labelHienThiTenDangNhap.Text = txtTenHienThi.Text;
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn Có Muốn Thoát Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)

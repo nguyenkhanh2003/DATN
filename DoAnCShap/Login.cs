@@ -22,7 +22,8 @@ namespace DoAnCShap
 
         Login_BUS bus = new Login_BUS();
         NhanVien nv = new NhanVien();
-            private static bool _exiting;
+        private static bool _exiting;
+        MD5 md = MD5.Create();
 
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
@@ -53,11 +54,36 @@ namespace DoAnCShap
             return encryptdata.ToString();
         }
 
+        public void MaHoa()
+        {
+            byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(txtMatKhau.Text);
+            byte[] hask = md.ComputeHash(inputstr);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hask.Length; i++)
+            {
+                sb.Append(hask[i].ToString("X2"));
+            }
+            txtMatKhau.Text = sb.ToString();
+        }
+
+        public static string CreateMd5(string input)
+        {
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hasBytes = md5.ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for(int i=0;i<hasBytes.Length;i++)
+            {
+                sb.Append(hasBytes[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String username = txtTenDangNhap.Text;
-            String password = txtMatKhau.Text;
-            string passwords = encryption(password);
+            String password =CreateMd5(txtMatKhau.Text);
+            //MaHoa();
             SqlConnection sql = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
             string query = "Select * From NhanVien Where UserName=N'" + username + "' and PassWord=N'" +password+ "'";
             SqlDataAdapter sda = new SqlDataAdapter(query,sql);
@@ -65,8 +91,12 @@ namespace DoAnCShap
             sda.Fill(dt);
             if(dt.Rows.Count==1)
             {
-                Form1 f = new Form1();
-                f.ShowDialog();
+                MessageBox.Show("Đăng Nhập Thành Công");
+                {
+                    Form1 f = new Form1();
+                    username= f.labelHienThiTenDangNhap.Text;
+                    f.ShowDialog();
+                }
             }
             else
             {
