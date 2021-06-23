@@ -46,6 +46,7 @@ namespace DoAnCShap
         {
             flag = 1;
             XuLyChucNang(false, true);
+            PhatSinhMaHD();
         }
 
         private void Frm_BaoHanh_Load(object sender, EventArgs e)
@@ -53,6 +54,27 @@ namespace DoAnCShap
             HienThiHhDBH();
             HienThiDSPhieu();
             XuLyChucNang(true, false);
+        }
+
+        public void PhatSinhMaHD()
+        { 
+            int count = 0;
+            count = dataGridViewPBH.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            if (count <= 1)
+            {
+                txtMaPhieu.Text = "PBH00";
+            }
+            else
+            {
+                chuoi = Convert.ToString(dataGridViewPBH.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    txtMaPhieu.Text = "PBH0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txtMaPhieu.Text = "PBH" + (chuoi2 + 1).ToString();
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -68,6 +90,17 @@ namespace DoAnCShap
                 XuLyChucNang(true, false);
             }
             HienThiDSPhieu();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemPhieu_Click(object sender, EventArgs e)
+        {
+            object[] t = { txtMaPhieu.Text,comboBoxlK.Text,txtSL.Text,txtGhiChu.Text };
+            dataGridViewCTPBH.Rows.Add(t);
         }
     }
 }

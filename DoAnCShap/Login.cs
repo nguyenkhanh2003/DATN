@@ -79,13 +79,16 @@ namespace DoAnCShap
             return sb.ToString();
         }
 
+        public static string SetValueForText1 = "";
+
+        public static string BtnPhanQuyen;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String username = txtTenDangNhap.Text;
             String password =CreateMd5(txtMatKhau.Text);
             //MaHoa();
             SqlConnection sql = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
-            string query = "Select * From NhanVien Where UserName=N'" + username + "' and PassWord=N'" +password+ "'";
+            string query = "Select * From NhanVien Where UserName =N'" + username + "' and PassWord=N'" +password+ "' and TrangThai=N'Mới'";
             SqlDataAdapter sda = new SqlDataAdapter(query,sql);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -94,8 +97,9 @@ namespace DoAnCShap
                 MessageBox.Show("Đăng Nhập Thành Công");
                 {
                     Form1 f = new Form1();
-                    username= f.labelHienThiTenDangNhap.Text;
+                    SetValueForText1 = username;
                     f.ShowDialog();
+                    f.btnNhaSanXuat.Enabled = false;
                 }
             }
             else

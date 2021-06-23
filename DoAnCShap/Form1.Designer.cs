@@ -572,9 +572,9 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnBaohanh;
         public System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Button btnNhaSanXuat;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public System.Windows.Forms.Label labelHienThiTenDangNhap;
+        public System.Windows.Forms.Button btnNhaSanXuat;
     }
 }
 

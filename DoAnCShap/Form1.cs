@@ -153,6 +153,7 @@ namespace DoAnCShap
         {
             lbl_HienThiForm.Text = "Home";
             fillChart();
+            labelHienThiTenDangNhap.Text= Login.SetValueForText1;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -263,10 +264,10 @@ namespace DoAnCShap
         private void fillChart()
         {
             //AddXY value in chart1 in series named as Salary  
-            chart1.Series["Salary"].Points.AddXY("Ajay", "10000");
-            chart1.Series["Salary"].Points.AddXY("Ramesh", "8000");
-            chart1.Series["Salary"].Points.AddXY("Ankit", "7000");
-            chart1.Series["Salary"].Points.AddXY("Gurmeet", "10000");
+            chart1.Series["Salary"].Points.AddXY("Tổng Sản Phẩm", "10000");
+            chart1.Series["Salary"].Points.AddXY("Nhân Viên", "8000");
+            chart1.Series["Salary"].Points.AddXY("Hoă Đơn", "7000");
+            chart1.Series["Salary"].Points.AddXY("Khách Hàng", "10000");
             chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
             //chart title  
             chart1.Titles.Add("Salary Chart");
