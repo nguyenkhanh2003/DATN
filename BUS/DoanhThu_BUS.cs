@@ -15,5 +15,15 @@ namespace BUS
         {
             return bus.DoanhThuTatCa(condition);
         }
+
+        public DataTable DoanThuTheoNam(string condition)
+        {
+            return bus.DoanhThuTheoNam(condition);
+        }
+
+        public DataTable DoanhThuTheoThang(string condition)
+        {
+            return bus.DoanhThuTheoThang(condition);
+        }
     }
 }

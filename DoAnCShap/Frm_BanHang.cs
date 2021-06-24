@@ -179,7 +179,7 @@ namespace DoAnCShap
                 hdbh.MaHDBH = txtMaHD.Text;
                 hdbh.MaKH = comboBoxKH.Text;
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
-                hdbh.NgayLapHDBH = dateTimePickerNgayLap.Text;
+                //hdbh.NgayLapHDBH = dateTimePickerNgayLap.Text;
                 hdbh.TongTien = txtTongThanhToan.Text;
                 //hdbh.TrangThai = txtTienKhachDua.Text;
                 bus.AddHoaDon(hdbh);

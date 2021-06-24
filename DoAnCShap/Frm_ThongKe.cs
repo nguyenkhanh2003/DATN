@@ -24,6 +24,11 @@ namespace DoAnCShap
         {
             dataGridView1.DataSource = bus.DoanhThuTatCa("");
         }
+
+        public void HienThiDoanhThuTheoNam(string condition)
+        {
+            dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu'From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
+        }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
 
@@ -39,6 +44,11 @@ namespace DoAnCShap
             if(radioButtonTatCa.Checked==true)
             {
                 HienThiDoanhThu();
+            }
+            else
+            {
+                string condition = comboBoxNam.Text;
+                HienThiDoanhThuTheoNam(condition);
             }    
         }
     }

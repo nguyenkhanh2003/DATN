@@ -207,7 +207,7 @@ namespace DoAnCShap
                 hdbh.MaHDBH = comboBoxMaHD.Text;
                 hdbh.MaKH = comboBoxKH.SelectedValue.ToString();
                 hdbh.MaNV = comboBoxNhanVien.SelectedValue.ToString();
-                hdbh.NgayLapHDBH = dateTimePickerNgaylap.Text;
+                hdbh.NgayLapHDBH = dateTimePickerNgaylap.Value.Date;
                 hdbh.TongTien = labelTongThanhToan.Text;
                 hdbh.TrangThai = comboBoxTrangThai.Text;
                 bus.UpdateHoaDon(hdbh);

@@ -36,7 +36,7 @@ namespace DoAnCShap
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxNam = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -59,7 +59,7 @@ namespace DoAnCShap
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.comboBoxNam);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.radioButton4);
@@ -67,7 +67,7 @@ namespace DoAnCShap
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButtonTatCa);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(253, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(621, 306);
             this.panel1.TabIndex = 0;
@@ -132,15 +132,15 @@ namespace DoAnCShap
             this.label2.TabIndex = 3;
             this.label2.Text = "Năm";
             // 
-            // comboBox3
+            // comboBoxNam
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(151, 240);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(137, 28);
-            this.comboBox3.TabIndex = 2;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNam.FormattingEnabled = true;
+            this.comboBoxNam.Location = new System.Drawing.Point(151, 240);
+            this.comboBoxNam.Name = "comboBoxNam";
+            this.comboBoxNam.Size = new System.Drawing.Size(137, 28);
+            this.comboBoxNam.TabIndex = 2;
+            this.comboBoxNam.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -228,10 +228,14 @@ namespace DoAnCShap
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(253, 339);
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView1.Location = new System.Drawing.Point(675, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(621, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 306);
             this.dataGridView1.TabIndex = 1;
             // 
             // Frm_ThongKe
@@ -265,7 +269,7 @@ namespace DoAnCShap
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxNam;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnXemDoanhThu;
         private System.Windows.Forms.DataGridView dataGridView1;

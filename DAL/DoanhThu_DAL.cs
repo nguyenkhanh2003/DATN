@@ -16,5 +16,15 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select SUM(TongTien) AS DoanhThu from HoaDonBanHang" + Condition);
         }
+
+        public DataTable DoanhThuTheoNam(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
+
+        public DataTable DoanhThuTheoThang(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }
