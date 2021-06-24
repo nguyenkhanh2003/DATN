@@ -114,14 +114,80 @@ namespace DoAnCShap
         {
             xulychucnang(false, true,false);
             xulytextbox(true, false);
+            Clear();
             flag = 1;
             PhatSinhMa();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(flag==1)
+            if (txtTenkh.Text == "")
             {
+                MessageBox.Show("Chưa nhập tên khách hàng");
+                return;
+            }
+            if(cboGioiTinh.Text=="")
+            {
+                MessageBox.Show("Chưa chọn giới tính");
+                return;
+            }
+            if(txtEmail.Text=="")
+            {
+                MessageBox.Show("Chưa nhập email");
+                return;
+            }
+            if(txtSdt.Text=="")
+            {
+                MessageBox.Show("Chưa nhập số điện thoại");
+                return;
+            }    
+            if(txtDiaCh.Text=="")
+            {
+                MessageBox.Show("Chưa nhập địa chỉ");
+                return;
+            }
+            if(cboGioiTinh.Text=="")
+            {
+                MessageBox.Show("Chưa chọn trạng thái");
+                return;
+            }    
+            if (flag==1)
+            {
+                try
+                {
+                    if(txtSdt.Text.Length<10)
+                    {
+                        MessageBox.Show("Số điện thoại không đúng");
+                    }
+                    else
+                    {
+                        kh.MaKH = txtMaKh.Text;
+                        kh.TenKH = txtTenkh.Text;
+                        kh.GioiTinh = cboGioiTinh.Text;
+                        kh.Email = txtEmail.Text;
+                        kh.DienThoai = txtSdt.Text;
+                        kh.DiaChi = txtDiaCh.Text;
+                        kh.TrangThai = cboTrangThai.Text;
+                        bus.AddData(kh); ;
+                        MessageBox.Show("Thêm Khách Hàng Thành Công");
+                        xulychucnang(true, false, false);
+                        Clear();
+                    }    
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể thêm được");
+                }
+               
+            }
+            if(flag==2)
+            {
+                if (txtSdt.Text.Length < 10)
+                {
+                    MessageBox.Show("Số điện thoại không đúng");
+                }
+                else
+                {
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
                     kh.GioiTinh = cboGioiTinh.Text;
@@ -129,24 +195,11 @@ namespace DoAnCShap
                     kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = cboTrangThai.Text;
-                    bus.AddData(kh); ;
-                    MessageBox.Show("Thêm Khách Hàng Thành Công");
+                    bus.EditData(kh); ;
+                    MessageBox.Show("Sửa Dữ Liệu Thành Công");
                     xulychucnang(true, false, false);
                     Clear();
-            }
-            if(flag==2)
-            {
-                kh.TenKH = txtTenkh.Text;
-                kh.GioiTinh = cboGioiTinh.Text;
-                kh.Email = txtEmail.Text;
-                kh.DienThoai = txtSdt.Text;
-               
-                kh.DiaChi = txtDiaChi.Text;
-                kh.TrangThai = cboTrangThai.Text;
-                bus.EditData(kh); ;
-                MessageBox.Show("Sửa Dữ Liệu Thành Công");
-                xulychucnang(true,false,false);
-                Clear();
+                }
             }
       
             Display();
@@ -211,6 +264,37 @@ namespace DoAnCShap
         private void txtSdt_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTenkh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) == false && char.IsControl(e.KeyChar) == false && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy tác vụ ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (KQ == DialogResult.Yes)
+            {
+                xulychucnang(true, false, false);
+                Clear();
+                xulytextbox(false, true);
+            }
+            else
+            {
+
+            }    
         }
     }
 }

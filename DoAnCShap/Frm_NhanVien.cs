@@ -210,60 +210,128 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if(cboChucVu.Text=="")
+            {
+                MessageBox.Show("Chưa chọn chức vụ");
+                return;
+            }
+            if (txtTenNV.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên nhân viên");
+                return;
+            }
+            if (cboGioiTinh.Text == "")
+            {
+                MessageBox.Show("Chưa chọn giới tính");
+                return;
+            }
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Chưa nhập email");
+                return;
+            }
+            if (txtSDT.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số điện thoại");
+                return;
+            }
+            if (txtCMND.Text == "")
+            {
+                MessageBox.Show("Chưa nhập chứng minh nhân dân");
+                return;
+            }
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Chưa nhập địa chỉ");
+                return;
+            }
+            if (txtHinhNhanVien.Text == "")
+            {
+                MessageBox.Show("Chưa chọn hình");
+                return;
+            }
+            if (txtUserName.Text == "")
+            {
+                MessageBox.Show("UserName không được để trống");
+                return;
+            }
+            if (txtPassWord.Text == "")
+            {
+                MessageBox.Show("Mật khẩu không được để trống");
+                return;
+            }
+            if (cboTrangThai.Text == "")
+            {
+                MessageBox.Show("Chưa chọn trạng thái");
+                return;
+            }
             if (flag == 1)
             {
-                if (txtMaNV.Text !="" || cboChucVu.SelectedValue != "" || txtTenNV.Text != "" ||
-                   txtEmail.Text != "" || txtSDT.Text != "" || txtCMND.Text != "" || txtDiaChi.Text != "" || txtUserName.Text != "" || txtPassWord.Text != "")
+                try
+                {
+                    if (txtSDT.Text.Length < 10)
+                    {
+                        MessageBox.Show("Số điện thoại không đúng");
+                    }
+                    else
+                    {
+                        MaHoa();
+                        //TaoChuoiMaHoa(txtPassWord.Text);
+                        nv.MaNV = txtMaNV.Text;
+                        nv.MaCV = cboChucVu.SelectedValue.ToString();
+                        // nv.MaCV = cboChucVu.ToString();
+                        nv.TenNV = txtTenNV.Text;
+                        nv.GioiTinh = cboGioiTinh.Text;
+                        nv.Email = txtEmail.Text;
+                        nv.NgaySinh = dateTirmNgaySinh.Value.Date;
+                        nv.DienThoai = txtSDT.Text;
+                        nv.CMND = txtCMND.Text;
+                        nv.DiaChi = txtDiaChi.Text;
+                        nv.HinhAnh = txtHinhNhanVien.Text;
+                        //File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
+                        nv.UserName = txtUserName.Text;
+                        nv.PassWord = txtPassWord.Text;
+                        nv.TrangThai = cboTrangThai.Text;
+                        bus.AddData(nv);
+                        MessageBox.Show("Thêm Nhân Viên Thành Công");
+                        Clear();
+                        xulytextbox(false, true);
+                        xulychucnang(true, false, false);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể thêm được");
+                }
+            }
+            if(flag==2)
+            {
+                if (txtSDT.Text.Length < 10)
+                {
+                    MessageBox.Show("Số điện thoại không đúng");
+                }
+                else
                 {
                     MaHoa();
                     //TaoChuoiMaHoa(txtPassWord.Text);
                     nv.MaNV = txtMaNV.Text;
+                    // nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
-                   // nv.MaCV = cboChucVu.ToString();
                     nv.TenNV = txtTenNV.Text;
                     nv.GioiTinh = cboGioiTinh.Text;
                     nv.Email = txtEmail.Text;
-                    nv.NgaySinh = dateTirmNgaySinh.Text;
+                    nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                     nv.DienThoai = txtSDT.Text;
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
                     nv.HinhAnh = txtHinhNhanVien.Text;
-                    //File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
-                    bus.AddData(nv);
-                    MessageBox.Show("Thêm Nhân Viên Thành Công");
-                    Clear();
-                    xulytextbox(false, true);
+                    bus.EditData(nv);
+                    MessageBox.Show("Sửa Nhân Viên Thành Công");
                     xulychucnang(true, false, false);
                 }
-                else
-                {
-                    MessageBox.Show("Chưa Nhập Đủ Thông Tin Cần Thiết");
-                }    
-            }
-            if(flag==2)
-            {
-                MaHoa();
-                //TaoChuoiMaHoa(txtPassWord.Text);
-                nv.MaNV = txtMaNV.Text;
-                // nv.MaCV = cboChucVu.SelectedValue.ToString();
-                nv.MaCV = cboChucVu.SelectedValue.ToString();
-                nv.TenNV = txtTenNV.Text;
-                nv.GioiTinh = cboGioiTinh.Text;
-                nv.Email = txtEmail.Text;
-                nv.NgaySinh = dateTirmNgaySinh.Text;
-                nv.DienThoai = txtSDT.Text;
-                nv.CMND = txtCMND.Text;
-                nv.DiaChi = txtDiaChi.Text;
-                nv.HinhAnh = txtHinhNhanVien.Text;
-                nv.UserName = txtUserName.Text;
-                nv.PassWord = txtPassWord.Text;
-                nv.TrangThai = cboTrangThai.Text;
-                bus.EditData(nv);
-                MessageBox.Show("Sửa Nhân Viên Thành Công");
-                xulychucnang(true, false, false);
             }
             
             Display();
