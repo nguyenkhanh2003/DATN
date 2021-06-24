@@ -41,7 +41,7 @@ namespace DoAnCShap
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonTheoNgay = new System.Windows.Forms.RadioButton();
             this.radioButtonTatCa = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -64,7 +64,7 @@ namespace DoAnCShap
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.radioButton4);
             this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButtonTheoNgay);
             this.panel1.Controls.Add(this.radioButtonTatCa);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -191,17 +191,17 @@ namespace DoAnCShap
             this.radioButton3.Text = "Theo Quý";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonTheoNgay
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(25, 121);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(103, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Theo Ngày";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonTheoNgay.AutoSize = true;
+            this.radioButtonTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTheoNgay.Location = new System.Drawing.Point(25, 121);
+            this.radioButtonTheoNgay.Name = "radioButtonTheoNgay";
+            this.radioButtonTheoNgay.Size = new System.Drawing.Size(103, 24);
+            this.radioButtonTheoNgay.TabIndex = 1;
+            this.radioButtonTheoNgay.TabStop = true;
+            this.radioButtonTheoNgay.Text = "Theo Ngày";
+            this.radioButtonTheoNgay.UseVisualStyleBackColor = true;
             // 
             // radioButtonTatCa
             // 
@@ -262,7 +262,7 @@ namespace DoAnCShap
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonTheoNgay;
         private System.Windows.Forms.RadioButton radioButtonTatCa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

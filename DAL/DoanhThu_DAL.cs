@@ -26,5 +26,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable("" + condition);
         }
+
+        public DataTable DoanhThuTheoNgay(string condiiton)
+        {
+             return KetNoi.GetDataTable(""+condiiton);
+        }
     }
 }

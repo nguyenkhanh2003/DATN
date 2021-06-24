@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DAL;
+using DTO;
 namespace BUS
 {
     public class DoanhThu_BUS
@@ -24,6 +25,11 @@ namespace BUS
         public DataTable DoanhThuTheoThang(string condition)
         {
             return bus.DoanhThuTheoThang(condition);
+        }
+
+        public DataTable DoanhThuTheoNgay(string condition)
+        {
+            return  bus.DoanhThuTheoNgay(condition);
         }
     }
 }

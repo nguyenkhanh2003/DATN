@@ -27,7 +27,17 @@ namespace DoAnCShap
 
         public void HienThiDoanhThuTheoNam(string condition)
         {
-            dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu'From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
+            dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu' From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
+        }
+
+        //public void HienThiDoanhThuTheoNgay(int condition,int condition1,int condition3,int condition4)
+        //{
+        //    dataGridView1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where  DAY(NgayLapHDBH) BETWEEN "+condition+" and "+condition1+" and MONTH(NgaLapHDBH) BETWEEN "+condition3+" and "+condition4+" ");
+        //}
+
+        public void HienThiDoanhThuTheoNgay(string condition, string condition1)
+        {
+            dataGridView1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where(NgayLapHDBH) BETWEEN '"+condition+"' and '"+condition1+"' ");
         }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
@@ -41,10 +51,18 @@ namespace DoAnCShap
 
         private void btnXemDoanhThu_Click(object sender, EventArgs e)
         {
-            if(radioButtonTatCa.Checked==true)
+            if (radioButtonTatCa.Checked == true)
             {
                 HienThiDoanhThu();
             }
+            if (radioButtonTheoNgay.Checked==true)
+            {
+                string condition = dateTimePicker1.Text;
+                //int condition3 = dateTimePicker1.Value.Month;
+                string condition1 = dateTimePicker2.Text;
+                //int condition4 = dateTimePicker1.Value.Month;
+                HienThiDoanhThuTheoNgay(condition, condition1);
+            }    
             else
             {
                 string condition = comboBoxNam.Text;

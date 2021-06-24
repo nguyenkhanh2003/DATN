@@ -101,7 +101,7 @@ namespace DoAnCShap
                     if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
-                        txtSL.Text = DSSP.Rows[0]["SoLuong"].ToString();
+                        txtSL.Text = "1";
 
                     }
 
@@ -138,17 +138,44 @@ namespace DoAnCShap
 
         private void btnChonMua_Click(object sender, EventArgs e)
         {
-            MaLK += comboBoxSP.SelectedValue.ToString() + ";";
-            int tt=0;
+            int KiemTra = 0;
+            int vitri = 0;
             int KM = 0;
-            if (txtKhuyenMai.Text != "")
-                KM = int.Parse(txtKhuyenMai.Text);
+          
+            int tt = 0;
+            tongtien += tt;
+            KM = int.Parse(txtKhuyenMai.Text);
             tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             String.Format("{0:#,##0.##}", (labelTongThanhToan.Text) = tongtien.ToString());
-            object[] t = { comboBoxSP.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
-            dataGridViewHDBH.Rows.Add(t);
+
+            for (int i=0;i<dataGridViewHDBH.Rows.Count-1;i++)
+            {
+               if(comboBoxSP.Text==dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
+                {
+                    KiemTra = 1;
+                    vitri = i;
+                    break;
+                }
+               
+            }   
+            
+            if(KiemTra==1)
+            {
+                int SL = int.Parse(txtSL.Text) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
+                dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
+                int ThanhTienMoi = tt + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
+                dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
+            }
+
+            else
+            {
+                MaLK += comboBoxSP.SelectedValue.ToString() + ";";
+                object[] t = { comboBoxSP.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
+                dataGridViewHDBH.Rows.Add(t);
+            }
+     
         }
         double tongtien = 0;
         private void txtSL_TextChanged(object sender, EventArgs e)
