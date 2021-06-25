@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class HoaDonNhapHang
+    public class HoaDonNhapHang
     {
         public string MaHDNH { get; set; }
         public string MaNCC { get; set; }
         public string MaNV { get; set; }
         public DateTime? NgayLapHDNH { get; set; }
-        public decimal? TongTien { get; set; }
+        public int TongTien { get; set; }
         public string TrangThai { get; set; }
 
     }

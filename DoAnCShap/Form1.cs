@@ -100,7 +100,7 @@ namespace DoAnCShap
         {
             //openChildForm(new Frm_DanhSachNhapPhieu());
             openChildForm(new Frm_HoaDonNhap());
-            lbl_HienThiForm.Text = "Quản Lý Phiếu Nhập";
+            lbl_HienThiForm.Text = "Nhập Kho";
         }
 
         private void pictureBoxLogin_Click(object sender, EventArgs e)
