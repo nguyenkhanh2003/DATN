@@ -54,6 +54,7 @@ namespace DoAnCShap
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangNhap
             // 
@@ -67,6 +68,7 @@ namespace DoAnCShap
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // groupBox1
             // 
@@ -142,6 +144,7 @@ namespace DoAnCShap
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_DangNhap";
             this.Text = "Frm_DangNhap";
             this.groupBox1.ResumeLayout(false);

@@ -198,8 +198,8 @@ namespace DoAnCShap
         {
             Form1 form1 = new Form1();
             this.Hide();
-            Login lg = new Login();
-            lg.ShowDialog();
+            Login DN = new Login();
+            DN.ShowDialog();
             this.Visible = false;
         }
 
@@ -246,7 +246,7 @@ namespace DoAnCShap
         private void btnPhanQuyen_Click_1(object sender, EventArgs e)
         {
             lbl_HienThiForm.Text = "Phân Quyền Tài Khoản";
-            openChildForm(new Frm_PhanQuyen());
+            openChildForm(new Frm_ChucVu());
         }
 
         private void btnLoaiLK_Click(object sender, EventArgs e)

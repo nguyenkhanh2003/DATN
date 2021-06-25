@@ -82,32 +82,70 @@ namespace DoAnCShap
         public static string SetValueForText1 = "";
 
         public static string BtnPhanQuyen;
-       
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String username = txtTenDangNhap.Text;
-            String password =CreateMd5(txtMatKhau.Text);
-            //MaHoa();
-            SqlConnection sql = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
-            string query = "Select * From NhanVien Where UserName =N'" + username + "' and PassWord=N'" +password+ "' and TrangThai=N'Mới'";
-            SqlDataAdapter sda = new SqlDataAdapter(query,sql);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if(dt.Rows.Count==1)
+            //String username = txtTenDangNhap.Text;
+            //String password =CreateMd5(txtMatKhau.Text);
+            ////MaHoa();
+            //SqlConnection sql = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
+            //string query = "Select * From NhanVien Where UserName =N'" + username + "' and PassWord=N'" +password+ "' and TrangThai=N'Mới'";
+            //SqlDataAdapter sda = new SqlDataAdapter(query,sql);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //if(dt.Rows.Count==1)
+            //{
+            //    MessageBox.Show("Đăng Nhập Thành Công");
+            //    {
+
+            //        Form1 f = new Form1();
+            //        SetValueForText1 = username;
+            //        f.ShowDialog();
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Fail Username and PassWord !");
+            //}    
+
+            string query = "SELECT MaCV from NhanVien WHERE Username = @username and password=@password";
+            string returnValue = "";
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True"))
             {
-                MessageBox.Show("Đăng Nhập Thành Công");
+                using (SqlCommand sqlcmd = new SqlCommand(query, con))
                 {
-                    
-                    Form1 f = new Form1();
-                    SetValueForText1 = username;
-                    f.ShowDialog();
-                    f.btnNhaSanXuat.Enabled = false;
+                    sqlcmd.Parameters.Add("@username", SqlDbType.VarChar).Value = txtTenDangNhap.Text;
+                    sqlcmd.Parameters.Add("@password", SqlDbType.VarChar).Value =CreateMd5(txtMatKhau.Text);
+                    con.Open();
+                    returnValue = (string)sqlcmd.ExecuteScalar();
                 }
             }
-            else
+            //EDIT to avoid NRE 
+            if (String.IsNullOrEmpty(returnValue))
             {
-                MessageBox.Show("Fail Username and PassWord !");
-            }    
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                return;
+            }
+            returnValue = returnValue.Trim();
+            if (returnValue == "CV02")
+            {
+                MessageBox.Show("You are logged in as an Admin");
+                Form1 fr1 = new Form1();
+                fr1.Show();
+                fr1.btnNhanVien.Enabled = false;
+                fr1.btnKhachHang.Enabled = false;
+                fr1.btnLinhKien.Enabled = false;
+                SetValueForText1 = txtTenDangNhap.Text;
+                this.Hide();
+            }
+            else if (returnValue == "CV01")
+            {
+                MessageBox.Show("You are logged in as a User");
+                Frm_DangNhap fr2 = new Frm_DangNhap();
+                fr2.Show();
+                this.Hide();
+            }
+            
 
         }
     }

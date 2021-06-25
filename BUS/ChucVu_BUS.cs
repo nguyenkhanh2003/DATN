@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
-
+using DTO;
 
 namespace BUS
 {
@@ -16,6 +16,20 @@ namespace BUS
         public DataTable GetChucVu(string condition)
         {
             return bus.GetChucVu(condition);
+        }
+
+        public void AddChucVu(ChucVu ex)
+        {
+            bus.AddChucVu(ex);
+        }
+        public void EditCV(ChucVu ex)
+        {
+            bus.EditChuCVu(ex);
+        }
+
+        public void DeleteChucVu(ChucVu ex)
+        {
+            bus.DeleteChucVu(ex);
         }
     }
 }

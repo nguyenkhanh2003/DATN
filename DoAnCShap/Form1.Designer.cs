@@ -30,11 +30,10 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnNhaSanXuat = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnPhanQuyen = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -72,7 +71,6 @@ namespace DoAnCShap
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panelSideMenu.Controls.Add(this.btnNhaSanXuat);
             this.panelSideMenu.Controls.Add(this.btnSetting);
             this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
@@ -92,25 +90,6 @@ namespace DoAnCShap
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(229, 627);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // btnNhaSanXuat
-            // 
-            this.btnNhaSanXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
-            this.btnNhaSanXuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhaSanXuat.FlatAppearance.BorderSize = 0;
-            this.btnNhaSanXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhaSanXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhaSanXuat.ForeColor = System.Drawing.Color.White;
-            this.btnNhaSanXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaSanXuat.Image")));
-            this.btnNhaSanXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaSanXuat.Location = new System.Drawing.Point(0, 638);
-            this.btnNhaSanXuat.Name = "btnNhaSanXuat";
-            this.btnNhaSanXuat.Size = new System.Drawing.Size(212, 46);
-            this.btnNhaSanXuat.TabIndex = 19;
-            this.btnNhaSanXuat.Text = "Nhà Sản Xuất";
-            this.btnNhaSanXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhaSanXuat.UseVisualStyleBackColor = false;
-            this.btnNhaSanXuat.Click += new System.EventHandler(this.btnNhaSanXuat_Click);
             // 
             // btnSetting
             // 
@@ -146,7 +125,7 @@ namespace DoAnCShap
             this.btnPhanQuyen.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnPhanQuyen.Size = new System.Drawing.Size(212, 46);
             this.btnPhanQuyen.TabIndex = 17;
-            this.btnPhanQuyen.Text = "Phân Quyền";
+            this.btnPhanQuyen.Text = "Chức Vụ";
             this.btnPhanQuyen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhanQuyen.UseVisualStyleBackColor = false;
             this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click_1);
@@ -240,7 +219,7 @@ namespace DoAnCShap
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 684);
+            this.btnExit.Location = new System.Drawing.Point(0, 638);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(212, 45);
@@ -505,16 +484,16 @@ namespace DoAnCShap
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(6, 3);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Salary";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Salary";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(790, 523);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -554,11 +533,7 @@ namespace DoAnCShap
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_HienThiForm;
         private System.Windows.Forms.Button btnLoaiLK;
-        private System.Windows.Forms.Button btnLinhKien;
         private System.Windows.Forms.Button btnPhieuNhap;
-        private System.Windows.Forms.Button btnHoaDon;
-        private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Button btnNhanVien;
         private FontAwesome.Sharp.IconButton iconBtnThuNho;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelBot;
@@ -574,7 +549,10 @@ namespace DoAnCShap
         public System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public System.Windows.Forms.Label labelHienThiTenDangNhap;
-        public System.Windows.Forms.Button btnNhaSanXuat;
+        public System.Windows.Forms.Button btnNhanVien;
+        public System.Windows.Forms.Button btnLinhKien;
+        public System.Windows.Forms.Button btnHoaDon;
+        public System.Windows.Forms.Button btnKhachHang;
     }
 }
 

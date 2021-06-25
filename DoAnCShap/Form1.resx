@@ -118,28 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnNhaSanXuat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAA9lJREFUWEfNmF9ojlEcx1/hZoVpZmVlc6PkzyYaF6tthYQ0cTEXRm6Uv68ik5jd
-        kJiVkhCGpriwJdxQw4QbGwkpbPI//ybFhYvX93Oe98x5nz3P3nfbu/GtT895znOe8/s+5/zOeZ73jQyi
-        SsUGsVrkU/EvNFo0im/igrgqYuKAGHRh5IzINGeexos2UWXOBklzxBvhGrHKE79EhjkbBEXFWa8YqA4x
-        2ysOvHYJpilM7WKmVxx4jREk7ihzlqgFgmsjzFlcDCUOe4Jl2Vexgu4LdznTH/1uMmeOMHNq37qiaMvR
-        RTGX4oIce1M5DfsokveuYDk/F4/j5QbRTcZM5/XKQtHmg6dhCfbVTKF4KD4LDCwTa+LlH+KKSFhNxoxX
-        DJQ1s0rQrifcJTxZfBHbRY54Ji4J+qsXwwXJjdkupWqGNs3lJXnNVZUFMRfVVwuS0c2LW6LWKxoNEdsE
-        D+WabhGHveLfaSoVMR/uNGGmWnVRXxtMINfMfPFCEJT+g8QU0u9Y8VtkC9O4bW5RbrShpizmQp2u2QQ2
-        ZkREBvJdqJNcM/tFnVfsNmJWjJDdg56IhRQI1JwEVlWXmRC5QS+KLV4xJTPkUNgIBspOU7lodPEuJwSl
-        znaeihn67maGOQ6DG+paTy+JvmqqiFk6GisIxnWO5AHltJihM1ZHOkiLGfOk7tPDvROLuZmkBMrN9TtL
-        Cv3tLtfOI7/IsyAz3EcMlLIZVkxCXggSfbfAjEl61WX62gB9EKRGINeMO33WzDCB+ZUiQV1mQpRghooQ
-        EYSpog3HMDPEYh97Ksi1BLkjE7SXBI1MUDuCbhW062lkMMK0djOCXDPuLgvc7DeDAX87OneD9mSG80AV
-        C/uOqfa/f8pmjONGhp2nodyem51R529XODGLZLRtlopem2FIPwh2ztvCXaIYIICF14N7nTo6devuCLdt
-        ymamC9xPNWfe2/aQmCR2iK9iqECzBAH4JrFLmKDnBR/efDZsFJ0CA3wmvBTrBUpqhpv5XYOmCZ5kpDgp
-        SCyCExjREUanCKZ0gvgu7NOTTxxvCPtJydEGTWqGZGz1iia47RgDWeKdIJ8Qe8EDwUiR7MvFI/FJ8JWP
-        Se6ljn4RSX/UKyY3g4GPYq85i0T2iNfimCDwcWFFW5KTqTwi3ooVolL8FIwm128KfhnwI44UsCOb1Azi
-        Ka8JRiWdkC8cGS2Ukhkru88wAv2BxCYon5q9XtpWXZteP+UG/e/MsCWgJrHZK5pVzLYQKmuGRv2B7cCa
-        OSjIHf6XeS/IoXPxMh/uoWK+6SQd8GBWLHP2G/6XoX5t/OgoEvkDwVtBK98lsmkAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnSetting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
