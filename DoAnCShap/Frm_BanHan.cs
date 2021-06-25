@@ -51,7 +51,7 @@ namespace DoAnCShap
             btnChonMua.Enabled = b2;
             btnLuuHd.Enabled = b2;
             btnInHD.Enabled = b2;
-            btnXoaSP.Enabled = b2;
+            //btnXoaSP.Enabled = b2;
             btnLuuKH.Enabled = b2;
             btnTimKH.Enabled = b2;
         }
@@ -204,7 +204,7 @@ namespace DoAnCShap
                 hdbh.MaKH = comboBoxKH.Text;
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value.Date;
-                hdbh.TongTien = labelTongThanhToan.Text;
+                hdbh.TongTien =int.Parse(labelTongThanhToan.Text);
                 hdbh.TrangThai = comboBoxTrangThai.SelectedIndex.ToString();
                 //hdbh.TrangThai = txtTienKhachDua.Text;
                 bus.AddHoaDon(hdbh);
@@ -286,6 +286,7 @@ namespace DoAnCShap
             HienThiSanPham();
             HienThiNhanVien();
             XuLyChucNang(true, false);
+            btnXoaSP.Enabled = false;
         }
 
         private void txtTienKhachDua_TextChanged(object sender, EventArgs e)
@@ -343,6 +344,11 @@ namespace DoAnCShap
         {
             printDialog1.Document = printDocument1;
             printDialog1.ShowDialog();
+        }
+
+        private void dataGridViewHDBH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnXoaSP.Enabled = true;
         }
     }
 }

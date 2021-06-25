@@ -24,7 +24,7 @@ namespace DAL
         // THÊM DỮ LIỆU
         public void AddData(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"Insert INTO LinhKien(MaLK,MaLLK,MaNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuong,HinhAnh,TrangThai) VALUES(N'"+ex.MaLK+"',N'"+ex.MaLLK+"',N'"+ex.MaNCC+"',N'"+ex.TenLK+"',N'"+ex.BaoHanh+"',N'"+ex.XuatXu+"',N'"+ex.TinhTrang+"',"+ex.DonViTinh+","+ex.DonGia+","+ex.SoLuong+",N'"+ex.HinhAnh+"',N'"+ex.TrangThai+"')");
+            KetNoi.ExecuteReader(@"Insert INTO LinhKien(MaLK,MaLLK,MaNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuong,HinhAnh,TrangThai) VALUES(N'"+ex.MaLK+"',N'"+ex.MaLLK+"',N'"+ex.MaNCC+"',N'"+ex.TenLK+"',N'"+ex.BaoHanh+"',N'"+ex.XuatXu+"',N'"+ex.TinhTrang+"',N'"+ex.DonViTinh+"',"+ex.DonGia+","+ex.SoLuong+",N'"+ex.HinhAnh+"',N'"+ex.TrangThai+"')");
         }
         //  SỬA DỮ LIỆU
         public void EditData(LinhKien ex)

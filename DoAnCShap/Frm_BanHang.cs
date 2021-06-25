@@ -180,7 +180,7 @@ namespace DoAnCShap
                 hdbh.MaKH = comboBoxKH.Text;
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 //hdbh.NgayLapHDBH = dateTimePickerNgayLap.Text;
-                hdbh.TongTien = txtTongThanhToan.Text;
+                hdbh.TongTien =int.Parse(txtTongThanhToan.Text);
                 //hdbh.TrangThai = txtTienKhachDua.Text;
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');

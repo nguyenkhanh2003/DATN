@@ -96,6 +96,16 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if(txtTenLoai.Text=="")
+            {
+                MessageBox.Show("Chưa nhập tên loại");
+                return;
+            }
+            if(cboTrangThai.Text=="")
+            {
+                MessageBox.Show("Chưa chọn trạng thái");
+                return;
+            }    
 
             if (flag == 1)
             {
@@ -107,6 +117,7 @@ namespace DoAnCShap
                     bus.AddData(llk); ;
                     MessageBox.Show("Thêm Loại Linh Kiện Thành Công");
                     xulychucnang(true, false, false);
+                    xulytextbox(true, false);
                     clear();
                 }
                 catch(Exception ex)
@@ -122,6 +133,7 @@ namespace DoAnCShap
                 bus.EditData(llk);
                 MessageBox.Show("Sửa Loại linh Kiện Thành Công");
                 xulychucnang(true, false, false);
+                xulytextbox(true, false);
                 clear();
             }
             Display();
@@ -167,6 +179,29 @@ namespace DoAnCShap
         {
             string condition = txtSearch.Text;
             HienThiSearch(condition);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (KQ == DialogResult.Yes)
+            {
+                xulychucnang(true, false, false);
+                xulytextbox(true, false);
+                clear();
+            }
+            else
+            {
+                
+            }    
+        }
+
+        private void txtTenLoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) == false && char.IsControl(e.KeyChar) == false && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

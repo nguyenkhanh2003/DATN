@@ -157,6 +157,7 @@ namespace DoAnCShap
         {
             xulychucnang(false, true, true);
             XuLyTextBox(true, false);
+            Clear();
             PhatSinhMa();
             flag = 1;
         }
@@ -173,7 +174,64 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(flag==1)
+            if(cboMaLoai.SelectedValue.ToString()=="")
+            {
+                MessageBox.Show("Chưa chọn loại sản phẩm");
+                return;
+            }
+
+            if (comboBoxNCC.SelectedValue.ToString() == "")
+            {
+                MessageBox.Show("Chưa chọn nhà cung cấp");
+                return;
+            }
+            if (txtTenLinhKien.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên linh kiện");
+                return;
+            }
+            if (txtBaoHanh.Text == "")
+            {
+                MessageBox.Show("Chưa nhập bảo hành");
+                return;
+            }
+            if (txtXuatXu.Text == "")
+            {
+                MessageBox.Show("Chưa nhập xuất xứ");
+                return;
+            }
+            if (txtTinhTrang.Text == "")
+            {
+                MessageBox.Show("CTinfhh trạng không được để trống");
+                return;
+            }
+            if (txtDonViTinh.Text == "")
+            {
+                MessageBox.Show("Đơn vị tính không được để trống");
+                return;
+            }
+            if (txtDonGia.Text == "")
+            {
+                MessageBox.Show("Đơn giá không được để trống");
+                return;
+            }
+            if (txtSoLuong.Text == "")
+            {
+                MessageBox.Show("Số lượng không được để trống");
+                return;
+            }
+            if (txtHinhSP.Text== "")
+            {
+                MessageBox.Show("Chưa chọn hình");
+                return;
+            }
+            if (cboTrangThai.Text == "")
+            {
+                MessageBox.Show("Chưa chọn trạng thái");
+                return;
+            }
+
+            if (flag==1)
             {
                 lk.MaLK = txtMaLinhKien.Text;
                 lk.MaLLK = cboMaLoai.SelectedValue.ToString();
@@ -183,8 +241,8 @@ namespace DoAnCShap
                 lk.XuatXu = txtXuatXu.Text;
                 lk.TinhTrang = txtTinhTrang.Text;
                 lk.DonViTinh = txtDonViTinh.Text;
-                lk.DonGia = txtDonGia.Text;
-                lk.SoLuong = txtSoLuong.Text;
+                lk.DonGia = int.Parse(txtDonGia.Text);
+                lk.SoLuong = int.Parse(txtSoLuong.Text);
                 lk.HinhAnh = txtHinhSP.Text;
                 lk.TrangThai = cboTrangThai.Text;
                 bus.AddData(lk);
@@ -195,7 +253,6 @@ namespace DoAnCShap
             }
             if(flag==2)
             {
-
                 lk.MaLK = txtMaLinhKien.Text;
                 lk.MaLLK = cboMaLoai.SelectedValue.ToString();
                 lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
@@ -204,8 +261,8 @@ namespace DoAnCShap
                 lk.XuatXu = txtXuatXu.Text;
                 lk.TinhTrang = txtTinhTrang.Text;
                 lk.DonViTinh = txtDonViTinh.Text;
-                lk.DonGia = txtDonGia.Text;
-                lk.SoLuong = txtSoLuong.Text;
+                lk.DonGia =int.Parse(txtDonGia.Text);
+                lk.SoLuong =int.Parse(txtSoLuong.Text);
                 lk.HinhAnh = txtHinhSP.Text;
                 lk.TrangThai = cboTrangThai.Text;
                 bus.EditData(lk);

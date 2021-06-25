@@ -417,6 +417,7 @@ namespace DoAnCShap
             {
                 Clear();
                 xulychucnang(true, false, false);
+                xulytextbox(true, false);
                 xulytextbox(false, true);
             }
             else
@@ -445,6 +446,20 @@ namespace DoAnCShap
             //}
         }
 
-       
+        private void txtTenNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) == false && char.IsControl(e.KeyChar) == false && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

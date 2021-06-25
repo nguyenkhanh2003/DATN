@@ -30,7 +30,7 @@ namespace DoAnCShap
             txtDiaChi.Enabled = false;
             txtDienThoai.Enabled = false;
             txtEmail.Enabled = false;
-            txtTrangThai.Enabled = false;
+            txtDiaChi.Enabled = false;
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
             //btnUpdate.Enabled = false;
@@ -44,7 +44,7 @@ namespace DoAnCShap
             txtDiaChi.Enabled = true;
             txtDienThoai.Enabled = true;
             txtEmail.Enabled = true;
-            txtTrangThai.Enabled = true;
+            txtDiaChi.Enabled = true;
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             //btnUpdate.Enabled = false;
@@ -89,7 +89,7 @@ namespace DoAnCShap
             txtDiaChi.Text = "";
             txtDienThoai.Text = "";
             txtEmail.Text = "";
-            txtTrangThai.Text = "";
+            txtDiaChi.Text = "";
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -100,7 +100,6 @@ namespace DoAnCShap
                     MessageBox.Show("Vui lòng chọn Nhà Cung Cấp cần xóa", "Thông báo !");
                     return;
                 }
-
                 ncc.MaNCC = txtMaNCC.Text;
                 bus.DeleteData(ncc);
                 AllTextBoxNull();
@@ -138,7 +137,7 @@ namespace DoAnCShap
             txtDiaChi.Text = row.Cells[2].Value.ToString();
             txtDienThoai.Text = row.Cells[3].Value.ToString();
             txtEmail.Text = row.Cells[4].Value.ToString();
-            txtTrangThai.Text = row.Cells[5].Value.ToString();
+            txtDiaChi.Text = row.Cells[5].Value.ToString();
             HienButton();
             btnDelete.Enabled = true;
             btnCancel.Enabled = true;
@@ -183,15 +182,15 @@ namespace DoAnCShap
                 MessageBox.Show("Xin mời nhập lại số điện thoại của nhà cung cấp !");
                 return;
             }
-            if (txtTrangThai.Text == "")
+            if (txtDiaChi.Text == "")
             {
                 MessageBox.Show("Xin mời nhập lại trạng thái của nhà cung cấp !");
                 return;
             }
 
-            if (txtDiaChi.Text == "")
+            if (txtEmail.Text == "")
             {
-                MessageBox.Show("Chưa nhập địa chỉ");
+                MessageBox.Show("Chưa nhập email");
                 return;
             }
             if (addnew == true)
@@ -212,8 +211,9 @@ namespace DoAnCShap
                             ncc.Email = txtEmail.Text;
                             ncc.DienThoai = txtDienThoai.Text;
                             ncc.DiaChi = txtDiaChi.Text;
-                            ncc.TrangThai = txtTrangThai.Text;
+                            ncc.TrangThai = cbotrangthai.Text;
                             bus.AddData(ncc);
+                            MessageBox.Show("Thành Công");
                             AllTextBoxNull();
                         }
                     }
@@ -242,7 +242,7 @@ namespace DoAnCShap
                             ncc.Email = txtEmail.Text;
                             ncc.DienThoai = txtDienThoai.Text;
                             ncc.DiaChi = txtDiaChi.Text;
-                            ncc.TrangThai = txtTrangThai.Text;
+                            ncc.TrangThai = cbotrangthai.Text;
                             bus.EditData(ncc);
                             AllTextBoxNull();
                             MessageBox.Show("Sửa Thành Công");
@@ -277,6 +277,20 @@ namespace DoAnCShap
             this.Close();
         }
 
-       
+        private void txtTenNCC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) == false && char.IsControl(e.KeyChar) == false && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

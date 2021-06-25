@@ -656,6 +656,7 @@ namespace DoAnCShap
             this.dataGridViewHDBH.Name = "dataGridViewHDBH";
             this.dataGridViewHDBH.Size = new System.Drawing.Size(756, 298);
             this.dataGridViewHDBH.TabIndex = 0;
+            this.dataGridViewHDBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellClick);
             // 
             // TenLK
             // 
