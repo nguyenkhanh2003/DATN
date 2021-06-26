@@ -67,7 +67,7 @@ namespace DoAnCShap
             this.btnDangNhap.TabIndex = 6;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // groupBox1

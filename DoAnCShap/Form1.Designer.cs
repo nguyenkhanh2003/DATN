@@ -30,9 +30,9 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnPhanQuyen = new System.Windows.Forms.Button();
@@ -484,16 +484,16 @@ namespace DoAnCShap
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 3);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Salary";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Salary";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(790, 523);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -532,20 +532,12 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_HienThiForm;
-        private System.Windows.Forms.Button btnLoaiLK;
-        private System.Windows.Forms.Button btnPhieuNhap;
         private FontAwesome.Sharp.IconButton iconBtnThuNho;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelBot;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnNhaCungCap;
-        private System.Windows.Forms.Button btnBanHang;
-        private System.Windows.Forms.Button btnSetting;
-        private System.Windows.Forms.Button btnPhanQuyen;
-        private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnBaohanh;
         public System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public System.Windows.Forms.Label labelHienThiTenDangNhap;
@@ -553,6 +545,14 @@ namespace DoAnCShap
         public System.Windows.Forms.Button btnLinhKien;
         public System.Windows.Forms.Button btnHoaDon;
         public System.Windows.Forms.Button btnKhachHang;
+        public System.Windows.Forms.Button btnLoaiLK;
+        public System.Windows.Forms.Button btnPhieuNhap;
+        public System.Windows.Forms.Button btnNhaCungCap;
+        public System.Windows.Forms.Button btnBanHang;
+        public System.Windows.Forms.Button btnSetting;
+        public System.Windows.Forms.Button btnPhanQuyen;
+        public System.Windows.Forms.Button btnThongKe;
+        public System.Windows.Forms.Button btnBaohanh;
     }
 }
 

@@ -11,5 +11,9 @@ namespace DAL
     {
         KetNoiDatabase KetNoi = new KetNoiDatabase();
         
+        public DataTable DsLoaicV(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }

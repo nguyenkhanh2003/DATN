@@ -22,9 +22,16 @@ namespace DoAnCShap
 
         Login_BUS bus = new Login_BUS();
         NhanVien nv = new NhanVien();
+       
         private static bool _exiting;
         MD5 md = MD5.Create();
 
+        //public void HienThiCV()
+        //{
+        //    comboBoxChuvVu.DataSource = bus.HienThiDScV("Select * From ChucVu");
+        //    comboBoxChuvVu.DisplayMember = "TenCV";
+        //    comboBoxChuvVu.ValueMember = "MaCV";
+        //}
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
             if (!_exiting && MessageBox.Show("Are you sure want to exit?",
@@ -107,15 +114,18 @@ namespace DoAnCShap
             //{
             //    MessageBox.Show("Fail Username and PassWord !");
             //}    
-
+            string username = txtTenDN.Text;
+            string password = txtMatKhau.Text;
+            //string chucvu = comboBoxChuvVu.SelectedValue.ToString();
             string query = "SELECT MaCV from NhanVien WHERE Username = @username and password=@password";
             string returnValue = "";
             using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True"))
             {
                 using (SqlCommand sqlcmd = new SqlCommand(query, con))
                 {
-                    sqlcmd.Parameters.Add("@username", SqlDbType.VarChar).Value = txtTenDangNhap.Text;
-                    sqlcmd.Parameters.Add("@password", SqlDbType.VarChar).Value =CreateMd5(txtMatKhau.Text);
+                    //sqlcmd.Parameters.Add("@tencv", SqlDbType.VarChar).Value = chucvu;
+                    sqlcmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+                    sqlcmd.Parameters.Add("@password", SqlDbType.VarChar).Value =CreateMd5(password);
                     con.Open();
                     returnValue = (string)sqlcmd.ExecuteScalar();
                 }
@@ -127,25 +137,70 @@ namespace DoAnCShap
                 return;
             }
             returnValue = returnValue.Trim();
-            if (returnValue == "CV02")
+            try
             {
-                MessageBox.Show("You are logged in as an Admin");
-                Form1 fr1 = new Form1();
-                fr1.Show();
-                fr1.btnNhanVien.Enabled = false;
-                fr1.btnKhachHang.Enabled = false;
-                fr1.btnLinhKien.Enabled = false;
-                SetValueForText1 = txtTenDangNhap.Text;
-                this.Hide();
+                if (returnValue =="CV01")
+                {
+                    MessageBox.Show("Login AS Admin");
+                    Form1 fr1 = new Form1();
+                    SetValueForText1 = username;
+                    fr1.Show();
+                    this.Hide();
+                }
+                else if (returnValue == "CV02")
+                {
+                    MessageBox.Show("Login AS User");
+                    Form1 fr1 = new Form1();
+                    SetValueForText1 = txtTenDN.Text;
+                    fr1.btnNhanVien.Enabled = false;
+                    fr1.btnKhachHang.Enabled = false;
+                    fr1.btnLinhKien.Enabled = false;
+                    fr1.btnLoaiLK.Enabled = false;
+                    fr1.btnThongKe.Enabled = false;
+                    fr1.btnSetting.Enabled = false;
+                    fr1.btnNhaCungCap.Enabled = false;
+                    fr1.btnPhieuNhap.Enabled = false;
+                    fr1.btnHoaDon.Enabled = false;
+                    fr1.btnPhanQuyen.Enabled = false;
+                    fr1.Show();
+                    this.Hide();
+                }
+                else if(returnValue=="CV03")
+                {
+                    MessageBox.Show("Login AS User");
+                    Form1 fr1 = new Form1();
+                    SetValueForText1 = txtTenDN.Text;
+                    fr1.btnNhanVien.Enabled = false;
+                    fr1.btnKhachHang.Enabled = false;
+                    fr1.btnLinhKien.Enabled = false;
+                    fr1.btnLoaiLK.Enabled = false;
+                    fr1.btnThongKe.Enabled = false;
+                    fr1.btnSetting.Enabled = false;
+                    fr1.btnNhaCungCap.Enabled = false;
+                    fr1.btnBanHang.Enabled = false;
+                    fr1.btnBaohanh.Enabled = false;
+                    //fr1.btnPhieuNhap.Enabled = false;
+                    fr1.btnHoaDon.Enabled = false;
+                    fr1.btnPhanQuyen.Enabled = false;
+                    fr1.Show();
+                    this.Hide();
+                }    
+
             }
-            else if (returnValue == "CV01")
+            catch (Exception ex)
             {
-                MessageBox.Show("You are logged in as a User");
-                Frm_DangNhap fr2 = new Frm_DangNhap();
-                fr2.Show();
-                this.Hide();
+
             }
-            
+           
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

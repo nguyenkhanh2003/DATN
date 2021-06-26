@@ -12,5 +12,9 @@ namespace BUS
     {
         Login_DAL bus = new Login_DAL();
        
+        public DataTable HienThiDScV(string condition)
+        {
+            return bus.DsLoaicV(condition);
+        }
     }
 }
