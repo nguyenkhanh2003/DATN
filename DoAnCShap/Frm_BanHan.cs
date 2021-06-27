@@ -25,6 +25,8 @@ namespace DoAnCShap
         HoaDonBanHang hdbh = new HoaDonBanHang();
         CT_HoaDonBanHang cthdbh = new CT_HoaDonBanHang();
         KhachHang AddKH = new KhachHang();
+        
+        Form1 f1 = new Form1();
         string MaLK = "";
         public void HienThiSanPham()
         {
@@ -33,9 +35,9 @@ namespace DoAnCShap
             comboBoxSP.ValueMember = "MaLK";
         }
 
-        public void HienThiNhanVien()
+        public void HienThiNhanVien(string labelHienTenDN)
         {
-            comboBoxNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien");
+            comboBoxNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'"+labelHienTenDN+"'");
             comboBoxNV.DisplayMember = "TenNV";
             comboBoxNV.ValueMember = "MaNV";
         }
@@ -80,7 +82,7 @@ namespace DoAnCShap
         private void Frm_BanHang_Load(object sender, EventArgs e)
         {
             HienThiSanPham();
-            HienThiNhanVien();
+            
         }
 
        
@@ -284,7 +286,9 @@ namespace DoAnCShap
         private void Frm_BanHan_Load(object sender, EventArgs e)
         {
             HienThiSanPham();
-            HienThiNhanVien();
+            //labelHienThiTenDangNhap.Text = Login.SetValueForText1;
+            string condition = Login.SetValueForText2;
+            HienThiNhanVien(condition);
             XuLyChucNang(true, false);
             btnXoaSP.Enabled = false;
         }

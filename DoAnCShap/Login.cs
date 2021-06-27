@@ -87,6 +87,7 @@ namespace DoAnCShap
         }
 
         public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
 
         public static string BtnPhanQuyen;
 
@@ -144,6 +145,7 @@ namespace DoAnCShap
                     MessageBox.Show("Login AS Admin");
                     Form1 fr1 = new Form1();
                     SetValueForText1 = username;
+                    SetValueForText2 = username;
                     fr1.Show();
                     this.Hide();
                 }
@@ -152,6 +154,7 @@ namespace DoAnCShap
                     MessageBox.Show("Login AS User");
                     Form1 fr1 = new Form1();
                     SetValueForText1 = txtTenDN.Text;
+                    SetValueForText2 = username;
                     fr1.btnNhanVien.Enabled = false;
                     fr1.btnKhachHang.Enabled = false;
                     fr1.btnLinhKien.Enabled = false;
@@ -170,6 +173,7 @@ namespace DoAnCShap
                     MessageBox.Show("Login AS User");
                     Form1 fr1 = new Form1();
                     SetValueForText1 = txtTenDN.Text;
+                    SetValueForText2 = username;
                     fr1.btnNhanVien.Enabled = false;
                     fr1.btnKhachHang.Enabled = false;
                     fr1.btnLinhKien.Enabled = false;

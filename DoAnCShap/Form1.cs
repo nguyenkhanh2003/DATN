@@ -18,10 +18,10 @@ namespace DoAnCShap
             hideSubMenu();
         }
 
-        public void funData(TextBox txtTenHienThi)
-        {
-            labelHienThiTenDangNhap.Text = txtTenHienThi.Text;
-        }
+        //public void funData(TextBox txtTenHienThi)
+        //{
+        //    labelHienThiTenDangNhap.Text = txtTenHienThi.Text;
+        //}
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -272,5 +272,13 @@ namespace DoAnCShap
             //chart title  
             chart1.Titles.Add("Salary Chart");
         }
+
+        private void labelHienThiTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public static string SetValueForText1 = "";
+
     }
 }

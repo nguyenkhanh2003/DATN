@@ -41,7 +41,7 @@ namespace DoAnCShap
         }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
-
+            fillChart();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,6 +68,18 @@ namespace DoAnCShap
                 string condition = comboBoxNam.Text;
                 HienThiDoanhThuTheoNam(condition);
             }    
+        }
+
+        private void fillChart()
+        {
+            //AddXY value in chart1 in series named as Salary  
+            chart1.Series["Salary"].Points.AddXY("Hổm Nay", "100");
+            chart1.Series["Salary"].Points.AddXY("Tháng Này", "800");
+            chart1.Series["Salary"].Points.AddXY("Năm Nay", "8000");
+            //chart1.Series["Salary"].Points.AddXY("Khách Hàng", "10000");
+            //chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
+            //chart title  
+            chart1.Titles.Add("Doanh Thu Hóa Đơn Bán");
         }
     }
 }
