@@ -259,7 +259,7 @@ namespace DoAnCShap
             series1.Legend = "Legend1";
             series1.Name = "Salary";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(622, 330);
+            this.chart1.Size = new System.Drawing.Size(622, 345);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
             // 

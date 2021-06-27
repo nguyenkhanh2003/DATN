@@ -26,12 +26,12 @@ namespace DoAnCShap
         private static bool _exiting;
         MD5 md = MD5.Create();
 
-        //public void HienThiCV()
-        //{
-        //    comboBoxChuvVu.DataSource = bus.HienThiDScV("Select * From ChucVu");
-        //    comboBoxChuvVu.DisplayMember = "TenCV";
-        //    comboBoxChuvVu.ValueMember = "MaCV";
-        //}
+        public void HienThiCV()
+        {
+            comboBoxCV.DataSource = bus.HienThiDScV("Select * From ChucVu");
+            comboBoxCV.DisplayMember = "TenCV";
+            comboBoxCV.ValueMember = "MaCV";
+        }
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
             if (!_exiting && MessageBox.Show("Are you sure want to exit?",
@@ -117,7 +117,7 @@ namespace DoAnCShap
             //}    
             string username = txtTenDN.Text;
             string password = txtMatKhau.Text;
-            //string chucvu = comboBoxChuvVu.SelectedValue.ToString();
+            string chucvu = comboBoxCV.SelectedValue.ToString();
             string query = "SELECT MaCV from NhanVien WHERE Username = @username and password=@password";
             string returnValue = "";
             using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True"))
@@ -140,7 +140,7 @@ namespace DoAnCShap
             returnValue = returnValue.Trim();
             try
             {
-                if (returnValue =="CV01")
+                if (returnValue ==chucvu)
                 {
                     MessageBox.Show("Login AS Admin");
                     Form1 fr1 = new Form1();
@@ -200,7 +200,7 @@ namespace DoAnCShap
 
         private void Login_Load(object sender, EventArgs e)
         {
-           
+            HienThiCV();
         }
 
         private void txtMatKhau_TextChanged(object sender, EventArgs e)

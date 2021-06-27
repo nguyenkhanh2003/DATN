@@ -73,12 +73,12 @@ namespace DoAnCShap
         private void fillChart()
         {
             //AddXY value in chart1 in series named as Salary  
-            chart1.Series["Salary"].Points.AddXY("Hổm Nay", "100");
-            chart1.Series["Salary"].Points.AddXY("Tháng Này", "800");
-            chart1.Series["Salary"].Points.AddXY("Năm Nay", "8000");
-            //chart1.Series["Salary"].Points.AddXY("Khách Hàng", "10000");
-            //chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
-            //chart title  
+            //chart1.Series["Salary"].Points.AddXY("Hổm Nay","999");
+            //chart1.Series["Salary"].Points.AddXY("Tháng Này", "800");
+            //chart1.Series["Salary"].Points.AddXY("Năm Nay", "8000");
+            chart1.DataSource = bus.DoanhThuTatCa("");
+            chart1.ChartAreas["ChartArea1"].AxisX.Title = "DoanhThu";
+            //chart1.Series["Salary"].XValueMember = "DoanhThu";
             chart1.Titles.Add("Doanh Thu Hóa Đơn Bán");
         }
     }

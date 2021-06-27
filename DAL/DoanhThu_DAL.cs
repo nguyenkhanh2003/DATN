@@ -31,5 +31,7 @@ namespace DAL
         {
              return KetNoi.GetDataTable(""+condiiton);
         }
+
+        
     }
 }
