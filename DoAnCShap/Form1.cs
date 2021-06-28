@@ -149,11 +149,24 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Bán Hàng";
         }
 
+        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             lbl_HienThiForm.Text = "Home";
             fillChart();
             labelHienThiTenDangNhap.Text= Login.SetValueForText1;
+            Login frmDN = new Login();
+            frmDN.ShowDialog();
+            if (Login.IsClose) this.Close();
+            if (Login.QLNV) btnNhanVien.Enabled = true; else btnNhanVien.Enabled = false;
+            if (Login.QLKH) btnKhachHang.Enabled = true; else btnKhachHang.Enabled = false;
+            if (Login.QLLK) btnLinhKien.Enabled = true; else btnLinhKien.Enabled = false;
+            if (Login.QLBH) btnBanHang.Enabled = true; else btnBanHang.Enabled = false;
+            if (Login.QLNCC) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Enabled = false;
+            if (Login.QLLLK) btnLoaiLK.Enabled = true; else btnLoaiLK.Enabled = false;
+            if (Login.QLNK) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Enabled = false;
+            if (Login.BaoHanh) btnBaohanh.Enabled = true; else btnBaohanh.Enabled = false;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -15,5 +15,20 @@ namespace DAL
         {
             return KetNoi.GetDataTable("" + condition);
         }
+
+        public DataTable DangNhap(string username,string password)
+        {
+            return KetNoi.GetDataTable("Select * From NhanVien Where UserName=N'" + username + "' and PassWord=N'" + password + "'");
+        }
+
+        public DataTable GetPhanQuyen(string condition)
+        {
+            return KetNoi.GetDataTable("select * From ChucVu Where QLNV='"+condition+"'");
+        }
+
+        public DataTable GetLogin(string username,string password)
+        {
+            return KetNoi.GetDataTable("Select * From NhanVien,ChucVu Where  NhanVien.UserName=N'" + username + "'and NhanVien.PassWord=N'" + password + "' and ChucVu.MaCV=NhanVien.MaCV");
+        }
     }
 }

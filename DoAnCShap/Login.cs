@@ -27,9 +27,6 @@ namespace DoAnCShap
 
         public void HienThiCV()
         {
-            comboBoxCV.DataSource = bus.HienThiDScV("Select * From ChucVu");
-            comboBoxCV.DisplayMember = "TenCV";
-            comboBoxCV.ValueMember = "MaCV";
         }
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
@@ -92,10 +89,31 @@ namespace DoAnCShap
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
         public static string ID_USER = "";
+        public static bool IsClose = false;
+        public static bool QLNV;//4
+        public static bool QLKH;
+        public static bool QLLK;
+        public static bool QLLLK;
+        public static bool QLBH;
+        public static bool BaoHanh;
+        public static bool QLNCC;
+        public static bool QLNK;
+        
+        public static string TenTaiKhoan = "";//lấy thêm têm tài khoản nhé, 
+        public bool PhanQuyen(int col)
+        {
+            bool KiemTra = false;
+            for(int i=0;i<bus.GetLogin(txtTenDN.Text,CreateMd5(txtMatKhau.Text)).Rows.Count;i++)
+            {
+                if (bus.GetLogin(txtTenDN.Text,CreateMd5(txtMatKhau.Text)).Rows[i][col].ToString() =="True")
+                    return KiemTra = true;
+            }
+            return KiemTra;
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtTenDN.Text;
-            string password = txtMatKhau.Text;
+            //string username = txtTenDN.Text;
+            //string password = txtMatKhau.Text;
             //string chucvu = comboBoxCV.SelectedValue.ToString();
             //string query = "SELECT NhanVien.MaCV,ChucVu.ToanQ from NhanVien,ChucVu WHERE ChucVu.MacV=NhanVien.MaCV and Username = @username and password=@password";
             //string returnValue = "";
@@ -172,32 +190,26 @@ namespace DoAnCShap
             //    fr1.Show();
             //    this.Hide();
             //}
-
-            try
+            int count = bus.GetLogin(txtTenDN.Text, CreateMd5(txtMatKhau.Text)).Rows.Count;
+            //int count = bus.GetLogin(txtTenDN.Text,txtMatKhau.Text).Rows.Count;
+            if (count==0)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien WHERE username ='" + username + "' and password='" +CreateMd5(password) + "'", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt != null)
-                {
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        //id = dr["id_user"].ToString();
-                        MessageBox.Show("Thành Công");
-                    }
-                }
+                MessageBox.Show("Thất Bại");
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
-            }
-            finally
-            {
-                con.Close();
-            }
-
+                //TenTaiKhoan = bus.GetLogin(txtTenDN.Text, txtMatKhau.Text).Rows[0][3].ToString();
+                MessageBox.Show("Đăng Nhập Thành Công");
+                QLNV = PhanQuyen(15);
+                QLKH = PhanQuyen(16);
+                QLLK = PhanQuyen(17);
+                QLBH = PhanQuyen(18);
+                QLNCC = PhanQuyen(19);
+                QLLLK = PhanQuyen(20);
+                QLNK = PhanQuyen(21);
+                BaoHanh = PhanQuyen(22);
+                this.Close();
+            }    
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -205,9 +217,6 @@ namespace DoAnCShap
             HienThiCV();
         }
 
-        private void txtMatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

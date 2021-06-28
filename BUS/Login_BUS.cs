@@ -16,5 +16,20 @@ namespace BUS
         {
             return bus.DsLoaicV(condition);
         }
+
+        public DataTable DangNhap(string username,string password)
+        {
+            return bus.DangNhap(username, password);
+        }
+
+        public DataTable GetPhanQuyen(string condition)
+        {
+            return bus.GetPhanQuyen(condition);
+        }
+
+        public DataTable GetLogin(string macv,string tencv)
+        {
+            return bus.GetLogin(macv, tencv);
+        }
     }
 }
