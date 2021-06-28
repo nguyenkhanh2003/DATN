@@ -38,18 +38,6 @@ namespace DoAnCShap
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCV = new System.Windows.Forms.DataGridView();
-            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QLNV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLKH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLBH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLNCC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLNK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLBaoHanh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ToanQ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -68,12 +56,30 @@ namespace DoAnCShap
             this.checkBoxBaoHanh = new System.Windows.Forms.CheckBox();
             this.checkBoxNhapKho = new System.Windows.Forms.CheckBox();
             this.checkBoxLoaiLLK = new System.Windows.Forms.CheckBox();
-            this.checkBoxToanQ = new System.Windows.Forms.CheckBox();
+            this.checkBoxPhanQuyen = new System.Windows.Forms.CheckBox();
             this.checkBoxLinhKien = new System.Windows.Forms.CheckBox();
             this.checkBoxNCC = new System.Windows.Forms.CheckBox();
             this.checkBoxNhanViem = new System.Windows.Forms.CheckBox();
             this.checkBoxkH = new System.Windows.Forms.CheckBox();
             this.checkBoxBanHang = new System.Windows.Forms.CheckBox();
+            this.checkBoxThongKe = new System.Windows.Forms.CheckBox();
+            this.checkBoxHoaDon = new System.Windows.Forms.CheckBox();
+            this.checkBoxSetting = new System.Windows.Forms.CheckBox();
+            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QLNV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLKH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLBH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLNCC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLNK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLBaoHanh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ToanQ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ThongKe = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.HoaDon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).BeginInit();
             this.panel3.SuspendLayout();
@@ -117,7 +123,7 @@ namespace DoAnCShap
             this.dataGridViewCV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewCV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridViewCV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +132,7 @@ namespace DoAnCShap
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCV,
             this.TenCV,
@@ -139,6 +145,9 @@ namespace DoAnCShap
             this.QLNK,
             this.QLBaoHanh,
             this.ToanQ,
+            this.ThongKe,
+            this.HoaDon,
+            this.Setting,
             this.TrangThai});
             this.dataGridViewCV.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -165,88 +174,6 @@ namespace DoAnCShap
             this.dataGridViewCV.TabIndex = 25;
             this.dataGridViewCV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCV_CellClick);
             this.dataGridViewCV.DoubleClick += new System.EventHandler(this.dataGridViewCV_DoubleClick);
-            // 
-            // MaCV
-            // 
-            this.MaCV.DataPropertyName = "MaCV";
-            this.MaCV.HeaderText = "Mã Chức Vụ";
-            this.MaCV.MinimumWidth = 6;
-            this.MaCV.Name = "MaCV";
-            // 
-            // TenCV
-            // 
-            this.TenCV.DataPropertyName = "TenCV";
-            this.TenCV.HeaderText = "Tên Chức Vụ";
-            this.TenCV.MinimumWidth = 6;
-            this.TenCV.Name = "TenCV";
-            // 
-            // QLNV
-            // 
-            this.QLNV.DataPropertyName = "QLNV";
-            this.QLNV.HeaderText = "Quản Lý Nhân Viên";
-            this.QLNV.Name = "QLNV";
-            this.QLNV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLKH
-            // 
-            this.QLKH.DataPropertyName = "QLKH";
-            this.QLKH.HeaderText = "Quản Lý Khách Hàng";
-            this.QLKH.Name = "QLKH";
-            this.QLKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLLK
-            // 
-            this.QLLK.DataPropertyName = "QLLK";
-            this.QLLK.HeaderText = "Quản Lý LK";
-            this.QLLK.Name = "QLLK";
-            this.QLLK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLLK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLBH
-            // 
-            this.QLBH.DataPropertyName = "QLBH";
-            this.QLBH.HeaderText = "QL Bán Hàng";
-            this.QLBH.Name = "QLBH";
-            // 
-            // QLNCC
-            // 
-            this.QLNCC.DataPropertyName = "QLNCC";
-            this.QLNCC.HeaderText = "QL NCC";
-            this.QLNCC.Name = "QLNCC";
-            // 
-            // QLLLK
-            // 
-            this.QLLLK.DataPropertyName = "QLLLK";
-            this.QLLLK.HeaderText = "QL Loại LK";
-            this.QLLLK.Name = "QLLLK";
-            // 
-            // QLNK
-            // 
-            this.QLNK.DataPropertyName = "QLNK";
-            this.QLNK.HeaderText = "QL NK";
-            this.QLNK.Name = "QLNK";
-            // 
-            // QLBaoHanh
-            // 
-            this.QLBaoHanh.DataPropertyName = "QLBaoHanh";
-            this.QLBaoHanh.HeaderText = "QL Bảo Hành";
-            this.QLBaoHanh.Name = "QLBaoHanh";
-            // 
-            // ToanQ
-            // 
-            this.ToanQ.DataPropertyName = "ToanQ";
-            this.ToanQ.HeaderText = "Toàn Quyền";
-            this.ToanQ.Name = "ToanQ";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel3
             // 
@@ -408,10 +335,13 @@ namespace DoAnCShap
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.checkBoxSetting);
+            this.panel4.Controls.Add(this.checkBoxHoaDon);
+            this.panel4.Controls.Add(this.checkBoxThongKe);
             this.panel4.Controls.Add(this.checkBoxBaoHanh);
             this.panel4.Controls.Add(this.checkBoxNhapKho);
             this.panel4.Controls.Add(this.checkBoxLoaiLLK);
-            this.panel4.Controls.Add(this.checkBoxToanQ);
+            this.panel4.Controls.Add(this.checkBoxPhanQuyen);
             this.panel4.Controls.Add(this.checkBoxLinhKien);
             this.panel4.Controls.Add(this.checkBoxNCC);
             this.panel4.Controls.Add(this.checkBoxNhanViem);
@@ -464,15 +394,15 @@ namespace DoAnCShap
             this.checkBoxLoaiLLK.Text = "Quản Lý Loại Linh Kiiện";
             this.checkBoxLoaiLLK.UseVisualStyleBackColor = true;
             // 
-            // checkBoxToanQ
+            // checkBoxPhanQuyen
             // 
-            this.checkBoxToanQ.AutoSize = true;
-            this.checkBoxToanQ.Location = new System.Drawing.Point(519, 41);
-            this.checkBoxToanQ.Name = "checkBoxToanQ";
-            this.checkBoxToanQ.Size = new System.Drawing.Size(85, 17);
-            this.checkBoxToanQ.TabIndex = 15;
-            this.checkBoxToanQ.Text = "Toàn Quyền";
-            this.checkBoxToanQ.UseVisualStyleBackColor = true;
+            this.checkBoxPhanQuyen.AutoSize = true;
+            this.checkBoxPhanQuyen.Location = new System.Drawing.Point(519, 41);
+            this.checkBoxPhanQuyen.Name = "checkBoxPhanQuyen";
+            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(85, 17);
+            this.checkBoxPhanQuyen.TabIndex = 15;
+            this.checkBoxPhanQuyen.Text = "Phân Quyền";
+            this.checkBoxPhanQuyen.UseVisualStyleBackColor = true;
             // 
             // checkBoxLinhKien
             // 
@@ -523,6 +453,150 @@ namespace DoAnCShap
             this.checkBoxBanHang.TabIndex = 19;
             this.checkBoxBanHang.Text = "Bán Hàng";
             this.checkBoxBanHang.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxThongKe
+            // 
+            this.checkBoxThongKe.AutoSize = true;
+            this.checkBoxThongKe.Location = new System.Drawing.Point(174, 139);
+            this.checkBoxThongKe.Name = "checkBoxThongKe";
+            this.checkBoxThongKe.Size = new System.Drawing.Size(73, 17);
+            this.checkBoxThongKe.TabIndex = 12;
+            this.checkBoxThongKe.Text = "Thống Kê";
+            this.checkBoxThongKe.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHoaDon
+            // 
+            this.checkBoxHoaDon.AutoSize = true;
+            this.checkBoxHoaDon.Location = new System.Drawing.Point(361, 139);
+            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
+            this.checkBoxHoaDon.Size = new System.Drawing.Size(69, 17);
+            this.checkBoxHoaDon.TabIndex = 12;
+            this.checkBoxHoaDon.Text = "Hóa Đơn";
+            this.checkBoxHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSetting
+            // 
+            this.checkBoxSetting.AutoSize = true;
+            this.checkBoxSetting.Location = new System.Drawing.Point(519, 139);
+            this.checkBoxSetting.Name = "checkBoxSetting";
+            this.checkBoxSetting.Size = new System.Drawing.Size(59, 17);
+            this.checkBoxSetting.TabIndex = 12;
+            this.checkBoxSetting.Text = "Setting";
+            this.checkBoxSetting.UseVisualStyleBackColor = true;
+            // 
+            // MaCV
+            // 
+            this.MaCV.DataPropertyName = "MaCV";
+            this.MaCV.HeaderText = "Mã Chức Vụ";
+            this.MaCV.MinimumWidth = 6;
+            this.MaCV.Name = "MaCV";
+            this.MaCV.Width = 114;
+            // 
+            // TenCV
+            // 
+            this.TenCV.DataPropertyName = "TenCV";
+            this.TenCV.HeaderText = "Tên Chức Vụ";
+            this.TenCV.MinimumWidth = 6;
+            this.TenCV.Name = "TenCV";
+            this.TenCV.Width = 118;
+            // 
+            // QLNV
+            // 
+            this.QLNV.DataPropertyName = "NhanVien";
+            this.QLNV.HeaderText = "Nhân Viên";
+            this.QLNV.Name = "QLNV";
+            this.QLNV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // QLKH
+            // 
+            this.QLKH.DataPropertyName = "KhachHang";
+            this.QLKH.HeaderText = "Khách Hàng";
+            this.QLKH.Name = "QLKH";
+            this.QLKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.QLKH.Width = 114;
+            // 
+            // QLLK
+            // 
+            this.QLLK.DataPropertyName = "LinhKien";
+            this.QLLK.HeaderText = "Linh Kiện";
+            this.QLLK.Name = "QLLK";
+            this.QLLK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLLK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.QLLK.Width = 93;
+            // 
+            // QLBH
+            // 
+            this.QLBH.DataPropertyName = "BanHang";
+            this.QLBH.HeaderText = "Bán Hàng";
+            this.QLBH.Name = "QLBH";
+            this.QLBH.Width = 79;
+            // 
+            // QLNCC
+            // 
+            this.QLNCC.DataPropertyName = "NhaCungCap";
+            this.QLNCC.HeaderText = "Nhà Cung Cấp";
+            this.QLNCC.Name = "QLNCC";
+            this.QLNCC.Width = 111;
+            // 
+            // QLLLK
+            // 
+            this.QLLLK.DataPropertyName = "LoaiLK";
+            this.QLLLK.HeaderText = "Loại Linh Kiện";
+            this.QLLLK.Name = "QLLLK";
+            this.QLLLK.Width = 106;
+            // 
+            // QLNK
+            // 
+            this.QLNK.DataPropertyName = "NhapKho";
+            this.QLNK.HeaderText = "Hóa Đơn Nhập";
+            this.QLNK.Name = "QLNK";
+            this.QLNK.Width = 113;
+            // 
+            // QLBaoHanh
+            // 
+            this.QLBaoHanh.DataPropertyName = "BaoHanh";
+            this.QLBaoHanh.HeaderText = "Bảo Hành";
+            this.QLBaoHanh.Name = "QLBaoHanh";
+            this.QLBaoHanh.Width = 80;
+            // 
+            // ToanQ
+            // 
+            this.ToanQ.DataPropertyName = "PhanQuyen";
+            this.ToanQ.HeaderText = "Phân Quyền";
+            this.ToanQ.Name = "ToanQ";
+            this.ToanQ.Width = 95;
+            // 
+            // ThongKe
+            // 
+            this.ThongKe.DataPropertyName = "ThongKe";
+            this.ThongKe.HeaderText = "Thống Kê";
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.Width = 78;
+            // 
+            // HoaDon
+            // 
+            this.HoaDon.DataPropertyName = "HoaDon";
+            this.HoaDon.HeaderText = "Hóa Đơn";
+            this.HoaDon.Name = "HoaDon";
+            this.HoaDon.Width = 74;
+            // 
+            // Setting
+            // 
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.Width = 59;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TrangThai.Width = 84;
             // 
             // Frm_ChucVu
             // 
@@ -578,7 +652,10 @@ namespace DoAnCShap
         private System.Windows.Forms.CheckBox checkBoxkH;
         private System.Windows.Forms.CheckBox checkBoxBanHang;
         private System.Windows.Forms.CheckBox checkBoxNhapKho;
-        private System.Windows.Forms.CheckBox checkBoxToanQ;
+        private System.Windows.Forms.CheckBox checkBoxPhanQuyen;
+        private System.Windows.Forms.CheckBox checkBoxSetting;
+        private System.Windows.Forms.CheckBox checkBoxHoaDon;
+        private System.Windows.Forms.CheckBox checkBoxThongKe;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCV;
         private System.Windows.Forms.DataGridViewCheckBoxColumn QLNV;
@@ -590,6 +667,9 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewCheckBoxColumn QLNK;
         private System.Windows.Forms.DataGridViewCheckBoxColumn QLBaoHanh;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ToanQ;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ThongKe;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn HoaDon;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

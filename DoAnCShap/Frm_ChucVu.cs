@@ -98,15 +98,18 @@ namespace DoAnCShap
 
                 cv.MaCV = txtMaCV.Text;
                 cv.TenCV = txtTenCV.Text;
-                cv.QLNV = checkBoxNhanViem.Checked;
-                cv.QLKH = checkBoxkH.Checked;
-                cv.QLLk = checkBoxLinhKien.Checked;
-                cv.QLBH = checkBoxBanHang.Checked;
-                cv.QLNCC = checkBoxNCC.Checked;
-                cv.QLLLk = checkBoxLoaiLLK.Checked;
-                cv.QLNK = checkBoxNhapKho.Checked;
-                cv.QLBaoHanh = checkBoxBaoHanh.Checked;
-                cv.ToanQ = checkBoxToanQ.Checked;
+                cv.NhanVien = checkBoxNhanViem.Checked;
+                cv.KhachHang = checkBoxkH.Checked;
+                cv.LinhKien = checkBoxLinhKien.Checked;
+                cv.BanHang = checkBoxBanHang.Checked;
+                cv.NhaCungCap = checkBoxNCC.Checked;
+                cv.LoaiLK = checkBoxLoaiLLK.Checked;
+                cv.NhapKho = checkBoxNhapKho.Checked;
+                cv.BaoHanh = checkBoxBaoHanh.Checked;
+                cv.PhanQuyen = checkBoxPhanQuyen.Checked;
+                cv.ThongKe = checkBoxThongKe.Checked;
+                cv.HoaDon = checkBoxHoaDon.Checked;
+                cv.Setting = checkBoxSetting.Checked;
                 cv.TrangThai = cboTrangThai.Text;
                 bus.AddChucVu(cv);
                 MessageBox.Show("Thành Công");
@@ -117,15 +120,18 @@ namespace DoAnCShap
             {
                 cv.MaCV = txtMaCV.Text;
                 cv.TenCV = txtTenCV.Text;
-                cv.QLNV = checkBoxNhanViem.Checked;
-                cv.QLKH = checkBoxkH.Checked;
-                cv.QLLk = checkBoxLinhKien.Checked;
-                cv.QLBH = checkBoxBanHang.Checked;
-                cv.QLNCC = checkBoxNCC.Checked;
-                cv.QLLLk = checkBoxLoaiLLK.Checked;
-                cv.QLNK = checkBoxNhapKho.Checked;
-                cv.QLBaoHanh = checkBoxBaoHanh.Checked;
-                cv.ToanQ = checkBoxToanQ.Checked;
+                cv.NhanVien = checkBoxNhanViem.Checked;
+                cv.KhachHang = checkBoxkH.Checked;
+                cv.LinhKien = checkBoxLinhKien.Checked;
+                cv.BanHang = checkBoxBanHang.Checked;
+                cv.NhaCungCap = checkBoxNCC.Checked;
+                cv.LoaiLK = checkBoxLoaiLLK.Checked;
+                cv.NhapKho = checkBoxNhapKho.Checked;
+                cv.BaoHanh = checkBoxBaoHanh.Checked;
+                cv.PhanQuyen = checkBoxPhanQuyen.Checked;
+                cv.ThongKe = checkBoxThongKe.Checked;
+                cv.HoaDon = checkBoxHoaDon.Checked;
+                cv.Setting = checkBoxSetting.Checked;
                 cv.TrangThai = cboTrangThai.Text;
                 bus.EditCV(cv);
                 MessageBox.Show("Thành Công");
@@ -148,12 +154,15 @@ namespace DoAnCShap
             checkBoxNhanViem.Checked =Convert.ToBoolean(row.Cells[2].Value.ToString());
             checkBoxkH.Checked= Convert.ToBoolean(row.Cells[3].Value.ToString());
             checkBoxLinhKien.Checked= Convert.ToBoolean(row.Cells[4].Value.ToString());
-            checkBoxBaoHanh.Checked= Convert.ToBoolean(row.Cells[5].Value.ToString());
+            checkBoxBanHang.Checked= Convert.ToBoolean(row.Cells[5].Value.ToString());
             checkBoxNCC.Checked= Convert.ToBoolean(row.Cells[6].Value.ToString());
             checkBoxLoaiLLK.Checked= Convert.ToBoolean(row.Cells[7].Value.ToString());
             checkBoxNhapKho.Checked= Convert.ToBoolean(row.Cells[8].Value.ToString());
             checkBoxBaoHanh.Checked= Convert.ToBoolean(row.Cells[9].Value.ToString());
-            checkBoxToanQ.Checked= Convert.ToBoolean(row.Cells[10].Value.ToString());
+            checkBoxPhanQuyen.Checked= Convert.ToBoolean(row.Cells[10].Value.ToString());
+            checkBoxThongKe.Checked = Convert.ToBoolean(row.Cells[11].Value.ToString());
+            checkBoxHoaDon.Checked = Convert.ToBoolean(row.Cells[12].Value.ToString());
+            checkBoxSetting.Checked = Convert.ToBoolean(row.Cells[13].Value.ToString());
             cboTrangThai.Text = row.Cells[11].Value.ToString();
         }
 
