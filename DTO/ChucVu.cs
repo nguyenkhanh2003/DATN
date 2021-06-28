@@ -10,6 +10,15 @@ namespace DTO
     {
         public string TenCV { get; set; }
         public string MaCV { get; set; }
-        public string TrangThai { get; set; }
+        public Boolean QLNV { get; set; }
+        public Boolean QLKH { get; set; }
+        public Boolean QLLk { get; set; }
+        public Boolean QLBH { get; set; }
+        public Boolean QLNCC { get; set; }
+        public Boolean QLLLk { get; set; }
+        public Boolean QLNK { get; set; }
+        public Boolean QLBaoHanh { get; set; }
+        public Boolean ToanQ { get; set; }
+        public String TrangThai { get; set; }
     }
 }

@@ -90,79 +90,112 @@ namespace DoAnCShap
 
         public static string BtnPhanQuyen;
 
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
+        public static string ID_USER = "";
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtTenDN.Text;
             string password = txtMatKhau.Text;
-            string chucvu = comboBoxCV.SelectedValue.ToString();
-            string query = "SELECT MaCV from NhanVien WHERE Username = @username and password=@password";
-            string returnValue = "";
-            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True"))
+            //string chucvu = comboBoxCV.SelectedValue.ToString();
+            //string query = "SELECT NhanVien.MaCV,ChucVu.ToanQ from NhanVien,ChucVu WHERE ChucVu.MacV=NhanVien.MaCV and Username = @username and password=@password";
+            //string returnValue = "";
+            ////int returnValue1 = 0;
+            //using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True"))
+            //{
+            //    using (SqlCommand sqlcmd = new SqlCommand(query, con))
+            //    {
+            //        //sqlcmd.Parameters.Add("@tencv", SqlDbType.VarChar).Value = chucvu;
+            //        sqlcmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+            //        sqlcmd.Parameters.Add("@password", SqlDbType.VarChar).Value = CreateMd5(password);
+            //        con.Open();
+            //        returnValue = (string)sqlcmd.ExecuteScalar();
+            //    }
+            //}
+            ////EDIT to avoid NRE 
+            //if (String.IsNullOrEmpty(returnValue))
+            //{
+            //    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+            //    return;
+            //}
+            //else if (String.IsNullOrEmpty(returnValue))
+            //{
+            //    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+            //    return;
+            //}
+            //returnValue = returnValue.Trim();
+            //if (returnValue == "CV01")
+            //{
+            //    MessageBox.Show("Đăng nhập thành công với quyền Admin");
+            //    Form1 fr1 = new Form1();
+            //    SetValueForText1 = username;
+            //    SetValueForText2 = username;
+            //    fr1.Show();
+            //    this.Hide();
+            //}
+            //else if (returnValue == "CV02")
+            //{
+            //    MessageBox.Show("Đăng nhập thành công với quyền User");
+            //    Form1 fr1 = new Form1();
+            //    SetValueForText1 = txtTenDN.Text;
+            //    SetValueForText2 = username;
+            //    fr1.btnNhanVien.Enabled = false;
+            //    fr1.btnKhachHang.Enabled = false;
+            //    fr1.btnLinhKien.Enabled = false;
+            //    fr1.btnLoaiLK.Enabled = false;
+            //    fr1.btnThongKe.Enabled = false;
+            //    fr1.btnSetting.Enabled = false;
+            //    fr1.btnNhaCungCap.Enabled = false;
+            //    fr1.btnPhieuNhap.Enabled = false;
+            //    fr1.btnHoaDon.Enabled = false;
+            //    fr1.btnPhanQuyen.Enabled = false;
+            //    fr1.Show();
+            //    this.Hide();
+            //}
+            //else if (returnValue == "CV03")
+            //{
+            //    MessageBox.Show("Đăng nhập thành công với quyền nhân viên kho");
+            //    Form1 fr1 = new Form1();
+            //    SetValueForText1 = txtTenDN.Text;
+            //    SetValueForText2 = username;
+            //    fr1.btnNhanVien.Enabled = false;
+            //    fr1.btnKhachHang.Enabled = false;
+            //    fr1.btnLinhKien.Enabled = false;
+            //    fr1.btnLoaiLK.Enabled = false;
+            //    fr1.btnThongKe.Enabled = false;
+            //    fr1.btnSetting.Enabled = false;
+            //    fr1.btnNhaCungCap.Enabled = false;
+            //    fr1.btnBanHang.Enabled = false;
+            //    fr1.btnBaohanh.Enabled = false;
+
+            //    fr1.btnHoaDon.Enabled = false;
+            //    fr1.btnPhanQuyen.Enabled = false;
+            //    fr1.Show();
+            //    this.Hide();
+            //}
+
+            try
             {
-                using (SqlCommand sqlcmd = new SqlCommand(query, con))
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien WHERE username ='" + username + "' and password='" +CreateMd5(password) + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt != null)
                 {
-                    //sqlcmd.Parameters.Add("@tencv", SqlDbType.VarChar).Value = chucvu;
-                    sqlcmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
-                    sqlcmd.Parameters.Add("@password", SqlDbType.VarChar).Value = CreateMd5(password);
-                    con.Open();
-                    returnValue = (string)sqlcmd.ExecuteScalar();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        //id = dr["id_user"].ToString();
+                        MessageBox.Show("Thành Công");
+                    }
                 }
             }
-            //EDIT to avoid NRE 
-            if (String.IsNullOrEmpty(returnValue))
+            catch (Exception)
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
-                return;
+                MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
             }
-            returnValue = returnValue.Trim();
-            if (returnValue == "CV01")
+            finally
             {
-                MessageBox.Show("Đăng nhập thành công với quyền Admin");
-                Form1 fr1 = new Form1();
-                SetValueForText1 = username;
-                SetValueForText2 = username;
-                fr1.Show();
-                this.Hide();
-            }
-            else if (returnValue == "CV02")
-            {
-                MessageBox.Show("Đăng nhập thành công với quyền User");
-                Form1 fr1 = new Form1();
-                SetValueForText1 = txtTenDN.Text;
-                SetValueForText2 = username;
-                fr1.btnNhanVien.Enabled = false;
-                fr1.btnKhachHang.Enabled = false;
-                fr1.btnLinhKien.Enabled = false;
-                fr1.btnLoaiLK.Enabled = false;
-                fr1.btnThongKe.Enabled = false;
-                fr1.btnSetting.Enabled = false;
-                fr1.btnNhaCungCap.Enabled = false;
-                fr1.btnPhieuNhap.Enabled = false;
-                fr1.btnHoaDon.Enabled = false;
-                fr1.btnPhanQuyen.Enabled = false;
-                fr1.Show();
-                this.Hide();
-            }
-            else if (returnValue == "CV03")
-            {
-                MessageBox.Show("Đăng nhập thành công với quyền nhân viên kho");
-                Form1 fr1 = new Form1();
-                SetValueForText1 = txtTenDN.Text;
-                SetValueForText2 = username;
-                fr1.btnNhanVien.Enabled = false;
-                fr1.btnKhachHang.Enabled = false;
-                fr1.btnLinhKien.Enabled = false;
-                fr1.btnLoaiLK.Enabled = false;
-                fr1.btnThongKe.Enabled = false;
-                fr1.btnSetting.Enabled = false;
-                fr1.btnNhaCungCap.Enabled = false;
-                fr1.btnBanHang.Enabled = false;
-                fr1.btnBaohanh.Enabled = false;
-                //fr1.btnPhieuNhap.Enabled = false;
-                fr1.btnHoaDon.Enabled = false;
-                fr1.btnPhanQuyen.Enabled = false;
-                fr1.Show();
-                this.Hide();
+                con.Close();
             }
 
         }

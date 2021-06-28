@@ -19,12 +19,12 @@ namespace DAL
 
         public void AddChucVu(ChucVu ex)
         {
-            KetNoi.ExecuteReader(@"Insert into ChucVu Values(N'" + ex.MaCV + "',N'" + ex.TenCV + "',N'" + ex.TrangThai + "') ");
+            KetNoi.ExecuteReader(@"Insert into ChucVu Values(N'" + ex.MaCV + "',N'" + ex.TenCV + "','" + ex.QLNV + "','" + ex.QLKH + "','" + ex.QLLk + "','" + ex.QLBH + "','" + ex.QLNCC + "','" + ex.QLLLk +"','"+ex.QLNK+"','"+ex.QLBaoHanh+"','"+ex.ToanQ+"',N'"+ex.TrangThai+"')");
         }
         
         public void EditChuCVu(ChucVu ex)
         {
-            KetNoi.ExecuteReader(@"Update ChucVu Set TencV=N'" + ex.TenCV + "',TrangThai=N'" + ex.TrangThai + "' Where MacV=N'"+ex.MaCV+"' ");
+            KetNoi.ExecuteReader(@"update ChucVu Set TenCV=N'"+ex.TenCV+"',QLNV='"+ex.QLNV+"',QLKH='"+ex.QLKH+"',QLLK='"+ex.QLLk+"',QLBH='"+ex.QLBH+"',QLNCC='"+ex.QLNCC+"',QLLLK='"+ex.QLLLk+"',QLNK='"+ex.QLNK+"',QLBaoHanh='"+ex.QLBaoHanh+"',ToanQ='"+ex.ToanQ+"',TrangThai=N'"+ex.TrangThai+"' Where MacV=N'"+ex.MaCV+"'");
         }
 
         public void DeleteChucVu(ChucVu ex)

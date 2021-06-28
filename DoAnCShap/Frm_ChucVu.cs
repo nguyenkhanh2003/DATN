@@ -89,19 +89,79 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa Nhập Tên Chức Vụ");
                 return;
             }    
-            if(cboTrangThai.Text=="")
-            {
-                MessageBox.Show("Chưa chọn trạng thái !");
-            }    
+            //if(cboTrangThai.Text=="")
+            //{
+            //    MessageBox.Show("Chưa chọn trạng thái !");
+            //}    
             if(flag==1)
             {
+
                 cv.MaCV = txtMaCV.Text;
                 cv.TenCV = txtTenCV.Text;
+                cv.QLNV = checkBoxNhanViem.Checked;
+                cv.QLKH = checkBoxkH.Checked;
+                cv.QLLk = checkBoxLinhKien.Checked;
+                cv.QLBH = checkBoxBanHang.Checked;
+                cv.QLNCC = checkBoxNCC.Checked;
+                cv.QLLLk = checkBoxLoaiLLK.Checked;
+                cv.QLNK = checkBoxNhapKho.Checked;
+                cv.QLBaoHanh = checkBoxBaoHanh.Checked;
+                cv.ToanQ = checkBoxToanQ.Checked;
                 cv.TrangThai = cboTrangThai.Text;
                 bus.AddChucVu(cv);
                 MessageBox.Show("Thành Công");
                
             }
+
+            if(flag==2)
+            {
+                cv.MaCV = txtMaCV.Text;
+                cv.TenCV = txtTenCV.Text;
+                cv.QLNV = checkBoxNhanViem.Checked;
+                cv.QLKH = checkBoxkH.Checked;
+                cv.QLLk = checkBoxLinhKien.Checked;
+                cv.QLBH = checkBoxBanHang.Checked;
+                cv.QLNCC = checkBoxNCC.Checked;
+                cv.QLLLk = checkBoxLoaiLLK.Checked;
+                cv.QLNK = checkBoxNhapKho.Checked;
+                cv.QLBaoHanh = checkBoxBaoHanh.Checked;
+                cv.ToanQ = checkBoxToanQ.Checked;
+                cv.TrangThai = cboTrangThai.Text;
+                bus.EditCV(cv);
+                MessageBox.Show("Thành Công");
+            }    
+            HienThiDSCV();
+        }
+
+        private void dataGridViewCV_DoubleClick(object sender, EventArgs e)
+        {
+            flag = 2;
+            XuLyChucNang(false, true);
+            XuLyTextBox(true,false);
+        }
+
+        private void dataGridViewCV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewCV.Rows[e.RowIndex];
+            txtMaCV.Text = row.Cells[0].Value.ToString();
+            txtTenCV.Text = row.Cells[1].Value.ToString();
+            checkBoxNhanViem.Checked =Convert.ToBoolean(row.Cells[2].Value.ToString());
+            checkBoxkH.Checked= Convert.ToBoolean(row.Cells[3].Value.ToString());
+            checkBoxLinhKien.Checked= Convert.ToBoolean(row.Cells[4].Value.ToString());
+            checkBoxBaoHanh.Checked= Convert.ToBoolean(row.Cells[5].Value.ToString());
+            checkBoxNCC.Checked= Convert.ToBoolean(row.Cells[6].Value.ToString());
+            checkBoxLoaiLLK.Checked= Convert.ToBoolean(row.Cells[7].Value.ToString());
+            checkBoxNhapKho.Checked= Convert.ToBoolean(row.Cells[8].Value.ToString());
+            checkBoxBaoHanh.Checked= Convert.ToBoolean(row.Cells[9].Value.ToString());
+            checkBoxToanQ.Checked= Convert.ToBoolean(row.Cells[10].Value.ToString());
+            cboTrangThai.Text = row.Cells[11].Value.ToString();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            cv.MaCV = txtMaCV.Text;
+            bus.DeleteChucVu(cv);
+            MessageBox.Show("Thành Công");
             HienThiDSCV();
         }
     }
