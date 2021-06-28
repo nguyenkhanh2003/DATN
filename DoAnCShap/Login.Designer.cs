@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCV = new System.Windows.Forms.ComboBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenDN = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxCV = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +82,15 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
+            // comboBoxCV
+            // 
+            this.comboBoxCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCV.FormattingEnabled = true;
+            this.comboBoxCV.Location = new System.Drawing.Point(210, 18);
+            this.comboBoxCV.Name = "comboBoxCV";
+            this.comboBoxCV.Size = new System.Drawing.Size(188, 26);
+            this.comboBoxCV.TabIndex = 3;
+            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,11 +117,23 @@
             // txtTenDN
             // 
             this.txtTenDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDN.Location = new System.Drawing.Point(210, 56);
+            this.txtTenDN.Location = new System.Drawing.Point(210, 63);
             this.txtTenDN.Multiline = true;
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(188, 25);
             this.txtTenDN.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(44, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Chức Vụ";
             // 
             // label2
             // 
@@ -120,7 +141,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(44, 59);
+            this.label2.Location = new System.Drawing.Point(44, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 0;
@@ -141,26 +162,6 @@
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click_1);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(44, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Chức Vụ";
-            // 
-            // comboBoxCV
-            // 
-            this.comboBoxCV.FormattingEnabled = true;
-            this.comboBoxCV.Location = new System.Drawing.Point(210, 18);
-            this.comboBoxCV.Name = "comboBoxCV";
-            this.comboBoxCV.Size = new System.Drawing.Size(188, 23);
-            this.comboBoxCV.TabIndex = 3;
             // 
             // Login
             // 

@@ -100,6 +100,7 @@ namespace DoAnCShap
                 cv.TrangThai = cboTrangThai.Text;
                 bus.AddChucVu(cv);
                 MessageBox.Show("Thành Công");
+               
             }
             HienThiDSCV();
         }

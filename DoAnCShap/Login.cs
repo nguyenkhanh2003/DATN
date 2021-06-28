@@ -94,6 +94,7 @@ namespace DoAnCShap
         {
             string username = txtTenDN.Text;
             string password = txtMatKhau.Text;
+            string chucvu = comboBoxCV.SelectedValue.ToString();
             string query = "SELECT MaCV from NhanVien WHERE Username = @username and password=@password";
             string returnValue = "";
             using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True"))
@@ -114,10 +115,9 @@ namespace DoAnCShap
                 return;
             }
             returnValue = returnValue.Trim();
-
             if (returnValue == "CV01")
             {
-                MessageBox.Show("Login AS Admin");
+                MessageBox.Show("Đăng nhập thành công với quyền Admin");
                 Form1 fr1 = new Form1();
                 SetValueForText1 = username;
                 SetValueForText2 = username;
@@ -126,7 +126,7 @@ namespace DoAnCShap
             }
             else if (returnValue == "CV02")
             {
-                MessageBox.Show("Login AS User");
+                MessageBox.Show("Đăng nhập thành công với quyền User");
                 Form1 fr1 = new Form1();
                 SetValueForText1 = txtTenDN.Text;
                 SetValueForText2 = username;
@@ -145,7 +145,7 @@ namespace DoAnCShap
             }
             else if (returnValue == "CV03")
             {
-                MessageBox.Show("Login AS User");
+                MessageBox.Show("Đăng nhập thành công với quyền nhân viên kho");
                 Form1 fr1 = new Form1();
                 SetValueForText1 = txtTenDN.Text;
                 SetValueForText2 = username;
@@ -164,7 +164,6 @@ namespace DoAnCShap
                 fr1.Show();
                 this.Hide();
             }
-
 
         }
 
