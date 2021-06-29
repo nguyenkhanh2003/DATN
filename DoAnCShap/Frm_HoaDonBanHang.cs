@@ -380,7 +380,13 @@ namespace DoAnCShap
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-           
+            Frm_InHoaDon inhoadon = new Frm_InHoaDon();
+            inhoadon.ShowDialog();
+        }
+
+        public void RePortLoad(object seder,EventArgs e)
+        {
+            
         }
     }
 }

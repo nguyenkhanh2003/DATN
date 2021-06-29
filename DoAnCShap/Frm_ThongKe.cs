@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using System.Data.SqlClient;
+
 namespace DoAnCShap
 {
     public partial class Frm_ThongKe : Form
@@ -37,7 +39,9 @@ namespace DoAnCShap
 
         public void HienThiDoanhThuTheoNgay(string condition, string condition1)
         {
-            dataGridView1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where(NgayLapHDBH) BETWEEN '"+condition+"' and '"+condition1+"' ");
+            chart1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where(NgayLapHDBH) BETWEEN '"+condition+"' and '"+condition1+"' ");
+           
+            
         }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
@@ -58,9 +62,7 @@ namespace DoAnCShap
             if (radioButtonTheoNgay.Checked==true)
             {
                 string condition = dateTimePicker1.Text;
-                //int condition3 = dateTimePicker1.Value.Month;
                 string condition1 = dateTimePicker2.Text;
-                //int condition4 = dateTimePicker1.Value.Month;
                 HienThiDoanhThuTheoNgay(condition, condition1);
             }    
             else
@@ -72,14 +74,36 @@ namespace DoAnCShap
 
         private void fillChart()
         {
-            //AddXY value in chart1 in series named as Salary  
-            //chart1.Series["Salary"].Points.AddXY("Hổm Nay","999");
+            ////AddXY value in chart1 in series named as Salary  
+            //chart1.Series["Salary"].Points.AddXY("Hổm Nay","1000");
             //chart1.Series["Salary"].Points.AddXY("Tháng Này", "800");
             //chart1.Series["Salary"].Points.AddXY("Năm Nay", "8000");
-            chart1.DataSource = bus.DoanhThuTatCa("");
-            chart1.ChartAreas["ChartArea1"].AxisX.Title = "DoanhThu";
-            //chart1.Series["Salary"].XValueMember = "DoanhThu";
-            chart1.Titles.Add("Doanh Thu Hóa Đơn Bán");
+            //chart1.DataSource = bus.DoanhThuTatCa("");
+            //chart1.ChartAreas["ChartArea1"].AxisX.Title = "DoanhThu";
+            ////chart1.Series["Salary"].XValueMember = "DoanhThu";
+            //chart1.Titles.Add("Doanh Thu Hóa Đơn Bán");
+
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select SoLuong from CT_HoaDonBanHang Where MaHDBH=N'HD00' ";
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+
+            conn.Open();
+            da.Fill(ds);
+            this.chart1.DataSource = ds.Tables[0];
+
+            //Mapping a field with x-value of chart
+            //this.chart1.Series[0].XValueMember = "Soluong";
+
+            //Mapping a field with y-value of Chart
+            this.chart1.Series[0].YValueMembers = "SoLuong";
+
+            //Bind the DataTable with Chart
+            this.chart1.DataBind();
+
+            conn.Close();
         }
     }
 }
