@@ -139,6 +139,12 @@
     <Compile Include="Frm_HoaDonBanHang.Designer.cs">
       <DependentUpon>Frm_HoaDonBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_InHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_InHoaDon.Designer.cs">
+      <DependentUpon>Frm_InHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_KH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     <EmbeddedResource Include="Frm_HoaDonBanHang.resx">
       <DependentUpon>Frm_HoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_InHoaDon.resx">
+      <DependentUpon>Frm_InHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_KH.resx">
       <DependentUpon>Frm_KH.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,7 +311,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="repInHoaDon.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BUS.HoaDon_BUS.datasource" />
+    <None Include="Properties\DataSources\DTO.CT_HoaDonBanHang.datasource" />
+    <None Include="Properties\DataSources\DTO.HoaDonBanHang.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

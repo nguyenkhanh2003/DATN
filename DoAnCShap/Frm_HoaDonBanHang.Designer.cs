@@ -694,6 +694,7 @@
             this.btnIn.Text = "In Hóa Đơn";
             this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // Frm_HoaDonBanHang
             // 

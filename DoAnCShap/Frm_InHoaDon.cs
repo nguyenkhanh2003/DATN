@@ -16,5 +16,11 @@ namespace DoAnCShap
         {
             InitializeComponent();
         }
+
+        private void Frm_InHoaDon_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

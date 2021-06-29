@@ -309,3 +309,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ru\Microsoft.ReportV
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.AssemblyReference.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_InHoaDon.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\RdlCompile.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\RdlCompile.compiled
