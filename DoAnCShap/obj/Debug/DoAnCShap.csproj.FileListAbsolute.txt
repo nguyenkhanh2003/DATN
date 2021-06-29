@@ -312,3 +312,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.Ass
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_InHoaDon.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\RdlCompile.cache
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\RdlCompile.compiled
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\repInHoaDon.rdlc

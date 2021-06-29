@@ -316,7 +316,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="repInHoaDon.rdlc" />
+    <EmbeddedResource Include="repInHoaDon.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PM_BanLinhKienPCDataSet.xsc">
       <DependentUpon>PM_BanLinhKienPCDataSet.xsd</DependentUpon>

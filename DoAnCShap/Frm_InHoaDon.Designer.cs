@@ -30,33 +30,56 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
+            this.btnInHD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.repInHoaDon.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 115);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 335);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Location = new System.Drawing.Point(130, 25);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(100, 20);
+            this.txtMaHD.TabIndex = 1;
+            // 
+            // btnInHD
+            // 
+            this.btnInHD.Location = new System.Drawing.Point(332, 21);
+            this.btnInHD.Name = "btnInHD";
+            this.btnInHD.Size = new System.Drawing.Size(75, 23);
+            this.btnInHD.TabIndex = 2;
+            this.btnInHD.Text = "In";
+            this.btnInHD.UseVisualStyleBackColor = true;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // Frm_InHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnInHD);
+            this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_InHoaDon";
             this.Text = "Frm_InHoaDon";
             this.Load += new System.EventHandler(this.Frm_InHoaDon_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.TextBox txtMaHD;
+        private System.Windows.Forms.Button btnInHD;
     }
 }
