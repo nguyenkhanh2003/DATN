@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
-
+using Dapper;
 namespace DoAnCShap
 {
     public partial class Frm_BanHan : Form
@@ -346,8 +346,7 @@ namespace DoAnCShap
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-            printDialog1.Document = printDocument1;
-            printDialog1.ShowDialog();
+          
         }
 
         private void dataGridViewHDBH_CellClick(object sender, DataGridViewCellEventArgs e)

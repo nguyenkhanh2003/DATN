@@ -38,33 +38,6 @@ namespace DoAnCShap
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCV = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMaCV = new System.Windows.Forms.TextBox();
-            this.txtTenCV = new System.Windows.Forms.TextBox();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBoxBaoHanh = new System.Windows.Forms.CheckBox();
-            this.checkBoxNhapKho = new System.Windows.Forms.CheckBox();
-            this.checkBoxLoaiLLK = new System.Windows.Forms.CheckBox();
-            this.checkBoxPhanQuyen = new System.Windows.Forms.CheckBox();
-            this.checkBoxLinhKien = new System.Windows.Forms.CheckBox();
-            this.checkBoxNCC = new System.Windows.Forms.CheckBox();
-            this.checkBoxNhanViem = new System.Windows.Forms.CheckBox();
-            this.checkBoxkH = new System.Windows.Forms.CheckBox();
-            this.checkBoxBanHang = new System.Windows.Forms.CheckBox();
-            this.checkBoxThongKe = new System.Windows.Forms.CheckBox();
-            this.checkBoxHoaDon = new System.Windows.Forms.CheckBox();
-            this.checkBoxSetting = new System.Windows.Forms.CheckBox();
             this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QLNV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -80,6 +53,33 @@ namespace DoAnCShap
             this.HoaDon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Setting = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMaCV = new System.Windows.Forms.TextBox();
+            this.txtTenCV = new System.Windows.Forms.TextBox();
+            this.cboTrangThai = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxSetting = new System.Windows.Forms.CheckBox();
+            this.checkBoxHoaDon = new System.Windows.Forms.CheckBox();
+            this.checkBoxThongKe = new System.Windows.Forms.CheckBox();
+            this.checkBoxBaoHanh = new System.Windows.Forms.CheckBox();
+            this.checkBoxNhapKho = new System.Windows.Forms.CheckBox();
+            this.checkBoxLoaiLLK = new System.Windows.Forms.CheckBox();
+            this.checkBoxPhanQuyen = new System.Windows.Forms.CheckBox();
+            this.checkBoxLinhKien = new System.Windows.Forms.CheckBox();
+            this.checkBoxNCC = new System.Windows.Forms.CheckBox();
+            this.checkBoxNhanViem = new System.Windows.Forms.CheckBox();
+            this.checkBoxkH = new System.Windows.Forms.CheckBox();
+            this.checkBoxBanHang = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).BeginInit();
             this.panel3.SuspendLayout();
@@ -174,6 +174,120 @@ namespace DoAnCShap
             this.dataGridViewCV.TabIndex = 25;
             this.dataGridViewCV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCV_CellClick);
             this.dataGridViewCV.DoubleClick += new System.EventHandler(this.dataGridViewCV_DoubleClick);
+            // 
+            // MaCV
+            // 
+            this.MaCV.DataPropertyName = "MaCV";
+            this.MaCV.HeaderText = "Mã Chức Vụ";
+            this.MaCV.MinimumWidth = 6;
+            this.MaCV.Name = "MaCV";
+            this.MaCV.Width = 114;
+            // 
+            // TenCV
+            // 
+            this.TenCV.DataPropertyName = "TenCV";
+            this.TenCV.HeaderText = "Tên Chức Vụ";
+            this.TenCV.MinimumWidth = 6;
+            this.TenCV.Name = "TenCV";
+            this.TenCV.Width = 118;
+            // 
+            // QLNV
+            // 
+            this.QLNV.DataPropertyName = "NhanVien";
+            this.QLNV.HeaderText = "Nhân Viên";
+            this.QLNV.Name = "QLNV";
+            this.QLNV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // QLKH
+            // 
+            this.QLKH.DataPropertyName = "KhachHang";
+            this.QLKH.HeaderText = "Khách Hàng";
+            this.QLKH.Name = "QLKH";
+            this.QLKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.QLKH.Width = 114;
+            // 
+            // QLLK
+            // 
+            this.QLLK.DataPropertyName = "LinhKien";
+            this.QLLK.HeaderText = "Linh Kiện";
+            this.QLLK.Name = "QLLK";
+            this.QLLK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLLK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.QLLK.Width = 93;
+            // 
+            // QLBH
+            // 
+            this.QLBH.DataPropertyName = "BanHang";
+            this.QLBH.HeaderText = "Bán Hàng";
+            this.QLBH.Name = "QLBH";
+            this.QLBH.Width = 79;
+            // 
+            // QLNCC
+            // 
+            this.QLNCC.DataPropertyName = "NhaCungCap";
+            this.QLNCC.HeaderText = "Nhà Cung Cấp";
+            this.QLNCC.Name = "QLNCC";
+            this.QLNCC.Width = 111;
+            // 
+            // QLLLK
+            // 
+            this.QLLLK.DataPropertyName = "LoaiLK";
+            this.QLLLK.HeaderText = "Loại Linh Kiện";
+            this.QLLLK.Name = "QLLLK";
+            this.QLLLK.Width = 106;
+            // 
+            // QLNK
+            // 
+            this.QLNK.DataPropertyName = "NhapKho";
+            this.QLNK.HeaderText = "Hóa Đơn Nhập";
+            this.QLNK.Name = "QLNK";
+            this.QLNK.Width = 113;
+            // 
+            // QLBaoHanh
+            // 
+            this.QLBaoHanh.DataPropertyName = "BaoHanh";
+            this.QLBaoHanh.HeaderText = "Bảo Hành";
+            this.QLBaoHanh.Name = "QLBaoHanh";
+            this.QLBaoHanh.Width = 80;
+            // 
+            // ToanQ
+            // 
+            this.ToanQ.DataPropertyName = "PhanQuyen";
+            this.ToanQ.HeaderText = "Phân Quyền";
+            this.ToanQ.Name = "ToanQ";
+            this.ToanQ.Width = 95;
+            // 
+            // ThongKe
+            // 
+            this.ThongKe.DataPropertyName = "ThongKe";
+            this.ThongKe.HeaderText = "Thống Kê";
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.Width = 78;
+            // 
+            // HoaDon
+            // 
+            this.HoaDon.DataPropertyName = "HoaDon";
+            this.HoaDon.HeaderText = "Hóa Đơn";
+            this.HoaDon.Name = "HoaDon";
+            this.HoaDon.Width = 74;
+            // 
+            // Setting
+            // 
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.Width = 59;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TrangThai.Width = 84;
             // 
             // panel3
             // 
@@ -364,12 +478,46 @@ namespace DoAnCShap
             this.label4.Text = "Phân Quyền";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // checkBoxSetting
+            // 
+            this.checkBoxSetting.AutoSize = true;
+            this.checkBoxSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSetting.Location = new System.Drawing.Point(519, 139);
+            this.checkBoxSetting.Name = "checkBoxSetting";
+            this.checkBoxSetting.Size = new System.Drawing.Size(68, 20);
+            this.checkBoxSetting.TabIndex = 12;
+            this.checkBoxSetting.Text = "Setting";
+            this.checkBoxSetting.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHoaDon
+            // 
+            this.checkBoxHoaDon.AutoSize = true;
+            this.checkBoxHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxHoaDon.Location = new System.Drawing.Point(337, 139);
+            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
+            this.checkBoxHoaDon.Size = new System.Drawing.Size(80, 20);
+            this.checkBoxHoaDon.TabIndex = 12;
+            this.checkBoxHoaDon.Text = "Hóa Đơn";
+            this.checkBoxHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxThongKe
+            // 
+            this.checkBoxThongKe.AutoSize = true;
+            this.checkBoxThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxThongKe.Location = new System.Drawing.Point(156, 139);
+            this.checkBoxThongKe.Name = "checkBoxThongKe";
+            this.checkBoxThongKe.Size = new System.Drawing.Size(85, 20);
+            this.checkBoxThongKe.TabIndex = 12;
+            this.checkBoxThongKe.Text = "Thống Kê";
+            this.checkBoxThongKe.UseVisualStyleBackColor = true;
+            // 
             // checkBoxBaoHanh
             // 
             this.checkBoxBaoHanh.AutoSize = true;
+            this.checkBoxBaoHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxBaoHanh.Location = new System.Drawing.Point(9, 139);
             this.checkBoxBaoHanh.Name = "checkBoxBaoHanh";
-            this.checkBoxBaoHanh.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxBaoHanh.Size = new System.Drawing.Size(87, 20);
             this.checkBoxBaoHanh.TabIndex = 12;
             this.checkBoxBaoHanh.Text = "Bảo Hành";
             this.checkBoxBaoHanh.UseVisualStyleBackColor = true;
@@ -377,9 +525,10 @@ namespace DoAnCShap
             // checkBoxNhapKho
             // 
             this.checkBoxNhapKho.AutoSize = true;
+            this.checkBoxNhapKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxNhapKho.Location = new System.Drawing.Point(519, 86);
             this.checkBoxNhapKho.Name = "checkBoxNhapKho";
-            this.checkBoxNhapKho.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxNhapKho.Size = new System.Drawing.Size(86, 20);
             this.checkBoxNhapKho.TabIndex = 14;
             this.checkBoxNhapKho.Text = "Nhập Kho";
             this.checkBoxNhapKho.UseVisualStyleBackColor = true;
@@ -387,9 +536,10 @@ namespace DoAnCShap
             // checkBoxLoaiLLK
             // 
             this.checkBoxLoaiLLK.AutoSize = true;
-            this.checkBoxLoaiLLK.Location = new System.Drawing.Point(361, 85);
+            this.checkBoxLoaiLLK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxLoaiLLK.Location = new System.Drawing.Point(337, 85);
             this.checkBoxLoaiLLK.Name = "checkBoxLoaiLLK";
-            this.checkBoxLoaiLLK.Size = new System.Drawing.Size(138, 17);
+            this.checkBoxLoaiLLK.Size = new System.Drawing.Size(164, 20);
             this.checkBoxLoaiLLK.TabIndex = 14;
             this.checkBoxLoaiLLK.Text = "Quản Lý Loại Linh Kiiện";
             this.checkBoxLoaiLLK.UseVisualStyleBackColor = true;
@@ -397,9 +547,10 @@ namespace DoAnCShap
             // checkBoxPhanQuyen
             // 
             this.checkBoxPhanQuyen.AutoSize = true;
+            this.checkBoxPhanQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxPhanQuyen.Location = new System.Drawing.Point(519, 41);
             this.checkBoxPhanQuyen.Name = "checkBoxPhanQuyen";
-            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(85, 17);
+            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(100, 20);
             this.checkBoxPhanQuyen.TabIndex = 15;
             this.checkBoxPhanQuyen.Text = "Phân Quyền";
             this.checkBoxPhanQuyen.UseVisualStyleBackColor = true;
@@ -407,9 +558,10 @@ namespace DoAnCShap
             // checkBoxLinhKien
             // 
             this.checkBoxLinhKien.AutoSize = true;
-            this.checkBoxLinhKien.Location = new System.Drawing.Point(361, 40);
+            this.checkBoxLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxLinhKien.Location = new System.Drawing.Point(337, 41);
             this.checkBoxLinhKien.Name = "checkBoxLinhKien";
-            this.checkBoxLinhKien.Size = new System.Drawing.Size(113, 17);
+            this.checkBoxLinhKien.Size = new System.Drawing.Size(132, 20);
             this.checkBoxLinhKien.TabIndex = 15;
             this.checkBoxLinhKien.Text = "Quản Lý Linh Kiện";
             this.checkBoxLinhKien.UseVisualStyleBackColor = true;
@@ -417,9 +569,10 @@ namespace DoAnCShap
             // checkBoxNCC
             // 
             this.checkBoxNCC.AutoSize = true;
-            this.checkBoxNCC.Location = new System.Drawing.Point(174, 86);
+            this.checkBoxNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxNCC.Location = new System.Drawing.Point(156, 85);
             this.checkBoxNCC.Name = "checkBoxNCC";
-            this.checkBoxNCC.Size = new System.Drawing.Size(142, 17);
+            this.checkBoxNCC.Size = new System.Drawing.Size(169, 20);
             this.checkBoxNCC.TabIndex = 16;
             this.checkBoxNCC.Text = "Quản Lý Nhà Cung  Cấp";
             this.checkBoxNCC.UseVisualStyleBackColor = true;
@@ -427,9 +580,10 @@ namespace DoAnCShap
             // checkBoxNhanViem
             // 
             this.checkBoxNhanViem.AutoSize = true;
+            this.checkBoxNhanViem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxNhanViem.Location = new System.Drawing.Point(9, 41);
             this.checkBoxNhanViem.Name = "checkBoxNhanViem";
-            this.checkBoxNhanViem.Size = new System.Drawing.Size(119, 17);
+            this.checkBoxNhanViem.Size = new System.Drawing.Size(141, 20);
             this.checkBoxNhanViem.TabIndex = 17;
             this.checkBoxNhanViem.Text = "Quản Lý Nhân Viên";
             this.checkBoxNhanViem.UseVisualStyleBackColor = true;
@@ -437,9 +591,10 @@ namespace DoAnCShap
             // checkBoxkH
             // 
             this.checkBoxkH.AutoSize = true;
-            this.checkBoxkH.Location = new System.Drawing.Point(174, 41);
+            this.checkBoxkH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxkH.Location = new System.Drawing.Point(156, 41);
             this.checkBoxkH.Name = "checkBoxkH";
-            this.checkBoxkH.Size = new System.Drawing.Size(129, 17);
+            this.checkBoxkH.Size = new System.Drawing.Size(152, 20);
             this.checkBoxkH.TabIndex = 18;
             this.checkBoxkH.Text = "Quản Lý Khách Hàng";
             this.checkBoxkH.UseVisualStyleBackColor = true;
@@ -447,156 +602,13 @@ namespace DoAnCShap
             // checkBoxBanHang
             // 
             this.checkBoxBanHang.AutoSize = true;
+            this.checkBoxBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxBanHang.Location = new System.Drawing.Point(9, 86);
             this.checkBoxBanHang.Name = "checkBoxBanHang";
-            this.checkBoxBanHang.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxBanHang.Size = new System.Drawing.Size(87, 20);
             this.checkBoxBanHang.TabIndex = 19;
             this.checkBoxBanHang.Text = "Bán Hàng";
             this.checkBoxBanHang.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxThongKe
-            // 
-            this.checkBoxThongKe.AutoSize = true;
-            this.checkBoxThongKe.Location = new System.Drawing.Point(174, 139);
-            this.checkBoxThongKe.Name = "checkBoxThongKe";
-            this.checkBoxThongKe.Size = new System.Drawing.Size(73, 17);
-            this.checkBoxThongKe.TabIndex = 12;
-            this.checkBoxThongKe.Text = "Thống Kê";
-            this.checkBoxThongKe.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxHoaDon
-            // 
-            this.checkBoxHoaDon.AutoSize = true;
-            this.checkBoxHoaDon.Location = new System.Drawing.Point(361, 139);
-            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
-            this.checkBoxHoaDon.Size = new System.Drawing.Size(69, 17);
-            this.checkBoxHoaDon.TabIndex = 12;
-            this.checkBoxHoaDon.Text = "Hóa Đơn";
-            this.checkBoxHoaDon.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSetting
-            // 
-            this.checkBoxSetting.AutoSize = true;
-            this.checkBoxSetting.Location = new System.Drawing.Point(519, 139);
-            this.checkBoxSetting.Name = "checkBoxSetting";
-            this.checkBoxSetting.Size = new System.Drawing.Size(59, 17);
-            this.checkBoxSetting.TabIndex = 12;
-            this.checkBoxSetting.Text = "Setting";
-            this.checkBoxSetting.UseVisualStyleBackColor = true;
-            // 
-            // MaCV
-            // 
-            this.MaCV.DataPropertyName = "MaCV";
-            this.MaCV.HeaderText = "Mã Chức Vụ";
-            this.MaCV.MinimumWidth = 6;
-            this.MaCV.Name = "MaCV";
-            this.MaCV.Width = 114;
-            // 
-            // TenCV
-            // 
-            this.TenCV.DataPropertyName = "TenCV";
-            this.TenCV.HeaderText = "Tên Chức Vụ";
-            this.TenCV.MinimumWidth = 6;
-            this.TenCV.Name = "TenCV";
-            this.TenCV.Width = 118;
-            // 
-            // QLNV
-            // 
-            this.QLNV.DataPropertyName = "NhanVien";
-            this.QLNV.HeaderText = "Nhân Viên";
-            this.QLNV.Name = "QLNV";
-            this.QLNV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLKH
-            // 
-            this.QLKH.DataPropertyName = "KhachHang";
-            this.QLKH.HeaderText = "Khách Hàng";
-            this.QLKH.Name = "QLKH";
-            this.QLKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.QLKH.Width = 114;
-            // 
-            // QLLK
-            // 
-            this.QLLK.DataPropertyName = "LinhKien";
-            this.QLLK.HeaderText = "Linh Kiện";
-            this.QLLK.Name = "QLLK";
-            this.QLLK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLLK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.QLLK.Width = 93;
-            // 
-            // QLBH
-            // 
-            this.QLBH.DataPropertyName = "BanHang";
-            this.QLBH.HeaderText = "Bán Hàng";
-            this.QLBH.Name = "QLBH";
-            this.QLBH.Width = 79;
-            // 
-            // QLNCC
-            // 
-            this.QLNCC.DataPropertyName = "NhaCungCap";
-            this.QLNCC.HeaderText = "Nhà Cung Cấp";
-            this.QLNCC.Name = "QLNCC";
-            this.QLNCC.Width = 111;
-            // 
-            // QLLLK
-            // 
-            this.QLLLK.DataPropertyName = "LoaiLK";
-            this.QLLLK.HeaderText = "Loại Linh Kiện";
-            this.QLLLK.Name = "QLLLK";
-            this.QLLLK.Width = 106;
-            // 
-            // QLNK
-            // 
-            this.QLNK.DataPropertyName = "NhapKho";
-            this.QLNK.HeaderText = "Hóa Đơn Nhập";
-            this.QLNK.Name = "QLNK";
-            this.QLNK.Width = 113;
-            // 
-            // QLBaoHanh
-            // 
-            this.QLBaoHanh.DataPropertyName = "BaoHanh";
-            this.QLBaoHanh.HeaderText = "Bảo Hành";
-            this.QLBaoHanh.Name = "QLBaoHanh";
-            this.QLBaoHanh.Width = 80;
-            // 
-            // ToanQ
-            // 
-            this.ToanQ.DataPropertyName = "PhanQuyen";
-            this.ToanQ.HeaderText = "Phân Quyền";
-            this.ToanQ.Name = "ToanQ";
-            this.ToanQ.Width = 95;
-            // 
-            // ThongKe
-            // 
-            this.ThongKe.DataPropertyName = "ThongKe";
-            this.ThongKe.HeaderText = "Thống Kê";
-            this.ThongKe.Name = "ThongKe";
-            this.ThongKe.Width = 78;
-            // 
-            // HoaDon
-            // 
-            this.HoaDon.DataPropertyName = "HoaDon";
-            this.HoaDon.HeaderText = "Hóa Đơn";
-            this.HoaDon.Name = "HoaDon";
-            this.HoaDon.Width = 74;
-            // 
-            // Setting
-            // 
-            this.Setting.DataPropertyName = "Setting";
-            this.Setting.HeaderText = "Setting";
-            this.Setting.Name = "Setting";
-            this.Setting.Width = 59;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TrangThai.Width = 84;
             // 
             // Frm_ChucVu
             // 
