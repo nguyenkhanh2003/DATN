@@ -12,7 +12,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DAL\bin\Debug\DAL.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DAL\bin\Debug\DAL.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DAL\bin\Debug\DTO.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DAL\bin\Debug\DTO.pdb
-C:\Users\Nguyen Khanh\source\repos\DATN\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Users\Nguyen Khanh\source\repos\DATN\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Khanh\source\repos\DATN\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Nguyen Khanh\source\repos\DATN\DAL\obj\Debug\DAL.dll
@@ -26,3 +25,4 @@ C:\Users\PHI\Documents\GitHub\DATN\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.ca
 C:\Users\PHI\Documents\GitHub\DATN\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\PHI\Documents\GitHub\DATN\DAL\obj\Debug\DAL.dll
 C:\Users\PHI\Documents\GitHub\DATN\DAL\obj\Debug\DAL.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache

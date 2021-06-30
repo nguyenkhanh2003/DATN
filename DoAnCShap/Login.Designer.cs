@@ -87,6 +87,7 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(188, 25);
             this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.Text = "12345";
             // 
             // label3
             // 
@@ -108,6 +109,7 @@
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(188, 25);
             this.txtTenDN.TabIndex = 1;
+            this.txtTenDN.Text = "vnnqk";
             // 
             // label2
             // 

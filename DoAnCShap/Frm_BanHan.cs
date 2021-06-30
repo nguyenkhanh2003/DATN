@@ -46,6 +46,11 @@ namespace DoAnCShap
         {
             comboBoxSP.DataSource=bus.GetTimKiem("select TenLK From LinhKien Where TenLK Like N'%"+condition+"%'");
         }
+
+        public void HienThiDSSTheoMaSP(string condition)
+        {
+            dataGridViewHDBH.DataSource = bus.GetHienThiDSSpTheoMa("select LK.TenLK,CT.SoLuong,CT.DonGia,KhuyenMai,ThanhTien From CT_HoaDonBanHang CT, LinhKien LK Where LK.MaLK=CT.MaLK and MaHDBH=N'" + condition + "'");
+        }
         public void XuLyChucNang(Boolean b1, Boolean b2)
         {
             btnThemHD.Enabled = b1;
@@ -85,7 +90,7 @@ namespace DoAnCShap
             
         }
 
-       
+        public static string SetValueForText3 = "";
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -228,8 +233,8 @@ namespace DoAnCShap
                     cthdbh.TrangThai = comboBoxTrangThai.SelectedIndex.ToString();
                     bus.AddCTHD(cthdbh);
                 }
-
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
+                
             }
         }
 
@@ -287,7 +292,7 @@ namespace DoAnCShap
         {
             HienThiSanPham();
             //labelHienThiTenDangNhap.Text = Login.SetValueForText1;
-            string condition = Login.SetValueForText2;
+            string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
             XuLyChucNang(true, false);
             btnXoaSP.Enabled = false;
@@ -346,12 +351,21 @@ namespace DoAnCShap
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-          
+            SetValueForText3 = txtMaHD.Text;
+            Frm_InHoaDon InHoaDon = new Frm_InHoaDon();
+            InHoaDon.ShowDialog();
+           
         }
 
         private void dataGridViewHDBH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnXoaSP.Enabled = true;
+        }
+
+        private void txtMaHD_KeyDown(object sender, KeyEventArgs e)
+        {
+            string condition = txtMaHD.Text;
+            HienThiDSSTheoMaSP(condition);
         }
     }
 }

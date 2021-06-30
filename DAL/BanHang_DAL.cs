@@ -52,5 +52,10 @@ values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.Kh
         {
             return KetNoi.GetDataTable(""+Condition);
         }
+
+        public DataTable GetHienThiDSSPTheoMa(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }

@@ -49,5 +49,10 @@ namespace BUS
         {
             return bus.GetTimKiem(Condition);
         }
+
+        public DataTable GetHienThiDSSpTheoMa(string condition)
+        {
+            return bus.GetHienThiDSSPTheoMa(condition);
+        }
     }
 }

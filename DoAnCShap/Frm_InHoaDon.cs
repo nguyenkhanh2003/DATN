@@ -20,15 +20,17 @@ namespace DoAnCShap
         }
 
         private void Frm_InHoaDon_Load(object sender, EventArgs e)
-        {
-
+        { 
             this.reportViewer1.RefreshReport();
+            btnInHD();
         }
 
-        private void btnInHD_Click(object sender, EventArgs e)
+        public void btnInHD()
         {
+            
             //Khai báo câu lệnh SQL
-            String sql = "Select * from CT_HoaDonBanHang Where MaHDBH =N'" + txtMaHD.Text + "'";
+            String sql = "Select * from CT_HoaDonBanHang Where MaHDBH =N'"+Frm_BanHan.SetValueForText3+"'";
+        
             SqlConnection con = new SqlConnection();
             //Truyền vào chuỗi kết nối tới cơ sở dữ liệu
             con.ConnectionString = "Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True";
