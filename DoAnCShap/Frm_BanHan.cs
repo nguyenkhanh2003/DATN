@@ -19,6 +19,7 @@ namespace DoAnCShap
             InitializeComponent();
           
         }
+        
         Frm_KH kh = new Frm_KH();
         Frm_HoaDonBanHang f = new Frm_HoaDonBanHang();
         BanHang_BUS bus = new BanHang_BUS();
@@ -352,9 +353,9 @@ namespace DoAnCShap
         private void btnInHD_Click(object sender, EventArgs e)
         {
             SetValueForText3 = txtMaHD.Text;
-            Frm_InHoaDon InHoaDon = new Frm_InHoaDon();
+            Frm_PrintHD InHoaDon = new Frm_PrintHD();
             InHoaDon.ShowDialog();
-           
+
         }
 
         private void dataGridViewHDBH_CellClick(object sender, DataGridViewCellEventArgs e)

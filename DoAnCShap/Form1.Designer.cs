@@ -489,13 +489,13 @@ namespace DoAnCShap
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(6, 3);
+            this.chart1.Location = new System.Drawing.Point(6, 42);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Salary";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(790, 523);
+            this.chart1.Size = new System.Drawing.Size(790, 484);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -536,7 +536,6 @@ namespace DoAnCShap
         private FontAwesome.Sharp.IconButton iconBtnThuNho;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelBot;
-        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         public System.Windows.Forms.Panel panelTop;
@@ -554,6 +553,7 @@ namespace DoAnCShap
         public System.Windows.Forms.Button btnPhanQuyen;
         public System.Windows.Forms.Button btnThongKe;
         public System.Windows.Forms.Button btnBaohanh;
+        public System.Windows.Forms.Panel panelChildForm;
     }
 }
 
