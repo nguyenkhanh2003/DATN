@@ -16,6 +16,7 @@ namespace DoAnCShap
         {
             InitializeComponent();
             hideSubMenu();
+            
         }
 
         //public void funData(TextBox txtTenHienThi)
@@ -214,11 +215,16 @@ namespace DoAnCShap
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            this.Hide();
-            Login DN = new Login();
-            DN.ShowDialog();
-            this.Visible = false;
+            DialogResult KQ = MessageBox.Show("Bạn có muốn đẵng xuất hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (KQ == DialogResult.Yes)
+            {
+                Form1_Load(e, e);
+            }
+            else
+            {
+
+            }    
+           
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
@@ -281,14 +287,14 @@ namespace DoAnCShap
 
         private void fillChart()
         {
-            //AddXY value in chart1 in series named as Salary  
-            chart1.Series["Salary"].Points.AddXY("Tổng Sản Phẩm", "10000");
-            chart1.Series["Salary"].Points.AddXY("Nhân Viên", "8000");
-            chart1.Series["Salary"].Points.AddXY("Hoă Đơn", "7000");
-            chart1.Series["Salary"].Points.AddXY("Khách Hàng", "10000");
-            chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
-            //chart title  
-            chart1.Titles.Add("Salary Chart");
+            ////AddXY value in chart1 in series named as Salary  
+            //chart1.Series["Salary"].Points.AddXY("Tổng Sản Phẩm", "10000");
+            //chart1.Series["Salary"].Points.AddXY("Nhân Viên", "8000");
+            //chart1.Series["Salary"].Points.AddXY("Hoă Đơn", "7000");
+            //chart1.Series["Salary"].Points.AddXY("Khách Hàng", "10000");
+            //chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
+            ////chart title  
+            //chart1.Titles.Add("Salary Chart");
         }
 
         private void labelHienThiTenDangNhap_TextChanged(object sender, EventArgs e)

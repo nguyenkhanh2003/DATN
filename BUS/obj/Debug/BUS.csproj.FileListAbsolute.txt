@@ -10,16 +10,6 @@ C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.dll
 C:\Users\PHI\Desktop\DoAn\New folder\DATN\BUS\obj\Debug\BUS.pdb
 =======
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\BUS.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\BUS.pdb
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DAL.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DTO.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DAL.pdb
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DTO.pdb
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.pdb
 C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\BUS.dll
 C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\BUS.pdb
 C:\Users\PHI\Documents\GitHub\DATN\BUS\bin\Debug\DAL.dll
@@ -31,4 +21,14 @@ C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.ca
 C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.dll
 C:\Users\PHI\Documents\GitHub\DATN\BUS\obj\Debug\BUS.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\BUS.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\BUS.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DAL.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DTO.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DAL.pdb
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\bin\Debug\DTO.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\BUS\obj\Debug\BUS.pdb

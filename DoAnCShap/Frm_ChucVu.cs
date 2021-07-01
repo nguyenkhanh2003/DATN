@@ -94,8 +94,7 @@ namespace DoAnCShap
             //    MessageBox.Show("Chưa chọn trạng thái !");
             //}    
             if(flag==1)
-            {
-
+            { 
                 cv.MaCV = txtMaCV.Text;
                 cv.TenCV = txtTenCV.Text;
                 cv.NhanVien = checkBoxNhanViem.Checked;
@@ -113,7 +112,6 @@ namespace DoAnCShap
                 cv.TrangThai = cboTrangThai.Text;
                 bus.AddChucVu(cv);
                 MessageBox.Show("Thành Công");
-               
             }
 
             if(flag==2)
@@ -168,10 +166,18 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            cv.MaCV = txtMaCV.Text;
-            bus.DeleteChucVu(cv);
-            MessageBox.Show("Thành Công");
-            HienThiDSCV();
+            try
+            {
+                txtMaCV.Text = "CV01";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không Thể Xóa !"+ex);
+            }
+            //cv.MaCV = txtMaCV.Text;
+            //bus.DeleteChucVu(cv);
+            //MessageBox.Show("Thành Công");
+            //HienThiDSCV();
         }
     }
 }

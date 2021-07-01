@@ -30,9 +30,6 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnPhanQuyen = new System.Windows.Forms.Button();
@@ -57,14 +54,11 @@ namespace DoAnCShap
             this.panelBot = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTop.SuspendLayout();
             this.panelBot.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -289,7 +283,7 @@ namespace DoAnCShap
             this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5);
             this.btnPhieuNhap.Size = new System.Drawing.Size(212, 45);
             this.btnPhieuNhap.TabIndex = 2;
-            this.btnPhieuNhap.Text = "Nhập Kho";
+            this.btnPhieuNhap.Text = "Nhập Hàng";
             this.btnPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhieuNhap.UseVisualStyleBackColor = false;
             this.btnPhieuNhap.Click += new System.EventHandler(this.btnPhieuNhap_Click);
@@ -473,31 +467,11 @@ namespace DoAnCShap
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Controls.Add(this.chart1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(229, 50);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(799, 532);
             this.panelChildForm.TabIndex = 25;
-            // 
-            // chart1
-            // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(6, 42);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Salary";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(790, 484);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
             // 
             // Form1
             // 
@@ -521,8 +495,6 @@ namespace DoAnCShap
             this.panelTop.ResumeLayout(false);
             this.panelBot.ResumeLayout(false);
             this.panelBot.PerformLayout();
-            this.panelChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,7 +511,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         public System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public System.Windows.Forms.Label labelHienThiTenDangNhap;
         public System.Windows.Forms.Button btnNhanVien;
         public System.Windows.Forms.Button btnLinhKien;
