@@ -28,7 +28,7 @@ namespace DoAnCShap
         public void InCTHD()
         {
             //Khai báo câu lệnh SQL
-            String sql = "Select * from CT_HoaDonBanHang Where MaHDBH=N'" +Frm_BanHan.SetValueForText3 + "'";
+            String sql = "select MaHDBH,TenLK,CT.SoLuong,CT.DonGia,KhuyenMai,ThanhTien From CT_HoaDonBanHang CT,LinhKien LK Where LK.MaLK=CT.MaLK and CT.MaHDBH=N'"+Frm_BanHan.SetValueForText3+"' ";
             SqlConnection con = new SqlConnection();
             //Truyền vào chuỗi kết nối tới cơ sở dữ liệu
             //Gọi Application.StartupPath để lấy đường dẫn tới thư mục chứa file chạy chương trình 

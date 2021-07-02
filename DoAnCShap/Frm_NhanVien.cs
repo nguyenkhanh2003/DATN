@@ -110,7 +110,7 @@ namespace DoAnCShap
             cboChucVu.ValueMember = "MaCV";
         }
 
-        string hash = "X2";
+        //string hash = "X2";
         public void MaHoa()
         {
             byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(txtPassWord.Text);
@@ -121,31 +121,25 @@ namespace DoAnCShap
                 sb.Append(hask[i].ToString("X2"));
             }
             txtPassWord.Text = sb.ToString();
-            //byte[] data = UTF8Encoding.UTF8.GetBytes(txtPassWord.Text);
-            //using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
-            //{
-            //    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
-            //    using (TripleDESCryptoServiceProvider tripdes = new TripleDESCryptoServiceProvider() {Key=keys, Mode=CipherMode.ECB,Padding=PaddingMode.PKCS7 })
-            //    {
-            //        ICryptoTransform transform = tripdes.CreateEncryptor();
-            //        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-            //        textBox1.Text = Convert.ToBase64String(results,0,results.Length);
-            //    }
-            //}
+           
         }
-
-        public string TaoChuoiMaHoa(string input)
+        string hash = "f0xle@rn";//Create a hash key
+        public void MaHoa1()
         {
-            string hash = "PassWord@2021";
-            byte[] data = UTF8Encoding.UTF8.GetBytes(input);
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            TripleDESCryptoServiceProvider tripleDES = new TripleDESCryptoServiceProvider();
-            tripleDES.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
-            tripleDES.Mode = CipherMode.ECB;
-            ICryptoTransform transform = tripleDES.CreateEncryptor();
-            byte[] result = transform.TransformFinalBlock(data, 0, data.Length);
-            return Convert.ToBase64String(result);
+            byte[] data = UTF8Encoding.UTF8.GetBytes(txtPassWord.Text);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));//Get hash key
+                //Encrypt data by hash key
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    txtPassWord.Text = Convert.ToBase64String(results, 0, results.Length);
+                }
+            }
         }
+      
 
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
@@ -201,11 +195,6 @@ namespace DoAnCShap
             xulytextbox(true, false);
             xulychucnang(false, true, true);
             PhatSinhMa();
-        }
-
-        private void btnChonAnh_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -276,10 +265,8 @@ namespace DoAnCShap
                     else
                     {
                         MaHoa();
-                        //TaoChuoiMaHoa(txtPassWord.Text);
                         nv.MaNV = txtMaNV.Text;
                         nv.MaCV = cboChucVu.SelectedValue.ToString();
-                        // nv.MaCV = cboChucVu.ToString();
                         nv.TenNV = txtTenNV.Text;
                         nv.GioiTinh = cboGioiTinh.Text;
                         nv.Email = txtEmail.Text;
@@ -313,9 +300,8 @@ namespace DoAnCShap
                 else
                 {
                     MaHoa();
-                    //TaoChuoiMaHoa(txtPassWord.Text);
+                    //MaHoa1();
                     nv.MaNV = txtMaNV.Text;
-                    // nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
                     nv.GioiTinh = cboGioiTinh.Text;
@@ -426,24 +412,28 @@ namespace DoAnCShap
             }    
         }
 
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnShowPass_Click(object sender, EventArgs e)
         {
-            //byte[] data = Convert.FromBase64String(txtPassWord.Text);
-            //using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
-            //{
-            //    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
-            //    using (TripleDESCryptoServiceProvider tripdes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
-            //    {
-            //        ICryptoTransform transform = tripdes.CreateEncryptor();
-            //        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-            //        txtPassWord.Text = UTF8Encoding.UTF8.GetString(results);
-            //    }    
-            //}
+            try
+            {
+                //Convert a string to byte array
+                byte[] data = Convert.FromBase64String(txtPassWord.Text);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+                {
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));//Get hash key
+                                                                                    //Decrypt data by hash key
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateDecryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        txtPassWord.Text = UTF8Encoding.UTF8.GetString(results);
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void txtTenNV_KeyPress(object sender, KeyPressEventArgs e)

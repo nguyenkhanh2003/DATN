@@ -149,7 +149,6 @@ namespace DoAnCShap
             int KiemTra = 0;
             int vitri = 0;
             int KM = 0;
-          
             int tt = 0;
             tongtien += tt;
             KM = int.Parse(txtKhuyenMai.Text);
@@ -157,7 +156,6 @@ namespace DoAnCShap
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             String.Format("{0:#,##0.##}", (labelTongThanhToan.Text) = tongtien.ToString());
-
             for (int i=0;i<dataGridViewHDBH.Rows.Count-1;i++)
             {
                if(comboBoxSP.Text==dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
@@ -166,7 +164,6 @@ namespace DoAnCShap
                     vitri = i;
                     break;
                 }
-               
             }   
             
             if(KiemTra==1)
@@ -214,7 +211,6 @@ namespace DoAnCShap
                 hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value.Date;
                 hdbh.TongTien =int.Parse(labelTongThanhToan.Text);
                 hdbh.TrangThai = comboBoxTrangThai.SelectedIndex.ToString();
-                //hdbh.TrangThai = txtTienKhachDua.Text;
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
@@ -292,7 +288,6 @@ namespace DoAnCShap
         private void Frm_BanHan_Load(object sender, EventArgs e)
         {
             HienThiSanPham();
-            //labelHienThiTenDangNhap.Text = Login.SetValueForText1;
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
             XuLyChucNang(true, false);
@@ -322,7 +317,6 @@ namespace DoAnCShap
                 {
                     AddKH.GioiTinh = checkBoxNu.Text;
                 }
-                //AddKH.GioiTinh = "Nam";
                 AddKH.Email = "12345@gmail.com";
                 AddKH.DienThoai = txtSDT.Text;
                 AddKH.DiaChi = txtDiaChi.Text;
