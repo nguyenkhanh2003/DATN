@@ -100,10 +100,10 @@ namespace DoAnCShap
 
         public void XuLyChucNang(Boolean b1,Boolean b2)
         {
-            btnLuu.Enabled = b2;
-            btnIn.Enabled = b2;
-            btnXoa.Enabled = b2;
-            btnCapNhat.Enabled = b2;
+            //btnLuu.Enabled = b2;
+            //btnIn.Enabled = b2;
+            //btnXoa.Enabled = b2;
+            //btnCapNhat.Enabled = b2;
 
         }
 

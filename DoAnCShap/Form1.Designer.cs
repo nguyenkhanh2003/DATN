@@ -395,9 +395,9 @@ namespace DoAnCShap
             this.labelHienThiTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelHienThiTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHienThiTenDangNhap.ForeColor = System.Drawing.Color.White;
-            this.labelHienThiTenDangNhap.Location = new System.Drawing.Point(624, 6);
+            this.labelHienThiTenDangNhap.Location = new System.Drawing.Point(572, 6);
             this.labelHienThiTenDangNhap.Name = "labelHienThiTenDangNhap";
-            this.labelHienThiTenDangNhap.Size = new System.Drawing.Size(100, 35);
+            this.labelHienThiTenDangNhap.Size = new System.Drawing.Size(113, 35);
             this.labelHienThiTenDangNhap.TabIndex = 4;
             this.labelHienThiTenDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelHienThiTenDangNhap.TextChanged += new System.EventHandler(this.labelHienThiTenDangNhap_TextChanged);
@@ -407,12 +407,13 @@ namespace DoAnCShap
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(737, 6);
+            this.btnLogout.Location = new System.Drawing.Point(691, 6);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(50, 35);
+            this.btnLogout.Size = new System.Drawing.Size(105, 35);
             this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Đăng Xuất";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 

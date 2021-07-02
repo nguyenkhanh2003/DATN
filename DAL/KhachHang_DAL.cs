@@ -24,15 +24,15 @@ namespace DAL
         // THÊM DỮ LIỆU
         public void AddData(KhachHang ex)
         {
-            KetNoi.ExecuteReader(@"INSERT INTO KhachHang(MaKH,TenKH,GioiTinh,Email,DienThoai,DiaChi,TrangThai)      
+            KetNoi.ExecuteReader(@"INSERT INTO KhachHang(MaKH,TenKH,GioiTinh,DienThoai,DiaChi,TrangThai)      
                                    VALUES(N'" + ex.MaKH + "',N'" + ex.TenKH + "',N'" + ex.GioiTinh +
-                                    "',N'" + ex.Email + "',N'" + ex.DienThoai + "',N'"+ex.DiaChi+"',N'"+ex.TrangThai+"')");
+                                    "',N'" + ex.DienThoai + "',N'"+ex.DiaChi+"',N'"+ex.TrangThai+"')");
         }
         //  SỬA DỮ LIỆU
         public void EditData(KhachHang ex)
         {
             KetNoi.ExecuteReader(@"UPDATE KhachHang SET TenKH =N'" + ex.TenKH + "', GioiTinh =N'" + ex.GioiTinh +
-                  "',Email=N'" + ex.Email + "', DienThoai =N'" + ex.DienThoai + "',DiaChi=N'"+ex.DiaChi+"',TrangThai=N'"+ex.TrangThai+"' Where MaKH=N'" + ex.MaKH + "'");
+                  "', DienThoai =N'" + ex.DienThoai + "',DiaChi=N'"+ex.DiaChi+"',TrangThai=N'"+ex.TrangThai+"' Where MaKH=N'" + ex.MaKH + "'");
 
         }
         //  XÓA DỮ LIỆU

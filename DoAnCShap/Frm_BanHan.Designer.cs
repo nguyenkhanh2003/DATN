@@ -34,6 +34,7 @@ namespace DoAnCShap
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnLuuKH = new System.Windows.Forms.Button();
             this.checkBoxNu = new System.Windows.Forms.CheckBox();
             this.checkBoxNam = new System.Windows.Forms.CheckBox();
             this.btnThenKH = new System.Windows.Forms.Button();
@@ -45,8 +46,8 @@ namespace DoAnCShap
             this.label5 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenkH = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.comboBoxKH = new System.Windows.Forms.ComboBox();
             this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxNV = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +57,7 @@ namespace DoAnCShap
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnChonMua = new System.Windows.Forms.Button();
             this.labelThanhTien = new System.Windows.Forms.Label();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
@@ -66,16 +68,17 @@ namespace DoAnCShap
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnLuuKH = new System.Windows.Forms.Button();
-            this.btnXoaSP = new System.Windows.Forms.Button();
-            this.btnChonMua = new System.Windows.Forms.Button();
             this.btnThemHD = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLuuHd = new System.Windows.Forms.Button();
             this.btnInHD = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHDBH = new System.Windows.Forms.DataGridView();
+            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.labelThoiLaiKhach = new System.Windows.Forms.Label();
@@ -83,19 +86,14 @@ namespace DoAnCShap
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -132,6 +130,8 @@ namespace DoAnCShap
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btnLuuKH);
             this.groupBox3.Controls.Add(this.checkBoxNu);
             this.groupBox3.Controls.Add(this.checkBoxNam);
             this.groupBox3.Controls.Add(this.btnThenKH);
@@ -143,8 +143,8 @@ namespace DoAnCShap
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txtDiaChi);
             this.groupBox3.Controls.Add(this.txtTenkH);
+            this.groupBox3.Controls.Add(this.txtMaKH);
             this.groupBox3.Controls.Add(this.txtSDT);
-            this.groupBox3.Controls.Add(this.comboBoxKH);
             this.groupBox3.Controls.Add(this.comboBoxTrangThai);
             this.groupBox3.Controls.Add(this.comboBoxNV);
             this.groupBox3.Controls.Add(this.dateTimePickerNgayLap);
@@ -160,6 +160,19 @@ namespace DoAnCShap
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Chung";
+            // 
+            // btnLuuKH
+            // 
+            this.btnLuuKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuuKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuuKH.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKH.Image")));
+            this.btnLuuKH.Location = new System.Drawing.Point(704, 106);
+            this.btnLuuKH.Name = "btnLuuKH";
+            this.btnLuuKH.Size = new System.Drawing.Size(37, 28);
+            this.btnLuuKH.TabIndex = 3;
+            this.btnLuuKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuuKH.UseVisualStyleBackColor = true;
+            this.btnLuuKH.Click += new System.EventHandler(this.btnLuuKH_Click);
             // 
             // checkBoxNu
             // 
@@ -282,6 +295,16 @@ namespace DoAnCShap
             this.txtTenkH.Size = new System.Drawing.Size(229, 24);
             this.txtTenkH.TabIndex = 11;
             // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaKH.Location = new System.Drawing.Point(456, 63);
+            this.txtMaKH.Multiline = true;
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(229, 24);
+            this.txtMaKH.TabIndex = 12;
+            // 
             // txtSDT
             // 
             this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -291,17 +314,6 @@ namespace DoAnCShap
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(229, 24);
             this.txtSDT.TabIndex = 12;
-            // 
-            // comboBoxKH
-            // 
-            this.comboBoxKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxKH.FormattingEnabled = true;
-            this.comboBoxKH.Location = new System.Drawing.Point(458, 65);
-            this.comboBoxKH.Name = "comboBoxKH";
-            this.comboBoxKH.Size = new System.Drawing.Size(229, 24);
-            this.comboBoxKH.TabIndex = 5;
             // 
             // comboBoxTrangThai
             // 
@@ -388,6 +400,8 @@ namespace DoAnCShap
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btnChonMua);
             this.groupBox1.Controls.Add(this.labelThanhTien);
             this.groupBox1.Controls.Add(this.txtKhuyenMai);
             this.groupBox1.Controls.Add(this.txtSL);
@@ -401,10 +415,23 @@ namespace DoAnCShap
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(778, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 236);
+            this.groupBox1.Size = new System.Drawing.Size(394, 302);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sản Phẩm";
+            // 
+            // btnChonMua
+            // 
+            this.btnChonMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonMua.Image = ((System.Drawing.Image)(resources.GetObject("btnChonMua.Image")));
+            this.btnChonMua.Location = new System.Drawing.Point(176, 245);
+            this.btnChonMua.Name = "btnChonMua";
+            this.btnChonMua.Size = new System.Drawing.Size(93, 41);
+            this.btnChonMua.TabIndex = 3;
+            this.btnChonMua.Text = "Thêm";
+            this.btnChonMua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChonMua.UseVisualStyleBackColor = true;
+            this.btnChonMua.Click += new System.EventHandler(this.btnChonMua_Click);
             // 
             // labelThanhTien
             // 
@@ -511,65 +538,11 @@ namespace DoAnCShap
             this.comboBoxSP.TabIndex = 4;
             this.comboBoxSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.btnLuuKH);
-            this.groupBox5.Controls.Add(this.btnXoaSP);
-            this.groupBox5.Controls.Add(this.btnChonMua);
-            this.groupBox5.Controls.Add(this.btnThemHD);
-            this.groupBox5.Controls.Add(this.btnClose);
-            this.groupBox5.Location = new System.Drawing.Point(0, 291);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1172, 69);
-            this.groupBox5.TabIndex = 13;
-            this.groupBox5.TabStop = false;
-            // 
-            // btnLuuKH
-            // 
-            this.btnLuuKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuuKH.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKH.Image")));
-            this.btnLuuKH.Location = new System.Drawing.Point(266, 14);
-            this.btnLuuKH.Name = "btnLuuKH";
-            this.btnLuuKH.Size = new System.Drawing.Size(132, 41);
-            this.btnLuuKH.TabIndex = 3;
-            this.btnLuuKH.Text = "Lưu  Khách Hàng";
-            this.btnLuuKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuuKH.UseVisualStyleBackColor = true;
-            this.btnLuuKH.Click += new System.EventHandler(this.btnLuuKH_Click);
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.Location = new System.Drawing.Point(802, 14);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(130, 41);
-            this.btnXoaSP.TabIndex = 3;
-            this.btnXoaSP.Text = "Xóa Sản Phẩm";
-            this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoaSP.UseVisualStyleBackColor = true;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
-            // 
-            // btnChonMua
-            // 
-            this.btnChonMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonMua.Image = ((System.Drawing.Image)(resources.GetObject("btnChonMua.Image")));
-            this.btnChonMua.Location = new System.Drawing.Point(537, 14);
-            this.btnChonMua.Name = "btnChonMua";
-            this.btnChonMua.Size = new System.Drawing.Size(115, 41);
-            this.btnChonMua.TabIndex = 3;
-            this.btnChonMua.Text = "Chọn Mua";
-            this.btnChonMua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChonMua.UseVisualStyleBackColor = true;
-            this.btnChonMua.Click += new System.EventHandler(this.btnChonMua_Click);
-            // 
             // btnThemHD
             // 
             this.btnThemHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemHD.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHD.Image")));
-            this.btnThemHD.Location = new System.Drawing.Point(27, 14);
+            this.btnThemHD.Location = new System.Drawing.Point(14, 6);
             this.btnThemHD.Name = "btnThemHD";
             this.btnThemHD.Size = new System.Drawing.Size(118, 41);
             this.btnThemHD.TabIndex = 3;
@@ -583,7 +556,7 @@ namespace DoAnCShap
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1028, 14);
+            this.btnClose.Location = new System.Drawing.Point(623, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(105, 41);
             this.btnClose.TabIndex = 9;
@@ -597,9 +570,9 @@ namespace DoAnCShap
             this.btnLuuHd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLuuHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuHd.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuHd.Image")));
-            this.btnLuuHd.Location = new System.Drawing.Point(23, 267);
+            this.btnLuuHd.Location = new System.Drawing.Point(192, 6);
             this.btnLuuHd.Name = "btnLuuHd";
-            this.btnLuuHd.Size = new System.Drawing.Size(144, 41);
+            this.btnLuuHd.Size = new System.Drawing.Size(127, 41);
             this.btnLuuHd.TabIndex = 3;
             this.btnLuuHd.Text = "Lưu Hóa Đơn";
             this.btnLuuHd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -609,13 +582,11 @@ namespace DoAnCShap
             // 
             // btnInHD
             // 
-            this.btnInHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInHD.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.Image")));
-            this.btnInHD.Location = new System.Drawing.Point(219, 267);
+            this.btnInHD.Location = new System.Drawing.Point(397, 6);
             this.btnInHD.Name = "btnInHD";
-            this.btnInHD.Size = new System.Drawing.Size(144, 41);
+            this.btnInHD.Size = new System.Drawing.Size(120, 41);
             this.btnInHD.TabIndex = 3;
             this.btnInHD.Text = "In Hóa Đơn";
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -627,11 +598,12 @@ namespace DoAnCShap
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackColor = System.Drawing.Color.White;
             this.groupBox4.Controls.Add(this.dataGridViewHDBH);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(0, 376);
+            this.groupBox4.Location = new System.Drawing.Point(0, 369);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(772, 323);
+            this.groupBox4.Size = new System.Drawing.Size(772, 330);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh Sách Mặt Hàng Khách Đang Chọn";
@@ -649,30 +621,58 @@ namespace DoAnCShap
             this.SoLuong,
             this.DonGia,
             this.KhuyenMai,
-            this.ThanhTien,
-            this.TrangThai});
+            this.ThanhTien});
             this.dataGridViewHDBH.Location = new System.Drawing.Point(10, 19);
             this.dataGridViewHDBH.Name = "dataGridViewHDBH";
-            this.dataGridViewHDBH.Size = new System.Drawing.Size(756, 298);
+            this.dataGridViewHDBH.Size = new System.Drawing.Size(756, 305);
             this.dataGridViewHDBH.TabIndex = 0;
-            this.dataGridViewHDBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellClick);
+            this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
+            // 
+            // TenLK
+            // 
+            this.TenLK.DataPropertyName = "TenLK";
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btnLuuHd);
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.txtTienKhachDua);
             this.groupBox2.Controls.Add(this.labelThoiLaiKhach);
             this.groupBox2.Controls.Add(this.labelTongThanhToan);
-            this.groupBox2.Controls.Add(this.btnInHD);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(789, 376);
+            this.groupBox2.Location = new System.Drawing.Point(789, 369);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(383, 323);
+            this.groupBox2.Size = new System.Drawing.Size(383, 330);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Thanh Toán";
@@ -740,50 +740,30 @@ namespace DoAnCShap
             this.label15.Text = "Tổng Thanh Toán";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // TenLK
+            // panel2
             // 
-            this.TenLK.DataPropertyName = "TenLK";
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnLuuHd);
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnThemHD);
+            this.panel2.Controls.Add(this.btnInHD);
+            this.panel2.Location = new System.Drawing.Point(12, 294);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(760, 57);
+            this.panel2.TabIndex = 16;
             // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
@@ -796,11 +776,11 @@ namespace DoAnCShap
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -825,7 +805,6 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenkH;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.ComboBox comboBoxKH;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelThanhTien;
         private System.Windows.Forms.TextBox txtKhuyenMai;
@@ -837,7 +816,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBoxSP;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnLuuHd;
         private System.Windows.Forms.Button btnLuuKH;
         private System.Windows.Forms.Button btnChonMua;
@@ -855,16 +833,16 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnThenKH;
         private System.Windows.Forms.Button btnTimKH;
-        private System.Windows.Forms.Button btnXoaSP;
         private System.Windows.Forms.CheckBox checkBoxNu;
         private System.Windows.Forms.CheckBox checkBoxNam;
         private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        public System.Windows.Forms.TextBox txtMaHD;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.Panel panel2;
     }
 }

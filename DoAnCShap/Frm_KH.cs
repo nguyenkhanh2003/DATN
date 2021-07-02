@@ -44,7 +44,6 @@ namespace DoAnCShap
             txtMaKh.Enabled =b1;
             txtTenkh.Enabled =b1;
             cboGioiTinh.Enabled =b1;
-            txtEmail.Enabled = b1;
             txtSdt.Enabled =b1;
             //txtCMND.Enabled = b1;
             txtDiaCh.Enabled = b1;
@@ -64,7 +63,6 @@ namespace DoAnCShap
             txtTenkh.Clear();
             txtDiaCh.Clear();
             txtDiaCh.Clear();
-            txtEmail.Clear();
             txtSdt.Clear();
             cboGioiTinh.Text="";
             cboTrangThai.Text="";
@@ -131,11 +129,7 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa chọn giới tính");
                 return;
             }
-            if(txtEmail.Text=="")
-            {
-                MessageBox.Show("Chưa nhập email");
-                return;
-            }
+           
             if(txtSdt.Text=="")
             {
                 MessageBox.Show("Chưa nhập số điện thoại");
@@ -164,7 +158,7 @@ namespace DoAnCShap
                         kh.MaKH = txtMaKh.Text;
                         kh.TenKH = txtTenkh.Text;
                         kh.GioiTinh = cboGioiTinh.Text;
-                        kh.Email = txtEmail.Text;
+                      
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
                         kh.TrangThai = cboTrangThai.Text;
@@ -191,7 +185,7 @@ namespace DoAnCShap
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
                     kh.GioiTinh = cboGioiTinh.Text;
-                    kh.Email = txtEmail.Text;
+                  
                     kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = cboTrangThai.Text;
@@ -213,11 +207,9 @@ namespace DoAnCShap
             txtMaKh.Text = row.Cells[0].Value.ToString();
             txtTenkh.Text = row.Cells[1].Value.ToString();
             cboGioiTinh.Text = row.Cells[2].Value.ToString();
-            txtEmail.Text = row.Cells[3].Value.ToString();
-            txtSdt.Text = row.Cells[4].Value.ToString();
-           
-            txtDiaCh.Text = row.Cells[5].Value.ToString();
-            cboTrangThai.Text = row.Cells[6].Value.ToString();
+            txtSdt.Text = row.Cells[3].Value.ToString();
+            txtDiaCh.Text = row.Cells[4].Value.ToString();
+            cboTrangThai.Text = row.Cells[5].Value.ToString();
             xulytextbox(false,true);
         }
 

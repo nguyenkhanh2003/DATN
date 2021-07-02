@@ -109,7 +109,7 @@
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(188, 25);
             this.txtTenDN.TabIndex = 1;
-            this.txtTenDN.Text = "vnnqk";
+            this.txtTenDN.Text = "nguyenkhanh";
             // 
             // label2
             // 
