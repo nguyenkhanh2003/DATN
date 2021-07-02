@@ -42,6 +42,15 @@ namespace DoAnCShap
             comboBoxNCC.DisplayMember = "TenNCC";
             comboBoxNCC.ValueMember = "MaNCC";
         }
+
+        public void XuLyChucNang(Boolean b1, Boolean b2)
+        {
+            btnTaoPhieu.Enabled = b1;
+            btnHuy.Enabled = b2;
+            btnLuu.Enabled = b2;
+            btnChonNhap.Enabled = b2;
+            btnInHoaDon.Enabled = b2;
+        }
         public void PhatSinhMa()
         {
             int count = 0;
@@ -66,6 +75,7 @@ namespace DoAnCShap
         {
             PhatSinhMa();
             flag = 1;
+            XuLyChucNang(false, true);
         }
 
         double tongtien = 0;
@@ -116,6 +126,7 @@ namespace DoAnCShap
             HienThiNhanVien();
             HienThiSanPham();
             HienThiNCC();
+            XuLyChucNang(true, false);
         }
 
         private void dataGridViewHDNH_DoubleClick(object sender, EventArgs e)

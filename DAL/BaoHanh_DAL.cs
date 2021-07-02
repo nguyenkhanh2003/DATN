@@ -20,6 +20,11 @@ namespace DAL
         {
             return KetNoi.GetDataTable("select * From HoaDonBanHang" + condition);
         }
+
+        public DataTable HienThiCT_PhieuBaoHanh(string conditon)
+        {
+            return KetNoi.GetDataTable("select * From CT_PhieuBaoHanh" + conditon);
+        }
         public void ThemPBH(PhieuBaoHanh ex)
         {
             KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaHDBH + "',N'"+ex.MaNV+"','" + ex.NgayLap + "',N'" + ex.TrangThai + "')");
@@ -27,7 +32,7 @@ namespace DAL
 
         public void ThemCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Insert Into CT_PhieuBaoHanh values(N'" + ex.MaPBH + "',N'" + ex.MaLK + "'," + ex.SoLuong + ",N'" + ex.GhiChu + "')");
+            KetNoi.ExecuteReader(@"Insert Into CT_PhieuBaoHanh values(N'" + ex.MaPBH + "',N'" + ex.MaLK + "',N'" + ex.SoLuong + "',N'" + ex.GhiChu + "')");
         }
 
         public DataTable GetNhanVien(string Condition)

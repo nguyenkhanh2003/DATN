@@ -29,10 +29,10 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SanPham));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewLK = new System.Windows.Forms.DataGridView();
@@ -108,20 +108,20 @@ namespace DoAnCShap
             // 
             // dataGridViewLK
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridViewLK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewLK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewLK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewLK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLK.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLK,
@@ -137,23 +137,23 @@ namespace DoAnCShap
             this.HinhAnh,
             this.TrangThai});
             this.dataGridViewLK.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLK.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLK.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewLK.Location = new System.Drawing.Point(12, 22);
             this.dataGridViewLK.Name = "dataGridViewLK";
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLK.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLK.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewLK.RowHeadersVisible = false;
             this.dataGridViewLK.RowHeadersWidth = 51;
             this.dataGridViewLK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -379,7 +379,7 @@ namespace DoAnCShap
             this.label5.Size = new System.Drawing.Size(131, 28);
             this.label5.TabIndex = 37;
             this.label5.Text = "Xuất Xứ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label6
             // 
@@ -390,7 +390,7 @@ namespace DoAnCShap
             this.label6.Size = new System.Drawing.Size(131, 28);
             this.label6.TabIndex = 37;
             this.label6.Text = "Bào Hành";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label4
             // 
@@ -401,7 +401,7 @@ namespace DoAnCShap
             this.label4.Size = new System.Drawing.Size(131, 28);
             this.label4.TabIndex = 37;
             this.label4.Text = "Tên Linh Kiện";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
             // 
@@ -412,7 +412,7 @@ namespace DoAnCShap
             this.label3.Size = new System.Drawing.Size(131, 28);
             this.label3.TabIndex = 37;
             this.label3.Text = "Nhà Cung Cấp";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label1
             // 
@@ -423,7 +423,7 @@ namespace DoAnCShap
             this.label1.Size = new System.Drawing.Size(131, 28);
             this.label1.TabIndex = 37;
             this.label1.Text = "Mã Loại";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
             // 
@@ -434,7 +434,7 @@ namespace DoAnCShap
             this.label2.Size = new System.Drawing.Size(131, 28);
             this.label2.TabIndex = 37;
             this.label2.Text = "Mã Linh Kiện";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // comboBoxNCC
             // 
@@ -491,26 +491,26 @@ namespace DoAnCShap
             // 
             // txtXuatXu
             // 
-            this.txtXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXuatXu.Location = new System.Drawing.Point(406, 222);
             this.txtXuatXu.Name = "txtXuatXu";
-            this.txtXuatXu.Size = new System.Drawing.Size(302, 28);
+            this.txtXuatXu.Size = new System.Drawing.Size(302, 26);
             this.txtXuatXu.TabIndex = 17;
             // 
             // txtBaoHanh
             // 
-            this.txtBaoHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBaoHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBaoHanh.Location = new System.Drawing.Point(406, 179);
             this.txtBaoHanh.Name = "txtBaoHanh";
-            this.txtBaoHanh.Size = new System.Drawing.Size(302, 28);
+            this.txtBaoHanh.Size = new System.Drawing.Size(302, 26);
             this.txtBaoHanh.TabIndex = 17;
             // 
             // txtTenLinhKien
             // 
-            this.txtTenLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLinhKien.Location = new System.Drawing.Point(406, 136);
             this.txtTenLinhKien.Name = "txtTenLinhKien";
-            this.txtTenLinhKien.Size = new System.Drawing.Size(302, 28);
+            this.txtTenLinhKien.Size = new System.Drawing.Size(302, 26);
             this.txtTenLinhKien.TabIndex = 18;
             // 
             // label8
@@ -526,58 +526,58 @@ namespace DoAnCShap
             // 
             this.txtHinhSP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHinhSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHinhSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHinhSP.Location = new System.Drawing.Point(893, 181);
             this.txtHinhSP.Name = "txtHinhSP";
-            this.txtHinhSP.Size = new System.Drawing.Size(251, 28);
+            this.txtHinhSP.Size = new System.Drawing.Size(251, 26);
             this.txtHinhSP.TabIndex = 14;
             // 
             // txtSoLuong
             // 
             this.txtSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(893, 137);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(251, 28);
+            this.txtSoLuong.Size = new System.Drawing.Size(251, 26);
             this.txtSoLuong.TabIndex = 13;
             // 
             // txtDonGia
             // 
             this.txtDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(893, 93);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(251, 28);
+            this.txtDonGia.Size = new System.Drawing.Size(251, 26);
             this.txtDonGia.TabIndex = 12;
             // 
             // txtDonViTinh
             // 
             this.txtDonViTinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDonViTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonViTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonViTinh.Location = new System.Drawing.Point(893, 51);
             this.txtDonViTinh.Name = "txtDonViTinh";
-            this.txtDonViTinh.Size = new System.Drawing.Size(251, 28);
+            this.txtDonViTinh.Size = new System.Drawing.Size(251, 26);
             this.txtDonViTinh.TabIndex = 11;
             // 
             // txtTinhTrang
             // 
             this.txtTinhTrang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTinhTrang.Location = new System.Drawing.Point(893, 13);
             this.txtTinhTrang.Name = "txtTinhTrang";
-            this.txtTinhTrang.Size = new System.Drawing.Size(251, 28);
+            this.txtTinhTrang.Size = new System.Drawing.Size(251, 26);
             this.txtTinhTrang.TabIndex = 20;
             // 
             // txtMaLinhKien
             // 
-            this.txtMaLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLinhKien.Location = new System.Drawing.Point(406, 12);
             this.txtMaLinhKien.Name = "txtMaLinhKien";
-            this.txtMaLinhKien.Size = new System.Drawing.Size(302, 28);
+            this.txtMaLinhKien.Size = new System.Drawing.Size(302, 26);
             this.txtMaLinhKien.TabIndex = 10;
             // 
             // btnClose

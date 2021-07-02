@@ -39,6 +39,7 @@ namespace DoAnCShap
             this.comboBoxNV = new System.Windows.Forms.ComboBox();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgaLap = new System.Windows.Forms.DateTimePicker();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.txtMaPhieu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,15 +59,14 @@ namespace DoAnCShap
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnThemPhieu = new System.Windows.Forms.Button();
             this.comboBoxlK = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnThemPhieu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -190,6 +190,14 @@ namespace DoAnCShap
             this.dateTimePickerNgaLap.Name = "dateTimePickerNgaLap";
             this.dateTimePickerNgaLap.Size = new System.Drawing.Size(192, 26);
             this.dateTimePickerNgaLap.TabIndex = 2;
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Location = new System.Drawing.Point(152, 74);
+            this.txtMaHD.Multiline = true;
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(192, 25);
+            this.txtMaHD.TabIndex = 1;
             // 
             // txtMaPhieu
             // 
@@ -386,6 +394,20 @@ namespace DoAnCShap
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chi Tiết Phiếu  Bảo Hành";
             // 
+            // btnThemPhieu
+            // 
+            this.btnThemPhieu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThemPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieu.Image")));
+            this.btnThemPhieu.Location = new System.Drawing.Point(393, 29);
+            this.btnThemPhieu.Name = "btnThemPhieu";
+            this.btnThemPhieu.Size = new System.Drawing.Size(79, 38);
+            this.btnThemPhieu.TabIndex = 4;
+            this.btnThemPhieu.Text = "Thêm";
+            this.btnThemPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemPhieu.UseVisualStyleBackColor = true;
+            this.btnThemPhieu.Click += new System.EventHandler(this.btnThemPhieu_Click);
+            // 
             // comboBoxlK
             // 
             this.comboBoxlK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,6 +419,7 @@ namespace DoAnCShap
             // 
             // txtGhiChu
             // 
+            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGhiChu.Location = new System.Drawing.Point(162, 114);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
@@ -405,11 +428,13 @@ namespace DoAnCShap
             // 
             // txtSL
             // 
+            this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSL.Location = new System.Drawing.Point(162, 74);
             this.txtSL.Multiline = true;
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(192, 25);
             this.txtSL.TabIndex = 8;
+            this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSL.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label8
@@ -445,20 +470,6 @@ namespace DoAnCShap
             this.label6.Text = "Tên linh Kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnThemPhieu
-            // 
-            this.btnThemPhieu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThemPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieu.Image")));
-            this.btnThemPhieu.Location = new System.Drawing.Point(393, 29);
-            this.btnThemPhieu.Name = "btnThemPhieu";
-            this.btnThemPhieu.Size = new System.Drawing.Size(79, 38);
-            this.btnThemPhieu.TabIndex = 4;
-            this.btnThemPhieu.Text = "Thêm";
-            this.btnThemPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemPhieu.UseVisualStyleBackColor = true;
-            this.btnThemPhieu.Click += new System.EventHandler(this.btnThemPhieu_Click);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -474,26 +485,21 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(1067, 54);
             this.panel2.TabIndex = 11;
             // 
-            // txtMaHD
-            // 
-            this.txtMaHD.Location = new System.Drawing.Point(152, 74);
-            this.txtMaHD.Multiline = true;
-            this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(192, 25);
-            this.txtMaHD.TabIndex = 1;
-            // 
             // MaLKK
             // 
+            this.MaLKK.DataPropertyName = "MaLK";
             this.MaLKK.HeaderText = "Tên Linh Kiện";
             this.MaLKK.Name = "MaLKK";
             // 
             // SoLuong
             // 
+            this.SoLuong.DataPropertyName = "SoLuong";
             this.SoLuong.HeaderText = "Số Lượng";
             this.SoLuong.Name = "SoLuong";
             // 
             // GhiChu
             // 
+            this.GhiChu.DataPropertyName = "GhiChu";
             this.GhiChu.HeaderText = "Ghi Chú";
             this.GhiChu.Name = "GhiChu";
             // 

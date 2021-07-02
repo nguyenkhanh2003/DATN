@@ -19,6 +19,11 @@ namespace BUS
         {
             return bus.HienThiHDBH(condition);
         }
+
+        public DataTable HienThiCTPhieu(string condition)
+        {
+            return bus.HienThiCT_PhieuBaoHanh(condition);
+        }
         public void ThemPBH(PhieuBaoHanh ex)
         {
             bus.ThemPBH(ex);

@@ -29,7 +29,7 @@ namespace DAL
         //  SỬA DỮ LIỆU
         public void EditData(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"Update LinhKien SET MaLLk=N'"+ex.MaLLK+"',MaNCC=N'"+ex.MaNCC+"',TenLK=N'"+ex.TenLK+"',BaoHanh=N'"+ex.BaoHanh+"',XuatXu=N'"+ex.XuatXu+"',TinhTrang=N'"+ex.TinhTrang+"',DonViTinh="+ex.DonViTinh+",DonGia="+ex.DonGia+",SoLuong="+ex.SoLuong+",HinhAnh=N'"+ex.HinhAnh+"',TrangThai=N'"+ex.TrangThai+"' Where MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Update LinhKien SET MaLLk=N'"+ex.MaLLK+"',MaNCC=N'"+ex.MaNCC+"',TenLK=N'"+ex.TenLK+"',BaoHanh=N'"+ex.BaoHanh+"',XuatXu=N'"+ex.XuatXu+"',TinhTrang=N'"+ex.TinhTrang+"',DonViTinh=N'"+ex.DonViTinh+"',DonGia="+ex.DonGia+",SoLuong="+ex.SoLuong+",HinhAnh=N'"+ex.HinhAnh+"',TrangThai=N'"+ex.TrangThai+"' Where MaLK=N'"+ex.MaLK+"'");
         }
         //  XÓA DỮ LIỆU
         public void DeleteData(LinhKien ex)

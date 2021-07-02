@@ -93,8 +93,23 @@ namespace DoAnCShap
 
         private void btnThemPhieu_Click(object sender, EventArgs e)
         {
+            if(comboBoxlK.Text=="")
+            {
+                MessageBox.Show("? Tên Linh Kiện");
+                return;
+            }    
+            if(txtSL.Text=="")
+            {
+                MessageBox.Show("? Số lượng");
+                return;
+            }    
+            if(txtGhiChu.Text=="")
+            {
+                MessageBox.Show("? Ghi Chú");
+                return;
+            }    
             MaLK += comboBoxlK.SelectedValue.ToString() + ";";
-            object[] t = { txtMaPhieu.Text, comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
+            object[] t = { comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
             dataGridViewCTPBH.Rows.Add(t);
         }
 
