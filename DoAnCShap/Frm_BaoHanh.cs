@@ -19,13 +19,9 @@ namespace DoAnCShap
         }
         PhieuBaoHanh_BUS bus = new PhieuBaoHanh_BUS();
         PhieuBaoHanh pbh = new PhieuBaoHanh();
+        CT_PhieuBaoHanh ctpbh = new CT_PhieuBaoHanh();
         int flag = 0;
 
-        public void HienThiHhDBH()
-        {
-            cboMaHd.DataSource = bus.HienThiHhDBH("");
-            cboMaHd.ValueMember = "MaHDBH";
-        }
         public void XuLyChucNang(Boolean  b1,Boolean b2)
         {
             btnThem.Enabled = b1;
@@ -33,9 +29,24 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnXoa.Enabled = b2;
         }
+
+        public void HienThiNhanVien(string labelHienTenDN)
+        {
+            comboBoxNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
+            comboBoxNV.DisplayMember = "TenNV";
+            comboBoxNV.ValueMember = "MaNV";
+        }
+
         public void HienThiDSPhieu()
         {
             dataGridViewPBH.DataSource = bus.GetPBH("");
+        }
+
+        public void HienThiLK()
+        {
+            comboBoxlK.DataSource = bus.GetDSLK("");
+            comboBoxlK.DisplayMember = "TenLK";
+            comboBoxlK.ValueMember = "MaLK";
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -51,9 +62,11 @@ namespace DoAnCShap
 
         private void Frm_BaoHanh_Load(object sender, EventArgs e)
         {
-            HienThiHhDBH();
             HienThiDSPhieu();
+            HienThiLK();
             XuLyChucNang(true, false);
+            string condition = Login.SetValueForText1;
+            HienThiNhanVien(condition);
         }
 
         public void PhatSinhMaHD()
@@ -76,18 +89,38 @@ namespace DoAnCShap
                     txtMaPhieu.Text = "PBH" + (chuoi2 + 1).ToString();
             }
         }
+        string MaLK = "";
+
+        private void btnThemPhieu_Click(object sender, EventArgs e)
+        {
+            MaLK += comboBoxlK.SelectedValue.ToString() + ";";
+            object[] t = { txtMaPhieu.Text, comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
+            dataGridViewCTPBH.Rows.Add(t);
+        }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (flag == 1)
             {
                 pbh.MaPBH = txtMaPhieu.Text;
-                pbh.MaHDBH = cboMaHd.SelectedValue.ToString();
+                pbh.MaHDBH = txtMaHD.Text;
+                pbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 pbh.NgayLap = dateTimePickerNgaLap.Text;
                 pbh.TrangThai = cboTrangThai.Text;
                 bus.ThemPBH(pbh);
-                MessageBox.Show("Thêm phiếu thành công !");
-                XuLyChucNang(true, false);
+                string[] b = MaLK.Split(';');
+                for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 1; i++)
+                {
+                    string malk = b[i];
+                    string soluong =dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString();
+                    string ghichu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString();
+                    ctpbh.MaPBH = txtMaPhieu.Text;
+                    ctpbh.MaLK = malk;
+                    ctpbh.SoLuong = soluong;
+                    ctpbh.GhiChu = ghichu;
+                    bus.ThemCTPhieuBH(ctpbh);
+                }
+                MessageBox.Show("Tạo phiếu thành công");
             }
             HienThiDSPhieu();
         }
@@ -97,10 +130,5 @@ namespace DoAnCShap
 
         }
 
-        private void btnThemPhieu_Click(object sender, EventArgs e)
-        {
-            object[] t = { txtMaPhieu.Text,comboBoxlK.Text,txtSL.Text,txtGhiChu.Text };
-            dataGridViewCTPBH.Rows.Add(t);
-        }
     }
 }

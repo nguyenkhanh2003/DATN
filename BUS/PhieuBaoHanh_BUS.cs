@@ -23,5 +23,21 @@ namespace BUS
         {
             bus.ThemPBH(ex);
         }
+
+        public void ThemCTPhieuBH(CT_PhieuBaoHanh ex)
+        {
+            bus.ThemCTPhieuBaoHanh(ex);
+        }
+        public DataTable GetNhanVien(string Condition)
+        {
+            return bus.GetNhanVien(Condition);
+        }
+
+        public DataTable GetDSLK(string condition)
+        {
+            return bus.DSSP(condition);
+        }
+
+
     }
 }
