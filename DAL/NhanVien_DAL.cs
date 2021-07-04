@@ -41,5 +41,10 @@ namespace DAL
         {
             KetNoi.ExecuteReader(@"Delete From NhanVien Where MaNV='" + ex.MaNV + "'");
         }
+
+        public DataTable ThongTinNhanVien(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }

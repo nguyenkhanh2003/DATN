@@ -401,6 +401,7 @@ namespace DoAnCShap
             this.labelHienThiTenDangNhap.TabIndex = 4;
             this.labelHienThiTenDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelHienThiTenDangNhap.TextChanged += new System.EventHandler(this.labelHienThiTenDangNhap_TextChanged);
+            this.labelHienThiTenDangNhap.Click += new System.EventHandler(this.labelHienThiTenDangNhap_Click);
             // 
             // btnLogout
             // 
@@ -409,11 +410,12 @@ namespace DoAnCShap
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(691, 6);
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(714, 6);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(105, 35);
+            this.btnLogout.Size = new System.Drawing.Size(38, 35);
             this.btnLogout.TabIndex = 2;
-            this.btnLogout.Text = "Đăng Xuất";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 

@@ -333,5 +333,10 @@ namespace DoAnCShap
 
         public static string SetValueForText1 = "";
 
+        private void labelHienThiTenDangNhap_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Thông Tin Nhân Viên";
+            openChildForm(new Frm_ThongTinNhanVien());
+        }
     }
 }

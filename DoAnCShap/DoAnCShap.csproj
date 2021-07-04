@@ -211,6 +211,12 @@
     <Compile Include="Frm_ThongKe.Designer.cs">
       <DependentUpon>Frm_ThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ThongTinNhanVien.Designer.cs">
+      <DependentUpon>Frm_ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_TraCuu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ThongKe.resx">
       <DependentUpon>Frm_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ThongTinNhanVien.resx">
+      <DependentUpon>Frm_ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TraCuu.resx">
       <DependentUpon>Frm_TraCuu.cs</DependentUpon>

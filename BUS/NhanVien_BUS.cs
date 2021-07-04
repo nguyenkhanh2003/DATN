@@ -36,6 +36,10 @@ namespace BUS
             bus.DeleteData(ex);
         }
        
+        public DataTable ThongTinNhanVien(string condition)
+        {
+            return bus.ThongTinNhanVien(condition);
+        }
 
     }
 }
