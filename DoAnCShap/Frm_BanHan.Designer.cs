@@ -34,6 +34,8 @@ namespace DoAnCShap
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
+            this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.btnLuuKH = new System.Windows.Forms.Button();
             this.btnThenKH = new System.Windows.Forms.Button();
             this.btnTimKH = new System.Windows.Forms.Button();
@@ -55,10 +57,10 @@ namespace DoAnCShap
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NumreicSL = new System.Windows.Forms.NumericUpDown();
             this.btnChonMua = new System.Windows.Forms.Button();
             this.labelThanhTien = new System.Windows.Forms.Label();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
-            this.txtSL = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -85,11 +87,10 @@ namespace DoAnCShap
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButtonNam = new System.Windows.Forms.RadioButton();
-            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumreicSL)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -160,6 +161,28 @@ namespace DoAnCShap
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Chung";
+            // 
+            // radioButtonNu
+            // 
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Location = new System.Drawing.Point(586, 206);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
+            this.radioButtonNu.TabIndex = 14;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNam
+            // 
+            this.radioButtonNam.AutoSize = true;
+            this.radioButtonNam.Location = new System.Drawing.Point(458, 207);
+            this.radioButtonNam.Name = "radioButtonNam";
+            this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonNam.TabIndex = 14;
+            this.radioButtonNam.TabStop = true;
+            this.radioButtonNam.Text = "Nam";
+            this.radioButtonNam.UseVisualStyleBackColor = true;
             // 
             // btnLuuKH
             // 
@@ -382,10 +405,10 @@ namespace DoAnCShap
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.NumreicSL);
             this.groupBox1.Controls.Add(this.btnChonMua);
             this.groupBox1.Controls.Add(this.labelThanhTien);
             this.groupBox1.Controls.Add(this.txtKhuyenMai);
-            this.groupBox1.Controls.Add(this.txtSL);
             this.groupBox1.Controls.Add(this.txtDonGia);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label4);
@@ -400,6 +423,20 @@ namespace DoAnCShap
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sản Phẩm";
+            // 
+            // NumreicSL
+            // 
+            this.NumreicSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumreicSL.Location = new System.Drawing.Point(152, 104);
+            this.NumreicSL.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NumreicSL.Name = "NumreicSL";
+            this.NumreicSL.Size = new System.Drawing.Size(222, 26);
+            this.NumreicSL.TabIndex = 15;
+            this.NumreicSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnChonMua
             // 
@@ -435,17 +472,6 @@ namespace DoAnCShap
             this.txtKhuyenMai.TabIndex = 10;
             this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKhuyenMai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhuyenMai_KeyPress);
-            // 
-            // txtSL
-            // 
-            this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.Location = new System.Drawing.Point(152, 106);
-            this.txtSL.Multiline = true;
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(222, 24);
-            this.txtSL.TabIndex = 11;
-            this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSL_KeyPress);
             // 
             // txtDonGia
             // 
@@ -739,28 +765,6 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(760, 57);
             this.panel2.TabIndex = 16;
             // 
-            // radioButtonNam
-            // 
-            this.radioButtonNam.AutoSize = true;
-            this.radioButtonNam.Location = new System.Drawing.Point(458, 207);
-            this.radioButtonNam.Name = "radioButtonNam";
-            this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
-            this.radioButtonNam.TabIndex = 14;
-            this.radioButtonNam.TabStop = true;
-            this.radioButtonNam.Text = "Nam";
-            this.radioButtonNam.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNu
-            // 
-            this.radioButtonNu.AutoSize = true;
-            this.radioButtonNu.Location = new System.Drawing.Point(586, 206);
-            this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
-            this.radioButtonNu.TabIndex = 14;
-            this.radioButtonNu.TabStop = true;
-            this.radioButtonNu.Text = "Nữ";
-            this.radioButtonNu.UseVisualStyleBackColor = true;
-            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -782,6 +786,7 @@ namespace DoAnCShap
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumreicSL)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -814,7 +819,6 @@ namespace DoAnCShap
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelThanhTien;
         private System.Windows.Forms.TextBox txtKhuyenMai;
-        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
@@ -850,5 +854,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButtonNu;
         private System.Windows.Forms.RadioButton radioButtonNam;
+        private System.Windows.Forms.NumericUpDown NumreicSL;
     }
 }

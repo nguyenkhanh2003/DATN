@@ -125,7 +125,7 @@ namespace DoAnCShap
                 labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
                 comboBoxTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
                 //HienThiDS_CTHD(vitri);
-                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+comboBoxMaHD.Text+"'");
+                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+comboBoxMaHD.Text+"'");
             }
             catch
             {
@@ -172,7 +172,6 @@ namespace DoAnCShap
                 flag = 1;
                 int vitri = dataGridViewHD.CurrentCell.RowIndex;
                 HienThiHoaDonTextBox(vitri,bus.GetHoaDon(""));
-                
         }
 
         private void dataGridViewCTHD_CellClick(object sender, DataGridViewCellEventArgs e)

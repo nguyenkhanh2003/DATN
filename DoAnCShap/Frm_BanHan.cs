@@ -68,7 +68,7 @@ namespace DoAnCShap
             txtMaHD.Enabled = b2;
             comboBoxNV.Enabled = b2;
             txtMaKH.Enabled = b2;
-            txtSL.Enabled = b2;
+            NumreicSL.Enabled = b2;
             txtKhuyenMai.Enabled = b2;
             txtDonGia.Enabled = b2;
             comboBoxSP.Enabled = b2;
@@ -126,7 +126,8 @@ namespace DoAnCShap
                        
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
                         txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
-                        txtSL.Text = "1";
+                        //txtSL.Text = "1";
+                        NumreicSL.Value = 1;
 
                     }
 
@@ -164,17 +165,18 @@ namespace DoAnCShap
 
         private void btnChonMua_Click(object sender, EventArgs e)
         {
+            
             if(txtDonGia.Text=="")
             {
                 MessageBox.Show("? Đơn Giá");
                 return;
             }
 
-            if (txtSL.Text == "")
-            {
-                MessageBox.Show("? Số Lượng");
-                return;
-            }
+            //if (txtSL.Text == "")
+            //{
+            //    MessageBox.Show("? Số Lượng");
+            //    return;
+            //}
             if (txtKhuyenMai.Text=="")
             {
                 MessageBox.Show("? Khuyến Mãi");
@@ -186,7 +188,8 @@ namespace DoAnCShap
             int tt = 0;
             tongtien += tt;
             KM = int.Parse(txtKhuyenMai.Text);
-            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+            //tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+            tt = Convert.ToInt32(txtDonGia.Text) * (((int)NumreicSL.Value)) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             String.Format("{0:#,##0.##}", (labelTongThanhToan.Text) = tongtien.ToString());
@@ -202,7 +205,8 @@ namespace DoAnCShap
             
             if(KiemTra==1)
             {
-                int SL = int.Parse(txtSL.Text) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
+                //int SL = int.Parse(txtSL.Text) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
+                int SL = ((int)NumreicSL.Value) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
                 int ThanhTienMoi = tt + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
@@ -211,7 +215,7 @@ namespace DoAnCShap
             else
             {
                 MaLK += comboBoxSP.SelectedValue.ToString() + ";";
-                object[] t = { comboBoxSP.Text, txtSL.Text, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
+                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
                 dataGridViewHDBH.Rows.Add(t);
             }
      
