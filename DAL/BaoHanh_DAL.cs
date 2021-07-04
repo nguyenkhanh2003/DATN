@@ -23,7 +23,7 @@ namespace DAL
 
         public DataTable HienThiCT_PhieuBaoHanh(string conditon)
         {
-            return KetNoi.GetDataTable("select * From CT_PhieuBaoHanh" + conditon);
+            return KetNoi.GetDataTable("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK" + conditon);
         }
         public void ThemPBH(PhieuBaoHanh ex)
         {

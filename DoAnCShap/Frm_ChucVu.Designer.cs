@@ -439,7 +439,7 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(32, 61);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 182);
+            this.panel2.Size = new System.Drawing.Size(409, 182);
             this.panel2.TabIndex = 24;
             // 
             // panel4
@@ -461,9 +461,9 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.checkBoxNhanViem);
             this.panel4.Controls.Add(this.checkBoxkH);
             this.panel4.Controls.Add(this.checkBoxBanHang);
-            this.panel4.Location = new System.Drawing.Point(516, 61);
+            this.panel4.Location = new System.Drawing.Point(457, 61);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(655, 182);
+            this.panel4.Size = new System.Drawing.Size(715, 182);
             this.panel4.TabIndex = 32;
             // 
             // label4
@@ -473,7 +473,7 @@ namespace DoAnCShap
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(653, 35);
+            this.label4.Size = new System.Drawing.Size(713, 35);
             this.label4.TabIndex = 20;
             this.label4.Text = "Phân Quyền";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

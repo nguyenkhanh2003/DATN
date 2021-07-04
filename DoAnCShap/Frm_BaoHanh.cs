@@ -48,6 +48,11 @@ namespace DoAnCShap
             comboBoxlK.DisplayMember = "TenLK";
             comboBoxlK.ValueMember = "MaLK";
         }
+
+        public void HienThiCTPhieuBaoHanh()
+        {
+            dataGridViewCTPBH.DataSource = bus.HienThiCTPhieu("");
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -138,6 +143,7 @@ namespace DoAnCShap
                 MessageBox.Show("Tạo phiếu thành công");
             }
             HienThiDSPhieu();
+            HienThiCTPhieuBaoHanh();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

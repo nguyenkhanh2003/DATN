@@ -58,6 +58,9 @@ namespace DoAnCShap
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
+            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThemPhieu = new System.Windows.Forms.Button();
             this.comboBoxlK = new System.Windows.Forms.ComboBox();
@@ -67,9 +70,6 @@ namespace DoAnCShap
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -378,6 +378,24 @@ namespace DoAnCShap
             this.dataGridViewCTPBH.Size = new System.Drawing.Size(503, 311);
             this.dataGridViewCTPBH.TabIndex = 0;
             // 
+            // MaLKK
+            // 
+            this.MaLKK.DataPropertyName = "MaLK";
+            this.MaLKK.HeaderText = "Tên Linh Kiện";
+            this.MaLKK.Name = "MaLKK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.Name = "GhiChu";
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.btnThemPhieu);
@@ -420,10 +438,10 @@ namespace DoAnCShap
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(162, 114);
+            this.txtGhiChu.Location = new System.Drawing.Point(162, 136);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(192, 101);
+            this.txtGhiChu.Size = new System.Drawing.Size(192, 36);
             this.txtGhiChu.TabIndex = 7;
             // 
             // txtSL
@@ -484,24 +502,6 @@ namespace DoAnCShap
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1067, 54);
             this.panel2.TabIndex = 11;
-            // 
-            // MaLKK
-            // 
-            this.MaLKK.DataPropertyName = "MaLK";
-            this.MaLKK.HeaderText = "Tên Linh Kiện";
-            this.MaLKK.Name = "MaLKK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.Name = "GhiChu";
             // 
             // Frm_BaoHanh
             // 

@@ -17,6 +17,7 @@ namespace DTO
         public string DonViTinh { get; set; }
         public int DonGia { get; set; }
         public int SoLuong { get; set; }
+        public int KhuyenMai { get; set; }
         public string HinhAnh { get; set; }
         public string TrangThai { get; set; }
         public string MaNCC { get; set; }

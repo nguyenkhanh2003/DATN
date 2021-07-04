@@ -84,8 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTHD)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -539,6 +539,7 @@
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.btnDong);
             this.groupBox6.Location = new System.Drawing.Point(983, 49);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(166, 274);
@@ -579,7 +580,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Controls.Add(this.btnDong);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(0, 326);
@@ -593,7 +593,7 @@
             this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
-            this.btnDong.Location = new System.Drawing.Point(1035, 10);
+            this.btnDong.Location = new System.Drawing.Point(37, 23);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(95, 40);
             this.btnDong.TabIndex = 0;
@@ -627,9 +627,9 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -123,7 +123,9 @@ namespace DoAnCShap
                     //if(comboBoxSP.Text==DSSP.Rows[0]["MaLK"].ToString())
                     if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
+                       
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
+                        txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
                         txtSL.Text = "1";
 
                     }
@@ -346,13 +348,13 @@ namespace DoAnCShap
             {
                 AddKH.MaKH = txtMaKH.Text;
                 AddKH.TenKH = txtTenkH.Text;
-                if (checkBoxNam.Checked == true)
+                if (radioButtonNam.Checked == true)
                 {
-                    AddKH.GioiTinh = checkBoxNam.Text;
+                    AddKH.GioiTinh = radioButtonNam.Text;
                 }
                 else
                 {
-                    AddKH.GioiTinh = checkBoxNu.Text;
+                    AddKH.GioiTinh = radioButtonNu.Text;
                 }
                 AddKH.DienThoai = txtSDT.Text;
                 AddKH.DiaChi = txtDiaChi.Text;
@@ -389,6 +391,30 @@ namespace DoAnCShap
             {
                 int rowIndex = dataGridViewHDBH.CurrentCell.RowIndex;
                 dataGridViewHDBH.Rows.RemoveAt(rowIndex);
+            }
+        }
+
+        private void txtSL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDonGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
             }
         }
     }

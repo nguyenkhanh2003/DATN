@@ -31,5 +31,10 @@ namespace BUS
         {
             return bus.GetLogin(macv, tencv);
         }
+
+        public DataTable GetLogin1(string username)
+        {
+          return  bus.GetLoGin1(username);
+        }    
     }
 }

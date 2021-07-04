@@ -67,6 +67,23 @@ namespace DoAnCShap
             return sb.ToString();
         }
 
+        string hash = "f0xle@rn";//Create a hash key
+
+        public void MaHoaMD5()
+        {
+            byte[] data = UTF8Encoding.UTF8.GetBytes(txtMatKhau.Text);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));//Get hash key
+                //Encrypt data by hash key
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    txtMatKhau.Text = Convert.ToBase64String(results, 0, results.Length);
+                }
+            }
+        }
         public static string SetValueForText1 = "";
         public static string SetValueForText2 = "";
 
@@ -107,35 +124,37 @@ namespace DoAnCShap
             int count = bus.GetLogin(username, CreateMd5(password)).Rows.Count;
             if(txtTenDN.Text=="")
             {
-                MessageBox.Show("Tên đăng nhập không được để trống ");
+                labelMessBox.Text = "Tên Đăng Nhập Không Được để trống";
                 return;
             }
             if(txtMatKhau.Text=="")
             {
-                MessageBox.Show("Mật khẩu không được để trống");
+                labelMessBox.Text = "Mật Khẩu Không Được để trống";
                 return;
             }    
             if (count==0)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
+                labelMessBox.Text = "Tên Đăng Nhập Hoặc mật khẩu không đúng";
             }
             else
             {
                 TenTaiKhoan = bus.GetLogin(username,CreateMd5(password)).Rows[0][10].ToString();
-                MessageBox.Show("Đăng Nhập Thành Công");
+                //MessageBox.Show("Đăng Nhập Thành Công");
                 SetValueForText1 = username;
-                QLNV = PhanQuyen(15);
-                QLKH = PhanQuyen(16);
-                QLLK = PhanQuyen(17);
-                QLBH = PhanQuyen(18);
-                QLNCC = PhanQuyen(19);
-                QLLLK = PhanQuyen(20);
-                QLNK = PhanQuyen(21);
-                BaoHanh = PhanQuyen(22);
-                PhanQuyenn = PhanQuyen(23);
-                ThongKe = PhanQuyen(24);
-                HoaDon = PhanQuyen(25);
-                Setting = PhanQuyen(26);
+                Form1 frm1 = new Form1();
+                frm1.ShowDialog();
+                //QLNV = PhanQuyen(15);
+                //QLKH = PhanQuyen(16);
+                //QLLK = PhanQuyen(17);
+                //QLBH = PhanQuyen(18);
+                //QLNCC = PhanQuyen(19);
+                //QLLLK = PhanQuyen(20);
+                //QLNK = PhanQuyen(21);
+                //BaoHanh = PhanQuyen(22);
+                //PhanQuyenn = PhanQuyen(23);
+                //ThongKe = PhanQuyen(24);
+                //HoaDon = PhanQuyen(25);
+                //Setting = PhanQuyen(26);
                 this.Close();
             }    
         }
@@ -145,6 +164,9 @@ namespace DoAnCShap
             HienThiCV();
         }
 
-       
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

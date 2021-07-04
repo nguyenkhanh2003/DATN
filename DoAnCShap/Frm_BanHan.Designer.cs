@@ -35,8 +35,6 @@ namespace DoAnCShap
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnLuuKH = new System.Windows.Forms.Button();
-            this.checkBoxNu = new System.Windows.Forms.CheckBox();
-            this.checkBoxNam = new System.Windows.Forms.CheckBox();
             this.btnThenKH = new System.Windows.Forms.Button();
             this.btnTimKH = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -87,6 +85,8 @@ namespace DoAnCShap
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButtonNam = new System.Windows.Forms.RadioButton();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -131,9 +131,9 @@ namespace DoAnCShap
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.radioButtonNu);
+            this.groupBox3.Controls.Add(this.radioButtonNam);
             this.groupBox3.Controls.Add(this.btnLuuKH);
-            this.groupBox3.Controls.Add(this.checkBoxNu);
-            this.groupBox3.Controls.Add(this.checkBoxNam);
             this.groupBox3.Controls.Add(this.btnThenKH);
             this.groupBox3.Controls.Add(this.btnTimKH);
             this.groupBox3.Controls.Add(this.label16);
@@ -173,26 +173,6 @@ namespace DoAnCShap
             this.btnLuuKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuuKH.UseVisualStyleBackColor = true;
             this.btnLuuKH.Click += new System.EventHandler(this.btnLuuKH_Click);
-            // 
-            // checkBoxNu
-            // 
-            this.checkBoxNu.AutoSize = true;
-            this.checkBoxNu.Location = new System.Drawing.Point(529, 208);
-            this.checkBoxNu.Name = "checkBoxNu";
-            this.checkBoxNu.Size = new System.Drawing.Size(44, 20);
-            this.checkBoxNu.TabIndex = 14;
-            this.checkBoxNu.Text = "Nữ";
-            this.checkBoxNu.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNam
-            // 
-            this.checkBoxNam.AutoSize = true;
-            this.checkBoxNam.Location = new System.Drawing.Point(458, 208);
-            this.checkBoxNam.Name = "checkBoxNam";
-            this.checkBoxNam.Size = new System.Drawing.Size(56, 20);
-            this.checkBoxNam.TabIndex = 14;
-            this.checkBoxNam.Text = "Nam";
-            this.checkBoxNam.UseVisualStyleBackColor = true;
             // 
             // btnThenKH
             // 
@@ -337,6 +317,7 @@ namespace DoAnCShap
             // 
             // dateTimePickerNgayLap
             // 
+            this.dateTimePickerNgayLap.CustomFormat = "dd.MM.yyyy";
             this.dateTimePickerNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayLap.Location = new System.Drawing.Point(120, 110);
@@ -453,6 +434,7 @@ namespace DoAnCShap
             this.txtKhuyenMai.Size = new System.Drawing.Size(222, 24);
             this.txtKhuyenMai.TabIndex = 10;
             this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKhuyenMai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhuyenMai_KeyPress);
             // 
             // txtSL
             // 
@@ -463,6 +445,7 @@ namespace DoAnCShap
             this.txtSL.Size = new System.Drawing.Size(222, 24);
             this.txtSL.TabIndex = 11;
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSL_KeyPress);
             // 
             // txtDonGia
             // 
@@ -473,6 +456,7 @@ namespace DoAnCShap
             this.txtDonGia.Size = new System.Drawing.Size(222, 24);
             this.txtDonGia.TabIndex = 12;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDonGia_KeyPress);
             // 
             // label12
             // 
@@ -755,6 +739,28 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(760, 57);
             this.panel2.TabIndex = 16;
             // 
+            // radioButtonNam
+            // 
+            this.radioButtonNam.AutoSize = true;
+            this.radioButtonNam.Location = new System.Drawing.Point(458, 207);
+            this.radioButtonNam.Name = "radioButtonNam";
+            this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonNam.TabIndex = 14;
+            this.radioButtonNam.TabStop = true;
+            this.radioButtonNam.Text = "Nam";
+            this.radioButtonNam.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNu
+            // 
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Location = new System.Drawing.Point(586, 206);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
+            this.radioButtonNu.TabIndex = 14;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
+            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -833,8 +839,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnThenKH;
         private System.Windows.Forms.Button btnTimKH;
-        private System.Windows.Forms.CheckBox checkBoxNu;
-        private System.Windows.Forms.CheckBox checkBoxNam;
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
@@ -844,5 +848,7 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButtonNu;
+        private System.Windows.Forms.RadioButton radioButtonNam;
     }
 }

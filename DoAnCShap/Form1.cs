@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
+using DTO;
 namespace DoAnCShap
 {
     public partial class Form1 : Form
@@ -18,6 +19,8 @@ namespace DoAnCShap
             hideSubMenu();
             
         }
+
+        Login_BUS bus = new Login_BUS();
 
         //public void funData(TextBox txtTenHienThi)
         //{
@@ -151,27 +154,50 @@ namespace DoAnCShap
         }
 
         public static string UserName = "";
+        public static bool QLNV;//4
+        public static bool QLKH;
+        public static bool QLLK;
+        public static bool QLLLK;
+        public static bool QLBH;
+        public static bool BaoHanh;
+        public static bool QLNCC;
+        public static bool QLNK;
+        public static bool PhanQuyenn;
+        public static bool ThongKe;
+        public static bool HoaDon;
+        public static bool Setting;
 
+        public bool PhanQuyen(int col)
+        {
+            bool KiemTra = false;
+            for (int i = 0; i < bus.GetLogin1(Login.TenTaiKhoan).Rows.Count; i++)
+            {
+                if (bus.GetLogin1(Login.TenTaiKhoan).Rows[i][col].ToString() == "True")
+                    return KiemTra = true;
+            }
+
+            return KiemTra;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             lbl_HienThiForm.Text = "Home";
             fillChart();
-            Login frmDN = new Login();
-            frmDN.ShowDialog();
-            if (Login.IsClose) this.Close();
-            if (Login.QLNV) btnNhanVien.Enabled = true; else btnNhanVien.Enabled = false;
-            if (Login.QLKH) btnKhachHang.Enabled = true; else btnKhachHang.Enabled = false;
-            if (Login.QLLK) btnLinhKien.Enabled = true; else btnLinhKien.Enabled = false;
-            if (Login.QLBH) btnBanHang.Enabled = true; else btnBanHang.Enabled = false;
-            if (Login.QLNCC) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Enabled = false;
-            if (Login.QLLLK) btnLoaiLK.Enabled = true; else btnLoaiLK.Enabled = false;
-            if (Login.QLNK) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Enabled = false;
-            if (Login.BaoHanh) btnBaohanh.Enabled = true; else btnBaohanh.Enabled = false;
-            if (Login.PhanQuyenn) btnPhanQuyen.Enabled = true; else btnPhanQuyen.Enabled = false;
-            if (Login.ThongKe) btnThongKe.Enabled = true; else btnThongKe.Enabled = false;
-            if (Login.HoaDon) btnHoaDon.Enabled = true; else btnHoaDon.Enabled = false;
-            if (Login.Setting) btnSetting.Enabled = true; else btnSetting.Enabled = false;
+            //Login frmDN = new Login();
+            //frmDN.ShowDialog();
+            //if (Login.IsClose) this.Close();
+            if (PhanQuyen(15)) btnNhanVien.Enabled = true; else btnNhanVien.Enabled = false;
+            if (PhanQuyen(16)) btnKhachHang.Enabled = true; else btnKhachHang.Enabled = false;
+            if (PhanQuyen(17)) btnLinhKien.Enabled = true; else btnLinhKien.Enabled = false;
+            if (PhanQuyen(18)) btnBanHang.Enabled = true; else btnBanHang.Enabled = false;
+            if (PhanQuyen(19)) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Enabled = false;
+            if (PhanQuyen(20)) btnLoaiLK.Enabled = true; else btnLoaiLK.Enabled = false;
+            if (PhanQuyen(21)) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Enabled = false;
+            if (PhanQuyen(22)) btnBaohanh.Enabled = true; else btnBaohanh.Enabled = false;
+            if (PhanQuyen(23)) btnPhanQuyen.Enabled = true; else btnPhanQuyen.Enabled = false;
+            if (PhanQuyen(24)) btnThongKe.Enabled = true; else btnThongKe.Enabled = false;
+            if (PhanQuyen(25)) btnHoaDon.Enabled = true; else btnHoaDon.Enabled = false;
+            if (PhanQuyen(26)) btnSetting.Enabled = true; else btnSetting.Enabled = false;
             labelHienThiTenDangNhap.Text = Login.TenTaiKhoan;
         }
 
@@ -218,7 +244,10 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn đẵng xuất hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
-                Form1_Load(e, e);
+                //Form1_Load(e, e);
+                this.Close();
+                Login lg = new Login();
+                lg.ShowDialog();
             }
             else
             {

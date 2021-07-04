@@ -34,13 +34,16 @@ namespace DoAnCShap
       
         public void xulytextbox(Boolean b1, Boolean b2)
         {
+            txtMaNV.ReadOnly = b1;
             txtMaNV.Enabled = b1;
             cboChucVu.Enabled = b1;
-            txtHinhNhanVien.Enabled = b1;
+            //txtHinhNhanVien.Enabled = b1;
             txtUserName.Enabled = b1;
             txtPassWord.Enabled = b1;
             txtTenNV.Enabled = b1;
-            cboGioiTinh.Enabled = b1;
+            //cboGioiTinh.Enabled = b1;
+            radioButtonNam.Enabled = b1;
+            radioButtonNu.Enabled = b1;
             txtEmail.Enabled = b1;
             txtSDT.Enabled = b1;
             txtCMND.Enabled = b1;
@@ -53,11 +56,11 @@ namespace DoAnCShap
             pictureBox1.Controls.Clear();
             txtMaNV.Clear();
             cboChucVu.Text = "";
-            txtHinhNhanVien.Clear();
+            //txtHinhNhanVien.Clear();
             txtUserName.Clear();
             txtPassWord.Clear();
             txtTenNV.Clear();
-            cboGioiTinh.Text = "";
+            //cboGioiTinh.Text = "";
             txtEmail.Clear();
             txtSDT.Clear();
             txtCMND.Clear();
@@ -139,7 +142,7 @@ namespace DoAnCShap
                 }
             }
         }
-     
+        String TenHinh = "";
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog opFile = new OpenFileDialog();
@@ -160,7 +163,7 @@ namespace DoAnCShap
                     string filepath = opFile.FileName;    // <---
                     File.Copy(filepath, appPath + iName); // <---
                     pictureBox1.Image = new Bitmap(opFile.OpenFile());
-                    txtHinhNhanVien.Text = iName;
+                    TenHinh = iName;
                 }
                 catch (Exception exp)
                 {
@@ -208,11 +211,11 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa nhập tên nhân viên");
                 return;
             }
-            if (cboGioiTinh.Text == "")
-            {
-                MessageBox.Show("Chưa chọn giới tính");
-                return;
-            }
+            //if (ra.Text == "")
+            //{
+            //    MessageBox.Show("Chưa chọn giới tính");
+            //    return;
+            //}
             if (txtEmail.Text == "")
             {
                 MessageBox.Show("Chưa nhập email");
@@ -233,11 +236,11 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa nhập địa chỉ");
                 return;
             }
-            if (txtHinhNhanVien.Text == "")
-            {
-                MessageBox.Show("Chưa chọn hình");
-                return;
-            }
+            //if (txtHinhNhanVien.Text == "")
+            //{
+            //    MessageBox.Show("Chưa chọn hình");
+            //    return;
+            //}
             if (txtUserName.Text == "")
             {
                 MessageBox.Show("UserName không được để trống");
@@ -267,13 +270,21 @@ namespace DoAnCShap
                         nv.MaNV = txtMaNV.Text;
                         nv.MaCV = cboChucVu.SelectedValue.ToString();
                         nv.TenNV = txtTenNV.Text;
-                        nv.GioiTinh = cboGioiTinh.Text;
+                        if(radioButtonNam.Checked==true)
+                        {
+                            nv.GioiTinh = radioButtonNam.Text;
+                        }
+                        else
+                        {
+                            nv.GioiTinh = radioButtonNu.Text;
+                        }    
+                        //nv.GioiTinh = cboGioiTinh.Text;
                         nv.Email = txtEmail.Text;
                         nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
                         nv.DiaChi = txtDiaChi.Text;
-                        nv.HinhAnh = txtHinhNhanVien.Text;
+                        nv.HinhAnh = TenHinh;
                         //File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
                         nv.UserName = txtUserName.Text;
                         nv.PassWord = txtPassWord.Text;
@@ -303,13 +314,13 @@ namespace DoAnCShap
                     nv.MaNV = txtMaNV.Text;
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
-                    nv.GioiTinh = cboGioiTinh.Text;
+                    //nv.GioiTinh = cboGioiTinh.Text;
                     nv.Email = txtEmail.Text;
                     nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                     nv.DienThoai = txtSDT.Text;
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
-                    nv.HinhAnh = txtHinhNhanVien.Text;
+                    nv.HinhAnh = TenHinh;
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
@@ -334,7 +345,7 @@ namespace DoAnCShap
             txtMaNV.Text = row.Cells[0].Value.ToString();
             cboChucVu.Text = row.Cells[1].Value.ToString();
             txtTenNV.Text = row.Cells[2].Value.ToString();
-            cboGioiTinh.Text = row.Cells[3].Value.ToString();
+            /*cboGioiTinh.Text = row.Cells[3].Value.ToString()*/;
             txtEmail.Text = row.Cells[4].Value.ToString();
             dateTirmNgaySinh.Text = row.Cells[5].Value.ToString();
             txtSDT.Text = row.Cells[6].Value.ToString();
@@ -342,24 +353,32 @@ namespace DoAnCShap
             txtDiaChi.Text = row.Cells[8].Value.ToString();
             string[] b = row.Cells[9].Value.ToString().Split(';');
             pictureBox1.Controls.Clear();
-            int n;
-            if (b.Length == 1)
-                n = b.Length;
-            else
-                n = b.Length - 1;
-            for (int i = 0; i < n; i++)
+            try
             {
-                PictureBox p = new PictureBox();
-                Size s = new Size(180, 180);
-                p.Size = s;
-                pictureBox1.Controls.Add(p);
-                Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
-                p.Image = a;
-                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                int n;
+                if (b.Length == 1)
+                    n = b.Length;
+                else
+                    n = b.Length - 1;
+                for (int i = 0; i < n; i++)
+                {
+                    PictureBox p = new PictureBox();
+                    Size s = new Size(180, 180);
+                    p.Size = s;
+                    pictureBox1.Controls.Add(p);
+                    Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                    p.Image = a;
+                    p.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
             }
-            txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
+            catch
+            {
+                //MessageBox.Show("Không có hình");
+                //return;
+            }
+            //txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
             txtUserName.Text = row.Cells[10].Value.ToString();
-            txtPassWord.Text = row.Cells[11].Value.ToString();
+            //txtPassWord.Text = row.Cells[11].Value.ToString();
             cboTrangThai.Text = row.Cells[12].Value.ToString();        }
 
       
