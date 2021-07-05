@@ -13,7 +13,7 @@ namespace DAL
 
         public DataTable GetPBH(string condition)
         {
-            return KetNoi.GetDataTable("Select PhieuBaoHanh.MaPBH,PhieuBaoHanh.MaHDBH,NhanVien.TenNV,PhieuBaoHanh.NgayLapPhieu,PhieuBaoHanh.TrangThai From PhieuBaoHanh, NhanVien Where PhieuBaoHanh.MaNV=NhanVien.MaNV" + condition);
+            return KetNoi.GetDataTable("Select PhieuBaoHanh.MaPBH,PhieuBaoHanh.MaHDBH,NhanVien.TenNV,PhieuBaoHanh.NgayLapPhieu,PhieuBaoHanh.NgayLayHang,PhieuBaoHanh.TrangThai From PhieuBaoHanh, NhanVien Where PhieuBaoHanh.MaNV=NhanVien.MaNV" + condition);
         }
 
         public DataTable HienThiHDBH(string condition)
@@ -27,7 +27,7 @@ namespace DAL
         }
         public void ThemPBH(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaHDBH + "',N'"+ex.MaNV+"','" + ex.NgayLap + "',N'" + ex.TrangThai + "')");
+            KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaHDBH + "',N'"+ex.MaNV+"','" + ex.NgayLap + "','"+ex.NgayLayHang+"',N'" + ex.TrangThai + "')");
         }
 
         public void ThemCTPhieuBaoHanh(CT_PhieuBaoHanh ex)

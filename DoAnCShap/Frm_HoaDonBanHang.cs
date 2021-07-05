@@ -68,7 +68,7 @@ namespace DoAnCShap
             txtSL.Enabled = b2;
             txtDonGia.Enabled = b2;
             txtKhuyenMai.Enabled = b2;
-            CboTrangThai.Enabled = b2;
+            //CboTrangThai.Enabled = b2;
         }
         public void XuLyTextBoxHD(Boolean b1,Boolean b2)
         {
@@ -142,7 +142,7 @@ namespace DoAnCShap
                 txtDonGia.Text = d.Rows[vitri]["DonGia"].ToString();
                 txtKhuyenMai.Text = d.Rows[vitri]["KhuyenMai"].ToString();
                 labelThanhTien.Text = d.Rows[vitri]["ThanhTien"].ToString();
-                CboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
+                //CboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
             }
             catch
             {
@@ -186,7 +186,7 @@ namespace DoAnCShap
                 txtDonGia.Text = row.Cells[4].Value.ToString();
                 txtKhuyenMai.Text = row.Cells[5].Value.ToString();
                 labelThanhTien.Text = row.Cells[6].Value.ToString();
-                CboTrangThai.Text = row.Cells[7].Value.ToString();
+                //CboTrangThai.Text = row.Cells[7].Value.ToString();
             }
             catch
             {
@@ -265,11 +265,11 @@ namespace DoAnCShap
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
-                cthd.SoLuong = txtSL.Text;
-                cthd.DonGia = txtDonGia.Text;
-                cthd.KhuyenMai = txtKhuyenMai.Text;
-                cthd.ThanhTien = labelThanhTien.Text;
-                cthd.TrangThai = CboTrangThai.Text;
+                cthd.SoLuong =int.Parse(txtSL.Text);
+                cthd.DonGia =double.Parse(txtDonGia.Text);
+                cthd.KhuyenMai =double.Parse(txtKhuyenMai.Text);
+                cthd.ThanhTien =double.Parse(labelThanhTien.Text);
+                //cthd.TrangThai = CboTrangThai.Text;
                 bus.UpdateCTHoaDon(cthd);
                 MessageBox.Show("Cập Nhật Chi Tiết Hóa Đơn Thành Công !");
                 HienThiCTHD_TheoMa();
@@ -280,10 +280,10 @@ namespace DoAnCShap
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
-                cthd.SoLuong = txtSL.Text;
-                cthd.DonGia = txtDonGia.Text;
-                cthd.KhuyenMai = txtKhuyenMai.Text;
-                cthd.ThanhTien = labelThanhTien.Text;
+                cthd.SoLuong =int.Parse( txtSL.Text);
+                cthd.DonGia =double.Parse(txtDonGia.Text);
+                cthd.KhuyenMai =double.Parse( txtKhuyenMai.Text);
+                cthd.ThanhTien =double.Parse(labelThanhTien.Text);
                 cthd.TrangThai = comboBoxTrangThai.Text;
                 bus.ThemCTHD(cthd);
                 MessageBox.Show("Thêm chi tiết hóa đơn thành công");

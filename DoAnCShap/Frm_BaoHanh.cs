@@ -125,7 +125,8 @@ namespace DoAnCShap
                 pbh.MaPBH = txtMaPhieu.Text;
                 pbh.MaHDBH = txtMaHD.Text;
                 pbh.MaNV = comboBoxNV.SelectedValue.ToString();
-                pbh.NgayLap = dateTimePickerNgaLap.Text;
+                pbh.NgayLap = dateTimePickerNgaLap.Value.Date;
+                pbh.NgayLayHang = dateTimePickerNgayLayHang.Value.Date;
                 pbh.TrangThai = cboTrangThai.Text;
                 bus.ThemPBH(pbh);
                 string[] b = MaLK.Split(';');

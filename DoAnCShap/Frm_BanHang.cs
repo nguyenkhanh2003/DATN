@@ -193,10 +193,10 @@ namespace DoAnCShap
                     string thanhtien = dataGridViewHD.Rows[i].Cells[4].Value.ToString();
                     cthdbh.MaHDBH = txtMaHD.Text;
                     cthdbh.MaLK = malk;
-                    cthdbh.SoLuong = soluong;
-                    cthdbh.DonGia = dongia;
-                    cthdbh.KhuyenMai = khuyenmai;
-                    cthdbh.ThanhTien = thanhtien;
+                    //cthdbh.SoLuong = soluong;
+                    //cthdbh.DonGia = dongia;
+                    //cthdbh.KhuyenMai = khuyenmai;
+                    //cthdbh.ThanhTien = thanhtien;
                     cthdbh.TrangThai = "1";
                     bus.AddCTHD(cthdbh);
                 }

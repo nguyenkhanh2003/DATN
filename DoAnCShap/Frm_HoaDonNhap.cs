@@ -48,7 +48,7 @@ namespace DoAnCShap
             btnTaoPhieu.Enabled = b1;
             btnHuy.Enabled = b2;
             btnLuu.Enabled = b2;
-            btnChonNhap.Enabled = b2;
+            btnChon.Enabled = b2;
             btnInHoaDon.Enabled = b2;
         }
         public void PhatSinhMa()
