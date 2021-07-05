@@ -191,7 +191,7 @@ namespace DoAnCShap
             this.btnLuuKH.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKH.Image")));
             this.btnLuuKH.Location = new System.Drawing.Point(704, 106);
             this.btnLuuKH.Name = "btnLuuKH";
-            this.btnLuuKH.Size = new System.Drawing.Size(37, 28);
+            this.btnLuuKH.Size = new System.Drawing.Size(61, 30);
             this.btnLuuKH.TabIndex = 3;
             this.btnLuuKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuuKH.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@ namespace DoAnCShap
             this.btnThenKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThenKH.Image")));
             this.btnThenKH.Location = new System.Drawing.Point(704, 65);
             this.btnThenKH.Name = "btnThenKH";
-            this.btnThenKH.Size = new System.Drawing.Size(37, 24);
+            this.btnThenKH.Size = new System.Drawing.Size(61, 30);
             this.btnThenKH.TabIndex = 13;
             this.btnThenKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThenKH.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@ namespace DoAnCShap
             this.btnTimKH.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKH.Image")));
             this.btnTimKH.Location = new System.Drawing.Point(704, 23);
             this.btnTimKH.Name = "btnTimKH";
-            this.btnTimKH.Size = new System.Drawing.Size(37, 24);
+            this.btnTimKH.Size = new System.Drawing.Size(61, 30);
             this.btnTimKH.TabIndex = 13;
             this.btnTimKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKH.UseVisualStyleBackColor = true;
@@ -385,11 +385,11 @@ namespace DoAnCShap
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 23);
+            this.label9.Location = new System.Drawing.Point(15, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 20);
+            this.label9.Size = new System.Drawing.Size(103, 20);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Mã Hóa Đơn";
+            this.label9.Text = "Mã Hóa Đơn:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // txtMaHD

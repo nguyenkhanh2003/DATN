@@ -125,6 +125,7 @@ namespace DoAnCShap
                     {
                        
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
+                        txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
                         txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
                         //txtSL.Text = "1";
                         NumreicSL.Value = 1;
@@ -185,11 +186,11 @@ namespace DoAnCShap
             int KiemTra = 0;
             int vitri = 0;
             int KM = 0;
-            int tt = 0;
+            double tt = 0;
             tongtien += tt;
             KM = int.Parse(txtKhuyenMai.Text);
             //tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
-            tt = Convert.ToInt32(txtDonGia.Text) * (((int)NumreicSL.Value)) - KM;
+            tt = double.Parse(txtDonGia.Text) * (((int)NumreicSL.Value)) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             String.Format("{0:#,##0.##}", (labelTongThanhToan.Text) = tongtien.ToString());
@@ -208,7 +209,7 @@ namespace DoAnCShap
                 //int SL = int.Parse(txtSL.Text) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 int SL = ((int)NumreicSL.Value) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
-                int ThanhTienMoi = tt + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
+                double ThanhTienMoi = tt + double.Parse(dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
             }
 

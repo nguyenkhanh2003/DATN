@@ -149,33 +149,46 @@ namespace DoAnCShap
             opFile.Title = "Select a Image";
             opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
 
-            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Image\"; // <---
-            if (Directory.Exists(appPath) == false)                                              // <---
-            {                                                                                    // <---
-                Directory.CreateDirectory(appPath);                                              // <---
-            }                                                                                    // <---
+            //string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Image\"; // <---
+            //if (Directory.Exists(appPath) == false)                                              // <---
+            //{                                                                                    // <---
+            //    Directory.CreateDirectory(appPath);                                              // <---
+            //}                                                                                    // <---
 
-            if (opFile.ShowDialog() == DialogResult.OK)
+            //if (opFile.ShowDialog() == DialogResult.OK)
+            //{
+            //    try
+            //    {
+            //        string iName = opFile.SafeFileName;   // <---
+            //        string filepath = opFile.FileName;    // <---
+            //        File.Copy(filepath, appPath + iName); // <---
+            //        pictureBox1.Image = new Bitmap(opFile.OpenFile());
+            //        TenHinh = iName;
+            //    }
+            //    catch (Exception exp)
+            //    {
+            //        //MessageBox.Show("Ảnh đã tồn tại !" + exp.Message);
+            //        MessageBox.Show("Ảnh đã tồn tại !");
+            //    }
+            //}
+            //else
+            //{
+            //    opFile.Dispose();
+            //}
+            if(opFile.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    string iName = opFile.SafeFileName;   // <---
-                    string filepath = opFile.FileName;    // <---
-                    File.Copy(filepath, appPath + iName); // <---
-                    pictureBox1.Image = new Bitmap(opFile.OpenFile());
-                    TenHinh = iName;
-                }
-                catch (Exception exp)
-                {
-                    //MessageBox.Show("Ảnh đã tồn tại !" + exp.Message);
-                    MessageBox.Show("Ảnh đã tồn tại !");
-                }
-            }
-            else
-            {
-                opFile.Dispose();
-            }
+                TenHinh = opFile.FileName;
+                pictureBox1.Image = new Bitmap(opFile.FileName);
+                pictureBox1.ImageLocation = opFile.FileName;
+            }    
+
         }
+
+        public void LuuAnh()
+        {
+            File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
+        }
+        
       
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -284,13 +297,13 @@ namespace DoAnCShap
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
                         nv.DiaChi = txtDiaChi.Text;
-                        nv.HinhAnh = TenHinh;
-                        //File.Copy(txtHinhNhanVien.Text, Path.Combine(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\Image\",Path.GetFileName(txtHinhNhanVien.Text)),true);
+                        nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
                         nv.UserName = txtUserName.Text;
                         nv.PassWord = txtPassWord.Text;
                         nv.TrangThai = cboTrangThai.Text;
                         bus.AddData(nv);
                         MessageBox.Show("Thêm Nhân Viên Thành Công");
+                        LuuAnh();
                         Clear();
                         xulytextbox(false, true);
                         xulychucnang(true, false, false);
