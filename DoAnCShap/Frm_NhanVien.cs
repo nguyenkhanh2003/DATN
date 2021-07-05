@@ -147,7 +147,7 @@ namespace DoAnCShap
         {
             OpenFileDialog opFile = new OpenFileDialog();
             opFile.Title = "Select a Image";
-            opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            opFile.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
 
             //string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Image\"; // <---
             //if (Directory.Exists(appPath) == false)                                              // <---
@@ -175,7 +175,7 @@ namespace DoAnCShap
             //{
             //    opFile.Dispose();
             //}
-            if(opFile.ShowDialog() == DialogResult.OK)
+            if (opFile.ShowDialog() == DialogResult.OK)
             {
                 TenHinh = opFile.FileName;
                 pictureBox1.Image = new Bitmap(opFile.FileName);
@@ -291,7 +291,6 @@ namespace DoAnCShap
                         {
                             nv.GioiTinh = radioButtonNu.Text;
                         }    
-                        //nv.GioiTinh = cboGioiTinh.Text;
                         nv.Email = txtEmail.Text;
                         nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                         nv.DienThoai = txtSDT.Text;
@@ -327,18 +326,26 @@ namespace DoAnCShap
                     nv.MaNV = txtMaNV.Text;
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
-                    //nv.GioiTinh = cboGioiTinh.Text;
+                    if (radioButtonNam.Checked == true)
+                    {
+                        nv.GioiTinh = radioButtonNam.Text;
+                    }
+                    else
+                    {
+                        nv.GioiTinh = radioButtonNu.Text;
+                    }    
                     nv.Email = txtEmail.Text;
                     nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                     nv.DienThoai = txtSDT.Text;
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
-                    nv.HinhAnh = TenHinh;
+                    nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
                     bus.EditData(nv);
                     MessageBox.Show("Sửa Nhân Viên Thành Công");
+                    LuuAnh();
                     xulychucnang(true, false, false);
                 }
             }
@@ -358,7 +365,6 @@ namespace DoAnCShap
             txtMaNV.Text = row.Cells[0].Value.ToString();
             cboChucVu.Text = row.Cells[1].Value.ToString();
             txtTenNV.Text = row.Cells[2].Value.ToString();
-            /*cboGioiTinh.Text = row.Cells[3].Value.ToString()*/;
             txtEmail.Text = row.Cells[4].Value.ToString();
             dateTirmNgaySinh.Text = row.Cells[5].Value.ToString();
             txtSDT.Text = row.Cells[6].Value.ToString();
@@ -386,12 +392,9 @@ namespace DoAnCShap
             }
             catch
             {
-                //MessageBox.Show("Không có hình");
-                //return;
+
             }
-            //txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
             txtUserName.Text = row.Cells[10].Value.ToString();
-            //txtPassWord.Text = row.Cells[11].Value.ToString();
             cboTrangThai.Text = row.Cells[12].Value.ToString();        }
 
       
