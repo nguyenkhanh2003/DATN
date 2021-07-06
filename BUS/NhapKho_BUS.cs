@@ -36,5 +36,10 @@ namespace BUS
         {
             return bus.GetNCC(condition);
         }
+
+        public DataTable HienThiHDN(string condition)
+        {
+            return bus.HienThiHDN(condition);
+        }
     }
 }

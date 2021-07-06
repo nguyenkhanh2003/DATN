@@ -29,6 +29,11 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select * From NhaCungCap" + condition);
         }
+
+        public DataTable HienThiHDN(string condition)
+        {
+            return KetNoi.GetDataTable("select MaHDNH,NCC.TenNCC,NV.TenNV,NgayLapHDNH,TongTien,HD.TrangThai From HoaDonNhapHang HD,NhaCungCap NCC,NhanVien NV Where NV.MaNV=HD.MaNV and NCC.MaNCC=HD.MaNCC" + condition);
+        }
         public void AddHoaDon(HoaDonNhapHang ex)
         {
             KetNoi.ExecuteReader(@"insert into HoaDonNhapHang(MaHDNH,MaNCC,MaNV,NgayLapHDNH,TongTien,TrangThai)

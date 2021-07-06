@@ -123,6 +123,7 @@ namespace DoAnCShap
                 comboBoxNhanVien.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaylap.Text = d.Rows[vitri]["NgayLapHDBH"].ToString();
                 labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
+                labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
                 comboBoxTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
                 //HienThiDS_CTHD(vitri);
                 dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+comboBoxMaHD.Text+"'");
@@ -181,11 +182,13 @@ namespace DoAnCShap
             try
             {
                 DataGridViewRow row = dataGridViewCTHD.Rows[e.RowIndex];
-                comboBoxLK.Text = row.Cells[2].Value.ToString();
-                txtSL.Text = row.Cells[3].Value.ToString();
-                txtDonGia.Text = row.Cells[4].Value.ToString();
-                txtKhuyenMai.Text = row.Cells[5].Value.ToString();
-                labelThanhTien.Text = row.Cells[6].Value.ToString();
+                comboBoxLK.Text = row.Cells[1].Value.ToString();
+                txtSL.Text = row.Cells[2].Value.ToString();
+                txtDonGia.Text = row.Cells[3].Value.ToString();
+                txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
+                txtKhuyenMai.Text = row.Cells[4].Value.ToString();
+                labelThanhTien.Text = row.Cells[5].Value.ToString();
+                labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
                 //CboTrangThai.Text = row.Cells[7].Value.ToString();
             }
             catch

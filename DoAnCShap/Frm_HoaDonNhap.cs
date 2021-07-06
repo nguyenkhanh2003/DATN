@@ -43,6 +43,10 @@ namespace DoAnCShap
             comboBoxNCC.ValueMember = "MaNCC";
         }
 
+        public void HienThiHoaDonN()
+        {
+            dataGridViewHDN.DataSource = bus.HienThiHDN("");
+        }
         public void XuLyChucNang(Boolean b1, Boolean b2)
         {
             btnTaoPhieu.Enabled = b1;
@@ -54,7 +58,7 @@ namespace DoAnCShap
         public void PhatSinhMa()
         {
             int count = 0;
-            count = dataGridViewHDNH.Rows.Count;
+            count = dataGridViewHDN.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
             if (count <= 1)
@@ -63,7 +67,7 @@ namespace DoAnCShap
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewHDNH.Rows[count - 2].Cells[0].Value);
+                chuoi = Convert.ToString(dataGridViewHDN.Rows[count - 2].Cells[0].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaHDN.Text = "PN0" + (chuoi2 + 1).ToString();
@@ -84,14 +88,16 @@ namespace DoAnCShap
         {
             int KiemTra = 0;
             int vitri = 0;
-            int KM = 0;
-            int tt = 0;
+            double KM = 0;
+            double tt = 0;
             tongtien += tt;
             KM = int.Parse(textBoxChietKhau.Text);
             tt = Convert.ToInt32(textBoxDonGia.Text) * Convert.ToInt32(textBoxSoLuong.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
-            String.Format("{0:#,##0.##}", (labelTongThanhToan.Text) = tongtien.ToString());
+            labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
+            labelTongThanhToan.Text = tongtien.ToString();
+            labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
 
             for (int i = 0; i < dataGridViewHDNH.Rows.Count - 1; i++)
             {
@@ -108,8 +114,9 @@ namespace DoAnCShap
             {
                 int SL = int.Parse(textBoxSoLuong.Text) + int.Parse(dataGridViewHDNH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDNH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
-                int ThanhTienMoi = tt + int.Parse(dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
+                double ThanhTienMoi = tt + double.Parse(dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
+                dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", double.Parse(ThanhTienMoi.ToString()));
             }
 
             else
@@ -126,6 +133,7 @@ namespace DoAnCShap
             HienThiNhanVien();
             HienThiSanPham();
             HienThiNCC();
+            HienThiHoaDonN();
             XuLyChucNang(true, false);
         }
 
@@ -151,7 +159,7 @@ namespace DoAnCShap
                 hdn.MaNCC = comboBoxNCC.SelectedValue.ToString();
                 hdn.MaNV = comboBoxMaNV.SelectedValue.ToString();
                 hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
-                hdn.TongTien = int.Parse(labelTongThanhToan.Text);
+                hdn.TongTien = double.Parse(labelTongThanhToan.Text);
                 hdn.TrangThai = comboBoxTrangThai.Text;
                 bus.AddHoaDon(hdn);
                 string[] b = MaLK.Split(';');
@@ -160,15 +168,15 @@ namespace DoAnCShap
                     string malk = b[i];
                     //malk = dataGridViewHDNH.Rows[i].Cells[0].Value.ToString();
                     int soluong =int.Parse(dataGridViewHDNH.Rows[i].Cells[1].Value.ToString());
-                    int dongia =int.Parse(dataGridViewHDNH.Rows[i].Cells[2].Value.ToString());
-                    int khuyenmai =int.Parse(dataGridViewHDNH.Rows[i].Cells[3].Value.ToString());
-                    int thanhtien =int.Parse(dataGridViewHDNH.Rows[i].Cells[4].Value.ToString());
+                    double dongia =double.Parse(dataGridViewHDNH.Rows[i].Cells[2].Value.ToString());
+                    double khuyenmai =double.Parse(dataGridViewHDNH.Rows[i].Cells[3].Value.ToString());
+                    double thanhtien =double.Parse(dataGridViewHDNH.Rows[i].Cells[4].Value.ToString());
                     cthdn.MaHDNH = txtMaHDN.Text;
                     cthdn.MaLK = malk;
                     cthdn.SoLuong = soluong;
                     cthdn.DonGia = dongia;
                     cthdn.KhuyenMai = khuyenmai;
-                    cthdn.ThanhTien = thanhtien;
+                    cthdn.ThanhTien =thanhtien;
                     cthdn.TrangThai = comboBoxTrangThai.Text;
                     bus.AddCTHD(cthdn);
                 }

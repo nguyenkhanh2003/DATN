@@ -431,5 +431,14 @@ namespace DoAnCShap
         {
 
         }
+
+        private void comboBoxSP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

@@ -54,7 +54,6 @@ namespace DoAnCShap
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.btnLuuKH = new System.Windows.Forms.Button();
@@ -77,8 +76,8 @@ namespace DoAnCShap
             this.label10 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.NumreicSL = new System.Windows.Forms.NumericUpDown();
             this.labelThanhTien = new System.Windows.Forms.Label();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
@@ -89,6 +88,7 @@ namespace DoAnCShap
             this.label14 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
@@ -392,18 +392,6 @@ namespace DoAnCShap
             this.panel3.Size = new System.Drawing.Size(760, 251);
             this.panel3.TabIndex = 17;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Aqua;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(758, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thông Tin Chung";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // radioButtonNu
             // 
             this.radioButtonNu.AutoSize = true;
@@ -642,6 +630,18 @@ namespace DoAnCShap
             this.txtMaHD.Size = new System.Drawing.Size(186, 24);
             this.txtMaHD.TabIndex = 19;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Aqua;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(758, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thông Tin Chung";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -662,18 +662,6 @@ namespace DoAnCShap
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(396, 313);
             this.panel4.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(394, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Thông Tin Sản Phẩm";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NumreicSL
             // 
@@ -784,6 +772,19 @@ namespace DoAnCShap
             this.comboBoxSP.Size = new System.Drawing.Size(222, 28);
             this.comboBoxSP.TabIndex = 16;
             this.comboBoxSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
+            this.comboBoxSP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxSP_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(394, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Thông Tin Sản Phẩm";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Frm_BanHan
             // 
