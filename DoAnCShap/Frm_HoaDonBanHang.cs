@@ -269,9 +269,9 @@ namespace DoAnCShap
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
                 cthd.SoLuong =int.Parse(txtSL.Text);
-                cthd.DonGia =double.Parse(txtDonGia.Text);
-                cthd.KhuyenMai =double.Parse(txtKhuyenMai.Text);
-                cthd.ThanhTien =double.Parse(labelThanhTien.Text);
+                cthd.DonGia =decimal.Parse(txtDonGia.Text);
+                cthd.KhuyenMai =decimal.Parse(txtKhuyenMai.Text);
+                cthd.ThanhTien =decimal.Parse(labelThanhTien.Text);
                 //cthd.TrangThai = CboTrangThai.Text;
                 bus.UpdateCTHoaDon(cthd);
                 MessageBox.Show("Cập Nhật Chi Tiết Hóa Đơn Thành Công !");
@@ -284,9 +284,9 @@ namespace DoAnCShap
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
                 cthd.SoLuong =int.Parse( txtSL.Text);
-                cthd.DonGia =double.Parse(txtDonGia.Text);
-                cthd.KhuyenMai =double.Parse( txtKhuyenMai.Text);
-                cthd.ThanhTien =double.Parse(labelThanhTien.Text);
+                cthd.DonGia =decimal.Parse(txtDonGia.Text);
+                cthd.KhuyenMai =decimal.Parse( txtKhuyenMai.Text);
+                cthd.ThanhTien =decimal.Parse(labelThanhTien.Text);
                 cthd.TrangThai = comboBoxTrangThai.Text;
                 bus.ThemCTHD(cthd);
                 MessageBox.Show("Thêm chi tiết hóa đơn thành công");

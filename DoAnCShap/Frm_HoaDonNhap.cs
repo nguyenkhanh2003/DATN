@@ -82,20 +82,20 @@ namespace DoAnCShap
             XuLyChucNang(false, true);
         }
 
-        double tongtien = 0;
+        decimal tongtien = 0;
         public string MaLK = "";
         private void btnChonNhap_Click(object sender, EventArgs e)
         {
             int KiemTra = 0;
             int vitri = 0;
-            double KM = 0;
-            double tt = 0;
+            decimal KM = 0;
+            decimal tt = 0;
             tongtien += tt;
-            KM = int.Parse(textBoxChietKhau.Text);
-            tt = Convert.ToInt32(textBoxDonGia.Text) * Convert.ToInt32(textBoxSoLuong.Text) - KM;
+            KM = decimal.Parse(textBoxChietKhau.Text);
+            tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
-            labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
+            //labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(tt.ToString());
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
 
@@ -114,7 +114,7 @@ namespace DoAnCShap
             {
                 int SL = int.Parse(textBoxSoLuong.Text) + int.Parse(dataGridViewHDNH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDNH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
-                double ThanhTienMoi = tt + double.Parse(dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
+                decimal ThanhTienMoi = tt + decimal.Parse(dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
                 dataGridViewHDNH.Rows[vitri].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", double.Parse(ThanhTienMoi.ToString()));
             }
@@ -158,8 +158,8 @@ namespace DoAnCShap
                 hdn.MaHDNH = txtMaHDN.Text;
                 hdn.MaNCC = comboBoxNCC.SelectedValue.ToString();
                 hdn.MaNV = comboBoxMaNV.SelectedValue.ToString();
-                hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
-                hdn.TongTien = double.Parse(labelTongThanhToan.Text);
+                hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.ToString();
+                hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
                 hdn.TrangThai = comboBoxTrangThai.Text;
                 bus.AddHoaDon(hdn);
                 string[] b = MaLK.Split(';');
@@ -168,9 +168,9 @@ namespace DoAnCShap
                     string malk = b[i];
                     //malk = dataGridViewHDNH.Rows[i].Cells[0].Value.ToString();
                     int soluong =int.Parse(dataGridViewHDNH.Rows[i].Cells[1].Value.ToString());
-                    double dongia =double.Parse(dataGridViewHDNH.Rows[i].Cells[2].Value.ToString());
-                    double khuyenmai =double.Parse(dataGridViewHDNH.Rows[i].Cells[3].Value.ToString());
-                    double thanhtien =double.Parse(dataGridViewHDNH.Rows[i].Cells[4].Value.ToString());
+                    decimal dongia =decimal.Parse(dataGridViewHDNH.Rows[i].Cells[2].Value.ToString());
+                    decimal khuyenmai =decimal.Parse(dataGridViewHDNH.Rows[i].Cells[3].Value.ToString());
+                    decimal thanhtien =decimal.Parse(dataGridViewHDNH.Rows[i].Cells[4].Value.ToString());
                     cthdn.MaHDNH = txtMaHDN.Text;
                     cthdn.MaLK = malk;
                     cthdn.SoLuong = soluong;
@@ -183,6 +183,15 @@ namespace DoAnCShap
 
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
             }
+        }
+
+        private void dataGridViewHDN_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewHDN.Rows[e.RowIndex];
+            txtMaHDN.Text = row.Cells[0].Value.ToString();
+            comboBoxNCC.Text = row.Cells[1].Value.ToString();
+            comboBoxMaNV.Text = row.Cells[2].Value.ToString();
+            //dateTimePickerNgayLapHDN.Text = row.Cells[3].ToString();
         }
     }
 }

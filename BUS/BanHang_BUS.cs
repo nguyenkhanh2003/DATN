@@ -54,5 +54,10 @@ namespace BUS
         {
             return bus.GetHienThiDSSPTheoMa(condition);
         }
+
+        public void UpdateSL(LinhKien lk)
+        {
+            bus.UpdateSL(lk);
+        }
     }
 }

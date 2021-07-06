@@ -57,5 +57,10 @@ values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.Kh
         {
             return KetNoi.GetDataTable("" + condition);
         }
+
+        public void UpdateSL(LinhKien lk)
+        {
+            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuong=" + lk.SoLuong + " Where MaLK='" + lk.MaLK + "' ");
+        }
     }
 }

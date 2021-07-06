@@ -89,6 +89,7 @@ namespace DoAnCShap
             this.label20 = new System.Windows.Forms.Label();
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1SL = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
@@ -554,16 +555,16 @@ namespace DoAnCShap
             this.comboBoxTrangThai.FormattingEnabled = true;
             this.comboBoxTrangThai.Items.AddRange(new object[] {
             "Active"});
-            this.comboBoxTrangThai.Location = new System.Drawing.Point(106, 156);
+            this.comboBoxTrangThai.Location = new System.Drawing.Point(116, 156);
             this.comboBoxTrangThai.Name = "comboBoxTrangThai";
-            this.comboBoxTrangThai.Size = new System.Drawing.Size(186, 24);
+            this.comboBoxTrangThai.Size = new System.Drawing.Size(184, 24);
             this.comboBoxTrangThai.TabIndex = 23;
             // 
             // comboBoxNV
             // 
             this.comboBoxNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNV.FormattingEnabled = true;
-            this.comboBoxNV.Location = new System.Drawing.Point(106, 77);
+            this.comboBoxNV.Location = new System.Drawing.Point(114, 77);
             this.comboBoxNV.Name = "comboBoxNV";
             this.comboBoxNV.Size = new System.Drawing.Size(186, 24);
             this.comboBoxNV.TabIndex = 22;
@@ -573,7 +574,7 @@ namespace DoAnCShap
             this.dateTimePickerNgayLap.CustomFormat = "dd.MM.yyyy";
             this.dateTimePickerNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(106, 116);
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(116, 114);
             this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
             this.dateTimePickerNgayLap.Size = new System.Drawing.Size(186, 26);
             this.dateTimePickerNgayLap.TabIndex = 21;
@@ -624,7 +625,7 @@ namespace DoAnCShap
             // 
             // txtMaHD
             // 
-            this.txtMaHD.Location = new System.Drawing.Point(106, 36);
+            this.txtMaHD.Location = new System.Drawing.Point(114, 36);
             this.txtMaHD.Multiline = true;
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(186, 24);
@@ -646,6 +647,7 @@ namespace DoAnCShap
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.textBox1SL);
             this.panel4.Controls.Add(this.NumreicSL);
             this.panel4.Controls.Add(this.btnChonMua);
             this.panel4.Controls.Add(this.labelThanhTien);
@@ -786,6 +788,13 @@ namespace DoAnCShap
             this.label2.Text = "Thông Tin Sản Phẩm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox1SL
+            // 
+            this.textBox1SL.Location = new System.Drawing.Point(24, 255);
+            this.textBox1SL.Name = "textBox1SL";
+            this.textBox1SL.Size = new System.Drawing.Size(100, 20);
+            this.textBox1SL.TabIndex = 26;
+            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -878,5 +887,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBoxSP;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1SL;
     }
 }

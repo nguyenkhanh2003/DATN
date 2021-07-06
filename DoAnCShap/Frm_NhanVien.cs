@@ -402,6 +402,14 @@ namespace DoAnCShap
         private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
         {
             xulychucnang(false, true, true);
+            //if(cboChucVu.Text=="Nhân Viên Quản Trị")
+            //{
+            //    btnXoa.Visible = false;
+            //}
+            //else
+            //{
+            //    btnXoa.Visible = true;
+            //}    
             xulytextbox(true,false);
             flag = 2;
         }
