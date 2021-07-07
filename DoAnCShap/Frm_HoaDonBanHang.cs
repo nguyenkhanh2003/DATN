@@ -64,13 +64,8 @@ namespace DoAnCShap
         }
         public void XulyTextBoxCTHD(Boolean b1, Boolean b2)
         {
-           
-            labelTongThanhToan.Enabled = b2;
-            comboBoxLK.Enabled = b2;
-            textBoxSL.Enabled = b2;
-            txtDonGia.Enabled = b2;
-            txtKhuyenMai.Enabled = b2;
-            //CboTrangThai.Enabled = b2;
+            txtDonGia.ReadOnly = b1;
+            txtKhuyenMai.ReadOnly = b1;
         }
         public void XuLyTextBoxHD(Boolean b1,Boolean b2)
         {
@@ -245,6 +240,7 @@ namespace DoAnCShap
                     }
                 }
             }
+            e.SuppressKeyPress = true;
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -264,49 +260,22 @@ namespace DoAnCShap
             }
         }
 
-       
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            int tt = 0;
-            int KM = 0;
-            if (txtKhuyenMai.Text != "")
-                KM = int.Parse(txtKhuyenMai.Text);
-            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(textBoxSL.Text) - KM;
-            tongtien += tt;
-            labelThanhTien.Text = tt.ToString();
-            labelTongThanhToan.Text = tongtien.ToString();
-        }
-
-        private void txtSL_KeyDown(object sender, KeyEventArgs e)
+        private void textBoxSL_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                int tt = 0;
-                int KM = 0;
-                if (txtKhuyenMai.Text != "")
-                    KM = int.Parse(txtKhuyenMai.Text);
-                tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(textBoxSL.Text) - KM;
-                tongtien = +tt;
+                decimal tt = 0;
+                decimal KM = 0;
+                KM = int.Parse(txtKhuyenMai.Text);
+                tt = decimal.Parse(txtDonGia.Text) * decimal.Parse(textBoxSL.Text) - KM;
+                tongtien += tt;
                 labelThanhTien.Text = tt.ToString();
-                //labelTongThanhToan.Text = tongtien.ToString();  
+                labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
             }
             catch
             {
 
             }
-        }
-
-        private void txtKhuyenMai_KeyDown(object sender, KeyEventArgs e)
-        {
-            int tt = 0;
-            int KM = 0;
-            if (txtKhuyenMai.Text != "")
-                KM = int.Parse(txtKhuyenMai.Text);
-            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(textBoxSL.Text) - KM;
-            tongtien += tt;
-            labelThanhTien.Text = tt.ToString();
-            //labelTongThanhToan.Text = tongtien.ToString();
         }
 
         private void dataGridViewCTHD_DoubleClick(object sender, EventArgs e)
@@ -324,17 +293,18 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa sản phẩm hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
                 bus.DeleteCTHd(cthd);
-                MessageBox.Show("Xóa SP Thành Công !");
+                hdbh.MaHDBH = comboBoxMaHD.Text;
+                bus.DeleteHoaDon(hdbh);
+                MessageBox.Show("Success !");
                 ClearTextBoxCTHD();
             }
-            HienThiCTHD_TheoMa();
-            TongThanhToan();
+            HienThiHoaDon();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -345,7 +315,6 @@ namespace DoAnCShap
             ClearTextBoxHD();
 
         }
-
 
         private void btnCapNhat_Click_1(object sender, EventArgs e)
         {
@@ -376,41 +345,22 @@ namespace DoAnCShap
             HienThiHoaDon();
         }
 
-      
-
-        private void textBoxSL_KeyDown(object sender, KeyEventArgs e)
+        private void textBoxSL_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
             {
-                decimal tt = 0;
-                decimal KM = 0;
-                if (txtKhuyenMai.Text != "")
-                    KM = decimal.Parse(txtKhuyenMai.Text);
-                tt = decimal.Parse(txtDonGia.Text) * int.Parse(textBoxSL.Text) - KM;
-                tongtien = +tt;
-                labelThanhTien.Text = tt.ToString();
-                labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
-            }
-            catch
-            {
-
+                e.Handled = true;
             }
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void comboBoxKH_KeyDown(object sender, KeyEventArgs e)
         {
-            string condition = comboBoxMaHD.Text;
-            cthd.MaHDBH = comboBoxMaHD.Text;
-            cthd.MaLK = comboBoxLK.SelectedValue.ToString();
-            cthd.SoLuong = int.Parse(textBoxSL.Text);
-            cthd.DonGia = decimal.Parse(txtDonGia.Text);
-            cthd.KhuyenMai = decimal.Parse(txtKhuyenMai.Text);
-            cthd.ThanhTien = decimal.Parse(labelThanhTien.Text);
-            cthd.TrangThai = comboBoxTrangThai.Text;
-            bus.ThemCTHD(cthd);
-            MessageBox.Show("Success !");
-            HienThiCTHD_TheoMaHD(condition);
-            TongThanhToan();
+            e.SuppressKeyPress = true;
+        }
+
+        private void comboBoxNhanVien_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
         }
     }
 }

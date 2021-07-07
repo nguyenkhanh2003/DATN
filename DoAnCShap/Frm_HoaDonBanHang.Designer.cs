@@ -50,7 +50,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnInHD = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePickerNgaylap = new System.Windows.Forms.DateTimePicker();
@@ -67,7 +67,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.comboBoxLK = new System.Windows.Forms.ComboBox();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
@@ -261,7 +260,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnInHD);
             this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Location = new System.Drawing.Point(48, 333);
             this.panel2.Name = "panel2";
@@ -294,17 +293,18 @@
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnXoa
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(362, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 38);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(362, 3);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(89, 38);
+            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnEdit
             // 
@@ -378,6 +378,7 @@
             this.comboBoxKH.Name = "comboBoxKH";
             this.comboBoxKH.Size = new System.Drawing.Size(233, 29);
             this.comboBoxKH.TabIndex = 44;
+            this.comboBoxKH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxKH_KeyDown);
             // 
             // comboBoxNhanVien
             // 
@@ -387,6 +388,7 @@
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
             this.comboBoxNhanVien.Size = new System.Drawing.Size(232, 29);
             this.comboBoxNhanVien.TabIndex = 45;
+            this.comboBoxNhanVien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxNhanVien_KeyDown);
             // 
             // label6
             // 
@@ -487,7 +489,6 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnThem);
             this.panel4.Controls.Add(this.btnCapNhat);
             this.panel4.Controls.Add(this.comboBoxLK);
             this.panel4.Controls.Add(this.txtKhuyenMai);
@@ -505,27 +506,12 @@
             this.panel4.Size = new System.Drawing.Size(583, 276);
             this.panel4.TabIndex = 33;
             // 
-            // btnThem
-            // 
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(468, 29);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(94, 44);
-            this.btnThem.TabIndex = 44;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // btnCapNhat
             // 
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
             this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCapNhat.Location = new System.Drawing.Point(468, 86);
+            this.btnCapNhat.Location = new System.Drawing.Point(469, 31);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(94, 44);
             this.btnCapNhat.TabIndex = 44;
@@ -629,10 +615,11 @@
             this.textBoxSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSL.Location = new System.Drawing.Point(164, 75);
             this.textBoxSL.Name = "textBoxSL";
-            this.textBoxSL.Size = new System.Drawing.Size(281, 28);
+            this.textBoxSL.Size = new System.Drawing.Size(282, 28);
             this.textBoxSL.TabIndex = 35;
             this.textBoxSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxSL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSL_KeyDown);
+            this.textBoxSL.TextChanged += new System.EventHandler(this.textBoxSL_TextChanged);
+            this.textBoxSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSL_KeyPress);
             // 
             // txtDonGia
             // 
@@ -730,10 +717,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnInHD;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;

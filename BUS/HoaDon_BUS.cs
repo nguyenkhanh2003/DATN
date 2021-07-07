@@ -59,6 +59,11 @@ namespace BUS
         {
             bus.DeleteCTHd(ex);
         }
+
+        public void DeleteHoaDon(HoaDonBanHang ex)
+        {
+            bus.DeleteHoaDon(ex);
+        }
         public DataTable GetSearch(string condition)
         {
             return bus.GetSearch(condition);

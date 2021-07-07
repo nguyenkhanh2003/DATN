@@ -90,12 +90,27 @@ namespace DoAnCShap
             int vitri = 0;
             decimal KM = 0;
             decimal tt = 0;
+            if(textBoxSoLuong.Text=="")
+            {
+                MessageBox.Show("? Số lượng");
+                return;
+            }
+            if(textBoxDonGia.Text=="")
+            {
+                MessageBox.Show("? Đơn giá");
+                return;
+            }
+            if(textBoxChietKhau.Text=="")
+            {
+                MessageBox.Show("? Chiết khấu");
+                return;
+            }    
             tongtien += tt;
             KM = decimal.Parse(textBoxChietKhau.Text);
             tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
-            //labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(tt.ToString());
+            labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
 
@@ -158,7 +173,7 @@ namespace DoAnCShap
                 hdn.MaHDNH = txtMaHDN.Text;
                 hdn.MaNCC = comboBoxNCC.SelectedValue.ToString();
                 hdn.MaNV = comboBoxMaNV.SelectedValue.ToString();
-                hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.ToString();
+                hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
                 hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
                 hdn.TrangThai = comboBoxTrangThai.Text;
                 bus.AddHoaDon(hdn);
@@ -191,7 +206,34 @@ namespace DoAnCShap
             txtMaHDN.Text = row.Cells[0].Value.ToString();
             comboBoxNCC.Text = row.Cells[1].Value.ToString();
             comboBoxMaNV.Text = row.Cells[2].Value.ToString();
-            //dateTimePickerNgayLapHDN.Text = row.Cells[3].ToString();
+            dateTimePickerNgayLapHDN.Text = row.Cells[3].Value.ToString();
+            labelTongThanhToan.Text = row.Cells[4].Value.ToString();
+            labelTongThanhToan.Text= string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
+            comboBoxTrangThai.Text = row.Cells[5].Value.ToString();
+        }
+
+        private void textBoxSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDonGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxChietKhau_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

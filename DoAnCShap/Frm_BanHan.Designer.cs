@@ -78,7 +78,6 @@ namespace DoAnCShap
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1SL = new System.Windows.Forms.TextBox();
             this.NumreicSL = new System.Windows.Forms.NumericUpDown();
             this.labelThanhTien = new System.Windows.Forms.Label();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
@@ -657,7 +656,6 @@ namespace DoAnCShap
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox1SL);
             this.panel4.Controls.Add(this.NumreicSL);
             this.panel4.Controls.Add(this.btnChonMua);
             this.panel4.Controls.Add(this.labelThanhTien);
@@ -674,13 +672,6 @@ namespace DoAnCShap
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(396, 313);
             this.panel4.TabIndex = 18;
-            // 
-            // textBox1SL
-            // 
-            this.textBox1SL.Location = new System.Drawing.Point(24, 255);
-            this.textBox1SL.Name = "textBox1SL";
-            this.textBox1SL.Size = new System.Drawing.Size(100, 20);
-            this.textBox1SL.TabIndex = 26;
             // 
             // NumreicSL
             // 
@@ -898,6 +889,5 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBoxSP;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1SL;
     }
 }

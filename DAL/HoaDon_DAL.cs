@@ -61,7 +61,11 @@ namespace DAL
 
         public void DeleteCTHd(CT_HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From CT_HoaDonBanhang Where MaHDBH=N'"+ex.MaHDBH+"' and MaLK='"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Delete From CT_HoaDonBanhang Where MaHDBH=N'"+ex.MaHDBH+"' and MaLK=N'"+ex.MaLK+"'");
+        }
+        public void DeleteHoaDon(HoaDonBanHang ex)
+        {
+            KetNoi.ExecuteReader(@"Delete From HoaDonBanHang Where MaHDBH=N'" + ex.MaHDBH + "'");
         }
 
        public DataTable GetSearch(string Condition)

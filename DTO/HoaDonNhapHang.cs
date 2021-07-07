@@ -11,7 +11,7 @@ namespace DTO
         public string MaHDNH { get; set; }
         public string MaNCC { get; set; }
         public string MaNV { get; set; }
-        public string NgayLapHDNH { get; set; }
+        public DateTime NgayLapHDNH { get; set; }
         public decimal TongTien { get; set; }
         public string TrangThai { get; set; }
 
