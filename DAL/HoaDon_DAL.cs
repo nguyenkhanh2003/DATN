@@ -15,6 +15,11 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select HoaDonBanHang.MaHDBH,TenKH,TennV,HoaDonBanHang.NgayLapHDBH,TongTien,HoaDonBanHang.TrangThai From HoaDonBanHang,NhanVien,KhachHang Where NhanVien.MaNV=HoaDonBanHang.MaNV and KhachHang.MaKH=HoaDonBanHang.MaKH" + Condition);
         }
+
+        public DataTable HienThiHDTheoMa(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
         public DataTable GetCtHoaDon(string Condition)
         {
             return KetNoi.GetDataTable(""+Condition);

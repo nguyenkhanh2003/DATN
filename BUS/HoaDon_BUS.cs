@@ -19,6 +19,11 @@ namespace BUS
         {
             return bus.GetCtHoaDon(Condition);
         }
+
+        public DataTable HienThiCTHDTheoMa(string condition)
+        {
+            return bus.HienThiHDTheoMa(condition);
+        }
         public DataTable GetNhanVien(string condition)
         {
             return bus.GetNhanVien(condition);
