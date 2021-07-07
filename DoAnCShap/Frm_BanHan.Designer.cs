@@ -78,6 +78,7 @@ namespace DoAnCShap
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox1SL = new System.Windows.Forms.TextBox();
             this.NumreicSL = new System.Windows.Forms.NumericUpDown();
             this.labelThanhTien = new System.Windows.Forms.Label();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
@@ -89,7 +90,6 @@ namespace DoAnCShap
             this.label20 = new System.Windows.Forms.Label();
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1SL = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
@@ -191,7 +191,7 @@ namespace DoAnCShap
             this.btnInHD.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.Image")));
             this.btnInHD.Location = new System.Drawing.Point(397, 6);
             this.btnInHD.Name = "btnInHD";
-            this.btnInHD.Size = new System.Drawing.Size(120, 41);
+            this.btnInHD.Size = new System.Drawing.Size(106, 41);
             this.btnInHD.TabIndex = 3;
             this.btnInHD.Text = "In Hóa Đơn";
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -396,9 +396,10 @@ namespace DoAnCShap
             // radioButtonNu
             // 
             this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonNu.Location = new System.Drawing.Point(189, 196);
             this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
             this.radioButtonNu.TabIndex = 36;
             this.radioButtonNu.TabStop = true;
             this.radioButtonNu.Text = "Nữ";
@@ -407,9 +408,10 @@ namespace DoAnCShap
             // radioButtonNam
             // 
             this.radioButtonNam.AutoSize = true;
+            this.radioButtonNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonNam.Location = new System.Drawing.Point(106, 197);
             this.radioButtonNam.Name = "radioButtonNam";
-            this.radioButtonNam.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
             this.radioButtonNam.TabIndex = 35;
             this.radioButtonNam.TabStop = true;
             this.radioButtonNam.Text = "Nam";
@@ -513,6 +515,7 @@ namespace DoAnCShap
             // 
             this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(444, 168);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -523,31 +526,37 @@ namespace DoAnCShap
             // 
             this.txtTenkH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenkH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenkH.Location = new System.Drawing.Point(442, 121);
             this.txtTenkH.Multiline = true;
             this.txtTenkH.Name = "txtTenkH";
             this.txtTenkH.Size = new System.Drawing.Size(229, 24);
             this.txtTenkH.TabIndex = 30;
+            this.txtTenkH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMaKH
             // 
             this.txtMaKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.Location = new System.Drawing.Point(444, 73);
             this.txtMaKH.Multiline = true;
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(229, 24);
             this.txtMaKH.TabIndex = 31;
+            this.txtMaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSDT
             // 
             this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(444, 32);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(229, 24);
             this.txtSDT.TabIndex = 32;
+            this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTrangThai
             // 
@@ -633,9 +642,10 @@ namespace DoAnCShap
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Aqua;
+            this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(758, 24);
@@ -664,6 +674,13 @@ namespace DoAnCShap
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(396, 313);
             this.panel4.TabIndex = 18;
+            // 
+            // textBox1SL
+            // 
+            this.textBox1SL.Location = new System.Drawing.Point(24, 255);
+            this.textBox1SL.Name = "textBox1SL";
+            this.textBox1SL.Size = new System.Drawing.Size(100, 20);
+            this.textBox1SL.TabIndex = 26;
             // 
             // NumreicSL
             // 
@@ -778,22 +795,16 @@ namespace DoAnCShap
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.BackColor = System.Drawing.Color.Teal;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(394, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Thông Tin Sản Phẩm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1SL
-            // 
-            this.textBox1SL.Location = new System.Drawing.Point(24, 255);
-            this.textBox1SL.Name = "textBox1SL";
-            this.textBox1SL.Size = new System.Drawing.Size(100, 20);
-            this.textBox1SL.TabIndex = 26;
             // 
             // Frm_BanHan
             // 

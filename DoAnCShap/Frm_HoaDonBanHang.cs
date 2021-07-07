@@ -65,7 +65,7 @@ namespace DoAnCShap
            
             labelTongThanhToan.Enabled = b2;
             comboBoxLK.Enabled = b2;
-            txtSL.Enabled = b2;
+            numericSoLuong.Enabled = b2;
             txtDonGia.Enabled = b2;
             txtKhuyenMai.Enabled = b2;
             //CboTrangThai.Enabled = b2;
@@ -93,7 +93,7 @@ namespace DoAnCShap
         {
             txtKhuyenMai.Clear();
             labelThanhTien.Controls.Clear();
-            txtSL.Clear();
+            numericSoLuong.Controls.Clear();
             txtDonGia.Clear();
             txtKhuyenMai.Clear();
         }
@@ -139,7 +139,7 @@ namespace DoAnCShap
             try
             {
                 comboBoxLK.Text = d.Rows[vitri]["TenLK"].ToString();
-                txtSL.Text = d.Rows[vitri]["SoLuong"].ToString();
+                numericSoLuong.Text = d.Rows[vitri]["SoLuong"].ToString();
                 txtDonGia.Text = d.Rows[vitri]["DonGia"].ToString();
                 txtKhuyenMai.Text = d.Rows[vitri]["KhuyenMai"].ToString();
                 labelThanhTien.Text = d.Rows[vitri]["ThanhTien"].ToString();
@@ -182,12 +182,12 @@ namespace DoAnCShap
             try
             {
                 DataGridViewRow row = dataGridViewCTHD.Rows[e.RowIndex];
-                comboBoxLK.Text = row.Cells[1].Value.ToString();
-                txtSL.Text = row.Cells[2].Value.ToString();
-                txtDonGia.Text = row.Cells[3].Value.ToString();
+                comboBoxLK.Text = row.Cells[0].Value.ToString();
+                numericSoLuong.Text = row.Cells[1].Value.ToString();
+                txtDonGia.Text = row.Cells[2].Value.ToString();
                 txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
-                txtKhuyenMai.Text = row.Cells[4].Value.ToString();
-                labelThanhTien.Text = row.Cells[5].Value.ToString();
+                txtKhuyenMai.Text = row.Cells[3].Value.ToString();
+                labelThanhTien.Text = row.Cells[4].Value.ToString();
                 labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
                 //CboTrangThai.Text = row.Cells[7].Value.ToString();
             }
@@ -240,7 +240,7 @@ namespace DoAnCShap
                     if (comboBoxLK.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
-                        txtSL.Text = DSSP.Rows[0]["SoLuong"].ToString();
+                        numericSoLuong.Text = DSSP.Rows[0]["SoLuong"].ToString();
                     }
                 }
             }
@@ -256,7 +256,7 @@ namespace DoAnCShap
             int TongThanhToan = 0;
             for (int i = 0; i < dataGridViewCTHD.Rows.Count - 1; i++)
             {
-                int TT = Int32.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString());
+                int TT = int.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString());
                 TongThanhToan += TT;
                 labelTongThanhToan.Text = TongThanhToan.ToString();
             }
@@ -268,7 +268,7 @@ namespace DoAnCShap
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
-                cthd.SoLuong =int.Parse(txtSL.Text);
+                cthd.SoLuong =int.Parse(numericSoLuong.Text);
                 cthd.DonGia =decimal.Parse(txtDonGia.Text);
                 cthd.KhuyenMai =decimal.Parse(txtKhuyenMai.Text);
                 cthd.ThanhTien =decimal.Parse(labelThanhTien.Text);
@@ -283,7 +283,7 @@ namespace DoAnCShap
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
                 cthd.MaLK = comboBoxLK.SelectedValue.ToString();
-                cthd.SoLuong =int.Parse( txtSL.Text);
+                cthd.SoLuong =int.Parse( numericSoLuong.Text);
                 cthd.DonGia =decimal.Parse(txtDonGia.Text);
                 cthd.KhuyenMai =decimal.Parse( txtKhuyenMai.Text);
                 cthd.ThanhTien =decimal.Parse(labelThanhTien.Text);
@@ -301,7 +301,7 @@ namespace DoAnCShap
             int KM = 0;
             if (txtKhuyenMai.Text != "")
                 KM = int.Parse(txtKhuyenMai.Text);
-            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(numericSoLuong.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             labelTongThanhToan.Text = tongtien.ToString();
@@ -315,7 +315,7 @@ namespace DoAnCShap
                 int KM = 0;
                 if (txtKhuyenMai.Text != "")
                     KM = int.Parse(txtKhuyenMai.Text);
-                tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+                tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(numericSoLuong.Text) - KM;
                 tongtien = +tt;
                 labelThanhTien.Text = tt.ToString();
                 //labelTongThanhToan.Text = tongtien.ToString();  
@@ -332,7 +332,7 @@ namespace DoAnCShap
             int KM = 0;
             if (txtKhuyenMai.Text != "")
                 KM = int.Parse(txtKhuyenMai.Text);
-            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSL.Text) - KM;
+            tt = Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(numericSoLuong.Text) - KM;
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             //labelTongThanhToan.Text = tongtien.ToString();
@@ -375,20 +375,46 @@ namespace DoAnCShap
 
         }
 
-        private void btnSua_Click_1(object sender, EventArgs e)
+
+        private void btnCapNhat_Click_1(object sender, EventArgs e)
         {
-           
+            cthd.MaHDBH = comboBoxMaHD.Text;
+            cthd.MaLK = comboBoxLK.SelectedValue.ToString();
+            cthd.SoLuong = int.Parse(numericSoLuong.Text);
+            cthd.DonGia = decimal.Parse(txtDonGia.Text);
+            cthd.KhuyenMai = decimal.Parse(txtKhuyenMai.Text);
+            cthd.ThanhTien = decimal.Parse(labelThanhTien.Text);
+            cthd.TrangThai = comboBoxTrangThai.Text;
+            bus.UpdateCTHoaDon(cthd);
+            MessageBox.Show("Cập Nhật Chi Tiết Hóa Đơn Thành Công !");
+            HienThiCTHD_TheoMa();
+            TongThanhToan();
         }
 
-        private void btnIn_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            //Frm_InHoaDon inhoadon = new Frm_InHoaDon();
-            //inhoadon.ShowDialog();
+
         }
 
-        public void RePortLoad(object seder,EventArgs e)
+      
+
+        private void numericSoLuong_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            try
+            {
+                int tt = 0;
+                int KM = 0;
+                if (txtKhuyenMai.Text != "")
+                    KM = int.Parse(txtKhuyenMai.Text);
+                tt = int.Parse(txtDonGia.Text) * (((int)numericSoLuong.Value)) - KM;
+                tongtien = +tt;
+                labelThanhTien.Text = tt.ToString();
+                labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
+            }
+            catch
+            {
+
+            }
         }
     }
 }

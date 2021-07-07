@@ -258,8 +258,7 @@ namespace DoAnCShap
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');
                 int vitri = 0;
-                int DemSL=0;
-
+                int SLConLai = 0;
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
                 {
                     string malk = b[i];
@@ -274,10 +273,11 @@ namespace DoAnCShap
                     cthdbh.KhuyenMai = khuyenmai;
                     cthdbh.ThanhTien = thanhtien;
                     cthdbh.TrangThai = comboBoxTrangThai.Text;
-                    lk.MaLK = malk;
-                    lk.SoLuong = soluong;
-                    bus.UpdateSL(lk);
-                        
+                    //SLConLai =int.Parse(sp.dataGridViewLK.Rows[0].Cells["SoLuong"].Value.ToString())-soluong;
+                    //textBox1SL.Text = SLConLai.ToString();
+                    //lk.MaLK = malk;
+                    //lk.SoLuong = SLConLai;
+                    //bus.UpdateSL(lk);
                     bus.AddCTHD(cthdbh);
                 }
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
