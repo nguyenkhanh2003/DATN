@@ -34,21 +34,21 @@ namespace DoAnCShap
         {
             dataGridViewKH.DataSource = bus.GetData("");
         }
-      
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        public void xulytextbox(Boolean b1,Boolean b2)
+        public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMaKh.ReadOnly = b1;
-            txtMaKh.Enabled =b1;
-            txtTenkh.Enabled =b1;
-            cboGioiTinh.Enabled =b1;
-            txtSdt.Enabled =b1;
+            txtMaKh.Enabled = b1;
+            txtTenkh.Enabled = b1;
+            cboGioiTinh.Enabled = b1;
+            txtSdt.Enabled = b1;
             //txtCMND.Enabled = b1;
             txtDiaCh.Enabled = b1;
-            cboTrangThai.Enabled =b1;
+            cboTrangThai.Enabled = b1;
         }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
         {
@@ -65,8 +65,8 @@ namespace DoAnCShap
             txtDiaCh.Clear();
             txtDiaCh.Clear();
             txtSdt.Clear();
-            cboGioiTinh.Text="";
-            cboTrangThai.Text="";
+            cboGioiTinh.Text = "";
+            cboTrangThai.Text = "";
         }
         public void PhatSinhMa()
         {
@@ -105,13 +105,13 @@ namespace DoAnCShap
         }
         private void Frm_KH_Load(object sender, EventArgs e)
         {
-            xulytextbox(false,true);
-            xulychucnang(true,false,false);
+            xulytextbox(false, true);
+            xulychucnang(true, false, false);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            xulychucnang(false, true,false);
+            xulychucnang(false, true, false);
             xulytextbox(true, false);
             Clear();
             flag = 1;
@@ -125,32 +125,32 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa nhập tên khách hàng");
                 return;
             }
-            if(cboGioiTinh.Text=="")
+            if (cboGioiTinh.Text == "")
             {
                 MessageBox.Show("Chưa chọn giới tính");
                 return;
             }
-           
-            if(txtSdt.Text=="")
+
+            if (txtSdt.Text == "")
             {
                 MessageBox.Show("Chưa nhập số điện thoại");
                 return;
-            }    
-            if(txtDiaCh.Text=="")
+            }
+            if (txtDiaCh.Text == "")
             {
                 MessageBox.Show("Chưa nhập địa chỉ");
                 return;
             }
-            if(cboGioiTinh.Text=="")
+            if (cboGioiTinh.Text == "")
             {
                 MessageBox.Show("Chưa chọn trạng thái");
                 return;
-            }    
-            if (flag==1)
+            }
+            if (flag == 1)
             {
                 try
                 {
-                    if(txtSdt.Text.Length<10)
+                    if (txtSdt.Text.Length < 10)
                     {
                         MessageBox.Show("Số điện thoại không đúng");
                     }
@@ -159,7 +159,7 @@ namespace DoAnCShap
                         kh.MaKH = txtMaKh.Text;
                         kh.TenKH = txtTenkh.Text;
                         kh.GioiTinh = cboGioiTinh.Text;
-                      
+
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
                         kh.TrangThai = cboTrangThai.Text;
@@ -167,15 +167,15 @@ namespace DoAnCShap
                         MessageBox.Show("Thêm Khách Hàng Thành Công");
                         xulychucnang(true, false, false);
                         Clear();
-                    }    
+                    }
                 }
                 catch
                 {
                     MessageBox.Show("Không thể thêm được");
                 }
-               
+
             }
-            if(flag==2)
+            if (flag == 2)
             {
                 if (txtSdt.Text.Length < 10)
                 {
@@ -186,7 +186,7 @@ namespace DoAnCShap
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
                     kh.GioiTinh = cboGioiTinh.Text;
-                  
+
                     kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = cboTrangThai.Text;
@@ -196,7 +196,7 @@ namespace DoAnCShap
                     Clear();
                 }
             }
-      
+
             Display();
         }
 
@@ -211,13 +211,13 @@ namespace DoAnCShap
             txtSdt.Text = row.Cells[3].Value.ToString();
             txtDiaCh.Text = row.Cells[4].Value.ToString();
             cboTrangThai.Text = row.Cells[5].Value.ToString();
-            xulytextbox(false,true);
+            xulytextbox(false, true);
         }
 
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
             xulytextbox(true, false);
-            xulychucnang(false,true,true);
+            xulychucnang(false, true, true);
             flag = 2;
         }
 
@@ -228,14 +228,14 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
                 kh.MaKH = txtMaKh.Text;
                 bus.DeleteData(kh);
                 MessageBox.Show("Xóa Dữ Liệu Thành Công");
-                xulychucnang(true,false,false);
-                xulytextbox(true,false);
+                xulychucnang(true, false, false);
+                xulytextbox(true, false);
                 Clear();
             }
             Display();
@@ -243,7 +243,7 @@ namespace DoAnCShap
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -254,7 +254,7 @@ namespace DoAnCShap
 
         private void txtSdt_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
@@ -285,7 +285,7 @@ namespace DoAnCShap
             else
             {
 
-            }    
+            }
         }
     }
 }

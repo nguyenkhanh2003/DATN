@@ -29,19 +29,25 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HoaDonNhap));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.btnInHoaDon = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnTaoPhieu = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTHDNH = new System.Windows.Forms.DataGridView();
+            this.TenLk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -80,12 +86,9 @@ namespace DoAnCShap
             this.NgayLapHDNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.TenLk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCane = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTHDNH)).BeginInit();
@@ -94,6 +97,7 @@ namespace DoAnCShap
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDN)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -103,7 +107,7 @@ namespace DoAnCShap
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnXoa);
             this.panel3.Controls.Add(this.btnInHoaDon);
-            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.btnThoat);
             this.panel3.Controls.Add(this.btnHuy);
             this.panel3.Controls.Add(this.btnTaoPhieu);
             this.panel3.Controls.Add(this.btnLuu);
@@ -112,11 +116,24 @@ namespace DoAnCShap
             this.panel3.Size = new System.Drawing.Size(672, 60);
             this.panel3.TabIndex = 57;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(300, 11);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(72, 40);
+            this.btnXoa.TabIndex = 25;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // btnInHoaDon
             // 
             this.btnInHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.Image")));
-            this.btnInHoaDon.Location = new System.Drawing.Point(394, 11);
+            this.btnInHoaDon.Location = new System.Drawing.Point(427, 11);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(78, 40);
             this.btnInHoaDon.TabIndex = 24;
@@ -124,17 +141,17 @@ namespace DoAnCShap
             this.btnInHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInHoaDon.UseVisualStyleBackColor = true;
             // 
-            // btnClose
+            // btnThoat
             // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(526, 11);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(78, 40);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Đóng";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(539, 11);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(79, 40);
+            this.btnThoat.TabIndex = 0;
+            this.btnThoat.Text = "Đóng";
+            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // btnHuy
             // 
@@ -165,7 +182,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(150, 11);
+            this.btnLuu.Location = new System.Drawing.Point(170, 11);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(80, 40);
             this.btnLuu.TabIndex = 0;
@@ -189,20 +206,20 @@ namespace DoAnCShap
             // 
             // dataGridViewCTHDNH
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridViewCTHDNH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewCTHDNH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewCTHDNH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCTHDNH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCTHDNH.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCTHDNH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCTHDNH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewCTHDNH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCTHDNH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenLk,
@@ -211,23 +228,23 @@ namespace DoAnCShap
             this.KhuyenMai,
             this.ThanhTien});
             this.dataGridViewCTHDNH.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCTHDNH.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCTHDNH.DefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewCTHDNH.Location = new System.Drawing.Point(6, 21);
             this.dataGridViewCTHDNH.Name = "dataGridViewCTHDNH";
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCTHDNH.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCTHDNH.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewCTHDNH.RowHeadersVisible = false;
             this.dataGridViewCTHDNH.RowHeadersWidth = 51;
             this.dataGridViewCTHDNH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -235,6 +252,36 @@ namespace DoAnCShap
             this.dataGridViewCTHDNH.TabIndex = 5;
             this.dataGridViewCTHDNH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTHDNH_CellClick);
             this.dataGridViewCTHDNH.DoubleClick += new System.EventHandler(this.dataGridViewHDNH_DoubleClick);
+            // 
+            // TenLk
+            // 
+            this.TenLk.DataPropertyName = "TenLK";
+            this.TenLk.HeaderText = "Tên Linh Kiện";
+            this.TenLk.Name = "TenLk";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Chiết Khấu";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // panel1
             // 
@@ -437,7 +484,6 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.labelThanhTien);
-            this.panel4.Controls.Add(this.btnChon);
             this.panel4.Controls.Add(this.comboBoxTenLK);
             this.panel4.Controls.Add(this.textBoxChietKhau);
             this.panel4.Controls.Add(this.textBoxSoLuong);
@@ -450,7 +496,7 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(500, 51);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(672, 265);
+            this.panel4.Size = new System.Drawing.Size(515, 265);
             this.panel4.TabIndex = 62;
             // 
             // labelThanhTien
@@ -468,11 +514,11 @@ namespace DoAnCShap
             // 
             this.btnChon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChon.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.Image")));
-            this.btnChon.Location = new System.Drawing.Point(486, 51);
+            this.btnChon.Location = new System.Drawing.Point(18, 12);
             this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(91, 40);
+            this.btnChon.Size = new System.Drawing.Size(90, 40);
             this.btnChon.TabIndex = 0;
-            this.btnChon.Text = "Chọn";
+            this.btnChon.Text = "Thêm";
             this.btnChon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChon.UseVisualStyleBackColor = true;
             this.btnChon.Click += new System.EventHandler(this.btnChonNhap_Click);
@@ -577,7 +623,7 @@ namespace DoAnCShap
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(670, 21);
+            this.label6.Size = new System.Drawing.Size(513, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "Thông Tin Sản Phẩm";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -652,48 +698,44 @@ namespace DoAnCShap
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             // 
-            // btnXoa
+            // btnCane
             // 
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(267, 11);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(72, 40);
-            this.btnXoa.TabIndex = 25;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnCane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCane.Image = ((System.Drawing.Image)(resources.GetObject("btnCane.Image")));
+            this.btnCane.Location = new System.Drawing.Point(18, 204);
+            this.btnCane.Name = "btnCane";
+            this.btnCane.Size = new System.Drawing.Size(91, 40);
+            this.btnCane.TabIndex = 0;
+            this.btnCane.Text = "Hủy";
+            this.btnCane.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCane.UseVisualStyleBackColor = true;
             // 
-            // TenLk
+            // btnCapNhat
             // 
-            this.TenLk.DataPropertyName = "TenLK";
-            this.TenLk.HeaderText = "Tên Linh Kiện";
-            this.TenLk.Name = "TenLk";
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
+            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCapNhat.Location = new System.Drawing.Point(18, 112);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(91, 40);
+            this.btnCapNhat.TabIndex = 45;
+            this.btnCapNhat.Text = "Sửa";
+            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
-            // SoLuong
+            // panel5
             // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Chiết Khấu";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btnCapNhat);
+            this.panel5.Controls.Add(this.btnCane);
+            this.panel5.Controls.Add(this.btnChon);
+            this.panel5.Location = new System.Drawing.Point(1040, 52);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(132, 264);
+            this.panel5.TabIndex = 64;
             // 
             // Frm_HoaDonNhap
             // 
@@ -702,6 +744,7 @@ namespace DoAnCShap
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 711);
             this.ControlBox = false;
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -722,13 +765,14 @@ namespace DoAnCShap
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDN)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnTaoPhieu;
         private System.Windows.Forms.Button btnLuu;
@@ -779,5 +823,8 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Button btnCane;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Panel panel5;
     }
 }

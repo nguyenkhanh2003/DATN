@@ -143,6 +143,18 @@ namespace DoAnCShap
 
         }
 
+        public void TongThanhToanMoi()
+        {
+            decimal TongThanhToan = 0;
+            for (int i = 0; i < dataGridViewCTHDNH.Rows.Count - 1; i++)
+            {
+                decimal TT = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells["ThanhTien"].Value.ToString());
+                TongThanhToan += TT;
+                labelTongThanhToan.Text = TongThanhToan.ToString();
+                labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
+            }
+        }
+
         private void Frm_HoaDonNhap_Load(object sender, EventArgs e)
         {
             string condition = Login.SetValueForText1;
@@ -191,6 +203,7 @@ namespace DoAnCShap
 
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
             }
+            HienThiHoaDonN();
         }
 
         public void HieThiHoaDonNhapTextBox(int vitri,DataTable d)
@@ -268,6 +281,19 @@ namespace DoAnCShap
             textBoxDonGia.Text = row.Cells[2].Value.ToString();
             textBoxChietKhau.Text = row.Cells[3].Value.ToString();
             labelThanhTien.Text = row.Cells[4].Value.ToString();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            cthdn.MaHDNH = txtMaHDN.Text;
+            cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+            cthdn.SoLuong =int.Parse(textBoxSoLuong.Text);
+            cthdn.DonGia = decimal.Parse(textBoxDonGia.Text);
+            cthdn.KhuyenMai = decimal.Parse(textBoxChietKhau.Text);
+            cthdn.ThanhTien = decimal.Parse(labelThanhTien.Text);
+            bus.UpdateCTHDN(cthdn);
+            MessageBox.Show("Success");
+            dataGridViewCTHDNH.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
         }
     }
 }

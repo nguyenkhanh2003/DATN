@@ -148,7 +148,7 @@ namespace DoAnCShap
             this.btnThemHD.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHD.Image")));
             this.btnThemHD.Location = new System.Drawing.Point(14, 6);
             this.btnThemHD.Name = "btnThemHD";
-            this.btnThemHD.Size = new System.Drawing.Size(118, 41);
+            this.btnThemHD.Size = new System.Drawing.Size(115, 41);
             this.btnThemHD.TabIndex = 3;
             this.btnThemHD.Text = "Tạo Hóa Đơn";
             this.btnThemHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
