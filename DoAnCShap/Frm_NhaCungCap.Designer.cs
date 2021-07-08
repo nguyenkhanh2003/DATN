@@ -163,6 +163,7 @@ namespace DoAnCShap
             this.dataGridViewNhaCungCap.Size = new System.Drawing.Size(1166, 357);
             this.dataGridViewNhaCungCap.TabIndex = 2;
             this.dataGridViewNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhaCungCap_CellClick);
+            this.dataGridViewNhaCungCap.DoubleClick += new System.EventHandler(this.dataGridViewNhaCungCap_DoubleClick);
             // 
             // MaNCC
             // 

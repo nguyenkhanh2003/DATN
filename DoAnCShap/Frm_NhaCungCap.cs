@@ -17,39 +17,27 @@ namespace DoAnCShap
         public Frm_NhaCungCap()
         {
             InitializeComponent();
-            AnButton();
             Display();
         }
         NhaCungCap_BUS bus = new NhaCungCap_BUS();
         NhaCungCap ncc = new NhaCungCap();
         bool addnew;
-        void AnButton()
+        public void XuLyChucNang(Boolean b1,Boolean b2,Boolean b3)
         {
-            txtMaNCC.Enabled = false;
-            txtTenNCC.Enabled = false;
-            txtDiaChi.Enabled = false;
-            txtDienThoai.Enabled = false;
-            txtEmail.Enabled = false;
-            txtDiaChi.Enabled = false;
-            btnAdd.Enabled = true;
-            btnDelete.Enabled = false;
-            //btnUpdate.Enabled = false;
-            btnSave.Enabled = false;
-            btnCancel.Enabled = false;
+            btnAdd.Enabled = b1;
+            btnDelete.Enabled = b3;
+            btnCancel.Enabled = b2;
+            btnSave.Enabled = b2;
         }
-        void HienButton()
+        public void XuLyTexBox(Boolean b1,Boolean b2)
         {
-            txtMaNCC.Enabled = true;
-            txtTenNCC.Enabled = true;
-            txtDiaChi.Enabled = true;
-            txtDienThoai.Enabled = true;
-            txtEmail.Enabled = true;
-            txtDiaChi.Enabled = true;
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-            //btnUpdate.Enabled = false;
-            btnSave.Enabled = false;
-            btnCancel.Enabled = false;
+            txtMaNCC.ReadOnly = b2;
+            txtMaNCC.Enabled = b2;
+            txtEmail.Enabled = b2;
+            txtDiaChi.Enabled = b2;
+            txtDienThoai.Enabled = b2;
+            cbotrangthai.Enabled = b2;
+            txtTenNCC.Enabled = b2;
         }
         
         void Display()
@@ -82,14 +70,13 @@ namespace DoAnCShap
         {
             dataGridViewNhaCungCap.DataSource = bus.GetSearch("Select * from NhaCungCap Where TenNCC Like N'%" + condition + "%'");
         }
-        void AllTextBoxNull()
+        public void ClearTextBox()
         {
-            txtMaNCC.Text = "";
-            txtTenNCC.Text = "";
-            txtDiaChi.Text = "";
-            txtDienThoai.Text = "";
-            txtEmail.Text = "";
-            txtDiaChi.Text = "";
+            txtTenNCC.Clear();
+            txtMaNCC.Clear();
+            txtDiaChi.Clear();
+            txtDienThoai.Clear();
+            txtEmail.Clear();
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -102,7 +89,7 @@ namespace DoAnCShap
                 }
                 ncc.MaNCC = txtMaNCC.Text;
                 bus.DeleteData(ncc);
-                AllTextBoxNull();
+                ClearTextBox();
                 Display();
                 MessageBox.Show("Xóa Thành Công");
 
@@ -116,8 +103,8 @@ namespace DoAnCShap
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            HienButton();
-            AllTextBoxNull();
+            XuLyChucNang(false,true,false);
+            ClearTextBox();
             PhatSinhMa();
             addnew = true;
             btnCancel.Enabled = true;
@@ -129,21 +116,13 @@ namespace DoAnCShap
         {
             txtMaNCC.Enabled = false;
             if (e.RowIndex == -1) return;
-
             DataGridViewRow row = dataGridViewNhaCungCap.Rows[e.RowIndex];
-
             txtMaNCC.Text = row.Cells[0].Value.ToString();
             txtTenNCC.Text = row.Cells[1].Value.ToString();
             txtDiaChi.Text = row.Cells[2].Value.ToString();
             txtDienThoai.Text = row.Cells[3].Value.ToString();
             txtEmail.Text = row.Cells[4].Value.ToString();
             txtDiaChi.Text = row.Cells[5].Value.ToString();
-            HienButton();
-            btnDelete.Enabled = true;
-            btnCancel.Enabled = true;
-            btnSave.Enabled = true;
-
-
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -155,7 +134,6 @@ namespace DoAnCShap
                     MessageBox.Show("Vui lòng nhấp chọn bên dưới !", "Thông báo !");
                     return;
                 }
-                HienButton();
                 addnew = false;
                 btnSave.Enabled = true;
                 btnCancel.Enabled = true;
@@ -214,7 +192,7 @@ namespace DoAnCShap
                             ncc.TrangThai = cbotrangthai.Text;
                             bus.AddData(ncc);
                             MessageBox.Show("Thành Công");
-                            AllTextBoxNull();
+                            ClearTextBox();
                         }
                     }
                 }
@@ -244,7 +222,7 @@ namespace DoAnCShap
                             ncc.DiaChi = txtDiaChi.Text;
                             ncc.TrangThai = cbotrangthai.Text;
                             bus.EditData(ncc);
-                            AllTextBoxNull();
+                            ClearTextBox();
                             MessageBox.Show("Sửa Thành Công");
 
                         }
@@ -257,14 +235,13 @@ namespace DoAnCShap
                 }
 
             }
-            AnButton();
             Display();
 
         }
 
         private void Frm_NhaCungCap_Load(object sender, EventArgs e)
         {
-          //  Display();
+            XuLyChucNang(true, false,false);
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -295,11 +272,16 @@ namespace DoAnCShap
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Thông Báo", "Bạn có muốn hủy hay không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?","Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if(KQ==DialogResult.OK)
             {
-                
+                XuLyChucNang(true, false, false);
             }    
+        }
+
+        private void dataGridViewNhaCungCap_DoubleClick(object sender, EventArgs e)
+        {
+            XuLyChucNang(false, true, true);
         }
     }
 }

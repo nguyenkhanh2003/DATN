@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+
 namespace DoAnCShap
 {
     public partial class Frm_KH : Form
@@ -239,8 +240,6 @@ namespace DoAnCShap
             }
             Display();
         }
-
-
 
         private void btnTim_Click(object sender, EventArgs e)
         {

@@ -41,5 +41,18 @@ namespace BUS
         {
             return bus.HienThiHDN(condition);
         }
+        public DataTable HienThiCTHDNH(string condition)
+        {
+            return bus.HienThiCTHDNH(condition);
+        }
+
+        public void DeleteHoaDonNhap(HoaDonNhapHang ex)
+        {
+            bus.DeleteHoaDonNhap(ex);
+        }
+        public void DeleteCT_HoaDonNhap(CT_HoaDonNhapHang ex)
+        {
+            bus.DeleteCT_HoaDonNhap(ex);
+        }
     }
 }
