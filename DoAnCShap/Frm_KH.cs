@@ -159,7 +159,6 @@ namespace DoAnCShap
                         kh.MaKH = txtMaKh.Text;
                         kh.TenKH = txtTenkh.Text;
                         kh.GioiTinh = cboGioiTinh.Text;
-
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
                         kh.TrangThai = cboTrangThai.Text;

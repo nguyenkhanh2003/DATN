@@ -47,13 +47,28 @@ namespace DoAnCShap
         {
             dataGridViewHDN.DataSource = bus.HienThiHDN("");
         }
-        public void XuLyChucNang(Boolean b1, Boolean b2)
+        public void XuLyChucNang(Boolean b1, Boolean b2,Boolean b3)
         {
             btnTaoPhieu.Enabled = b1;
-            btnHuy.Enabled = b2;
+            //btnHuy.Enabled = b2;
+            btnCane.Enabled = b2;
             btnLuu.Enabled = b2;
             btnChon.Enabled = b2;
             btnInHoaDon.Enabled = b2;
+            btnXoa.Enabled = b3;
+        }
+
+        public void ClearTexBox()
+        {
+            txtMaHDN.Clear();
+            textBoxDonGia.Clear();
+            textBoxSoLuong.Clear();
+            textBoxChietKhau.Clear();
+            labelThanhTien.ResetText();
+            labelTongThanhToan.ResetText();
+            comboBoxMaNV.ResetText();
+            comboBoxNCC.ResetText();
+            comboBoxTenLK.ResetText();
         }
         public void PhatSinhMa()
         {
@@ -77,9 +92,10 @@ namespace DoAnCShap
         }
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
+            ClearTexBox();
             PhatSinhMa();
             flag = 1;
-            XuLyChucNang(false, true);
+            XuLyChucNang(false,true,false);
         }
 
         decimal tongtien = 0;
@@ -162,13 +178,13 @@ namespace DoAnCShap
             HienThiSanPham();
             HienThiNCC();
             HienThiHoaDonN();
-            XuLyChucNang(true, false);
+            XuLyChucNang(true, false, false);
             comboBoxNCC.Text = "";
         }
 
         private void dataGridViewHDNH_DoubleClick(object sender, EventArgs e)
         {
-           
+            XuLyChucNang(false, true, true);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -203,6 +219,24 @@ namespace DoAnCShap
 
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
             }
+            if(flag==2)
+            {
+                cthdn.MaHDNH = txtMaHDN.Text;
+                cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+                cthdn.SoLuong = int.Parse(textBoxSoLuong.Text);
+                cthdn.DonGia = decimal.Parse(textBoxDonGia.Text);
+                cthdn.KhuyenMai = decimal.Parse(textBoxChietKhau.Text);
+                cthdn.ThanhTien = decimal.Parse(labelThanhTien.Text);
+                bus.UpdateCTHDN(cthdn);
+                dataGridViewCTHDNH.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
+                TongThanhToanMoi();
+                hdn.MaHDNH = txtMaHDN.Text;
+                hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
+                hdn.TongTien =decimal.Parse(labelTongThanhToan.Text);
+                bus.UpdateHDN(hdn);
+                MessageBox.Show("Success");
+                XuLyChucNang(true, false, false);
+            }    
             HienThiHoaDonN();
         }
 
@@ -275,12 +309,15 @@ namespace DoAnCShap
 
         private void dataGridViewCTHDNH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            flag =2;
             DataGridViewRow row = dataGridViewCTHDNH.Rows[e.RowIndex];
             comboBoxTenLK.Text = row.Cells[0].Value.ToString();
             textBoxSoLuong.Text = row.Cells[1].Value.ToString();
             textBoxDonGia.Text = row.Cells[2].Value.ToString();
+            textBoxDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(textBoxDonGia.Text));
             textBoxChietKhau.Text = row.Cells[3].Value.ToString();
             labelThanhTien.Text = row.Cells[4].Value.ToString();
+            labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -294,6 +331,41 @@ namespace DoAnCShap
             bus.UpdateCTHDN(cthdn);
             MessageBox.Show("Success");
             dataGridViewCTHDNH.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
+        }
+
+        private void textBoxSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal KM = 0;
+                decimal tt = 0;
+                tongtien += tt;
+                KM = decimal.Parse(textBoxChietKhau.Text);
+                tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;
+                tongtien += tt;
+                labelThanhTien.Text = tt.ToString();
+                labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
+                //labelTongThanhToan.Text = tongtien.ToString();
+                //labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnCane_Click(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(KQ==DialogResult.OK)
+            {
+                XuLyChucNang(true, false, false);
+                ClearTexBox();
+            }
+            else
+            {
+
+            }    
         }
     }
 }

@@ -114,7 +114,7 @@ namespace DoAnCShap
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(451, 14);
+            this.label13.Location = new System.Drawing.Point(316, 14);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 20);
             this.label13.TabIndex = 1;
@@ -122,7 +122,7 @@ namespace DoAnCShap
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(634, 8);
+            this.txtSearch.Location = new System.Drawing.Point(484, 8);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(324, 27);

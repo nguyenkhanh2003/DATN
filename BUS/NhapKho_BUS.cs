@@ -59,5 +59,10 @@ namespace BUS
         {
             bus.UpdateCTHDN(ex);
         }
+
+        public void UpdateHDN(HoaDonNhapHang ex)
+        {
+            bus.UpdateHDN(ex);
+        }
     }
 }

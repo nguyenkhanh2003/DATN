@@ -65,5 +65,10 @@ values(N'" + exx.MaHDNH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
         {
             KetNoi.ExecuteReader(@"update CT_HoaDonNhapHang Set SoLuong="+ex.SoLuong+",DonGia="+ex.DonGia+",KhuyenMai="+ex.KhuyenMai+",ThanhTien="+ex.ThanhTien+",TrangThai=N'"+ex.TrangThai+"' Where MaHDNH=N'"+ex.MaHDNH+"' and MaLK=N'"+ex.MaLK+"' ");
         }
+
+        public void UpdateHDN(HoaDonNhapHang ex)
+        {
+            KetNoi.ExecuteReader(@" update HoaDonNhapHang Set NgayLapHDNH='"+ex.NgayLapHDNH+"',TongTien="+ex.TongTien+" Where MaHDNH=N'"+ex.MaHDNH+"'");
+        }
     }
 }
