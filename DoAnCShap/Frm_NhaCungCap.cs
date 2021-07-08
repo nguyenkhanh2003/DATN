@@ -292,5 +292,14 @@ namespace DoAnCShap
                 e.Handled = true;
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Thông Báo", "Bạn có muốn hủy hay không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(KQ==DialogResult.OK)
+            {
+                
+            }    
+        }
     }
 }

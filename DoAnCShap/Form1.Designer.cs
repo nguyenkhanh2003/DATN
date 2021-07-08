@@ -306,6 +306,7 @@ namespace DoAnCShap
             this.btnHoaDon.Size = new System.Drawing.Size(212, 45);
             this.btnHoaDon.TabIndex = 2;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
+            this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHoaDon.UseVisualStyleBackColor = false;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);

@@ -241,66 +241,72 @@ namespace DoAnCShap
             // 
             // label6
             // 
+            this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(604, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 28);
+            this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 27;
             this.label6.Text = "Trạng Thái";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
+            this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(604, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 28);
+            this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Email";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
+            this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(604, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 28);
+            this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "Số Điện Thoại";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
+            this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 28);
+            this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 27;
             this.label3.Text = "Địa Chỉ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 28);
+            this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 27;
             this.label1.Text = "Tên Nhà Cung Cấp";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 28);
+            this.label2.Size = new System.Drawing.Size(139, 20);
             this.label2.TabIndex = 27;
             this.label2.Text = "Mã Nhà Cung Cấp";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,19 +339,19 @@ namespace DoAnCShap
             // 
             // txtTenNCC
             // 
-            this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNCC.Location = new System.Drawing.Point(215, 50);
             this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(260, 28);
+            this.txtTenNCC.Size = new System.Drawing.Size(260, 26);
             this.txtTenNCC.TabIndex = 15;
             this.txtTenNCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenNCC_KeyPress);
             // 
             // txtMaNCC
             // 
-            this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNCC.Location = new System.Drawing.Point(215, 14);
             this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.Size = new System.Drawing.Size(260, 28);
+            this.txtMaNCC.Size = new System.Drawing.Size(260, 26);
             this.txtMaNCC.TabIndex = 16;
             // 
             // btnClose
@@ -372,6 +378,7 @@ namespace DoAnCShap
             this.btnCancel.Text = "Hủy";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 

@@ -29,9 +29,9 @@ namespace DoAnCShap
             comboBoxTenLK.ValueMember = "MaLK";
         }
 
-        public void HienThiNhanVien()
+        public void HienThiNhanVien(string labelHienTenDN)
         {
-            comboBoxMaNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien");
+            comboBoxMaNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
             comboBoxMaNV.DisplayMember = "TenNV";
             comboBoxMaNV.ValueMember = "MaNV";
         }
@@ -145,7 +145,8 @@ namespace DoAnCShap
 
         private void Frm_HoaDonNhap_Load(object sender, EventArgs e)
         {
-            HienThiNhanVien();
+            string condition = Login.SetValueForText1;
+            HienThiNhanVien(condition);
             HienThiSanPham();
             HienThiNCC();
             HienThiHoaDonN();

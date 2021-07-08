@@ -121,7 +121,7 @@ namespace DoAnCShap
         {
             //openChildForm(new Frm_DanhSachHoaDon());
             openChildForm(new Frm_HoaDonBanHang());
-            lbl_HienThiForm.Text = "Quản Lý Hóa Đơn";
+            lbl_HienThiForm.Text = "Quản Lý Hóa Đơn Bán";
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)

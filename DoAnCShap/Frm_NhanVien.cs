@@ -147,7 +147,7 @@ namespace DoAnCShap
         {
             OpenFileDialog opFile = new OpenFileDialog();
             opFile.Title = "Select a Image";
-            opFile.Filter = "bitmap (*.jpg)|*.jpg|(*.jpeg)|*.jpeg|(*.png)|*.png|All Files(*.*)|*.*";
+            opFile.Filter = "Files|*.jpg;*.jpeg;*.png;....";
 
             //string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Image\"; // <---
             //if (Directory.Exists(appPath) == false)                                              // <---
@@ -180,13 +180,21 @@ namespace DoAnCShap
                 TenHinh = opFile.FileName;
                 pictureBox1.Image = new Bitmap(opFile.FileName);
                 pictureBox1.ImageLocation = opFile.FileName;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }    
 
         }
 
         public void LuuAnh()
         {
-            File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
+            try
+            {
+                File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ảnh đã tồn tại !");
+            }
         }
         
       
@@ -214,7 +222,7 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(cboChucVu.Text=="")
+            if (cboChucVu.Text=="")
             {
                 MessageBox.Show("Chưa chọn chức vụ");
                 return;
@@ -222,16 +230,6 @@ namespace DoAnCShap
             if (txtTenNV.Text == "")
             {
                 MessageBox.Show("Chưa nhập tên nhân viên");
-                return;
-            }
-            //if (ra.Text == "")
-            //{
-            //    MessageBox.Show("Chưa chọn giới tính");
-            //    return;
-            //}
-            if (txtEmail.Text == "")
-            {
-                MessageBox.Show("Chưa nhập email");
                 return;
             }
             if (txtSDT.Text == "")
@@ -249,11 +247,7 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa nhập địa chỉ");
                 return;
             }
-            //if (txtHinhNhanVien.Text == "")
-            //{
-            //    MessageBox.Show("Chưa chọn hình");
-            //    return;
-            //}
+           
             if (txtUserName.Text == "")
             {
                 MessageBox.Show("UserName không được để trống");
@@ -269,6 +263,7 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa chọn trạng thái");
                 return;
             }
+            LuuAnh();
             if (flag == 1)
             {
                 try
@@ -290,8 +285,15 @@ namespace DoAnCShap
                         else
                         {
                             nv.GioiTinh = radioButtonNu.Text;
-                        }    
-                        nv.Email = txtEmail.Text;
+                        }
+                        if (txtEmail.Text == "")
+                        {
+                            nv.Email = "Không";
+                        }
+                        else
+                        {
+                            nv.Email = txtEmail.Text;
+                        }
                         nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
@@ -302,7 +304,6 @@ namespace DoAnCShap
                         nv.TrangThai = cboTrangThai.Text;
                         bus.AddData(nv);
                         MessageBox.Show("Thêm Nhân Viên Thành Công");
-                        LuuAnh();
                         Clear();
                         xulytextbox(false, true);
                         xulychucnang(true, false, false);
@@ -382,7 +383,7 @@ namespace DoAnCShap
                 for (int i = 0; i < n; i++)
                 {
                     PictureBox p = new PictureBox();
-                    Size s = new Size(180, 180);
+                    Size s = new Size(180,180);
                     p.Size = s;
                     pictureBox1.Controls.Add(p);
                     Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
