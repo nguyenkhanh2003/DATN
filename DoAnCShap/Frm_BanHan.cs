@@ -96,7 +96,7 @@ namespace DoAnCShap
             labelTongThanhToan.ResetText();
             txtTienKhachDua.ResetText();
             labelThoiLaiKhach.ResetText();
-            dataGridViewHDBH.DataSource = null;
+            //dataGridViewHDBH.ClearSelection();
         }    
         public void PhatSinhMaHD()
         {

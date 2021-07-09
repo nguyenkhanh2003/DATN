@@ -48,9 +48,6 @@ namespace DoAnCShap
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
-            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,6 +64,7 @@ namespace DoAnCShap
             this.btnThemPhieu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxlK = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,7 +72,9 @@ namespace DoAnCShap
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
+            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -198,6 +198,7 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewPBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPBH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewPBH.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewPBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -209,6 +210,7 @@ namespace DoAnCShap
             this.TrangThai});
             this.dataGridViewPBH.Location = new System.Drawing.Point(14, 21);
             this.dataGridViewPBH.Name = "dataGridViewPBH";
+            this.dataGridViewPBH.ReadOnly = true;
             this.dataGridViewPBH.Size = new System.Drawing.Size(599, 276);
             this.dataGridViewPBH.TabIndex = 0;
             // 
@@ -217,36 +219,42 @@ namespace DoAnCShap
             this.MaPBH.DataPropertyName = "MaPBH";
             this.MaPBH.HeaderText = "Mã Phiếu";
             this.MaPBH.Name = "MaPBH";
+            this.MaPBH.ReadOnly = true;
             // 
             // MaHDBH
             // 
             this.MaHDBH.DataPropertyName = "MaHDBH";
             this.MaHDBH.HeaderText = "Mã Hóa Đơn";
             this.MaHDBH.Name = "MaHDBH";
+            this.MaHDBH.ReadOnly = true;
             // 
             // MaNV
             // 
             this.MaNV.DataPropertyName = "TenNV";
             this.MaNV.HeaderText = "Tên Nhân Viên";
             this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
             // 
             // NgayLap
             // 
             this.NgayLap.DataPropertyName = "NgayLapPhieu";
             this.NgayLap.HeaderText = "Ngày Lập";
             this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
             // 
             // NgayLayHang
             // 
             this.NgayLayHang.DataPropertyName = "NgayLayHang";
             this.NgayLayHang.HeaderText = "Ngày Lấy Hàng";
             this.NgayLayHang.Name = "NgayLayHang";
+            this.NgayLayHang.ReadOnly = true;
             // 
             // TrangThai
             // 
             this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -276,24 +284,6 @@ namespace DoAnCShap
             this.dataGridViewCTPBH.Name = "dataGridViewCTPBH";
             this.dataGridViewCTPBH.Size = new System.Drawing.Size(503, 276);
             this.dataGridViewCTPBH.TabIndex = 0;
-            // 
-            // MaLKK
-            // 
-            this.MaLKK.DataPropertyName = "MaLK";
-            this.MaLKK.HeaderText = "Tên Linh Kiện";
-            this.MaLKK.Name = "MaLKK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.Name = "GhiChu";
             // 
             // panel2
             // 
@@ -331,9 +321,10 @@ namespace DoAnCShap
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label10.BackColor = System.Drawing.Color.Teal;
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(497, 26);
@@ -482,14 +473,26 @@ namespace DoAnCShap
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label11.BackColor = System.Drawing.Color.Teal;
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(590, 26);
             this.label11.TabIndex = 17;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboTrangThai
+            // 
+            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.FormattingEnabled = true;
+            this.cboTrangThai.Items.AddRange(new object[] {
+            "Active"});
+            this.cboTrangThai.Location = new System.Drawing.Point(232, 200);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(192, 24);
+            this.cboTrangThai.TabIndex = 10;
             // 
             // comboBoxlK
             // 
@@ -567,16 +570,23 @@ namespace DoAnCShap
             this.label6.Text = "Tên linh Kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cboTrangThai
+            // MaLKK
             // 
-            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTrangThai.FormattingEnabled = true;
-            this.cboTrangThai.Items.AddRange(new object[] {
-            "Active"});
-            this.cboTrangThai.Location = new System.Drawing.Point(232, 200);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(192, 24);
-            this.cboTrangThai.TabIndex = 10;
+            this.MaLKK.DataPropertyName = "TenLK";
+            this.MaLKK.HeaderText = "Tên Linh Kiện";
+            this.MaLKK.Name = "MaLKK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.Name = "GhiChu";
             // 
             // Frm_BaoHanh
             // 
@@ -622,9 +632,6 @@ namespace DoAnCShap
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridViewCTPBH;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHDBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
@@ -654,5 +661,8 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }
