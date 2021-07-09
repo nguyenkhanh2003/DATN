@@ -95,13 +95,12 @@ namespace DoAnCShap
             txtKhuyenMai.Clear();
         }
 
+       
         public void XuLyChucNang(Boolean b1,Boolean b2)
         {
-            //btnLuu.Enabled = b2;
-            //btnIn.Enabled = b2;
-            //btnXoa.Enabled = b2;
-            //btnCapNhat.Enabled = b2;
-
+            btnEdit.Enabled = b1;
+            btnInHD.Enabled = b1;
+            btnXoa.Enabled = b1;
         }
 
         public void HienThiDS_CTHD(int vitri)
@@ -160,9 +159,8 @@ namespace DoAnCShap
             HienThiLinhKien();
             HienThiNhanVien();
             HienThiKhachHang();
-            //XuLyTextBoxHD(true, false);
             comboBoxLK.Text = null;
-            XuLyChucNang(true, false);
+            XuLyChucNang(false,true);
         }
 
         private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -174,6 +172,7 @@ namespace DoAnCShap
 
         private void dataGridViewCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            XuLyChucNang(true, false);
             //int vitri = dataGridViewCTHD.CurrentCell.RowIndex;
             //HienThiCTHoaDonTextBox(vitri,bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK"));
             try
@@ -281,7 +280,7 @@ namespace DoAnCShap
         private void dataGridViewCTHD_DoubleClick(object sender, EventArgs e)
         {
             XulyTextBoxCTHD(false, true);
-            XuLyChucNang(false, true);
+            //XuLyChucNang(false, true);
             flag = 5;
         }
 
@@ -344,7 +343,9 @@ namespace DoAnCShap
             hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
             hdbh.TrangThai = comboBoxTrangThai.Text;
             bus.UpdateHoaDon(hdbh);
+            MessageBox.Show("Success");
             HienThiHoaDon();
+            XuLyChucNang(false,true);
         }
 
         private void textBoxSL_KeyPress(object sender, KeyPressEventArgs e)

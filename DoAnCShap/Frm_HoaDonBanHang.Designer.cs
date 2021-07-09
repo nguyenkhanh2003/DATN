@@ -67,7 +67,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCapNhat = new System.Windows.Forms.Button();
             this.comboBoxLK = new System.Windows.Forms.ComboBox();
             this.txtKhuyenMai = new System.Windows.Forms.TextBox();
             this.labelThanhTien = new System.Windows.Forms.Label();
@@ -489,7 +488,6 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnCapNhat);
             this.panel4.Controls.Add(this.comboBoxLK);
             this.panel4.Controls.Add(this.txtKhuyenMai);
             this.panel4.Controls.Add(this.labelThanhTien);
@@ -505,21 +503,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(583, 276);
             this.panel4.TabIndex = 33;
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
-            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCapNhat.Location = new System.Drawing.Point(469, 31);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(94, 44);
-            this.btnCapNhat.TabIndex = 44;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
             // 
             // comboBoxLK
             // 
@@ -719,7 +702,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnInHD;
-        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
