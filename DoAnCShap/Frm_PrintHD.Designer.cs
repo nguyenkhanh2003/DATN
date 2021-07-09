@@ -32,10 +32,10 @@ namespace DoAnCShap
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PM_BanLinhKienPCDataSet = new DoAnCShap.PM_BanLinhKienPCDataSet();
+            //this.PM_BanLinhKienPCDataSet = new DoAnCShap.PM_BanLinhKienPCDataSet();
             this.CT_HoaDonBanHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CT_HoaDonBanHangTableAdapter = new DoAnCShap.PM_BanLinhKienPCDataSetTableAdapters.CT_HoaDonBanHangTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.PM_BanLinhKienPCDataSet)).BeginInit();
+            //this.CT_HoaDonBanHangTableAdapter = new DoAnCShap.PM_BanLinhKienPCDataSetTableAdapters.CT_HoaDonBanHangTableAdapter();
+            //((System.ComponentModel.ISupportInitialize)(this.PM_BanLinhKienPCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CT_HoaDonBanHangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,17 +54,17 @@ namespace DoAnCShap
             // 
             // PM_BanLinhKienPCDataSet
             // 
-            this.PM_BanLinhKienPCDataSet.DataSetName = "PM_BanLinhKienPCDataSet";
-            this.PM_BanLinhKienPCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.PM_BanLinhKienPCDataSet.DataSetName = "PM_BanLinhKienPCDataSet";
+            //this.PM_BanLinhKienPCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CT_HoaDonBanHangBindingSource
             // 
             this.CT_HoaDonBanHangBindingSource.DataMember = "CT_HoaDonBanHang";
-            this.CT_HoaDonBanHangBindingSource.DataSource = this.PM_BanLinhKienPCDataSet;
+            //this.CT_HoaDonBanHangBindingSource.DataSource = this.PM_BanLinhKienPCDataSet;
             // 
             // CT_HoaDonBanHangTableAdapter
             // 
-            this.CT_HoaDonBanHangTableAdapter.ClearBeforeFill = true;
+            //this.CT_HoaDonBanHangTableAdapter.ClearBeforeFill = true;
             // 
             // Frm_PrintHD
             // 
@@ -75,7 +75,7 @@ namespace DoAnCShap
             this.Name = "Frm_PrintHD";
             this.Text = "Frm_PrintHD";
             this.Load += new System.EventHandler(this.Frm_PrintHD_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PM_BanLinhKienPCDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.PM_BanLinhKienPCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CT_HoaDonBanHangBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,7 +85,7 @@ namespace DoAnCShap
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource CT_HoaDonBanHangBindingSource;
-        private PM_BanLinhKienPCDataSet PM_BanLinhKienPCDataSet;
-        private PM_BanLinhKienPCDataSetTableAdapters.CT_HoaDonBanHangTableAdapter CT_HoaDonBanHangTableAdapter;
+        //private PM_BanLinhKienPCDataSet PM_BanLinhKienPCDataSet;
+        //private PM_BanLinhKienPCDataSetTableAdapters.CT_HoaDonBanHangTableAdapter CT_HoaDonBanHangTableAdapter;
     }
 }

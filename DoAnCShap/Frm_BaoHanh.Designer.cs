@@ -67,7 +67,6 @@ namespace DoAnCShap
             this.btnThemPhieu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxlK = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@ namespace DoAnCShap
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -491,17 +491,6 @@ namespace DoAnCShap
             this.label11.TabIndex = 17;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cboTrangThai
-            // 
-            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTrangThai.FormattingEnabled = true;
-            this.cboTrangThai.Items.AddRange(new object[] {
-            "Active"});
-            this.cboTrangThai.Location = new System.Drawing.Point(232, 200);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(192, 24);
-            this.cboTrangThai.TabIndex = 10;
-            // 
             // comboBoxlK
             // 
             this.comboBoxlK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -578,6 +567,17 @@ namespace DoAnCShap
             this.label6.Text = "Tên linh Kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cboTrangThai
+            // 
+            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.FormattingEnabled = true;
+            this.cboTrangThai.Items.AddRange(new object[] {
+            "Active"});
+            this.cboTrangThai.Location = new System.Drawing.Point(232, 200);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(192, 24);
+            this.cboTrangThai.TabIndex = 10;
+            // 
             // Frm_BaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,7 +646,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThemPhieu;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cboTrangThai;
         private System.Windows.Forms.ComboBox comboBoxlK;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label label4;
@@ -654,5 +653,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboTrangThai;
     }
 }

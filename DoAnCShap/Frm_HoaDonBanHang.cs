@@ -319,6 +319,14 @@ namespace DoAnCShap
         private void btnCapNhat_Click_1(object sender, EventArgs e)
         {
             string condition = comboBoxMaHD.Text;
+           
+            MessageBox.Show("Seccess !");
+            HienThiCTHD_TheoMaHD(condition);
+           
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
             cthd.MaHDBH = comboBoxMaHD.Text;
             cthd.MaLK = comboBoxLK.SelectedValue.ToString();
             cthd.SoLuong = int.Parse(textBoxSL.Text);
@@ -327,13 +335,8 @@ namespace DoAnCShap
             cthd.ThanhTien = decimal.Parse(labelThanhTien.Text);
             cthd.TrangThai = comboBoxTrangThai.Text;
             bus.UpdateCTHoaDon(cthd);
-            MessageBox.Show("Seccess !");
-            HienThiCTHD_TheoMaHD(condition);
+            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + comboBoxMaHD.Text + "'");
             TongThanhToan();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
             hdbh.MaHDBH = comboBoxMaHD.Text;
             hdbh.MaKH = comboBoxKH.SelectedValue.ToString();
             hdbh.MaNV = comboBoxNhanVien.SelectedValue.ToString();
@@ -341,7 +344,6 @@ namespace DoAnCShap
             hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
             hdbh.TrangThai = comboBoxTrangThai.Text;
             bus.UpdateHoaDon(hdbh);
-            MessageBox.Show("Success!");
             HienThiHoaDon();
         }
 

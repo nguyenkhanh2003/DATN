@@ -702,9 +702,9 @@ namespace DoAnCShap
             // 
             this.btnCane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCane.Image = ((System.Drawing.Image)(resources.GetObject("btnCane.Image")));
-            this.btnCane.Location = new System.Drawing.Point(18, 204);
+            this.btnCane.Location = new System.Drawing.Point(18, 93);
             this.btnCane.Name = "btnCane";
-            this.btnCane.Size = new System.Drawing.Size(91, 40);
+            this.btnCane.Size = new System.Drawing.Size(90, 40);
             this.btnCane.TabIndex = 0;
             this.btnCane.Text = "Hủy";
             this.btnCane.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

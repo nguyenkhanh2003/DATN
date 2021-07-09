@@ -34,7 +34,7 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnXoa.Enabled = b2;
         }
-        public void XuLyTextBox(Boolean b1,Boolean b2)
+        public void XuLyTextBox(Boolean b1, Boolean b2)
         {
             txtMaCV.Enabled = b1;
             txtTenCV.Enabled = b1;
@@ -50,7 +50,7 @@ namespace DoAnCShap
         {
             HienThiDSCV();
             XuLyChucNang(true, false);
-            XuLyTextBox(false,true);
+            XuLyTextBox(false, true);
         }
 
         public void PhatSinhMa()
@@ -77,24 +77,24 @@ namespace DoAnCShap
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
-            XuLyChucNang(false,true);
-            XuLyTextBox(true,false);
+            XuLyChucNang(false, true);
+            XuLyTextBox(true, false);
             PhatSinhMa();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(txtTenCV.Text=="")
+            if (txtTenCV.Text == "")
             {
                 MessageBox.Show("Chưa Nhập Tên Chức Vụ");
                 return;
-            }    
+            }
             //if(cboTrangThai.Text=="")
             //{
             //    MessageBox.Show("Chưa chọn trạng thái !");
             //}    
-            if(flag==1)
-            { 
+            if (flag == 1)
+            {
                 cv.MaCV = txtMaCV.Text;
                 cv.TenCV = txtTenCV.Text;
                 cv.NhanVien = checkBoxNhanViem.Checked;
@@ -114,7 +114,7 @@ namespace DoAnCShap
                 MessageBox.Show("Thành Công");
             }
 
-            if(flag==2)
+            if (flag == 2)
             {
                 cv.MaCV = txtMaCV.Text;
                 cv.TenCV = txtTenCV.Text;
@@ -133,7 +133,7 @@ namespace DoAnCShap
                 cv.TrangThai = cboTrangThai.Text;
                 bus.EditCV(cv);
                 MessageBox.Show("Thành Công");
-            }    
+            }
             HienThiDSCV();
         }
 
@@ -141,7 +141,7 @@ namespace DoAnCShap
         {
             flag = 2;
             XuLyChucNang(false, true);
-            XuLyTextBox(true,false);
+            XuLyTextBox(true, false);
         }
 
         private void dataGridViewCV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -149,15 +149,15 @@ namespace DoAnCShap
             DataGridViewRow row = dataGridViewCV.Rows[e.RowIndex];
             txtMaCV.Text = row.Cells[0].Value.ToString();
             txtTenCV.Text = row.Cells[1].Value.ToString();
-            checkBoxNhanViem.Checked =Convert.ToBoolean(row.Cells[2].Value.ToString());
-            checkBoxkH.Checked= Convert.ToBoolean(row.Cells[3].Value.ToString());
-            checkBoxLinhKien.Checked= Convert.ToBoolean(row.Cells[4].Value.ToString());
-            checkBoxBanHang.Checked= Convert.ToBoolean(row.Cells[5].Value.ToString());
-            checkBoxNCC.Checked= Convert.ToBoolean(row.Cells[6].Value.ToString());
-            checkBoxLoaiLLK.Checked= Convert.ToBoolean(row.Cells[7].Value.ToString());
-            checkBoxNhapKho.Checked= Convert.ToBoolean(row.Cells[8].Value.ToString());
-            checkBoxBaoHanh.Checked= Convert.ToBoolean(row.Cells[9].Value.ToString());
-            checkBoxPhanQuyen.Checked= Convert.ToBoolean(row.Cells[10].Value.ToString());
+            checkBoxNhanViem.Checked = Convert.ToBoolean(row.Cells[2].Value.ToString());
+            checkBoxkH.Checked = Convert.ToBoolean(row.Cells[3].Value.ToString());
+            checkBoxLinhKien.Checked = Convert.ToBoolean(row.Cells[4].Value.ToString());
+            checkBoxBanHang.Checked = Convert.ToBoolean(row.Cells[5].Value.ToString());
+            checkBoxNCC.Checked = Convert.ToBoolean(row.Cells[6].Value.ToString());
+            checkBoxLoaiLLK.Checked = Convert.ToBoolean(row.Cells[7].Value.ToString());
+            checkBoxNhapKho.Checked = Convert.ToBoolean(row.Cells[8].Value.ToString());
+            checkBoxBaoHanh.Checked = Convert.ToBoolean(row.Cells[9].Value.ToString());
+            checkBoxPhanQuyen.Checked = Convert.ToBoolean(row.Cells[10].Value.ToString());
             checkBoxThongKe.Checked = Convert.ToBoolean(row.Cells[11].Value.ToString());
             checkBoxHoaDon.Checked = Convert.ToBoolean(row.Cells[12].Value.ToString());
             checkBoxSetting.Checked = Convert.ToBoolean(row.Cells[13].Value.ToString());
@@ -172,7 +172,7 @@ namespace DoAnCShap
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Không Thể Xóa !"+ex);
+                MessageBox.Show("Không Thể Xóa !" + ex);
             }
             //cv.MaCV = txtMaCV.Text;
             //bus.DeleteChucVu(cv);

@@ -676,14 +676,14 @@ namespace DoAnCShap
             // NumreicSL
             // 
             this.NumreicSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumreicSL.Location = new System.Drawing.Point(149, 116);
+            this.NumreicSL.Location = new System.Drawing.Point(124, 116);
             this.NumreicSL.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.NumreicSL.Name = "NumreicSL";
-            this.NumreicSL.Size = new System.Drawing.Size(222, 26);
+            this.NumreicSL.Size = new System.Drawing.Size(247, 26);
             this.NumreicSL.TabIndex = 25;
             this.NumreicSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -692,29 +692,29 @@ namespace DoAnCShap
             this.labelThanhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThanhTien.ForeColor = System.Drawing.Color.Red;
-            this.labelThanhTien.Location = new System.Drawing.Point(145, 206);
+            this.labelThanhTien.Location = new System.Drawing.Point(124, 206);
             this.labelThanhTien.Name = "labelThanhTien";
-            this.labelThanhTien.Size = new System.Drawing.Size(226, 24);
+            this.labelThanhTien.Size = new System.Drawing.Size(247, 24);
             this.labelThanhTien.TabIndex = 24;
             this.labelThanhTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtKhuyenMai
             // 
             this.txtKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhuyenMai.Location = new System.Drawing.Point(149, 160);
+            this.txtKhuyenMai.Location = new System.Drawing.Point(124, 160);
             this.txtKhuyenMai.Multiline = true;
             this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(222, 24);
+            this.txtKhuyenMai.Size = new System.Drawing.Size(247, 24);
             this.txtKhuyenMai.TabIndex = 22;
             this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDonGia
             // 
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonGia.Location = new System.Drawing.Point(149, 76);
+            this.txtDonGia.Location = new System.Drawing.Point(124, 76);
             this.txtDonGia.Multiline = true;
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(222, 24);
+            this.txtDonGia.Size = new System.Drawing.Size(247, 24);
             this.txtDonGia.TabIndex = 23;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -722,7 +722,7 @@ namespace DoAnCShap
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(33, 210);
+            this.label12.Location = new System.Drawing.Point(13, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 20);
             this.label12.TabIndex = 17;
@@ -733,7 +733,7 @@ namespace DoAnCShap
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 163);
+            this.label4.Location = new System.Drawing.Point(13, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 18;
@@ -744,7 +744,7 @@ namespace DoAnCShap
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 122);
+            this.label3.Location = new System.Drawing.Point(13, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 19;
@@ -755,7 +755,7 @@ namespace DoAnCShap
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(33, 80);
+            this.label14.Location = new System.Drawing.Point(13, 80);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 20);
             this.label14.TabIndex = 20;
@@ -766,7 +766,7 @@ namespace DoAnCShap
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(33, 35);
+            this.label20.Location = new System.Drawing.Point(13, 35);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(105, 20);
             this.label20.TabIndex = 21;
@@ -777,9 +777,9 @@ namespace DoAnCShap
             // 
             this.comboBoxSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSP.FormattingEnabled = true;
-            this.comboBoxSP.Location = new System.Drawing.Point(149, 31);
+            this.comboBoxSP.Location = new System.Drawing.Point(124, 31);
             this.comboBoxSP.Name = "comboBoxSP";
-            this.comboBoxSP.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxSP.Size = new System.Drawing.Size(247, 28);
             this.comboBoxSP.TabIndex = 16;
             this.comboBoxSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
             this.comboBoxSP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxSP_KeyPress);
