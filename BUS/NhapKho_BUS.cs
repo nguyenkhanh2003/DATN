@@ -54,7 +54,10 @@ namespace BUS
         {
             bus.DeleteCT_HoaDonNhap(ex);
         }
-
+        public void XoaCTHoaDonNhap(CT_HoaDonNhapHang ex)
+       {
+           bus.XoaCTHoaDonNhap(ex);
+       }
         public void UpdateCTHDN(CT_HoaDonNhapHang ex)
         {
             bus.UpdateCTHDN(ex);

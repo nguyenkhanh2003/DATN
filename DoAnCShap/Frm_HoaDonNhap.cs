@@ -47,13 +47,17 @@ namespace DoAnCShap
         {
             dataGridViewHDN.DataSource = bus.HienThiHDN("");
         }
-        public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3)
+
+        public void HienThiCTHD()
+        {
+            dataGridViewCTHDNH.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
+        }
+        public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3,Boolean b4)
         {
             btnTaoPhieu.Enabled = b1;
-            //btnHuy.Enabled = b2;
+            btnChon.Enabled = b4;
             btnCane.Enabled = b2;
             btnLuu.Enabled = b2;
-            btnChon.Enabled = b2;
             btnInHoaDon.Enabled = b2;
             btnXoa.Enabled = b3;
         }
@@ -96,7 +100,7 @@ namespace DoAnCShap
             ClearTexBox();
             PhatSinhMa();
             flag = 1;
-            XuLyChucNang(false, true, false);
+            XuLyChucNang(false, true, false,true);
         }
 
         decimal tongtien = 0;
@@ -179,13 +183,26 @@ namespace DoAnCShap
             HienThiSanPham();
             HienThiNCC();
             HienThiHoaDonN();
-            XuLyChucNang(true, false, false);
+            XuLyChucNang(true, false, false,false);
             comboBoxNCC.Text = "";
         }
 
         private void dataGridViewHDNH_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(false, true, true);
+            XuLyChucNang(false, true, true,false);
+            DialogResult KQ = MessageBox.Show("Xóa SP Này ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (KQ == DialogResult.OK)
+            {
+                cthdn.MaHDNH = txtMaHDN.Text;
+                cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+                bus.XoaCTHoaDonNhap(cthdn);
+                HienThiCTHD();
+                TongThanhToanMoi();
+            }
+            else
+            {
+
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -218,6 +235,7 @@ namespace DoAnCShap
                     bus.AddCTHD(cthdn);
                 }
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
+                XuLyChucNang(true, false, false,false);
                 ClearTexBox();
             }
             if (flag == 2)
@@ -236,7 +254,7 @@ namespace DoAnCShap
                 hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
                 bus.UpdateHDN(hdn);
                 MessageBox.Show("Success");
-                XuLyChucNang(true, false, false);
+                XuLyChucNang(true, false, false,false);
                 ClearTexBox();
             }
             HienThiHoaDonN();
@@ -302,6 +320,9 @@ namespace DoAnCShap
                 bus.DeleteHoaDonNhap(hdn);
                 MessageBox.Show("Success");
                 HienThiHoaDonN();
+                ClearTexBox();
+                dataGridViewCTHDNH.DataSource = null;
+                XuLyChucNang(true, false, false,false);
             }
             else
             {
@@ -361,13 +382,18 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (KQ == DialogResult.OK)
             {
-                XuLyChucNang(true, false, false);
+                XuLyChucNang(true, false, false,false);
                 ClearTexBox();
             }
             else
             {
 
             }
+        }
+
+        private void dataGridViewHDN_DoubleClick(object sender, EventArgs e)
+        {
+            XuLyChucNang(false, true, true,false);
         }
     }
 }

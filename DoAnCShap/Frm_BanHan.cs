@@ -80,9 +80,26 @@ namespace DoAnCShap
             dateTimePickerNgayLap.Enabled = b2;
             comboBoxTrangThai.Enabled = b2;
         }
+        public void ClearTextBox()
+        {
+            txtMaHD.ResetText();
+            comboBoxNV.ResetText();
+            comboBoxSP.ResetText();
+            comboBoxTrangThai.ResetText();
+            txtSDT.ResetText();
+            txtMaKH.ResetText();
+            txtTenkH.ResetText();
+            txtDiaChi.ResetText();
+            txtDonGia.ResetText();
+            txtKhuyenMai.ResetText();
+            labelThanhTien.ResetText();
+            labelTongThanhToan.ResetText();
+            txtTienKhachDua.ResetText();
+            labelThoiLaiKhach.ResetText();
+            dataGridViewHDBH.DataSource = null;
+        }    
         public void PhatSinhMaHD()
         {
-
             int count = 0;
             count = f.dataGridViewHD.Rows.Count;
             string chuoi = "";
@@ -394,7 +411,8 @@ namespace DoAnCShap
             SetValueForText3 = txtMaHD.Text;
             Frm_PrintHD InHoaDon = new Frm_PrintHD();
             InHoaDon.ShowDialog();
-
+            XuLyChucNang(true, false);
+            ClearTextBox();
         }
 
         private void txtMaHD_KeyDown(object sender, KeyEventArgs e)
