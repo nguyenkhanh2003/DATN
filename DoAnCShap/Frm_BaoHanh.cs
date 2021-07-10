@@ -53,6 +53,10 @@ namespace DoAnCShap
         {
             dataGridViewCTPBH.DataSource = bus.HienThiCTPhieu("");
         }
+        public void HienThiCTPhieu()
+        {
+            dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -144,13 +148,58 @@ namespace DoAnCShap
                 MessageBox.Show("Tạo phiếu thành công");
             }
             HienThiDSPhieu();
-            HienThiCTPhieuBaoHanh();
+            //HienThiCTPhieuBaoHanh();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        public void HienThiPhieuBHTextBox(int vitri,DataTable d)
+        {
+            try
+            {
+                txtMaPhieu.Text = d.Rows[vitri]["MaPBH"].ToString();
+                txtMaHD.Text = d.Rows[vitri]["MaHDBH"].ToString();
+                comboBoxNV.Text = d.Rows[vitri]["TenNV"].ToString();
+                dateTimePickerNgaLap.Text = d.Rows[vitri]["NgayLapPhieu"].ToString();
+                dateTimePickerNgayLayHang.Text = d.Rows[vitri]["NgayLayHang"].ToString();
+                dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
+            }
+            catch
+            {
+
+            }
+        }
+        private void dataGridViewPBH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int vitri = dataGridViewPBH.CurrentCell.RowIndex;
+            HienThiPhieuBHTextBox(vitri,bus.GetPBH(""));
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            ctpbh.MaPBH = txtMaPhieu.Text;
+            ctpbh.MaLK = comboBoxlK.SelectedValue.ToString();
+            bus.XoaCTPhieuBaoHanh(ctpbh);
+            pbh.MaPBH = txtMaPhieu.Text;
+            bus.XoaPhieuBaoHanh(pbh);
+            MessageBox.Show("Success");
+            HienThiDSPhieu();
+        }
+
+        private void dataGridViewCTPBH_DoubleClick(object sender, EventArgs e)
         {
 
         }
 
+        private void dataGridViewCTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewCTPBH.Rows[e.RowIndex];
+            comboBoxlK.Text = row.Cells[0].Value.ToString();
+            txtSL.Text = row.Cells[1].Value.ToString();
+            txtGhiChu.Text = row.Cells[2].Value.ToString();
+        }
+
+        private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
+        {
+            XuLyChucNang(false, true);
+        }
     }
 }

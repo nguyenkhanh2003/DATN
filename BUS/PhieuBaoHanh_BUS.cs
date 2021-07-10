@@ -24,6 +24,10 @@ namespace BUS
         {
             return bus.HienThiCT_PhieuBaoHanh(condition);
         }
+        public DataTable LoadCT_PhieuTheoMa(string condition)
+       {
+           return bus.HienThiCT_PhieuBaoHanhTheoMa(condition);
+       }
         public void ThemPBH(PhieuBaoHanh ex)
         {
             bus.ThemPBH(ex);
@@ -43,6 +47,13 @@ namespace BUS
             return bus.DSSP(condition);
         }
 
-
+        public void XoaCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
+        {
+            bus.XoaCTPhieuBaoHanh(ex);
+        }
+        public void XoaPhieuBaoHanh(PhieuBaoHanh ex)
+        {
+            bus.XoaPhieuBaoHanh(ex);
+        }
     }
 }
