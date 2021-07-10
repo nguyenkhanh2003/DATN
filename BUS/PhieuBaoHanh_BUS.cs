@@ -55,5 +55,17 @@ namespace BUS
         {
             bus.XoaPhieuBaoHanh(ex);
         }
+        public void Update_CTPBH(CT_PhieuBaoHanh ex)
+        {
+            bus.Update_CTPBH(ex);
+        }
+        public void Update_PBH(PhieuBaoHanh ex)
+        {
+            bus.Update_PBH(ex);
+        }
+        public DataTable TimHD(string condition)
+        {
+            return bus.TimHD(condition);
+        }
     }
 }

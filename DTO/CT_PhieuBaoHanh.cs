@@ -10,7 +10,7 @@ namespace DTO
     {
         public string MaPBH { get; set; }
         public string MaLK { get; set; }
-        public string SoLuong { get; set; }
+        public int SoLuong { get; set; }
         public string GhiChu { get; set; }
 
     }

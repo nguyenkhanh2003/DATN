@@ -52,7 +52,7 @@ namespace DAL
 
         public void XoaCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@" delete from CT_PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"'and MaLK=N'"+ex.MaLK+"' ");
+            KetNoi.ExecuteReader(@" delete from CT_PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"'");
         }
 
         public void XoaPhieuBaoHanh(PhieuBaoHanh ex)
@@ -62,11 +62,16 @@ namespace DAL
 
         public void Update_CTPBH(CT_PhieuBaoHanh ex)
        {
-           KetNoi.ExecuteReader(@"update CT_PhieuBaoHanh Where MaPBH=N'"+ex.MaPBH+"' and MaLK=N'"+ex.MaLK+"'");
+           KetNoi.ExecuteReader(@"update CT_PhieuBaoHanh Set SoLuong="+ex.SoLuong+",GhiChu=N'"+ex.GhiChu+"' Where MaPBH=N'"+ex.MaPBH+"' and MaLK=N'"+ex.MaLK+"'");
        }
        public void Update_PBH(PhieuBaoHanh ex)
        {
-           KetNoi.ExecuteReader(@"update PhieuBaoHanh Where MaPBH=N'"+ex.MaPBH+"'");
+           KetNoi.ExecuteReader(@"update PhieuBaoHanh Set Where MaPBH=N'"+ex.MaPBH+"'");
+       }
+
+       public DataTable TimHD(string condition)
+       {
+           return KetNoi.GetDataTable(""+condition);
        }
     }
 }

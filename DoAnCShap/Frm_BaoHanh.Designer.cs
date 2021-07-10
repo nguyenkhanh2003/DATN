@@ -53,6 +53,7 @@ namespace DoAnCShap
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTim = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxNV = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayLayHang = new System.Windows.Forms.DateTimePicker();
@@ -67,6 +68,7 @@ namespace DoAnCShap
             this.btnThemPhieu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnXoaCT = new System.Windows.Forms.Button();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxlK = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
@@ -75,7 +77,7 @@ namespace DoAnCShap
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnTim = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -91,7 +93,7 @@ namespace DoAnCShap
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1012, 6);
+            this.btnClose.Location = new System.Drawing.Point(1062, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(91, 39);
             this.btnClose.TabIndex = 0;
@@ -104,7 +106,7 @@ namespace DoAnCShap
             // 
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(774, 6);
+            this.btnHuy.Location = new System.Drawing.Point(880, 6);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(91, 39);
             this.btnHuy.TabIndex = 0;
@@ -116,7 +118,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(557, 6);
+            this.btnLuu.Location = new System.Drawing.Point(258, 6);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -129,7 +131,7 @@ namespace DoAnCShap
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(306, 6);
+            this.btnXoa.Location = new System.Drawing.Point(450, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 39);
             this.btnXoa.TabIndex = 0;
@@ -297,18 +299,21 @@ namespace DoAnCShap
             this.MaLKK.DataPropertyName = "TenLK";
             this.MaLKK.HeaderText = "Tên Linh Kiện";
             this.MaLKK.Name = "MaLKK";
+            this.MaLKK.ReadOnly = true;
             // 
             // SoLuong
             // 
             this.SoLuong.DataPropertyName = "SoLuong";
             this.SoLuong.HeaderText = "Số Lượng";
             this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
             // 
             // GhiChu
             // 
             this.GhiChu.DataPropertyName = "GhiChu";
             this.GhiChu.HeaderText = "Ghi Chú";
             this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
             // 
             // panel2
             // 
@@ -317,12 +322,13 @@ namespace DoAnCShap
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Location = new System.Drawing.Point(12, 323);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1110, 54);
+            this.panel2.Size = new System.Drawing.Size(1160, 54);
             this.panel2.TabIndex = 11;
             // 
             // panel3
@@ -344,6 +350,17 @@ namespace DoAnCShap
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(499, 242);
             this.panel3.TabIndex = 12;
+            // 
+            // btnTim
+            // 
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
+            this.btnTim.Location = new System.Drawing.Point(415, 80);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(40, 25);
+            this.btnTim.TabIndex = 15;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // label10
             // 
@@ -470,7 +487,7 @@ namespace DoAnCShap
             this.btnThemPhieu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieu.Image")));
-            this.btnThemPhieu.Location = new System.Drawing.Point(473, 44);
+            this.btnThemPhieu.Location = new System.Drawing.Point(497, 44);
             this.btnThemPhieu.Name = "btnThemPhieu";
             this.btnThemPhieu.Size = new System.Drawing.Size(79, 38);
             this.btnThemPhieu.TabIndex = 4;
@@ -485,6 +502,7 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.btnXoaCT);
             this.panel4.Controls.Add(this.btnThemPhieu);
             this.panel4.Controls.Add(this.cboTrangThai);
             this.panel4.Controls.Add(this.comboBoxlK);
@@ -496,7 +514,7 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(531, 59);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(592, 242);
+            this.panel4.Size = new System.Drawing.Size(641, 242);
             this.panel4.TabIndex = 13;
             // 
             // label11
@@ -507,9 +525,23 @@ namespace DoAnCShap
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(590, 26);
+            this.label11.Size = new System.Drawing.Size(639, 26);
             this.label11.TabIndex = 17;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnXoaCT
+            // 
+            this.btnXoaCT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoaCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaCT.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaCT.Image")));
+            this.btnXoaCT.Location = new System.Drawing.Point(497, 105);
+            this.btnXoaCT.Name = "btnXoaCT";
+            this.btnXoaCT.Size = new System.Drawing.Size(79, 38);
+            this.btnXoaCT.TabIndex = 4;
+            this.btnXoaCT.Text = "Xóa";
+            this.btnXoaCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoaCT.UseVisualStyleBackColor = true;
+            this.btnXoaCT.Click += new System.EventHandler(this.btnXoaCT_Click);
             // 
             // cboTrangThai
             // 
@@ -598,14 +630,18 @@ namespace DoAnCShap
             this.label6.Text = "Tên linh Kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnTim
+            // button1
             // 
-            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Location = new System.Drawing.Point(415, 80);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(40, 25);
-            this.btnTim.TabIndex = 15;
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(681, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 39);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "In";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // Frm_BaoHanh
             // 
@@ -684,5 +720,7 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Button btnXoaCT;
+        private System.Windows.Forms.Button button1;
     }
 }
