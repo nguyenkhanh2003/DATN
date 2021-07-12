@@ -47,10 +47,9 @@ namespace DoAnCShap
             this.radioButtonTheoNgay = new System.Windows.Forms.RadioButton();
             this.radioButtonTatCa = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -232,18 +231,6 @@ namespace DoAnCShap
             this.label1.Text = "Doanh Thu Các Tháng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(736, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(436, 306);
-            this.dataGridView1.TabIndex = 1;
-            // 
             // chart1
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -263,20 +250,28 @@ namespace DoAnCShap
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(682, 13);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(241, 305);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Frm_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "Frm_ThongKe";
             this.Text = "Frm_ThongKe";
             this.Load += new System.EventHandler(this.Frm_ThongKe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
@@ -299,7 +294,7 @@ namespace DoAnCShap
         private System.Windows.Forms.ComboBox comboBoxNam;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnXemDoanhThu;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ListView listView1;
     }
 }

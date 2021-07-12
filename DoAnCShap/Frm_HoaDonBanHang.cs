@@ -195,7 +195,7 @@ namespace DoAnCShap
 
         private void dataGridViewHD_DoubleClick(object sender, EventArgs e)
         {
-          
+            XuLyChucNang(true,false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -365,5 +365,13 @@ namespace DoAnCShap
         {
             e.SuppressKeyPress = true;
         }
+        public static string SetValueForText1 = "";
+        private void btnInHD_Click(object sender, EventArgs e)
+        {
+            Frm_PrintHD FrmIn= new Frm_PrintHD();
+            FrmIn.ShowDialog();
+            SetValueForText1 = comboBoxMaHD.Text;
+        }
+
     }
 }

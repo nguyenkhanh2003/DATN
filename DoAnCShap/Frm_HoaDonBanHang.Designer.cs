@@ -278,6 +278,7 @@
             this.btnInHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInHD.UseVisualStyleBackColor = true;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // btnClose
             // 
@@ -676,7 +677,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaylap;
         private System.Windows.Forms.ComboBox comboBoxTrangThai;
-        private System.Windows.Forms.ComboBox comboBoxMaHD;
         private System.Windows.Forms.ComboBox comboBoxKH;
         private System.Windows.Forms.ComboBox comboBoxNhanVien;
         private System.Windows.Forms.Label label6;
@@ -708,5 +708,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.TextBox textBoxSL;
+        public System.Windows.Forms.ComboBox comboBoxMaHD;
     }
 }

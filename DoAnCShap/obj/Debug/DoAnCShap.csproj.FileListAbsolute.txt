@@ -326,3 +326,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.Rep
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\reportbc.rdlc
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\RdlCompile.cache
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\RdlCompile.compiled

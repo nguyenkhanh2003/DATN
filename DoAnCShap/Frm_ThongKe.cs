@@ -24,12 +24,12 @@ namespace DoAnCShap
         
         public void HienThiDoanhThu()
         {
-            dataGridView1.DataSource = bus.DoanhThuTatCa("");
+               // = bus.DoanhThuTatCa("");
         }
 
         public void HienThiDoanhThuTheoNam(string condition)
         {
-            dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu' From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
+            //dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu' From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
         }
 
         //public void HienThiDoanhThuTheoNgay(int condition,int condition1,int condition3,int condition4)
