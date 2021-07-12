@@ -80,7 +80,7 @@ namespace DoAnCShap
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[0].Value);
+                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[1].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
@@ -284,6 +284,14 @@ namespace DoAnCShap
             else
             {
 
+            }
+        }
+
+        private void dataGridViewKH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewKH.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
         }
     }

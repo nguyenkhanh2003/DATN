@@ -17,7 +17,7 @@ namespace DoAnCShap
         {
             InitializeComponent();
             hideSubMenu();
-            
+
         }
 
         Login_BUS bus = new Login_BUS();
@@ -110,9 +110,9 @@ namespace DoAnCShap
         private void pictureBoxLogin_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-           // login.TopLevel = false;
-           // panelChildForm.Controls.Add(login);
-           // login.Dock = DockStyle.None;
+            // login.TopLevel = false;
+            // panelChildForm.Controls.Add(login);
+            // login.Dock = DockStyle.None;
             login.BringToFront();
             login.ShowDialog();
         }
@@ -131,7 +131,7 @@ namespace DoAnCShap
 
         private void btnBaoHanh_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -229,14 +229,14 @@ namespace DoAnCShap
 
         private void iconBtnThuNho_Click(object sender, EventArgs e)
         {
-           if(panelSideMenu.Visible)
+            if (panelSideMenu.Visible)
             {
                 panelSideMenu.Hide();
             }
-           else
+            else
             {
                 panelSideMenu.Show();
-            }    
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -252,18 +252,18 @@ namespace DoAnCShap
             else
             {
 
-            }    
-           
+            }
+
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnPhanQuyen_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -338,5 +338,13 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Thông Tin Nhân Viên";
             openChildForm(new Frm_ThongTinNhanVien());
         }
+
+        // private void dgvUserDetails_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        // {
+        //     using (SolidBrush b = new SolidBrush(dgvUserDetails.RowHeadersDefaultCellStyle.ForeColor))
+        //     {
+        //         e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+        //     }
+        // }
     }
 }

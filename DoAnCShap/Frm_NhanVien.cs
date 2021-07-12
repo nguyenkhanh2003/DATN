@@ -88,8 +88,8 @@ namespace DoAnCShap
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[0].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0,2)));
                 if (chuoi2 + 1 < 10)
                     txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
@@ -341,7 +341,6 @@ namespace DoAnCShap
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
                     nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
-                    //LuuAnh();
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
@@ -502,6 +501,14 @@ namespace DoAnCShap
                 pictureBox1.Image = new Bitmap(opFile.FileName);
                 pictureBox1.ImageLocation = opFile.FileName;
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void dataGridViewNhanVien_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewNhanVien.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
         }
     }

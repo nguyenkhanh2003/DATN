@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 using Dapper;
+using Microsoft.Reporting.WinForms;
+
 namespace DoAnCShap
 {
     public partial class Frm_BanHan : Form
@@ -17,9 +19,9 @@ namespace DoAnCShap
         public Frm_BanHan()
         {
             InitializeComponent();
-          
+
         }
-        
+
         Frm_KH kh = new Frm_KH();
         Frm_SanPham sp = new Frm_SanPham();
         Frm_HoaDonBanHang f = new Frm_HoaDonBanHang();
@@ -28,9 +30,10 @@ namespace DoAnCShap
         LinhKien lk = new LinhKien();
         CT_HoaDonBanHang cthdbh = new CT_HoaDonBanHang();
         KhachHang AddKH = new KhachHang();
-        
+
         Form1 f1 = new Form1();
         string MaLK = "";
+        ReportDataSource rs = new ReportDataSource();
         public void HienThiSanPham()
         {
             comboBoxSP.DataSource = bus.GetData("");
@@ -40,14 +43,14 @@ namespace DoAnCShap
 
         public void HienThiNhanVien(string labelHienTenDN)
         {
-            comboBoxNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'"+labelHienTenDN+"'");
+            comboBoxNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
             comboBoxNV.DisplayMember = "TenNV";
             comboBoxNV.ValueMember = "MaNV";
         }
 
         public void HienThiTimKiem(string condition)
         {
-            comboBoxSP.DataSource=bus.GetTimKiem("select TenLK From LinhKien Where TenLK Like N'%"+condition+"%'");
+            comboBoxSP.DataSource = bus.GetTimKiem("select TenLK From LinhKien Where TenLK Like N'%" + condition + "%'");
         }
 
         public void HienThiDSSTheoMaSP(string condition)
@@ -65,7 +68,7 @@ namespace DoAnCShap
             btnTimKH.Enabled = b2;
         }
 
-        public void XuLyTextBox(Boolean b1,Boolean b2)
+        public void XuLyTextBox(Boolean b1, Boolean b2)
         {
             txtMaHD.Enabled = b2;
             comboBoxNV.Enabled = b2;
@@ -97,7 +100,7 @@ namespace DoAnCShap
             txtTienKhachDua.ResetText();
             labelThoiLaiKhach.ResetText();
             //dataGridViewHDBH.ClearSelection();
-        }    
+        }
         public void PhatSinhMaHD()
         {
             int count = 0;
@@ -122,7 +125,7 @@ namespace DoAnCShap
         private void Frm_BanHang_Load(object sender, EventArgs e)
         {
             HienThiSanPham();
-            
+
         }
 
         public static string SetValueForText3 = "";
@@ -142,7 +145,7 @@ namespace DoAnCShap
                     //if(comboBoxSP.Text==DSSP.Rows[0]["MaLK"].ToString())
                     if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
-                       
+
                         txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
                         txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
                         txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
@@ -184,21 +187,21 @@ namespace DoAnCShap
             XuLyTextBox(false, true);
         }
 
-       
-      
+
+
         private void btnChonMua_Click(object sender, EventArgs e)
         {
-            if(txtDonGia.Text=="")
+            if (txtDonGia.Text == "")
             {
                 MessageBox.Show("? Đơn Giá");
                 return;
             }
 
-            if (txtKhuyenMai.Text=="")
+            if (txtKhuyenMai.Text == "")
             {
                 MessageBox.Show("? Khuyến Mãi");
                 return;
-            }    
+            }
             int KiemTra = 0;
             int vitri = 0;
             decimal KM = 0;
@@ -211,16 +214,16 @@ namespace DoAnCShap
             labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
-            for (int i=0;i<dataGridViewHDBH.Rows.Count-1;i++)
+            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
             {
-               if(comboBoxSP.Text==dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
+                if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
                 {
                     KiemTra = 1;
                     vitri = i;
                     break;
                 }
-            }   
-            if(KiemTra==1)
+            }
+            if (KiemTra == 1)
             {
                 int SL = ((int)NumreicSL.Value) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
@@ -235,42 +238,42 @@ namespace DoAnCShap
                 object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
                 dataGridViewHDBH.Rows.Add(t);
             }
-     
+
         }
 
         decimal tongtien = 0;
-      
+
         public void UpdateSL()
         {
-            for(int i=0;i<sp.dataGridViewLK.Rows.Count-1;i++)
+            for (int i = 0; i < sp.dataGridViewLK.Rows.Count - 1; i++)
             {
                 string SLSP = sp.dataGridViewLK.Rows[i].Cells[9].Value.ToString();
-            }    
+            }
         }
         private void btnLuuHd_Click(object sender, EventArgs e)
         {
-            if(txtMaHD.Text=="")
+            if (txtMaHD.Text == "")
             {
                 MessageBox.Show("? Mã Khách Hàng");
                 return;
             }
-            if(txtMaKH.Text=="")
+            if (txtMaKH.Text == "")
             {
                 MessageBox.Show("? Mã Khách Hàng");
                 return;
             }
-            if(labelTongThanhToan.Text=="")
+            if (labelTongThanhToan.Text == "")
             {
                 MessageBox.Show("? Tổng Thanh Toán");
                 return;
-            }    
+            }
             if (flag == 1)
             {
                 hdbh.MaHDBH = txtMaHD.Text;
                 hdbh.MaKH = txtMaKH.Text;
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value.Date;
-                hdbh.TongTien =decimal.Parse(labelTongThanhToan.Text);
+                hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
                 hdbh.TrangThai = comboBoxTrangThai.Text;
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');
@@ -279,10 +282,10 @@ namespace DoAnCShap
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
                 {
                     string malk = b[i];
-                    int soluong =int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString());
-                    decimal dongia =decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString());
-                    decimal khuyenmai =decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString());
-                    decimal thanhtien =decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString());
+                    int soluong = int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString());
+                    decimal dongia = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString());
+                    decimal khuyenmai = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString());
+                    decimal thanhtien = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString());
                     cthdbh.MaHDBH = txtMaHD.Text;
                     cthdbh.MaLK = malk;
                     cthdbh.SoLuong = soluong;
@@ -298,7 +301,7 @@ namespace DoAnCShap
                     bus.AddCTHD(cthdbh);
                 }
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
-                XuLyTextBox(true,false);
+                XuLyTextBox(true, false);
             }
         }
 
@@ -324,11 +327,11 @@ namespace DoAnCShap
                 else
                 {
                     MessageBox.Show("Không tìm thấy khách hàng");
-                }    
+                }
             }
             catch
             {
-                
+
             }
         }
 
@@ -347,7 +350,7 @@ namespace DoAnCShap
                 chuoi = Convert.ToString(kh.dataGridViewKH.Rows[count - 2].Cells[0].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
-                   txtMaKH.Text = "KH0" + (chuoi2 + 1).ToString();
+                    txtMaKH.Text = "KH0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
                     txtMaKH.Text = "KH" + (chuoi2 + 1).ToString();
 
@@ -408,11 +411,27 @@ namespace DoAnCShap
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-            SetValueForText3 = txtMaHD.Text;
-            Frm_PrintHD InHoaDon = new Frm_PrintHD();
-            InHoaDon.ShowDialog();
+            List<CT_HoaDon> lst = new List<CT_HoaDon>();
+            lst.Clear();
+            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
+            {
+                CT_HoaDon cT_HoaDon = new CT_HoaDon
+                {
+                    TenSP = dataGridViewHDBH.Rows[i].Cells[0].Value.ToString(),
+                    SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString())
+                };
+                lst.Add(cT_HoaDon);
+            }
+                rs.Name = "DataSet1";
+                rs.Value = lst;
+                Frm_PrintHD frm_in = new Frm_PrintHD();
+                frm_in.reportViewer1.LocalReport.DataSources.Clear();
+                frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
+                frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.reportbc.rdlc";
+                frm_in.ShowDialog();
+               
             XuLyChucNang(true, false);
-            ClearTextBox();
+            //ClearTextBox();
         }
 
         private void txtMaHD_KeyDown(object sender, KeyEventArgs e)
@@ -468,5 +487,21 @@ namespace DoAnCShap
             }
 
         }
+
+        private void dataGridViewHDBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+
+        }
+    }
+
+    public class CT_HoaDon
+    {
+        //public int STT { get; set; }
+        public string TenSP { get; set; }
+        public int SoLuong { get; set; }
+        public decimal DonGia { get; set; }
+        public decimal KhuyenMai { get; set; }
+        public decimal ThanhTien { get; set; }
+
     }
 }
