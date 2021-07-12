@@ -263,7 +263,6 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa chọn trạng thái");
                 return;
             }
-            LuuAnh();
             if (flag == 1)
             {
                 try
@@ -274,6 +273,7 @@ namespace DoAnCShap
                     }
                     else
                     {
+                        LuuAnh();
                         MaHoa();
                         nv.MaNV = txtMaNV.Text;
                         nv.MaCV = cboChucVu.SelectedValue.ToString();
@@ -316,6 +316,7 @@ namespace DoAnCShap
             }
             if(flag==2)
             {
+               
                 if (txtSDT.Text.Length < 10)
                 {
                     MessageBox.Show("Số điện thoại không đúng");
@@ -323,7 +324,6 @@ namespace DoAnCShap
                 else
                 {
                     MaHoa();
-                    //MaHoa1();
                     nv.MaNV = txtMaNV.Text;
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
@@ -341,12 +341,12 @@ namespace DoAnCShap
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
                     nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                    //LuuAnh();
                     nv.UserName = txtUserName.Text;
                     nv.PassWord = txtPassWord.Text;
                     nv.TrangThai = cboTrangThai.Text;
                     bus.EditData(nv);
                     MessageBox.Show("Sửa Nhân Viên Thành Công");
-                    LuuAnh();
                     xulychucnang(true, false, false);
                 }
             }
@@ -383,7 +383,7 @@ namespace DoAnCShap
                 for (int i = 0; i < n; i++)
                 {
                     PictureBox p = new PictureBox();
-                    Size s = new Size(180,180);
+                    Size s = new Size(180, 180);
                     p.Size = s;
                     pictureBox1.Controls.Add(p);
                     Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
@@ -395,6 +395,7 @@ namespace DoAnCShap
             {
 
             }
+            this.pictureBox1.ImageLocation = row.Cells[9].Value.ToString();
             txtUserName.Text = row.Cells[10].Value.ToString();
             cboTrangThai.Text = row.Cells[12].Value.ToString();        }
 
@@ -487,6 +488,20 @@ namespace DoAnCShap
             if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opFile = new OpenFileDialog();
+            opFile.Title = "Select a Image";
+            opFile.Filter = "Files|*.jpg;*.jpeg;*.png;....";
+            if (opFile.ShowDialog() == DialogResult.OK)
+            {
+                TenHinh = opFile.FileName;
+                pictureBox1.Image = new Bitmap(opFile.FileName);
+                pictureBox1.ImageLocation = opFile.FileName;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
     }
