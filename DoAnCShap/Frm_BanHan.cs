@@ -418,7 +418,10 @@ namespace DoAnCShap
                 CT_HoaDon cT_HoaDon = new CT_HoaDon
                 {
                     TenSP = dataGridViewHDBH.Rows[i].Cells[0].Value.ToString(),
-                    SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString())
+                    SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString()),
+                    DonGia=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString()),
+                    KhuyenMai=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString()),
+                    ThanhTien=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString())
                 };
                 lst.Add(cT_HoaDon);
             }

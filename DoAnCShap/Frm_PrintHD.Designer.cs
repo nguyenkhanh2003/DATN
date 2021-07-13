@@ -29,17 +29,29 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.CT_HoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.CT_HoaDonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.CT_HoaDonBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.reportbc.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // CT_HoaDonBindingSource
+            // 
+            this.CT_HoaDonBindingSource.DataSource = typeof(DoAnCShap.CT_HoaDon);
             // 
             // Frm_PrintHD
             // 
@@ -50,11 +62,13 @@ namespace DoAnCShap
             this.Name = "Frm_PrintHD";
             this.Text = "Frm_PrintHD";
             this.Load += new System.EventHandler(this.Frm_PrintHD_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CT_HoaDonBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource CT_HoaDonBindingSource;
 
         #endregion
         //private PM_BanLinhKienPCDataSet PM_BanLinhKienPCDataSet;
