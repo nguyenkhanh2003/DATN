@@ -51,13 +51,13 @@ namespace DoAnCShap
             count = dataGridViewNhaCungCap.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <= 1)
+            if (count <= 0)
             {
                 txtMaNCC.Text = "NCC00";
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewNhaCungCap.Rows[count - 2].Cells[0].Value);
+                chuoi = Convert.ToString(dataGridViewNhaCungCap.Rows[count - 1].Cells[1].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaNCC.Text = "NCC0" + (chuoi2 + 1).ToString();
@@ -77,6 +77,7 @@ namespace DoAnCShap
             txtDiaChi.Clear();
             txtDienThoai.Clear();
             txtEmail.Clear();
+            errorMes.Clear();
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -111,18 +112,29 @@ namespace DoAnCShap
             btnSave.Enabled = true;
 
         }
+
+        public void HienThiNCC_TXT(int vitri,DataTable d)
+        {
+            try
+            {
+                txtMaNCC.Text = d.Rows[vitri]["MaNCC"].ToString();
+                txtTenNCC.Text = d.Rows[vitri]["TenNCC"].ToString();
+                txtDiaChi.Text = d.Rows[vitri]["DiaChi"].ToString();
+                txtDienThoai.Text = d.Rows[vitri]["DienThoai"].ToString();
+                txtEmail.Text = d.Rows[vitri]["Email"].ToString();
+                cbotrangthai.Text = d.Rows[vitri]["TrangThai"].ToString();
+            }
+            catch
+            {
+
+            }
+        }
         //hien du lieu tu datatable len button
         private void dataGridViewNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaNCC.Enabled = false;
-            if (e.RowIndex == -1) return;
-            DataGridViewRow row = dataGridViewNhaCungCap.Rows[e.RowIndex];
-            txtMaNCC.Text = row.Cells[0].Value.ToString();
-            txtTenNCC.Text = row.Cells[1].Value.ToString();
-            txtDiaChi.Text = row.Cells[2].Value.ToString();
-            txtDienThoai.Text = row.Cells[3].Value.ToString();
-            txtEmail.Text = row.Cells[4].Value.ToString();
-            txtDiaChi.Text = row.Cells[5].Value.ToString();
+            int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
+            HienThiNCC_TXT(vitri, bus.GetData(""));
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -145,45 +157,50 @@ namespace DoAnCShap
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtMaNCC.Text == "")
-            {
-                MessageBox.Show("Lỗi mã nhà cung cấp !");
-                return;
-            }
-            if (txtTenNCC.Text == "")
-            {
-                MessageBox.Show("Xin mời nhập lại tên nhà cung cấp !");
-                return;
-            }
-            if (txtDienThoai.Text == "")
-            {
-                MessageBox.Show("Xin mời nhập lại số điện thoại của nhà cung cấp !");
-                return;
-            }
-            if (txtDiaChi.Text == "")
-            {
-                MessageBox.Show("Xin mời nhập lại trạng thái của nhà cung cấp !");
-                return;
-            }
-
-            if (txtEmail.Text == "")
-            {
-                MessageBox.Show("Chưa nhập email");
-                return;
-            }
+            
             if (addnew == true)
             {
                 try
                 {
+                    if (txtMaNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtMaNCC, "? MaNCC");
+                        return;
+                    }
+                    if (txtTenNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtTenNCC, "? TenNCC");
+                        return;
+                    }
+                    if (txtDienThoai.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDienThoai, "? Điện Thoại");
+                        return;
+                    }
                     if (txtDienThoai.Text.Length < 10)
                     {
-                        MessageBox.Show("Số điện thoại không đúng !");
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
+                        return;
+                    }
+                    if (txtDiaChi.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDiaChi, "? Địa chỉ");
+                        return;
+                    }
+
+                    if (txtEmail.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtEmail, "? Email");
                         return;
                     }
                     else
                     {
-                        if (txtDienThoai.Text.Length == 10 || txtDienThoai.Text.Length == 11)
-                        {
                             ncc.MaNCC = txtMaNCC.Text;
                             ncc.TenNCC = txtTenNCC.Text;
                             ncc.Email = txtEmail.Text;
@@ -193,7 +210,8 @@ namespace DoAnCShap
                             bus.AddData(ncc);
                             MessageBox.Show("Thành Công");
                             ClearTextBox();
-                        }
+                            XuLyChucNang(true, false, false);
+                        XuLyTexBox(true, false);
                     }
                 }
                 catch
@@ -206,15 +224,45 @@ namespace DoAnCShap
             {
                 try
                 {
+                    if (txtMaNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtMaNCC, "? MaNCC");
+                        return;
+                    }
+                    if (txtTenNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtTenNCC, "? TenNCC");
+                        return;
+                    }
+                    if (txtDienThoai.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDienThoai, "? Điện Thoại");
+                        return;
+                    }
                     if (txtDienThoai.Text.Length < 10)
                     {
-                        MessageBox.Show("Số điện thoại không đúng !");
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
+                        return;
+                    }
+                    if (txtDiaChi.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDiaChi, "? Địa chỉ");
+                        return;
+                    }
+
+                    if (txtEmail.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtEmail, "? Email");
                         return;
                     }
                     else
-                    {
-                        if (txtDienThoai.Text.Length == 10 || txtDienThoai.Text.Length == 11)
-                        {
+                    { 
                             ncc.MaNCC = txtMaNCC.Text;
                             ncc.TenNCC = txtTenNCC.Text;
                             ncc.Email = txtEmail.Text;
@@ -222,10 +270,9 @@ namespace DoAnCShap
                             ncc.DiaChi = txtDiaChi.Text;
                             ncc.TrangThai = cbotrangthai.Text;
                             bus.EditData(ncc);
-                            ClearTextBox();
                             MessageBox.Show("Sửa Thành Công");
-
-                        }
+                        ClearTextBox();
+                        XuLyChucNang(true, false, false);
                     }
                 }
                 catch
@@ -282,6 +329,15 @@ namespace DoAnCShap
         private void dataGridViewNhaCungCap_DoubleClick(object sender, EventArgs e)
         {
             XuLyChucNang(false, true, true);
+        }
+
+
+        private void dataGridViewNhaCungCap_RowPostPaint_1(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewNhaCungCap.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
         }
     }
 }

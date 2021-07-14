@@ -173,8 +173,6 @@ namespace DoAnCShap
         private void dataGridViewCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             XuLyChucNang(true, false);
-            //int vitri = dataGridViewCTHD.CurrentCell.RowIndex;
-            //HienThiCTHoaDonTextBox(vitri,bus.GetCtHoaDon("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK"));
             try
             {
                 DataGridViewRow row = dataGridViewCTHD.Rows[e.RowIndex];
@@ -373,5 +371,12 @@ namespace DoAnCShap
             SetValueForText1 = comboBoxMaHD.Text;
         }
 
+        private void dataGridViewHD_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewHD.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace DoAnCShap
         NhanVien_BUS bus = new NhanVien_BUS();
         ChucVu_BUS buss = new ChucVu_BUS();
         NhanVien nv = new NhanVien();
+        string PassW = "";
         int flag = 0;
       
         public void xulytextbox(Boolean b1, Boolean b2)
@@ -37,11 +38,9 @@ namespace DoAnCShap
             txtMaNV.ReadOnly = b1;
             txtMaNV.Enabled = b1;
             cboChucVu.Enabled = b1;
-            //txtHinhNhanVien.Enabled = b1;
             txtUserName.Enabled = b1;
             txtPassWord.Enabled = b1;
             txtTenNV.Enabled = b1;
-            //cboGioiTinh.Enabled = b1;
             radioButtonNam.Enabled = b1;
             radioButtonNu.Enabled = b1;
             txtEmail.Enabled = b1;
@@ -55,17 +54,16 @@ namespace DoAnCShap
         {
             pictureBox1.Controls.Clear();
             txtMaNV.Clear();
-            cboChucVu.Text = "";
-            //txtHinhNhanVien.Clear();
+            cboChucVu.ResetText();
             txtUserName.Clear();
             txtPassWord.Clear();
             txtTenNV.Clear();
-            //cboGioiTinh.Text = "";
             txtEmail.Clear();
             txtSDT.Clear();
             txtCMND.Clear();
             txtDiaChi.Clear();
-            cboTrangThai.Text = "";
+            cboTrangThai.ResetText();
+            erroMes.Clear();
         }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
         {
@@ -82,13 +80,13 @@ namespace DoAnCShap
             count = dataGridViewNhanVien.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if(count<=1)
+            if(count<=0)
             {
                 txtMaNV.Text="NV00";
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 2].Cells[1].Value);
+                chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 1].Cells[1].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0,2)));
                 if (chuoi2 + 1 < 10)
                     txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
@@ -145,6 +143,7 @@ namespace DoAnCShap
         String TenHinh = "";
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
+            pictureBox1.Controls.Clear();
             OpenFileDialog opFile = new OpenFileDialog();
             opFile.Title = "Select a Image";
             opFile.Filter = "Files|*.jpg;*.jpeg;*.png;....";
@@ -196,6 +195,15 @@ namespace DoAnCShap
                 MessageBox.Show("Ảnh đã tồn tại !");
             }
         }
+
+        public void XoaAnh()
+        {
+            var filePath =Application.StartupPath+@"\Image\"+TenHinh;
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+        }    
         
       
         private void btnThoat_Click(object sender, EventArgs e)
@@ -216,61 +224,73 @@ namespace DoAnCShap
         {
             flag = 1;
             xulytextbox(true, false);
+            Clear();
             xulychucnang(false, true, true);
             PhatSinhMa();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (cboChucVu.Text=="")
-            {
-                MessageBox.Show("Chưa chọn chức vụ");
-                return;
-            }
-            if (txtTenNV.Text == "")
-            {
-                MessageBox.Show("Chưa nhập tên nhân viên");
-                return;
-            }
-            if (txtSDT.Text == "")
-            {
-                MessageBox.Show("Chưa nhập số điện thoại");
-                return;
-            }
-            if (txtCMND.Text == "")
-            {
-                MessageBox.Show("Chưa nhập chứng minh nhân dân");
-                return;
-            }
-            if (txtDiaChi.Text == "")
-            {
-                MessageBox.Show("Chưa nhập địa chỉ");
-                return;
-            }
-           
-            if (txtUserName.Text == "")
-            {
-                MessageBox.Show("UserName không được để trống");
-                return;
-            }
-            if (txtPassWord.Text == "")
-            {
-                MessageBox.Show("Mật khẩu không được để trống");
-                return;
-            }
-            if (cboTrangThai.Text == "")
-            {
-                MessageBox.Show("Chưa chọn trạng thái");
-                return;
-            }
             if (flag == 1)
             {
                 try
                 {
+                    if (cboChucVu.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(cboChucVu, "Chưa chọn chức vụ");
+                        return;
+                    }
+                    if (txtTenNV.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtTenNV, "? Tên nhân viên");
+                        return;
+                    }
+                    if (txtSDT.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtSDT, "? SDT");
+                        return;
+                    }
                     if (txtSDT.Text.Length < 10)
                     {
-                        MessageBox.Show("Số điện thoại không đúng");
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtSDT, "Số điện thoại không đúng");
+                        return;
                     }
+                    if (txtCMND.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtCMND, "? CMND");
+                        return;
+                    }
+                    if (txtDiaChi.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtDiaChi, "? Địa chỉ");
+                        return;
+                    }
+
+                    if (txtUserName.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtUserName, "? UserName");
+                        return;
+                    }
+                    if (txtPassWord.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(txtPassWord, "? PassWord");
+                        return;
+                    }
+                    if (cboTrangThai.Text == "")
+                    {
+                        erroMes.BlinkRate = 100;
+                        erroMes.SetError(cboTrangThai, "? Trạng Thái");
+                        return;
+                    }
+
                     else
                     {
                         LuuAnh();
@@ -294,6 +314,7 @@ namespace DoAnCShap
                         {
                             nv.Email = txtEmail.Text;
                         }
+
                         nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
@@ -316,14 +337,66 @@ namespace DoAnCShap
             }
             if(flag==2)
             {
-               
+                if (cboChucVu.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(cboChucVu, "Chưa chọn chức vụ");
+                    return;
+                }
+                if (txtTenNV.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtTenNV, "? Tên nhân viên");
+                    return;
+                }
+                if (txtSDT.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtSDT, "? SDT");
+                    return;
+                }
                 if (txtSDT.Text.Length < 10)
                 {
-                    MessageBox.Show("Số điện thoại không đúng");
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtSDT, "Số điện thoại không đúng");
+                    return;
+                }
+                if (txtCMND.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtCMND, "? CMND");
+                    return;
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtDiaChi, "? Địa chỉ");
+                    return;
+                }
+
+                if (txtUserName.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtUserName, "? UserName");
+                    return;
+                }
+                if (cboTrangThai.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(cboTrangThai, "? Trạng Thái");
+                    return;
                 }
                 else
                 {
-                    MaHoa();
+                    int KiemTra = 0;
+                    for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                    {
+                        if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
+                        {
+                            KiemTra = 1;
+                            break;
+                        }
+                    }
                     nv.MaNV = txtMaNV.Text;
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
@@ -340,12 +413,29 @@ namespace DoAnCShap
                     nv.DienThoai = txtSDT.Text;
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
-                    nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                    if (KiemTra == 1)
+                    {
+                        nv.HinhAnh = TenHinh;
+                    }
+                    else
+                    {
+                        nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                        LuuAnh();
+                    }    
                     nv.UserName = txtUserName.Text;
-                    nv.PassWord = txtPassWord.Text;
+                    if (txtPassWord.Text=="")
+                    {
+                        nv.PassWord = PassW;
+                    }
+                    else
+                    {
+                        MaHoa();
+                        nv.PassWord = txtPassWord.Text;
+                    }    
                     nv.TrangThai = cboTrangThai.Text;
                     bus.EditData(nv);
                     MessageBox.Show("Sửa Nhân Viên Thành Công");
+                    Clear();
                     xulychucnang(true, false, false);
                 }
             }
@@ -382,66 +472,36 @@ namespace DoAnCShap
                     for (int i = 0; i < n; i++)
                     {
                         PictureBox p = new PictureBox();
-                        Size s = new Size(180, 180);
+                        Size s = new Size(197, 158);
                         p.Size = s;
+                        p.SizeMode = PictureBoxSizeMode.StretchImage;
                         pictureBox1.Controls.Add(p);
                         Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
                         p.Image = a;
-                        p.SizeMode = PictureBoxSizeMode.StretchImage;
+                        TenHinh = b[i];
+                       
                     }
                 }
                 catch
                 {
 
                 }
-                //this.pictureBox1.ImageLocation = row.Cells[9].Value.ToString();
+                //pictureBox1.Controls.Clear();
+                //Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + d.Rows[vitri]["HinhAnh"].ToString());
+                //pictureBox1.Image = a;
+                //txtHinhAnh.Text = d.Rows[vitri]["HinhAnh"].ToString();
                 txtUserName.Text = d.Rows[vitri]["UserName"].ToString();
+                PassW = d.Rows[vitri]["PassWord"].ToString();
                 cboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
             }
             catch
             {
-                //MessageBox.Show("No Data!");
+               
             }
         }
        
         private void dataGridViewNhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            //DataGridViewRow row = dataGridViewNhanVien.Rows[e.RowIndex];
-            //txtMaNV.Text = row.Cells[0].Value.ToString();
-            //cboChucVu.Text = row.Cells[1].Value.ToString();
-            //txtTenNV.Text = row.Cells[2].Value.ToString();
-            //txtEmail.Text = row.Cells[4].Value.ToString();
-            //dateTirmNgaySinh.Text = row.Cells[5].Value.ToString();
-            //txtSDT.Text = row.Cells[6].Value.ToString();
-            //txtCMND.Text = row.Cells[7].Value.ToString();
-            //txtDiaChi.Text = row.Cells[8].Value.ToString();
-            //string[] b = row.Cells[9].Value.ToString().Split(';');
-            //pictureBox1.Controls.Clear();
-            //try
-            //{
-            //    int n;
-            //    if (b.Length == 1)
-            //        n = b.Length;
-            //    else
-            //        n = b.Length - 1;
-            //    for (int i = 0; i < n; i++)
-            //    {
-            //        PictureBox p = new PictureBox();
-            //        Size s = new Size(180, 180);
-            //        p.Size = s;
-            //        pictureBox1.Controls.Add(p);
-            //        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
-            //        p.Image = a;
-            //        p.SizeMode = PictureBoxSizeMode.StretchImage;
-            //    }
-            //}
-            //catch
-            //{
-
-            //}
-            //this.pictureBox1.ImageLocation = row.Cells[9].Value.ToString();
-            //txtUserName.Text = row.Cells[10].Value.ToString();
-            //cboTrangThai.Text = row.Cells[12].Value.ToString();   
             int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
             HienThiNhanVien_TXT(vitri, bus.GetData(""));
         }
@@ -451,14 +511,6 @@ namespace DoAnCShap
         private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
         {
             xulychucnang(false, true, true);
-            //if(cboChucVu.Text=="Nhân Viên Quản Trị")
-            //{
-            //    btnXoa.Visible = false;
-            //}
-            //else
-            //{
-            //    btnXoa.Visible = true;
-            //}    
             xulytextbox(true,false);
             flag = 2;
         }
@@ -468,16 +520,25 @@ namespace DoAnCShap
            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
-            nv.MaNV = txtMaNV.Text;
-            bus.DeleteData(nv);
-            MessageBox.Show("Xóa Nhân Viên Thành Công");
-            xulychucnang(true, false, false);
-            xulytextbox(false, true);
+                if (txtMaNV.Text == "NV00")
+                {
+                    MessageBox.Show("Không thể xóa");
+                    return;
+                }
+                else
+                {
+                    nv.MaNV = txtMaNV.Text;
+                    bus.DeleteData(nv);
+                    MessageBox.Show("Xóa Nhân Viên Thành Công");
+                    xulychucnang(true, false, false);
+                    Clear();
+                    xulytextbox(false, true);
+                }    
             Display();
             }
             else
             {
-                MessageBox.Show("Hủy Xóa !");
+                
             }
         }
 

@@ -107,14 +107,14 @@ namespace DoAnCShap
             count = f.dataGridViewHD.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <= 1)
+            if (count <= 0)
             {
                 txtMaHD.Text = "HD00";
             }
             else
             {
-                chuoi = Convert.ToString(f.dataGridViewHD.Rows[count - 2].Cells[0].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                chuoi = Convert.ToString(f.dataGridViewHD.Rows[count - 1].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0,2)));
                 if (chuoi2 + 1 < 10)
                     txtMaHD.Text = "HD0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
@@ -214,7 +214,7 @@ namespace DoAnCShap
             labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
-            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
                 {

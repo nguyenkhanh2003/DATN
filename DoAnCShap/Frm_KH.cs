@@ -44,7 +44,8 @@ namespace DoAnCShap
             txtMaKh.ReadOnly = b1;
             txtMaKh.Enabled = b1;
             txtTenkh.Enabled = b1;
-            cboGioiTinh.Enabled = b1;
+            radioButtonNam.Enabled = b1;
+            radioButtonNu.Enabled = b1;
             txtSdt.Enabled = b1;
             //txtCMND.Enabled = b1;
             txtDiaCh.Enabled = b1;
@@ -65,8 +66,8 @@ namespace DoAnCShap
             txtDiaCh.Clear();
             txtDiaCh.Clear();
             txtSdt.Clear();
-            cboGioiTinh.Text = "";
-            cboTrangThai.Text = "";
+
+            cboTrangThai.ResetText();
         }
         public void PhatSinhMa()
         {
@@ -74,13 +75,13 @@ namespace DoAnCShap
             count = dataGridViewKH.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <= 1)
+            if (count <=0)
             {
                 txtMaKh.Text = "KH00";
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 2].Cells[1].Value);
+                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 1].Cells[1].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
@@ -120,45 +121,48 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTenkh.Text == "")
-            {
-                MessageBox.Show("Chưa nhập tên khách hàng");
-                return;
-            }
-            if (cboGioiTinh.Text == "")
-            {
-                MessageBox.Show("Chưa chọn giới tính");
-                return;
-            }
+           
 
-            if (txtSdt.Text == "")
-            {
-                MessageBox.Show("Chưa nhập số điện thoại");
-                return;
-            }
-            if (txtDiaCh.Text == "")
-            {
-                MessageBox.Show("Chưa nhập địa chỉ");
-                return;
-            }
-            if (cboGioiTinh.Text == "")
-            {
-                MessageBox.Show("Chưa chọn trạng thái");
-                return;
-            }
             if (flag == 1)
             {
                 try
                 {
+                    if (txtTenkh.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtTenkh, "? Tên Khách hàng");
+                        return;
+                    }
+                    if (txtSdt.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtSdt, "? Số điện thoại");
+                        return;
+                    }
                     if (txtSdt.Text.Length < 10)
                     {
-                        MessageBox.Show("Số điện thoại không đúng");
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtSdt, "Số điện thoại không đúng");
+                        return;
+                    }
+                    if (txtDiaCh.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDiaCh, "? Địa chỉ");
+                        return;
                     }
                     else
                     {
                         kh.MaKH = txtMaKh.Text;
                         kh.TenKH = txtTenkh.Text;
-                        kh.GioiTinh = cboGioiTinh.Text;
+                        if(radioButtonNam.Checked==true)
+                        {
+                            kh.GioiTinh = radioButtonNam.Text;
+                        }    
+                        else
+                        {
+                            kh.GioiTinh = radioButtonNu.Text;
+                        }    
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
                         kh.TrangThai = cboTrangThai.Text;
@@ -176,16 +180,43 @@ namespace DoAnCShap
             }
             if (flag == 2)
             {
+                if (txtTenkh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenkh, "? Tên Khách hàng");
+                    return;
+                }
+                if (txtSdt.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSdt, "? Số điện thoại");
+                    return;
+                }
                 if (txtSdt.Text.Length < 10)
                 {
-                    MessageBox.Show("Số điện thoại không đúng");
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSdt, "Số điện thoại không đúng");
+                    return;
+                }
+                if (txtDiaCh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDiaCh, "? Địa chỉ");
+                    return;
                 }
                 else
                 {
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
-                    kh.GioiTinh = cboGioiTinh.Text;
-
+                    if(radioButtonNam.Checked==true)
+                    {
+                        kh.GioiTinh = radioButtonNam.Text;
+                    }
+                    else
+                    {
+                        kh.GioiTinh = radioButtonNu.Text;
+                    }    
+                   
                     kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = cboTrangThai.Text;
@@ -204,12 +235,17 @@ namespace DoAnCShap
             txtMaKh.Enabled = false;
             if (e.RowIndex == -1) return;
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
-            txtMaKh.Text = row.Cells[0].Value.ToString();
-            txtTenkh.Text = row.Cells[1].Value.ToString();
-            cboGioiTinh.Text = row.Cells[2].Value.ToString();
-            txtSdt.Text = row.Cells[3].Value.ToString();
-            txtDiaCh.Text = row.Cells[4].Value.ToString();
-            cboTrangThai.Text = row.Cells[5].Value.ToString();
+            txtMaKh.Text = row.Cells[1].Value.ToString();
+            txtTenkh.Text = row.Cells[2].Value.ToString();
+            //cboGioiTinh.Text = row.Cells[2].Value.ToString();
+            string t = row.Cells[3].Value.ToString();
+            if (t == "Nam")
+                radioButtonNam.Checked = true;
+            else
+                radioButtonNu.Checked = true;
+            txtSdt.Text = row.Cells[4].Value.ToString();
+            txtDiaCh.Text = row.Cells[5].Value.ToString();
+            cboTrangThai.Text = row.Cells[6].Value.ToString();
             xulytextbox(false, true);
         }
 

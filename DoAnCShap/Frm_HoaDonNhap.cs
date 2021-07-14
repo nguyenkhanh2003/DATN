@@ -81,14 +81,14 @@ namespace DoAnCShap
             count = dataGridViewHDN.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <= 1)
+            if (count <= 0)
             {
                 txtMaHDN.Text = "PN00";
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewHDN.Rows[count - 2].Cells[0].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                chuoi = Convert.ToString(dataGridViewHDN.Rows[count - 1].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0,3)));
                 if (chuoi2 + 1 < 10)
                     txtMaHDN.Text = "PN0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
@@ -394,6 +394,14 @@ namespace DoAnCShap
         private void dataGridViewHDN_DoubleClick(object sender, EventArgs e)
         {
             XuLyChucNang(false, true, true,false);
+        }
+
+        private void dataGridViewHDN_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewHDN.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
         }
     }
 }

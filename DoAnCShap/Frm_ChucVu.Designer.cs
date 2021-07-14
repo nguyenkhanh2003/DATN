@@ -119,6 +119,7 @@ namespace DoAnCShap
             // 
             // dataGridViewCV
             // 
+            this.dataGridViewCV.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dataGridViewCV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
