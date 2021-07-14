@@ -339,6 +339,12 @@ namespace DoAnCShap
             openChildForm(new Frm_ThongTinNhanVien());
         }
 
+        private void btnSetting_Click_1(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Setting";
+            openChildForm(new Frm_Setting());
+        }
+
         // private void dgvUserDetails_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         // {
         //     using (SolidBrush b = new SolidBrush(dgvUserDetails.RowHeadersDefaultCellStyle.ForeColor))

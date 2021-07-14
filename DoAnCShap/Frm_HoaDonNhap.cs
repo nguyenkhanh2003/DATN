@@ -21,6 +21,7 @@ namespace DoAnCShap
         NhapKho_BUS bus = new NhapKho_BUS();
         HoaDonNhapHang hdn = new HoaDonNhapHang();
         CT_HoaDonNhapHang cthdn = new CT_HoaDonNhapHang();
+        LinhKien_BUS lk = new LinhKien_BUS();
         int flag = 0;
         public void HienThiSanPham()
         {
@@ -51,6 +52,12 @@ namespace DoAnCShap
         public void HienThiCTHD()
         {
             dataGridViewCTHDNH.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
+        }
+        public void HienThiLK(string condition)
+        {
+            comboBoxTenLK.DataSource = lk.GetSearch("Select MaLK,TenLK From LinhKien Where TenLK Like N'%" + condition + "%'");
+            comboBoxTenLK.DisplayMember = "TenLK";
+            comboBoxTenLK.ValueMember = "MaLK";
         }
         public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3,Boolean b4)
         {
@@ -135,7 +142,7 @@ namespace DoAnCShap
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
 
-            for (int i = 0; i < dataGridViewCTHDNH.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridViewCTHDNH.Rows.Count - 0; i++)
             {
                 if (comboBoxTenLK.Text == dataGridViewCTHDNH.Rows[i].Cells["TenLK"].Value.ToString())
                 {
@@ -402,6 +409,12 @@ namespace DoAnCShap
             {
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string condition = txtSearch.Text;
+            HienThiLK(condition);
         }
     }
 }

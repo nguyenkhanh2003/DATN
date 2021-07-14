@@ -45,9 +45,6 @@ namespace DoAnCShap
             this.txtMaLoai = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewKH = new System.Windows.Forms.DataGridView();
-            this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -55,6 +52,10 @@ namespace DoAnCShap
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
@@ -191,6 +192,7 @@ namespace DoAnCShap
             this.dataGridViewKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
             this.MaLLK,
             this.TenLLK,
             this.TrangThai});
@@ -218,27 +220,8 @@ namespace DoAnCShap
             this.dataGridViewKH.Size = new System.Drawing.Size(736, 202);
             this.dataGridViewKH.TabIndex = 4;
             this.dataGridViewKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKH_CellClick);
+            this.dataGridViewKH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewKH_RowPostPaint);
             this.dataGridViewKH.DoubleClick += new System.EventHandler(this.dataGridViewKH_DoubleClick);
-            // 
-            // MaLLK
-            // 
-            this.MaLLK.DataPropertyName = "MaLLK";
-            this.MaLLK.HeaderText = "Mã Loại";
-            this.MaLLK.MinimumWidth = 6;
-            this.MaLLK.Name = "MaLLK";
-            // 
-            // TenLLK
-            // 
-            this.TenLLK.DataPropertyName = "TenLLK";
-            this.TenLLK.HeaderText = "Tên Loại";
-            this.TenLLK.MinimumWidth = 6;
-            this.TenLLK.Name = "TenLLK";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
             // 
             // btnClose
             // 
@@ -336,6 +319,30 @@ namespace DoAnCShap
             this.panel3.Size = new System.Drawing.Size(1148, 59);
             this.panel3.TabIndex = 30;
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaLLK
+            // 
+            this.MaLLK.DataPropertyName = "MaLLK";
+            this.MaLLK.HeaderText = "Mã Loại";
+            this.MaLLK.Name = "MaLLK";
+            // 
+            // TenLLK
+            // 
+            this.TenLLK.DataPropertyName = "TenLLK";
+            this.TenLLK.HeaderText = "Tên Loại";
+            this.TenLLK.MinimumWidth = 6;
+            this.TenLLK.Name = "TenLLK";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            // 
             // Frm_LLinhKien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,10 +384,11 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dataGridViewKH;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
     }
 }

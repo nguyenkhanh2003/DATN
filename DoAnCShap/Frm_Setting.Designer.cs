@@ -65,6 +65,7 @@ namespace DoAnCShap
             this.Controls.Add(this.checkBoxDo);
             this.Name = "Frm_Setting";
             this.Text = "Frm_Setting";
+            this.Load += new System.EventHandler(this.Frm_Setting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
