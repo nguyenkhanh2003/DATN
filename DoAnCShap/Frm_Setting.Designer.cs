@@ -42,7 +42,7 @@ namespace DoAnCShap
             this.checkBoxDo.TabIndex = 0;
             this.checkBoxDo.Text = "Đỏ";
             this.checkBoxDo.UseVisualStyleBackColor = true;
-            this.checkBoxDo.CheckedChanged += new System.EventHandler(this.checkBoxDo_CheckedChanged);
+//            this.checkBoxDo.CheckedChanged += new System.EventHandler(this.checkBoxDo_CheckedChanged);
             // 
             // label1
             // 

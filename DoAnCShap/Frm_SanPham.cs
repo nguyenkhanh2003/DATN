@@ -95,7 +95,7 @@ namespace DoAnCShap
             txtTinhTrang.Clear();
             cboTrangThai.ResetText();
             txtMaLinhKien.Clear();
-            //comboBoxBaoHanh.Controls.Clear();
+            comboBoxBaoHanh.ResetText();
             txtXuatXu.Clear();
             errorMes.Clear();
         }

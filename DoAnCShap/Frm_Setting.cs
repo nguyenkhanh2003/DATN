@@ -16,23 +16,20 @@ namespace DoAnCShap
         {
             InitializeComponent();
         }
-        Form1 frm = new Form1();
+        Form1 frm;
 
-        private void checkBoxDo_CheckedChanged(object sender, EventArgs e)
-        {
-            LoadMau();
-        }
+       
         public void LoadMau()
         {
             if(checkBoxDo.Checked==true)
             {
-                frm.panelTop.BackColor = Color.Red;
+                frm.UpdateFormColor();
             }    
         }    
 
         private void Frm_Setting_Load(object sender, EventArgs e)
         {
-
+            LoadMau();
         }
     }
 }

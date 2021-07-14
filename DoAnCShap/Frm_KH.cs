@@ -66,7 +66,7 @@ namespace DoAnCShap
             txtDiaCh.Clear();
             txtDiaCh.Clear();
             txtSdt.Clear();
-
+            errorMes.Clear();
             cboTrangThai.ResetText();
         }
         public void PhatSinhMa()
@@ -121,7 +121,6 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-           
 
             if (flag == 1)
             {
@@ -153,6 +152,16 @@ namespace DoAnCShap
                     }
                     else
                     {
+                       
+                        for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
+                        {
+                            if (txtSdt.Text == dataGridViewKH.Rows[i].Cells["DienThoai"].Value.ToString())
+                            {
+                                errorMes.BlinkRate = 100;
+                                errorMes.SetError(txtSdt, "Đã tồn tại");
+                                return;
+                            }
+                        }
                         kh.MaKH = txtMaKh.Text;
                         kh.TenKH = txtTenkh.Text;
                         if(radioButtonNam.Checked==true)
@@ -206,6 +215,15 @@ namespace DoAnCShap
                 }
                 else
                 {
+                    for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
+                    {
+                        if (txtSdt.Text == dataGridViewKH.Rows[i].Cells["DienThoai"].Value.ToString())
+                        {
+                            errorMes.BlinkRate = 100;
+                            errorMes.SetError(txtSdt, "Đã tồn tại");
+                            return;
+                        }
+                    }
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
                     if(radioButtonNam.Checked==true)
