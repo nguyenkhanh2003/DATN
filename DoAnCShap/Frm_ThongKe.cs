@@ -30,7 +30,7 @@ namespace DoAnCShap
 
         public void HienThiDoanhThuTheoNam(string condition)
         {
-            //dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu' From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
+            dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu' From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
         }
 
         private void UpdateFont()
@@ -57,6 +57,11 @@ namespace DoAnCShap
         {
             dataGridView1.DataSource=bus.SPBanChayTheoThang("Select Top 3 lk.TenLK AS'Tên Linh Kiện', SUM(ct.SoLuong) as SoLuong from LinhKien lk, CT_HoaDonBanHang ct, HoaDonBanHang hd where Month(hd.NgayLapHDBH) ="+condition+" and lk.MaLK = CT.MaLK and hd.MaHDBH = ct.MaHDBH group by lk.TenLK order by SoLuong desc");
         }
+
+        public void Top3SanPhamBanTrongNam(string condition)
+        {
+            dataGridView1.DataSource = bus.Top3SanPhamBanTrongNam("Select Top 3 lk.TenLK AS'Tên Linh Kiện', SUM(ct.SoLuong) as SoLuong from LinhKien lk, CT_HoaDonBanHang ct, HoaDonBanHang hd where Year(hd.NgayLapHDBH) =" + condition + " and lk.MaLK = CT.MaLK and hd.MaHDBH = ct.MaHDBH group by lk.TenLK order by SoLuong desc");
+        }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
             fillChart();
@@ -71,9 +76,21 @@ namespace DoAnCShap
                 string condition = comboBoxThang.Text;
                 DoanhThuTheoThang(condition);
             }
-
-            string condition1 = comboBoxTheo.Text;
-            SPBanChayTheoThang(condition1);
+            if (radioBanNhieuMonth.Checked == true)
+            {
+                string condition1 = comboBoxThang.Text;
+                SPBanChayTheoThang(condition1);
+            }
+            if (radioDoanhThuYea.Checked == true)
+            {
+                string condition2 = comboBoxNam.Text;
+                HienThiDoanhThuTheoNam(condition2);
+            }
+            if(radioBanNhieuYear.Checked==true)
+            {
+                string condition2 = comboBoxNam.Text;
+                Top3SanPhamBanTrongNam(condition2);
+            }    
         }
 
         private void fillChart()
@@ -132,6 +149,11 @@ namespace DoAnCShap
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxThang_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -36,5 +36,10 @@ namespace BUS
        {
            return bus.SPBanChayTheoThang(condition);
        }
+
+       public DataTable Top3SanPhamBanTrongNam(string condition)
+       {
+           return bus.Top3SanPhamBanTrongNam(condition);
+       }
     }
 }

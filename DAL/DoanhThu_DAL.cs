@@ -36,5 +36,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable(""+condiiton);
         }
+
+        public DataTable Top3SanPhamBanTrongNam(string condiiton)
+        {
+            return KetNoi.GetDataTable(""+condiiton);
+        }
     }
 }
