@@ -32,6 +32,9 @@ namespace DAL
              return KetNoi.GetDataTable(""+condiiton);
         }
 
-        
+        public DataTable SPBanChayTheoThang(string condiiton)
+        {
+            return KetNoi.GetDataTable(""+condiiton);
+        }
     }
 }

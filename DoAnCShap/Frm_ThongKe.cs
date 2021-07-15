@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 using System.Data.SqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DoAnCShap
 {
@@ -21,10 +22,10 @@ namespace DoAnCShap
         }
 
         DoanhThu_BUS bus = new DoanhThu_BUS();
-        
+
         public void HienThiDoanhThu()
         {
-               // = bus.DoanhThuTatCa("");
+            // = bus.DoanhThuTatCa("");
         }
 
         public void HienThiDoanhThuTheoNam(string condition)
@@ -32,78 +33,107 @@ namespace DoAnCShap
             //dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Nam', Sum(TongTien) as 'Doanh thu' From HoaDonBanHang Where YEAR(NgayLapHDBH) ="+condition+" Group by Year(NgayLapHDBH)");
         }
 
-        //public void HienThiDoanhThuTheoNgay(int condition,int condition1,int condition3,int condition4)
-        //{
-        //    dataGridView1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where  DAY(NgayLapHDBH) BETWEEN "+condition+" and "+condition1+" and MONTH(NgaLapHDBH) BETWEEN "+condition3+" and "+condition4+" ");
-        //}
+        private void UpdateFont()
+        {
+            //Change cell font
+            foreach (DataGridViewColumn c in dataGridView1.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 16.5F, GraphicsUnit.Pixel);
+            }
+        }
 
         public void HienThiDoanhThuTheoNgay(string condition, string condition1)
         {
-            chart1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where(NgayLapHDBH) BETWEEN '"+condition+"' and '"+condition1+"' ");
-           
-            
+            chart1.DataSource = bus.DoanhThuTheoNgay("Select SUM(TongTien) AS 'Doanh Thu' From HoaDonBanHang Where(NgayLapHDBH) BETWEEN '" + condition + "' and '" + condition1 + "' ");
+
+        }
+
+        public void DoanhThuTheoThang(string condition)
+        {
+            dataGridView1.DataSource = bus.DoanhThuTheoThang("SELECT  sum(hd.TongTien) AS'Donh Thu' FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" +condition+ " ");
+        }
+
+        public void SPBanChayTheoThang(string condition)
+        {
+            dataGridView1.DataSource=bus.SPBanChayTheoThang("Select Top 3 lk.TenLK AS'Tên Linh Kiện', SUM(ct.SoLuong) as SoLuong from LinhKien lk, CT_HoaDonBanHang ct, HoaDonBanHang hd where Month(hd.NgayLapHDBH) ="+condition+" and lk.MaLK = CT.MaLK and hd.MaHDBH = ct.MaHDBH group by lk.TenLK order by SoLuong desc");
         }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
             fillChart();
+            UpdateFont();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btnXemDoanhThu_Click(object sender, EventArgs e)
         {
-            if (radioButtonTatCa.Checked == true)
+            if(radioTheoThang.Checked==true)
             {
-                HienThiDoanhThu();
+                string condition = comboBoxThang.Text;
+                DoanhThuTheoThang(condition);
             }
-            if (radioButtonTheoNgay.Checked==true)
-            {
-                string condition = dateTimePicker1.Text;
-                string condition1 = dateTimePicker2.Text;
-                HienThiDoanhThuTheoNgay(condition, condition1);
-            }    
-            else
-            {
-                string condition = comboBoxNam.Text;
-                HienThiDoanhThuTheoNam(condition);
-            }    
+
+            string condition1 = comboBoxTheo.Text;
+            SPBanChayTheoThang(condition1);
         }
 
         private void fillChart()
         {
-            ////AddXY value in chart1 in series named as Salary  
-            //chart1.Series["Salary"].Points.AddXY("Hổm Nay","1000");
-            //chart1.Series["Salary"].Points.AddXY("Tháng Này", "800");
-            //chart1.Series["Salary"].Points.AddXY("Năm Nay", "8000");
-            //chart1.DataSource = bus.DoanhThuTatCa("");
-            //chart1.ChartAreas["ChartArea1"].AxisX.Title = "DoanhThu";
-            ////chart1.Series["Salary"].XValueMember = "DoanhThu";
-            //chart1.Titles.Add("Doanh Thu Hóa Đơn Bán");
+            float x1 = 34;
+            float x2 = 24;
+            float x3 = 31;
+            float x4 = 20;
+            float x5 = 14;
+            float x6 = 10;
+            float x7 = 36;
+            float x8 = 9;
+            float x9 = 18;
+            float x10 = 28;
+            float x11 = 44;
+            float x12 = 48;
 
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "select SoLuong from CT_HoaDonBanHang Where MaHDBH=N'HD00' ";
-            da.SelectCommand = cmd;
-            DataSet ds = new DataSet();
+            var chart = chart1.ChartAreas[0];
+            chart.AxisX.IntervalType = DateTimeIntervalType.Number;
 
-            conn.Open();
-            da.Fill(ds);
-            this.chart1.DataSource = ds.Tables[0];
+            chart.AxisX.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.IsEndLabelVisible = true;
 
-            //Mapping a field with x-value of chart
-            //this.chart1.Series[0].XValueMember = "Soluong";
+            chart.AxisX.Minimum = 1;
+            chart.AxisX.Maximum = 12;
+            chart.AxisY.Minimum = 0;
+            chart.AxisY.Maximum = 50;
+            chart.AxisX.Interval = 1;
+            chart.AxisY.Interval = 5;
 
-            //Mapping a field with y-value of Chart
-            this.chart1.Series[0].YValueMembers = "SoLuong";
+            chart1.Series.Add("Doanh Thu");
+            chart1.Series["Doanh Thu"].ChartType = SeriesChartType.Line;
+            chart1.Series[0].IsVisibleInLegend = false;
 
-            //Bind the DataTable with Chart
-            this.chart1.DataBind();
+            chart1.Series["Doanh Thu"].Points.AddXY(1, x1);
+            chart1.Series["Doanh Thu"].Points.AddXY(2, x2);
+            chart1.Series["Doanh Thu"].Points.AddXY(3, x3);
+            chart1.Series["Doanh Thu"].Points.AddXY(4, x4);
+            chart1.Series["Doanh Thu"].Points.AddXY(5, x5);
+            chart1.Series["Doanh Thu"].Points.AddXY(6, x6);
+            chart1.Series["Doanh Thu"].Points.AddXY(7, x7);
+            chart1.Series["Doanh Thu"].Points.AddXY(8, x8);
+            chart1.Series["Doanh Thu"].Points.AddXY(9, x9);
+            chart1.Series["Doanh Thu"].Points.AddXY(10, x10);
+            chart1.Series["Doanh Thu"].Points.AddXY(11, x11);
+            chart1.Series["Doanh Thu"].Points.AddXY(12, x12);
+        }
 
-            conn.Close();
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridView1.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

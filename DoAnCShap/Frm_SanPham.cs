@@ -27,7 +27,7 @@ namespace DoAnCShap
         LoaiLinhKien_BUS llk = new LoaiLinhKien_BUS();
         int flag = 0;
         string TenHinh = "";
-        public String DuongDanFolderHinh= @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ImageLK";
+        public String DuongDanFolderHinh = @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ImageLK";
         public void DisPlay()
         {
             dataGridViewLK.DataSource = bus.GetData("");
@@ -35,7 +35,7 @@ namespace DoAnCShap
 
         public void HienThiTimKiem(string condition)
         {
-            dataGridViewLK.DataSource = bus.GetSearch("select * from LinhKien Where TenLK Like N'%"+condition+"%'");
+            dataGridViewLK.DataSource = bus.GetSearch("select * from LinhKien Where TenLK Like N'%" + condition + "%'");
         }
         public void HienThiNSX()
         {
@@ -64,7 +64,7 @@ namespace DoAnCShap
             btnHuy.Enabled = b2;
         }
 
-        public void XuLyTextBox(Boolean b1,Boolean b2)
+        public void XuLyTextBox(Boolean b1, Boolean b2)
         {
             txtMaLinhKien.Enabled = b1;
             txtTenLinhKien.Enabled = b1;
@@ -98,11 +98,12 @@ namespace DoAnCShap
             comboBoxBaoHanh.ResetText();
             txtXuatXu.Clear();
             errorMes.Clear();
+            pictureBox1.Image = null;
         }
         public void PhatSinhMa()
         {
             int count = 0;
-            count =dataGridViewLK.Rows.Count;
+            count = dataGridViewLK.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
             if (count <= 0)
@@ -168,20 +169,20 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-           
 
-            if (flag==1)
+
+            if (flag == 1)
             {
                 try
                 {
-                    if (cboMaLoai.Text=="")
+                    if (cboMaLoai.Text == "")
                     {
                         errorMes.BlinkRate = 100;
                         errorMes.SetError(cboMaLoai, "? Chưa chọn mã loại");
                         return;
                     }
 
-                    if (comboBoxNCC.Text== "")
+                    if (comboBoxNCC.Text == "")
                     {
                         errorMes.BlinkRate = 100;
                         errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
@@ -248,16 +249,23 @@ namespace DoAnCShap
                         lk.DonViTinh = txtDonViTinh.Text;
                         lk.DonGia = int.Parse(txtDonGia.Text);
                         lk.SoLuong = int.Parse(txtSoLuong.Text);
-                        if(txtKhuyenMai.Text=="")
+                        if (txtKhuyenMai.Text == "")
                         {
                             lk.KhuyenMai = 0;
                         }
                         else
                         {
                             lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
-                        }    
-                        lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
-                        LuuAnh();
+                        }
+                        if (pictureBox1.Image == null)
+                        {
+                            lk.HinhAnh = "Không";
+                        }
+                        else
+                        {
+                            lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                            LuuAnh();
+                        }
                         lk.TrangThai = cboTrangThai.Text;
                         bus.AddData(lk);
                         MessageBox.Show("Thành Công");
@@ -270,9 +278,9 @@ namespace DoAnCShap
                 {
                     MessageBox.Show("Không thể thêm được");
                 }
-               
+
             }
-            if(flag==2)
+            if (flag == 2)
             {
                 if (cboMaLoai.SelectedValue.ToString() == "")
                 {
@@ -293,18 +301,18 @@ namespace DoAnCShap
                     errorMes.SetError(txtTenLinhKien, "Tên linh kiện không được để trống");
                     return;
                 }
-                if(comboBoxBaoHanh.Text=="")
+                if (comboBoxBaoHanh.Text == "")
                 {
                     errorMes.BlinkRate = 100;
                     errorMes.SetError(comboBoxBaoHanh, "Chưa chọn bảo hành");
                     return;
                 }
-                if(txtXuatXu.Text=="")
+                if (txtXuatXu.Text == "")
                 {
                     errorMes.BlinkRate = 10; ;
                     errorMes.SetError(txtXuatXu, "? Xuất Xứ");
                     return;
-                }    
+                }
                 if (txtTinhTrang.Text == "")
                 {
                     errorMes.BlinkRate = 100;
@@ -358,7 +366,7 @@ namespace DoAnCShap
                     lk.DonGia = int.Parse(txtDonGia.Text);
                     lk.SoLuong = int.Parse(txtSoLuong.Text);
                     lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
-                    if(KiemTra==1)
+                    if (KiemTra == 1)
                     {
                         lk.HinhAnh = TenHinh;
                     }
@@ -366,7 +374,7 @@ namespace DoAnCShap
                     {
                         lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
                         LuuAnh();
-                    }    
+                    }
                     lk.TrangThai = cboTrangThai.Text;
                     bus.EditData(lk);
                     MessageBox.Show("Thành Công");
@@ -374,7 +382,7 @@ namespace DoAnCShap
                     XuLyTextBox(false, true);
                     Clear();
                 }
-            }    
+            }
             DisPlay();
         }
         public void HienThiLK_TXT(int vitri, DataTable d)
@@ -404,14 +412,14 @@ namespace DoAnCShap
                     for (int i = 0; i < n; i++)
                     {
                         PictureBox p = new PictureBox();
-                        Size s = new Size(197,158);
+                        Size s = new Size(197, 158);
                         p.Size = s;
                         p.SizeMode = PictureBoxSizeMode.StretchImage;
                         pictureBox1.Controls.Add(p);
                         Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
                         p.Image = a;
                         TenHinh = b[i];
-                       
+
                     }
                 }
                 catch
@@ -485,7 +493,7 @@ namespace DoAnCShap
         private void dataGridViewLK_DoubleClick_1(object sender, EventArgs e)
         {
             xulychucnang(false, true, true);
-            XuLyTextBox(true,false);
+            XuLyTextBox(true, false);
             flag = 2;
         }
 

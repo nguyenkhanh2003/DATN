@@ -279,7 +279,7 @@ namespace DoAnCShap
                 string[] b = MaLK.Split(';');
                 int vitri = 0;
                 int SLConLai = 0;
-                for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
+                for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
                 {
                     string malk = b[i];
                     int soluong = int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString());

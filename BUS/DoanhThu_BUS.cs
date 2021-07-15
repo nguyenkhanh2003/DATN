@@ -31,5 +31,10 @@ namespace BUS
         {
             return  bus.DoanhThuTheoNgay(condition);
         }
+
+        public DataTable SPBanChayTheoThang(string condition)
+       {
+           return bus.SPBanChayTheoThang(condition);
+       }
     }
 }

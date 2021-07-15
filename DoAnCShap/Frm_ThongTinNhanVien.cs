@@ -57,35 +57,28 @@ namespace DoAnCShap
         String TenHinh = "";
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
+            pictureBox1.Controls.Clear();
             OpenFileDialog opFile = new OpenFileDialog();
             opFile.Title = "Select a Image";
-            opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
-
-            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Image\"; // <---
-            if (Directory.Exists(appPath) == false)                                              // <---
-            {                                                                                    // <---
-                Directory.CreateDirectory(appPath);                                              // <---
-            }                                                                                    // <---
-
+            opFile.Filter = "Files|*.jpg;*.jpeg;*.png;....";
             if (opFile.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    string iName = opFile.SafeFileName;   // <---
-                    string filepath = opFile.FileName;    // <---
-                    File.Copy(filepath, appPath + iName); // <---
-                    pictureBox1.Image = new Bitmap(opFile.OpenFile());
-                    TenHinh = iName;
-                }
-                catch (Exception exp)
-                {
-                    //MessageBox.Show("Ảnh đã tồn tại !" + exp.Message);
-                    MessageBox.Show("Ảnh đã tồn tại !");
-                }
+                TenHinh = opFile.FileName;
+                pictureBox1.Image = new Bitmap(opFile.FileName);
+                pictureBox1.ImageLocation = opFile.FileName;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            else
+        }
+
+        public void LuuAnh()
+        {
+            try
             {
-                opFile.Dispose();
+                File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ảnh đã tồn tại !");
             }
         }
 
@@ -105,65 +98,175 @@ namespace DoAnCShap
 
         private void dataGridViewNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridViewNhanVien.Rows[e.RowIndex];
-            txtMaNV.Text = row.Cells[0].Value.ToString();
-            cboChucVu.Text = row.Cells[1].Value.ToString();
-            txtTenNV.Text = row.Cells[2].Value.ToString();
-            /*cboGioiTinh.Text = row.Cells[3].Value.ToString()*/
-            ;
-            txtEmail.Text = row.Cells[4].Value.ToString();
-            dateTirmNgaySinh.Text = row.Cells[5].Value.ToString();
-            txtSDT.Text = row.Cells[6].Value.ToString();
-            txtCMND.Text = row.Cells[7].Value.ToString();
-            txtDiaChi.Text = row.Cells[8].Value.ToString();
-            string[] b = row.Cells[9].Value.ToString().Split(';');
-            pictureBox1.Controls.Clear();
-            try
-            {
-                int n;
-                if (b.Length == 1)
-                    n = b.Length;
-                else
-                    n = b.Length - 1;
-                for (int i = 0; i < n; i++)
-                {
-                    PictureBox p = new PictureBox();
-                    Size s = new Size(180, 180);
-                    p.Size = s;
-                    pictureBox1.Controls.Add(p);
-                    Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
-                    p.Image = a;
-                    p.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-            }
-            catch
-            {
-                //MessageBox.Show("Không có hình");
-                //return;
-            }
-            //txtHinhNhanVien.Text = row.Cells[9].Value.ToString();
-            txtUserName.Text = row.Cells[10].Value.ToString();
-            //txtPassWord.Text = row.Cells[11].Value.ToString();
-            cboTrangThai.Text = row.Cells[12].Value.ToString();
+            int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
+            HienThiNhanVien_TXT(vitri, bus.ThongTinNhanVien("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and UserName=N'" +Login.TenTaiKhoan+ "'"));
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            MaHoa();
-            nv.MaNV = txtMaNV.Text;
-            nv.MaCV = cboChucVu.SelectedValue.ToString();
-            nv.TenNV = txtTenNV.Text;
-            nv.Email = txtEmail.Text;
-            nv.NgaySinh = dateTirmNgaySinh.Value.Date;
-            nv.DienThoai = txtSDT.Text;
-            nv.CMND = txtCMND.Text;
-            nv.DiaChi = txtDiaChi.Text;
-            nv.HinhAnh = TenHinh;
-            nv.UserName = txtUserName.Text;
-            nv.PassWord = txtPassWord.Text;
-            nv.TrangThai = cboTrangThai.Text;
-            bus.EditData(nv);
-            MessageBox.Show("Thành Công");
+            if (cboChucVu.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(cboChucVu, "Chưa chọn chức vụ");
+                return;
+            }
+            if (txtTenNV.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTenNV, "? Tên nhân viên");
+                return;
+            }
+            if (txtSDT.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSDT, "? SDT");
+                return;
+            }
+            if (txtSDT.Text.Length < 10)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSDT, "Số điện thoại không đúng");
+                return;
+            }
+            if (txtCMND.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtCMND, "? CMND");
+                return;
+            }
+            if (txtDiaChi.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtDiaChi, "? Địa chỉ");
+                return;
+            }
+
+            if (txtUserName.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtUserName, "? UserName");
+                return;
+            }
+            if (cboTrangThai.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(cboTrangThai, "? Trạng Thái");
+                return;
+            }
+            else
+            {
+                int KiemTra = 0;
+                for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                {
+                    if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
+                    {
+                        KiemTra = 1;
+                        break;
+                    }
+                }
+                nv.MaNV = txtMaNV.Text;
+                nv.MaCV = cboChucVu.SelectedValue.ToString();
+                nv.TenNV = txtTenNV.Text;
+                if (radioButtonNam.Checked == true)
+                {
+                    nv.GioiTinh = radioButtonNam.Text;
+                }
+                else
+                {
+                    nv.GioiTinh = radioButtonNu.Text;
+                }
+                nv.Email = txtEmail.Text;
+                nv.NgaySinh = dateTirmNgaySinh.Value.Date;
+                nv.DienThoai = txtSDT.Text;
+                nv.CMND = txtCMND.Text;
+                nv.DiaChi = txtDiaChi.Text;
+                if (KiemTra == 1)
+                {
+                    nv.HinhAnh = TenHinh;
+                }
+                else
+                {
+                    nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                    LuuAnh();
+                }
+                nv.UserName = txtUserName.Text;
+                if (txtPassWord.Text == "")
+                {
+                    nv.PassWord = PassW;
+                }
+                else
+                {
+                    MaHoa();
+                    nv.PassWord = txtPassWord.Text;
+                }
+                nv.TrangThai = cboTrangThai.Text;
+                bus.EditData(nv);
+                MessageBox.Show("Sửa Nhân Viên Thành Công");
+            }
+            Frm_ThongTinNhanVien_Load(e,e);
+        }
+    
+
+        private void dataGridViewNhanVien_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            //using (SolidBrush b = new SolidBrush(dataGridViewNhanVien.RowHeadersDefaultCellStyle.ForeColor))
+            //{
+            //    e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            //}
+        }
+        string PassW = "";
+        public void HienThiNhanVien_TXT(int vitri, DataTable d)
+        {
+            try
+            {
+                txtMaNV.Text = d.Rows[vitri]["MaNV"].ToString();
+                cboChucVu.Text = d.Rows[vitri]["TenCV"].ToString();
+                txtTenNV.Text = d.Rows[vitri]["TenNV"].ToString();
+                txtEmail.Text = d.Rows[vitri]["Email"].ToString();
+                dateTirmNgaySinh.Text = d.Rows[vitri]["NgaySinh"].ToString();
+                txtSDT.Text = d.Rows[vitri]["DienThoai"].ToString();
+                txtCMND.Text = d.Rows[vitri]["CMND"].ToString();
+                txtDiaChi.Text = d.Rows[vitri]["DiaChi"].ToString();
+                string[] b = d.Rows[vitri]["HinhAnh"].ToString().Split(';');
+                pictureBox1.Controls.Clear();
+                try
+                {
+                    int n;
+                    if (b.Length == 1)
+                        n = b.Length;
+                    else
+                        n = b.Length - 1;
+                    for (int i = 0; i < n; i++)
+                    {
+                        PictureBox p = new PictureBox();
+                        Size s = new Size(197, 158);
+                        p.Size = s;
+                        p.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictureBox1.Controls.Add(p);
+                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        p.Image = a;
+                        TenHinh = b[i];
+
+                    }
+                }
+                catch
+                {
+
+                }
+                txtUserName.Text = d.Rows[vitri]["UserName"].ToString();
+                PassW = d.Rows[vitri]["PassWord"].ToString();
+                cboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
+                string t = d.Rows[vitri]["GioiTinh"].ToString();
+                if (t == "Nam")
+                    radioButtonNam.Checked = true;
+                else
+                    radioButtonNu.Checked = true;
+                        
+            }
+            catch
+            {
+
+            }
         }
     }
 }
