@@ -413,7 +413,7 @@ namespace DoAnCShap
         {
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
-            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 CT_HoaDon cT_HoaDon = new CT_HoaDon
                 {
@@ -421,7 +421,13 @@ namespace DoAnCShap
                     SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString()),
                     DonGia=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString()),
                     KhuyenMai=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString()),
-                    ThanhTien=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString())
+                    ThanhTien=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString()),
+                    TongThanhToan=decimal.Parse(labelTongThanhToan.Text),
+                    TenKH = txtTenkH.Text,
+                    DienThoai = txtSDT.Text,
+                    DiaChi = txtDiaChi.Text,
+                    TenNV = comboBoxNV.Text,
+                    NgayLap = dateTimePickerNgayLap.Text
                 };
                 lst.Add(cT_HoaDon);
             }
@@ -505,6 +511,11 @@ namespace DoAnCShap
         public decimal DonGia { get; set; }
         public decimal KhuyenMai { get; set; }
         public decimal ThanhTien { get; set; }
-
+        public decimal TongThanhToan { get; set; }
+        public string TenKH { get; set; }
+        public string DiaChi { get; set; }
+        public string DienThoai { get; set; }
+        public string TenNV { get; set; }
+        public string NgayLap { get; set; }
     }
 }
