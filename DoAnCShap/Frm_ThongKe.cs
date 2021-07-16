@@ -66,6 +66,7 @@ namespace DoAnCShap
         {
             fillChart();
             UpdateFont();
+            Fill_CmbYear();
         }
 
       
@@ -148,14 +149,26 @@ namespace DoAnCShap
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+          private void Fill_CmbYear()
         {
-
-        }
-
-        private void comboBoxThang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            try
+            {
+               //clear all data from combobox
+                comboBoxNam.Items.Clear();
+                //add default item
+                comboBoxNam.Items.Add("Select");
+               //loop array for add items
+                for (int i = DateTime.Now.Year; i < DateTime.Now.Year + 100 ; i++)
+                {
+                    comboBoxNam.Items.Add(i);
+                }
+                //set selected item for display on startup
+                comboBoxNam.Text = DateTime.Now.Year.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }

@@ -54,6 +54,7 @@ namespace DoAnCShap
             this.panelBot = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -452,6 +453,7 @@ namespace DoAnCShap
             // panelBot
             // 
             this.panelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(110)))));
+            this.panelBot.Controls.Add(this.dateTimePicker1);
             this.panelBot.Controls.Add(this.label1);
             this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBot.Location = new System.Drawing.Point(229, 582);
@@ -477,6 +479,15 @@ namespace DoAnCShap
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(799, 532);
             this.panelChildForm.TabIndex = 25;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(650, 10);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(114, 26);
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -530,6 +541,7 @@ namespace DoAnCShap
         public System.Windows.Forms.Button btnThongKe;
         public System.Windows.Forms.Button btnBaohanh;
         public System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
