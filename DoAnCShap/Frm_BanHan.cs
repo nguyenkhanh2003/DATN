@@ -427,7 +427,8 @@ namespace DoAnCShap
                     DienThoai = txtSDT.Text,
                     DiaChi = txtDiaChi.Text,
                     TenNV = comboBoxNV.Text,
-                    NgayLap = dateTimePickerNgayLap.Text
+                    NgayLap = dateTimePickerNgayLap.Text,
+                    MaHD=txtMaHD.Text
                 };
                 lst.Add(cT_HoaDon);
             }
@@ -517,5 +518,6 @@ namespace DoAnCShap
         public string DienThoai { get; set; }
         public string TenNV { get; set; }
         public string NgayLap { get; set; }
+        public string MaHD { get; set; }
     }
 }
