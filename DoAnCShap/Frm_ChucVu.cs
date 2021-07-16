@@ -59,13 +59,13 @@ namespace DoAnCShap
             count = dataGridViewCV.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <= 1)
+            if (count <= 0)
             {
                 txtMaCV.Text = "CV00";
             }
             else
             {
-                chuoi = Convert.ToString(dataGridViewCV.Rows[count - 2].Cells[0].Value);
+                chuoi = Convert.ToString(dataGridViewCV.Rows[count - 1].Cells[0].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaCV.Text = "CV0" + (chuoi2 + 1).ToString();

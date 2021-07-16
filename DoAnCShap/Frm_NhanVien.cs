@@ -520,7 +520,7 @@ namespace DoAnCShap
            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
-                if (txtMaNV.Text == "NV00")
+                if (cboChucVu.SelectedValue.ToString() == "CV01")
                 {
                     MessageBox.Show("Không thể xóa");
                     return;

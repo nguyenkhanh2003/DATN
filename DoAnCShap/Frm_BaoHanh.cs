@@ -121,14 +121,17 @@ namespace DoAnCShap
 
         private void btnThemPhieu_Click(object sender, EventArgs e)
         {
+            int KiemTra = 0;
             if(comboBoxlK.Text=="")
             {
-                MessageBox.Show("? Tên Linh Kiện");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(comboBoxlK, "? Chưa chọn tên linh kiện");
                 return;
             }    
             if(txtSL.Text=="")
             {
-                MessageBox.Show("? Số lượng");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSL, "Số lượng không được để trống");
                 return;
             }    
             if(txtGhiChu.Text=="")
@@ -137,8 +140,23 @@ namespace DoAnCShap
                 return;
             }    
             MaLK += comboBoxlK.SelectedValue.ToString() + ";";
-            object[] t = { comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
-            dataGridViewCTPBH.Rows.Add(t);
+            for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
+            {
+                if (comboBoxlK.Text == dataGridViewCTPBH.Rows[i].Cells["MaLKK"].Value.ToString())
+                {
+                    KiemTra = 1;
+                    break;
+                }
+            }
+            if (KiemTra == 1)
+            {
+
+            }
+            else
+            {
+                object[] t = { comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
+                dataGridViewCTPBH.Rows.Add(t);
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

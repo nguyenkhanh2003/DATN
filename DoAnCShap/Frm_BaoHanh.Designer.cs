@@ -29,6 +29,7 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_BaoHanh));
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -40,6 +41,13 @@ namespace DoAnCShap
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPBH = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLayHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
             this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,13 +80,7 @@ namespace DoAnCShap
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLayHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -87,6 +89,7 @@ namespace DoAnCShap
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -224,6 +227,54 @@ namespace DoAnCShap
             this.dataGridViewPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPBH_CellClick);
             this.dataGridViewPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewPBH_RowPostPaint);
             this.dataGridViewPBH.DoubleClick += new System.EventHandler(this.dataGridViewPBH_DoubleClick);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaPBH
+            // 
+            this.MaPBH.DataPropertyName = "MaPBH";
+            this.MaPBH.HeaderText = "Mã Phiếu";
+            this.MaPBH.Name = "MaPBH";
+            this.MaPBH.ReadOnly = true;
+            // 
+            // MaHDBH
+            // 
+            this.MaHDBH.DataPropertyName = "MaHDBH";
+            this.MaHDBH.HeaderText = "Mã Hóa Đơn";
+            this.MaHDBH.Name = "MaHDBH";
+            this.MaHDBH.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "TenNV";
+            this.MaNV.HeaderText = "Tên Nhân Viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLapPhieu";
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            // 
+            // NgayLayHang
+            // 
+            this.NgayLayHang.DataPropertyName = "NgayLayHang";
+            this.NgayLayHang.HeaderText = "Ngày Lấy Hàng";
+            this.NgayLayHang.Name = "NgayLayHang";
+            this.NgayLayHang.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -608,53 +659,9 @@ namespace DoAnCShap
             this.label6.Text = "Tên linh Kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // STT
+            // errorMes
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // MaPBH
-            // 
-            this.MaPBH.DataPropertyName = "MaPBH";
-            this.MaPBH.HeaderText = "Mã Phiếu";
-            this.MaPBH.Name = "MaPBH";
-            this.MaPBH.ReadOnly = true;
-            // 
-            // MaHDBH
-            // 
-            this.MaHDBH.DataPropertyName = "MaHDBH";
-            this.MaHDBH.HeaderText = "Mã Hóa Đơn";
-            this.MaHDBH.Name = "MaHDBH";
-            this.MaHDBH.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "TenNV";
-            this.MaNV.HeaderText = "Tên Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLapPhieu";
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.ReadOnly = true;
-            // 
-            // NgayLayHang
-            // 
-            this.NgayLayHang.DataPropertyName = "NgayLayHang";
-            this.NgayLayHang.HeaderText = "Ngày Lấy Hàng";
-            this.NgayLayHang.Name = "NgayLayHang";
-            this.NgayLayHang.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
+            this.errorMes.ContainerControl = this;
             // 
             // Frm_BaoHanh
             // 
@@ -682,6 +689,7 @@ namespace DoAnCShap
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -736,5 +744,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLayHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.ErrorProvider errorMes;
     }
 }
