@@ -64,7 +64,6 @@ namespace DoAnCShap
             btnChonMua.Enabled = b2;
             btnLuuHd.Enabled = b2;
             btnInHD.Enabled = b2;
-            btnLuuKH.Enabled = b2;
             btnTimKH.Enabled = b2;
         }
 
@@ -99,7 +98,7 @@ namespace DoAnCShap
             labelTongThanhToan.ResetText();
             txtTienKhachDua.ResetText();
             labelThoiLaiKhach.ResetText();
-            //dataGridViewHDBH.ClearSelection();
+            dataGridViewHDBH.DataSource = null;
         }
         public void PhatSinhMaHD()
         {
@@ -193,13 +192,15 @@ namespace DoAnCShap
         {
             if (txtDonGia.Text == "")
             {
-                MessageBox.Show("? Đơn Giá");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtDonGia, "Đơn Giá Không được để trống");
                 return;
             }
 
             if (txtKhuyenMai.Text == "")
             {
-                MessageBox.Show("? Khuyến Mãi");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtKhuyenMai, "Khuyến Mãi Không được để trống");
                 return;
             }
             int KiemTra = 0;
@@ -254,17 +255,20 @@ namespace DoAnCShap
         {
             if (txtMaHD.Text == "")
             {
-                MessageBox.Show("? Mã Khách Hàng");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtMaHD, "? Mã Hóa Đơn");
                 return;
             }
-            if (txtMaKH.Text == "")
+            if (comboBoxNV.Text == "")
             {
-                MessageBox.Show("? Mã Khách Hàng");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(comboBoxNV, "? Nhân Viên");
                 return;
             }
             if (labelTongThanhToan.Text == "")
             {
-                MessageBox.Show("? Tổng Thanh Toán");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(labelTongThanhToan, "? Tổng Thanh Toán");
                 return;
             }
             if (flag == 1)
@@ -327,6 +331,7 @@ namespace DoAnCShap
                 else
                 {
                     MessageBox.Show("Không tìm thấy khách hàng");
+                    PhatSinhMa();
                 }
             }
             catch
@@ -341,13 +346,13 @@ namespace DoAnCShap
             count = kh.dataGridViewKH.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <= 1)
+            if (count <= 0)
             {
                 txtMaKH.Text = "KH00";
             }
             else
             {
-                chuoi = Convert.ToString(kh.dataGridViewKH.Rows[count - 2].Cells[0].Value);
+                chuoi = Convert.ToString(kh.dataGridViewKH.Rows[count - 1].Cells[1].Value);
                 chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaKH.Text = "KH0" + (chuoi2 + 1).ToString();
@@ -359,8 +364,55 @@ namespace DoAnCShap
         bool add;
         private void btnThenKH_Click(object sender, EventArgs e)
         {
-            PhatSinhMa();
-            add = true;
+            if (txtSDT.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
+                return;
+            }
+            if (txtMaKH.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
+                return;
+            }
+            if(txtTenkH.Text=="")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTenkH, "Tên Khách Hàng Không Được Để Trống");
+                return;
+            }    
+            if (txtDiaChi.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtDiaChi, "Địa Chỉ Không được để trống");
+                return;
+            }
+            else
+            {
+                AddKH.MaKH = txtMaKH.Text;
+                AddKH.TenKH = txtTenkH.Text;
+                if (radioButtonNam.Checked == true)
+                {
+                    AddKH.GioiTinh = radioButtonNam.Text;
+                }
+                else
+                {
+                    AddKH.GioiTinh = radioButtonNu.Text;
+                }
+                if (txtSDT.Text == "")
+                {
+                    AddKH.DienThoai = "Không";
+                }
+                else
+                {
+                    AddKH.DienThoai = txtSDT.Text;
+                }
+                AddKH.DiaChi = txtDiaChi.Text;
+                AddKH.TrangThai = "Mới";
+                bus.AddKH(AddKH);
+                MessageBox.Show("Thêm Khách Hàng Thành Công !");
+            }
         }
 
         private void Frm_BanHan_Load(object sender, EventArgs e)
@@ -385,21 +437,49 @@ namespace DoAnCShap
         {
             if (add == true)
             {
-                AddKH.MaKH = txtMaKH.Text;
-                AddKH.TenKH = txtTenkH.Text;
-                if (radioButtonNam.Checked == true)
+                if(txtSDT.Text=="")
                 {
-                    AddKH.GioiTinh = radioButtonNam.Text;
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
+                    return;
+                }
+                if(txtMaKH.Text=="")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
+                    return;
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDiaChi, "Địa Chỉ Không được để trống");
+                    return;
                 }
                 else
                 {
-                    AddKH.GioiTinh = radioButtonNu.Text;
+                    AddKH.MaKH = txtMaKH.Text;
+                    AddKH.TenKH = txtTenkH.Text;
+                    if (radioButtonNam.Checked == true)
+                    {
+                        AddKH.GioiTinh = radioButtonNam.Text;
+                    }
+                    else
+                    {
+                        AddKH.GioiTinh = radioButtonNu.Text;
+                    }
+                    if (txtSDT.Text == "")
+                    {
+                        AddKH.DienThoai = "Không";
+                    }
+                    else
+                    {
+                        AddKH.DienThoai = txtSDT.Text;
+                    }
+                    AddKH.DiaChi = txtDiaChi.Text;
+                    AddKH.TrangThai = "Mới";
+                    bus.AddKH(AddKH);
+                    MessageBox.Show("Thêm Khách Hàng Thành Công !");
                 }
-                AddKH.DienThoai = txtSDT.Text;
-                AddKH.DiaChi = txtDiaChi.Text;
-                AddKH.TrangThai = "Mới";
-                bus.AddKH(AddKH);
-                MessageBox.Show("Thêm Khách Hàng Thành Công !");
             }
         }
 
@@ -441,7 +521,7 @@ namespace DoAnCShap
                 frm_in.ShowDialog();
                
             XuLyChucNang(true, false);
-            //ClearTextBox();
+            ClearTextBox();
         }
 
         private void txtMaHD_KeyDown(object sender, KeyEventArgs e)
@@ -498,10 +578,7 @@ namespace DoAnCShap
 
         }
 
-        private void dataGridViewHDBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        {
-
-        }
+       
     }
 
     public class CT_HoaDon

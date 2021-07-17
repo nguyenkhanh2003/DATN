@@ -54,7 +54,7 @@ namespace DoAnCShap
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTim = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -338,7 +338,7 @@ namespace DoAnCShap
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnHuy);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnIn);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnLuu);
@@ -347,18 +347,18 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(1160, 54);
             this.panel2.TabIndex = 11;
             // 
-            // button1
+            // btnIn
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(681, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "In";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.Location = new System.Drawing.Point(681, 6);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(91, 39);
+            this.btnIn.TabIndex = 0;
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // panel3
             // 
@@ -441,6 +441,7 @@ namespace DoAnCShap
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(192, 25);
             this.txtMaHD.TabIndex = 9;
+            this.txtMaHD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaHD_KeyPress);
             // 
             // txtMaPhieu
             // 
@@ -577,7 +578,8 @@ namespace DoAnCShap
             this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTrangThai.FormattingEnabled = true;
             this.cboTrangThai.Items.AddRange(new object[] {
-            "Active"});
+            "Đang Chớ Xử Lý",
+            "Đã Xử Lý"});
             this.cboTrangThai.Location = new System.Drawing.Point(232, 200);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(192, 24);
@@ -736,7 +738,7 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnXoaCT;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHDBH;

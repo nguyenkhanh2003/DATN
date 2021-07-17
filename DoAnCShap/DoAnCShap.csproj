@@ -338,12 +338,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportHDN.rdlc" />
+    <EmbeddedResource Include="ReportPhieuBaoHanh.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CT_HoaDon.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon1.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon2.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\Frm_BanHan.CT_HoaDon.datasource" />
+    <None Include="Properties\DataSources\Frm_BaoHanh.PbaoHanh.datasource" />
     <None Include="Properties\DataSources\Frm_HoaDonNhap.HoaDonNhap.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

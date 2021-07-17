@@ -137,7 +137,7 @@ namespace DoAnCShap
             if(textBoxChietKhau.Text=="")
             {
                 textBoxChietKhau.Text = "0";
-            }    
+            }
             tongtien += tt;
             KM = decimal.Parse(textBoxChietKhau.Text);
             tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;

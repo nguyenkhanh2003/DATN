@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Microsoft.Reporting.WinForms;
+
 namespace DoAnCShap
 {
     public partial class Frm_BaoHanh : Form
@@ -20,6 +22,7 @@ namespace DoAnCShap
         PhieuBaoHanh_BUS bus = new PhieuBaoHanh_BUS();
         PhieuBaoHanh pbh = new PhieuBaoHanh();
         CT_PhieuBaoHanh ctpbh = new CT_PhieuBaoHanh();
+        ReportDataSource rs = new ReportDataSource();
         int flag = 0;
 
         public void XuLyChucNang(Boolean  b1,Boolean b2)
@@ -299,6 +302,52 @@ namespace DoAnCShap
             {
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            List<PbaoHanh> lst = new List<PbaoHanh>();
+            lst.Clear();
+            for(int i=0;i<dataGridViewCTPBH.Rows.Count-0;i++)
+            {
+                PbaoHanh pbaoHanh = new PbaoHanh
+                {
+                    MaPhieuBH = txtMaPhieu.Text,
+                    MaHD = txtMaHD.Text,
+                    TenNV = comboBoxNV.Text,
+                    NgayLap = dateTimePickerNgaLap.Text,
+                    NgayLay = dateTimePickerNgayLayHang.Text,
+                    TenLK = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString(),
+                    SoLuong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString()),
+                    GhiChu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString(),
+                };
+                lst.Add(pbaoHanh);
+            }
+            rs.Name = "DataSet3";
+            rs.Value = lst;
+            Frm_PrintHD frm_in = new Frm_PrintHD();
+            frm_in.reportViewer1.LocalReport.DataSources.Clear();
+            frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
+            frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.ReportPhieuBaoHanh.rdlc";
+            frm_in.ShowDialog();
+        }
+
+        public class PbaoHanh
+        {
+            public string MaPhieuBH { get; set; }
+            public string MaHD { get; set; }
+            public string TenNV { get; set; }
+            public string NgayLap { get; set; }
+            public string NgayLay { get; set; }
+            public string TenLK { get; set; }
+            public int SoLuong { get; set; }
+            public string GhiChu { get; set; }
+        }
+
+        private void txtMaHD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 'a' && e.KeyChar <= 'z')
+                e.KeyChar -= (char)32;
         }
     }
 }
