@@ -415,6 +415,8 @@ namespace DoAnCShap
                     nv.DiaChi = txtDiaChi.Text;
                     if (KiemTra == 1)
                     {
+                        //MessageBox.Show("Tên Hình" + TenHinh);
+                        //return;
                         nv.HinhAnh = TenHinh;
                     }
                     else

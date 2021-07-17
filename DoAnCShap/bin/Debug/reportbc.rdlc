@@ -571,7 +571,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Tên Khách Hàng  </Value>
+                  <Value>Tên Khách Hàng : </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
@@ -605,7 +605,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Điện Thoại   </Value>
+                  <Value>Điện Thoại :  </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
@@ -639,7 +639,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Địa Chỉ     </Value>
+                  <Value>Địa Chỉ  :   </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
@@ -673,7 +673,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Nhân Viên   </Value>
+                  <Value>Nhân Viên:   </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
@@ -707,7 +707,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ngày Lập    </Value>
+                  <Value>Ngày Lập :   </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
@@ -820,7 +820,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Mã Hóa Đơn </Value>
+                  <Value>Mã Hóa Đơn: </Value>
                   <Style />
                 </TextRun>
                 <TextRun>

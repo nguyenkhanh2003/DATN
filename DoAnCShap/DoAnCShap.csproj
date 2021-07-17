@@ -144,6 +144,12 @@
     <Compile Include="Frm_HoaDonBanHang.Designer.cs">
       <DependentUpon>Frm_HoaDonBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_InHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_InHoaDonNhap.Designer.cs">
+      <DependentUpon>Frm_InHoaDonNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_KH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     <EmbeddedResource Include="Frm_HoaDonBanHang.resx">
       <DependentUpon>Frm_HoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_InHoaDonNhap.resx">
+      <DependentUpon>Frm_InHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_KH.resx">
       <DependentUpon>Frm_KH.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,12 +337,14 @@
     <EmbeddedResource Include="reportbc.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportHDN.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CT_HoaDon.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon1.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon2.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\Frm_BanHan.CT_HoaDon.datasource" />
+    <None Include="Properties\DataSources\Frm_HoaDonNhap.HoaDonNhap.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
