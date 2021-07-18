@@ -59,5 +59,10 @@ namespace BUS
         {
             bus.UpdateSL(lk);
         }
+
+        public void CapNhatSLTon(LinhKien lk)
+        {
+            bus.CapNhatSLTon(lk);
+        }
     }
 }

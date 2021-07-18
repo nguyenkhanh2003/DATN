@@ -133,7 +133,8 @@ namespace DoAnCShap
         {
             this.Close();
         }
-
+        int SoLuongTon = 0;
+        int SoluongConLai;
         private void comboBoxSP_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -149,8 +150,8 @@ namespace DoAnCShap
                         txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
                         txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
                         txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
-                        //txtSL.Text = "1";
                         NumreicSL.Value = 1;
+                        SoLuongTon =int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
 
                     }
 
@@ -281,8 +282,6 @@ namespace DoAnCShap
                 hdbh.TrangThai = comboBoxTrangThai.Text;
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');
-                int vitri = 0;
-                int SLConLai = 0;
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
                 {
                     string malk = b[i];
@@ -297,11 +296,9 @@ namespace DoAnCShap
                     cthdbh.KhuyenMai = khuyenmai;
                     cthdbh.ThanhTien = thanhtien;
                     cthdbh.TrangThai = comboBoxTrangThai.Text;
-                    //SLConLai =int.Parse(sp.dataGridViewLK.Rows[0].Cells["SoLuong"].Value.ToString())-soluong;
-                    //textBox1SL.Text = SLConLai.ToString();
-                    //lk.MaLK = malk;
-                    //lk.SoLuong = SLConLai;
-                    //bus.UpdateSL(lk);
+                    lk.MaLK = malk;
+                    lk.SoLuong=SoluongConLai=SoLuongTon - soluong;
+                    bus.CapNhatSLTon(lk);
                     bus.AddCTHD(cthdbh);
                 }
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
