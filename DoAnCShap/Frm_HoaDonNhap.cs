@@ -377,12 +377,12 @@ namespace DoAnCShap
         {
             flag = 2;
             DataGridViewRow row = dataGridViewCTHDNH.Rows[e.RowIndex];
-            comboBoxTenLK.Text = row.Cells[0].Value.ToString();
-            textBoxSoLuong.Text = row.Cells[1].Value.ToString();
-            textBoxDonGia.Text = row.Cells[2].Value.ToString();
+            comboBoxTenLK.Text = row.Cells[1].Value.ToString();
+            textBoxSoLuong.Text = row.Cells[2].Value.ToString();
+            textBoxDonGia.Text = row.Cells[3].Value.ToString();
             textBoxDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(textBoxDonGia.Text));
-            textBoxChietKhau.Text = row.Cells[3].Value.ToString();
-            labelThanhTien.Text = row.Cells[4].Value.ToString();
+            textBoxChietKhau.Text = row.Cells[4].Value.ToString();
+            labelThanhTien.Text = row.Cells[5].Value.ToString();
             labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
         }
 
@@ -477,11 +477,11 @@ namespace DoAnCShap
             {
                 HoaDonNhap hoaDonNhap = new HoaDonNhap
                 {
-                    TenSP = dataGridViewCTHDNH.Rows[i].Cells[0].Value.ToString(),
-                    SoLuong = int.Parse(dataGridViewCTHDNH.Rows[i].Cells[1].Value.ToString()),
-                    DonGia = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[2].Value.ToString()),
-                    KhuyenMai = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[3].Value.ToString()),
-                    ThanhTien = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[4].Value.ToString()),
+                    TenSP = dataGridViewCTHDNH.Rows[i].Cells[1].Value.ToString(),
+                    SoLuong = int.Parse(dataGridViewCTHDNH.Rows[i].Cells[2].Value.ToString()),
+                    DonGia = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[3].Value.ToString()),
+                    KhuyenMai = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[4].Value.ToString()),
+                    ThanhTien = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[5].Value.ToString()),
                     TongThanhToan = decimal.Parse(labelTongThanhToan.Text),
                     TenNCC = comboBoxNCC.Text,
                     TenNV = comboBoxMaNV.Text,
@@ -497,6 +497,18 @@ namespace DoAnCShap
             frm_in.reportViewer1.LocalReport.DataSources.Add(rss);
             frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.ReportHDN.rdlc";
             frm_in.ShowDialog();
+        }
+
+        private void textBoxDonGia_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxDonGia.Text = string.Format("{##0,0:#}", decimal.Parse(textBoxDonGia.Text));
+            }
+            catch
+            {
+
+            }
         }
     }
 }
