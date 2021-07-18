@@ -67,5 +67,14 @@ namespace BUS
         {
             bus.UpdateHDN(ex);
         }
+
+        public void CapNhatSLKho(LinhKien ex)
+        {
+            bus.CapNhatSLKho(ex);
+        }
+        public DataTable LayDSSP(string condition)
+        {
+            return bus.LayDSSP(condition);
+        }
     }
 }

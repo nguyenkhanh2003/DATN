@@ -24,6 +24,7 @@ namespace DoAnCShap
         HoaDonNhapHang hdn = new HoaDonNhapHang();
         CT_HoaDonNhapHang cthdn = new CT_HoaDonNhapHang();
         LinhKien_BUS lk = new LinhKien_BUS();
+        LinhKien LK = new LinhKien();
         ReportDataSource rss = new ReportDataSource();
         int flag = 0;
         public void HienThiSanPham()
@@ -116,12 +117,22 @@ namespace DoAnCShap
 
         decimal tongtien = 0;
         public string MaLK = "";
+        int SoLuongTon;
+        int SoLuongConLai= 0;
         private void btnChonNhap_Click(object sender, EventArgs e)
         {
             int KiemTra = 0;
             int vitri = 0;
             decimal KM = 0;
             decimal tt = 0;
+            DataTable DSSP = bus.LayDSSP("select * From LinhKien Where TenLK=N'" + comboBoxTenLK.Text + "'");
+            if(DSSP.Rows.Count>0)
+            {
+                if(comboBoxTenLK.Text==DSSP.Rows[0]["TenLK"].ToString())
+                {
+                    SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
+                }    
+            }    
             if (textBoxSoLuong.Text == "")
             {
                 errorMes.BlinkRate = 100;
@@ -146,7 +157,7 @@ namespace DoAnCShap
             labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
-
+            SoLuongConLai = SoLuongTon + int.Parse(textBoxSoLuong.Text);
             for (int i = 0; i < dataGridViewCTHDNH.Rows.Count - 0; i++)
             {
                 if (comboBoxTenLK.Text == dataGridViewCTHDNH.Rows[i].Cells["TenLK"].Value.ToString())
@@ -155,13 +166,14 @@ namespace DoAnCShap
                     vitri = i;
                     break;
                 }
-
             }
 
             if (KiemTra == 1)
             {
                 int SL = int.Parse(textBoxSoLuong.Text) + int.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewCTHDNH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
+                int SLTonMoi = int.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["SLConLai"].Value.ToString()) + int.Parse(textBoxSoLuong.Text);
+                dataGridViewCTHDNH.Rows[vitri].Cells["SLConLai"].Value = SLTonMoi.ToString();
                 decimal ThanhTienMoi = tt + decimal.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
                 dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", double.Parse(ThanhTienMoi.ToString()));
@@ -170,7 +182,7 @@ namespace DoAnCShap
             else
             {
                 MaLK += comboBoxTenLK.SelectedValue.ToString() + ";";
-                object[] t = { comboBoxTenLK.Text, textBoxSoLuong.Text, textBoxDonGia.Text, KM.ToString(), labelThanhTien.Text };
+                object[] t = { comboBoxTenLK.Text, textBoxSoLuong.Text, textBoxDonGia.Text, KM.ToString(), labelThanhTien.Text,SoLuongConLai};
                 dataGridViewCTHDNH.Rows.Add(t);
             }
 
@@ -251,6 +263,7 @@ namespace DoAnCShap
                         decimal dongia = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[2].Value.ToString());
                         decimal khuyenmai = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[3].Value.ToString());
                         decimal thanhtien = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells[4].Value.ToString());
+                        int SoLuongKho = int.Parse(dataGridViewCTHDNH.Rows[i].Cells[5].Value.ToString());
                         cthdn.MaHDNH = txtMaHDN.Text;
                         cthdn.MaLK = malk;
                         cthdn.SoLuong = soluong;
@@ -258,6 +271,9 @@ namespace DoAnCShap
                         cthdn.KhuyenMai = khuyenmai;
                         cthdn.ThanhTien = thanhtien;
                         cthdn.TrangThai = comboBoxTrangThai.Text;
+                        LK.MaLK = malk;
+                        LK.SoLuong = SoLuongKho;
+                        bus.CapNhatSLKho(LK);
                         bus.AddCTHD(cthdn);
                     }
                     MessageBox.Show("Tạo Hóa Đơn Thành Công ");

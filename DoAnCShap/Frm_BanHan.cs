@@ -133,8 +133,8 @@ namespace DoAnCShap
         {
             this.Close();
         }
-        int SoLuongTon = 0;
-        int SoluongConLai;
+        int SoLuongTon;
+        int SoluongConLai=0;
         private void comboBoxSP_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -151,10 +151,8 @@ namespace DoAnCShap
                         txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
                         txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
                         NumreicSL.Value = 1;
-                        SoLuongTon =int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
-
+                        SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
                     }
-
                 }
             }
         }
@@ -216,6 +214,7 @@ namespace DoAnCShap
             labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
+            SoluongConLai = SoLuongTon - (((int)NumreicSL.Value));
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
@@ -229,6 +228,8 @@ namespace DoAnCShap
             {
                 int SL = ((int)NumreicSL.Value) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
+                int SLConLaiMoi=int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SLConLai"].Value.ToString())- ((int)NumreicSL.Value);
+                dataGridViewHDBH.Rows[vitri].Cells["SLConLai"].Value = SLConLaiMoi.ToString();
                 decimal ThanhTienMoi = tt + decimal.Parse(dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
                 dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", decimal.Parse(ThanhTienMoi.ToString()));
@@ -237,7 +238,7 @@ namespace DoAnCShap
             else
             {
                 MaLK += comboBoxSP.SelectedValue.ToString() + ";";
-                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text };
+                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text,SoluongConLai };
                 dataGridViewHDBH.Rows.Add(t);
             }
 
@@ -289,6 +290,7 @@ namespace DoAnCShap
                     decimal dongia = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString());
                     decimal khuyenmai = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString());
                     decimal thanhtien = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString());
+                    int slconlai = int.Parse(dataGridViewHDBH.Rows[i].Cells[5].Value.ToString());
                     cthdbh.MaHDBH = txtMaHD.Text;
                     cthdbh.MaLK = malk;
                     cthdbh.SoLuong = soluong;
@@ -297,7 +299,7 @@ namespace DoAnCShap
                     cthdbh.ThanhTien = thanhtien;
                     cthdbh.TrangThai = comboBoxTrangThai.Text;
                     lk.MaLK = malk;
-                    lk.SoLuong=SoluongConLai=SoLuongTon - soluong;
+                    lk.SoLuong = slconlai;
                     bus.CapNhatSLTon(lk);
                     bus.AddCTHD(cthdbh);
                 }

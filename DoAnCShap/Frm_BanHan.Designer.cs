@@ -41,11 +41,6 @@ namespace DoAnCShap
             this.btnInHD = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHDBH = new System.Windows.Forms.DataGridView();
-            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.labelThoiLaiKhach = new System.Windows.Forms.Label();
@@ -90,6 +85,12 @@ namespace DoAnCShap
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
@@ -228,43 +229,14 @@ namespace DoAnCShap
             this.SoLuong,
             this.DonGia,
             this.KhuyenMai,
-            this.ThanhTien});
+            this.ThanhTien,
+            this.SLConLai});
             this.dataGridViewHDBH.Location = new System.Drawing.Point(10, 19);
             this.dataGridViewHDBH.Name = "dataGridViewHDBH";
             this.dataGridViewHDBH.RowHeadersVisible = false;
             this.dataGridViewHDBH.Size = new System.Drawing.Size(756, 305);
             this.dataGridViewHDBH.TabIndex = 0;
             this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
-            // 
-            // TenLK
-            // 
-            this.TenLK.DataPropertyName = "TenLK";
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
             // 
             // groupBox2
             // 
@@ -791,6 +763,42 @@ namespace DoAnCShap
             // 
             this.errorMes.ContainerControl = this;
             // 
+            // TenLK
+            // 
+            this.TenLK.DataPropertyName = "TenLK";
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // SLConLai
+            // 
+            this.SLConLai.HeaderText = "SL Còn Lại";
+            this.SLConLai.Name = "SLConLai";
+            this.SLConLai.Visible = false;
+            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -878,11 +886,12 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBoxSP;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.ErrorProvider errorMes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLConLai;
     }
 }
