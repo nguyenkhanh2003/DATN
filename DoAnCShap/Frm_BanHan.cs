@@ -145,13 +145,19 @@ namespace DoAnCShap
                     //if(comboBoxSP.Text==DSSP.Rows[0]["MaLK"].ToString())
                     if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
-
-                        txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
-                        txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
-                        txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
-                        txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
-                        NumreicSL.Value = 1;
-                        SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
+                        if (int.Parse(DSSP.Rows[0]["SoLuong"].ToString()) == 0)
+                        {
+                            MessageBox.Show("Sản Phẩm Này Đã Hết Hàng");
+                        }
+                        else
+                        {
+                            txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
+                            txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
+                            txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
+                            txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
+                            NumreicSL.Value = 1;
+                            SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
+                        }
                     }
                 }
             }
@@ -215,6 +221,10 @@ namespace DoAnCShap
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
             SoluongConLai = SoLuongTon - (((int)NumreicSL.Value));
+            //if(SoluongConLai==0)
+            //{
+            //    MessageBox.Show("Đã Hết Số Lượng Trong Kho");
+            //}    
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())

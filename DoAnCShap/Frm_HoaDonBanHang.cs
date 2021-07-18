@@ -294,7 +294,7 @@ namespace DoAnCShap
             if (KQ == DialogResult.Yes)
             {
                 cthd.MaHDBH = comboBoxMaHD.Text;
-                cthd.MaLK = comboBoxLK.SelectedValue.ToString();
+                //cthd.MaLK = comboBoxLK.SelectedValue.ToString();
                 bus.DeleteCTHd(cthd);
                 hdbh.MaHDBH = comboBoxMaHD.Text;
                 bus.DeleteHoaDon(hdbh);
