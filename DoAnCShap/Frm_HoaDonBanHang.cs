@@ -305,7 +305,10 @@ namespace DoAnCShap
                 hdbh.MaHDBH = txtMaHD.Text;
                 bus.DeleteHoaDon(hdbh);
                 MessageBox.Show("Success !");
+                dataGridViewCTHD.Rows.Clear();
+                dataGridViewCTHD.Refresh();
                 ClearTextBoxCTHD();
+               
             }
             HienThiHoaDon();
         }

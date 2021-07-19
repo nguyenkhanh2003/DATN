@@ -11,6 +11,7 @@ using DTO;
 using BUS;
 using Dapper;
 using Microsoft.Reporting.WinForms;
+using System.Globalization;
 
 namespace DoAnCShap
 {
@@ -63,7 +64,7 @@ namespace DoAnCShap
             btnThenKH.Enabled = b2;
             btnChonMua.Enabled = b2;
             btnLuuHd.Enabled = b2;
-            //btnInHD.Enabled = b2;
+            btnHuy.Enabled = b2;
             btnTimKH.Enabled = b2;
         }
 
@@ -145,7 +146,6 @@ namespace DoAnCShap
                 DataTable DSSP = bus.GetDSSP("Select * From LinhKien Where TenLK=N'" + comboBoxSP.Text + "'");
                 if (DSSP.Rows.Count > 0)
                 {
-                    //if(comboBoxSP.Text==DSSP.Rows[0]["MaLK"].ToString())
                     if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
                         if (int.Parse(DSSP.Rows[0]["SoLuong"].ToString()) == 0)
@@ -195,6 +195,16 @@ namespace DoAnCShap
             XuLyTextBox(false, true);
         }
 
+        public void TongTienSP()
+        {
+            decimal sum = 0;
+            for (int i = 0; i < dataGridViewHDBH.Rows.Count; ++i)
+            {
+                sum += decimal.Parse(dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value.ToString());
+            }
+            labelTongThanhToan.Text = sum.ToString();
+            labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
+        }
 
 
         private void btnChonMua_Click(object sender, EventArgs e)
@@ -223,8 +233,8 @@ namespace DoAnCShap
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
-            labelTongThanhToan.Text = tongtien.ToString();
-            labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
+            //labelTongThanhToan.Text = tongtien.ToString();
+            //labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
@@ -251,18 +261,12 @@ namespace DoAnCShap
                 object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text,SoluongConLai };
                 dataGridViewHDBH.Rows.Add(t);
             }
+            TongTienSP();
 
         }
 
         decimal tongtien = 0;
 
-        public void UpdateSL()
-        {
-            for (int i = 0; i < sp.dataGridViewLK.Rows.Count - 1; i++)
-            {
-                string SLSP = sp.dataGridViewLK.Rows[i].Cells[9].Value.ToString();
-            }
-        }
         private void btnLuuHd_Click(object sender, EventArgs e)
         {
             if (txtMaHD.Text == "")
@@ -441,8 +445,6 @@ namespace DoAnCShap
             try
             {
                 decimal TienThua = 0;
-                double TongThanhToan = 0; //khuyen mai
-                double TienKhachDua = 0;
                 TienThua = decimal.Parse(txtTienKhachDua.Text) - decimal.Parse(labelTongThanhToan.Text);
                 labelThoiLaiKhach.Text = TienThua.ToString();
             }
@@ -550,7 +552,6 @@ namespace DoAnCShap
             string condition = txtMaHD.Text;
             HienThiDSSTheoMaSP(condition);
         }
-
         private void dataGridViewHDBH_DoubleClick(object sender, EventArgs e)
         {
             DialogResult KQ = MessageBox.Show("Bạn có muốn xóa sản phẩm này không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -558,6 +559,7 @@ namespace DoAnCShap
             {
                 int rowIndex = dataGridViewHDBH.CurrentCell.RowIndex;
                 dataGridViewHDBH.Rows.RemoveAt(rowIndex);
+                TongTienSP();
             }
         }
 
@@ -599,7 +601,16 @@ namespace DoAnCShap
 
         }
 
-       
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Hủy Hay Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(KQ==DialogResult.Yes)
+            {
+                ClearTextBox();
+                XuLyChucNang(true, false);
+                btnInHD.Enabled = false;
+            }    
+        }
     }
 
     public class CT_HoaDon
