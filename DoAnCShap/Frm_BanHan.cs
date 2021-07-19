@@ -438,11 +438,18 @@ namespace DoAnCShap
 
         private void txtTienKhachDua_TextChanged(object sender, EventArgs e)
         {
-            double TienThua = 0;
-            double TongThanhToan = 0; //khuyen mai
-            double TienKhachDua = 0;
-            TienThua = double.Parse(txtTienKhachDua.Text) - int.Parse(labelTongThanhToan.Text);
-            labelThoiLaiKhach.Text = TienThua.ToString();
+            try
+            {
+                decimal TienThua = 0;
+                double TongThanhToan = 0; //khuyen mai
+                double TienKhachDua = 0;
+                TienThua = decimal.Parse(txtTienKhachDua.Text) - decimal.Parse(labelTongThanhToan.Text);
+                labelThoiLaiKhach.Text = TienThua.ToString();
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnLuuKH_Click(object sender, EventArgs e)
@@ -520,6 +527,8 @@ namespace DoAnCShap
                     DiaChi = txtDiaChi.Text,
                     TenNV = comboBoxNV.Text,
                     NgayLap = dateTimePickerNgayLap.Text,
+                    TienKhachDua=decimal.Parse(txtTienKhachDua.Text),
+                    TienThua=decimal.Parse(labelThoiLaiKhach.Text),
                     MaHD=txtMaHD.Text
                 };
                 lst.Add(cT_HoaDon);
@@ -608,5 +617,7 @@ namespace DoAnCShap
         public string TenNV { get; set; }
         public string NgayLap { get; set; }
         public string MaHD { get; set; }
+        public decimal TienKhachDua { get; set; }
+        public decimal TienThua { get; set; }
     }
 }

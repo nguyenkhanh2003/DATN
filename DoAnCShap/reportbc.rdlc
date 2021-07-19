@@ -97,7 +97,7 @@
         <Top>1.70014in</Top>
         <Left>0.20146in</Left>
         <Height>0.25in</Height>
-        <Width>3.46875in</Width>
+        <Width>2.93007in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -513,7 +513,7 @@
         <Top>0.06944in</Top>
         <Left>0.18757in</Left>
         <Height>0.5in</Height>
-        <Width>6.19513in</Width>
+        <Width>6.19512in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -521,6 +521,80 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tiền Khách Đưa    </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!TienKhachDua.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>#,0;(#,0)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>1.30431in</Top>
+        <Left>3.66395in</Left>
+        <Height>0.25in</Height>
+        <Width>2.71874in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tiền Thừa      </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!TienThua.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>#,0;(#,0)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>1.70014in</Top>
+        <Left>3.66395in</Left>
+        <Height>0.25in</Height>
+        <Width>2.71875in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2.01958in</Height>
     <Style />
@@ -929,6 +1003,14 @@
         </Field>
         <Field Name="ThanhTien">
           <DataField>ThanhTien</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TienKhachDua">
+          <DataField>TienKhachDua</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TienThua">
+          <DataField>TienThua</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="TongThanhToan">

@@ -82,5 +82,9 @@ namespace DAL
            return KetNoi.GetDataTable(""+condition);
        }
 
+       public DataTable LayTTKH(string condition)
+       {
+           return KetNoi.GetDataTable(""+condition);
+       }
     }
 }

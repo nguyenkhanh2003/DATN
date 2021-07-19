@@ -76,5 +76,10 @@ namespace BUS
         {
             return bus.LayDSSP(condition);
         }
+
+        public DataTable LayTTKH(string condition)
+        {
+            return bus.LayTTKH(condition);
+        }
     }
 }

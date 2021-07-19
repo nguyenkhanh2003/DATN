@@ -295,17 +295,20 @@ namespace DoAnCShap
             // 
             // txtTienKhachDua
             // 
+            this.txtTienKhachDua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienKhachDua.Location = new System.Drawing.Point(146, 88);
             this.txtTienKhachDua.Multiline = true;
             this.txtTienKhachDua.Name = "txtTienKhachDua";
             this.txtTienKhachDua.Size = new System.Drawing.Size(213, 31);
             this.txtTienKhachDua.TabIndex = 15;
+            this.txtTienKhachDua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTienKhachDua.TextChanged += new System.EventHandler(this.txtTienKhachDua_TextChanged);
             // 
             // labelThoiLaiKhach
             // 
             this.labelThoiLaiKhach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelThoiLaiKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThoiLaiKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThoiLaiKhach.ForeColor = System.Drawing.Color.Red;
             this.labelThoiLaiKhach.Location = new System.Drawing.Point(143, 145);
             this.labelThoiLaiKhach.Name = "labelThoiLaiKhach";
             this.labelThoiLaiKhach.Size = new System.Drawing.Size(216, 32);
