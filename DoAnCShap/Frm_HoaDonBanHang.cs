@@ -30,7 +30,7 @@ namespace DoAnCShap
 
         public void HienThiCTHD_TheoMa()
         {
-            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + comboBoxMaHD.Text + "'");
+            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text + "'");
         }
 
         public void HienThiCTHD_TheoMaHD(string condition)
@@ -69,7 +69,7 @@ namespace DoAnCShap
         }
         public void XuLyTextBoxHD(Boolean b1,Boolean b2)
         {
-            comboBoxMaHD.Enabled = b2;
+            txtMaHD.Enabled = b2;
             comboBoxKH.Enabled = b2;
             comboBoxNhanVien.Enabled = b2;
             dateTimePickerNgaylap.Enabled = b2;
@@ -78,7 +78,7 @@ namespace DoAnCShap
 
         public void ClearTextBoxHD()
         {
-            comboBoxMaHD.Controls.Clear();
+            txtMaHD.Controls.Clear();
             comboBoxLK.Controls.Clear();
             comboBoxKH.Controls.Clear();
             comboBoxNhanVien.Controls.Clear();
@@ -114,7 +114,7 @@ namespace DoAnCShap
         {
             try
             {
-                comboBoxMaHD.Text = d.Rows[vitri]["MaHDBH"].ToString();
+                txtMaHD.Text = d.Rows[vitri]["MaHDBH"].ToString();
                 comboBoxKH.Text = d.Rows[vitri]["TenKH"].ToString();
                 comboBoxNhanVien.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaylap.Text = d.Rows[vitri]["NgayLapHDBH"].ToString();
@@ -122,7 +122,7 @@ namespace DoAnCShap
                 labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
                 comboBoxTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
                 //HienThiDS_CTHD(vitri);
-                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+comboBoxMaHD.Text+"'");
+                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+txtMaHD.Text+"'");
             }
             catch
             {
@@ -198,7 +198,7 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-                hdbh.MaHDBH = comboBoxMaHD.Text;
+                hdbh.MaHDBH = txtMaHD.Text;
                 hdbh.MaKH = comboBoxKH.SelectedValue.ToString();
                 hdbh.MaNV = comboBoxNhanVien.SelectedValue.ToString();
                 hdbh.NgayLapHDBH = dateTimePickerNgaylap.Value.Date;
@@ -248,7 +248,7 @@ namespace DoAnCShap
         public void TongThanhToan()
         {
             decimal TongThanhToan = 0;
-            for (int i = 0; i < dataGridViewCTHD.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridViewCTHD.Rows.Count - 0; i++)
             {
                 decimal TT = decimal.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString());
                 TongThanhToan += TT;
@@ -293,10 +293,10 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
-                cthd.MaHDBH = comboBoxMaHD.Text;
+                cthd.MaHDBH = txtMaHD.Text;
                 //cthd.MaLK = comboBoxLK.SelectedValue.ToString();
                 bus.DeleteCTHd(cthd);
-                hdbh.MaHDBH = comboBoxMaHD.Text;
+                hdbh.MaHDBH = txtMaHD.Text;
                 bus.DeleteHoaDon(hdbh);
                 MessageBox.Show("Success !");
                 ClearTextBoxCTHD();
@@ -315,7 +315,7 @@ namespace DoAnCShap
 
         private void btnCapNhat_Click_1(object sender, EventArgs e)
         {
-            string condition = comboBoxMaHD.Text;
+            string condition = txtMaHD.Text;
            
             MessageBox.Show("Seccess !");
             HienThiCTHD_TheoMaHD(condition);
@@ -324,7 +324,7 @@ namespace DoAnCShap
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            cthd.MaHDBH = comboBoxMaHD.Text;
+            cthd.MaHDBH = txtMaHD.Text;
             cthd.MaLK = comboBoxLK.SelectedValue.ToString();
             cthd.SoLuong = int.Parse(textBoxSL.Text);
             cthd.DonGia = decimal.Parse(txtDonGia.Text);
@@ -332,9 +332,9 @@ namespace DoAnCShap
             cthd.ThanhTien = decimal.Parse(labelThanhTien.Text);
             cthd.TrangThai = comboBoxTrangThai.Text;
             bus.UpdateCTHoaDon(cthd);
-            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + comboBoxMaHD.Text + "'");
+            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text + "'");
             TongThanhToan();
-            hdbh.MaHDBH = comboBoxMaHD.Text;
+            hdbh.MaHDBH = txtMaHD.Text;
             hdbh.MaKH = comboBoxKH.SelectedValue.ToString();
             hdbh.MaNV = comboBoxNhanVien.SelectedValue.ToString();
             hdbh.NgayLapHDBH = dateTimePickerNgaylap.Value.Date;
@@ -363,12 +363,12 @@ namespace DoAnCShap
         {
             e.SuppressKeyPress = true;
         }
+
         public static string SetValueForText1 = "";
+
         private void btnInHD_Click(object sender, EventArgs e)
         {
-            Frm_PrintHD FrmIn= new Frm_PrintHD();
-            FrmIn.ShowDialog();
-            SetValueForText1 = comboBoxMaHD.Text;
+            
         }
 
         private void dataGridViewHD_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)

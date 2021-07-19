@@ -41,6 +41,12 @@ namespace DoAnCShap
             this.btnInHD = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHDBH = new System.Windows.Forms.DataGridView();
+            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.labelThoiLaiKhach = new System.Windows.Forms.Label();
@@ -50,6 +56,7 @@ namespace DoAnCShap
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboTrangThai = new System.Windows.Forms.ComboBox();
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.btnThenKH = new System.Windows.Forms.Button();
@@ -63,7 +70,6 @@ namespace DoAnCShap
             this.txtTenkH = new System.Windows.Forms.TextBox();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxNV = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -85,12 +91,6 @@ namespace DoAnCShap
             this.comboBoxSP = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
@@ -136,7 +136,7 @@ namespace DoAnCShap
             // 
             this.btnChonMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChonMua.Image = ((System.Drawing.Image)(resources.GetObject("btnChonMua.Image")));
-            this.btnChonMua.Location = new System.Drawing.Point(177, 255);
+            this.btnChonMua.Location = new System.Drawing.Point(198, 262);
             this.btnChonMua.Name = "btnChonMua";
             this.btnChonMua.Size = new System.Drawing.Size(93, 41);
             this.btnChonMua.TabIndex = 3;
@@ -238,6 +238,42 @@ namespace DoAnCShap
             this.dataGridViewHDBH.TabIndex = 0;
             this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
             // 
+            // TenLK
+            // 
+            this.TenLK.DataPropertyName = "TenLK";
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // SLConLai
+            // 
+            this.SLConLai.HeaderText = "SL Còn Lại";
+            this.SLConLai.Name = "SLConLai";
+            this.SLConLai.Visible = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -259,7 +295,7 @@ namespace DoAnCShap
             // 
             // txtTienKhachDua
             // 
-            this.txtTienKhachDua.Location = new System.Drawing.Point(164, 88);
+            this.txtTienKhachDua.Location = new System.Drawing.Point(146, 88);
             this.txtTienKhachDua.Multiline = true;
             this.txtTienKhachDua.Name = "txtTienKhachDua";
             this.txtTienKhachDua.Size = new System.Drawing.Size(213, 31);
@@ -270,7 +306,7 @@ namespace DoAnCShap
             // 
             this.labelThoiLaiKhach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelThoiLaiKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThoiLaiKhach.Location = new System.Drawing.Point(161, 145);
+            this.labelThoiLaiKhach.Location = new System.Drawing.Point(143, 145);
             this.labelThoiLaiKhach.Name = "labelThoiLaiKhach";
             this.labelThoiLaiKhach.Size = new System.Drawing.Size(216, 32);
             this.labelThoiLaiKhach.TabIndex = 14;
@@ -281,7 +317,7 @@ namespace DoAnCShap
             this.labelTongThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelTongThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongThanhToan.ForeColor = System.Drawing.Color.Red;
-            this.labelTongThanhToan.Location = new System.Drawing.Point(161, 34);
+            this.labelTongThanhToan.Location = new System.Drawing.Point(144, 34);
             this.labelTongThanhToan.Name = "labelTongThanhToan";
             this.labelTongThanhToan.Size = new System.Drawing.Size(216, 32);
             this.labelTongThanhToan.TabIndex = 14;
@@ -291,7 +327,7 @@ namespace DoAnCShap
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(21, 150);
+            this.label18.Location = new System.Drawing.Point(4, 150);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(117, 20);
             this.label18.TabIndex = 5;
@@ -302,7 +338,7 @@ namespace DoAnCShap
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(21, 99);
+            this.label17.Location = new System.Drawing.Point(4, 99);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(122, 20);
             this.label17.TabIndex = 5;
@@ -313,7 +349,7 @@ namespace DoAnCShap
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(21, 46);
+            this.label15.Location = new System.Drawing.Point(4, 46);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(134, 20);
             this.label15.TabIndex = 5;
@@ -340,6 +376,7 @@ namespace DoAnCShap
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.comboTrangThai);
             this.panel3.Controls.Add(this.radioButtonNu);
             this.panel3.Controls.Add(this.radioButtonNam);
             this.panel3.Controls.Add(this.btnThenKH);
@@ -353,7 +390,6 @@ namespace DoAnCShap
             this.panel3.Controls.Add(this.txtTenkH);
             this.panel3.Controls.Add(this.txtMaKH);
             this.panel3.Controls.Add(this.txtSDT);
-            this.panel3.Controls.Add(this.comboBoxTrangThai);
             this.panel3.Controls.Add(this.comboBoxNV);
             this.panel3.Controls.Add(this.dateTimePickerNgayLap);
             this.panel3.Controls.Add(this.label9);
@@ -366,6 +402,18 @@ namespace DoAnCShap
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(760, 251);
             this.panel3.TabIndex = 17;
+            // 
+            // comboTrangThai
+            // 
+            this.comboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTrangThai.FormattingEnabled = true;
+            this.comboTrangThai.Items.AddRange(new object[] {
+            "Chưa Thanh Toán",
+            "Đã Thanh Toán"});
+            this.comboTrangThai.Location = new System.Drawing.Point(114, 174);
+            this.comboTrangThai.Name = "comboTrangThai";
+            this.comboTrangThai.Size = new System.Drawing.Size(186, 24);
+            this.comboTrangThai.TabIndex = 37;
             // 
             // radioButtonNu
             // 
@@ -395,12 +443,13 @@ namespace DoAnCShap
             // 
             this.btnThenKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThenKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThenKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThenKH.Image")));
-            this.btnThenKH.Location = new System.Drawing.Point(690, 83);
+            this.btnThenKH.Location = new System.Drawing.Point(690, 106);
             this.btnThenKH.Name = "btnThenKH";
-            this.btnThenKH.Size = new System.Drawing.Size(61, 38);
+            this.btnThenKH.Size = new System.Drawing.Size(61, 60);
             this.btnThenKH.TabIndex = 34;
-            this.btnThenKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThenKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnThenKH.UseVisualStyleBackColor = true;
             this.btnThenKH.Click += new System.EventHandler(this.btnThenKH_Click);
             // 
@@ -408,12 +457,15 @@ namespace DoAnCShap
             // 
             this.btnTimKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKH.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKH.Image")));
+            this.btnTimKH.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTimKH.Location = new System.Drawing.Point(690, 32);
             this.btnTimKH.Name = "btnTimKH";
-            this.btnTimKH.Size = new System.Drawing.Size(61, 30);
+            this.btnTimKH.Size = new System.Drawing.Size(61, 60);
             this.btnTimKH.TabIndex = 33;
-            this.btnTimKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimKH.Text = "Tìm";
+            this.btnTimKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTimKH.UseVisualStyleBackColor = true;
             this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
             // 
@@ -432,7 +484,7 @@ namespace DoAnCShap
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(308, 156);
+            this.label8.Location = new System.Drawing.Point(313, 172);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 20);
             this.label8.TabIndex = 25;
@@ -503,6 +555,7 @@ namespace DoAnCShap
             this.txtMaKH.Location = new System.Drawing.Point(444, 73);
             this.txtMaKH.Multiline = true;
             this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.ReadOnly = true;
             this.txtMaKH.Size = new System.Drawing.Size(229, 24);
             this.txtMaKH.TabIndex = 31;
             this.txtMaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -519,17 +572,6 @@ namespace DoAnCShap
             this.txtSDT.TabIndex = 32;
             this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // comboBoxTrangThai
-            // 
-            this.comboBoxTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTrangThai.FormattingEnabled = true;
-            this.comboBoxTrangThai.Items.AddRange(new object[] {
-            "Active"});
-            this.comboBoxTrangThai.Location = new System.Drawing.Point(116, 156);
-            this.comboBoxTrangThai.Name = "comboBoxTrangThai";
-            this.comboBoxTrangThai.Size = new System.Drawing.Size(184, 24);
-            this.comboBoxTrangThai.TabIndex = 23;
-            // 
             // comboBoxNV
             // 
             this.comboBoxNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -544,7 +586,7 @@ namespace DoAnCShap
             this.dateTimePickerNgayLap.CustomFormat = "dd.MM.yyyy";
             this.dateTimePickerNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(116, 114);
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(114, 125);
             this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
             this.dateTimePickerNgayLap.Size = new System.Drawing.Size(186, 26);
             this.dateTimePickerNgayLap.TabIndex = 21;
@@ -553,7 +595,7 @@ namespace DoAnCShap
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 156);
+            this.label9.Location = new System.Drawing.Point(10, 172);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
             this.label9.TabIndex = 17;
@@ -564,7 +606,7 @@ namespace DoAnCShap
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(9, 121);
+            this.label11.Location = new System.Drawing.Point(10, 125);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 20);
             this.label11.TabIndex = 16;
@@ -763,42 +805,6 @@ namespace DoAnCShap
             // 
             this.errorMes.ContainerControl = this;
             // 
-            // TenLK
-            // 
-            this.TenLK.DataPropertyName = "TenLK";
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // SLConLai
-            // 
-            this.SLConLai.HeaderText = "SL Còn Lại";
-            this.SLConLai.Name = "SLConLai";
-            this.SLConLai.Visible = false;
-            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -865,7 +871,6 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox txtTenkH;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.ComboBox comboBoxTrangThai;
         private System.Windows.Forms.ComboBox comboBoxNV;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
         private System.Windows.Forms.Label label9;
@@ -893,5 +898,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLConLai;
+        private System.Windows.Forms.ComboBox comboTrangThai;
     }
 }

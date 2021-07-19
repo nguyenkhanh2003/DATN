@@ -63,7 +63,7 @@ namespace DoAnCShap
             btnThenKH.Enabled = b2;
             btnChonMua.Enabled = b2;
             btnLuuHd.Enabled = b2;
-            btnInHD.Enabled = b2;
+            //btnInHD.Enabled = b2;
             btnTimKH.Enabled = b2;
         }
 
@@ -80,14 +80,14 @@ namespace DoAnCShap
             txtDiaChi.Enabled = b2;
             txtSDT.Enabled = b2;
             dateTimePickerNgayLap.Enabled = b2;
-            comboBoxTrangThai.Enabled = b2;
+            comboTrangThai.Enabled = b2;
         }
         public void ClearTextBox()
         {
             txtMaHD.ResetText();
             comboBoxNV.ResetText();
             comboBoxSP.ResetText();
-            comboBoxTrangThai.ResetText();
+            comboTrangThai.ResetText();
             txtSDT.ResetText();
             txtMaKH.ResetText();
             txtTenkH.ResetText();
@@ -98,8 +98,11 @@ namespace DoAnCShap
             labelTongThanhToan.ResetText();
             txtTienKhachDua.ResetText();
             labelThoiLaiKhach.ResetText();
-            dataGridViewHDBH.DataSource = null;
+            dataGridViewHDBH.Rows.Clear();
+            dataGridViewHDBH.Refresh();
+            errorMes.Clear();
         }
+
         public void PhatSinhMaHD()
         {
             int count = 0;
@@ -185,6 +188,7 @@ namespace DoAnCShap
 
         private void btnThemHD_Click(object sender, EventArgs e)
         {
+            ClearTextBox();
             PhatSinhMaHD();
             flag = 1;
             XuLyChucNang(false, true);
@@ -215,16 +219,12 @@ namespace DoAnCShap
             tongtien += tt;
             KM = int.Parse(txtKhuyenMai.Text);
             tt = decimal.Parse(txtDonGia.Text) * (((int)NumreicSL.Value)) - KM;
+            SoluongConLai = SoLuongTon - (((int)NumreicSL.Value));
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
             labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
             labelTongThanhToan.Text = tongtien.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
-            SoluongConLai = SoLuongTon - (((int)NumreicSL.Value));
-            //if(SoluongConLai==0)
-            //{
-            //    MessageBox.Show("Đã Hết Số Lượng Trong Kho");
-            //}    
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
@@ -290,7 +290,7 @@ namespace DoAnCShap
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value.Date;
                 hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
-                hdbh.TrangThai = comboBoxTrangThai.Text;
+                hdbh.TrangThai = comboTrangThai.Text;
                 bus.AddHoaDon(hdbh);
                 string[] b = MaLK.Split(';');
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
@@ -307,14 +307,16 @@ namespace DoAnCShap
                     cthdbh.DonGia = dongia;
                     cthdbh.KhuyenMai = khuyenmai;
                     cthdbh.ThanhTien = thanhtien;
-                    cthdbh.TrangThai = comboBoxTrangThai.Text;
+                    cthdbh.TrangThai = comboTrangThai.Text;
                     lk.MaLK = malk;
                     lk.SoLuong = slconlai;
                     bus.CapNhatSLTon(lk);
                     bus.AddCTHD(cthdbh);
                 }
                 MessageBox.Show("Tạo Hóa Đơn Thành Công ");
-                XuLyTextBox(true, false);
+                btnInHD.Enabled = true;
+                //XuLyTextBox(true, false);
+                XuLyChucNang(true, false);
             }
         }
 
@@ -426,6 +428,7 @@ namespace DoAnCShap
 
         private void Frm_BanHan_Load(object sender, EventArgs e)
         {
+            btnInHD.Enabled = false;
             HienThiSanPham();
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
@@ -506,11 +509,11 @@ namespace DoAnCShap
             {
                 CT_HoaDon cT_HoaDon = new CT_HoaDon
                 {
-                    TenSP = dataGridViewHDBH.Rows[i].Cells[0].Value.ToString(),
-                    SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString()),
-                    DonGia=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString()),
-                    KhuyenMai=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString()),
-                    ThanhTien=decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString()),
+                    TenSP = dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString(),
+                    SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()),
+                    DonGia=decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()),
+                    KhuyenMai=decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString()),
+                    ThanhTien=decimal.Parse(dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value.ToString()),
                     TongThanhToan=decimal.Parse(labelTongThanhToan.Text),
                     TenKH = txtTenkH.Text,
                     DienThoai = txtSDT.Text,
@@ -530,7 +533,7 @@ namespace DoAnCShap
                 frm_in.ShowDialog();
                
             XuLyChucNang(true, false);
-            ClearTextBox();
+            //ClearTextBox();
         }
 
         private void txtMaHD_KeyDown(object sender, KeyEventArgs e)

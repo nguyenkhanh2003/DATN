@@ -56,7 +56,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePickerNgaylap = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
-            this.comboBoxMaHD = new System.Windows.Forms.ComboBox();
             this.comboBoxKH = new System.Windows.Forms.ComboBox();
             this.comboBoxNhanVien = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@
             this.textBoxSL = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -351,9 +351,9 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtMaHD);
             this.panel3.Controls.Add(this.dateTimePickerNgaylap);
             this.panel3.Controls.Add(this.comboBoxTrangThai);
-            this.panel3.Controls.Add(this.comboBoxMaHD);
             this.panel3.Controls.Add(this.comboBoxKH);
             this.panel3.Controls.Add(this.comboBoxNhanVien);
             this.panel3.Controls.Add(this.label6);
@@ -387,15 +387,6 @@
             this.comboBoxTrangThai.Name = "comboBoxTrangThai";
             this.comboBoxTrangThai.Size = new System.Drawing.Size(233, 29);
             this.comboBoxTrangThai.TabIndex = 42;
-            // 
-            // comboBoxMaHD
-            // 
-            this.comboBoxMaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMaHD.FormattingEnabled = true;
-            this.comboBoxMaHD.Location = new System.Drawing.Point(206, 30);
-            this.comboBoxMaHD.Name = "comboBoxMaHD";
-            this.comboBoxMaHD.Size = new System.Drawing.Size(233, 29);
-            this.comboBoxMaHD.TabIndex = 43;
             // 
             // comboBoxKH
             // 
@@ -654,6 +645,15 @@
             this.label7.Text = "Thông Tin Sản Phẩm";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHD.Location = new System.Drawing.Point(206, 35);
+            this.txtMaHD.Multiline = true;
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(233, 29);
+            this.txtMaHD.TabIndex = 47;
+            // 
             // Frm_HoaDonBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,7 +729,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.TextBox textBoxSL;
-        public System.Windows.Forms.ComboBox comboBoxMaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHDBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
@@ -737,5 +736,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLapHDBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.TextBox txtMaHD;
     }
 }
