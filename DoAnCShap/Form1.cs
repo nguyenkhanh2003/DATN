@@ -186,18 +186,18 @@ namespace DoAnCShap
             //Login frmDN = new Login();
             //frmDN.ShowDialog();
             //if (Login.IsClose) this.Close();
-            if (PhanQuyen(15)) btnNhanVien.Enabled = true; else btnNhanVien.Enabled = false;
-            if (PhanQuyen(16)) btnKhachHang.Enabled = true; else btnKhachHang.Enabled = false;
-            if (PhanQuyen(17)) btnLinhKien.Enabled = true; else btnLinhKien.Enabled = false;
-            if (PhanQuyen(18)) btnBanHang.Enabled = true; else btnBanHang.Enabled = false;
-            if (PhanQuyen(19)) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Enabled = false;
-            if (PhanQuyen(20)) btnLoaiLK.Enabled = true; else btnLoaiLK.Enabled = false;
-            if (PhanQuyen(21)) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Enabled = false;
-            if (PhanQuyen(22)) btnBaohanh.Enabled = true; else btnBaohanh.Enabled = false;
-            if (PhanQuyen(23)) btnPhanQuyen.Enabled = true; else btnPhanQuyen.Enabled = false;
-            if (PhanQuyen(24)) btnThongKe.Enabled = true; else btnThongKe.Enabled = false;
-            if (PhanQuyen(25)) btnHoaDon.Enabled = true; else btnHoaDon.Enabled = false;
-            if (PhanQuyen(26)) btnSetting.Enabled = true; else btnSetting.Enabled = false;
+            if (PhanQuyen(15)) btnNhanVien.Enabled = true; else btnNhanVien.Visible = false;
+            if (PhanQuyen(16)) btnKhachHang.Enabled = true; else btnKhachHang.Visible = false;
+            if (PhanQuyen(17)) btnLinhKien.Enabled = true; else btnLinhKien.Visible = false;
+            if (PhanQuyen(18)) btnBanHang.Enabled = true; else btnBanHang.Visible = false;
+            if (PhanQuyen(19)) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Visible = false;
+            if (PhanQuyen(20)) btnLoaiLK.Enabled = true; else btnLoaiLK.Visible = false;
+            if (PhanQuyen(21)) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Visible = false;
+            if (PhanQuyen(22)) btnBaohanh.Enabled = true; else btnBaohanh.Visible = false;
+            if (PhanQuyen(23)) btnPhanQuyen.Enabled = true; else btnPhanQuyen.Visible = false;
+            if (PhanQuyen(24)) btnThongKe.Enabled = true; else btnThongKe.Visible = false;
+            if (PhanQuyen(25)) btnHoaDon.Enabled = true; else btnHoaDon.Visible = false;
+            if (PhanQuyen(26)) btnSetting.Enabled = true; else btnSetting.Visible = false;
             labelHienThiTenDangNhap.Text = Login.TenTaiKhoan;
         }
 
