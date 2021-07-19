@@ -19,7 +19,10 @@ namespace BUS
         {
             return bus.GetCtHoaDon(Condition);
         }
-
+        public DataTable LayDsCTHoaDon(string conditon)
+        {
+            return bus.LayDsCTHoaDon(conditon);
+        }
         public DataTable HienThiCTHDTheoMa(string condition)
         {
             return bus.HienThiHDTheoMa(condition);
@@ -67,6 +70,11 @@ namespace BUS
         public DataTable GetSearch(string condition)
         {
             return bus.GetSearch(condition);
+        }
+
+        public DataTable LayDSSP(string condition)
+        {
+            return bus.LayDSSP(condition);
         }
     }
 }

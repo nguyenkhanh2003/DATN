@@ -133,17 +133,16 @@
   <data name="btnInHoaDon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAk1JREFUSEvF1t9LU2Ecx/Fd9Ad01Y1QWEFIP5AwEEmwy67ypoJQChKvRxFRNw1a
-        0CyzMhaLtCwpFdJtoqtYHUastjI3L87WftCaNK2rQUKtGH77nuM5tnPO1+c8Owt94MWu9nnz3DybjTqF
-        QsGDlhGwpFIp2de3w7+WPTuala9bPzgq6COU1XD4IWC49jiOWgnXHsdRq2GVtTiO1hrmjx8/2rEZXUZC
-        NPK+SIX0WOGSeyecO9YsHGw5JJlCfWiTkvt3MBhCIAmF3pAhPTWcm31hCKvx7iMtgEFVUsmtHIw1qVEr
-        YRa/b7IyLGlQsnK4bR3DbUp2A8P7XYFTrRfuQ+vFFWe8cej98N2Uc/qbKfsjEXZ39sv2dNyCvSeut8vR
-        utGiHS0hqNYWV9mqdimc0w/yIgZ5FaUwOcqDGOSmCXcJSyB++SObEEuaCIUa5KUJHw78AH+iBMHUbxhf
-        z3C1qEFemvC24QXY1xfitt3Op/5shB0+4JxYfUR46B4GpobTQ2uHt+KNm6744MbgGDx9MmrqTr/blN05
-        ALu6x6DOsbh2WOVPLJJPpB71ROqNhOc1Qe5wPj8PzwNB0r27DwweD42AKCb+T9jnnSbd7HWTYrF47WEW
-        dZyFFc6bhTPpLCSTnwzC4Xck03BPOS+FT7LCmUwWxp9Nkq5dvU2ai8+xwj8x3KX+NDaiS8ghiWQXcpU3
-        /jgTg2h0xsDvnTIIvnytufGr2c85jDlkPeXz+NkoR6mDsar+3poQlFnzg6MbFnbpIxQiYpBOpz3KbMWx
-        2f4Cu/AGPW+g+EQAAAAASUVORK5CYII=
+        wwAADsMBx2+oZAAAAjNJREFUSEu9lk9Ik2Ecx99DBy/NnZrePEgWGOzg0cOga8gOXUuL3Ty4MjEI2lQk
+        dhK9SFGg4AipNYIkCOxlCEGXXjCG4KERQUQHd+iioD59v89+jy15594/vvvCh+159jzfz7s/76OWWz5/
+        +rIMjoHywteP6+rw+UWlnlrjUhEsKLOllI9t+baRcyClOJxcCpUM2waydJM4uDyE+Bn4Lc/9y0OIs+Ay
+        MPIxWdI6A/1X4mAO2OvFUj2guAZsUJWxWhpN2OjcAAvggmz5F0xWgCIrL9b0r1VeahsIBo3oNJXZRqew
+        I1sawcSQvLAK4n4/ardgP3v0ncExesviuKoXMBikZDLPcUTivDhSegHDgUx2Vtx9tzR2KT2v4qNF2yqo
+        7K3iL+feqx+Kz4PSu3iQY0fm5c8ax7HM23JiZEYlbjxON6yNhX8ARZ0C8oLiFe2BST0RLTfBPqhTzCvQ
+        30NHQhed/4kL6jaoC9FcTAvxMNgCDtjUc+cdV3En4ibGPcbzOh0B17WUaSHOAt7kUTB9ljgGxh9OParN
+        5ua5mBcSGHbcn5hyZNzTUmwSxZF5Eq/i8pt3ceD4oAy6zktc90lfaHHQeBF/BzypeJamyIfKttMsxjtI
+        gpRXuMeI2WV6xUHXLsU8JvmuT1h+v8srNR/1NaB80mvE7DrVz7+Ed9hNeRLkQJ683qzWjJhBURbkPaL/
+        szRidple8AAkdalbsCG67/isGLE8hsG3+IlsCssRWJLapljWX3YQjqJS55ucAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnThoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

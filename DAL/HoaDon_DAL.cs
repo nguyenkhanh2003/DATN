@@ -25,6 +25,10 @@ namespace DAL
             return KetNoi.GetDataTable(""+Condition);
 
         }
+        public DataTable LayDsCTHoaDon(string condition)
+        {
+            return KetNoi.GetDataTable("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK"+condition);
+        }
         public DataTable GetNhanVien(string conditon)
         {
             return KetNoi.GetDataTable("Select MaNV,TenNV From NhanVien" + conditon);
@@ -71,6 +75,11 @@ namespace DAL
        public DataTable GetSearch(string Condition)
        {
            return KetNoi.GetDataTable(""+Condition);
+       }
+
+       public DataTable LayDSSP(string condition)
+       {
+           return KetNoi.GetDataTable(""+condition);
        }
 
     }

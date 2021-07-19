@@ -54,6 +54,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgaylap = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxKH = new System.Windows.Forms.ComboBox();
@@ -78,7 +79,6 @@
             this.textBoxSL = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -369,6 +369,15 @@
             this.panel3.Size = new System.Drawing.Size(499, 276);
             this.panel3.TabIndex = 32;
             // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHD.Location = new System.Drawing.Point(206, 35);
+            this.txtMaHD.Multiline = true;
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(233, 29);
+            this.txtMaHD.TabIndex = 47;
+            // 
             // dateTimePickerNgaylap
             // 
             this.dateTimePickerNgaylap.CustomFormat = "dd.MM.yyyy";
@@ -423,7 +432,8 @@
             // labelTongThanhToan
             // 
             this.labelTongThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelTongThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongThanhToan.ForeColor = System.Drawing.Color.Red;
             this.labelTongThanhToan.Location = new System.Drawing.Point(207, 199);
             this.labelTongThanhToan.Name = "labelTongThanhToan";
             this.labelTongThanhToan.Size = new System.Drawing.Size(232, 28);
@@ -535,17 +545,18 @@
             // 
             // txtKhuyenMai
             // 
-            this.txtKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhuyenMai.Location = new System.Drawing.Point(165, 165);
             this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(281, 28);
+            this.txtKhuyenMai.Size = new System.Drawing.Size(281, 26);
             this.txtKhuyenMai.TabIndex = 34;
             this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelThanhTien
             // 
             this.labelThanhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThanhTien.ForeColor = System.Drawing.Color.Red;
             this.labelThanhTien.Location = new System.Drawing.Point(164, 205);
             this.labelThanhTien.Name = "labelThanhTien";
             this.labelThanhTien.Size = new System.Drawing.Size(282, 28);
@@ -614,10 +625,10 @@
             // 
             // textBoxSL
             // 
-            this.textBoxSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSL.Location = new System.Drawing.Point(164, 75);
             this.textBoxSL.Name = "textBoxSL";
-            this.textBoxSL.Size = new System.Drawing.Size(282, 28);
+            this.textBoxSL.Size = new System.Drawing.Size(282, 26);
             this.textBoxSL.TabIndex = 35;
             this.textBoxSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxSL.TextChanged += new System.EventHandler(this.textBoxSL_TextChanged);
@@ -625,10 +636,10 @@
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(164, 120);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(281, 28);
+            this.txtDonGia.Size = new System.Drawing.Size(281, 26);
             this.txtDonGia.TabIndex = 35;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -644,15 +655,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Thông Tin Sản Phẩm";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtMaHD
-            // 
-            this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHD.Location = new System.Drawing.Point(206, 35);
-            this.txtMaHD.Multiline = true;
-            this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(233, 29);
-            this.txtMaHD.TabIndex = 47;
             // 
             // Frm_HoaDonBanHang
             // 
