@@ -14,7 +14,7 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("select MaLK,LoaiLinhKien.TenLLK,NhaCungCap.TenNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuong,KhuyenMai,HinhAnh,LinhKien.TrangThai from LinhKien, NhaCungCap,LoaiLinhKien Where NhaCungCap.MaNCC=LinhKien.MaNCC and LoaiLinhKien.MaLLK=LinhKien.MaLLK" + Condition);
+            return KetNoi.GetDataTable("select MaLK,LoaiLinhKien.TenLLK,NhaCungCap.TenNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuongTon,KhuyenMai,HinhAnh,LinhKien.TrangThai from LinhKien, NhaCungCap,LoaiLinhKien Where NhaCungCap.MaNCC=LinhKien.MaNCC and LoaiLinhKien.MaLLK=LinhKien.MaLLK" + Condition);
         }
         //TÌM KIẾM
         public DataTable GetSearch(string Condition)
@@ -24,12 +24,12 @@ namespace DAL
         // THÊM DỮ LIỆU
         public void AddData(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"Insert INTO LinhKien(MaLK,MaLLK,MaNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuong,KhuyenMai,HinhAnh,TrangThai) VALUES(N'"+ex.MaLK+"',N'"+ex.MaLLK+"',N'"+ex.MaNCC+"',N'"+ex.TenLK+"',N'"+ex.BaoHanh+"',N'"+ex.XuatXu+"',N'"+ex.TinhTrang+"',N'"+ex.DonViTinh+"',"+ex.DonGia+","+ex.SoLuong+","+ex.KhuyenMai+",N'"+ex.HinhAnh+"',N'"+ex.TrangThai+"')");
+            KetNoi.ExecuteReader(@"Insert INTO LinhKien(MaLK,MaLLK,MaNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuongTon,KhuyenMai,HinhAnh,TrangThai) VALUES(N'"+ex.MaLK+"',N'"+ex.MaLLK+"',N'"+ex.MaNCC+"',N'"+ex.TenLK+"',N'"+ex.BaoHanh+"',N'"+ex.XuatXu+"',N'"+ex.TinhTrang+"',N'"+ex.DonViTinh+"',"+ex.DonGia+","+ex.SoLuongTon+","+ex.KhuyenMai+",N'"+ex.HinhAnh+"',N'"+ex.TrangThai+"')");
         }
         //  SỬA DỮ LIỆU
         public void EditData(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"Update LinhKien SET MaLLk=N'"+ex.MaLLK+"',MaNCC=N'"+ex.MaNCC+"',TenLK=N'"+ex.TenLK+"',BaoHanh=N'"+ex.BaoHanh+"',XuatXu=N'"+ex.XuatXu+"',TinhTrang=N'"+ex.TinhTrang+"',DonViTinh=N'"+ex.DonViTinh+"',DonGia="+ex.DonGia+",SoLuong="+ex.SoLuong+",KhuyenMai="+ex.KhuyenMai+",HinhAnh=N'"+ex.HinhAnh+"',TrangThai=N'"+ex.TrangThai+"' Where MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Update LinhKien SET MaLLk=N'"+ex.MaLLK+"',MaNCC=N'"+ex.MaNCC+"',TenLK=N'"+ex.TenLK+"',BaoHanh=N'"+ex.BaoHanh+"',XuatXu=N'"+ex.XuatXu+"',TinhTrang=N'"+ex.TinhTrang+"',DonViTinh=N'"+ex.DonViTinh+"',DonGia="+ex.DonGia+",SoLuongTon="+ex.SoLuongTon+",KhuyenMai="+ex.KhuyenMai+",HinhAnh=N'"+ex.HinhAnh+"',TrangThai=N'"+ex.TrangThai+"' Where MaLK=N'"+ex.MaLK+"'");
         }
         //  XÓA DỮ LIỆU
         public void DeleteData(LinhKien ex)

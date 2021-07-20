@@ -113,7 +113,7 @@ namespace DoAnCShap
             else
             {
                 chuoi = Convert.ToString(dataGridViewLK.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0,3)));
                 if (chuoi2 + 1 < 10)
                     txtMaLinhKien.Text = "LK0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
@@ -248,7 +248,7 @@ namespace DoAnCShap
                         lk.TinhTrang = txtTinhTrang.Text;
                         lk.DonViTinh = txtDonViTinh.Text;
                         lk.DonGia = int.Parse(txtDonGia.Text);
-                        lk.SoLuong = int.Parse(txtSoLuong.Text);
+                        lk.SoLuongTon = int.Parse(txtSoLuong.Text);
                         if (txtKhuyenMai.Text == "")
                         {
                             lk.KhuyenMai = 0;
@@ -364,7 +364,7 @@ namespace DoAnCShap
                     lk.TinhTrang = txtTinhTrang.Text;
                     lk.DonViTinh = txtDonViTinh.Text;
                     lk.DonGia = int.Parse(txtDonGia.Text);
-                    lk.SoLuong = int.Parse(txtSoLuong.Text);
+                    lk.SoLuongTon = int.Parse(txtSoLuong.Text);
                     lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
                     if (KiemTra == 1)
                     {
@@ -398,7 +398,7 @@ namespace DoAnCShap
                 txtTinhTrang.Text = d.Rows[vitri]["TinhTrang"].ToString();
                 txtDonViTinh.Text = d.Rows[vitri]["DonViTinh"].ToString();
                 txtDonGia.Text = d.Rows[vitri]["DonGia"].ToString();
-                txtSoLuong.Text = d.Rows[vitri]["SoLuong"].ToString();
+                txtSoLuong.Text = d.Rows[vitri]["SoLuongTon"].ToString();
                 txtKhuyenMai.Text = d.Rows[vitri]["KhuyenMai"].ToString();
                 string[] b = d.Rows[vitri]["HinhAnh"].ToString().Split(';');
                 pictureBox1.Controls.Clear();

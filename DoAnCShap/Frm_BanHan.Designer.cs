@@ -243,6 +243,7 @@ namespace DoAnCShap
             this.dataGridViewHDBH.Size = new System.Drawing.Size(756, 305);
             this.dataGridViewHDBH.TabIndex = 0;
             this.dataGridViewHDBH.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellEndEdit);
+            this.dataGridViewHDBH.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellValueChanged);
             this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
             // 
             // groupBox2
@@ -835,11 +836,13 @@ namespace DoAnCShap
             // 
             this.SLConLai.HeaderText = "SL Còn Lại";
             this.SLConLai.Name = "SLConLai";
+            this.SLConLai.Visible = false;
             // 
             // SoLuongNguyen
             // 
             this.SoLuongNguyen.HeaderText = "Số Lượng Nguyên";
             this.SoLuongNguyen.Name = "SoLuongNguyen";
+            this.SoLuongNguyen.Visible = false;
             // 
             // Frm_BanHan
             // 

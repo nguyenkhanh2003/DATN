@@ -60,12 +60,12 @@ values(N'"+exx.MaHDBH+"',N'"+exx.MaLK+"',"+exx.SoLuong+","+exx.DonGia+","+exx.Kh
 
         public void UpdateSL(LinhKien lk)
         {
-            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuong=" + lk.SoLuong + " Where MaLK='" + lk.MaLK + "' ");
+            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon=" + lk.SoLuongTon + " Where MaLK='" + lk.MaLK + "' ");
         }
 
         public void CapNhatSLTon(LinhKien lk)
         {
-            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuong="+lk.SoLuong+" Where MalK=N'"+lk.MaLK+"'");
+            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon="+lk.SoLuongTon +" Where MalK=N'"+lk.MaLK+"'");
         }
     }
 }

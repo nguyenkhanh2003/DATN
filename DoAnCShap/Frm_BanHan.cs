@@ -157,7 +157,7 @@ namespace DoAnCShap
                 {
                     if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
                     {
-                        if (int.Parse(DSSP.Rows[0]["SoLuong"].ToString()) == 0)
+                        if (int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString()) == 0)
                         {
                             MessageBox.Show("Sản Phẩm Này Đã Hết Hàng");
                         }
@@ -168,8 +168,8 @@ namespace DoAnCShap
                             txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
                             txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
                             NumreicSL.Value = 1;
-                            SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
-                            SoLuongTonNguyen = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
+                            SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
+                            SoLuongTonNguyen = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
                         }
                     }
                 }
@@ -322,7 +322,7 @@ namespace DoAnCShap
                     cthdbh.ThanhTien = thanhtien;
                     cthdbh.TrangThai = comboTrangThai.Text;
                     lk.MaLK = malk;
-                    lk.SoLuong = slconlai;
+                    lk.SoLuongTon = slconlai;
                     bus.CapNhatSLTon(lk);
                     bus.AddCTHD(cthdbh);
                 }
@@ -521,6 +521,17 @@ namespace DoAnCShap
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
+            if(txtTienKhachDua.Text=="")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienKhachDua, "Cần Nhập Tiền Khách Đưa");
+                return;
+            }
+            if(labelThoiLaiKhach.Text=="")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(labelThoiLaiKhach,"");
+            }  
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
@@ -553,7 +564,6 @@ namespace DoAnCShap
                 frm_in.ShowDialog();
                
             XuLyChucNang(true, false);
-            //ClearTextBox();
         }
 
         private void txtMaHD_KeyDown(object sender, KeyEventArgs e)
@@ -631,6 +641,23 @@ namespace DoAnCShap
                for(int i=0;i<dataGridViewHDBH.Rows.Count-0;i++)
                 {
                     ThanhTien = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString())-decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString());
+                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = ThanhTien.ToString();
+                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", decimal.Parse(ThanhTien.ToString()));
+                    SLTonKhoMoi = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuongNguyen"].Value.ToString()) - int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString());
+                    dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value = SLTonKhoMoi.ToString();
+                }
+                TongTienSP();
+            }
+        }
+
+        private void dataGridViewHDBH_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal ThanhTien;
+            if (dataGridViewHDBH.Columns[e.ColumnIndex].Name == "SoLuong")
+            {
+                for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
+                {
+                    ThanhTien = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()) - decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString());
                     dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = ThanhTien.ToString();
                     dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", decimal.Parse(ThanhTien.ToString()));
                     SLTonKhoMoi = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuongNguyen"].Value.ToString()) - int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString());

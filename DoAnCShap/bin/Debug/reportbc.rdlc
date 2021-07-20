@@ -116,7 +116,13 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tổng Thanh Toán   </Value>
+                <Value>Tổng Thanh Toán </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
                 <Style />
               </TextRun>
               <TextRun>
@@ -128,7 +134,7 @@
               <TextRun>
                 <Value>=Fields!TongThanhToan.Value</Value>
                 <Style>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                   <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
@@ -528,13 +534,19 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tiền Khách Đưa    </Value>
+                <Value>Tiền Khách Đưa </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
                 <Style />
               </TextRun>
               <TextRun>
                 <Value>=Fields!TienKhachDua.Value</Value>
                 <Style>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                   <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
@@ -565,13 +577,19 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tiền Thừa      </Value>
+                <Value>Tiền Thừa </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">     </Value>
                 <Style />
               </TextRun>
               <TextRun>
                 <Value>=Fields!TienThua.Value</Value>
                 <Style>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                   <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>

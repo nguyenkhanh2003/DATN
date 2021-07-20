@@ -130,7 +130,7 @@ namespace DoAnCShap
             {
                 if(comboBoxTenLK.Text==DSSP.Rows[0]["TenLK"].ToString())
                 {
-                    SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
+                    SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
                 }    
             }    
             if (textBoxSoLuong.Text == "")
@@ -272,7 +272,7 @@ namespace DoAnCShap
                         cthdn.ThanhTien = thanhtien;
                         cthdn.TrangThai = comboBoxTrangThai.Text;
                         LK.MaLK = malk;
-                        LK.SoLuong = SoLuongKho;
+                        LK.SoLuongTon = SoLuongKho;
                         bus.CapNhatSLKho(LK);
                         bus.AddCTHD(cthdn);
                     }
