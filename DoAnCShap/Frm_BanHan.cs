@@ -104,6 +104,14 @@ namespace DoAnCShap
             errorMes.Clear();
         }
 
+        public void XoaTextBoXSP()
+        {
+            comboBoxSP.ResetText();
+            txtDonGia.ResetText();
+            txtKhuyenMai.ResetText();
+            labelThanhTien.ResetText();
+        }
+
         public void PhatSinhMaHD()
         {
             int count = 0;
@@ -139,6 +147,7 @@ namespace DoAnCShap
         }
         int SoLuongTon;
         int SoluongConLai=0;
+        int SoLuongTonNguyen;
         private void comboBoxSP_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -160,6 +169,7 @@ namespace DoAnCShap
                             txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
                             NumreicSL.Value = 1;
                             SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
+                            SoLuongTonNguyen = int.Parse(DSSP.Rows[0]["SoLuong"].ToString());
                         }
                     }
                 }
@@ -205,7 +215,6 @@ namespace DoAnCShap
             labelTongThanhToan.Text = sum.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
         }
-
 
         private void btnChonMua_Click(object sender, EventArgs e)
         {
@@ -258,11 +267,11 @@ namespace DoAnCShap
             else
             {
                 MaLK += comboBoxSP.SelectedValue.ToString() + ";";
-                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text,SoluongConLai };
+                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text,SoluongConLai,SoLuongTonNguyen };
                 dataGridViewHDBH.Rows.Add(t);
             }
             TongTienSP();
-
+            XoaTextBoXSP();
         }
 
         decimal tongtien = 0;
@@ -610,6 +619,25 @@ namespace DoAnCShap
                 XuLyChucNang(true, false);
                 btnInHD.Enabled = false;
             }    
+        }
+
+        int SLMoi;
+        int SLTonKhoMoi;
+        private void dataGridViewHDBH_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal ThanhTien;
+            if (dataGridViewHDBH.Columns[e.ColumnIndex].Name == "SoLuong")
+            {
+               for(int i=0;i<dataGridViewHDBH.Rows.Count-0;i++)
+                {
+                    ThanhTien = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString())-decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString());
+                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = ThanhTien.ToString();
+                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", decimal.Parse(ThanhTien.ToString()));
+                    SLTonKhoMoi = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuongNguyen"].Value.ToString()) - int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString());
+                    dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value = SLTonKhoMoi.ToString();
+                }
+                TongTienSP();
+            }
         }
     }
 

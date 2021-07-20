@@ -147,12 +147,7 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Tra Cứu Tổng Hợp";
         }
 
-        private void btn_BanHang_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Frm_BanHang());
-            lbl_HienThiForm.Text = "Bán Hàng";
-        }
-
+     
         public static string UserName = "";
         public static bool QLNV;//4
         public static bool QLKH;
