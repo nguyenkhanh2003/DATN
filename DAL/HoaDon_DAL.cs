@@ -27,7 +27,7 @@ namespace DAL
         }
         public DataTable LayDsCTHoaDon(string condition)
         {
-            return KetNoi.GetDataTable("select CT_HoaDonBanHang.MaHDBH,LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK"+condition);
+            return KetNoi.GetDataTable(""+condition);
         }
         public DataTable GetNhanVien(string conditon)
         {
@@ -50,14 +50,18 @@ namespace DAL
         }
         public void UpdateHoaDon(HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"update HoaDonBanHang Set MaKH=N'"+ex.MaKH+"',MaNV=N'"+ex.MaNV+"',NgayLapHDBH=N'"+ex.NgayLapHDBH+"',TongTien="+ex.TongTien+",TrangThai=N'"+ex.TrangThai+"' Where MaHDBH=N'"+ex.MaHDBH+"'");
+            KetNoi.ExecuteReader(@"update HoaDonBanHang Set NgayLapHDBH=N'"+ex.NgayLapHDBH+"',TongTien="+ex.TongTien+",TrangThai=N'"+ex.TrangThai+"' Where MaHDBH=N'"+ex.MaHDBH+"'");
         }
 
         public void UpdateCTHoaDon(CT_HoaDonBanHang exx)
         {
-            KetNoi.ExecuteReader(@"Update CT_HoaDonBanHang Set SoLuong="+exx.SoLuong+",DonGia="+exx.DonGia+",KhuyenMai="+exx.KhuyenMai+",ThanhTien="+exx.ThanhTien+",TrangThai=N'"+exx.TrangThai+"'Where MaLK=N'"+exx.MaLK+ "' and  MaHDBH=N'" + exx.MaHDBH + "'");
+            KetNoi.ExecuteReader(@"Update CT_HoaDonBanHang Set SoLuong="+exx.SoLuong+",DonGia="+exx.DonGia+",KhuyenMai="+exx.KhuyenMai+",ThanhTien="+exx.ThanhTien+",TrangThai=N'"+exx.TrangThai+"' Where MaLK=N'"+exx.MaLK+ "'");
         }
 
+        public void UpdateSoLuongKho(LinhKien ex)
+        {
+            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon="+ex.SoLuongTon+" Where MaLK=N'"+ex.MaLK+"'");
+        }
         public void ThemCTHD(CT_HoaDonBanHang ex)
         {
             KetNoi.ExecuteReader(@"Insert Into CT_HoaDonBanHang(MaHDBH,MaLK,SoLuong,DonGia,KhuyenMai,ThanhTien,TrangThai) Values(N'"+ex.MaHDBH+"',N'"+ex.MaLK+"',"+ex.SoLuong+","+ex.DonGia+","+ex.KhuyenMai+","+ex.ThanhTien+",N'"+ex.TrangThai+"')");

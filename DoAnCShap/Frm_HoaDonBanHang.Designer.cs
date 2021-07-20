@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HoaDonBanHang));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,13 +81,12 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongKhoMoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -207,13 +207,12 @@
             this.dataGridViewCTHD.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCTHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSP,
             this.MaLK,
             this.SoLuong,
             this.DonGia,
             this.KhuyenMai,
-            this.ThanhTien,
-            this.SoLuongKho,
-            this.SoLuongKhoMoi});
+            this.ThanhTien});
             this.dataGridViewCTHD.Location = new System.Drawing.Point(6, 20);
             this.dataGridViewCTHD.Name = "dataGridViewCTHD";
             this.dataGridViewCTHD.RowHeadersVisible = false;
@@ -375,7 +374,6 @@
             // 
             // comboBoxKH
             // 
-            this.comboBoxKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBoxKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKH.FormattingEnabled = true;
             this.comboBoxKH.Location = new System.Drawing.Point(157, 72);
@@ -533,7 +531,7 @@
             this.comboBoxLK.Name = "comboBoxLK";
             this.comboBoxLK.Size = new System.Drawing.Size(278, 28);
             this.comboBoxLK.TabIndex = 43;
-            this.comboBoxLK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxLK_KeyDown);
+//            this.comboBoxLK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxLK_KeyDown);
             // 
             // txtKhuyenMai
             // 
@@ -687,12 +685,18 @@
             // 
             this.errorMes.ContainerControl = this;
             // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaLK";
+            this.MaSP.HeaderText = "Mã Linh Kiện";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
             // MaLK
             // 
             this.MaLK.DataPropertyName = "TenLK";
             this.MaLK.HeaderText = "Tên Linh Kiện";
             this.MaLK.Name = "MaLK";
-            this.MaLK.ReadOnly = true;
             // 
             // SoLuong
             // 
@@ -717,21 +721,11 @@
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle1.Format = "C2";
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle1;
             this.ThanhTien.HeaderText = "Thành Tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
-            // 
-            // SoLuongKho
-            // 
-            this.SoLuongKho.DataPropertyName = "SoLuongTon";
-            this.SoLuongKho.HeaderText = "Số Lượng Kho";
-            this.SoLuongKho.Name = "SoLuongKho";
-            // 
-            // SoLuongKhoMoi
-            // 
-            this.SoLuongKhoMoi.DataPropertyName = "SoLuongKho";
-            this.SoLuongKhoMoi.HeaderText = "Số Lượng Kho Mới";
-            this.SoLuongKhoMoi.Name = "SoLuongKhoMoi";
             // 
             // Frm_HoaDonBanHang
             // 
@@ -817,12 +811,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ErrorProvider errorMes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongKho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongKhoMoi;
     }
 }

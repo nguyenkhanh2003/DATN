@@ -53,7 +53,10 @@ namespace BUS
         {
             bus.UpdateCTHoaDon(exx);
         }
-
+        public void UpdateSoLuongKho(LinhKien ex)
+        {
+            bus.UpdateSoLuongKho(ex);
+        }
         public void ThemCTHD(CT_HoaDonBanHang ex)
         {
             bus.ThemCTHD(ex);
