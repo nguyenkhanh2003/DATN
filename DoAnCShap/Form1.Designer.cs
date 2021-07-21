@@ -29,6 +29,7 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -52,9 +53,10 @@ namespace DoAnCShap
             this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelBot = new System.Windows.Forms.Panel();
+            this.labeldateTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -453,13 +455,25 @@ namespace DoAnCShap
             // panelBot
             // 
             this.panelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(110)))));
-            this.panelBot.Controls.Add(this.dateTimePicker1);
+            this.panelBot.Controls.Add(this.labeldateTime);
             this.panelBot.Controls.Add(this.label1);
             this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBot.Location = new System.Drawing.Point(229, 582);
             this.panelBot.Name = "panelBot";
             this.panelBot.Size = new System.Drawing.Size(799, 45);
             this.panelBot.TabIndex = 24;
+            // 
+            // labeldateTime
+            // 
+            this.labeldateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labeldateTime.BackColor = System.Drawing.Color.Teal;
+            this.labeldateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldateTime.ForeColor = System.Drawing.Color.White;
+            this.labeldateTime.Location = new System.Drawing.Point(470, 6);
+            this.labeldateTime.Name = "labeldateTime";
+            this.labeldateTime.Size = new System.Drawing.Size(317, 33);
+            this.labeldateTime.TabIndex = 1;
+            this.labeldateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -480,14 +494,10 @@ namespace DoAnCShap
             this.panelChildForm.Size = new System.Drawing.Size(799, 532);
             this.panelChildForm.TabIndex = 25;
             // 
-            // dateTimePicker1
+            // timer1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(650, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(114, 26);
-            this.dateTimePicker1.TabIndex = 1;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -541,7 +551,8 @@ namespace DoAnCShap
         public System.Windows.Forms.Button btnThongKe;
         public System.Windows.Forms.Button btnBaohanh;
         public System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label labeldateTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
