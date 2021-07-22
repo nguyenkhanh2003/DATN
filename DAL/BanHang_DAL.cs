@@ -16,7 +16,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien" + Condition);
         }
-
+        public DataTable PhatSinhMaHD(string condition)
+        {
+            return KetNoi.GetDataTable("select * From HoaDonBanHang"+condition);
+        }
          public void AddHoaDon(HoaDonBanHang ex)
         {
             KetNoi.ExecuteReader(@"insert into HoaDonBanHang(MaHDBH,MaKH,MaNV,NgayLapHDBH,TongTien,TrangThai)

@@ -17,6 +17,10 @@ namespace BUS
         {
             return bus.GetData(Condition);
         }
+        public DataTable PhatSinhMa(string condition)
+        {
+            return bus.PhatSinhMa(condition);
+        }
         // Tim Kiem
         public DataTable GetSearch(string condition)
         {

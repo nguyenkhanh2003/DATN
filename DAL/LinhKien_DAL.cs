@@ -14,7 +14,11 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("select MaLK,LoaiLinhKien.TenLLK,NhaCungCap.TenNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuongTon,KhuyenMai,HinhAnh,LinhKien.TrangThai from LinhKien, NhaCungCap,LoaiLinhKien Where NhaCungCap.MaNCC=LinhKien.MaNCC and LoaiLinhKien.MaLLK=LinhKien.MaLLK" + Condition);
+            return KetNoi.GetDataTable("select MaLK,LoaiLinhKien.TenLLK,NhaCungCap.TenNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuongTon,KhuyenMai,HinhAnh from LinhKien, NhaCungCap,LoaiLinhKien Where NhaCungCap.MaNCC=LinhKien.MaNCC and LoaiLinhKien.MaLLK=LinhKien.MaLLK and LinhKien.TrangThai=N'1'" + Condition);
+        }
+        public DataTable PhatSinMa(string condition)
+        {
+            return KetNoi.GetDataTable("Select * From LinhKien "+condition);
         }
         //TÌM KIẾM
         public DataTable GetSearch(string Condition)
@@ -34,7 +38,7 @@ namespace DAL
         //  XÓA DỮ LIỆU
         public void DeleteData(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"DELETE From LinhKien Where MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Update LinhKien Set TrangThai=N'0' Where MaLK=N'"+ex.MaLK+"'");
         }
     }
 }

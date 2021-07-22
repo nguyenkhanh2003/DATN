@@ -6,25 +6,58 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.32892in</Width>
+              <Width>0.61132in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32892in</Width>
+              <Width>1.31083in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.86017in</Width>
+              <Width>0.86291in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32892in</Width>
+              <Width>0.81786in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32892in</Width>
+              <Width>0.88374in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.34208in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
               <Height>0.25in</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>STT</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox2">
@@ -192,6 +225,36 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="STT">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=RowNumber(Nothing)</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>STT</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="TenSP">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -357,6 +420,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -373,7 +437,7 @@
         <Top>0.22792in</Top>
         <Left>0.10417in</Left>
         <Height>0.5in</Height>
-        <Width>6.17585in</Width>
+        <Width>5.82873in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -430,7 +494,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.71402in</Width>
+  <Width>7.59693in</Width>
   <Page>
     <PageHeader>
       <Height>1.76958in</Height>
@@ -768,6 +832,10 @@
         </Field>
         <Field Name="SoLuong">
           <DataField>SoLuong</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="STT">
+          <DataField>STT</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="TenNCC">

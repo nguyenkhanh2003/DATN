@@ -133,6 +133,17 @@ namespace DoAnCShap
             }
         }
 
+        public string PhatSinhMaHDBH(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi =d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(3, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(4, 1);
+            return (int.Parse(macuoi) + 1).ToString();
+        }
+
         private void Frm_BanHang_Load(object sender, EventArgs e)
         {
             HienThiSanPham();
@@ -199,7 +210,17 @@ namespace DoAnCShap
         private void btnThemHD_Click(object sender, EventArgs e)
         {
             ClearTextBox();
-            PhatSinhMaHD();
+            if (f.dataGridViewHD.Rows.Count <= 0)
+            {
+                txtMaHD.Text = "HDB00";
+            }
+            else
+            {
+                if (int.Parse(PhatSinhMaHDBH(bus.PhatSinhMaHDBH(""))) < 10)
+                    txtMaHD.Text = "HDB0" + PhatSinhMaHDBH(bus.PhatSinhMaHDBH(""));
+                else
+                    txtMaHD.Text = "HDB" + PhatSinhMaHDBH(bus.PhatSinhMaHDBH(""));
+            }
             flag = 1;
             XuLyChucNang(false, true);
             XuLyTextBox(false, true);

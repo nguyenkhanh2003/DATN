@@ -17,6 +17,10 @@ namespace BUS
         {
             return bus.GetData(Condition);
         }
+        public DataTable LayDuLieu(string condition)
+        {
+            return bus.LayDuLieu(condition);
+        }
         // Tim kiem
         public DataTable GetSearch(string condition)
         {

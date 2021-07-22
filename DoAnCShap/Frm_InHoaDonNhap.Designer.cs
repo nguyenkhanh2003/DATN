@@ -38,15 +38,16 @@ namespace DoAnCShap
             this.reportViewer2.Location = new System.Drawing.Point(0, 0);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer2.Size = new System.Drawing.Size(1184, 711);
             this.reportViewer2.TabIndex = 0;
             // 
             // Frm_InHoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.reportViewer2);
+            this.MinimumSize = new System.Drawing.Size(800, 700);
             this.Name = "Frm_InHoaDonNhap";
             this.Text = "Frm_InHoaDonNhap";
             this.Load += new System.EventHandler(this.Frm_InHoaDonNhap_Load);

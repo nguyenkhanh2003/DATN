@@ -59,6 +59,17 @@ namespace DoAnCShap
             cboTrangThai.Text = "";
         }
 
+        public string AuToCode(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaLLK"].ToString().Substring(3, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaLLk"].ToString().Substring(4, 1);
+            return (int.Parse(macuoi) + 1).ToString();
+        }
+
         public void PhatSinhMa()
         {
             int count = 0;
@@ -85,7 +96,11 @@ namespace DoAnCShap
             xulychucnang(false, true, false);
             xulytextbox(true, false);
             flag = 1;
-            PhatSinhMa();
+            //PhatSinhMa();
+            if (int.Parse(AuToCode(bus.LayDuLieu(""))) <10)
+                txtMaLoai.Text = "LLK0" + AuToCode(bus.LayDuLieu(""));
+            else
+                txtMaLoai.Text = "LLK" + AuToCode(bus.LayDuLieu(""));
         }
 
         private void Frm_LLinhKien_Load(object sender, EventArgs e)
@@ -150,9 +165,9 @@ namespace DoAnCShap
         {
             if (e.RowIndex == -1) return;
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
-            txtMaLoai.Text = row.Cells[0].Value.ToString();
-            txtTenLoai.Text = row.Cells[1].Value.ToString();
-            cboTrangThai.Text = row.Cells[2].Value.ToString();
+            txtMaLoai.Text = row.Cells["MaLLK"].Value.ToString();
+            txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
+            cboTrangThai.Text = row.Cells["TrangThai"].Value.ToString();
             xulytextbox(false, true);
         }
 
@@ -206,10 +221,7 @@ namespace DoAnCShap
 
         private void dataGridViewKH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewKH.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+           dataGridViewKH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
     }
 }

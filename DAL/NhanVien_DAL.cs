@@ -15,9 +15,12 @@ namespace DAL
         public DataTable GetData(string condition)
         {
             //return KetNoi.GetDataTable("select * from NhanVien where NhanVien.MaCV = ChucVu.MaCV" + condition);
-            return KetNoi.GetDataTable("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV" + condition);
+            return KetNoi.GetDataTable("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and NhanVien.TrangThai=N'1'" + condition);
         }
-
+        public DataTable PhatSinhMa(string condition)
+        {
+            return KetNoi.GetDataTable("Select * From NhanVien"+condition);
+        }
        //Hien Thị Tìm Kiếm
         public DataTable GetTimKiem(string Condition)
         {
@@ -41,7 +44,7 @@ namespace DAL
         //  XÓA DỮ LIỆU
         public void DeleteData(NhanVien ex)
         {
-            KetNoi.ExecuteReader(@"Delete From NhanVien Where MaNV='" + ex.MaNV + "'");
+            KetNoi.ExecuteReader(@"update NhanVien Set TrangThai=N'0' Where MaNV='" + ex.MaNV + "'");
         }
 
         public DataTable ThongTinNhanVien(string condition)

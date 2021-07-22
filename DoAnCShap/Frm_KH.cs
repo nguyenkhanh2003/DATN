@@ -47,9 +47,7 @@ namespace DoAnCShap
             radioButtonNam.Enabled = b1;
             radioButtonNu.Enabled = b1;
             txtSdt.Enabled = b1;
-            //txtCMND.Enabled = b1;
             txtDiaCh.Enabled = b1;
-            cboTrangThai.Enabled = b1;
         }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
         {
@@ -67,7 +65,6 @@ namespace DoAnCShap
             txtDiaCh.Clear();
             txtSdt.Clear();
             errorMes.Clear();
-            cboTrangThai.ResetText();
         }
         public void PhatSinhMa()
         {
@@ -174,7 +171,7 @@ namespace DoAnCShap
                         }    
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
-                        kh.TrangThai = cboTrangThai.Text;
+                        kh.TrangThai = "1";
                         bus.AddData(kh); ;
                         MessageBox.Show("Thêm Khách Hàng Thành Công");
                         xulychucnang(true, false, false);
@@ -237,7 +234,7 @@ namespace DoAnCShap
                    
                     kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
-                    kh.TrangThai = cboTrangThai.Text;
+                    kh.TrangThai = "1";
                     bus.EditData(kh); ;
                     MessageBox.Show("Sửa Dữ Liệu Thành Công");
                     xulychucnang(true, false, false);
@@ -263,7 +260,6 @@ namespace DoAnCShap
                 radioButtonNu.Checked = true;
             txtSdt.Text = row.Cells[4].Value.ToString();
             txtDiaCh.Text = row.Cells[5].Value.ToString();
-            cboTrangThai.Text = row.Cells[6].Value.ToString();
             xulytextbox(false, true);
         }
 
@@ -343,10 +339,7 @@ namespace DoAnCShap
 
         private void dataGridViewKH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewKH.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewKH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
     }
 }

@@ -13,9 +13,12 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select * from LoaiLinhKien" + Condition);
+            return KetNoi.GetDataTable("Select * from LoaiLinhKien Where TrangThai=N'1'" + Condition);
         }
-
+        public DataTable LayDuLieu(string condition)
+        {
+            return KetNoi.GetDataTable("Select * From LoaiLinhKien" + condition);
+        }
         //Tim Kiem
         public DataTable GetSearch(string condition)
         {

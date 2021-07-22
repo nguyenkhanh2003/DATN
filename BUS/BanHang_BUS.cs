@@ -16,7 +16,10 @@ namespace BUS
         {
             return bus.GetData(Condition);
         }
-
+        public DataTable PhatSinhMaHDBH(string condition)
+        {
+            return bus.PhatSinhMaHD(condition);
+        }
         public DataTable GetDSSP(string Condition)
         {
             return bus.GetDSSP(Condition);

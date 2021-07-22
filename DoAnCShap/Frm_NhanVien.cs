@@ -47,7 +47,6 @@ namespace DoAnCShap
             txtSDT.Enabled = b1;
             txtCMND.Enabled = b1;
             txtDiaChi.Enabled = b1;
-            cboTrangThai.Enabled = b1;
         }
       
         public void Clear()
@@ -62,7 +61,6 @@ namespace DoAnCShap
             txtSDT.Clear();
             txtCMND.Clear();
             txtDiaChi.Clear();
-            cboTrangThai.ResetText();
             erroMes.Clear();
         }
         public void xulychucnang(Boolean b1, Boolean b2, Boolean b3)
@@ -93,6 +91,17 @@ namespace DoAnCShap
                 else if (chuoi2 + 1 < 100)
                     txtMaNV.Text = "NV" + (chuoi2 + 1).ToString();
             }
+        }
+
+        public string PhatSinhMaNv(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaNV"].ToString().Substring(2, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaNV"].ToString().Substring(3, 1);
+            return (int.Parse(macuoi) + 1).ToString();
         }
         void Display()
         {
@@ -226,7 +235,17 @@ namespace DoAnCShap
             xulytextbox(true, false);
             Clear();
             xulychucnang(false, true, true);
-            PhatSinhMa();
+            if(dataGridViewNhanVien.Rows.Count<=0)
+            {
+                txtMaNV.Text = "NV00";
+            } 
+            else
+            {
+                if (int.Parse(PhatSinhMaNv(bus.PhatSinhMa(""))) < 10)
+                    txtMaNV.Text = "NV0" + PhatSinhMaNv(bus.PhatSinhMa(""));
+                else
+                    txtMaNV.Text = "NV" +PhatSinhMaNv(bus.PhatSinhMa(""));
+            }    
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -284,12 +303,6 @@ namespace DoAnCShap
                         erroMes.SetError(txtPassWord, "? PassWord");
                         return;
                     }
-                    if (cboTrangThai.Text == "")
-                    {
-                        erroMes.BlinkRate = 100;
-                        erroMes.SetError(cboTrangThai, "? Trạng Thái");
-                        return;
-                    }
 
                     else
                     {
@@ -314,15 +327,21 @@ namespace DoAnCShap
                         {
                             nv.Email = txtEmail.Text;
                         }
-
                         nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
                         nv.DiaChi = txtDiaChi.Text;
-                        nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                        if (pictureBox1.ImageLocation == null)
+                        {
+                            nv.HinhAnh = "Không";
+                        }
+                        else
+                        {
+                            nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                        }
                         nv.UserName = txtUserName.Text;
                         nv.PassWord = txtPassWord.Text;
-                        nv.TrangThai = cboTrangThai.Text;
+                        nv.TrangThai = "1";
                         bus.AddData(nv);
                         MessageBox.Show("Thêm Nhân Viên Thành Công");
                         Clear();
@@ -380,12 +399,7 @@ namespace DoAnCShap
                     erroMes.SetError(txtUserName, "? UserName");
                     return;
                 }
-                if (cboTrangThai.Text == "")
-                {
-                    erroMes.BlinkRate = 100;
-                    erroMes.SetError(cboTrangThai, "? Trạng Thái");
-                    return;
-                }
+              
                 else
                 {
                     int KiemTra = 0;
@@ -415,8 +429,6 @@ namespace DoAnCShap
                     nv.DiaChi = txtDiaChi.Text;
                     if (KiemTra == 1)
                     {
-                        //MessageBox.Show("Tên Hình" + TenHinh);
-                        //return;
                         nv.HinhAnh = TenHinh;
                     }
                     else
@@ -433,8 +445,8 @@ namespace DoAnCShap
                     {
                         MaHoa();
                         nv.PassWord = txtPassWord.Text;
-                    }    
-                    nv.TrangThai = cboTrangThai.Text;
+                    }
+                    nv.TrangThai = "1";
                     bus.EditData(nv);
                     MessageBox.Show("Sửa Nhân Viên Thành Công");
                     Clear();
@@ -488,13 +500,8 @@ namespace DoAnCShap
                 {
 
                 }
-                //pictureBox1.Controls.Clear();
-                //Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + d.Rows[vitri]["HinhAnh"].ToString());
-                //pictureBox1.Image = a;
-                //txtHinhAnh.Text = d.Rows[vitri]["HinhAnh"].ToString();
                 txtUserName.Text = d.Rows[vitri]["UserName"].ToString();
                 PassW = d.Rows[vitri]["PassWord"].ToString();
-                cboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
             }
             catch
             {

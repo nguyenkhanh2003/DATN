@@ -43,7 +43,6 @@ namespace DoAnCShap
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,7 +57,6 @@ namespace DoAnCShap
             this.comboBoxBaoHanh = new System.Windows.Forms.ComboBox();
             this.comboBoxNCC = new System.Windows.Forms.ComboBox();
             this.cboMaLoai = new System.Windows.Forms.ComboBox();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.btnChonAnh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtXuatXu = new System.Windows.Forms.TextBox();
@@ -90,7 +88,6 @@ namespace DoAnCShap
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLK)).BeginInit();
             this.panel1.SuspendLayout();
@@ -145,8 +142,7 @@ namespace DoAnCShap
             this.DonGia,
             this.SoLuong,
             this.KhuyenMai,
-            this.HinhAnh,
-            this.TrangThai});
+            this.HinhAnh});
             this.dataGridViewLK.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
@@ -211,7 +207,6 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
@@ -226,7 +221,6 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.comboBoxBaoHanh);
             this.panel2.Controls.Add(this.comboBoxNCC);
             this.panel2.Controls.Add(this.cboMaLoai);
-            this.panel2.Controls.Add(this.cboTrangThai);
             this.panel2.Controls.Add(this.btnChonAnh);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtXuatXu);
@@ -242,18 +236,6 @@ namespace DoAnCShap
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1160, 266);
             this.panel2.TabIndex = 25;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(736, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 20);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Trạng Thái";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label11
             // 
@@ -418,20 +400,6 @@ namespace DoAnCShap
             this.cboMaLoai.Name = "cboMaLoai";
             this.cboMaLoai.Size = new System.Drawing.Size(302, 28);
             this.cboMaLoai.TabIndex = 36;
-            // 
-            // cboTrangThai
-            // 
-            this.cboTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTrangThai.FormattingEnabled = true;
-            this.cboTrangThai.Items.AddRange(new object[] {
-            "Còn Hàng",
-            "Hết Hàng"});
-            this.cboTrangThai.Location = new System.Drawing.Point(856, 223);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(288, 28);
-            this.cboTrangThai.TabIndex = 36;
             // 
             // btnChonAnh
             // 
@@ -705,12 +673,6 @@ namespace DoAnCShap
             this.HinhAnh.HeaderText = "Hình Ảnh";
             this.HinhAnh.Name = "HinhAnh";
             // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            // 
             // Frm_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -752,7 +714,6 @@ namespace DoAnCShap
         private System.Windows.Forms.TextBox txtDonViTinh;
         private System.Windows.Forms.TextBox txtTinhTrang;
         private System.Windows.Forms.TextBox txtMaLinhKien;
-        private System.Windows.Forms.ComboBox cboTrangThai;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cboMaLoai;
         private System.Windows.Forms.Button btnClose;
@@ -764,7 +725,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxNCC;
         private System.Windows.Forms.TextBox txtXuatXu;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -792,6 +752,5 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhAnh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

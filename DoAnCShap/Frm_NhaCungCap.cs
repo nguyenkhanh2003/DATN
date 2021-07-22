@@ -22,24 +22,23 @@ namespace DoAnCShap
         NhaCungCap_BUS bus = new NhaCungCap_BUS();
         NhaCungCap ncc = new NhaCungCap();
         bool addnew;
-        public void XuLyChucNang(Boolean b1,Boolean b2,Boolean b3)
+        public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3)
         {
             btnAdd.Enabled = b1;
             btnDelete.Enabled = b3;
             btnCancel.Enabled = b2;
             btnSave.Enabled = b2;
         }
-        public void XuLyTexBox(Boolean b1,Boolean b2)
+        public void XuLyTexBox(Boolean b1, Boolean b2)
         {
             txtMaNCC.ReadOnly = b2;
             txtMaNCC.Enabled = b2;
             txtEmail.Enabled = b2;
             txtDiaChi.Enabled = b2;
             txtDienThoai.Enabled = b2;
-            cbotrangthai.Enabled = b2;
             txtTenNCC.Enabled = b2;
         }
-        
+
         void Display()
         {
             dataGridViewNhaCungCap.DataSource = bus.GetData("");
@@ -64,6 +63,17 @@ namespace DoAnCShap
                 else if (chuoi2 + 1 < 100)
                     txtMaNCC.Text = "NCC" + (chuoi2 + 1).ToString();
             }
+        }
+
+        public string PhatSinhMaNCC(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaNCC"].ToString().Substring(3, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaNCC"].ToString().Substring(4, 1);
+            return (int.Parse(macuoi) + 1).ToString();
         }
 
         public void HienThiSearch(string condition)
@@ -104,16 +114,26 @@ namespace DoAnCShap
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            XuLyChucNang(false,true,false);
+            XuLyChucNang(false, true, false);
             ClearTextBox();
-            PhatSinhMa();
+            if(dataGridViewNhaCungCap.Rows.Count<=0)
+            {
+                txtMaNCC.Text = "NCC00";
+            }
+            else
+            {
+                if (int.Parse(PhatSinhMaNCC(bus.PhatSinhMa(""))) < 10)
+                    txtMaNCC.Text ="NCC0" + PhatSinhMaNCC(bus.PhatSinhMa(""));
+                else
+                    txtMaNCC.Text ="NCC" + PhatSinhMaNCC(bus.PhatSinhMa(""));
+            }    
             addnew = true;
             btnCancel.Enabled = true;
             btnSave.Enabled = true;
 
         }
 
-        public void HienThiNCC_TXT(int vitri,DataTable d)
+        public void HienThiNCC_TXT(int vitri, DataTable d)
         {
             try
             {
@@ -122,7 +142,6 @@ namespace DoAnCShap
                 txtDiaChi.Text = d.Rows[vitri]["DiaChi"].ToString();
                 txtDienThoai.Text = d.Rows[vitri]["DienThoai"].ToString();
                 txtEmail.Text = d.Rows[vitri]["Email"].ToString();
-                cbotrangthai.Text = d.Rows[vitri]["TrangThai"].ToString();
             }
             catch
             {
@@ -157,7 +176,7 @@ namespace DoAnCShap
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+
             if (addnew == true)
             {
                 try
@@ -201,16 +220,16 @@ namespace DoAnCShap
                     }
                     else
                     {
-                            ncc.MaNCC = txtMaNCC.Text;
-                            ncc.TenNCC = txtTenNCC.Text;
-                            ncc.Email = txtEmail.Text;
-                            ncc.DienThoai = txtDienThoai.Text;
-                            ncc.DiaChi = txtDiaChi.Text;
-                            ncc.TrangThai = cbotrangthai.Text;
-                            bus.AddData(ncc);
-                            MessageBox.Show("Thành Công");
-                            ClearTextBox();
-                            XuLyChucNang(true, false, false);
+                        ncc.MaNCC = txtMaNCC.Text;
+                        ncc.TenNCC = txtTenNCC.Text;
+                        ncc.Email = txtEmail.Text;
+                        ncc.DienThoai = txtDienThoai.Text;
+                        ncc.DiaChi = txtDiaChi.Text;
+                        ncc.TrangThai = "1";
+                        bus.AddData(ncc);
+                        MessageBox.Show("Thành Công");
+                        ClearTextBox();
+                        XuLyChucNang(true, false, false);
                         XuLyTexBox(true, false);
                     }
                 }
@@ -262,15 +281,15 @@ namespace DoAnCShap
                         return;
                     }
                     else
-                    { 
-                            ncc.MaNCC = txtMaNCC.Text;
-                            ncc.TenNCC = txtTenNCC.Text;
-                            ncc.Email = txtEmail.Text;
-                            ncc.DienThoai = txtDienThoai.Text;
-                            ncc.DiaChi = txtDiaChi.Text;
-                            ncc.TrangThai = cbotrangthai.Text;
-                            bus.EditData(ncc);
-                            MessageBox.Show("Sửa Thành Công");
+                    {
+                        ncc.MaNCC = txtMaNCC.Text;
+                        ncc.TenNCC = txtTenNCC.Text;
+                        ncc.Email = txtEmail.Text;
+                        ncc.DienThoai = txtDienThoai.Text;
+                        ncc.DiaChi = txtDiaChi.Text;
+                        ncc.TrangThai = "1";
+                        bus.EditData(ncc);
+                        MessageBox.Show("Sửa Thành Công");
                         ClearTextBox();
                         XuLyChucNang(true, false, false);
                     }
@@ -288,14 +307,14 @@ namespace DoAnCShap
 
         private void Frm_NhaCungCap_Load(object sender, EventArgs e)
         {
-            XuLyChucNang(true, false,false);
+            XuLyChucNang(true, false, false);
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string condition = txtSearch.Text;
             HienThiSearch(condition);
         }
-      
+
         private void btnTHoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -319,11 +338,11 @@ namespace DoAnCShap
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?","Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if(KQ==DialogResult.OK)
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (KQ == DialogResult.OK)
             {
                 XuLyChucNang(true, false, false);
-            }    
+            }
         }
 
         private void dataGridViewNhaCungCap_DoubleClick(object sender, EventArgs e)

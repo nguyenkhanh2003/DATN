@@ -36,6 +36,7 @@ namespace DoAnCShap
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -266,7 +267,6 @@ namespace DoAnCShap
             this.dataGridViewCTHDNH.TabIndex = 5;
             this.dataGridViewCTHDNH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTHDNH_CellClick);
             this.dataGridViewCTHDNH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewCTHDNH_RowPostPaint);
-            this.dataGridViewCTHDNH.DoubleClick += new System.EventHandler(this.dataGridViewHDNH_DoubleClick);
             // 
             // panel1
             // 
@@ -315,9 +315,9 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(22, 50);
+            this.panel2.Location = new System.Drawing.Point(6, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(461, 332);
+            this.panel2.Size = new System.Drawing.Size(477, 332);
             this.panel2.TabIndex = 61;
             // 
             // comboBoxTrangThai
@@ -330,7 +330,7 @@ namespace DoAnCShap
             "Active"});
             this.comboBoxTrangThai.Location = new System.Drawing.Point(194, 267);
             this.comboBoxTrangThai.Name = "comboBoxTrangThai";
-            this.comboBoxTrangThai.Size = new System.Drawing.Size(245, 24);
+            this.comboBoxTrangThai.Size = new System.Drawing.Size(261, 24);
             this.comboBoxTrangThai.TabIndex = 23;
             // 
             // labelTongThanhToan
@@ -342,7 +342,7 @@ namespace DoAnCShap
             this.labelTongThanhToan.ForeColor = System.Drawing.Color.Red;
             this.labelTongThanhToan.Location = new System.Drawing.Point(194, 221);
             this.labelTongThanhToan.Name = "labelTongThanhToan";
-            this.labelTongThanhToan.Size = new System.Drawing.Size(245, 25);
+            this.labelTongThanhToan.Size = new System.Drawing.Size(261, 25);
             this.labelTongThanhToan.TabIndex = 16;
             this.labelTongThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -355,7 +355,7 @@ namespace DoAnCShap
             this.dateTimePickerNgayLapHDN.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayLapHDN.Location = new System.Drawing.Point(194, 182);
             this.dateTimePickerNgayLapHDN.Name = "dateTimePickerNgayLapHDN";
-            this.dateTimePickerNgayLapHDN.Size = new System.Drawing.Size(245, 26);
+            this.dateTimePickerNgayLapHDN.Size = new System.Drawing.Size(261, 26);
             this.dateTimePickerNgayLapHDN.TabIndex = 15;
             // 
             // comboBoxMaNV
@@ -366,7 +366,7 @@ namespace DoAnCShap
             this.comboBoxMaNV.FormattingEnabled = true;
             this.comboBoxMaNV.Location = new System.Drawing.Point(194, 137);
             this.comboBoxMaNV.Name = "comboBoxMaNV";
-            this.comboBoxMaNV.Size = new System.Drawing.Size(245, 24);
+            this.comboBoxMaNV.Size = new System.Drawing.Size(261, 24);
             this.comboBoxMaNV.TabIndex = 13;
             // 
             // comboBoxNCC
@@ -377,7 +377,7 @@ namespace DoAnCShap
             this.comboBoxNCC.FormattingEnabled = true;
             this.comboBoxNCC.Location = new System.Drawing.Point(194, 91);
             this.comboBoxNCC.Name = "comboBoxNCC";
-            this.comboBoxNCC.Size = new System.Drawing.Size(245, 24);
+            this.comboBoxNCC.Size = new System.Drawing.Size(261, 24);
             this.comboBoxNCC.TabIndex = 14;
             // 
             // txtMaHDN
@@ -388,7 +388,7 @@ namespace DoAnCShap
             this.txtMaHDN.Location = new System.Drawing.Point(194, 43);
             this.txtMaHDN.Multiline = true;
             this.txtMaHDN.Name = "txtMaHDN";
-            this.txtMaHDN.Size = new System.Drawing.Size(245, 25);
+            this.txtMaHDN.Size = new System.Drawing.Size(261, 25);
             this.txtMaHDN.TabIndex = 11;
             this.txtMaHDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -460,7 +460,7 @@ namespace DoAnCShap
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(459, 22);
+            this.label1.Size = new System.Drawing.Size(475, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Chung";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -624,9 +624,9 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridViewHDN);
-            this.groupBox1.Location = new System.Drawing.Point(22, 388);
+            this.groupBox1.Location = new System.Drawing.Point(6, 388);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(535, 317);
+            this.groupBox1.Size = new System.Drawing.Size(551, 317);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Hóa Đơn";
@@ -637,6 +637,7 @@ namespace DoAnCShap
             this.dataGridViewHDN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHDN.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -652,7 +653,7 @@ namespace DoAnCShap
             this.dataGridViewHDN.Name = "dataGridViewHDN";
             this.dataGridViewHDN.ReadOnly = true;
             this.dataGridViewHDN.RowHeadersVisible = false;
-            this.dataGridViewHDN.Size = new System.Drawing.Size(523, 290);
+            this.dataGridViewHDN.Size = new System.Drawing.Size(539, 290);
             this.dataGridViewHDN.TabIndex = 0;
             this.dataGridViewHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDN_CellClick);
             this.dataGridViewHDN.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewHDN_RowPostPaint);
@@ -688,6 +689,8 @@ namespace DoAnCShap
             // NgayLapHDNH
             // 
             this.NgayLapHDNH.DataPropertyName = "NgayLapHDNH";
+            dataGridViewCellStyle8.Format = "dd.MM.yyyy";
+            this.NgayLapHDNH.DefaultCellStyle = dataGridViewCellStyle8;
             this.NgayLapHDNH.HeaderText = "Ngày Lập";
             this.NgayLapHDNH.Name = "NgayLapHDNH";
             this.NgayLapHDNH.ReadOnly = true;
@@ -695,8 +698,8 @@ namespace DoAnCShap
             // TongThanhToan
             // 
             this.TongThanhToan.DataPropertyName = "TongTien";
-            dataGridViewCellStyle8.Format = "N";
-            this.TongThanhToan.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Format = "N";
+            this.TongThanhToan.DefaultCellStyle = dataGridViewCellStyle9;
             this.TongThanhToan.HeaderText = "Tổng Tiền";
             this.TongThanhToan.Name = "TongThanhToan";
             this.TongThanhToan.ReadOnly = true;
@@ -790,6 +793,7 @@ namespace DoAnCShap
             this.SLConLai.HeaderText = "Số L Tồn";
             this.SLConLai.Name = "SLConLai";
             this.SLConLai.ReadOnly = true;
+            this.SLConLai.Visible = false;
             // 
             // Frm_HoaDonNhap
             // 

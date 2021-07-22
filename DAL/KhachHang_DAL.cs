@@ -14,9 +14,12 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select * from KhachHang" + Condition);
+            return KetNoi.GetDataTable("Select * from KhachHang Where TrangThai=N'1'" + Condition);
         }
-       
+        public DataTable PhatSinhMa(string condition)
+        {
+            return KetNoi.GetDataTable("Select * from KhachHang"+condition);
+        }
        public DataTable GetSearch(string Condition)
        {
            return KetNoi.GetDataTable(""+Condition);
@@ -38,7 +41,7 @@ namespace DAL
         //  XÓA DỮ LIỆU
         public void DeleteData(KhachHang ex)
         {
-            KetNoi.ExecuteReader(@"DELETE FROM KhachHang Where MaKH=N'" + ex.MaKH + "'");
+            KetNoi.ExecuteReader(@"Update KhachHang Set TrangThai=N'0' Where MaKH=N'" + ex.MaKH + "'");
         }
         //Tìm Kiếm
         public void SearchData(KhachHang ex)

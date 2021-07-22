@@ -75,7 +75,6 @@ namespace DoAnCShap
             txtDonGia.Enabled = b1;
             txtKhuyenMai.Enabled = b1;
             txtTinhTrang.Enabled = b1;
-            cboTrangThai.Enabled = b1;
             txtMaLinhKien.ReadOnly = b1;
             comboBoxBaoHanh.Enabled = b1;
             txtXuatXu.Enabled = b1;
@@ -93,7 +92,6 @@ namespace DoAnCShap
             txtDonGia.Clear();
             txtKhuyenMai.Clear();
             txtTinhTrang.Clear();
-            cboTrangThai.ResetText();
             txtMaLinhKien.Clear();
             comboBoxBaoHanh.ResetText();
             txtXuatXu.Clear();
@@ -122,6 +120,16 @@ namespace DoAnCShap
 
         }
 
+        public string PhatSinhMaSP(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaLK"].ToString().Substring(2, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaLK"].ToString().Substring(3, 1);
+            return (int.Parse(macuoi) + 1).ToString();
+        }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             pictureBox1.Controls.Clear();
@@ -153,7 +161,10 @@ namespace DoAnCShap
             xulychucnang(false, true, true);
             XuLyTextBox(true, false);
             Clear();
-            PhatSinhMa();
+            if (int.Parse(PhatSinhMaSP(bus.PhatSinhMa(""))) < 10)
+                txtMaLinhKien.Text = "LK0" + PhatSinhMaSP(bus.PhatSinhMa(""));
+            else
+                txtMaLinhKien.Text = "LK" + PhatSinhMaSP(bus.PhatSinhMa(""));
             flag = 1;
         }
 
@@ -231,12 +242,6 @@ namespace DoAnCShap
                         return;
                     }
 
-                    if (cboTrangThai.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(cboTrangThai, "? Chưa chọn trạng thái");
-                        return;
-                    }
                     else
                     {
                         lk.MaLK = txtMaLinhKien.Text;
@@ -266,7 +271,7 @@ namespace DoAnCShap
                             lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
                             LuuAnh();
                         }
-                        lk.TrangThai = cboTrangThai.Text;
+                        lk.TrangThai = "1";
                         bus.AddData(lk);
                         MessageBox.Show("Thành Công");
                         xulychucnang(true, false, false);
@@ -338,12 +343,6 @@ namespace DoAnCShap
                     return;
                 }
 
-                if (cboTrangThai.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(cboTrangThai, "? Chưa chọn trạng thái");
-                    return;
-                }
                 else
                 {
                     int KiemTra = 0;
@@ -375,7 +374,7 @@ namespace DoAnCShap
                         lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
                         LuuAnh();
                     }
-                    lk.TrangThai = cboTrangThai.Text;
+                    lk.TrangThai = "1";
                     bus.EditData(lk);
                     MessageBox.Show("Thành Công");
                     xulychucnang(true, false, false);
@@ -426,7 +425,6 @@ namespace DoAnCShap
                 {
 
                 }
-                cboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
             }
             catch
             {

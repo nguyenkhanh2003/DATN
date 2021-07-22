@@ -86,6 +86,7 @@ namespace DoAnCShap
             comboBoxTenLK.ResetText();
             comboBoxTrangThai.ResetText();
             errorMes.Clear();
+            dataGridViewHDN.Refresh();
         }
         public void PhatSinhMa()
         {
@@ -136,7 +137,6 @@ namespace DoAnCShap
             {
                 DataGridViewRow newRow = new DataGridViewRow();
                 newRow.CreateCells(dataGridViewCTHDNH);
-                //newRow.Cells[0].Value = no + 1;
                 newRow.Cells[1].Value = tenlk;
                 newRow.Cells[2].Value = soluong;
                 newRow.Cells[3].Value = dongia;
@@ -243,20 +243,7 @@ namespace DoAnCShap
 
         private void dataGridViewHDNH_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(false, true, true,false);
-            DialogResult KQ = MessageBox.Show("Xóa SP Này ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (KQ == DialogResult.OK)
-            {
-                cthdn.MaHDNH = txtMaHDN.Text;
-                cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
-                bus.XoaCTHoaDonNhap(cthdn);
-                HienThiCTHD();
-                TongThanhToanMoi();
-            }
-            else
-            {
 
-            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -293,7 +280,7 @@ namespace DoAnCShap
                         decimal dongia = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells["DonGia"].Value.ToString());
                         decimal khuyenmai = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells["KhuyenMai"].Value.ToString());
                         decimal thanhtien = decimal.Parse(dataGridViewCTHDNH.Rows[i].Cells["ThanhTien"].Value.ToString());
-                        int SoLuongKho = int.Parse(dataGridViewCTHDNH.Rows[i].Cells[5].Value.ToString());
+                        int SoLuongKho = int.Parse(dataGridViewCTHDNH.Rows[i].Cells["SLConLai"].Value.ToString());
                         cthdn.MaHDNH = txtMaHDN.Text;
                         cthdn.MaLK = malk;
                         cthdn.SoLuong = soluong;
@@ -410,10 +397,10 @@ namespace DoAnCShap
             comboBoxTenLK.Text = row.Cells["TenLK"].Value.ToString();
             textBoxSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
             textBoxDonGia.Text = row.Cells["DonGia"].Value.ToString();
-            //textBoxDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(textBoxDonGia.Text));
+            textBoxDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(textBoxDonGia.Text));
             textBoxChietKhau.Text = row.Cells["KhuyenMai"].Value.ToString();
             labelThanhTien.Text = row.Cells["ThanhTien"].Value.ToString();
-            //labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
+            labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -471,10 +458,7 @@ namespace DoAnCShap
 
         private void dataGridViewHDN_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewHDN.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewHDN.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -485,7 +469,7 @@ namespace DoAnCShap
 
         public class HoaDonNhap
         {
-            public string STT { get; set; }
+            public int STT { get; set; }
             public string TenSP { get; set; }
             public int SoLuong { get; set; }
             public decimal DonGia { get; set; }
@@ -518,7 +502,7 @@ namespace DoAnCShap
                     TenNV = comboBoxMaNV.Text,
                     NgayLap = dateTimePickerNgayLapHDN.Text,
                     MaHD = txtMaHDN.Text,
-                    //STT = dataGridViewCTHDNH.Rows[i].Cells["STT"].Value.ToString()
+                    //STT =int.Parse(dataGridViewCTHDNH.Rows[i].Cells[0].Value.ToString())
                 };
                 lst.Add(hoaDonNhap);
             }
@@ -545,10 +529,7 @@ namespace DoAnCShap
 
         private void dataGridViewCTHDNH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewCTHDNH.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewCTHDNH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
     }
 }
