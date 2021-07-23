@@ -55,7 +55,7 @@ namespace DAL
 
         public void XoaCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"update where MaPBH=N'"+ex.MaPBH+"'");
+            KetNoi.ExecuteReader(@"Delete From PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"' and MaLK=N'"+ex.MaLK+"'");
         }
 
         public void XoaPhieuBaoHanh(PhieuBaoHanh ex)

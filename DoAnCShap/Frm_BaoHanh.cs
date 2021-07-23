@@ -249,13 +249,27 @@ namespace DoAnCShap
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
-        {
-            ctpbh.MaPBH = txtMaPhieu.Text;
-            bus.XoaCTPhieuBaoHanh(ctpbh);
-            pbh.MaPBH = txtMaPhieu.Text;
-            bus.XoaPhieuBaoHanh(pbh);
-            MessageBox.Show("Success");
-            HienThiDSPhieu();
+        { 
+            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Xóa Hau Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(KQ==DialogResult.OK)
+            {
+                if(flag==1)
+                {
+
+                }
+                if(flag==2)
+                {
+                    ctpbh.MaPBH = txtMaPhieu.Text;
+                    ctpbh.MaLK = comboBoxlK.SelectedValue.ToString();
+                    bus.XoaCTPhieuBaoHanh(ctpbh);
+                    MessageBox.Show("Thành Công");
+                    HienThiDSPhieu();
+                }
+            }
+            else
+            {
+
+            }    
         }
 
         private void dataGridViewCTPBH_DoubleClick(object sender, EventArgs e)
@@ -270,6 +284,7 @@ namespace DoAnCShap
             comboBoxlK.Text = row.Cells[0].Value.ToString();
             txtSL.Text = row.Cells[1].Value.ToString();
             txtGhiChu.Text = row.Cells[2].Value.ToString();
+            flag = 2;
         }
 
         private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
