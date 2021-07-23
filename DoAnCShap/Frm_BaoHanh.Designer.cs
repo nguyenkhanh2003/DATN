@@ -78,6 +78,7 @@ namespace DoAnCShap
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -87,6 +88,7 @@ namespace DoAnCShap
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -105,15 +107,18 @@ namespace DoAnCShap
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(333, 188);
+            this.btnHuy.Location = new System.Drawing.Point(36, 86);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(77, 39);
             this.btnHuy.TabIndex = 0;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -511,10 +516,9 @@ namespace DoAnCShap
             // 
             // btnThemPhieu
             // 
-            this.btnThemPhieu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieu.Image")));
-            this.btnThemPhieu.Location = new System.Drawing.Point(232, 188);
+            this.btnThemPhieu.Location = new System.Drawing.Point(36, 15);
             this.btnThemPhieu.Name = "btnThemPhieu";
             this.btnThemPhieu.Size = new System.Drawing.Size(79, 38);
             this.btnThemPhieu.TabIndex = 4;
@@ -528,18 +532,17 @@ namespace DoAnCShap
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.btnHuy);
-            this.panel4.Controls.Add(this.btnThemPhieu);
             this.panel4.Controls.Add(this.comboBoxlK);
             this.panel4.Controls.Add(this.txtGhiChu);
             this.panel4.Controls.Add(this.txtSL);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(531, 59);
+            this.panel4.Location = new System.Drawing.Point(516, 59);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(641, 242);
+            this.panel4.Size = new System.Drawing.Size(656, 242);
             this.panel4.TabIndex = 13;
             // 
             // label11
@@ -550,7 +553,7 @@ namespace DoAnCShap
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(639, 26);
+            this.label11.Size = new System.Drawing.Size(654, 26);
             this.label11.TabIndex = 17;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -558,27 +561,27 @@ namespace DoAnCShap
             // 
             this.comboBoxlK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxlK.FormattingEnabled = true;
-            this.comboBoxlK.Location = new System.Drawing.Point(232, 38);
+            this.comboBoxlK.Location = new System.Drawing.Point(168, 41);
             this.comboBoxlK.Name = "comboBoxlK";
-            this.comboBoxlK.Size = new System.Drawing.Size(192, 24);
+            this.comboBoxlK.Size = new System.Drawing.Size(222, 24);
             this.comboBoxlK.TabIndex = 11;
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(232, 135);
+            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhiChu.Location = new System.Drawing.Point(168, 135);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(192, 36);
+            this.txtGhiChu.Size = new System.Drawing.Size(222, 69);
             this.txtGhiChu.TabIndex = 15;
             // 
             // txtSL
             // 
             this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.Location = new System.Drawing.Point(232, 80);
+            this.txtSL.Location = new System.Drawing.Point(168, 82);
             this.txtSL.Multiline = true;
             this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(192, 25);
+            this.txtSL.Size = new System.Drawing.Size(222, 25);
             this.txtSL.TabIndex = 16;
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -587,7 +590,7 @@ namespace DoAnCShap
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 135);
+            this.label8.Location = new System.Drawing.Point(24, 138);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 12;
@@ -599,7 +602,7 @@ namespace DoAnCShap
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(58, 85);
+            this.label7.Location = new System.Drawing.Point(24, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 13;
@@ -611,7 +614,7 @@ namespace DoAnCShap
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 45);
+            this.label6.Location = new System.Drawing.Point(24, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 20);
             this.label6.TabIndex = 14;
@@ -621,6 +624,18 @@ namespace DoAnCShap
             // errorMes
             // 
             this.errorMes.ContainerControl = this;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btnThemPhieu);
+            this.panel5.Controls.Add(this.btnHuy);
+            this.panel5.Location = new System.Drawing.Point(449, 29);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(187, 208);
+            this.panel5.TabIndex = 18;
             // 
             // Frm_BaoHanh
             // 
@@ -649,6 +664,7 @@ namespace DoAnCShap
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -701,5 +717,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLayHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.Panel panel5;
     }
 }
