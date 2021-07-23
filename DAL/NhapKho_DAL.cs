@@ -57,12 +57,12 @@ values(N'" + exx.MaHDNH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
 
         public void DeleteHoaDonNhap(HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From HoaDonNhapHang Where MaHDNH=N'" + ex.MaHDNH + "'");
+            KetNoi.ExecuteReader(@"Update HoaDonNhapHang Set TrangThai=N='0' Where MaHDNH=N'" + ex.MaHDNH + "'");
         }
 
         public void DeleteCT_HoaDonNhap(CT_HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'"+ex.MaHDNH+"'");
+            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'"+ex.MaHDNH+"' and MaLK=N'"+ex.MaLK+"'");
         }
 
         public void XoaCTHoaDonNhap(CT_HoaDonNhapHang ex)

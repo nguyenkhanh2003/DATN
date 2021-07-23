@@ -368,6 +368,7 @@ namespace DoAnCShap
         {
             int vitri = dataGridViewHDN.CurrentCell.RowIndex;
             HieThiHoaDonNhapTextBox(vitri, bus.HienThiHDN(""));
+            flag = 1;
         }
 
         private void textBoxSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -399,15 +400,20 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (KQ == DialogResult.OK)
             {
-                cthdn.MaHDNH = txtMaHDN.Text;
-                bus.DeleteCT_HoaDonNhap(cthdn);
-                hdn.MaHDNH = txtMaHDN.Text;
-                bus.DeleteHoaDonNhap(hdn);
-                MessageBox.Show("Success");
-                HienThiHoaDonN();
-                ClearTexBox();
-                dataGridViewCTHDNH.DataSource = null;
-                XuLyChucNang(true, false, false,false);
+              if(flag==1)
+                {
+                    hdn.MaHDNH = txtMaHDN.Text;
+                    bus.DeleteHoaDonNhap(hdn);
+                    MessageBox.Show("Thành Công");
+                }
+              if(flag==2)
+                {
+                    cthdn.MaHDNH = txtMaHDN.Text;
+                    cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+                    bus.DeleteCT_HoaDonNhap(cthdn);
+                    MessageBox.Show("Thành Công");
+                    TongTienSP();
+                }    
             }
             else
             {
@@ -418,14 +424,21 @@ namespace DoAnCShap
         private void dataGridViewCTHDNH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             flag = 2;
-            DataGridViewRow row = dataGridViewCTHDNH.Rows[e.RowIndex];
-            comboBoxTenLK.Text = row.Cells["TenLK"].Value.ToString();
-            textBoxSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
-            textBoxDonGia.Text = row.Cells["DonGia"].Value.ToString();
-            textBoxDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(textBoxDonGia.Text));
-            textBoxChietKhau.Text = row.Cells["KhuyenMai"].Value.ToString();
-            labelThanhTien.Text = row.Cells["ThanhTien"].Value.ToString();
-            labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
+            try
+            {
+                DataGridViewRow row = dataGridViewCTHDNH.Rows[e.RowIndex];
+                comboBoxTenLK.Text = row.Cells["TenLK"].Value.ToString();
+                textBoxSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
+                textBoxDonGia.Text = row.Cells["DonGia"].Value.ToString();
+                textBoxDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(textBoxDonGia.Text));
+                textBoxChietKhau.Text = row.Cells["KhuyenMai"].Value.ToString();
+                labelThanhTien.Text = row.Cells["ThanhTien"].Value.ToString();
+                labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -556,6 +569,11 @@ namespace DoAnCShap
         private void dataGridViewCTHDNH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             dataGridViewCTHDNH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void dataGridViewCTHDNH_DoubleClick(object sender, EventArgs e)
+        {
+            XuLyChucNang(false, true, true, false);
         }
     }
 }

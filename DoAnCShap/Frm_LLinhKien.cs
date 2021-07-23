@@ -40,7 +40,7 @@ namespace DoAnCShap
         {
             txtMaLoai.Enabled = b1;
             txtTenLoai.Enabled = b1;
-            cboTrangThai.Enabled = b1;
+           
 
         }
 
@@ -56,7 +56,7 @@ namespace DoAnCShap
         {
             txtMaLoai.Clear();
             txtTenLoai.Clear();
-            cboTrangThai.Text = "";
+           
         }
 
         public string AuToCode(DataTable d)
@@ -116,11 +116,7 @@ namespace DoAnCShap
                 MessageBox.Show("Chưa nhập tên loại");
                 return;
             }
-            if(cboTrangThai.Text=="")
-            {
-                MessageBox.Show("Chưa chọn trạng thái");
-                return;
-            }    
+           
 
             if (flag == 1)
             {
@@ -128,7 +124,7 @@ namespace DoAnCShap
                 {
                     llk.MaLLK = txtMaLoai.Text;
                     llk.TenLLK = txtTenLoai.Text;
-                    llk.TrangThai = cboTrangThai.Text;
+                    llk.TrangThai = "1";
                     bus.AddData(llk); ;
                     MessageBox.Show("Thêm Loại Linh Kiện Thành Công");
                     xulychucnang(true, false, false);
@@ -144,7 +140,7 @@ namespace DoAnCShap
             {
                 llk.MaLLK = txtMaLoai.Text;
                 llk.TenLLK = txtTenLoai.Text;
-                llk.TrangThai = cboTrangThai.Text;
+                llk.TrangThai = "1";
                 bus.EditData(llk);
                 MessageBox.Show("Sửa Loại linh Kiện Thành Công");
                 xulychucnang(true, false, false);
@@ -167,7 +163,6 @@ namespace DoAnCShap
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
             txtMaLoai.Text = row.Cells["MaLLK"].Value.ToString();
             txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
-            cboTrangThai.Text = row.Cells["TrangThai"].Value.ToString();
             xulytextbox(false, true);
         }
 

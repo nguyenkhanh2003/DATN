@@ -37,8 +37,6 @@ namespace DoAnCShap
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenLoai = new System.Windows.Forms.TextBox();
@@ -94,48 +92,26 @@ namespace DoAnCShap
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // cboTrangThai
-            // 
-            this.cboTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboTrangThai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTrangThai.FormattingEnabled = true;
-            this.cboTrangThai.Items.AddRange(new object[] {
-            "1"});
-            this.cboTrangThai.Location = new System.Drawing.Point(139, 110);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(247, 29);
-            this.cboTrangThai.TabIndex = 40;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 28);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Trạng Thái";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 63);
+            this.label1.Location = new System.Drawing.Point(37, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 39;
             this.label1.Text = "Tên Loại";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 17);
+            this.label2.Location = new System.Drawing.Point(37, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 28);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 39;
             this.label2.Text = "Mã Loại";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -293,9 +269,7 @@ namespace DoAnCShap
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.cboTrangThai);
             this.panel2.Controls.Add(this.txtTenLoai);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtMaLoai);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
@@ -342,6 +316,7 @@ namespace DoAnCShap
             this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Visible = false;
             // 
             // Frm_LLinhKien
             // 
@@ -371,8 +346,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.ComboBox cboTrangThai;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenLoai;
