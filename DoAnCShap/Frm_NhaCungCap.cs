@@ -348,6 +348,7 @@ namespace DoAnCShap
         private void dataGridViewNhaCungCap_DoubleClick(object sender, EventArgs e)
         {
             XuLyChucNang(false, true, true);
+            XuLyTexBox(false, true);
         }
 
 
@@ -357,6 +358,11 @@ namespace DoAnCShap
             {
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
