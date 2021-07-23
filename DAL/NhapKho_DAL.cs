@@ -32,7 +32,11 @@ namespace DAL
 
         public DataTable HienThiHDN(string condition)
         {
-            return KetNoi.GetDataTable("select MaHDNH,NCC.TenNCC,NV.TenNV,NgayLapHDNH,TongTien,HD.TrangThai From HoaDonNhapHang HD,NhaCungCap NCC,NhanVien NV Where NV.MaNV=HD.MaNV and NCC.MaNCC=HD.MaNCC" + condition);
+            return KetNoi.GetDataTable("select MaHDNH,NCC.TenNCC,NV.TenNV,NgayLapHDNH,TongTien,HD.TrangThai From HoaDonNhapHang HD,NhaCungCap NCC,NhanVien NV Where NV.MaNV=HD.MaNV and NCC.MaNCC=HD.MaNCC and HD.TrangThai=N'1'" + condition);
+        }
+        public DataTable PhatSinhMa(string condition)
+        {
+            return KetNoi.GetDataTable("Select * From HoaDonNhapHang"+condition);
         }
 
         public DataTable HienThiCTHDNH(string condition)

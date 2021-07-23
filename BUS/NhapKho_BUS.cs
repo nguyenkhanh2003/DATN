@@ -41,6 +41,10 @@ namespace BUS
         {
             return bus.HienThiHDN(condition);
         }
+        public DataTable PhatSinhMa(string condition)
+        {
+            return bus.PhatSinhMa(condition);
+        }
         public DataTable HienThiCTHDNH(string condition)
         {
             return bus.HienThiCTHDNH(condition);

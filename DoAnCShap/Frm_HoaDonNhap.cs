@@ -84,9 +84,14 @@ namespace DoAnCShap
             comboBoxMaNV.ResetText();
             comboBoxNCC.ResetText();
             comboBoxTenLK.ResetText();
-            comboBoxTrangThai.ResetText();
             errorMes.Clear();
             dataGridViewHDN.Refresh();
+        }
+
+        public void ResetDataFriview()
+        {
+            dataGridViewHDN.CancelEdit();
+            dataGridViewCTHDNH.CancelEdit();
         }
         public void PhatSinhMa()
         {
@@ -108,10 +113,31 @@ namespace DoAnCShap
                     txtMaHDN.Text = "PN" + (chuoi2 + 1).ToString();
             }
         }
+
+        public string PhatSinhMaHDN(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaHDNH"].ToString().Substring(3, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaHDNH"].ToString().Substring(4, 1);
+            return (int.Parse(macuoi) + 1).ToString();
+        }
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
             ClearTexBox();
-            PhatSinhMa();
+            if(dataGridViewHDN.Rows.Count<=0)
+            {
+                txtMaHDN.Text = "HDN00";
+            }
+            else
+            {
+                if (int.Parse(PhatSinhMaHDN(bus.PhatSinhMa(""))) < 10)
+                    txtMaHDN.Text = "HDN0" + PhatSinhMaHDN(bus.PhatSinhMa(""));
+                else
+                    txtMaHDN.Text = "HDN" + PhatSinhMaHDN(bus.PhatSinhMa(""));
+            }    
             flag = 1;
             XuLyChucNang(false, true, false,true);
         }
@@ -269,7 +295,7 @@ namespace DoAnCShap
                     hdn.MaNV = comboBoxMaNV.SelectedValue.ToString();
                     hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
                     hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
-                    hdn.TrangThai = comboBoxTrangThai.Text;
+                    hdn.TrangThai = "1";
                     bus.AddHoaDon(hdn);
                     string[] b = MaLK.Split(';');
                     for (int i = 0; i < dataGridViewCTHDNH.Rows.Count - 0; i++)
@@ -287,7 +313,7 @@ namespace DoAnCShap
                         cthdn.DonGia = dongia;
                         cthdn.KhuyenMai = khuyenmai;
                         cthdn.ThanhTien = thanhtien;
-                        cthdn.TrangThai = comboBoxTrangThai.Text;
+                        cthdn.TrangThai = "1";
                         LK.MaLK = malk;
                         LK.SoLuongTon = SoLuongKho;
                         bus.CapNhatSLKho(LK);
@@ -330,7 +356,6 @@ namespace DoAnCShap
                 dateTimePickerNgayLapHDN.Text = d.Rows[vitri]["NgayLapHDNH"].ToString();
                 labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
                 labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
-                comboBoxTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
                 dataGridViewCTHDNH.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
             }
             catch
@@ -444,6 +469,7 @@ namespace DoAnCShap
             {
                 XuLyChucNang(true, false, false,false);
                 ClearTexBox();
+                ResetDataFriview();
             }
             else
             {

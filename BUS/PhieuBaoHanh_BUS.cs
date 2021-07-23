@@ -15,6 +15,10 @@ namespace BUS
         {
             return bus.GetPBH(condition);
         }
+        public DataTable PhatSinhMa(string condition)
+        {
+            return bus.PhatSinhMa(condition);
+        }
         public DataTable HienThiHhDBH(string condition)
         {
             return bus.HienThiHDBH(condition);

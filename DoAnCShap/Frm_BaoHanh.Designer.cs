@@ -41,13 +41,6 @@ namespace DoAnCShap
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPBH = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLayHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
             this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,15 +65,20 @@ namespace DoAnCShap
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.btnXoaCT = new System.Windows.Forms.Button();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxlK = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtSL = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLayHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -222,59 +220,11 @@ namespace DoAnCShap
             this.dataGridViewPBH.Name = "dataGridViewPBH";
             this.dataGridViewPBH.ReadOnly = true;
             this.dataGridViewPBH.RowHeadersVisible = false;
-            this.dataGridViewPBH.Size = new System.Drawing.Size(599, 276);
+            this.dataGridViewPBH.Size = new System.Drawing.Size(608, 276);
             this.dataGridViewPBH.TabIndex = 0;
             this.dataGridViewPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPBH_CellClick);
             this.dataGridViewPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewPBH_RowPostPaint);
             this.dataGridViewPBH.DoubleClick += new System.EventHandler(this.dataGridViewPBH_DoubleClick);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // MaPBH
-            // 
-            this.MaPBH.DataPropertyName = "MaPBH";
-            this.MaPBH.HeaderText = "Mã Phiếu";
-            this.MaPBH.Name = "MaPBH";
-            this.MaPBH.ReadOnly = true;
-            // 
-            // MaHDBH
-            // 
-            this.MaHDBH.DataPropertyName = "MaHDBH";
-            this.MaHDBH.HeaderText = "Mã Hóa Đơn";
-            this.MaHDBH.Name = "MaHDBH";
-            this.MaHDBH.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "TenNV";
-            this.MaNV.HeaderText = "Tên Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLapPhieu";
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.ReadOnly = true;
-            // 
-            // NgayLayHang
-            // 
-            this.NgayLayHang.DataPropertyName = "NgayLayHang";
-            this.NgayLayHang.HeaderText = "Ngày Lấy Hàng";
-            this.NgayLayHang.Name = "NgayLayHang";
-            this.NgayLayHang.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -301,11 +251,11 @@ namespace DoAnCShap
             this.MaLKK,
             this.SoLuong,
             this.GhiChu});
-            this.dataGridViewCTPBH.Location = new System.Drawing.Point(17, 21);
+            this.dataGridViewCTPBH.Location = new System.Drawing.Point(6, 21);
             this.dataGridViewCTPBH.Name = "dataGridViewCTPBH";
             this.dataGridViewCTPBH.ReadOnly = true;
             this.dataGridViewCTPBH.RowHeadersVisible = false;
-            this.dataGridViewCTPBH.Size = new System.Drawing.Size(503, 276);
+            this.dataGridViewCTPBH.Size = new System.Drawing.Size(514, 276);
             this.dataGridViewCTPBH.TabIndex = 0;
             this.dataGridViewCTPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTPBH_CellClick);
             this.dataGridViewCTPBH.DoubleClick += new System.EventHandler(this.dataGridViewCTPBH_DoubleClick);
@@ -517,7 +467,7 @@ namespace DoAnCShap
             this.btnThemPhieu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhieu.Image")));
-            this.btnThemPhieu.Location = new System.Drawing.Point(497, 44);
+            this.btnThemPhieu.Location = new System.Drawing.Point(232, 188);
             this.btnThemPhieu.Name = "btnThemPhieu";
             this.btnThemPhieu.Size = new System.Drawing.Size(79, 38);
             this.btnThemPhieu.TabIndex = 4;
@@ -534,10 +484,8 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.btnXoaCT);
             this.panel4.Controls.Add(this.btnThemPhieu);
-            this.panel4.Controls.Add(this.cboTrangThai);
             this.panel4.Controls.Add(this.comboBoxlK);
             this.panel4.Controls.Add(this.txtGhiChu);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.txtSL);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
@@ -564,7 +512,7 @@ namespace DoAnCShap
             this.btnXoaCT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoaCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaCT.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaCT.Image")));
-            this.btnXoaCT.Location = new System.Drawing.Point(497, 105);
+            this.btnXoaCT.Location = new System.Drawing.Point(336, 188);
             this.btnXoaCT.Name = "btnXoaCT";
             this.btnXoaCT.Size = new System.Drawing.Size(79, 38);
             this.btnXoaCT.TabIndex = 4;
@@ -572,18 +520,6 @@ namespace DoAnCShap
             this.btnXoaCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoaCT.UseVisualStyleBackColor = true;
             this.btnXoaCT.Click += new System.EventHandler(this.btnXoaCT_Click);
-            // 
-            // cboTrangThai
-            // 
-            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTrangThai.FormattingEnabled = true;
-            this.cboTrangThai.Items.AddRange(new object[] {
-            "Đang Chớ Xử Lý",
-            "Đã Xử Lý"});
-            this.cboTrangThai.Location = new System.Drawing.Point(232, 200);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(192, 24);
-            this.cboTrangThai.TabIndex = 10;
             // 
             // comboBoxlK
             // 
@@ -602,18 +538,6 @@ namespace DoAnCShap
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(192, 36);
             this.txtGhiChu.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Trạng Thái";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtSL
             // 
@@ -664,6 +588,55 @@ namespace DoAnCShap
             // errorMes
             // 
             this.errorMes.ContainerControl = this;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaPBH
+            // 
+            this.MaPBH.DataPropertyName = "MaPBH";
+            this.MaPBH.HeaderText = "Mã Phiếu";
+            this.MaPBH.Name = "MaPBH";
+            this.MaPBH.ReadOnly = true;
+            // 
+            // MaHDBH
+            // 
+            this.MaHDBH.DataPropertyName = "MaHDBH";
+            this.MaHDBH.HeaderText = "Mã Hóa Đơn";
+            this.MaHDBH.Name = "MaHDBH";
+            this.MaHDBH.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "TenNV";
+            this.MaNV.HeaderText = "Tên Nhân Viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLapPhieu";
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            // 
+            // NgayLayHang
+            // 
+            this.NgayLayHang.DataPropertyName = "NgayLayHang";
+            this.NgayLayHang.HeaderText = "Ngày Lấy Hàng";
+            this.NgayLayHang.Name = "NgayLayHang";
+            this.NgayLayHang.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            this.TrangThai.Visible = false;
             // 
             // Frm_BaoHanh
             // 
@@ -727,18 +700,17 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBoxlK;
         private System.Windows.Forms.TextBox txtGhiChu;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboTrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnXoaCT;
         private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.ErrorProvider errorMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHDBH;
@@ -746,6 +718,5 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLayHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.ErrorProvider errorMes;
     }
 }

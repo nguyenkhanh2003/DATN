@@ -79,14 +79,23 @@ namespace DoAnCShap
             comboBoxlK.ResetText();
             txtSL.ResetText();
             txtGhiChu.ResetText();
-            cboTrangThai.ResetText();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
             XuLyChucNang(false, true);
-            PhatSinhMaHD();
+            if (dataGridViewPBH.Rows.Count <= 0)
+            {
+                txtMaPhieu.Text = "PBH00";
+            }
+            else
+            {
+                if (int.Parse(PhatSinhMaPBH(bus.PhatSinhMa(""))) < 10)
+                    txtMaPhieu.Text = "PBH0" + bus.PhatSinhMa("");
+                else
+                    txtMaPhieu.Text = "PBH" + bus.PhatSinhMa("");
+            }
         }
 
         private void Frm_BaoHanh_Load(object sender, EventArgs e)
@@ -122,6 +131,16 @@ namespace DoAnCShap
         }
         string MaLK = "";
 
+        public string PhatSinhMaPBH(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaPBH"].ToString().Substring(3, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaPBH"].ToString().Substring(4, 1);
+            return (int.Parse(macuoi) + 1).ToString();
+        }
         private void btnThemPhieu_Click(object sender, EventArgs e)
         {
             int KiemTra = 0;
@@ -171,7 +190,7 @@ namespace DoAnCShap
                 pbh.MaNV = comboBoxNV.SelectedValue.ToString();
                 pbh.NgayLap = dateTimePickerNgaLap.Value.Date;
                 pbh.NgayLayHang = dateTimePickerNgayLayHang.Value.Date;
-                pbh.TrangThai = cboTrangThai.Text;
+                pbh.TrangThai = "1";
                 bus.ThemPBH(pbh);
                 string[] b = MaLK.Split(';');
                 for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)

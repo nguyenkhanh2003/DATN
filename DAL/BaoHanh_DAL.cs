@@ -13,9 +13,12 @@ namespace DAL
 
         public DataTable GetPBH(string condition)
         {
-            return KetNoi.GetDataTable("Select PhieuBaoHanh.MaPBH,PhieuBaoHanh.MaHDBH,NhanVien.TenNV,PhieuBaoHanh.NgayLapPhieu,PhieuBaoHanh.NgayLayHang,PhieuBaoHanh.TrangThai From PhieuBaoHanh, NhanVien Where PhieuBaoHanh.MaNV=NhanVien.MaNV" + condition);
+            return KetNoi.GetDataTable("Select PhieuBaoHanh.MaPBH,PhieuBaoHanh.MaHDBH,NhanVien.TenNV,PhieuBaoHanh.NgayLapPhieu,PhieuBaoHanh.NgayLayHang,PhieuBaoHanh.TrangThai From PhieuBaoHanh, NhanVien Where PhieuBaoHanh.MaNV=NhanVien.MaNV and PhieuBaoHanh.TrangThai=N'1'" + condition);
         }
-
+        public DataTable PhatSinhMa(string condition)
+        {
+            return KetNoi.GetDataTable("Select * From PhieuBaoHanh"+condition);
+        }
         public DataTable HienThiHDBH(string condition)
         {
             return KetNoi.GetDataTable("select * From HoaDonBanHang" + condition);
@@ -52,12 +55,12 @@ namespace DAL
 
         public void XoaCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@" delete from CT_PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"'");
+            KetNoi.ExecuteReader(@"update where MaPBH=N'"+ex.MaPBH+"'");
         }
 
         public void XoaPhieuBaoHanh(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Delete From PhieuBaoHanh Where MaPBH=N'"+ex.MaPBH+"'");
+            KetNoi.ExecuteReader(@"Update PhieuBaoHanh Set TrangThai=N'0' Where MaPBH=N'"+ex.MaPBH+"'");
         }
 
         public void Update_CTPBH(CT_PhieuBaoHanh ex)
