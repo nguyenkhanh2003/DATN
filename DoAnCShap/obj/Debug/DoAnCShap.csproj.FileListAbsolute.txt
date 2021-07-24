@@ -329,3 +329,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.Cop
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_InHoaDonNhap.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.Design.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.dll
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.Fonts.dll
