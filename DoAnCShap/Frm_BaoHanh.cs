@@ -142,7 +142,6 @@ namespace DoAnCShap
                 MessageBox.Show("? Ghi Chú");
                 return;
             }    
-            MaLK += comboBoxlK.SelectedValue.ToString() + ";";
             for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
             {
                 if (comboBoxlK.Text == dataGridViewCTPBH.Rows[i].Cells["MaLKK"].Value.ToString())
@@ -197,11 +196,11 @@ namespace DoAnCShap
                     string[] b = MaLK.Split(';');
                     for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
                     {
-                        string malk = b[i];
+                        string tenlk = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString();
                         int soluong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString());
                         string ghichu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString();
                         ctpbh.MaPBH = txtMaPhieu.Text;
-                        ctpbh.MaLK = malk;
+                        ctpbh.TenLK = tenlk;
                         ctpbh.SoLuong = soluong;
                         ctpbh.GhiChu = ghichu;
                         bus.ThemCTPhieuBH(ctpbh);
@@ -215,7 +214,7 @@ namespace DoAnCShap
             if(flag==2)
             {
                 ctpbh.MaPBH = txtMaPhieu.Text;
-                ctpbh.MaLK = comboBoxlK.SelectedValue.ToString();
+                ctpbh.TenLK = comboBoxlK.Text;
                 ctpbh.SoLuong =int.Parse(txtSL.Text);
                 ctpbh.GhiChu = txtGhiChu.Text;
                 bus.Update_CTPBH(ctpbh);
@@ -238,7 +237,7 @@ namespace DoAnCShap
                 comboBoxNV.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaLap.Text = d.Rows[vitri]["NgayLapPhieu"].ToString();
                 dateTimePickerNgayLayHang.Text = d.Rows[vitri]["NgayLayHang"].ToString();
-                dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
+                dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh Where MaPBH=N'" + txtMaPhieu.Text + "'");
             }
             catch
             {
@@ -266,7 +265,7 @@ namespace DoAnCShap
                 if(flag==2)
                 {
                     ctpbh.MaPBH = txtMaPhieu.Text;
-                    ctpbh.MaLK = comboBoxlK.SelectedValue.ToString();
+                    ctpbh.TenLK = comboBoxlK.Text;
                     bus.XoaCTPhieuBaoHanh(ctpbh);
                     MessageBox.Show("Thành Công");
                     HienThiDSPhieu();
@@ -305,7 +304,7 @@ namespace DoAnCShap
             if(KQ==DialogResult.OK)
             {
                 ctpbh.MaPBH = txtMaPhieu.Text;
-                ctpbh.MaLK = comboBoxlK.SelectedValue.ToString();
+                ctpbh.TenLK = comboBoxlK.Text;
                 bus.XoaCTPhieuBaoHanh(ctpbh);
                 MessageBox.Show("Success");
                 dataGridViewCTPBH.DataSource= bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
@@ -339,10 +338,7 @@ namespace DoAnCShap
 
         private void dataGridViewPBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewPBH.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewPBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
         private void btnIn_Click(object sender, EventArgs e)

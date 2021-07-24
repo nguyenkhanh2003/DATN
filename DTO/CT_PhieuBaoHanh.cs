@@ -9,7 +9,7 @@ namespace DTO
    public class CT_PhieuBaoHanh
     {
         public string MaPBH { get; set; }
-        public string MaLK { get; set; }
+        public string TenLK { get; set; }
         public int SoLuong { get; set; }
         public string GhiChu { get; set; }
 

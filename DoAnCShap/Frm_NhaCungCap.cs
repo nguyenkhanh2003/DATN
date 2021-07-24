@@ -354,10 +354,7 @@ namespace DoAnCShap
 
         private void dataGridViewNhaCungCap_RowPostPaint_1(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewNhaCungCap.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewNhaCungCap.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

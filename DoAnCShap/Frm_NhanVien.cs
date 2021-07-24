@@ -331,7 +331,7 @@ namespace DoAnCShap
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
                         nv.DiaChi = txtDiaChi.Text;
-                        if (pictureBox1.ImageLocation == null)
+                        if (Path.GetFileName(pictureBox1.ImageLocation)==null)
                         {
                             nv.HinhAnh = "Không";
                         }
@@ -502,6 +502,11 @@ namespace DoAnCShap
                 }
                 txtUserName.Text = d.Rows[vitri]["UserName"].ToString();
                 PassW = d.Rows[vitri]["PassWord"].ToString();
+                string t = d.Rows[vitri]["GioiTinh"].ToString();
+                if (t == "Nam")
+                    radioButtonNam.Checked = true;
+                else
+                    radioButtonNu.Checked = true;
             }
             catch
             {

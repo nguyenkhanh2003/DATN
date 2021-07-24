@@ -147,12 +147,6 @@ namespace DoAnCShap
                 errorMes.SetError(txtUserName, "? UserName");
                 return;
             }
-            if (cboTrangThai.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(cboTrangThai, "? Trạng Thái");
-                return;
-            }
             else
             {
                 int KiemTra = 0;
@@ -199,7 +193,7 @@ namespace DoAnCShap
                     MaHoa();
                     nv.PassWord = txtPassWord.Text;
                 }
-                nv.TrangThai = cboTrangThai.Text;
+                nv.TrangThai = "1";
                 bus.EditData(nv);
                 MessageBox.Show("Sửa Nhân Viên Thành Công");
             }
@@ -255,7 +249,6 @@ namespace DoAnCShap
                 }
                 txtUserName.Text = d.Rows[vitri]["UserName"].ToString();
                 PassW = d.Rows[vitri]["PassWord"].ToString();
-                cboTrangThai.Text = d.Rows[vitri]["TrangThai"].ToString();
                 string t = d.Rows[vitri]["GioiTinh"].ToString();
                 if (t == "Nam")
                     radioButtonNam.Checked = true;

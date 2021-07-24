@@ -104,7 +104,6 @@ namespace DoAnCShap
             this.btnSetting.Size = new System.Drawing.Size(212, 46);
             this.btnSetting.TabIndex = 18;
             this.btnSetting.Text = "Setting";
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click_1);
             // 
@@ -124,7 +123,6 @@ namespace DoAnCShap
             this.btnPhanQuyen.Size = new System.Drawing.Size(212, 46);
             this.btnPhanQuyen.TabIndex = 17;
             this.btnPhanQuyen.Text = "Phân Quyền";
-            this.btnPhanQuyen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhanQuyen.UseVisualStyleBackColor = false;
             this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click_1);
             // 
@@ -144,7 +142,6 @@ namespace DoAnCShap
             this.btnThongKe.Size = new System.Drawing.Size(212, 46);
             this.btnThongKe.TabIndex = 16;
             this.btnThongKe.Text = "Thống Kê";
-            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
             // 
@@ -160,10 +157,10 @@ namespace DoAnCShap
             this.btnBaohanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaohanh.Location = new System.Drawing.Point(0, 454);
             this.btnBaohanh.Name = "btnBaohanh";
+            this.btnBaohanh.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnBaohanh.Size = new System.Drawing.Size(212, 46);
             this.btnBaohanh.TabIndex = 15;
             this.btnBaohanh.Text = "Bảo Hành";
-            this.btnBaohanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBaohanh.UseVisualStyleBackColor = false;
             this.btnBaohanh.Click += new System.EventHandler(this.btnBaohanh_Click_1);
             // 
@@ -183,7 +180,6 @@ namespace DoAnCShap
             this.btnBanHang.Size = new System.Drawing.Size(212, 46);
             this.btnBanHang.TabIndex = 14;
             this.btnBanHang.Text = "Bán Hàng";
-            this.btnBanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBanHang.UseVisualStyleBackColor = false;
             this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
             // 
@@ -199,11 +195,10 @@ namespace DoAnCShap
             this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhaCungCap.Location = new System.Drawing.Point(0, 362);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5);
+            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhaCungCap.Size = new System.Drawing.Size(212, 46);
             this.btnNhaCungCap.TabIndex = 13;
             this.btnNhaCungCap.Text = "Nhà Cung Cấp";
-            this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNhaCungCap.UseVisualStyleBackColor = false;
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
@@ -240,11 +235,10 @@ namespace DoAnCShap
             this.btnLoaiLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoaiLK.Location = new System.Drawing.Point(0, 317);
             this.btnLoaiLK.Name = "btnLoaiLK";
-            this.btnLoaiLK.Padding = new System.Windows.Forms.Padding(5);
+            this.btnLoaiLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLoaiLK.Size = new System.Drawing.Size(212, 45);
             this.btnLoaiLK.TabIndex = 2;
             this.btnLoaiLK.Text = "Loại Linh Kiện";
-            this.btnLoaiLK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoaiLK.UseVisualStyleBackColor = false;
             this.btnLoaiLK.Click += new System.EventHandler(this.btnLoaiLK_Click);
             // 
@@ -262,11 +256,10 @@ namespace DoAnCShap
             this.btnLinhKien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLinhKien.Location = new System.Drawing.Point(0, 272);
             this.btnLinhKien.Name = "btnLinhKien";
-            this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5);
+            this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLinhKien.Size = new System.Drawing.Size(212, 45);
             this.btnLinhKien.TabIndex = 2;
-            this.btnLinhKien.Text = "Quản Lý Linh Kiện";
-            this.btnLinhKien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLinhKien.Text = "Linh Kiện";
             this.btnLinhKien.UseVisualStyleBackColor = false;
             this.btnLinhKien.Click += new System.EventHandler(this.btnLinhKien_Click);
             // 
@@ -284,11 +277,10 @@ namespace DoAnCShap
             this.btnPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhieuNhap.Location = new System.Drawing.Point(0, 227);
             this.btnPhieuNhap.Name = "btnPhieuNhap";
-            this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5);
+            this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnPhieuNhap.Size = new System.Drawing.Size(212, 45);
             this.btnPhieuNhap.TabIndex = 2;
             this.btnPhieuNhap.Text = "Nhập Hàng";
-            this.btnPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhieuNhap.UseVisualStyleBackColor = false;
             this.btnPhieuNhap.Click += new System.EventHandler(this.btnPhieuNhap_Click);
             // 
@@ -326,7 +318,7 @@ namespace DoAnCShap
             this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnKhachHang.Location = new System.Drawing.Point(0, 137);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5);
@@ -355,6 +347,7 @@ namespace DoAnCShap
             this.btnNhanVien.Size = new System.Drawing.Size(212, 45);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Quản Lý Nhân Viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNhanVien.UseVisualStyleBackColor = false;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
@@ -411,7 +404,7 @@ namespace DoAnCShap
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLogout.BackColor = System.Drawing.Color.White;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;

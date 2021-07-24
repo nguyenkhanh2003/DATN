@@ -26,7 +26,7 @@ namespace DAL
 
         public DataTable HienThiCT_PhieuBaoHanh(string conditon)
         {
-            return KetNoi.GetDataTable("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK" + conditon);
+            return KetNoi.GetDataTable("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh" + conditon);
         }
 
         public DataTable HienThiCT_PhieuBaoHanhTheoMa(string condition)
@@ -40,7 +40,7 @@ namespace DAL
 
         public void ThemCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Insert Into CT_PhieuBaoHanh values(N'" + ex.MaPBH + "',N'" + ex.MaLK + "',N'" + ex.SoLuong + "',N'" + ex.GhiChu + "')");
+            KetNoi.ExecuteReader(@"Insert Into CT_PhieuBaoHanh values(N'" + ex.MaPBH + "',N'" + ex.TenLK + "',N'" + ex.SoLuong + "',N'" + ex.GhiChu + "')");
         }
 
         public DataTable GetNhanVien(string Condition)
@@ -55,7 +55,7 @@ namespace DAL
 
         public void XoaCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Delete From PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"' and MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Delete From PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"' and TenLK=N'"+ex.TenLK+"'");
         }
 
         public void XoaPhieuBaoHanh(PhieuBaoHanh ex)
@@ -65,7 +65,7 @@ namespace DAL
 
         public void Update_CTPBH(CT_PhieuBaoHanh ex)
        {
-           KetNoi.ExecuteReader(@"update CT_PhieuBaoHanh Set SoLuong="+ex.SoLuong+",GhiChu=N'"+ex.GhiChu+"' Where MaPBH=N'"+ex.MaPBH+"' and MaLK=N'"+ex.MaLK+"'");
+           KetNoi.ExecuteReader(@"update CT_PhieuBaoHanh Set SoLuong="+ex.SoLuong+",GhiChu=N'"+ex.GhiChu+"' Where MaPBH=N'"+ex.MaPBH+"' and TenLK=N'"+ex.TenLK+"'");
        }
        public void Update_PBH(PhieuBaoHanh ex)
        {
