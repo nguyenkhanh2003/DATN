@@ -37,11 +37,7 @@ namespace DoAnCShap
         }
         private void hideSubMenu()
         {
-            //panelMediaSubMenu.Visible = false;
-            //panelPlaylistSubMenu.Visible = false;
-            //panelToolsSubMenu.Visible = false;
-            //panelQuanLy.Visible = false;
-            ///panelKhoHang.Visible = false;
+            
         }
 
         private void showSubMenu(Panel subMenu)
@@ -369,40 +365,40 @@ namespace DoAnCShap
             switch (month)
             {
                 case "01":
-                    month2 = "January";
+                    month2 = "Tháng 1";
                     break;
                 case "02":
-                    month2 = "February";
+                    month2 = "Tháng 2";
                     break;
                 case "03":
-                    month2 = "March";
+                    month2 = "Tháng 3";
                     break;
                 case "04":
-                    month2 = "April";
+                    month2 = "Tháng 4";
                     break;
                 case "05":
-                    month2 = "May";
+                    month2 = "Tháng 5";
                     break;
                 case "06":
-                    month2 = "June";
+                    month2 = "Tháng 6";
                     break;
                 case "07":
-                    month2 = "July";
+                    month2 = "Tháng 7";
                     break;
                 case "08":
-                    month2 = "August";
+                    month2 = "Tháng 8";
                     break;
                 case "09":
-                    month2 = "September";
+                    month2 = "Tháng 9";
                     break;
                 case "10":
-                    month2 = "October";
+                    month2 = "Tháng 10";
                     break;
                 case "11":
-                    month2 = "November";
+                    month2 = "Tháng 11";
                     break;
                 case "12":
-                    month2 = "December";
+                    month2 = "Tháng 12";
                     break;
                 default:
                     month2 = "UnKnown";

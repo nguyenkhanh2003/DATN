@@ -76,20 +76,21 @@
             this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(188, 25);
+            this.txtMatKhau.Size = new System.Drawing.Size(188, 30);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.Text = "12345";
+            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(26, 157);
+            this.label3.Location = new System.Drawing.Point(45, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(86, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
@@ -99,19 +100,20 @@
             this.txtTenDN.Location = new System.Drawing.Point(192, 89);
             this.txtTenDN.Multiline = true;
             this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(188, 25);
+            this.txtTenDN.Size = new System.Drawing.Size(188, 30);
             this.txtTenDN.TabIndex = 1;
             this.txtTenDN.Text = "nguyenkhanh";
+            this.txtTenDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(26, 94);
+            this.label2.Location = new System.Drawing.Point(45, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.Size = new System.Drawing.Size(141, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên đăng nhập";
             // 
@@ -134,7 +136,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.labelMessBox);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -159,7 +161,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(139, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -172,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(500, 359);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThoat);
