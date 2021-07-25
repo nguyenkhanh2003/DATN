@@ -22,10 +22,7 @@ namespace DoAnCShap
 
         Login_BUS bus = new Login_BUS();
 
-        //public void funData(TextBox txtTenHienThi)
-        //{
-        //    labelHienThiTenDangNhap.Text = txtTenHienThi.Text;
-        //}
+       
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -481,6 +478,12 @@ namespace DoAnCShap
             labeldateTime.Text = day2 + " , " + date + " " + month2 + " " + year + "  " + hour + ":" + minute + ":" + second;
             labeldateTime.Update();
             timer1.Enabled = true;
+        }
+        public Color ButtonColor = new Color();
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            //panelTop.BackColor = ButtonColor;
         }
     }
 }

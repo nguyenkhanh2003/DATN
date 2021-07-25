@@ -30,15 +30,15 @@ namespace DoAnCShap
         }
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
-            if (!_exiting && MessageBox.Show("Are you sure want to exit?",
-                          "My First Application",
-                           MessageBoxButtons.OKCancel,
-                           MessageBoxIcon.Information) == DialogResult.OK)
+            DialogResult KQ = MessageBox.Show("Bạn có muốn thoát hay không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(KQ==DialogResult.OK)
             {
-                _exiting = true;
-                // this.Close(); // you don't need that, it's already closing
-                Environment.Exit(1);
+                Application.Exit();
             }
+            else
+            {
+
+            }    
         }
 
 
@@ -139,10 +139,9 @@ namespace DoAnCShap
             else
             {
                 TenTaiKhoan = bus.GetLogin(username,CreateMd5(password)).Rows[0][10].ToString();
-                //MessageBox.Show("Đăng Nhập Thành Công");
                 SetValueForText1 = username;
                 Form1 frm1 = new Form1();
-                frm1.ShowDialog();
+                frm1.Show();
                 //QLNV = PhanQuyen(15);
                 //QLKH = PhanQuyen(16);
                 //QLLK = PhanQuyen(17);
