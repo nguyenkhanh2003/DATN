@@ -460,7 +460,7 @@ namespace DoAnCShap
             // 
             this.labeldateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labeldateTime.BackColor = System.Drawing.Color.Teal;
-            this.labeldateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeldateTime.ForeColor = System.Drawing.Color.White;
             this.labeldateTime.Location = new System.Drawing.Point(470, 6);
             this.labeldateTime.Name = "labeldateTime";

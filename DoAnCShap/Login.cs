@@ -30,15 +30,7 @@ namespace DoAnCShap
         }
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn thoát hay không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if(KQ==DialogResult.OK)
-            {
-                Application.Exit();
-            }
-            else
-            {
-
-            }    
+            Application.Exit();
         }
 
 

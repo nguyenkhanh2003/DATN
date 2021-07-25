@@ -405,71 +405,71 @@ namespace DoAnCShap
             switch (day)
             {
                 case "Sun":
-                    day2 = "Sunday";
+                    day2 = "Chủ Nhật";
                     break;
                 case "Mon":
-                    day2 = "Monday";
+                    day2 = "Thứ 2";
                     break;
                 case "Tue":
-                    day2 = "Tuesday";
+                    day2 = "Thứ 3";
                     break;
                 case "Wed":
-                    day2 = "Wednesday";
+                    day2 = "Thứ 4";
                     break;
                 case "Thu":
-                    day2 = "Thursday";
+                    day2 = "Thứ 5";
                     break;
                 case "Fri":
-                    day2 = "Friday";
+                    day2 = "Thứ 6";
                     break;
                 case "Sat":
-                    day2 = "Saturday";
+                    day2 = "Thứ 7";
                     break;
                 case "Sunday":
-                    day2 = "Sunday";
+                    day2 = "Chủ Nhật";
                     break;
                 case "Monday":
-                    day2 = "Monday";
+                    day2 = "Thứ 2";
                     break;
                 case "Tuesday":
-                    day2 = "Tuesday";
+                    day2 = "Thứ 3";
                     break;
                 case "Wednesday":
-                    day2 = "Wednesday";
+                    day2 = "Thứ 4";
                     break;
                 case "Thursday":
-                    day2 = "Thursday";
+                    day2 = "Thứ 5";
                     break;
                 case "Friday":
-                    day2 = "Friday";
+                    day2 = "Thứ 6";
                     break;
                 case "Saturday":
-                    day2 = "Saturday";
+                    day2 = "Thứ 7";
                     break;
                 //I'm Use Jakarta Timezone, change this case from your Timezone
                 case "Minggu":
-                    day2 = "Sunday";
+                    day2 = "Chủ Nhật";
                     break;
                 case "Senin":
-                    day2 = "Monday";
+                    day2 = "Thứ 2";
                     break;
                 case "Selasa":
-                    day2 = "Tuesday";
+                    day2 = "Thứ 3";
                     break;
                 case "Rabu":
-                    day2 = "Wednesday";
+                    day2 = "Thứ 4";
                     break;
                 case "Kamis":
-                    day2 = "Thursday";
+                    day2 = "Thứ 5";
                     break;
                 case "Jum'at":
-                    day2 = "Jum'at";
+                    day2 = "Thứ 6";
                     break;
                 case "Jumat":
-                    day2 = "Friday";
+                    day2 = "Thứ 7";
                     break;
                 case "Sabtu":
-                    day2 = "Sunday";
+                    day2 = "Chủ Nhật";
                     break;
                 default:
                     day2 = "UnKnown";

@@ -51,7 +51,7 @@
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
-            this.btnDangNhap.Location = new System.Drawing.Point(233, 165);
+            this.btnDangNhap.Location = new System.Drawing.Point(213, 165);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(114, 38);
             this.btnDangNhap.TabIndex = 7;
@@ -63,11 +63,11 @@
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(233, 119);
+            this.txtMatKhau.Location = new System.Drawing.Point(213, 119);
             this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(245, 30);
+            this.txtMatKhau.Size = new System.Drawing.Size(265, 30);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.Text = "12345";
             this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -76,10 +76,10 @@
             // txtTenDN
             // 
             this.txtTenDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDN.Location = new System.Drawing.Point(233, 70);
+            this.txtTenDN.Location = new System.Drawing.Point(213, 70);
             this.txtTenDN.Multiline = true;
             this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(245, 30);
+            this.txtTenDN.Size = new System.Drawing.Size(265, 30);
             this.txtTenDN.TabIndex = 1;
             this.txtTenDN.Text = "nguyenkhanh";
             this.txtTenDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -105,7 +105,7 @@
             // 
             this.labelMessBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessBox.ForeColor = System.Drawing.Color.Red;
-            this.labelMessBox.Location = new System.Drawing.Point(87, 236);
+            this.labelMessBox.Location = new System.Drawing.Point(128, 228);
             this.labelMessBox.Name = "labelMessBox";
             this.labelMessBox.Size = new System.Drawing.Size(350, 23);
             this.labelMessBox.TabIndex = 4;
@@ -145,7 +145,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(199, 70);
+            this.pictureBox2.Location = new System.Drawing.Point(179, 70);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 30);
             this.pictureBox2.TabIndex = 12;
@@ -154,7 +154,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(199, 119);
+            this.pictureBox3.Location = new System.Drawing.Point(179, 119);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 30);
             this.pictureBox3.TabIndex = 12;

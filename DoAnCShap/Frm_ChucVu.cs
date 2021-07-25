@@ -38,7 +38,6 @@ namespace DoAnCShap
         {
             txtMaCV.Enabled = b1;
             txtTenCV.Enabled = b1;
-            cboTrangThai.Enabled = b1;
         }
 
         public void HienThiDSCV()
@@ -109,7 +108,7 @@ namespace DoAnCShap
                 cv.ThongKe = checkBoxThongKe.Checked;
                 cv.HoaDon = checkBoxHoaDon.Checked;
                 cv.Setting = checkBoxSetting.Checked;
-                cv.TrangThai = cboTrangThai.Text;
+                cv.TrangThai = "1";
                 bus.AddChucVu(cv);
                 MessageBox.Show("Thành Công");
             }
@@ -130,7 +129,7 @@ namespace DoAnCShap
                 cv.ThongKe = checkBoxThongKe.Checked;
                 cv.HoaDon = checkBoxHoaDon.Checked;
                 cv.Setting = checkBoxSetting.Checked;
-                cv.TrangThai = cboTrangThai.Text;
+                cv.TrangThai = "1";
                 bus.EditCV(cv);
                 MessageBox.Show("Thành Công");
             }
@@ -161,7 +160,7 @@ namespace DoAnCShap
             checkBoxThongKe.Checked = Convert.ToBoolean(row.Cells[11].Value.ToString());
             checkBoxHoaDon.Checked = Convert.ToBoolean(row.Cells[12].Value.ToString());
             checkBoxSetting.Checked = Convert.ToBoolean(row.Cells[13].Value.ToString());
-            cboTrangThai.Text = row.Cells[11].Value.ToString();
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
