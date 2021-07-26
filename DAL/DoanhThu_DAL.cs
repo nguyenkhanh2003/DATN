@@ -41,7 +41,18 @@ namespace DAL
         {
             return KetNoi.GetDataTable(""+condiiton);
         }
-
+        public DataTable Top3SPMuaNhieuTrongThang(string condition)
+        {
+            return KetNoi.GetDataTable(""+condition);
+        }
+        public DataTable Top3SPMuaNhieuTrongName(string condition)
+        {
+            return KetNoi.GetDataTable(""+condition);
+        }
+        public DataTable Top3HDMuaNhieu(string condition)
+        {
+            return KetNoi.GetDataTable(""+condition);
+        }
         public DataTable LoadDoanhThuLenChart( string condition)
         {
             return KetNoi.GetDataTable("select MONTH(NgayLapHDBH) AS Thang, Sum(TongTien)From HoaDonBanHang Group by MONTH(NgayLapHDBH)" + condition);

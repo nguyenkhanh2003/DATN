@@ -29,18 +29,30 @@ namespace BUS
 
         public DataTable DoanhThuTheoNgay(string condition)
         {
-            return  bus.DoanhThuTheoNgay(condition);
+            return bus.DoanhThuTheoNgay(condition);
         }
 
         public DataTable SPBanChayTheoThang(string condition)
-       {
-           return bus.SPBanChayTheoThang(condition);
-       }
+        {
+            return bus.SPBanChayTheoThang(condition);
+        }
 
-       public DataTable Top3SanPhamBanTrongNam(string condition)
-       {
-           return bus.Top3SanPhamBanTrongNam(condition);
-       }
+        public DataTable Top3SanPhamBanTrongNam(string condition)
+        {
+            return bus.Top3SanPhamBanTrongNam(condition);
+        }
+        public DataTable Top3MuaMonth(string condition)
+        {
+            return bus.Top3SPMuaNhieuTrongThang(condition);
+        }
+        public DataTable Top3SPMuaYear(string condition)
+        {
+            return bus.Top3SPMuaNhieuTrongName(condition);
+        }
+        public DataTable Top3HDMuaNhieu(string condition)
+        {
+            return bus.Top3HDMuaNhieu(condition);
+        }
         public DataTable LoadDoanhThuChart(string condition)
         {
             return bus.LoadDoanhThuLenChart(condition);

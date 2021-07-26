@@ -62,6 +62,23 @@ namespace DoAnCShap
         {
             dataGridView1.DataSource = bus.Top3SanPhamBanTrongNam("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng' FROM CT_HoaDonBanHang ct, HoaDonBanHang hd, LinhKien lk where ct.MaHDBH = hd.MaHDBH and lk.MaLK = ct.MaLK  and Year(hd.NgayLapHDBH) =" + condition + " GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC ");
         }
+        public void Top3SPMuaNhieuTrongThang(string condition)
+        {
+            dataGridView1.DataSource = bus.Top3MuaMonth("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng' FROM CT_HoaDonNhapHang ct, HoaDonNhapHang hd, LinhKien lk where ct.MaHDNH = hd.MaHDNH and lk.MaLK = ct.MaLK  and Month(hd.NgayLapHDNH) =" + condition + " GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC");
+        }
+
+        public void Top3SPMuaNhieuTrongNam(string condition)
+        {
+            dataGridView1.DataSource = bus.Top3SPMuaYear("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng' FROM CT_HoaDonNhapHang ct, HoaDonNhapHang hd, LinhKien lk where ct.MaHDNH = hd.MaHDNH and lk.MaLK = ct.MaLK  and Year(hd.NgayLapHDNH) =" + condition + " GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC ");
+        }
+
+        public void Top3HDMuaNhieuTrongThang(string condition)
+        {
+            dataGridView1.DataSource = bus.Top3HDMuaNhieu("SELECT TOP(3) hd.MaHDBH As'Mã Hóa Đơn', count(ct.MaHDBH) AS 'Số Lượng' FROM CT_HoaDonBanHang ct, HoaDonBanHang hd where ct.MaHDBH = hd.MaHDBH  and Month(hd.NgayLapHDBH) ="+condition+" GROUP BY hd.MaHDBH ORDER BY count(hd.MaHDBH) DESC ");
+        }
+
+     
+
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
             fillChart();
@@ -72,7 +89,8 @@ namespace DoAnCShap
       
         private void btnXemDoanhThu_Click(object sender, EventArgs e)
         {
-            if(radioTheoThang.Checked==true)
+          
+            if (radioTheoThang.Checked==true)
             {
                 string condition = comboBoxThang.Text;
                 DoanhThuTheoThang(condition);
@@ -91,6 +109,22 @@ namespace DoAnCShap
             {
                 string condition2 = comboBoxNam.Text;
                 Top3SanPhamBanTrongNam(condition2);
+            }
+            if(radioButMuaYear.Checked==true)
+            {
+                string condition = comboBoxNam.Text;
+                Top3SPMuaNhieuTrongNam(condition);
+            }
+            if (radioButMuaMonth.Checked == true)
+            {
+                string condition = comboBoxThang.Text;
+                Top3SPMuaNhieuTrongThang(condition);
+            }
+           
+            if(radioButTop3HDMua.Checked==true)
+            {
+                string condition = comboBoxThang.Text;
+                Top3HDMuaNhieuTrongThang(condition);
             }    
         }
 
