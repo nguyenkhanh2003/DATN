@@ -41,5 +41,9 @@ namespace BUS
        {
            return bus.Top3SanPhamBanTrongNam(condition);
        }
+        public DataTable LoadDoanhThuChart(string condition)
+        {
+            return bus.LoadDoanhThuLenChart(condition);
+        }
     }
 }

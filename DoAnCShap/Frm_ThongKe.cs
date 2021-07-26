@@ -55,7 +55,7 @@ namespace DoAnCShap
 
         public void SPBanChayTheoThang(string condition)
         {
-            dataGridView1.DataSource=bus.SPBanChayTheoThang("Select Top 3 lk.TenLK AS'Tên Linh Kiện', SUM(ct.SoLuong) as SoLuong from LinhKien lk, CT_HoaDonBanHang ct, HoaDonBanHang hd where Month(hd.NgayLapHDBH) ="+condition+" and lk.MaLK = CT.MaLK and hd.MaHDBH = ct.MaHDBH group by lk.TenLK order by SoLuong desc");
+            dataGridView1.DataSource=bus.SPBanChayTheoThang("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng' FROM CT_HoaDonBanHang ct, HoaDonBanHang hd, LinhKien lk where ct.MaHDBH = hd.MaHDBH and lk.MaLK = ct.MaLK  and MONTH(hd.NgayLapHDBH) ="+condition+" GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC ");
         }
 
         public void Top3SanPhamBanTrongNam(string condition)
@@ -126,19 +126,20 @@ namespace DoAnCShap
             chart1.Series.Add("Doanh Thu");
             chart1.Series["Doanh Thu"].ChartType = SeriesChartType.Line;
             chart1.Series[0].IsVisibleInLegend = false;
+            chart1.DataSource = bus.LoadDoanhThuChart("");
 
             chart1.Series["Doanh Thu"].Points.AddXY(1, x1);
-            chart1.Series["Doanh Thu"].Points.AddXY(2, x2);
-            chart1.Series["Doanh Thu"].Points.AddXY(3, x3);
-            chart1.Series["Doanh Thu"].Points.AddXY(4, x4);
-            chart1.Series["Doanh Thu"].Points.AddXY(5, x5);
-            chart1.Series["Doanh Thu"].Points.AddXY(6, x6);
-            chart1.Series["Doanh Thu"].Points.AddXY(7, x7);
-            chart1.Series["Doanh Thu"].Points.AddXY(8, x8);
-            chart1.Series["Doanh Thu"].Points.AddXY(9, x9);
-            chart1.Series["Doanh Thu"].Points.AddXY(10, x10);
-            chart1.Series["Doanh Thu"].Points.AddXY(11, x11);
-            chart1.Series["Doanh Thu"].Points.AddXY(12, x12);
+            //chart1.Series["Doanh Thu"].Points.AddXY(2, x2);
+            //chart1.Series["Doanh Thu"].Points.AddXY(3, x3);
+            //chart1.Series["Doanh Thu"].Points.AddXY(4, x4);
+            //chart1.Series["Doanh Thu"].Points.AddXY(5, x5);
+            //chart1.Series["Doanh Thu"].Points.AddXY(6, x6);
+            //chart1.Series["Doanh Thu"].Points.AddXY(7, x7);
+            //chart1.Series["Doanh Thu"].Points.AddXY(8, x8);
+            //chart1.Series["Doanh Thu"].Points.AddXY(9, x9);
+            //chart1.Series["Doanh Thu"].Points.AddXY(10, x10);
+            //chart1.Series["Doanh Thu"].Points.AddXY(11, x11);
+            //chart1.Series["Doanh Thu"].Points.AddXY(12, x12);
         }
 
         private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)

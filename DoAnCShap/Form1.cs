@@ -129,9 +129,24 @@ namespace DoAnCShap
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
-            frm1.ShowDialog();
-            lbl_HienThiForm.Text = "Trang Chủ";
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                Form1 f2 = new Form1();
+                f2.MdiParent = this;
+                f2.Show();
+
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

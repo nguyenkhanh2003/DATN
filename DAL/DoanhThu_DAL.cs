@@ -41,5 +41,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable(""+condiiton);
         }
+
+        public DataTable LoadDoanhThuLenChart( string condition)
+        {
+            return KetNoi.GetDataTable("select MONTH(NgayLapHDBH) AS Thang, Sum(TongTien)From HoaDonBanHang Group by MONTH(NgayLapHDBH)" + condition);
+        }
     }
 }

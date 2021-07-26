@@ -85,7 +85,7 @@ namespace DoAnCShap
             comboBoxLK.Controls.Clear();
             comboBoxKH.Controls.Clear();
             comboBoxNhanVien.Controls.Clear();
-            txtTongThanhT.Controls.Clear();
+            labelTongThanhToan.Controls.Clear();
             dateTimePickerNgaylap.Controls.Clear();
 
         }
@@ -121,8 +121,8 @@ namespace DoAnCShap
                 comboBoxKH.Text = d.Rows[vitri]["TenKH"].ToString();
                 comboBoxNhanVien.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaylap.Text = d.Rows[vitri]["NgayLapHDBH"].ToString();
-                txtTongThanhT.Text = d.Rows[vitri]["TongTien"].ToString();
-                txtTongThanhT.Text = string.Format("{0:#,##0}", double.Parse(txtTongThanhT.Text));
+                labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
+                labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
                 //HienThiDS_CTHD(vitri);
                 dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.MaLK, LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+txtMaHD.Text+"'");
             }
@@ -157,8 +157,8 @@ namespace DoAnCShap
             {
                 sum += decimal.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString());
             }
-            txtTongThanhT.Text = sum.ToString();
-            txtTongThanhT.Text = string.Format("{0:#,##0}", decimal.Parse(txtTongThanhT.Text));
+            labelTongThanhToan.Text = sum.ToString();
+            labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
         }
 
 
@@ -234,8 +234,8 @@ namespace DoAnCShap
             {
                 decimal TT = decimal.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString());
                 TongThanhToan += TT;
-                txtTongThanhT.Text = TongThanhToan.ToString();
-                txtTongThanhT.Text= string.Format("{0:#,##0}", decimal.Parse(txtTongThanhT.Text));
+                labelTongThanhToan.Text = TongThanhToan.ToString();
+                labelTongThanhToan.Text= string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
             }
         }
 
@@ -310,7 +310,7 @@ namespace DoAnCShap
         {
             hdbh.MaHDBH = txtMaHD.Text;
             hdbh.NgayLapHDBH = dateTimePickerNgaylap.Value.Date;
-            hdbh.TongTien = decimal.Parse(txtTongThanhT.Text);
+            hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
             hdbh.TrangThai = "1";
             bus.UpdateHoaDon(hdbh);
             for(int i=0;i<dataGridViewCTHD.Rows.Count-0;i++)
@@ -389,7 +389,7 @@ namespace DoAnCShap
                     DonGia = decimal.Parse(dataGridViewCTHD.Rows[i].Cells["DonGia"].Value.ToString()),
                     KhuyenMai = decimal.Parse(dataGridViewCTHD.Rows[i].Cells["KhuyenMai"].Value.ToString()),
                     ThanhTien = decimal.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString()),
-                    TongThanhToan = decimal.Parse(txtTongThanhT.Text),
+                    TongThanhToan = decimal.Parse(labelTongThanhToan.Text),
                     TenKH = TenKhachHang,
                     DienThoai = DienThoaiKH,
                     DiaChi = DiaChiKH,
@@ -428,9 +428,9 @@ namespace DoAnCShap
             try
             {
                 decimal TienThuaKhach;
-                TienThuaKhach = decimal.Parse(txtTienKDua.Text) - decimal.Parse(txtTongThanhT.Text);
+                TienThuaKhach = decimal.Parse(txtTienKDua.Text) - decimal.Parse(labelTongThanhToan.Text);
                 txtTienThua.Text = TienThuaKhach.ToString();
-                txtTienThua.Text = string.Format("{0:#,##0}", decimal.Parse(txtTongThanhT.Text));
+                //txtTienThua.Text = string.Format("{0:#,##0}", decimal.Parse(txtTongThanhT.Text));
             }
             catch
             {

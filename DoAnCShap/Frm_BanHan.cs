@@ -367,6 +367,11 @@ namespace DoAnCShap
                         txtTenkH.Text = DSKH.Rows[0]["TenKH"].ToString();
                         txtDiaChi.Text = DSKH.Rows[0]["DiaChi"].ToString();
                         txtMaKH.Text = DSKH.Rows[0]["MaKH"].ToString();
+                        string t = DSKH.Rows[0]["GioiTinh"].ToString();
+                        if (t == "Nam")
+                            radioButtonNam.Checked = true;
+                        else
+                            radioButtonNu.Checked = true;
                     }
 
                 }
