@@ -363,7 +363,8 @@ namespace DoAnCShap
             // 
             this.labelTongThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTongThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelTongThanhToan.BackColor = System.Drawing.Color.White;
+            this.labelTongThanhToan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTongThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongThanhToan.ForeColor = System.Drawing.Color.Red;
             this.labelTongThanhToan.Location = new System.Drawing.Point(194, 226);
@@ -504,7 +505,8 @@ namespace DoAnCShap
             // 
             // labelThanhTien
             // 
-            this.labelThanhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelThanhTien.BackColor = System.Drawing.Color.White;
+            this.labelThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThanhTien.ForeColor = System.Drawing.Color.Red;
             this.labelThanhTien.Location = new System.Drawing.Point(188, 220);
