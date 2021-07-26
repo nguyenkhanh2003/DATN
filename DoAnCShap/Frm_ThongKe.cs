@@ -60,7 +60,7 @@ namespace DoAnCShap
 
         public void Top3SanPhamBanTrongNam(string condition)
         {
-            dataGridView1.DataSource = bus.Top3SanPhamBanTrongNam("Select Top 3 lk.TenLK AS'Tên Linh Kiện', SUM(ct.SoLuong) as SoLuong from LinhKien lk, CT_HoaDonBanHang ct, HoaDonBanHang hd where Year(hd.NgayLapHDBH) =" + condition + " and lk.MaLK = CT.MaLK and hd.MaHDBH = ct.MaHDBH group by lk.TenLK order by SoLuong desc");
+            dataGridView1.DataSource = bus.Top3SanPhamBanTrongNam("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng' FROM CT_HoaDonBanHang ct, HoaDonBanHang hd, LinhKien lk where ct.MaHDBH = hd.MaHDBH and lk.MaLK = ct.MaLK  and Year(hd.NgayLapHDBH) =" + condition + " GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC ");
         }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
