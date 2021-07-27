@@ -57,5 +57,17 @@ namespace BUS
         {
             return bus.LoadDoanhThuLenChart(condition);
         }
+        public DataTable DoanhThuThang1(string condition)
+       {
+           return bus.DoanhThuThang1(condition);
+       }
+       public DataTable DoanhThuThang2(string condition)
+       {
+           return bus.DoanhThuThang2(condition);
+       }
+       public DataTable DoanhThuThang3(string condition)
+       {
+           return bus.DoanhThuThang3(condition);
+       }
     }
 }

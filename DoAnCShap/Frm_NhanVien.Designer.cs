@@ -93,6 +93,7 @@ namespace DoAnCShap
             this.btnThem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.erroMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
@@ -101,6 +102,7 @@ namespace DoAnCShap
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erroMes)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -315,8 +317,7 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.radioButtonNu);
-            this.panel2.Controls.Add(this.radioButtonNam);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.cboChucVu);
             this.panel2.Controls.Add(this.btnChonAnh);
             this.panel2.Controls.Add(this.dateTirmNgaySinh);
@@ -349,7 +350,7 @@ namespace DoAnCShap
             // 
             this.radioButtonNu.AutoSize = true;
             this.radioButtonNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNu.Location = new System.Drawing.Point(504, 147);
+            this.radioButtonNu.Location = new System.Drawing.Point(101, 3);
             this.radioButtonNu.Name = "radioButtonNu";
             this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
             this.radioButtonNu.TabIndex = 37;
@@ -361,7 +362,7 @@ namespace DoAnCShap
             // 
             this.radioButtonNam.AutoSize = true;
             this.radioButtonNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNam.Location = new System.Drawing.Point(389, 146);
+            this.radioButtonNam.Location = new System.Drawing.Point(10, 3);
             this.radioButtonNam.Name = "radioButtonNam";
             this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
             this.radioButtonNam.TabIndex = 36;
@@ -803,6 +804,16 @@ namespace DoAnCShap
             // 
             this.erroMes.ContainerControl = this;
             // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.radioButtonNam);
+            this.panel4.Controls.Add(this.radioButtonNu);
+            this.panel4.Location = new System.Drawing.Point(389, 140);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(222, 26);
+            this.panel4.TabIndex = 38;
+            // 
             // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -827,6 +838,8 @@ namespace DoAnCShap
             this.groupBox3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erroMes)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -891,5 +904,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.Panel panel4;
     }
 }

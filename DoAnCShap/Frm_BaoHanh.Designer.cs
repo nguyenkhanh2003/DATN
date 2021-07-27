@@ -195,9 +195,9 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dataGridViewPBH);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 388);
+            this.groupBox2.Location = new System.Drawing.Point(12, 367);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(628, 311);
+            this.groupBox2.Size = new System.Drawing.Size(628, 332);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Phiếu Bảo Hành";
@@ -224,7 +224,7 @@ namespace DoAnCShap
             this.dataGridViewPBH.Name = "dataGridViewPBH";
             this.dataGridViewPBH.ReadOnly = true;
             this.dataGridViewPBH.RowHeadersVisible = false;
-            this.dataGridViewPBH.Size = new System.Drawing.Size(608, 276);
+            this.dataGridViewPBH.Size = new System.Drawing.Size(608, 297);
             this.dataGridViewPBH.TabIndex = 0;
             this.dataGridViewPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPBH_CellClick);
             this.dataGridViewPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewPBH_RowPostPaint);
@@ -285,9 +285,9 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.dataGridViewCTPBH);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(646, 388);
+            this.groupBox3.Location = new System.Drawing.Point(646, 367);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(526, 311);
+            this.groupBox3.Size = new System.Drawing.Size(526, 332);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách Chi Tiết Phiếu";
@@ -308,7 +308,7 @@ namespace DoAnCShap
             this.dataGridViewCTPBH.Name = "dataGridViewCTPBH";
             this.dataGridViewCTPBH.ReadOnly = true;
             this.dataGridViewCTPBH.RowHeadersVisible = false;
-            this.dataGridViewCTPBH.Size = new System.Drawing.Size(514, 276);
+            this.dataGridViewCTPBH.Size = new System.Drawing.Size(514, 297);
             this.dataGridViewCTPBH.TabIndex = 0;
             this.dataGridViewCTPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTPBH_CellClick);
             this.dataGridViewCTPBH.DoubleClick += new System.EventHandler(this.dataGridViewCTPBH_DoubleClick);
@@ -344,7 +344,7 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnLuu);
-            this.panel2.Location = new System.Drawing.Point(12, 323);
+            this.panel2.Location = new System.Drawing.Point(12, 307);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1160, 54);
             this.panel2.TabIndex = 11;
