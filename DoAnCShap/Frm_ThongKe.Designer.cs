@@ -265,14 +265,15 @@ namespace DoAnCShap
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 353);
+            this.chart1.Location = new System.Drawing.Point(12, 339);
             this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Doanh Thu";
+            series1.YValuesPerPoint = 4;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1160, 346);
+            this.chart1.Size = new System.Drawing.Size(1160, 360);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 

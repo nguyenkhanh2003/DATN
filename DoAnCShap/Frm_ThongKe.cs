@@ -94,10 +94,19 @@ namespace DoAnCShap
 
         public void LoadBieuDo()
         {
+            var chart = chart1.ChartAreas[0];
+            chart.AxisX.IntervalType = DateTimeIntervalType.Number;
+
+            chart.AxisX.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.IsEndLabelVisible = true;
+
+            chart.AxisX.Minimum = 1;
+            chart.AxisX.Maximum = 12;
             chart1.DataSource = bus.DoanhThuThang3("SELECT Month(hd.NgayLapHDBH) as Thang, sum(hd.TongTien) as TongTien " +
             " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)>0 and MONTH(hd.NgayLapHDBH)<13  and Year(hd.NgayLapHDBH)=" + comboBoxNam.Text + " Group By Month(hd.NgayLapHDBH) ");
-            chart1.Series["Series1"].XValueMember = "Thang";
-            chart1.Series["Series1"].YValueMembers = "TongTien";
+            chart1.Series["Doanh Thu"].XValueMember = "Thang";
+            chart1.Series["Doanh Thu"].YValueMembers = "TongTien";
             chart1.Titles.Add("Doanh Thu Các Tháng Năm 2021 ");
         }
 
