@@ -55,8 +55,9 @@ namespace DoAnCShap
             this.label14 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButtonNu = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.cboChucVu = new System.Windows.Forms.ComboBox();
             this.btnChonAnh = new System.Windows.Forms.Button();
             this.dateTirmNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -93,16 +94,15 @@ namespace DoAnCShap
             this.btnThem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.erroMes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erroMes)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -346,17 +346,15 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(1160, 296);
             this.panel2.TabIndex = 24;
             // 
-            // radioButtonNu
+            // panel4
             // 
-            this.radioButtonNu.AutoSize = true;
-            this.radioButtonNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNu.Location = new System.Drawing.Point(101, 3);
-            this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
-            this.radioButtonNu.TabIndex = 37;
-            this.radioButtonNu.TabStop = true;
-            this.radioButtonNu.Text = "Nữ";
-            this.radioButtonNu.UseVisualStyleBackColor = true;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.radioButtonNam);
+            this.panel4.Controls.Add(this.radioButtonNu);
+            this.panel4.Location = new System.Drawing.Point(389, 140);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(222, 26);
+            this.panel4.TabIndex = 38;
             // 
             // radioButtonNam
             // 
@@ -369,6 +367,18 @@ namespace DoAnCShap
             this.radioButtonNam.TabStop = true;
             this.radioButtonNam.Text = "Nam";
             this.radioButtonNam.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNu
+            // 
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNu.Location = new System.Drawing.Point(101, 3);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
+            this.radioButtonNu.TabIndex = 37;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
             // 
             // cboChucVu
             // 
@@ -750,7 +760,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(563, 10);
+            this.btnLuu.Location = new System.Drawing.Point(313, 10);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -763,7 +773,7 @@ namespace DoAnCShap
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(312, 10);
+            this.btnXoa.Location = new System.Drawing.Point(546, 10);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 39);
             this.btnXoa.TabIndex = 0;
@@ -804,16 +814,6 @@ namespace DoAnCShap
             // 
             this.erroMes.ContainerControl = this;
             // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.radioButtonNam);
-            this.panel4.Controls.Add(this.radioButtonNu);
-            this.panel4.Location = new System.Drawing.Point(389, 140);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 26);
-            this.panel4.TabIndex = 38;
-            // 
             // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -834,12 +834,12 @@ namespace DoAnCShap
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erroMes)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

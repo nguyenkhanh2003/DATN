@@ -67,7 +67,7 @@ namespace DoAnCShap
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelSideMenu.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelSideMenu.Controls.Add(this.btnSetting);
             this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
@@ -93,6 +93,8 @@ namespace DoAnCShap
             this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.White;
@@ -112,6 +114,8 @@ namespace DoAnCShap
             this.btnPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhanQuyen.FlatAppearance.BorderSize = 0;
+            this.btnPhanQuyen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnPhanQuyen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhanQuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhanQuyen.ForeColor = System.Drawing.Color.White;
@@ -131,6 +135,8 @@ namespace DoAnCShap
             this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnThongKe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
@@ -150,6 +156,8 @@ namespace DoAnCShap
             this.btnBaohanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnBaohanh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBaohanh.FlatAppearance.BorderSize = 0;
+            this.btnBaohanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnBaohanh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnBaohanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaohanh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaohanh.ForeColor = System.Drawing.Color.White;
@@ -169,6 +177,8 @@ namespace DoAnCShap
             this.btnBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnBanHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBanHang.FlatAppearance.BorderSize = 0;
+            this.btnBanHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnBanHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanHang.ForeColor = System.Drawing.Color.White;
@@ -188,6 +198,8 @@ namespace DoAnCShap
             this.btnNhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
+            this.btnNhaCungCap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnNhaCungCap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhaCungCap.ForeColor = System.Drawing.Color.White;
@@ -226,8 +238,8 @@ namespace DoAnCShap
             this.btnLoaiLK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnLoaiLK.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLoaiLK.FlatAppearance.BorderSize = 0;
-            this.btnLoaiLK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLoaiLK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLoaiLK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnLoaiLK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnLoaiLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiLK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaiLK.ForeColor = System.Drawing.Color.White;
@@ -247,8 +259,8 @@ namespace DoAnCShap
             this.btnLinhKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnLinhKien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLinhKien.FlatAppearance.BorderSize = 0;
-            this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLinhKien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnLinhKien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnLinhKien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLinhKien.ForeColor = System.Drawing.Color.White;
@@ -268,8 +280,8 @@ namespace DoAnCShap
             this.btnPhieuNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhieuNhap.FlatAppearance.BorderSize = 0;
-            this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnPhieuNhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnPhieuNhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPhieuNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhieuNhap.ForeColor = System.Drawing.Color.White;
@@ -289,8 +301,8 @@ namespace DoAnCShap
             this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.Color.White;
@@ -312,8 +324,8 @@ namespace DoAnCShap
             this.btnKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
@@ -334,8 +346,8 @@ namespace DoAnCShap
             this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.Color.White;

@@ -388,7 +388,7 @@ namespace DoAnCShap
             this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
             this.btnTim.Location = new System.Drawing.Point(415, 80);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(40, 25);
+            this.btnTim.Size = new System.Drawing.Size(67, 25);
             this.btnTim.TabIndex = 15;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);

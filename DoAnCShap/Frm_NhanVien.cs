@@ -22,7 +22,7 @@ namespace DoAnCShap
             InitializeComponent();
             Display();
             hienthichucvu();
-            
+
         }
 
         String DuongDanFolderHinh = @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Image";
@@ -32,7 +32,7 @@ namespace DoAnCShap
         NhanVien nv = new NhanVien();
         string PassW = "";
         int flag = 0;
-      
+
         public void xulytextbox(Boolean b1, Boolean b2)
         {
             txtMaNV.ReadOnly = b1;
@@ -48,7 +48,7 @@ namespace DoAnCShap
             txtCMND.Enabled = b1;
             txtDiaChi.Enabled = b1;
         }
-      
+
         public void Clear()
         {
             pictureBox1.Controls.Clear();
@@ -78,14 +78,14 @@ namespace DoAnCShap
             count = dataGridViewNhanVien.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if(count<=0)
+            if (count <= 0)
             {
-                txtMaNV.Text="NV00";
+                txtMaNV.Text = "NV00";
             }
             else
             {
                 chuoi = Convert.ToString(dataGridViewNhanVien.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0,2)));
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
                 if (chuoi2 + 1 < 10)
                     txtMaNV.Text = "NV0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
@@ -106,7 +106,7 @@ namespace DoAnCShap
         void Display()
         {
             dataGridViewNhanVien.DataSource = bus.GetData("");
-            
+
         }
 
         public void HienThiSearch(string Condition)
@@ -131,7 +131,7 @@ namespace DoAnCShap
                 sb.Append(hask[i].ToString("X2"));
             }
             txtPassWord.Text = sb.ToString();
-           
+
         }
         string hash = "f0xle@rn";//Create a hash key
         public void MaHoa1()
@@ -189,7 +189,7 @@ namespace DoAnCShap
                 pictureBox1.Image = new Bitmap(opFile.FileName);
                 pictureBox1.ImageLocation = opFile.FileName;
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }    
+            }
 
         }
 
@@ -199,7 +199,7 @@ namespace DoAnCShap
             {
                 File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Ảnh đã tồn tại !");
             }
@@ -207,14 +207,10 @@ namespace DoAnCShap
 
         public void XoaAnh()
         {
-            var filePath =Application.StartupPath+@"\Image\"+TenHinh;
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
-        }    
-        
-      
+            File.Delete(@"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Image\" + TenHinh);
+        }
+
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -223,10 +219,8 @@ namespace DoAnCShap
 
         private void Frm_NhanVien_Load(object sender, EventArgs e)
         {
-            xulytextbox(false,true);
+            xulytextbox(false, true);
             xulychucnang(true, false, false);
-            //hienthichucvu();
-           
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -235,17 +229,17 @@ namespace DoAnCShap
             xulytextbox(true, false);
             Clear();
             xulychucnang(false, true, true);
-            if(dataGridViewNhanVien.Rows.Count<=0)
+            if (dataGridViewNhanVien.Rows.Count <= 0)
             {
                 txtMaNV.Text = "NV00";
-            } 
+            }
             else
             {
                 if (int.Parse(PhatSinhMaNv(bus.PhatSinhMa(""))) < 10)
                     txtMaNV.Text = "NV0" + PhatSinhMaNv(bus.PhatSinhMa(""));
                 else
-                    txtMaNV.Text = "NV" +PhatSinhMaNv(bus.PhatSinhMa(""));
-            }    
+                    txtMaNV.Text = "NV" + PhatSinhMaNv(bus.PhatSinhMa(""));
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -311,7 +305,7 @@ namespace DoAnCShap
                         nv.MaNV = txtMaNV.Text;
                         nv.MaCV = cboChucVu.SelectedValue.ToString();
                         nv.TenNV = txtTenNV.Text;
-                        if(radioButtonNam.Checked==true)
+                        if (radioButtonNam.Checked == true)
                         {
                             nv.GioiTinh = radioButtonNam.Text;
                         }
@@ -331,7 +325,7 @@ namespace DoAnCShap
                         nv.DienThoai = txtSDT.Text;
                         nv.CMND = txtCMND.Text;
                         nv.DiaChi = txtDiaChi.Text;
-                        if (Path.GetFileName(pictureBox1.ImageLocation)==null)
+                        if (Path.GetFileName(pictureBox1.ImageLocation) == null)
                         {
                             nv.HinhAnh = "Không";
                         }
@@ -354,7 +348,7 @@ namespace DoAnCShap
                     MessageBox.Show("Không thể thêm được");
                 }
             }
-            if(flag==2)
+            if (flag == 2)
             {
                 if (cboChucVu.Text == "")
                 {
@@ -399,7 +393,7 @@ namespace DoAnCShap
                     erroMes.SetError(txtUserName, "? UserName");
                     return;
                 }
-              
+
                 else
                 {
                     int KiemTra = 0;
@@ -421,7 +415,7 @@ namespace DoAnCShap
                     else
                     {
                         nv.GioiTinh = radioButtonNu.Text;
-                    }    
+                    }
                     nv.Email = txtEmail.Text;
                     nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                     nv.DienThoai = txtSDT.Text;
@@ -435,9 +429,9 @@ namespace DoAnCShap
                     {
                         nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
                         LuuAnh();
-                    }    
+                    }
                     nv.UserName = txtUserName.Text;
-                    if (txtPassWord.Text=="")
+                    if (txtPassWord.Text == "")
                     {
                         nv.PassWord = PassW;
                     }
@@ -453,7 +447,7 @@ namespace DoAnCShap
                     xulychucnang(true, false, false);
                 }
             }
-            
+
             Display();
         }
 
@@ -462,7 +456,7 @@ namespace DoAnCShap
             this.Close();
         }
 
-        public void HienThiNhanVien_TXT(int vitri ,DataTable d)
+        public void HienThiNhanVien_TXT(int vitri, DataTable d)
         {
             try
             {
@@ -493,7 +487,6 @@ namespace DoAnCShap
                         Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
                         p.Image = a;
                         TenHinh = b[i];
-                       
                     }
                 }
                 catch
@@ -510,28 +503,30 @@ namespace DoAnCShap
             }
             catch
             {
-               
+
             }
         }
-       
+
         private void dataGridViewNhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
             HienThiNhanVien_TXT(vitri, bus.GetData(""));
         }
 
-      
+
 
         private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
         {
             xulychucnang(false, true, true);
-            xulytextbox(true,false);
+            xulytextbox(true, false);
             flag = 2;
+            if (cboChucVu.Text == "Nhân Viên Quản Trị")
+                btnXoa.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (KQ == DialogResult.Yes)
             {
                 if (cboChucVu.SelectedValue.ToString() == "CV01")
@@ -547,12 +542,12 @@ namespace DoAnCShap
                     xulychucnang(true, false, false);
                     Clear();
                     xulytextbox(false, true);
-                }    
-            Display();
+                }
+                Display();
             }
             else
             {
-                
+
             }
         }
 
@@ -575,7 +570,7 @@ namespace DoAnCShap
             else
             {
 
-            }    
+            }
         }
 
         public static string MD5Hash(string input)
@@ -594,7 +589,7 @@ namespace DoAnCShap
 
         private void btnShowPass_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtTenNV_KeyPress(object sender, KeyPressEventArgs e)

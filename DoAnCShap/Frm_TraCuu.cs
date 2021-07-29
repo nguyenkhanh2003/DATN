@@ -26,5 +26,10 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

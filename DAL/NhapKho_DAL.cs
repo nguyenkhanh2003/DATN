@@ -36,12 +36,12 @@ namespace DAL
         }
         public DataTable PhatSinhMa(string condition)
         {
-            return KetNoi.GetDataTable("Select * From HoaDonNhapHang"+condition);
+            return KetNoi.GetDataTable("Select * From HoaDonNhapHang" + condition);
         }
 
         public DataTable HienThiCTHDNH(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         public void AddHoaDon(HoaDonNhapHang ex)
         {
@@ -57,35 +57,35 @@ values(N'" + exx.MaHDNH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
 
         public void DeleteHoaDonNhap(HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"Update HoaDonNhapHang Set TrangThai=N='0' Where MaHDNH=N'" + ex.MaHDNH + "'");
+            KetNoi.ExecuteReader(@"Update HoaDonNhapHang Set TrangThai=N'0' Where MaHDNH=N'" + ex.MaHDNH + "'");
         }
 
         public void DeleteCT_HoaDonNhap(CT_HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'"+ex.MaHDNH+"' and MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'" + ex.MaHDNH + "' and MaLK=N'" + ex.MaLK + "'");
         }
 
         public void XoaCTHoaDonNhap(CT_HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'"+ex.MaHDNH+"' and MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'" + ex.MaHDNH + "' and MaLK=N'" + ex.MaLK + "'");
         }
         public void UpdateCTHDN(CT_HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"update CT_HoaDonNhapHang Set SoLuong="+ex.SoLuong+",DonGia="+ex.DonGia+",KhuyenMai="+ex.KhuyenMai+",ThanhTien="+ex.ThanhTien+",TrangThai=N'"+ex.TrangThai+"' Where MaHDNH=N'"+ex.MaHDNH+"' and MaLK=N'"+ex.MaLK+"' ");
+            KetNoi.ExecuteReader(@"update CT_HoaDonNhapHang Set SoLuong=" + ex.SoLuong + ",DonGia=" + ex.DonGia + ",KhuyenMai=" + ex.KhuyenMai + ",ThanhTien=" + ex.ThanhTien + ",TrangThai=N'" + ex.TrangThai + "' Where MaHDNH=N'" + ex.MaHDNH + "' and MaLK=N'" + ex.MaLK + "' ");
         }
 
         public void UpdateHDN(HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@" update HoaDonNhapHang Set NgayLapHDNH='"+ex.NgayLapHDNH+"',TongTien="+ex.TongTien+" Where MaHDNH=N'"+ex.MaHDNH+"'");
+            KetNoi.ExecuteReader(@" update HoaDonNhapHang Set NgayLapHDNH='" + ex.NgayLapHDNH + "',TongTien=" + ex.TongTien + " Where MaHDNH=N'" + ex.MaHDNH + "'");
         }
 
         public void CapNhatSLKho(LinhKien ex)
         {
-            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon="+ex.SoLuongTon +" Where MaLK=N'"+ex.MaLK+"'");
+            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon=" + ex.SoLuongTon + " Where MaLK=N'" + ex.MaLK + "'");
         }
         public DataTable LayDSSP(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
     }
 }

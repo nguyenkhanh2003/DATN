@@ -107,7 +107,7 @@ namespace DoAnCShap
             " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)>0 and MONTH(hd.NgayLapHDBH)<13  and Year(hd.NgayLapHDBH)=" + comboBoxNam.Text + " Group By Month(hd.NgayLapHDBH) ");
             chart1.Series["Doanh Thu"].XValueMember = "Thang";
             chart1.Series["Doanh Thu"].YValueMembers = "TongTien";
-            chart1.Titles.Add("Doanh Thu Các Tháng Năm 2021 ");
+            chart1.Titles.Add("Doanh Thu Các Tháng Năm 2021");
         }
 
 

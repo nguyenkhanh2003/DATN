@@ -116,7 +116,7 @@ namespace DoAnCShap
         {
             XuLyChucNang(false, true, false);
             ClearTextBox();
-            if(dataGridViewNhaCungCap.Rows.Count<=0)
+            if((bus.PhatSinhMa("")).Rows.Count==0)
             {
                 txtMaNCC.Text = "NCC00";
             }

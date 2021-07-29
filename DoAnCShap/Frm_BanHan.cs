@@ -81,14 +81,14 @@ namespace DoAnCShap
             txtDiaChi.Enabled = b2;
             txtSDT.Enabled = b2;
             dateTimePickerNgayLap.Enabled = b2;
-            
+
         }
         public void ClearTextBox()
         {
             txtMaHD.ResetText();
             comboBoxNV.ResetText();
             comboBoxSP.ResetText();
-         
+
             txtSDT.ResetText();
             txtMaKH.ResetText();
             txtTenkH.ResetText();
@@ -111,33 +111,12 @@ namespace DoAnCShap
             txtKhuyenMai.ResetText();
         }
 
-        public void PhatSinhMaHD()
-        {
-            int count = 0;
-            count = f.dataGridViewHD.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            if (count <= 0)
-            {
-                txtMaHD.Text = "HD00";
-            }
-            else
-            {
-                chuoi = Convert.ToString(f.dataGridViewHD.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0,2)));
-                if (chuoi2 + 1 < 10)
-                    txtMaHD.Text = "HD0" + (chuoi2 + 1).ToString();
-                else if (chuoi2 + 1 < 100)
-                    txtMaHD.Text = "HD" + (chuoi2 + 1).ToString();
-            }
-        }
-
         public string PhatSinhMaHDBH(DataTable d)
         {
             int sodong = d.Rows.Count;
             string macuoi;
             if (sodong > 9)
-                macuoi =d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(3, 2);
+                macuoi = d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(3, 2);
             else
                 macuoi = d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(4, 1);
             return (int.Parse(macuoi) + 1).ToString();
@@ -156,7 +135,7 @@ namespace DoAnCShap
             this.Close();
         }
         int SoLuongTon;
-        int SoluongConLai=0;
+        int SoluongConLai = 0;
         int SoLuongTonNguyen;
         private void comboBoxSP_KeyDown(object sender, KeyEventArgs e)
         {
@@ -209,7 +188,7 @@ namespace DoAnCShap
         private void btnThemHD_Click(object sender, EventArgs e)
         {
             ClearTextBox();
-            if (f.dataGridViewHD.Rows.Count <= 0)
+            if ((bus.PhatSinhMaHDBH("")).Rows.Count == 0)
             {
                 txtMaHD.Text = "HDB00";
             }
@@ -261,7 +240,7 @@ namespace DoAnCShap
             SoluongConLai = SoLuongTon - (((int)NumreicSL.Value));
             tongtien += tt;
             labelThanhTien.Text = tt.ToString();
-            labelThanhTien.Text= string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
+            labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
             {
                 if (comboBoxSP.Text == dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString())
@@ -275,7 +254,7 @@ namespace DoAnCShap
             {
                 int SL = ((int)NumreicSL.Value) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
-                int SLConLaiMoi=int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SLConLai"].Value.ToString())- ((int)NumreicSL.Value);
+                int SLConLaiMoi = int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SLConLai"].Value.ToString()) - ((int)NumreicSL.Value);
                 dataGridViewHDBH.Rows[vitri].Cells["SLConLai"].Value = SLConLaiMoi.ToString();
                 decimal ThanhTienMoi = tt + decimal.Parse(dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
@@ -285,7 +264,7 @@ namespace DoAnCShap
             else
             {
                 MaLK += comboBoxSP.SelectedValue.ToString() + ";";
-                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text,SoluongConLai,SoLuongTonNguyen };
+                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, KM.ToString(), labelThanhTien.Text, SoluongConLai, SoLuongTonNguyen };
                 dataGridViewHDBH.Rows.Add(t);
             }
             TongTienSP();
@@ -358,7 +337,7 @@ namespace DoAnCShap
                 MessageBox.Show("Vui lòng nhập số điện thoại !");
             }
             else
-            {     
+            {
                 DataTable DSKH = bus.GetDSkH("Select * From KhachHang Where DienThoai=N'" + txtSDT.Text + "'");
                 if (DSKH.Rows.Count > 0)
                 {
@@ -407,54 +386,61 @@ namespace DoAnCShap
         bool add;
         private void btnThenKH_Click(object sender, EventArgs e)
         {
-            if (txtSDT.Text == "")
+            try
             {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
-                return;
-            }
-            if (txtMaKH.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
-                return;
-            }
-            if(txtTenkH.Text=="")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtTenkH, "Tên Khách Hàng Không Được Để Trống");
-                return;
-            }    
-            if (txtDiaChi.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtDiaChi, "Địa Chỉ Không được để trống");
-                return;
-            }
-            else
-            {
-                AddKH.MaKH = txtMaKH.Text;
-                AddKH.TenKH = txtTenkH.Text;
-                if (radioButtonNam.Checked == true)
-                {
-                    AddKH.GioiTinh = radioButtonNam.Text;
-                }
-                else
-                {
-                    AddKH.GioiTinh = radioButtonNu.Text;
-                }
                 if (txtSDT.Text == "")
                 {
-                    AddKH.DienThoai = "Không";
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
+                    return;
+                }
+                if (txtMaKH.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
+                    return;
+                }
+                if (txtTenkH.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenkH, "Tên Khách Hàng Không Được Để Trống");
+                    return;
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDiaChi, "Địa Chỉ Không được để trống");
+                    return;
                 }
                 else
                 {
-                    AddKH.DienThoai = txtSDT.Text;
+                    AddKH.MaKH = txtMaKH.Text;
+                    AddKH.TenKH = txtTenkH.Text;
+                    if (radioButtonNam.Checked == true)
+                    {
+                        AddKH.GioiTinh = radioButtonNam.Text;
+                    }
+                    else
+                    {
+                        AddKH.GioiTinh = radioButtonNu.Text;
+                    }
+                    if (txtSDT.Text == "")
+                    {
+                        AddKH.DienThoai = "Không";
+                    }
+                    else
+                    {
+                        AddKH.DienThoai = txtSDT.Text;
+                    }
+                    AddKH.DiaChi = txtDiaChi.Text;
+                    AddKH.TrangThai = "Mới";
+                    bus.AddKH(AddKH);
+                    MessageBox.Show("Thêm Khách Hàng Thành Công !");
                 }
-                AddKH.DiaChi = txtDiaChi.Text;
-                AddKH.TrangThai = "Mới";
-                bus.AddKH(AddKH);
-                MessageBox.Show("Thêm Khách Hàng Thành Công !");
+            }
+            catch
+            {
+                MessageBox.Show("Không Thể Thêm Được Vì Đã Tồn Tại");
             }
         }
 
@@ -486,13 +472,13 @@ namespace DoAnCShap
         {
             if (add == true)
             {
-                if(txtSDT.Text=="")
+                if (txtSDT.Text == "")
                 {
                     errorMes.BlinkRate = 100;
                     errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
                     return;
                 }
-                if(txtMaKH.Text=="")
+                if (txtMaKH.Text == "")
                 {
                     errorMes.BlinkRate = 100;
                     errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
@@ -540,17 +526,17 @@ namespace DoAnCShap
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-            if(txtTienKhachDua.Text=="")
+            if (txtTienKhachDua.Text == "")
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(txtTienKhachDua, "Cần Nhập Tiền Khách Đưa");
                 return;
             }
-            if(txtTienThua.Text=="")
+            if (txtTienThua.Text == "")
             {
                 errorMes.BlinkRate = 100;
-                errorMes.SetError(txtTienThua,"");
-            }  
+                errorMes.SetError(txtTienThua, "");
+            }
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
@@ -558,30 +544,30 @@ namespace DoAnCShap
                 CT_HoaDon cT_HoaDon = new CT_HoaDon
                 {
                     TenSP = dataGridViewHDBH.Rows[i].Cells["TenLK"].Value.ToString(),
-                    SoLuong=int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()),
-                    DonGia=decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()),
-                    KhuyenMai=decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString()),
-                    ThanhTien=decimal.Parse(dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value.ToString()),
-                    TongThanhToan=decimal.Parse(txtTongThanhT.Text),
+                    SoLuong = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()),
+                    DonGia = decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()),
+                    KhuyenMai = decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString()),
+                    ThanhTien = decimal.Parse(dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value.ToString()),
+                    TongThanhToan = decimal.Parse(txtTongThanhT.Text),
                     TenKH = txtTenkH.Text,
                     DienThoai = txtSDT.Text,
                     DiaChi = txtDiaChi.Text,
                     TenNV = comboBoxNV.Text,
                     NgayLap = dateTimePickerNgayLap.Text,
-                    TienKhachDua=decimal.Parse(txtTienKhachDua.Text),
-                    TienThua=decimal.Parse(txtTienThua.Text),
-                    MaHD=txtMaHD.Text
+                    TienKhachDua = decimal.Parse(txtTienKhachDua.Text),
+                    TienThua = decimal.Parse(txtTienThua.Text),
+                    MaHD = txtMaHD.Text
                 };
                 lst.Add(cT_HoaDon);
             }
-                rs.Name = "DataSet1";
-                rs.Value = lst;
-                Frm_PrintHD frm_in = new Frm_PrintHD();
-                frm_in.reportViewer1.LocalReport.DataSources.Clear();
-                frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
-                frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.reportbc.rdlc";
-                frm_in.ShowDialog();
-               
+            rs.Name = "DataSet1";
+            rs.Value = lst;
+            Frm_PrintHD frm_in = new Frm_PrintHD();
+            frm_in.reportViewer1.LocalReport.DataSources.Clear();
+            frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
+            frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.reportbc.rdlc";
+            frm_in.ShowDialog();
+
             XuLyChucNang(true, false);
         }
 
@@ -642,32 +628,16 @@ namespace DoAnCShap
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult KQ = MessageBox.Show("Bạn Có Muốn Hủy Hay Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(KQ==DialogResult.Yes)
+            if (KQ == DialogResult.Yes)
             {
                 ClearTextBox();
                 XuLyChucNang(true, false);
                 btnInHD.Enabled = false;
-            }    
+            }
         }
 
         int SLMoi;
         int SLTonKhoMoi;
-        private void dataGridViewHDBH_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            decimal ThanhTien;
-            if (dataGridViewHDBH.Columns[e.ColumnIndex].Name == "SoLuong")
-            {
-               for(int i=0;i<dataGridViewHDBH.Rows.Count-0;i++)
-                {
-                    ThanhTien = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString())-decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString());
-                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = ThanhTien.ToString();
-                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", decimal.Parse(ThanhTien.ToString()));
-                    SLTonKhoMoi = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuongNguyen"].Value.ToString()) - int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString());
-                    dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value = SLTonKhoMoi.ToString();
-                }
-                TongTienSP();
-            }
-        }
 
         private void dataGridViewHDBH_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {

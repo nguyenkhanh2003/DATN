@@ -31,7 +31,7 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_BanHan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -244,7 +244,7 @@ namespace DoAnCShap
             this.dataGridViewHDBH.RowHeadersVisible = false;
             this.dataGridViewHDBH.Size = new System.Drawing.Size(756, 305);
             this.dataGridViewHDBH.TabIndex = 0;
-            this.dataGridViewHDBH.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellEndEdit);
+            this.dataGridViewHDBH.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellValueChanged);
             this.dataGridViewHDBH.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellValueChanged);
             this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
             // 
@@ -278,8 +278,8 @@ namespace DoAnCShap
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle2.Format = "C2";
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "C2";
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle1;
             this.ThanhTien.HeaderText = "Thành Tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;

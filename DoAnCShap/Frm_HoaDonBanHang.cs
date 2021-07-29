@@ -30,7 +30,7 @@ namespace DoAnCShap
         {
             dataGridViewHD.DataSource = bus.GetHoaDon("");
         }
-       
+
 
         public void HienThiCTHD_TheoMa()
         {
@@ -39,7 +39,7 @@ namespace DoAnCShap
 
         public void HienThiCTHD_TheoMaHD(string condition)
         {
-            dataGridViewCTHD.DataSource = bus.HienThiCTHDTheoMa("select lk.TenLK,ct.SoLuong,ct.DonGia,ct.KhuyenMai,ct.ThanhTien From CT_HoaDonBanHang ct,LinhKien lk where lk.MaLK=ct.MaLK and ct.MaHDBH=N'"+condition+"'");
+            dataGridViewCTHD.DataSource = bus.HienThiCTHDTheoMa("select lk.TenLK,ct.SoLuong,ct.DonGia,ct.KhuyenMai,ct.ThanhTien From CT_HoaDonBanHang ct,LinhKien lk where lk.MaLK=ct.MaLK and ct.MaHDBH=N'" + condition + "'");
         }
         public void HienThiNhanVien(string condition)
         {
@@ -71,7 +71,7 @@ namespace DoAnCShap
             txtDonGia.ReadOnly = b1;
             txtKhuyenMai.ReadOnly = b1;
         }
-        public void XuLyTextBoxHD(Boolean b1,Boolean b2)
+        public void XuLyTextBoxHD(Boolean b1, Boolean b2)
         {
             txtMaHD.Enabled = b2;
             comboBoxKH.Enabled = b2;
@@ -98,8 +98,8 @@ namespace DoAnCShap
             txtKhuyenMai.Clear();
         }
 
-       
-        public void XuLyChucNang(Boolean b1,Boolean b2)
+
+        public void XuLyChucNang(Boolean b1, Boolean b2)
         {
             btnEdit.Enabled = b1;
             btnInHD.Enabled = b1;
@@ -110,10 +110,10 @@ namespace DoAnCShap
         {
             DataTable dt = new DataTable();
             string t = dt.Rows[vitri]["MaHDBH"].ToString();
-            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien,LK.SoLuong from CT_HoaDonBanHang CT ,LinhKien LK Where Lk.MaLK=CT.MaLK and CT.MaHDBH=N'"+t+"'");
+            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien,LK.SoLuong from CT_HoaDonBanHang CT ,LinhKien LK Where Lk.MaLK=CT.MaLK and CT.MaHDBH=N'" + t + "'");
         }
         int flag = 0;
-        public void HienThiHoaDonTextBox(int vitri,DataTable d)
+        public void HienThiHoaDonTextBox(int vitri, DataTable d)
         {
             try
             {
@@ -124,7 +124,7 @@ namespace DoAnCShap
                 labelTongThanhToan.Text = d.Rows[vitri]["TongTien"].ToString();
                 labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
                 //HienThiDS_CTHD(vitri);
-                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.MaLK, LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'"+txtMaHD.Text+"'");
+                dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.MaLK, LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text + "'");
             }
             catch
             {
@@ -132,7 +132,7 @@ namespace DoAnCShap
             }
         }
 
-        public void HienThiCTHoaDonTextBox(int vitri , DataTable d)
+        public void HienThiCTHoaDonTextBox(int vitri, DataTable d)
         {
             try
             {
@@ -175,14 +175,14 @@ namespace DoAnCShap
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
             comboBoxLK.Text = null;
-            XuLyChucNang(false,true);
+            XuLyChucNang(false, true);
         }
 
         private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                flag = 1;
-                int vitri = dataGridViewHD.CurrentCell.RowIndex;
-                HienThiHoaDonTextBox(vitri,bus.GetHoaDon(""));
+            flag = 1;
+            int vitri = dataGridViewHD.CurrentCell.RowIndex;
+            HienThiHoaDonTextBox(vitri, bus.GetHoaDon(""));
             DataTable TTKH = bus.LayTTKH("Select * From KhachHang Where TenKH=N'" + comboBoxKH.Text + "'");
             if (comboBoxKH.Text == TTKH.Rows[0]["TenKH"].ToString())
             {
@@ -191,7 +191,7 @@ namespace DoAnCShap
                 DiaChiKH = TTKH.Rows[0]["DiaChi"].ToString();
             }
         }
-    
+
         string TenKhachHang;
         string DienThoaiKH;
         string DiaChiKH;
@@ -204,13 +204,15 @@ namespace DoAnCShap
             comboBoxLK.Text = row.Cells["MaLK"].Value.ToString();
             textBoxSL.Text = row.Cells["SoLuong"].Value.ToString();
             txtDonGia.Text = row.Cells["DonGia"].Value.ToString();
+            txtDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(txtDonGia.Text));
             txtKhuyenMai.Text = row.Cells["KhuyenMai"].Value.ToString();
             txtThanhTien.Text = row.Cells["ThanhTien"].Value.ToString();
+            txtThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(txtDonGia.Text));
         }
 
         private void dataGridViewHD_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(true,false);
+            XuLyChucNang(true, false);
         }
 
         decimal tongtien = 0;
@@ -235,7 +237,7 @@ namespace DoAnCShap
                 decimal TT = decimal.Parse(dataGridViewCTHD.Rows[i].Cells["ThanhTien"].Value.ToString());
                 TongThanhToan += TT;
                 labelTongThanhToan.Text = TongThanhToan.ToString();
-                labelTongThanhToan.Text= string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
+                labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
             }
         }
 
@@ -283,7 +285,7 @@ namespace DoAnCShap
                 bus.DeleteHoaDon(hdbh);
                 MessageBox.Show("Success !");
                 ClearTextBoxCTHD();
-               
+
             }
             HienThiHoaDon();
         }
@@ -300,12 +302,12 @@ namespace DoAnCShap
         private void btnCapNhat_Click_1(object sender, EventArgs e)
         {
             string condition = txtMaHD.Text;
-           
+
             MessageBox.Show("Seccess !");
             HienThiCTHD_TheoMaHD(condition);
-           
+
         }
-        
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             hdbh.MaHDBH = txtMaHD.Text;
@@ -313,7 +315,7 @@ namespace DoAnCShap
             hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
             hdbh.TrangThai = "1";
             bus.UpdateHoaDon(hdbh);
-            for(int i=0;i<dataGridViewCTHD.Rows.Count-0;i++)
+            for (int i = 0; i < dataGridViewCTHD.Rows.Count - 0; i++)
             {
                 string malk = dataGridViewCTHD.Rows[i].Cells["MaSP"].FormattedValue.ToString();
                 int soluong = int.Parse(dataGridViewCTHD.Rows[i].Cells["SoLuong"].Value.ToString());
@@ -328,18 +330,6 @@ namespace DoAnCShap
                 cthd.KhuyenMai = khuyenmai;
                 cthd.ThanhTien = thanhtien;
                 bus.UpdateCTHoaDon(cthd);
-                //if(dataGridViewCTHD.Rows[i].Cells["SoLuongKhoMoi"].Value==null)
-                //{
-                //    lk.MaLK = malk;
-                //    lk.SoLuongTon = soluongkho;
-                //    bus.UpdateSoLuongKho(lk);
-                //}
-                //else
-                //{
-                //    lk.MaLK = malk;
-                //    lk.SoLuongTon = soluongkhomoi;
-                //    bus.UpdateSoLuongKho(lk);
-                //}    
             }
             HienThiHoaDon();
         }
@@ -366,18 +356,18 @@ namespace DoAnCShap
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-            if(txtTienKDua.Text=="")
+            if (txtTienKDua.Text == "")
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(txtTienKDua, "? Tiền Khách Đưa");
                 return;
             }
-            if(txtTienThua.Text=="")
+            if (txtTienThua.Text == "")
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(txtTienThua, "? Tiền Thừa");
                 return;
-            }    
+            }
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
             for (int i = 0; i < dataGridViewCTHD.Rows.Count - 0; i++)
@@ -395,8 +385,8 @@ namespace DoAnCShap
                     DiaChi = DiaChiKH,
                     TenNV = comboBoxNhanVien.Text,
                     NgayLap = dateTimePickerNgaylap.Text,
-                    TienKhachDua =decimal.Parse(txtTienKDua.Text), 
-                    TienThua =decimal.Parse(txtTienThua.Text),
+                    TienKhachDua = decimal.Parse(txtTienKDua.Text),
+                    TienThua = decimal.Parse(txtTienThua.Text),
                     MaHD = txtMaHD.Text
                 };
                 lst.Add(cT_HoaDon);
@@ -412,10 +402,7 @@ namespace DoAnCShap
 
         private void dataGridViewHD_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewHD.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewHD.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -430,7 +417,7 @@ namespace DoAnCShap
                 decimal TienThuaKhach;
                 TienThuaKhach = decimal.Parse(txtTienKDua.Text) - decimal.Parse(labelTongThanhToan.Text);
                 txtTienThua.Text = TienThuaKhach.ToString();
-                //txtTienThua.Text = string.Format("{0:#,##0}", decimal.Parse(txtTongThanhT.Text));
+                txtTienThua.Text = string.Format("{0:#,##0}", decimal.Parse(txtTienThua.Text));
             }
             catch
             {
