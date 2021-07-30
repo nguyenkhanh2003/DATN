@@ -296,7 +296,7 @@ namespace DoAnCShap
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(222, 13);
+            this.label14.Location = new System.Drawing.Point(409, 12);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(126, 21);
             this.label14.TabIndex = 2;
@@ -304,11 +304,13 @@ namespace DoAnCShap
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(362, 9);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(559, 8);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(288, 28);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel2

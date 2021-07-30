@@ -31,7 +31,11 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_BanHan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -42,18 +46,11 @@ namespace DoAnCShap
             this.btnInHD = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHDBH = new System.Windows.Forms.DataGridView();
-            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongNguyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelGioiTinh = new System.Windows.Forms.Panel();
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.btnThenKH = new System.Windows.Forms.Button();
@@ -94,12 +91,19 @@ namespace DoAnCShap
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.TenLK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongNguyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDBH)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panelGioiTinh.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumreicSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
@@ -155,9 +159,9 @@ namespace DoAnCShap
             this.btnThemHD.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHD.Image")));
             this.btnThemHD.Location = new System.Drawing.Point(14, 6);
             this.btnThemHD.Name = "btnThemHD";
-            this.btnThemHD.Size = new System.Drawing.Size(115, 41);
+            this.btnThemHD.Size = new System.Drawing.Size(78, 41);
             this.btnThemHD.TabIndex = 3;
-            this.btnThemHD.Text = "Tạo Hóa Đơn";
+            this.btnThemHD.Text = "Tạo";
             this.btnThemHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemHD.UseVisualStyleBackColor = true;
             this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
@@ -167,9 +171,9 @@ namespace DoAnCShap
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(658, 6);
+            this.btnClose.Location = new System.Drawing.Point(671, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(84, 41);
+            this.btnClose.Size = new System.Drawing.Size(76, 41);
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Đóng";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,9 +185,9 @@ namespace DoAnCShap
             this.btnLuuHd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLuuHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuHd.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuHd.Image")));
-            this.btnLuuHd.Location = new System.Drawing.Point(250, 6);
+            this.btnLuuHd.Location = new System.Drawing.Point(213, 6);
             this.btnLuuHd.Name = "btnLuuHd";
-            this.btnLuuHd.Size = new System.Drawing.Size(91, 41);
+            this.btnLuuHd.Size = new System.Drawing.Size(78, 41);
             this.btnLuuHd.TabIndex = 3;
             this.btnLuuHd.Text = "Lưu";
             this.btnLuuHd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -201,7 +205,7 @@ namespace DoAnCShap
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(114, 59);
             this.btnInHD.TabIndex = 3;
-            this.btnInHD.Text = "In";
+            this.btnInHD.Text = "Xuất Hóa Đơn";
             this.btnInHD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInHD.UseVisualStyleBackColor = true;
@@ -248,54 +252,6 @@ namespace DoAnCShap
             this.dataGridViewHDBH.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellValueChanged);
             this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
             // 
-            // TenLK
-            // 
-            this.TenLK.DataPropertyName = "TenLK";
-            this.TenLK.HeaderText = "Tên Linh Kiện";
-            this.TenLK.Name = "TenLK";
-            this.TenLK.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mãi";
-            this.KhuyenMai.Name = "KhuyenMai";
-            this.KhuyenMai.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle1.Format = "C2";
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            // 
-            // SLConLai
-            // 
-            this.SLConLai.HeaderText = "SL Còn Lại";
-            this.SLConLai.Name = "SLConLai";
-            this.SLConLai.Visible = false;
-            // 
-            // SoLuongNguyen
-            // 
-            this.SoLuongNguyen.HeaderText = "Số Lượng Nguyên";
-            this.SoLuongNguyen.Name = "SoLuongNguyen";
-            this.SoLuongNguyen.Visible = false;
-            // 
             // txtTienKhachDua
             // 
             this.txtTienKhachDua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -327,9 +283,9 @@ namespace DoAnCShap
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(460, 6);
+            this.btnHuy.Location = new System.Drawing.Point(444, 6);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(95, 41);
+            this.btnHuy.Size = new System.Drawing.Size(71, 41);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -342,7 +298,7 @@ namespace DoAnCShap
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panelGioiTinh);
             this.panel3.Controls.Add(this.btnThenKH);
             this.panel3.Controls.Add(this.btnTimKH);
             this.panel3.Controls.Add(this.label16);
@@ -366,17 +322,17 @@ namespace DoAnCShap
             this.panel3.Size = new System.Drawing.Size(760, 251);
             this.panel3.TabIndex = 17;
             // 
-            // panel6
+            // panelGioiTinh
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.radioButtonNu);
-            this.panel6.Controls.Add(this.radioButtonNam);
-            this.panel6.Location = new System.Drawing.Point(444, 129);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(229, 25);
-            this.panel6.TabIndex = 37;
+            this.panelGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelGioiTinh.Controls.Add(this.radioButtonNu);
+            this.panelGioiTinh.Controls.Add(this.radioButtonNam);
+            this.panelGioiTinh.Location = new System.Drawing.Point(444, 129);
+            this.panelGioiTinh.Name = "panelGioiTinh";
+            this.panelGioiTinh.Size = new System.Drawing.Size(229, 25);
+            this.panelGioiTinh.TabIndex = 37;
             // 
             // radioButtonNu
             // 
@@ -855,6 +811,62 @@ namespace DoAnCShap
             this.label15.Text = "Tổng Thanh Toán";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // TenLK
+            // 
+            this.TenLK.DataPropertyName = "TenLK";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TenLK.DefaultCellStyle = dataGridViewCellStyle6;
+            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.Name = "TenLK";
+            this.TenLK.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle7;
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle8;
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.KhuyenMai.DefaultCellStyle = dataGridViewCellStyle9;
+            this.KhuyenMai.HeaderText = "Khuyến Mãi";
+            this.KhuyenMai.Name = "KhuyenMai";
+            this.KhuyenMai.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle10.Format = "C2";
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle10;
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
+            // SLConLai
+            // 
+            this.SLConLai.HeaderText = "SL Còn Lại";
+            this.SLConLai.Name = "SLConLai";
+            this.SLConLai.Visible = false;
+            // 
+            // SoLuongNguyen
+            // 
+            this.SoLuongNguyen.HeaderText = "Số Lượng Nguyên";
+            this.SoLuongNguyen.Name = "SoLuongNguyen";
+            this.SoLuongNguyen.Visible = false;
+            // 
             // Frm_BanHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -877,8 +889,8 @@ namespace DoAnCShap
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelGioiTinh.ResumeLayout(false);
+            this.panelGioiTinh.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumreicSL)).EndInit();
@@ -938,13 +950,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider errorMes;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SLConLai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNguyen;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label txtTienThua;
@@ -952,6 +957,13 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLConLai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNguyen;
     }
 }

@@ -22,13 +22,5 @@ namespace DoAnCShap
         {
 
         }
-        private void btnDoiMau_Click(object sender, EventArgs e)
-        {
-           if(comboMau.Text=="Đỏ")
-            {
-                this.frm.BackColor = Color.Red;
-                frm.Refresh();
-            }    
-        }
     }
 }

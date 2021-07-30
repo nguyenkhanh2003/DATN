@@ -317,12 +317,20 @@ namespace DoAnCShap
         private void btnTim_Click(object sender, EventArgs e)
         {
             DataTable DSHD = bus.TimHD("select * From HoaDonBanHang Where MaHDBH=N'" + txtMaHD.Text + "'");
-            if (DSHD.Rows.Count > 0)
+            try
             {
                 if (txtMaHD.Text == DSHD.Rows[0]["MaHDBH"].ToString())
+                {
                     MessageBox.Show("Tồn Tại");
-                else
+                }
+                else if (txtMaHD.Text != DSHD.Rows[0]["MaHDBH"].ToString())
+                {
                     MessageBox.Show("Không Tồn Tại");
+                }
+            }
+            catch
+            {
+
             }
         }
 

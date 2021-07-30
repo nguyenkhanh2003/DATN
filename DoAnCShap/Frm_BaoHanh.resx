@@ -210,6 +210,36 @@
   <metadata name="TrangThai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="STT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MaPBH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MaHDBH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MaNV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NgayLap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NgayLayHang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TrangThai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MaLKK.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SoLuong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GhiChu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="MaLKK.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -236,22 +266,30 @@
   </data>
   <data name="btnTim.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsN
-        DhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQU
-        FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAZABkDASIAAhEBAxEB/8QA
-        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
-        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
-        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
-        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
-        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
-        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
-        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
-        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD62+Nnxs8S3XjjVPCvhXU4/Dmn6KkZ1PWPIE87TSDKQxITjOOc
-        n0PpXPfBH9ojxZpvxH0vwl4y1Bdf03WZDb2OpGFY5opsEqr7cAq2CPUEipP2h/gv4y0vx5qXi3wlp03i
-        HSdZ8p9Q0y1I8+OeNSokCk/MCp7cjJ4rymxstY+G/iTw/wDEP4ieHr/QPDWj3ayW1rIg+03Fxg7Btz8o
-        HLfNjOK+4p08o/siUpNe1t/29zf5fhbzPiak82/taMYp+yv/ANu8v+f438j9EKKxvB/jDSPHnh2y13Qr
-        2O/0y8QPFNGc/UH0I6EHoa2a+HPtgrH8XeEdJ8deHb7Qtcso7/TLyMxywyDse4PYjqCOlbFFAHxh8N/h
-        n8SP2XfjbbaF4ftrnxP8NteuMuccWo/vMf4HUEc9HA9a+z6KKAP/2Q==
+        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
 </value>
   </data>
   <data name="btnThemPhieu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

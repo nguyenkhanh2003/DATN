@@ -29,51 +29,12 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboMau = new System.Windows.Forms.ComboBox();
-            this.btnDoiMau = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BackGround";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboMau
-            // 
-            this.comboMau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboMau.FormattingEnabled = true;
-            this.comboMau.Items.AddRange(new object[] {
-            "Đỏ",
-            "Xanh",
-            "Hồng"});
-            this.comboMau.Location = new System.Drawing.Point(284, 42);
-            this.comboMau.Name = "comboMau";
-            this.comboMau.Size = new System.Drawing.Size(239, 28);
-            this.comboMau.TabIndex = 2;
-            // 
-            // btnDoiMau
-            // 
-            this.btnDoiMau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoiMau.Location = new System.Drawing.Point(564, 42);
-            this.btnDoiMau.Name = "btnDoiMau";
-            this.btnDoiMau.Size = new System.Drawing.Size(75, 30);
-            this.btnDoiMau.TabIndex = 3;
-            this.btnDoiMau.Text = "Thay Đổi";
-            this.btnDoiMau.UseVisualStyleBackColor = true;
-            this.btnDoiMau.Click += new System.EventHandler(this.btnDoiMau_Click);
             // 
             // panel1
             // 
@@ -87,6 +48,16 @@ namespace DoAnCShap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(883, 308);
             this.panel1.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(366, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Tin Học Ngôi Sao";
             // 
             // label3
             // 
@@ -111,25 +82,12 @@ namespace DoAnCShap
             this.label2.Text = "Thông Tin Cửa Hàng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(366, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tin Học Ngôi Sao";
-            // 
             // Frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnDoiMau);
-            this.Controls.Add(this.comboMau);
-            this.Controls.Add(this.label1);
             this.Name = "Frm_Setting";
             this.Text = "Frm_Setting";
             this.Load += new System.EventHandler(this.Frm_Setting_Load);
@@ -140,9 +98,6 @@ namespace DoAnCShap
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboMau;
-        private System.Windows.Forms.Button btnDoiMau;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

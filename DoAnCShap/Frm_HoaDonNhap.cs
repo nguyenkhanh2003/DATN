@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,6 +79,21 @@ namespace DoAnCShap
             btnXoa.Enabled = b3;
         }
 
+        public void XuLyTextBox(Boolean b1)
+        {
+            textBoxChietKhau.Enabled = b1;
+            textBoxDonGia.Enabled = b1;
+            textBoxSoLuong.Enabled = b1;
+            labelThanhTien.Enabled = b1;
+            labelTongThanhToan.Enabled = b1;
+            txtMaHDN.Enabled = b1;
+            comboBoxMaNV.Enabled = b1;
+            comboBoxTenLK.Enabled = b1;
+            comboBoxNCC.Enabled = b1;
+            dateTimePickerNgayLapHDN.Enabled = b1;
+
+        }
+
         public void ClearTexBox()
         {
             txtMaHDN.Clear();
@@ -111,6 +127,7 @@ namespace DoAnCShap
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
             ClearTexBox();
+            XuLyTextBox(true);
             HideDataGriview(true, false);
             if (dataGridViewHDN.Rows.Count <= 0)
             {
@@ -130,6 +147,7 @@ namespace DoAnCShap
         public string MaLK = "";
         int SoLuongTon;
         int SoLuongConLai;
+
         public void TongTienSP()
         {
             decimal sum = 0;
@@ -247,6 +265,13 @@ namespace DoAnCShap
             labelTongThanhToan.Text = TongThanhToan.ToString();
             labelTongThanhToan.Text = string.Format("{0:#,##0}", decimal.Parse(labelTongThanhToan.Text));
         }
+
+        public void UpateThanhTienSP()
+        {
+            decimal ThanhTienSP;
+            ThanhTienSP = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - decimal.Parse(textBoxChietKhau.Text);
+            labelThanhTien.Text = ThanhTienSP.ToString();
+        }
         private void Frm_HoaDonNhap_Load(object sender, EventArgs e)
         {
             string condition = Login.SetValueForText1;
@@ -256,6 +281,7 @@ namespace DoAnCShap
             HienThiHoaDonN();
             XuLyChucNang(true, false, false, false);
             comboBoxNCC.Text = "";
+            XuLyTextBox(false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -317,6 +343,7 @@ namespace DoAnCShap
             }
             if (flag == 2)
             {
+                UpateThanhTienSP();
                 cthdn.MaHDNH = txtMaHDN.Text;
                 cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
                 cthdn.SoLuong = int.Parse(textBoxSoLuong.Text);
@@ -325,7 +352,7 @@ namespace DoAnCShap
                 cthdn.ThanhTien = decimal.Parse(labelThanhTien.Text);
                 bus.UpdateCTHDN(cthdn);
                 HienThicTHDN();
-                TongThanhToanMoi();
+                TongThanhToanCTHDN2();
                 hdn.MaHDNH = txtMaHDN.Text;
                 hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
                 hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
@@ -451,6 +478,7 @@ namespace DoAnCShap
         private void dataGridViewHDN_DoubleClick(object sender, EventArgs e)
         {
             XuLyChucNang(false, true, true, false);
+            XuLyTextBox(true);
         }
 
         private void dataGridViewHDN_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -554,6 +582,11 @@ namespace DoAnCShap
         private void comboBoxTenLK_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void textBoxChietKhau_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

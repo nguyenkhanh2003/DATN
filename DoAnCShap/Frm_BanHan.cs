@@ -81,6 +81,7 @@ namespace DoAnCShap
             txtDiaChi.Enabled = b2;
             txtSDT.Enabled = b2;
             dateTimePickerNgayLap.Enabled = b2;
+            panelGioiTinh.Enabled = b2;
 
         }
         public void ClearTextBox()
