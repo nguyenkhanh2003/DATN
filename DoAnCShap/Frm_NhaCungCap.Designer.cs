@@ -89,7 +89,7 @@ namespace DoAnCShap
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(198, 13);
+            this.label10.Location = new System.Drawing.Point(374, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 21);
             this.label10.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace DoAnCShap
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(354, 9);
+            this.txtSearch.Location = new System.Drawing.Point(524, 8);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(324, 28);
