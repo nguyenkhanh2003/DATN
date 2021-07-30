@@ -424,8 +424,7 @@ namespace DoAnCShap
 
             }
         }
-        int LaySoLuong;
-        int SoLuongTonKhoMoi;
+
         private void dataGridViewCTHD_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             decimal ThanhTien;
@@ -442,6 +441,11 @@ namespace DoAnCShap
                 }
                 TongTienSP();
             }
+        }
+
+        private void dataGridViewCTHD_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dataGridViewCTHD.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
     }
 }
