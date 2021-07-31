@@ -67,7 +67,7 @@ namespace DoAnCShap
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelSideMenu.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
             this.panelSideMenu.Controls.Add(this.btnSetting);
             this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
@@ -82,6 +82,7 @@ namespace DoAnCShap
             this.panelSideMenu.Controls.Add(this.btnKhachHang);
             this.panelSideMenu.Controls.Add(this.btnNhanVien);
             this.panelSideMenu.Controls.Add(this.panelLogo);
+            this.panelSideMenu.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
@@ -90,7 +91,8 @@ namespace DoAnCShap
             // 
             // btnSetting
             // 
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnSetting.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -111,7 +113,8 @@ namespace DoAnCShap
             // 
             // btnPhanQuyen
             // 
-            this.btnPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnPhanQuyen.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnPhanQuyen.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhanQuyen.FlatAppearance.BorderSize = 0;
             this.btnPhanQuyen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -132,7 +135,8 @@ namespace DoAnCShap
             // 
             // btnThongKe
             // 
-            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnThongKe.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnThongKe.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -153,7 +157,8 @@ namespace DoAnCShap
             // 
             // btnBaohanh
             // 
-            this.btnBaohanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnBaohanh.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnBaohanh.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnBaohanh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBaohanh.FlatAppearance.BorderSize = 0;
             this.btnBaohanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -174,7 +179,8 @@ namespace DoAnCShap
             // 
             // btnBanHang
             // 
-            this.btnBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnBanHang.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnBanHang.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnBanHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBanHang.FlatAppearance.BorderSize = 0;
             this.btnBanHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -195,7 +201,8 @@ namespace DoAnCShap
             // 
             // btnNhaCungCap
             // 
-            this.btnNhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnNhaCungCap.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnNhaCungCap.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
             this.btnNhaCungCap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -235,7 +242,8 @@ namespace DoAnCShap
             // 
             // btnLoaiLK
             // 
-            this.btnLoaiLK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnLoaiLK.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnLoaiLK.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnLoaiLK.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLoaiLK.FlatAppearance.BorderSize = 0;
             this.btnLoaiLK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -256,7 +264,8 @@ namespace DoAnCShap
             // 
             // btnLinhKien
             // 
-            this.btnLinhKien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnLinhKien.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnLinhKien.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnLinhKien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLinhKien.FlatAppearance.BorderSize = 0;
             this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -277,7 +286,8 @@ namespace DoAnCShap
             // 
             // btnPhieuNhap
             // 
-            this.btnPhieuNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnPhieuNhap.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnPhieuNhap.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhieuNhap.FlatAppearance.BorderSize = 0;
             this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -298,7 +308,8 @@ namespace DoAnCShap
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnHoaDon.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnHoaDon.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -321,7 +332,8 @@ namespace DoAnCShap
             // 
             // btnKhachHang
             // 
-            this.btnKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnKhachHang.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnKhachHang.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhachHang.FlatAppearance.BorderSize = 0;
             this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -343,7 +355,8 @@ namespace DoAnCShap
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(160)))));
+            this.btnNhanVien.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnNhanVien.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -388,11 +401,12 @@ namespace DoAnCShap
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(110)))));
+            this.panelTop.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
             this.panelTop.Controls.Add(this.labelHienThiTenDangNhap);
             this.panelTop.Controls.Add(this.btnLogout);
             this.panelTop.Controls.Add(this.iconBtnThuNho);
             this.panelTop.Controls.Add(this.lbl_HienThiForm);
+            this.panelTop.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(229, 0);
             this.panelTop.Name = "panelTop";
@@ -459,9 +473,10 @@ namespace DoAnCShap
             // 
             // panelBot
             // 
-            this.panelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(110)))));
+            this.panelBot.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
             this.panelBot.Controls.Add(this.labeldateTime);
             this.panelBot.Controls.Add(this.label1);
+            this.panelBot.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBot.Location = new System.Drawing.Point(229, 582);
             this.panelBot.Name = "panelBot";
@@ -471,7 +486,8 @@ namespace DoAnCShap
             // labeldateTime
             // 
             this.labeldateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labeldateTime.BackColor = System.Drawing.Color.Teal;
+            this.labeldateTime.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.labeldateTime.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.labeldateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeldateTime.ForeColor = System.Drawing.Color.White;
             this.labeldateTime.Location = new System.Drawing.Point(470, 6);
@@ -493,6 +509,7 @@ namespace DoAnCShap
             // 
             // panelChildForm
             // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(229, 50);
             this.panelChildForm.Name = "panelChildForm";
@@ -509,6 +526,7 @@ namespace DoAnCShap
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1028, 627);
             this.ControlBox = false;
             this.Controls.Add(this.panelChildForm);
@@ -520,7 +538,6 @@ namespace DoAnCShap
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -532,14 +549,10 @@ namespace DoAnCShap
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbl_HienThiForm;
         private FontAwesome.Sharp.IconButton iconBtnThuNho;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel panelBot;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         public System.Windows.Forms.Panel panelTop;
@@ -557,8 +570,11 @@ namespace DoAnCShap
         public System.Windows.Forms.Button btnThongKe;
         public System.Windows.Forms.Button btnBaohanh;
         public System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Label labeldateTime;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Panel panelBot;
+        public System.Windows.Forms.Panel panelSideMenu;
+        public System.Windows.Forms.Label labeldateTime;
+        public System.Windows.Forms.Label lbl_HienThiForm;
     }
 }
 

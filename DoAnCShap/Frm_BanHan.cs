@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
-using Dapper;
 using Microsoft.Reporting.WinForms;
 using System.Globalization;
 

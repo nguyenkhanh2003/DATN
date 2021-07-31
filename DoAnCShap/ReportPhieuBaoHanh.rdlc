@@ -463,7 +463,7 @@
   <Width>7.21246in</Width>
   <Page>
     <PageHeader>
-      <Height>1.78472in</Height>
+      <Height>1.86805in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -564,10 +564,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>0.88194in</Top>
-          <Left>4.18625in</Left>
+          <Top>1.50694in</Top>
+          <Left>0.1389in</Left>
           <Height>0.25in</Height>
-          <Width>2.33333in</Width>
+          <Width>2.45833in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -644,8 +644,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.49305in</Top>
-          <Left>0.1389in</Left>
+          <Top>1.50694in</Top>
+          <Left>4.18625in</Left>
           <Height>0.25in</Height>
           <Width>2.45833in</Width>
           <ZIndex>4</ZIndex>
@@ -737,6 +737,84 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tên Khách Hàng:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve">  </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!TenKH.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox6</rd:DefaultName>
+          <Top>0.88194in</Top>
+          <Left>4.19667in</Left>
+          <Height>0.25in</Height>
+          <Width>2.44791in</Width>
+          <ZIndex>8</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox12">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Điện Thoại:  </Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!SDT.Value</Value>
+                  <Style>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox12</rd:DefaultName>
+          <Top>1.20138in</Top>
+          <Left>4.19667in</Left>
+          <Height>0.25in</Height>
+          <Width>2.44791in</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -781,10 +859,6 @@
           <DataField>GhiChu</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MaHD">
-          <DataField>MaHD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="MaPhieuBH">
           <DataField>MaPhieuBH</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -797,9 +871,17 @@
           <DataField>NgayLay</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="SDT">
+          <DataField>SDT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="SoLuong">
           <DataField>SoLuong</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TenKH">
+          <DataField>TenKH</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TenLK">
           <DataField>TenLK</DataField>

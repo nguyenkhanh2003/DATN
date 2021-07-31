@@ -71,5 +71,15 @@ namespace BUS
         {
             return bus.TimHD(condition);
         }
+
+        public DataTable DanhSachKH(string condition)
+        {
+            return bus.DanhSachKH(condition);
+        }
+
+        public DataTable LayTTKH(string condition)
+        {
+            return bus.LayThongTinKH(condition);
+        }
     }
 }

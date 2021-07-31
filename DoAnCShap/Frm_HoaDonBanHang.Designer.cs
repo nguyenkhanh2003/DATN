@@ -578,6 +578,7 @@
             // txtTienKDua
             // 
             this.txtTienKDua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienKDua.ForeColor = System.Drawing.Color.Red;
             this.txtTienKDua.Location = new System.Drawing.Point(184, 245);
             this.txtTienKDua.Multiline = true;
             this.txtTienKDua.Name = "txtTienKDua";
@@ -793,7 +794,6 @@
         private System.Windows.Forms.Button btnInHD;
         private System.Windows.Forms.TextBox textBoxSL;
         private System.Windows.Forms.TextBox txtMaHD;
-        private System.Windows.Forms.TextBox txtTienKDua;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ErrorProvider errorMes;
@@ -814,5 +814,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.TextBox txtTienKDua;
     }
 }

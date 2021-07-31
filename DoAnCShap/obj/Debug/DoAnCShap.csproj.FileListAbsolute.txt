@@ -247,7 +247,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\BUS.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Dapper.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DevComponents.DotNetBar.Layout.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DTO.dll
@@ -281,7 +280,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Microsoft.VisualStud
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Microsoft.MSXML.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\BUS.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DTO.pdb
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Dapper.xml
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DAL.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
@@ -329,6 +327,3 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.Cop
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_InHoaDonNhap.resources
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.Design.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.Fonts.dll

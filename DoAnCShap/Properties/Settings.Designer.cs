@@ -33,5 +33,29 @@ namespace DoAnCShap.Properties {
                 return ((string)(this["PM_BanLinhKienPCConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        public global::System.Drawing.Color FormsBackgroundColor {
+            get {
+                return ((global::System.Drawing.Color)(this["FormsBackgroundColor"]));
+            }
+            set {
+                this["FormsBackgroundColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30, 130, 110")]
+        public global::System.Drawing.Color BackGroundColoPanelTop {
+            get {
+                return ((global::System.Drawing.Color)(this["BackGroundColoPanelTop"]));
+            }
+            set {
+                this["BackGroundColoPanelTop"] = value;
+            }
+        }
     }
 }

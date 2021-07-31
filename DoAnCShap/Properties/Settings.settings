@@ -10,5 +10,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-L3VUEAK;Initial Catalog=PM_BanLinhKienPC;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="FormsBackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Control</Value>
+    </Setting>
+    <Setting Name="BackGroundColoPanelTop" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">30, 130, 110</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

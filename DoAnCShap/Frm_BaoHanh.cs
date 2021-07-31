@@ -25,12 +25,14 @@ namespace DoAnCShap
         ReportDataSource rs = new ReportDataSource();
         int flag = 0;
 
-        public void XuLyChucNang(Boolean b1, Boolean b2)
+        public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3, Boolean b4)
         {
             btnThem.Enabled = b1;
             btnHuy.Enabled = b2;
+            btnThemSP.Enabled = b4;
             btnLuu.Enabled = b2;
             btnXoa.Enabled = b2;
+            btnIn.Enabled = b3;
         }
 
         public void HienThiNhanVien(string labelHienTenDN)
@@ -52,6 +54,13 @@ namespace DoAnCShap
             comboBoxlK.ValueMember = "MaLK";
         }
 
+        public void HienThiDSKH()
+        {
+            cboKhachHang.DataSource = bus.DanhSachKH("");
+            cboKhachHang.DisplayMember = "TenKH";
+            cboKhachHang.ValueMember = "MaKH";
+        }
+
         public void HienThiCTPhieuBaoHanh()
         {
             dataGridViewCTPBH.DataSource = bus.HienThiCTPhieu("");
@@ -67,7 +76,6 @@ namespace DoAnCShap
 
         public void ClearTextBoxPBH()
         {
-            txtMaHD.ResetText();
             txtMaPhieu.ResetText();
             dateTimePickerNgaLap.ResetText();
             dateTimePickerNgayLayHang.ResetText();
@@ -86,7 +94,8 @@ namespace DoAnCShap
             ClearTextBoxPBH();
             ClearTextBoxCTPBH();
             HienThiLK();
-            XuLyChucNang(true, false);
+            HienThiDSKH();
+            XuLyChucNang(true, false, false, false);
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
         }
@@ -105,7 +114,7 @@ namespace DoAnCShap
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 1;
-            XuLyChucNang(false, true);
+            XuLyChucNang(false, true, false, true);
             if ((bus.PhatSinhMa("").Rows.Count == 0))
             {
                 txtMaPhieu.Text = "PBH00";
@@ -173,12 +182,6 @@ namespace DoAnCShap
                     errorMes.SetError(txtMaPhieu, "? Mã Phiếu");
                     return;
                 }
-                if (txtMaHD.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtMaHD, "? Mã Hóa Đơn");
-                    return;
-                }
                 if (comboBoxNV.Text == "")
                 {
                     errorMes.BlinkRate = 100;
@@ -188,7 +191,7 @@ namespace DoAnCShap
                 else
                 {
                     pbh.MaPBH = txtMaPhieu.Text;
-                    pbh.MaHDBH = txtMaHD.Text;
+                    pbh.MaKH = cboKhachHang.SelectedValue.ToString();
                     pbh.MaNV = comboBoxNV.SelectedValue.ToString();
                     pbh.NgayLap = dateTimePickerNgaLap.Value.Date;
                     pbh.NgayLayHang = dateTimePickerNgayLayHang.Value.Date;
@@ -209,7 +212,7 @@ namespace DoAnCShap
                     MessageBox.Show("Thành Công", "Thông Báo");
                     ClearTextBoxPBH();
                     ClearTextBoxCTPBH();
-                    XuLyChucNang(true, false);
+                    XuLyChucNang(true, false, false, false);
                 }
             }
             if (flag == 2)
@@ -226,7 +229,7 @@ namespace DoAnCShap
             HienThiDSPhieu();
             ClearTextBoxPBH();
             ClearTextBoxCTPBH();
-            XuLyChucNang(true, false);
+            XuLyChucNang(true, false, false, false);
         }
 
         public void HienThiPhieuBHTextBox(int vitri, DataTable d)
@@ -234,7 +237,6 @@ namespace DoAnCShap
             try
             {
                 txtMaPhieu.Text = d.Rows[vitri]["MaPBH"].ToString();
-                txtMaHD.Text = d.Rows[vitri]["MaHDBH"].ToString();
                 comboBoxNV.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaLap.Text = d.Rows[vitri]["NgayLapPhieu"].ToString();
                 dateTimePickerNgayLayHang.Text = d.Rows[vitri]["NgayLayHang"].ToString();
@@ -281,7 +283,7 @@ namespace DoAnCShap
         private void dataGridViewCTPBH_DoubleClick(object sender, EventArgs e)
         {
             flag = 2;
-            XuLyChucNang(false, true);
+            XuLyChucNang(false, true, false, false);
         }
 
         private void dataGridViewCTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -291,11 +293,13 @@ namespace DoAnCShap
             txtSL.Text = row.Cells[1].Value.ToString();
             txtGhiChu.Text = row.Cells[2].Value.ToString();
             flag = 2;
+            btnThemSP.Enabled = false;
         }
 
         private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(false, true);
+            XuLyChucNang(false, true, true, false);
+
             flag = 1;
         }
 
@@ -310,28 +314,13 @@ namespace DoAnCShap
                 MessageBox.Show("Success");
                 dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
                 ClearTextBoxCTPBH();
-                XuLyChucNang(true, false);
+                XuLyChucNang(true, false, false, false);
             }
         }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-            DataTable DSHD = bus.TimHD("select * From HoaDonBanHang Where MaHDBH=N'" + txtMaHD.Text + "'");
-            try
-            {
-                if (txtMaHD.Text == DSHD.Rows[0]["MaHDBH"].ToString())
-                {
-                    MessageBox.Show("Tồn Tại");
-                }
-                else if (txtMaHD.Text != DSHD.Rows[0]["MaHDBH"].ToString())
-                {
-                    MessageBox.Show("Không Tồn Tại");
-                }
-            }
-            catch
-            {
 
-            }
         }
 
         private void dataGridViewPBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -339,8 +328,19 @@ namespace DoAnCShap
             dataGridViewPBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
+        string SoDienThoai = "";
         private void btnIn_Click(object sender, EventArgs e)
         {
+
+            DataTable TTKH = bus.LayTTKH("Select * From KhachHang Where MaKH=N'" + cboKhachHang.SelectedValue.ToString() + "'");
+            if (TTKH.Rows.Count > 0)
+            {
+                if (cboKhachHang.SelectedValue.ToString() == TTKH.Rows[0]["MaKH"].ToString())
+                {
+                    SoDienThoai = TTKH.Rows[0]["DienThoai"].ToString();
+                }
+            }
+
             List<PbaoHanh> lst = new List<PbaoHanh>();
             lst.Clear();
             for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
@@ -348,13 +348,14 @@ namespace DoAnCShap
                 PbaoHanh pbaoHanh = new PbaoHanh
                 {
                     MaPhieuBH = txtMaPhieu.Text,
-                    MaHD = txtMaHD.Text,
                     TenNV = comboBoxNV.Text,
                     NgayLap = dateTimePickerNgaLap.Text,
                     NgayLay = dateTimePickerNgayLayHang.Text,
                     TenLK = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString(),
                     SoLuong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString()),
                     GhiChu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString(),
+                    TenKH = cboKhachHang.Text,
+                    SDT = SoDienThoai,
                 };
                 lst.Add(pbaoHanh);
             }
@@ -370,7 +371,8 @@ namespace DoAnCShap
         public class PbaoHanh
         {
             public string MaPhieuBH { get; set; }
-            public string MaHD { get; set; }
+            public string TenKH { get; set; }
+            public string SDT { get; set; }
             public string TenNV { get; set; }
             public string NgayLap { get; set; }
             public string NgayLay { get; set; }
@@ -390,7 +392,7 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không", "Thông Bán", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (KQ == DialogResult.OK)
             {
-                XuLyChucNang(true, false);
+                XuLyChucNang(true, false, false, false);
                 ClearTextBoxCTPBH();
                 ClearTextBoxPBH();
             }

@@ -13,11 +13,11 @@ namespace DAL
 
         public DataTable GetPBH(string condition)
         {
-            return KetNoi.GetDataTable("Select PhieuBaoHanh.MaPBH,PhieuBaoHanh.MaHDBH,NhanVien.TenNV,PhieuBaoHanh.NgayLapPhieu,PhieuBaoHanh.NgayLayHang,PhieuBaoHanh.TrangThai From PhieuBaoHanh, NhanVien Where PhieuBaoHanh.MaNV=NhanVien.MaNV and PhieuBaoHanh.TrangThai=N'1'" + condition);
+            return KetNoi.GetDataTable("Select pbh.MaPBH,kh.TenKH,nv.TenNV,NgayLapPhieu,NgayLayHang From PhieuBaoHanh pbh, CT_PhieuBaoHanh ct ,KhachHang kh,NhanVien nv where kh.MaKH=pbh.MaKH and pbh.MaPBH=ct.MaPBH and nv.MaNV=pbh.MaNV and pbh.TrangThai=N'1'" + condition);
         }
         public DataTable PhatSinhMa(string condition)
         {
-            return KetNoi.GetDataTable("Select * From PhieuBaoHanh"+condition);
+            return KetNoi.GetDataTable("Select * From PhieuBaoHanh" + condition);
         }
         public DataTable HienThiHDBH(string condition)
         {
@@ -31,11 +31,11 @@ namespace DAL
 
         public DataTable HienThiCT_PhieuBaoHanhTheoMa(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         public void ThemPBH(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaHDBH + "',N'"+ex.MaNV+"','" + ex.NgayLap + "','"+ex.NgayLayHang+"',N'" + ex.TrangThai + "')");
+            KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaKH + "',N'" + ex.MaNV + "','" + ex.NgayLap + "','" + ex.NgayLayHang + "',N'" + ex.TrangThai + "')");
         }
 
         public void ThemCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
@@ -48,33 +48,43 @@ namespace DAL
             return KetNoi.GetDataTable("" + Condition);
         }
 
+        public DataTable DanhSachKH(string condition)
+        {
+            return KetNoi.GetDataTable("Select * From KhachHang Where TrangThai=N'1' " + condition);
+        }
+
         public DataTable DSSP(string condition)
         {
-            return KetNoi.GetDataTable("Select MaLK,TenLK From LinhKien"+condition);
+            return KetNoi.GetDataTable("Select MaLK,TenLK From LinhKien" + condition);
         }
 
         public void XoaCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Delete From PhieuBaoHanh where MaPBH=N'"+ex.MaPBH+"' and TenLK=N'"+ex.TenLK+"'");
+            KetNoi.ExecuteReader(@"Delete From PhieuBaoHanh where MaPBH=N'" + ex.MaPBH + "' and TenLK=N'" + ex.TenLK + "'");
         }
 
         public void XoaPhieuBaoHanh(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Update PhieuBaoHanh Set TrangThai=N'0' Where MaPBH=N'"+ex.MaPBH+"'");
+            KetNoi.ExecuteReader(@"Update PhieuBaoHanh Set TrangThai=N'0' Where MaPBH=N'" + ex.MaPBH + "'");
         }
 
         public void Update_CTPBH(CT_PhieuBaoHanh ex)
-       {
-           KetNoi.ExecuteReader(@"update CT_PhieuBaoHanh Set SoLuong="+ex.SoLuong+",GhiChu=N'"+ex.GhiChu+"' Where MaPBH=N'"+ex.MaPBH+"' and TenLK=N'"+ex.TenLK+"'");
-       }
-       public void Update_PBH(PhieuBaoHanh ex)
-       {
-           KetNoi.ExecuteReader(@"update PhieuBaoHanh Set Where MaPBH=N'"+ex.MaPBH+"'");
-       }
+        {
+            KetNoi.ExecuteReader(@"update CT_PhieuBaoHanh Set SoLuong=" + ex.SoLuong + ",GhiChu=N'" + ex.GhiChu + "' Where MaPBH=N'" + ex.MaPBH + "' and TenLK=N'" + ex.TenLK + "'");
+        }
+        public void Update_PBH(PhieuBaoHanh ex)
+        {
+            KetNoi.ExecuteReader(@"update PhieuBaoHanh Set Where MaPBH=N'" + ex.MaPBH + "'");
+        }
 
-       public DataTable TimHD(string condition)
-       {
-           return KetNoi.GetDataTable(""+condition);
-       }
+        public DataTable TimHD(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
+
+        public DataTable LayThongTinKH(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }

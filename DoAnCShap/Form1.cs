@@ -22,7 +22,7 @@ namespace DoAnCShap
 
         Login_BUS bus = new Login_BUS();
 
-       
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace DoAnCShap
         }
         private void hideSubMenu()
         {
-            
+
         }
 
         private void showSubMenu(Panel subMenu)
@@ -155,7 +155,7 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Tra Cứu Tổng Hợp";
         }
 
-     
+
         public static string UserName = "";
         public static bool QLNV;//4
         public static bool QLKH;
@@ -494,11 +494,7 @@ namespace DoAnCShap
             labeldateTime.Update();
             timer1.Enabled = true;
         }
-        public Color ButtonColor = new Color();
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            //panelTop.BackColor = ButtonColor;
-        }
+
     }
 }
