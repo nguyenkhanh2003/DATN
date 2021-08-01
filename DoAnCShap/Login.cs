@@ -52,7 +52,7 @@ namespace DoAnCShap
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
             byte[] hasBytes = md5.ComputeHash(inputBytes);
             StringBuilder sb = new StringBuilder();
-            for(int i=0;i<hasBytes.Length;i++)
+            for (int i = 0; i < hasBytes.Length; i++)
             {
                 sb.Append(hasBytes[i].ToString("X2"));
             }
@@ -101,36 +101,57 @@ namespace DoAnCShap
         public bool PhanQuyen(int col)
         {
             bool KiemTra = false;
-            for(int i=0;i<bus.GetLogin(txtTenDN.Text,CreateMd5(txtMatKhau.Text)).Rows.Count;i++)
+            for (int i = 0; i < bus.GetLogin(txtTenDN.Text, CreateMd5(txtMatKhau.Text)).Rows.Count; i++)
             {
-                if (bus.GetLogin(txtTenDN.Text,CreateMd5(txtMatKhau.Text)).Rows[i][col].ToString() =="True")
+                if (bus.GetLogin(txtTenDN.Text, CreateMd5(txtMatKhau.Text)).Rows[i][col].ToString() == "True")
                     return KiemTra = true;
             }
             return KiemTra;
         }
+
+        public bool KiemTraChucVu()
+        {
+            bool KiemTra = false;
+            for (int i = 0; i < bus.GetLogin1(txtTenDN.Text).Rows.Count; i++)
+            {
+                if (bus.GetLogin1(txtTenDN.Text).Rows[i][1].ToString() == "CV01")
+                    return KiemTra = true;
+            }
+            return KiemTra;
+        }
+        int demsolanLogin = 0;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtTenDN.Text;
             string password = txtMatKhau.Text;
-           
+
             int count = bus.GetLogin(username, CreateMd5(password)).Rows.Count;
-            if(txtTenDN.Text=="")
+            if (txtTenDN.Text == "")
             {
                 labelMessBox.Text = "Tên Đăng Nhập Không Được để trống";
                 return;
             }
-            if(txtMatKhau.Text=="")
+            if (txtMatKhau.Text == "")
             {
                 labelMessBox.Text = "Mật Khẩu Không Được để trống";
                 return;
-            }    
-            if (count==0)
+            }
+            if (count == 0)
             {
                 labelMessBox.Text = "Tên Đăng Nhập Hoặc mật khẩu không đúng";
+                txtMatKhau.ResetText();
+                demsolanLogin++;
+                if (demsolanLogin == 5 && KiemTraChucVu() == true)
+                {
+                    MessageBox.Show("Bạn Đã Đăng Nhập Sai 5 Lần");
+                    this.Close();
+                    Frm_LaylaiPass frm_LaylaiPass = new Frm_LaylaiPass();
+                    frm_LaylaiPass.ShowDialog();
+                }
             }
             else
             {
-                TenTaiKhoan = bus.GetLogin(username,CreateMd5(password)).Rows[0][10].ToString();
+                TenTaiKhoan = bus.GetLogin(username, CreateMd5(password)).Rows[0][10].ToString();
                 SetValueForText1 = username;
                 Form1 frm1 = new Form1();
                 frm1.Show();
@@ -147,7 +168,8 @@ namespace DoAnCShap
                 //HoaDon = PhanQuyen(25);
                 //Setting = PhanQuyen(26);
                 this.Close();
-            }    
+            }
+
         }
 
         private void Login_Load(object sender, EventArgs e)

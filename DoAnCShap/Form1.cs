@@ -65,7 +65,7 @@ namespace DoAnCShap
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_DSTaiKhoan());
+            openChildForm(new Frm_LaylaiPass());
             lbl_HienThiForm.Text = "Danh Sách Tài Khoản";
         }
 
@@ -217,7 +217,7 @@ namespace DoAnCShap
 
         private void iconBtn_TaiKhoan_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_DSTaiKhoan());
+            openChildForm(new Frm_LaylaiPass());
             lbl_HienThiForm.Text = "Danh Sách Tài Khoản";
         }
 

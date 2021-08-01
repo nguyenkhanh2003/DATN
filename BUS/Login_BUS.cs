@@ -8,16 +8,16 @@ using DTO;
 using System.Data;
 namespace BUS
 {
-   public  class Login_BUS
+    public class Login_BUS
     {
         Login_DAL bus = new Login_DAL();
-       
+
         public DataTable HienThiDScV(string condition)
         {
             return bus.DsLoaicV(condition);
         }
 
-        public DataTable DangNhap(string username,string password)
+        public DataTable DangNhap(string username, string password)
         {
             return bus.DangNhap(username, password);
         }
@@ -27,14 +27,22 @@ namespace BUS
             return bus.GetPhanQuyen(condition);
         }
 
-        public DataTable GetLogin(string macv,string tencv)
+        public DataTable GetLogin(string macv, string tencv)
         {
             return bus.GetLogin(macv, tencv);
         }
 
         public DataTable GetLogin1(string username)
         {
-          return  bus.GetLoGin1(username);
-        }    
+            return bus.GetLoGin1(username);
+        }
+        public DataTable LayUserName(string condition)
+        {
+            return bus.LayUserName(condition);
+        }
+        public void UpdateTaiKhoan(NhanVien nv)
+        {
+            bus.UpdateTaiKhoan(nv);
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Setting));
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -71,19 +72,21 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.txtHotLine);
             this.panel4.Controls.Add(this.txtSDT);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(144, 169);
+            this.panel4.Location = new System.Drawing.Point(120, 169);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(809, 306);
+            this.panel4.Size = new System.Drawing.Size(869, 306);
             this.panel4.TabIndex = 4;
             // 
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(346, 258);
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(371, 235);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 37);
+            this.btnSave.Size = new System.Drawing.Size(75, 46);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Lưu";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -91,7 +94,7 @@ namespace DoAnCShap
             // 
             this.txtDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DoAnCShap.Properties.Settings.Default, "ChangeDiaChi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(492, 83);
+            this.txtDiaChi.Location = new System.Drawing.Point(521, 83);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(244, 70);
@@ -102,7 +105,7 @@ namespace DoAnCShap
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(408, 88);
+            this.label7.Location = new System.Drawing.Point(440, 86);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 4;
@@ -155,7 +158,7 @@ namespace DoAnCShap
             this.txtWebSite.Location = new System.Drawing.Point(134, 171);
             this.txtWebSite.Multiline = true;
             this.txtWebSite.Name = "txtWebSite";
-            this.txtWebSite.Size = new System.Drawing.Size(221, 25);
+            this.txtWebSite.Size = new System.Drawing.Size(268, 25);
             this.txtWebSite.TabIndex = 1;
             this.txtWebSite.Text = global::DoAnCShap.Properties.Settings.Default.ChangeWebsite;
             this.txtWebSite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -167,7 +170,7 @@ namespace DoAnCShap
             this.txtHotLine.Location = new System.Drawing.Point(134, 128);
             this.txtHotLine.Multiline = true;
             this.txtHotLine.Name = "txtHotLine";
-            this.txtHotLine.Size = new System.Drawing.Size(221, 25);
+            this.txtHotLine.Size = new System.Drawing.Size(268, 25);
             this.txtHotLine.TabIndex = 1;
             this.txtHotLine.Text = global::DoAnCShap.Properties.Settings.Default.ChangeHotLine;
             this.txtHotLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -179,7 +182,7 @@ namespace DoAnCShap
             this.txtSDT.Location = new System.Drawing.Point(134, 83);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(221, 25);
+            this.txtSDT.Size = new System.Drawing.Size(268, 25);
             this.txtSDT.TabIndex = 1;
             this.txtSDT.Text = global::DoAnCShap.Properties.Settings.Default.ChangeThongTIn;
             this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -192,7 +195,7 @@ namespace DoAnCShap
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(807, 25);
+            this.label4.Size = new System.Drawing.Size(867, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Thông Tin Công Ty";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,19 +207,20 @@ namespace DoAnCShap
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnChonFontChu);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(557, 29);
+            this.panel3.Location = new System.Drawing.Point(592, 29);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(396, 99);
             this.panel3.TabIndex = 3;
             // 
             // btnChonFontChu
             // 
+            this.btnChonFontChu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChonFontChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonFontChu.Location = new System.Drawing.Point(170, 45);
+            this.btnChonFontChu.Image = ((System.Drawing.Image)(resources.GetObject("btnChonFontChu.Image")));
+            this.btnChonFontChu.Location = new System.Drawing.Point(181, 45);
             this.btnChonFontChu.Name = "btnChonFontChu";
             this.btnChonFontChu.Size = new System.Drawing.Size(75, 37);
             this.btnChonFontChu.TabIndex = 5;
-            this.btnChonFontChu.Text = "Chọn Font";
             this.btnChonFontChu.UseVisualStyleBackColor = true;
             this.btnChonFontChu.Click += new System.EventHandler(this.btnChonFontChu_Click);
             // 
@@ -230,7 +234,7 @@ namespace DoAnCShap
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(394, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Thay Đổi Font Chữ";
+            this.label3.Text = "Thay Đổi Font Chữ Menu";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -238,7 +242,7 @@ namespace DoAnCShap
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnThayDoi);
-            this.panel2.Location = new System.Drawing.Point(144, 28);
+            this.panel2.Location = new System.Drawing.Point(120, 28);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(404, 100);
             this.panel2.TabIndex = 2;
@@ -259,11 +263,11 @@ namespace DoAnCShap
             // btnThayDoi
             // 
             this.btnThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThayDoi.Image = ((System.Drawing.Image)(resources.GetObject("btnThayDoi.Image")));
             this.btnThayDoi.Location = new System.Drawing.Point(169, 46);
             this.btnThayDoi.Name = "btnThayDoi";
             this.btnThayDoi.Size = new System.Drawing.Size(75, 37);
             this.btnThayDoi.TabIndex = 2;
-            this.btnThayDoi.Text = "Chọn Màu";
             this.btnThayDoi.UseVisualStyleBackColor = true;
             this.btnThayDoi.Click += new System.EventHandler(this.btnThayDoi_Click);
             // 

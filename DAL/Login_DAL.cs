@@ -10,23 +10,24 @@ namespace DAL
     public class Login_DAL
     {
         KetNoiDatabase KetNoi = new KetNoiDatabase();
-        
+
+        NhanVien bus = new NhanVien();
         public DataTable DsLoaicV(string condition)
         {
             return KetNoi.GetDataTable("" + condition);
         }
 
-        public DataTable DangNhap(string username,string password)
+        public DataTable DangNhap(string username, string password)
         {
             return KetNoi.GetDataTable("Select * From NhanVien Where UserName=N'" + username + "' and PassWord=N'" + password + "'");
         }
 
         public DataTable GetPhanQuyen(string condition)
         {
-            return KetNoi.GetDataTable("select * From ChucVu Where QLNV='"+condition+"'");
+            return KetNoi.GetDataTable("select * From ChucVu Where QLNV='" + condition + "'");
         }
 
-        public DataTable GetLogin(string username,string password)
+        public DataTable GetLogin(string username, string password)
         {
             return KetNoi.GetDataTable("Select * From NhanVien,ChucVu Where  NhanVien.UserName=N'" + username + "'and NhanVien.PassWord=N'" + password + "' and ChucVu.MaCV=NhanVien.MaCV");
         }
@@ -35,6 +36,16 @@ namespace DAL
         {
             return KetNoi.GetDataTable(@"Select * From NhanVien,ChucVu Where  NhanVien.UserName=N'" + username + "' and ChucVu.MaCV=NhanVien.MaCV");
         }
-           
+
+        public DataTable LayUserName(string condition)
+        {
+            return KetNoi.GetDataTable(@"" + condition);
+        }
+
+        public void UpdateTaiKhoan(NhanVien nv)
+        {
+            KetNoi.ExecuteReader("Update NhanVien Set UserName=N'" + nv.UserName + "',PassWord=N' Where MaNV=N'NV00' " + nv.PassWord + "' ");
+        }
+
     }
 }
