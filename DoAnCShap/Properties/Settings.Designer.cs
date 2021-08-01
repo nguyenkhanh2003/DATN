@@ -57,5 +57,65 @@ namespace DoAnCShap.Properties {
                 this["BackGroundColoPanelTop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 12pt")]
+        public global::System.Drawing.Font ChangeFont {
+            get {
+                return ((global::System.Drawing.Font)(this["ChangeFont"]));
+            }
+            set {
+                this["ChangeFont"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ChangeThongTIn {
+            get {
+                return ((string)(this["ChangeThongTIn"]));
+            }
+            set {
+                this["ChangeThongTIn"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ChangeHotLine {
+            get {
+                return ((string)(this["ChangeHotLine"]));
+            }
+            set {
+                this["ChangeHotLine"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ChangeDiaChi {
+            get {
+                return ((string)(this["ChangeDiaChi"]));
+            }
+            set {
+                this["ChangeDiaChi"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ChangeWebsite {
+            get {
+                return ((string)(this["ChangeWebsite"]));
+            }
+            set {
+                this["ChangeWebsite"] = value;
+            }
+        }
     }
 }

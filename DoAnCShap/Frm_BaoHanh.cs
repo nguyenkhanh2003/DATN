@@ -24,7 +24,7 @@ namespace DoAnCShap
         CT_PhieuBaoHanh ctpbh = new CT_PhieuBaoHanh();
         ReportDataSource rs = new ReportDataSource();
         int flag = 0;
-
+        Frm_Setting frm_Setting = new Frm_Setting();
         public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3, Boolean b4)
         {
             btnThem.Enabled = b1;
@@ -365,6 +365,14 @@ namespace DoAnCShap
             frm_in.reportViewer1.LocalReport.DataSources.Clear();
             frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
             frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.ReportPhieuBaoHanh.rdlc";
+            Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]
+           {
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterSDT",frm_Setting.txtSDT.Text,true),
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterWebsite",frm_Setting.txtWebSite.Text,true),
+                 new Microsoft.Reporting.WinForms.ReportParameter("ParameterHotline",frm_Setting.txtHotLine.Text,true),
+                  new Microsoft.Reporting.WinForms.ReportParameter("ParameterDiaChi",frm_Setting.txtDiaChi.Text,true),
+           };
+            frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
             frm_in.ShowDialog();
         }
 

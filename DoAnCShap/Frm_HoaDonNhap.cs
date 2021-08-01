@@ -28,6 +28,7 @@ namespace DoAnCShap
         LinhKien LK = new LinhKien();
         ReportDataSource rss = new ReportDataSource();
         int flag = 0;
+        Frm_Setting frm_Setting = new Frm_Setting();
         public void HienThiSanPham()
         {
             comboBoxTenLK.DataSource = bus.GetData("");
@@ -512,6 +513,7 @@ namespace DoAnCShap
             public string MaHD { get; set; }
         }
 
+        Frm_PrintHD frm_in = new Frm_PrintHD();
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
             List<HoaDonNhap> lst = new List<HoaDonNhap>();
@@ -535,10 +537,21 @@ namespace DoAnCShap
             }
             rss.Name = "DataSet2";
             rss.Value = lst;
-            Frm_PrintHD frm_in = new Frm_PrintHD();
             frm_in.reportViewer1.LocalReport.DataSources.Clear();
             frm_in.reportViewer1.LocalReport.DataSources.Add(rss);
             frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.ReportHDN.rdlc";
+            //ReportParameter[] parms = new ReportParameter[1];
+            //parms[0] = new ReportParameter("Parameter1", frm_Setting.txtSDT.Text, true);
+            //this.frm_in.reportViewer1.LocalReport.SetParameters(parms);
+            Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]
+            {
+                new Microsoft.Reporting.WinForms.ReportParameter("Parameter1",frm_Setting.txtSDT.Text,true),
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterWebSite",frm_Setting.txtWebSite.Text,true),
+                 new Microsoft.Reporting.WinForms.ReportParameter("ParameterHotline",frm_Setting.txtHotLine.Text,true),
+                  new Microsoft.Reporting.WinForms.ReportParameter("ParameterDiaChi",frm_Setting.txtDiaChi.Text,true),
+            };
+            frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
+            this.frm_in.reportViewer1.RefreshReport();
             frm_in.ShowDialog();
         }
 

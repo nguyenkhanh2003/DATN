@@ -26,6 +26,8 @@ namespace DoAnCShap
         BanHang_BUS banhang = new BanHang_BUS();
         LinhKien lk = new LinhKien();
         ReportDataSource rs = new ReportDataSource();
+        Frm_Setting frm_Setting = new Frm_Setting();
+
         public void HienThiHoaDon()
         {
             dataGridViewHD.DataSource = bus.GetHoaDon("");
@@ -112,6 +114,11 @@ namespace DoAnCShap
             btnXoa.Enabled = b1;
         }
 
+        string SdtCuaHang;
+        string HotlineCuaHang;
+        string Website;
+        string DiaChiCuaHang;
+
         public void HienThiDS_CTHD(int vitri)
         {
             DataTable dt = new DataTable();
@@ -182,6 +189,10 @@ namespace DoAnCShap
             HienThiNhanVien(condition);
             comboBoxLK.Text = null;
             XuLyChucNang(false, true);
+            //SdtCuaHang = frm_Setting.txtSDT.Text;
+            //HotlineCuaHang = frm_Setting.txtHotLine.Text;
+            //DiaChiCuaHang = frm_Setting.txtDiaChi.Text;
+            //Website = frm_Setting.txtWebSite.Text;
         }
 
         private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -409,6 +420,7 @@ namespace DoAnCShap
 
         public static string SetValueForText1 = "";
 
+        Frm_PrintHD frm_in = new Frm_PrintHD();
         private void btnInHD_Click(object sender, EventArgs e)
         {
             if (txtTienKDua.Text == "")
@@ -442,16 +454,25 @@ namespace DoAnCShap
                     NgayLap = dateTimePickerNgaylap.Text,
                     TienKhachDua = decimal.Parse(txtTienKDua.Text),
                     TienThua = decimal.Parse(txtTienThua.Text),
-                    MaHD = txtMaHD.Text
+                    MaHD = txtMaHD.Text,
                 };
                 lst.Add(cT_HoaDon);
             }
             rs.Name = "DataSet1";
             rs.Value = lst;
-            Frm_PrintHD frm_in = new Frm_PrintHD();
+
             frm_in.reportViewer1.LocalReport.DataSources.Clear();
             frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
             frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.reportbc.rdlc";
+            Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]
+  {
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterSDT",frm_Setting.txtSDT.Text,true),
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterWebsite",frm_Setting.txtWebSite.Text,true),
+                 new Microsoft.Reporting.WinForms.ReportParameter("ParameterHotLine",frm_Setting.txtHotLine.Text,true),
+                  new Microsoft.Reporting.WinForms.ReportParameter("ParameterDiaChi",frm_Setting.txtDiaChi.Text,true),
+  };
+            frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
+            this.frm_in.reportViewer1.RefreshReport();
             frm_in.ShowDialog();
         }
 

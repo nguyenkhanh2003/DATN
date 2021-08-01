@@ -31,6 +31,16 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panelBot = new System.Windows.Forms.Panel();
+            this.labeldateTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelHienThiTenDangNhap = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
+            this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnPhanQuyen = new System.Windows.Forms.Button();
@@ -47,357 +57,62 @@ namespace DoAnCShap
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.labelHienThiTenDangNhap = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
-            this.lbl_HienThiForm = new System.Windows.Forms.Label();
-            this.panelBot = new System.Windows.Forms.Panel();
-            this.labeldateTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panelBot.SuspendLayout();
+            this.panelTop.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelTop.SuspendLayout();
-            this.panelBot.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelSideMenu
+            // panelChildForm
             // 
-            this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.panelSideMenu.Controls.Add(this.btnSetting);
-            this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
-            this.panelSideMenu.Controls.Add(this.btnThongKe);
-            this.panelSideMenu.Controls.Add(this.btnBaohanh);
-            this.panelSideMenu.Controls.Add(this.btnBanHang);
-            this.panelSideMenu.Controls.Add(this.btnNhaCungCap);
-            this.panelSideMenu.Controls.Add(this.btnExit);
-            this.panelSideMenu.Controls.Add(this.btnLoaiLK);
-            this.panelSideMenu.Controls.Add(this.btnLinhKien);
-            this.panelSideMenu.Controls.Add(this.btnPhieuNhap);
-            this.panelSideMenu.Controls.Add(this.btnHoaDon);
-            this.panelSideMenu.Controls.Add(this.btnKhachHang);
-            this.panelSideMenu.Controls.Add(this.btnNhanVien);
-            this.panelSideMenu.Controls.Add(this.panelLogo);
-            this.panelSideMenu.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(229, 627);
-            this.panelSideMenu.TabIndex = 0;
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(229, 50);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(799, 532);
+            this.panelChildForm.TabIndex = 25;
             // 
-            // btnSetting
+            // timer1
             // 
-            this.btnSetting.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 592);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(212, 46);
-            this.btnSetting.TabIndex = 18;
-            this.btnSetting.Text = "Setting";
-            this.btnSetting.UseVisualStyleBackColor = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click_1);
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnPhanQuyen
+            // panelBot
             // 
-            this.btnPhanQuyen.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnPhanQuyen.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPhanQuyen.FlatAppearance.BorderSize = 0;
-            this.btnPhanQuyen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnPhanQuyen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhanQuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanQuyen.ForeColor = System.Drawing.Color.White;
-            this.btnPhanQuyen.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.Image")));
-            this.btnPhanQuyen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhanQuyen.Location = new System.Drawing.Point(0, 546);
-            this.btnPhanQuyen.Name = "btnPhanQuyen";
-            this.btnPhanQuyen.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnPhanQuyen.Size = new System.Drawing.Size(212, 46);
-            this.btnPhanQuyen.TabIndex = 17;
-            this.btnPhanQuyen.Text = "Phân Quyền";
-            this.btnPhanQuyen.UseVisualStyleBackColor = false;
-            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click_1);
+            this.panelBot.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.panelBot.Controls.Add(this.labeldateTime);
+            this.panelBot.Controls.Add(this.label1);
+            this.panelBot.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBot.Location = new System.Drawing.Point(229, 582);
+            this.panelBot.Name = "panelBot";
+            this.panelBot.Size = new System.Drawing.Size(799, 45);
+            this.panelBot.TabIndex = 24;
             // 
-            // btnThongKe
+            // labeldateTime
             // 
-            this.btnThongKe.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnThongKe.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKe.FlatAppearance.BorderSize = 0;
-            this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnThongKe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 500);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(212, 46);
-            this.btnThongKe.TabIndex = 16;
-            this.btnThongKe.Text = "Thống Kê";
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
+            this.labeldateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labeldateTime.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.labeldateTime.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.labeldateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldateTime.ForeColor = System.Drawing.Color.White;
+            this.labeldateTime.Location = new System.Drawing.Point(470, 6);
+            this.labeldateTime.Name = "labeldateTime";
+            this.labeldateTime.Size = new System.Drawing.Size(317, 33);
+            this.labeldateTime.TabIndex = 1;
+            this.labeldateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBaohanh
+            // label1
             // 
-            this.btnBaohanh.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnBaohanh.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnBaohanh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBaohanh.FlatAppearance.BorderSize = 0;
-            this.btnBaohanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnBaohanh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnBaohanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaohanh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaohanh.ForeColor = System.Drawing.Color.White;
-            this.btnBaohanh.Image = ((System.Drawing.Image)(resources.GetObject("btnBaohanh.Image")));
-            this.btnBaohanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaohanh.Location = new System.Drawing.Point(0, 454);
-            this.btnBaohanh.Name = "btnBaohanh";
-            this.btnBaohanh.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnBaohanh.Size = new System.Drawing.Size(212, 46);
-            this.btnBaohanh.TabIndex = 15;
-            this.btnBaohanh.Text = "Bảo Hành";
-            this.btnBaohanh.UseVisualStyleBackColor = false;
-            this.btnBaohanh.Click += new System.EventHandler(this.btnBaohanh_Click_1);
-            // 
-            // btnBanHang
-            // 
-            this.btnBanHang.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnBanHang.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnBanHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBanHang.FlatAppearance.BorderSize = 0;
-            this.btnBanHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnBanHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanHang.ForeColor = System.Drawing.Color.White;
-            this.btnBanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnBanHang.Image")));
-            this.btnBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanHang.Location = new System.Drawing.Point(0, 408);
-            this.btnBanHang.Name = "btnBanHang";
-            this.btnBanHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnBanHang.Size = new System.Drawing.Size(212, 46);
-            this.btnBanHang.TabIndex = 14;
-            this.btnBanHang.Text = "Bán Hàng";
-            this.btnBanHang.UseVisualStyleBackColor = false;
-            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
-            // 
-            // btnNhaCungCap
-            // 
-            this.btnNhaCungCap.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnNhaCungCap.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
-            this.btnNhaCungCap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnNhaCungCap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhaCungCap.ForeColor = System.Drawing.Color.White;
-            this.btnNhaCungCap.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaCungCap.Image")));
-            this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 362);
-            this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnNhaCungCap.Size = new System.Drawing.Size(212, 46);
-            this.btnNhaCungCap.TabIndex = 13;
-            this.btnNhaCungCap.Text = "Nhà Cung Cấp";
-            this.btnNhaCungCap.UseVisualStyleBackColor = false;
-            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.Silver;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 638);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(212, 45);
-            this.btnExit.TabIndex = 12;
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnLoaiLK
-            // 
-            this.btnLoaiLK.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnLoaiLK.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnLoaiLK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoaiLK.FlatAppearance.BorderSize = 0;
-            this.btnLoaiLK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnLoaiLK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnLoaiLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaiLK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoaiLK.ForeColor = System.Drawing.Color.White;
-            this.btnLoaiLK.Image = ((System.Drawing.Image)(resources.GetObject("btnLoaiLK.Image")));
-            this.btnLoaiLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoaiLK.Location = new System.Drawing.Point(0, 317);
-            this.btnLoaiLK.Name = "btnLoaiLK";
-            this.btnLoaiLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnLoaiLK.Size = new System.Drawing.Size(212, 45);
-            this.btnLoaiLK.TabIndex = 2;
-            this.btnLoaiLK.Text = "Loại Linh Kiện";
-            this.btnLoaiLK.UseVisualStyleBackColor = false;
-            this.btnLoaiLK.Click += new System.EventHandler(this.btnLoaiLK_Click);
-            // 
-            // btnLinhKien
-            // 
-            this.btnLinhKien.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnLinhKien.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnLinhKien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLinhKien.FlatAppearance.BorderSize = 0;
-            this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnLinhKien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnLinhKien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLinhKien.ForeColor = System.Drawing.Color.White;
-            this.btnLinhKien.Image = ((System.Drawing.Image)(resources.GetObject("btnLinhKien.Image")));
-            this.btnLinhKien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLinhKien.Location = new System.Drawing.Point(0, 272);
-            this.btnLinhKien.Name = "btnLinhKien";
-            this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnLinhKien.Size = new System.Drawing.Size(212, 45);
-            this.btnLinhKien.TabIndex = 2;
-            this.btnLinhKien.Text = "Linh Kiện";
-            this.btnLinhKien.UseVisualStyleBackColor = false;
-            this.btnLinhKien.Click += new System.EventHandler(this.btnLinhKien_Click);
-            // 
-            // btnPhieuNhap
-            // 
-            this.btnPhieuNhap.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnPhieuNhap.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPhieuNhap.FlatAppearance.BorderSize = 0;
-            this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnPhieuNhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnPhieuNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhieuNhap.ForeColor = System.Drawing.Color.White;
-            this.btnPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuNhap.Image")));
-            this.btnPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhieuNhap.Location = new System.Drawing.Point(0, 227);
-            this.btnPhieuNhap.Name = "btnPhieuNhap";
-            this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnPhieuNhap.Size = new System.Drawing.Size(212, 45);
-            this.btnPhieuNhap.TabIndex = 2;
-            this.btnPhieuNhap.Text = "Nhập Hàng";
-            this.btnPhieuNhap.UseVisualStyleBackColor = false;
-            this.btnPhieuNhap.Click += new System.EventHandler(this.btnPhieuNhap_Click);
-            // 
-            // btnHoaDon
-            // 
-            this.btnHoaDon.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnHoaDon.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Image")));
-            this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.Location = new System.Drawing.Point(0, 182);
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5);
-            this.btnHoaDon.Size = new System.Drawing.Size(212, 45);
-            this.btnHoaDon.TabIndex = 2;
-            this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
-            this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHoaDon.UseVisualStyleBackColor = false;
-            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
-            // 
-            // btnKhachHang
-            // 
-            this.btnKhachHang.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnKhachHang.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 137);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5);
-            this.btnKhachHang.Size = new System.Drawing.Size(212, 45);
-            this.btnKhachHang.TabIndex = 2;
-            this.btnKhachHang.Text = "Quản Lý Khách Hàng";
-            this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhachHang.UseVisualStyleBackColor = false;
-            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnNhanVien.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 92);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5);
-            this.btnNhanVien.Size = new System.Drawing.Size(212, 45);
-            this.btnNhanVien.TabIndex = 2;
-            this.btnNhanVien.Text = "Quản Lý Nhân Viên";
-            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhanVien.UseVisualStyleBackColor = false;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(212, 92);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(17, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(320, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Phần Mềm Bán Linh Kiện Máy Tính";
             // 
             // panelTop
             // 
@@ -471,55 +186,352 @@ namespace DoAnCShap
             this.lbl_HienThiForm.Text = "\r\nHome";
             this.lbl_HienThiForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelBot
+            // panelSideMenu
             // 
-            this.panelBot.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.panelBot.Controls.Add(this.labeldateTime);
-            this.panelBot.Controls.Add(this.label1);
-            this.panelBot.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.panelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBot.Location = new System.Drawing.Point(229, 582);
-            this.panelBot.Name = "panelBot";
-            this.panelBot.Size = new System.Drawing.Size(799, 45);
-            this.panelBot.TabIndex = 24;
+            this.panelSideMenu.AutoScroll = true;
+            this.panelSideMenu.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.panelSideMenu.Controls.Add(this.btnSetting);
+            this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
+            this.panelSideMenu.Controls.Add(this.btnThongKe);
+            this.panelSideMenu.Controls.Add(this.btnBaohanh);
+            this.panelSideMenu.Controls.Add(this.btnBanHang);
+            this.panelSideMenu.Controls.Add(this.btnNhaCungCap);
+            this.panelSideMenu.Controls.Add(this.btnExit);
+            this.panelSideMenu.Controls.Add(this.btnLoaiLK);
+            this.panelSideMenu.Controls.Add(this.btnLinhKien);
+            this.panelSideMenu.Controls.Add(this.btnPhieuNhap);
+            this.panelSideMenu.Controls.Add(this.btnHoaDon);
+            this.panelSideMenu.Controls.Add(this.btnKhachHang);
+            this.panelSideMenu.Controls.Add(this.btnNhanVien);
+            this.panelSideMenu.Controls.Add(this.panelLogo);
+            this.panelSideMenu.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Name = "panelSideMenu";
+            this.panelSideMenu.Size = new System.Drawing.Size(229, 627);
+            this.panelSideMenu.TabIndex = 0;
             // 
-            // labeldateTime
+            // btnSetting
             // 
-            this.labeldateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labeldateTime.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.labeldateTime.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.labeldateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldateTime.ForeColor = System.Drawing.Color.White;
-            this.labeldateTime.Location = new System.Drawing.Point(470, 6);
-            this.labeldateTime.Name = "labeldateTime";
-            this.labeldateTime.Size = new System.Drawing.Size(317, 33);
-            this.labeldateTime.TabIndex = 1;
-            this.labeldateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSetting.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.Location = new System.Drawing.Point(0, 592);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(212, 46);
+            this.btnSetting.TabIndex = 18;
+            this.btnSetting.Text = "Setting";
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click_1);
             // 
-            // label1
+            // btnPhanQuyen
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(17, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Phần Mềm Bán Linh Kiện Máy Tính";
+            this.btnPhanQuyen.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnPhanQuyen.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnPhanQuyen.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanQuyen.FlatAppearance.BorderSize = 0;
+            this.btnPhanQuyen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnPhanQuyen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanQuyen.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnPhanQuyen.ForeColor = System.Drawing.Color.White;
+            this.btnPhanQuyen.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.Image")));
+            this.btnPhanQuyen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanQuyen.Location = new System.Drawing.Point(0, 546);
+            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnPhanQuyen.Size = new System.Drawing.Size(212, 46);
+            this.btnPhanQuyen.TabIndex = 17;
+            this.btnPhanQuyen.Text = "Phân Quyền";
+            this.btnPhanQuyen.UseVisualStyleBackColor = false;
+            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click_1);
             // 
-            // panelChildForm
+            // btnThongKe
             // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(229, 50);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(799, 532);
-            this.panelChildForm.TabIndex = 25;
+            this.btnThongKe.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnThongKe.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnThongKe.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnThongKe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(0, 500);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnThongKe.Size = new System.Drawing.Size(212, 46);
+            this.btnThongKe.TabIndex = 16;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
             // 
-            // timer1
+            // btnBaohanh
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btnBaohanh.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnBaohanh.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnBaohanh.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnBaohanh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaohanh.FlatAppearance.BorderSize = 0;
+            this.btnBaohanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnBaohanh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnBaohanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaohanh.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnBaohanh.ForeColor = System.Drawing.Color.White;
+            this.btnBaohanh.Image = ((System.Drawing.Image)(resources.GetObject("btnBaohanh.Image")));
+            this.btnBaohanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaohanh.Location = new System.Drawing.Point(0, 454);
+            this.btnBaohanh.Name = "btnBaohanh";
+            this.btnBaohanh.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnBaohanh.Size = new System.Drawing.Size(212, 46);
+            this.btnBaohanh.TabIndex = 15;
+            this.btnBaohanh.Text = "Bảo Hành";
+            this.btnBaohanh.UseVisualStyleBackColor = false;
+            this.btnBaohanh.Click += new System.EventHandler(this.btnBaohanh_Click_1);
+            // 
+            // btnBanHang
+            // 
+            this.btnBanHang.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnBanHang.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnBanHang.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnBanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBanHang.FlatAppearance.BorderSize = 0;
+            this.btnBanHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnBanHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanHang.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnBanHang.ForeColor = System.Drawing.Color.White;
+            this.btnBanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnBanHang.Image")));
+            this.btnBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBanHang.Location = new System.Drawing.Point(0, 408);
+            this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnBanHang.Size = new System.Drawing.Size(212, 46);
+            this.btnBanHang.TabIndex = 14;
+            this.btnBanHang.Text = "Bán Hàng";
+            this.btnBanHang.UseVisualStyleBackColor = false;
+            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
+            // 
+            // btnNhaCungCap
+            // 
+            this.btnNhaCungCap.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnNhaCungCap.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnNhaCungCap.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
+            this.btnNhaCungCap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnNhaCungCap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhaCungCap.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnNhaCungCap.ForeColor = System.Drawing.Color.White;
+            this.btnNhaCungCap.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaCungCap.Image")));
+            this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 362);
+            this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnNhaCungCap.Size = new System.Drawing.Size(212, 46);
+            this.btnNhaCungCap.TabIndex = 13;
+            this.btnNhaCungCap.Text = "Nhà Cung Cấp";
+            this.btnNhaCungCap.UseVisualStyleBackColor = false;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Silver;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(0, 638);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(212, 45);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnLoaiLK
+            // 
+            this.btnLoaiLK.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnLoaiLK.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnLoaiLK.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnLoaiLK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoaiLK.FlatAppearance.BorderSize = 0;
+            this.btnLoaiLK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnLoaiLK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnLoaiLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaiLK.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnLoaiLK.ForeColor = System.Drawing.Color.White;
+            this.btnLoaiLK.Image = ((System.Drawing.Image)(resources.GetObject("btnLoaiLK.Image")));
+            this.btnLoaiLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiLK.Location = new System.Drawing.Point(0, 317);
+            this.btnLoaiLK.Name = "btnLoaiLK";
+            this.btnLoaiLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnLoaiLK.Size = new System.Drawing.Size(212, 45);
+            this.btnLoaiLK.TabIndex = 2;
+            this.btnLoaiLK.Text = "Loại Linh Kiện";
+            this.btnLoaiLK.UseVisualStyleBackColor = false;
+            this.btnLoaiLK.Click += new System.EventHandler(this.btnLoaiLK_Click);
+            // 
+            // btnLinhKien
+            // 
+            this.btnLinhKien.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnLinhKien.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnLinhKien.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnLinhKien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLinhKien.FlatAppearance.BorderSize = 0;
+            this.btnLinhKien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnLinhKien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnLinhKien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLinhKien.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnLinhKien.ForeColor = System.Drawing.Color.White;
+            this.btnLinhKien.Image = ((System.Drawing.Image)(resources.GetObject("btnLinhKien.Image")));
+            this.btnLinhKien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLinhKien.Location = new System.Drawing.Point(0, 272);
+            this.btnLinhKien.Name = "btnLinhKien";
+            this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnLinhKien.Size = new System.Drawing.Size(212, 45);
+            this.btnLinhKien.TabIndex = 2;
+            this.btnLinhKien.Text = "Linh Kiện";
+            this.btnLinhKien.UseVisualStyleBackColor = false;
+            this.btnLinhKien.Click += new System.EventHandler(this.btnLinhKien_Click);
+            // 
+            // btnPhieuNhap
+            // 
+            this.btnPhieuNhap.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnPhieuNhap.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnPhieuNhap.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhieuNhap.FlatAppearance.BorderSize = 0;
+            this.btnPhieuNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnPhieuNhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnPhieuNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhieuNhap.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnPhieuNhap.ForeColor = System.Drawing.Color.White;
+            this.btnPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuNhap.Image")));
+            this.btnPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhieuNhap.Location = new System.Drawing.Point(0, 227);
+            this.btnPhieuNhap.Name = "btnPhieuNhap";
+            this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnPhieuNhap.Size = new System.Drawing.Size(212, 45);
+            this.btnPhieuNhap.TabIndex = 2;
+            this.btnPhieuNhap.Text = "Nhập Hàng";
+            this.btnPhieuNhap.UseVisualStyleBackColor = false;
+            this.btnPhieuNhap.Click += new System.EventHandler(this.btnPhieuNhap_Click);
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnHoaDon.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnHoaDon.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHoaDon.FlatAppearance.BorderSize = 0;
+            this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoaDon.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Image")));
+            this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHoaDon.Location = new System.Drawing.Point(0, 182);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5);
+            this.btnHoaDon.Size = new System.Drawing.Size(212, 45);
+            this.btnHoaDon.TabIndex = 2;
+            this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
+            this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHoaDon.UseVisualStyleBackColor = false;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnKhachHang.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnKhachHang.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 137);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5);
+            this.btnKhachHang.Size = new System.Drawing.Size(212, 45);
+            this.btnKhachHang.TabIndex = 2;
+            this.btnKhachHang.Text = "Quản Lý Khách Hàng";
+            this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnNhanVien.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnNhanVien.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 92);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5);
+            this.btnNhanVien.Size = new System.Drawing.Size(212, 45);
+            this.btnNhanVien.TabIndex = 2;
+            this.btnNhanVien.Text = "Quản Lý Nhân Viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(212, 92);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -538,12 +550,12 @@ namespace DoAnCShap
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelBot.ResumeLayout(false);
+            this.panelBot.PerformLayout();
+            this.panelTop.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelTop.ResumeLayout(false);
-            this.panelBot.ResumeLayout(false);
-            this.panelBot.PerformLayout();
             this.ResumeLayout(false);
 
         }

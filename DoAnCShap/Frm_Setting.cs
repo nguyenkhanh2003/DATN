@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace DoAnCShap
 {
@@ -17,13 +18,19 @@ namespace DoAnCShap
             InitializeComponent();
         }
 
+
+        public static string SetValueForText1;
+        public static string SetValueForText2;
+        public static string SetValueForText3;
+
+
         private void Frm_Setting_Load(object sender, EventArgs e)
         {
+            //txtSDT.Text = SetValueForText1;
+            //txtHotLine.Text = SetValueForText2;
+            //txtDiaChi.Text = SetValueForText3;
 
         }
-
-
-
         private void btnThayDoi_Click(object sender, EventArgs e)
         {
 
@@ -32,30 +39,74 @@ namespace DoAnCShap
             if (colDig.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.BackGroundColoPanelTop = colDig.Color;
-                Properties.Settings.Default.FormsBackgroundColor = colDig.Color;
                 Properties.Settings.Default.Save();
-                this.BackColor = colDig.Color;
+                //this.BackColor = colDig.Color;
             }
 
             //Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
             //form1.panelTop.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.panelBot.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnNhanVien.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnKhachHang.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnBanHang.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnBaohanh.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnLoaiLK.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnLinhKien.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnNhaCungCap.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnPhanQuyen.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnPhieuNhap.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnSetting.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnHoaDon.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.btnThongKe.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.panelSideMenu.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.labeldateTime.BackColor = Color.FromArgb(255, 128, 128);
-            //form1.labelHienThiTenDangNhap.BackColor = Color.FromArgb(255, 128, 128);
             //Application.DoEvents();
+
+        }
+
+        private void btnChonFontChu_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.ChangeFont = fontDialog.Font;
+                //Properties.Settings.Default.FormsBackgroundColor = fontDialog.Color;
+                Properties.Settings.Default.Save();
+                //this.BackColor = fontDialog.Color;
+
+            }
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtSDT.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSDT, "? Số Điện Thoại");
+                return;
+            }
+            //if (txtHotLine.Text == "")
+            //{
+            //    errorMes.BlinkRate = 100;
+            //    errorMes.SetError(txtHotLine, "? Hotline");
+            //    return;
+            //}
+            //if (txtDiaChi.Text == "")
+            //{
+            //    errorMes.BlinkRate = 100;
+            //    errorMes.SetError(txtDiaChi, "? Địa Chỉ");
+            //    return;
+            //}
+            else
+            {
+                if (txtSDT.Text != "")
+                {
+                    Properties.Settings.Default.ChangeThongTIn = txtSDT.Text;
+                    Properties.Settings.Default.Save();
+                }
+                if (txtHotLine.Text != "")
+                {
+                    Properties.Settings.Default.ChangeHotLine = txtHotLine.Text;
+                    Properties.Settings.Default.Save();
+                }
+                if (txtDiaChi.Text != "")
+                {
+                    Properties.Settings.Default.ChangeDiaChi = txtDiaChi.Text;
+                    Properties.Settings.Default.Save();
+                }
+                if(txtWebSite.Text !="")
+                {
+                    Properties.Settings.Default.ChangeWebsite = txtWebSite.Text;
+                    Properties.Settings.Default.Save();
+                }    
+                MessageBox.Show("Thành Công !");
+            }
 
         }
     }

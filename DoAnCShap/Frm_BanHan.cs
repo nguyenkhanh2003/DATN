@@ -30,7 +30,7 @@ namespace DoAnCShap
         LinhKien lk = new LinhKien();
         CT_HoaDonBanHang cthdbh = new CT_HoaDonBanHang();
         KhachHang AddKH = new KhachHang();
-
+        Frm_Setting frm_Setting = new Frm_Setting();
         Form1 f1 = new Form1();
         string MaLK = "";
         ReportDataSource rs = new ReportDataSource();
@@ -524,6 +524,7 @@ namespace DoAnCShap
             HienThiTimKiem(condition);
         }
 
+        Frm_PrintHD frm_in = new Frm_PrintHD();
         private void btnInHD_Click(object sender, EventArgs e)
         {
             if (txtTienKhachDua.Text == "")
@@ -556,16 +557,26 @@ namespace DoAnCShap
                     NgayLap = dateTimePickerNgayLap.Text,
                     TienKhachDua = decimal.Parse(txtTienKhachDua.Text),
                     TienThua = decimal.Parse(txtTienThua.Text),
-                    MaHD = txtMaHD.Text
+                    MaHD = txtMaHD.Text,
+
                 };
                 lst.Add(cT_HoaDon);
             }
             rs.Name = "DataSet1";
             rs.Value = lst;
-            Frm_PrintHD frm_in = new Frm_PrintHD();
+
             frm_in.reportViewer1.LocalReport.DataSources.Clear();
             frm_in.reportViewer1.LocalReport.DataSources.Add(rs);
             frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.reportbc.rdlc";
+            Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]
+            {
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterSDT",frm_Setting.txtSDT.Text,true),
+                new Microsoft.Reporting.WinForms.ReportParameter("ParameterWebsite",frm_Setting.txtWebSite.Text,true),
+                 new Microsoft.Reporting.WinForms.ReportParameter("ParameterHotLine",frm_Setting.txtHotLine.Text,true),
+                  new Microsoft.Reporting.WinForms.ReportParameter("ParameterDiaChi",frm_Setting.txtDiaChi.Text,true),
+            };
+            frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
+            this.frm_in.reportViewer1.RefreshReport();
             frm_in.ShowDialog();
 
             XuLyChucNang(true, false);
