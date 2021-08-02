@@ -509,7 +509,7 @@ namespace DoAnCShap
             public string DiaChi { get; set; }
             public string DienThoai { get; set; }
             public string TenNV { get; set; }
-            public string NgayLap { get; set; }
+            public DateTime NgayLap { get; set; }
             public string MaHD { get; set; }
         }
 
@@ -530,7 +530,7 @@ namespace DoAnCShap
                     TongThanhToan = decimal.Parse(labelTongThanhToan.Text),
                     TenNCC = comboBoxNCC.Text,
                     TenNV = comboBoxMaNV.Text,
-                    NgayLap = dateTimePickerNgayLapHDN.Text,
+                    NgayLap = dateTimePickerNgayLapHDN.Value,
                     MaHD = txtMaHDN.Text,
                 };
                 lst.Add(hoaDonNhap);

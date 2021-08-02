@@ -25,6 +25,9 @@ namespace DoAnCShap
         ReportDataSource rs = new ReportDataSource();
         int flag = 0;
         Frm_Setting frm_Setting = new Frm_Setting();
+
+        BanHang_BUS banhang = new BanHang_BUS();
+
         public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3, Boolean b4)
         {
             btnThem.Enabled = b1;
@@ -33,6 +36,18 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnXoa.Enabled = b2;
             btnIn.Enabled = b3;
+        }
+
+        public void XuLyTexBox(Boolean b1)
+        {
+            txtMaPhieu.ReadOnly = true;
+            comboBoxNV.Enabled = b1;
+            cboKhachHang.Enabled = b1;
+            dateTimePickerNgaLap.Enabled = b1;
+            dateTimePickerNgayLayHang.Enabled = b1;
+            comboBoxlK.Enabled = b1;
+            txtSL.Enabled = b1;
+            txtGhiChu.Enabled = b1;
         }
 
         public void HienThiNhanVien(string labelHienTenDN)
@@ -69,6 +84,13 @@ namespace DoAnCShap
         {
             dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
         }
+
+
+        public void HienThiTimKiem(string condition)
+        {
+            comboBoxlK.DataSource = banhang.GetTimKiem("Select * From LinhKien Where TenLK Like N'%" + condition + "%'");
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -98,6 +120,7 @@ namespace DoAnCShap
             XuLyChucNang(true, false, false, false);
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
+            XuLyTexBox(false);
         }
 
         public string PhatSinhMaPBH(DataTable d)
@@ -115,6 +138,7 @@ namespace DoAnCShap
         {
             flag = 1;
             XuLyChucNang(false, true, false, true);
+            XuLyTexBox(true);
             if ((bus.PhatSinhMa("").Rows.Count == 0))
             {
                 txtMaPhieu.Text = "PBH00";
@@ -213,6 +237,7 @@ namespace DoAnCShap
                     ClearTextBoxPBH();
                     ClearTextBoxCTPBH();
                     XuLyChucNang(true, false, false, false);
+                    XuLyTexBox(false);
                 }
             }
             if (flag == 2)
@@ -230,6 +255,7 @@ namespace DoAnCShap
             ClearTextBoxPBH();
             ClearTextBoxCTPBH();
             XuLyChucNang(true, false, false, false);
+            XuLyTexBox(false);
         }
 
         public void HienThiPhieuBHTextBox(int vitri, DataTable d)
@@ -284,6 +310,7 @@ namespace DoAnCShap
         {
             flag = 2;
             XuLyChucNang(false, true, false, false);
+            XuLyTexBox(true);
         }
 
         private void dataGridViewCTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -294,6 +321,7 @@ namespace DoAnCShap
             txtGhiChu.Text = row.Cells[2].Value.ToString();
             flag = 2;
             btnThemSP.Enabled = false;
+            XuLyTexBox(true);
         }
 
         private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
@@ -315,6 +343,7 @@ namespace DoAnCShap
                 dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
                 ClearTextBoxCTPBH();
                 XuLyChucNang(true, false, false, false);
+                XuLyTexBox(false);
             }
         }
 
@@ -409,6 +438,12 @@ namespace DoAnCShap
 
             }
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string condition = txtSearch.Text;
+            HienThiTimKiem(condition);
         }
     }
 }

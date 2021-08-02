@@ -58,7 +58,6 @@ namespace DoAnCShap
             this.panel3 = new System.Windows.Forms.Panel();
             this.cboKhachHang = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnTim = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxNV = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgaLap = new System.Windows.Forms.DateTimePicker();
@@ -182,11 +181,14 @@ namespace DoAnCShap
             // 
             // txtSearch
             // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(441, 9);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(324, 27);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox2
             // 
@@ -367,7 +369,6 @@ namespace DoAnCShap
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.cboKhachHang);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.btnTim);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.comboBoxNV);
             this.panel3.Controls.Add(this.dateTimePickerNgaLap);
@@ -375,9 +376,9 @@ namespace DoAnCShap
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(12, 59);
+            this.panel3.Location = new System.Drawing.Point(12, 49);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 242);
+            this.panel3.Size = new System.Drawing.Size(499, 252);
             this.panel3.TabIndex = 12;
             // 
             // cboKhachHang
@@ -398,17 +399,6 @@ namespace DoAnCShap
             this.label4.Size = new System.Drawing.Size(128, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Tên Khách Hàng";
-            // 
-            // btnTim
-            // 
-            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
-            this.btnTim.Location = new System.Drawing.Point(418, 74);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(51, 44);
-            this.btnTim.TabIndex = 15;
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // label10
             // 
@@ -537,9 +527,9 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(516, 59);
+            this.panel4.Location = new System.Drawing.Point(516, 49);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(656, 242);
+            this.panel4.Size = new System.Drawing.Size(656, 252);
             this.panel4.TabIndex = 13;
             // 
             // panel5
@@ -702,7 +692,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
-        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.ErrorProvider errorMes;
         private System.Windows.Forms.Panel panel5;
