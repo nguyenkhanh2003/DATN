@@ -50,6 +50,7 @@ namespace DoAnCShap
             this.label1 = new System.Windows.Forms.Label();
             this.btnThayDoi = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnDong = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +62,7 @@ namespace DoAnCShap
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btnDong);
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.txtDiaChi);
             this.panel4.Controls.Add(this.label7);
@@ -97,7 +99,7 @@ namespace DoAnCShap
             this.txtDiaChi.Location = new System.Drawing.Point(521, 83);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(244, 70);
+            this.txtDiaChi.Size = new System.Drawing.Size(244, 113);
             this.txtDiaChi.TabIndex = 5;
             this.txtDiaChi.Text = global::DoAnCShap.Properties.Settings.Default.ChangeDiaChi;
             // 
@@ -275,6 +277,19 @@ namespace DoAnCShap
             // 
             this.errorMes.ContainerControl = this;
             // 
+            // btnDong
+            // 
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.Location = new System.Drawing.Point(471, 235);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(75, 46);
+            this.btnDong.TabIndex = 6;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // Frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,5 +331,6 @@ namespace DoAnCShap
         public System.Windows.Forms.TextBox txtDiaChi;
         public System.Windows.Forms.TextBox txtHotLine;
         public System.Windows.Forms.TextBox txtWebSite;
+        private System.Windows.Forms.Button btnDong;
     }
 }

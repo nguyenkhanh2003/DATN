@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.linklblQuenPass = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,7 +104,7 @@
             // 
             this.labelMessBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessBox.ForeColor = System.Drawing.Color.Red;
-            this.labelMessBox.Location = new System.Drawing.Point(128, 228);
+            this.labelMessBox.Location = new System.Drawing.Point(138, 252);
             this.labelMessBox.Name = "labelMessBox";
             this.labelMessBox.Size = new System.Drawing.Size(350, 23);
             this.labelMessBox.TabIndex = 4;
@@ -159,12 +160,26 @@
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
+            // linklblQuenPass
+            // 
+            this.linklblQuenPass.AutoSize = true;
+            this.linklblQuenPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblQuenPass.Location = new System.Drawing.Point(259, 220);
+            this.linklblQuenPass.Name = "linklblQuenPass";
+            this.linklblQuenPass.Size = new System.Drawing.Size(133, 20);
+            this.linklblQuenPass.TabIndex = 13;
+            this.linklblQuenPass.TabStop = true;
+            this.linklblQuenPass.Text = "Quên Mật Khẩu ?";
+            this.linklblQuenPass.Visible = false;
+            this.linklblQuenPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblQuenPass_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(500, 273);
+            this.ClientSize = new System.Drawing.Size(500, 284);
+            this.Controls.Add(this.linklblQuenPass);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -200,5 +215,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.LinkLabel linklblQuenPass;
     }
 }

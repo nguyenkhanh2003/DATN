@@ -139,14 +139,19 @@ namespace DoAnCShap
             if (count == 0)
             {
                 labelMessBox.Text = "Tên Đăng Nhập Hoặc mật khẩu không đúng";
-                txtMatKhau.ResetText();
-                demsolanLogin++;
-                if (demsolanLogin == 5 && KiemTraChucVu() == true)
+
+                if (KiemTraChucVu() == true)
                 {
-                    MessageBox.Show("Bạn Đã Đăng Nhập Sai 5 Lần");
-                    this.Close();
-                    Frm_LaylaiPass frm_LaylaiPass = new Frm_LaylaiPass();
-                    frm_LaylaiPass.ShowDialog();
+                    demsolanLogin++;
+                    if (demsolanLogin == 5)
+                    {
+                        linklblQuenPass.Visible = true;
+                    }
+                    else
+                    {
+
+                    }
+
                 }
             }
             else
@@ -180,6 +185,13 @@ namespace DoAnCShap
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linklblQuenPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            Frm_LaylaiPass frm_LaylaiPass = new Frm_LaylaiPass();
+            frm_LaylaiPass.ShowDialog();
         }
     }
 }

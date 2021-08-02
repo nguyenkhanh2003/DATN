@@ -44,7 +44,7 @@ namespace DAL
 
         public void UpdateTaiKhoan(NhanVien nv)
         {
-            KetNoi.ExecuteReader("Update NhanVien Set UserName=N'" + nv.UserName + "',PassWord=N' Where MaNV=N'NV00' " + nv.PassWord + "' ");
+            KetNoi.ExecuteReader("Update NhanVien Set UserName=N'" + nv.UserName + "',PassWord=N'"+nv.PassWord+"' Where MaNV=N'NV00' ");
         }
 
     }

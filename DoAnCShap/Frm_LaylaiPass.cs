@@ -57,6 +57,19 @@ namespace DoAnCShap
             return sb.ToString();
         }
 
+        public void MaHoa()
+        {
+            byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(txtMatKhau.Text);
+            byte[] hask = md.ComputeHash(inputstr);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hask.Length; i++)
+            {
+                sb.Append(hask[i].ToString("X2"));
+            }
+            txtMatKhau.Text = sb.ToString();
+
+        }
+
         public void KiemTraTaiKhoan()
         {
 
@@ -76,10 +89,10 @@ namespace DoAnCShap
                 errorMes.SetError(txtMatKhau, "Mật Khẩu Không Được Để Trống");
                 return;
             }
-            if (txtNhapLaiMatKhau.Text == "")
+            if (txtMaXacThuc.Text == "")
             {
                 errorMes.BlinkRate = 100;
-                errorMes.SetError(txtNhapLaiMatKhau, "Chỗ Này Không Được Để Trống");
+                errorMes.SetError(txtMaXacThuc, "Chỗ Này Không Được Để Trống");
                 return;
             }
             else
@@ -89,15 +102,21 @@ namespace DoAnCShap
                 {
                     if (txtTenDangNhap.Text == layusername.Rows[0]["UserName"].ToString())
                     {
-                        if (CreateMd5(txtMatKhau.Text) == CreateMd5(txtNhapLaiMatKhau.Text))
+                        if (txtMaXacThuc.Text == "007x")
                         {
-                            CreateMd5(txtMatKhau.Text);
+                            MaHoa();
                             nv.UserName = txtTenDangNhap.Text;
                             nv.PassWord = txtMatKhau.Text;
                             bus.UpdateTaiKhoan(nv);
                             labelMesage.Text = "Thành Công";
+                            txtMatKhau.ResetText();
+                            txtMaXacThuc.ResetText();
+                            txtTenDangNhap.ResetText();
                         }
-
+                        else
+                        {
+                            labelMesage.Text = "Mã Xác Thực Không Đúng";
+                        }
                     }
                     else
                     {
