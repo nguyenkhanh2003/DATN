@@ -30,8 +30,12 @@ namespace DoAnCShap
 
         public void HienThiDoanhThuTheoNam(string condition)
         {
-            dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Năm',  format(sum([TongTien]),'N0') as 'Doanh thu'" +
-                " From HoaDonBanHang Where YEAR(NgayLapHDBH) =" + condition + " Group by Year(NgayLapHDBH)");
+            //dataGridView1.DataSource = bus.DoanThuTheoNam("Select Year(NgayLapHDBH) as 'Năm',  format(sum([TongTien]),'N0') as 'Doanh thu'" +
+            //    " From HoaDonBanHang Where YEAR(NgayLapHDBH) =" + condition + " Group by Year(NgayLapHDBH)");
+
+            cboDoanhThu.DataSource = bus.DoanThuTheoNam("Select format(sum([TongTien]),'N0') as TT" +
+                " From HoaDonBanHang Where YEAR(NgayLapHDBH) =" + condition + " ");
+            cboDoanhThu.DisplayMember = "TT";
         }
 
         public void HienThiDoanhThuTheoNgay(string condition, string condition1)
@@ -43,8 +47,12 @@ namespace DoAnCShap
 
         public void DoanhThuTheoThang(string condition)
         {
-            dataGridView1.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS'Donh Thu'" +
-                " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
+            //dataGridView1.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS'Donh Thu'" +
+            //    " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
+
+            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
+              " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
+            cboDoanhThu.DisplayMember = "TT";
         }
 
         public void SPBanChayTheoThang(string condition)
