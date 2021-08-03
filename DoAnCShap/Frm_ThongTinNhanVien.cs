@@ -26,9 +26,10 @@ namespace DoAnCShap
         NhanVien nv = new NhanVien();
 
         String DuongDanFolderHinh = @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Image";
+
         public void HienThiNhanVien(string condition)
         {
-            dataGridViewNhanVien.DataSource = bus.ThongTinNhanVien("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and UserName=N'" + condition+"' ");
+            dataGridViewNhanVien.DataSource = bus.ThongTinNhanVien("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and UserName=N'" + condition + "' ");
         }
 
         public void XuLyTexBox()
@@ -83,6 +84,7 @@ namespace DoAnCShap
         }
 
         MD5 md = MD5.Create();
+
         public void MaHoa()
         {
             byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(txtPassWord.Text);
@@ -99,7 +101,7 @@ namespace DoAnCShap
         private void dataGridViewNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
-            HienThiNhanVien_TXT(vitri, bus.ThongTinNhanVien("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and UserName=N'" +Login.TenTaiKhoan+ "'"));
+            HienThiNhanVien_TXT(vitri, bus.ThongTinNhanVien("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and UserName=N'" + Login.TenTaiKhoan + "'"));
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -197,9 +199,9 @@ namespace DoAnCShap
                 bus.EditData(nv);
                 MessageBox.Show("Sửa Nhân Viên Thành Công");
             }
-            Frm_ThongTinNhanVien_Load(e,e);
+            Frm_ThongTinNhanVien_Load(e, e);
         }
-    
+
 
         private void dataGridViewNhanVien_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
@@ -254,7 +256,7 @@ namespace DoAnCShap
                     radioButtonNam.Checked = true;
                 else
                     radioButtonNu.Checked = true;
-                        
+
             }
             catch
             {

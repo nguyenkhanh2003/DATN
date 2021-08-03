@@ -32,6 +32,7 @@ namespace DoAnCShap
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Setting));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDong = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace DoAnCShap
             this.label1 = new System.Windows.Forms.Label();
             this.btnThayDoi = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnDong = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +78,19 @@ namespace DoAnCShap
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(869, 306);
             this.panel4.TabIndex = 4;
+            // 
+            // btnDong
+            // 
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.Location = new System.Drawing.Point(471, 235);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(75, 46);
+            this.btnDong.TabIndex = 6;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnSave
             // 
@@ -219,10 +232,12 @@ namespace DoAnCShap
             this.btnChonFontChu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChonFontChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChonFontChu.Image = ((System.Drawing.Image)(resources.GetObject("btnChonFontChu.Image")));
-            this.btnChonFontChu.Location = new System.Drawing.Point(181, 45);
+            this.btnChonFontChu.Location = new System.Drawing.Point(167, 37);
             this.btnChonFontChu.Name = "btnChonFontChu";
-            this.btnChonFontChu.Size = new System.Drawing.Size(75, 37);
+            this.btnChonFontChu.Size = new System.Drawing.Size(101, 45);
             this.btnChonFontChu.TabIndex = 5;
+            this.btnChonFontChu.Text = "Chọn Font";
+            this.btnChonFontChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChonFontChu.UseVisualStyleBackColor = true;
             this.btnChonFontChu.Click += new System.EventHandler(this.btnChonFontChu_Click);
             // 
@@ -266,29 +281,18 @@ namespace DoAnCShap
             // 
             this.btnThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThayDoi.Image = ((System.Drawing.Image)(resources.GetObject("btnThayDoi.Image")));
-            this.btnThayDoi.Location = new System.Drawing.Point(169, 46);
+            this.btnThayDoi.Location = new System.Drawing.Point(155, 38);
             this.btnThayDoi.Name = "btnThayDoi";
-            this.btnThayDoi.Size = new System.Drawing.Size(75, 37);
+            this.btnThayDoi.Size = new System.Drawing.Size(101, 45);
             this.btnThayDoi.TabIndex = 2;
+            this.btnThayDoi.Text = "Chọn Màu";
+            this.btnThayDoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThayDoi.UseVisualStyleBackColor = true;
             this.btnThayDoi.Click += new System.EventHandler(this.btnThayDoi_Click);
             // 
             // errorMes
             // 
             this.errorMes.ContainerControl = this;
-            // 
-            // btnDong
-            // 
-            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
-            this.btnDong.Location = new System.Drawing.Point(471, 235);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(75, 46);
-            this.btnDong.TabIndex = 6;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // Frm_Setting
             // 
