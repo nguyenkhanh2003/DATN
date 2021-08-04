@@ -214,26 +214,34 @@ namespace DoAnCShap
                 }
                 else
                 {
-                    pbh.MaPBH = txtMaPhieu.Text;
-                    pbh.MaKH = cboKhachHang.SelectedValue.ToString();
-                    pbh.MaNV = comboBoxNV.SelectedValue.ToString();
-                    pbh.NgayLap = dateTimePickerNgaLap.Value.Date;
-                    pbh.NgayLayHang = dateTimePickerNgayLayHang.Value.Date;
-                    pbh.TrangThai = "1";
-                    bus.ThemPBH(pbh);
-                    string[] b = MaLK.Split(';');
-                    for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
+                    if (dataGridViewCTPBH.Rows.Count <= 0)
                     {
-                        string tenlk = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString();
-                        int soluong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString());
-                        string ghichu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString();
-                        ctpbh.MaPBH = txtMaPhieu.Text;
-                        ctpbh.TenLK = tenlk;
-                        ctpbh.SoLuong = soluong;
-                        ctpbh.GhiChu = ghichu;
-                        bus.ThemCTPhieuBH(ctpbh);
+                        MessageBox.Show("Bạn chưa thêm chi tiết phiếu bảo hành", "Thông Báo");
+                        return;
                     }
-                    MessageBox.Show("Thành Công", "Thông Báo");
+                    else
+                    {
+                        pbh.MaPBH = txtMaPhieu.Text;
+                        pbh.MaKH = cboKhachHang.SelectedValue.ToString();
+                        pbh.MaNV = comboBoxNV.SelectedValue.ToString();
+                        pbh.NgayLap = dateTimePickerNgaLap.Value.Date;
+                        pbh.NgayLayHang = dateTimePickerNgayLayHang.Value.Date;
+                        pbh.TrangThai = "1";
+                        bus.ThemPBH(pbh);
+                        string[] b = MaLK.Split(';');
+                        for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
+                        {
+                            string tenlk = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString();
+                            int soluong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString());
+                            string ghichu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString();
+                            ctpbh.MaPBH = txtMaPhieu.Text;
+                            ctpbh.TenLK = tenlk;
+                            ctpbh.SoLuong = soluong;
+                            ctpbh.GhiChu = ghichu;
+                            bus.ThemCTPhieuBH(ctpbh);
+                            MessageBox.Show("Thành Công", "Thông Báo");
+                        }
+                    }
                     ClearTextBoxPBH();
                     ClearTextBoxCTPBH();
                     XuLyChucNang(true, false, false, false);
