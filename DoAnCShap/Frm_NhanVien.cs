@@ -520,8 +520,16 @@ namespace DoAnCShap
             xulychucnang(false, true, true);
             xulytextbox(true, false);
             flag = 2;
-            if (cboChucVu.Text == "Nhân Viên Quản Trị")
+            if (cboChucVu.SelectedValue.ToString() == "CV01")
+            {
                 btnXoa.Enabled = false;
+                cboChucVu.Enabled = false;
+            }
+            else
+            {
+
+            }
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

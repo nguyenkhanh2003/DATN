@@ -191,7 +191,7 @@ namespace DoAnCShap
         {
             this.Close();
             Frm_LaylaiPass frm_LaylaiPass = new Frm_LaylaiPass();
-            frm_LaylaiPass.ShowDialog();
+            frm_LaylaiPass.Show();
         }
     }
 }

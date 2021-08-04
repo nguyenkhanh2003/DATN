@@ -184,7 +184,7 @@ namespace DoAnCShap
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Home";
+            lbl_HienThiForm.Text = "Trang Chủ";
             fillChart();
             //Login frmDN = new Login();
             //frmDN.ShowDialog();
@@ -244,7 +244,7 @@ namespace DoAnCShap
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn đẵng xuất hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn đẵng xuất hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
                 //Form1_Load(e, e);
@@ -319,20 +319,10 @@ namespace DoAnCShap
 
         private void fillChart()
         {
-            ////AddXY value in chart1 in series named as Salary  
-            //chart1.Series["Salary"].Points.AddXY("Tổng Sản Phẩm", "10000");
-            //chart1.Series["Salary"].Points.AddXY("Nhân Viên", "8000");
-            //chart1.Series["Salary"].Points.AddXY("Hoă Đơn", "7000");
-            //chart1.Series["Salary"].Points.AddXY("Khách Hàng", "10000");
-            //chart1.Series["Salary"].Points.AddXY("Suresh", "8500");
-            ////chart title  
-            //chart1.Titles.Add("Salary Chart");
+          
         }
 
-        private void labelHienThiTenDangNhap_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         public static string SetValueForText1 = "";
 
@@ -347,14 +337,6 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Setting";
             openChildForm(new Frm_Setting());
         }
-
-        // private void dgvUserDetails_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        // {
-        //     using (SolidBrush b = new SolidBrush(dgvUserDetails.RowHeadersDefaultCellStyle.ForeColor))
-        //     {
-        //         e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-        //     }
-        // }
 
         public void UpdateFormColor()
         {

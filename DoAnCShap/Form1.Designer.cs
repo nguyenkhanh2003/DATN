@@ -139,7 +139,7 @@ namespace DoAnCShap
             this.labelHienThiTenDangNhap.Size = new System.Drawing.Size(113, 35);
             this.labelHienThiTenDangNhap.TabIndex = 4;
             this.labelHienThiTenDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelHienThiTenDangNhap.TextChanged += new System.EventHandler(this.labelHienThiTenDangNhap_TextChanged);
+            //this.labelHienThiTenDangNhap.TextChanged += new System.EventHandler(this.labelHienThiTenDangNhap_TextChanged);
             this.labelHienThiTenDangNhap.Click += new System.EventHandler(this.labelHienThiTenDangNhap_Click);
             // 
             // btnLogout
