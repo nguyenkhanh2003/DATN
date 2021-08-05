@@ -106,11 +106,15 @@ namespace DoAnCShap
             chart.AxisX.IntervalType = DateTimeIntervalType.Number;
 
             chart.AxisX.LabelStyle.Format = "";
-            chart.AxisY.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.Format = "{#,###}Đ";
             chart.AxisY.LabelStyle.IsEndLabelVisible = true;
 
             chart.AxisX.Minimum = 1;
             chart.AxisX.Maximum = 12;
+
+            chart.AxisY.Minimum = 0;
+
+            //chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{0:0,}K";
             chart1.DataSource = bus.DoanhThuThang3("SELECT Month(hd.NgayLapHDBH) as Thang, sum(hd.TongTien) as TongTien " +
             " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)>0 and MONTH(hd.NgayLapHDBH)<13  and Year(hd.NgayLapHDBH)=" + comboBoxNam.Text + " Group By Month(hd.NgayLapHDBH) ");
             chart1.Series["Doanh Thu"].XValueMember = "Thang";
