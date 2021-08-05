@@ -148,7 +148,7 @@ namespace DoAnCShap
             // 
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(26, 6);
+            this.btnThem.Location = new System.Drawing.Point(7, 6);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 39);
             this.btnThem.TabIndex = 0;

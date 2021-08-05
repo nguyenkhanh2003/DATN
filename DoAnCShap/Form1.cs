@@ -151,7 +151,7 @@ namespace DoAnCShap
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_TraCuu());
+            openChildForm(new Frm_MessageBox());
             lbl_HienThiForm.Text = "Tra Cứu Tổng Hợp";
         }
 

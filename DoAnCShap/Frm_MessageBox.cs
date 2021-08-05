@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCShap
 {
-    public partial class Frm_TraCuu : Form
+    public partial class Frm_MessageBox : Form
     {
-        public Frm_TraCuu()
+        public Frm_MessageBox()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace DoAnCShap
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

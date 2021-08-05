@@ -203,9 +203,17 @@ namespace DoAnCShap
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            XuLyChucNang(true, false);
-            XuLyTextBox(true, false);
-            ClearTextBox();
+            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Hủy Hay Không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (KQ == DialogResult.OK)
+            {
+                XuLyChucNang(true, false);
+                XuLyTextBox(true, false);
+                ClearTextBox();
+            }
+            else
+            {
+
+            }
 
         }
 

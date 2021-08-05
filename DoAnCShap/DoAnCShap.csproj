@@ -219,11 +219,11 @@
     <Compile Include="Frm_ThongTinNhanVien.Designer.cs">
       <DependentUpon>Frm_ThongTinNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_TraCuu.cs">
+    <Compile Include="Frm_MessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_TraCuu.Designer.cs">
-      <DependentUpon>Frm_TraCuu.cs</DependentUpon>
+    <Compile Include="Frm_MessageBox.Designer.cs">
+      <DependentUpon>Frm_MessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -307,8 +307,8 @@
     <EmbeddedResource Include="Frm_ThongTinNhanVien.resx">
       <DependentUpon>Frm_ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_TraCuu.resx">
-      <DependentUpon>Frm_TraCuu.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_MessageBox.resx">
+      <DependentUpon>Frm_MessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

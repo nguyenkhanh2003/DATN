@@ -100,12 +100,14 @@ namespace DoAnCShap
                     Properties.Settings.Default.ChangeDiaChi = txtDiaChi.Text;
                     Properties.Settings.Default.Save();
                 }
-                if(txtWebSite.Text !="")
+                if (txtWebSite.Text != "")
                 {
                     Properties.Settings.Default.ChangeWebsite = txtWebSite.Text;
                     Properties.Settings.Default.Save();
-                }    
-                MessageBox.Show("Thành Công !");
+                }
+                //Frm_MessageBox messageBox = new Frm_MessageBox();
+                //messageBox.Show();
+                MessageBox.Show("Thành Công", "Thông Báo");
             }
 
         }
