@@ -29,46 +29,56 @@ namespace DAL
 
         public DataTable DoanhThuTheoNgay(string condiiton)
         {
-             return KetNoi.GetDataTable(""+condiiton);
+            return KetNoi.GetDataTable("" + condiiton);
         }
 
         public DataTable SPBanChayTheoThang(string condiiton)
         {
-            return KetNoi.GetDataTable(""+condiiton);
+            return KetNoi.GetDataTable("" + condiiton);
         }
 
         public DataTable Top3SanPhamBanTrongNam(string condiiton)
         {
-            return KetNoi.GetDataTable(""+condiiton);
+            return KetNoi.GetDataTable("" + condiiton);
         }
         public DataTable Top3SPMuaNhieuTrongThang(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         public DataTable Top3SPMuaNhieuTrongName(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         public DataTable Top3HDMuaNhieu(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
-        public DataTable LoadDoanhThuLenChart( string condition)
+        public DataTable LoadDoanhThuLenChart(string condition)
         {
             return KetNoi.GetDataTable("select MONTH(NgayLapHDBH) AS Thang, Sum(TongTien)From HoaDonBanHang Group by MONTH(NgayLapHDBH)" + condition);
         }
 
         public DataTable DoanhThuThang1(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         public DataTable DoanhThuThang2(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         public DataTable DoanhThuThang3(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
+        }
+
+        public DataTable KhachHangMuaNhieu(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
+
+        public DataTable KhachHangMuaNhieuTrongNam(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
         }
     }
 }

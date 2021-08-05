@@ -100,18 +100,26 @@ namespace DoAnCShap
                 " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=1 and Year(hd.NgayLapHDBH)=" + comboBoxNam.Text + "");
         }
 
+        public void Khachhangmuanhieutrongthang(string condition)
+        {
+            dataGridView1.DataSource = bus.KhachhangMuaNhieu("SELECT TOP(1) kh.TenKH As'Tên Khách Hàng', count(hd.MaHDBH) AS 'Số Lần' FROM  HoaDonBanHang hd,KhachHang kh where kh.MaKH=hd.MaKH and month(hd.NgayLapHDBH) =" + condition + " GROUP BY kh.TenKH ORDER BY count(hd.MaHDBH) DESC");
+        }
+
+        public void KHMuaNhieuTrongNam(string condition)
+        {
+            dataGridView1.DataSource = bus.KhachHangMuaNhieuTrongNam("SELECT TOP(1) kh.TenKH As'Tên Khách Hàng', count(hd.MaHDBH) AS 'Số Lần' FROM  HoaDonBanHang hd,KhachHang kh where kh.MaKH=hd.MaKH and year(hd.NgayLapHDBH) =" + condition + " GROUP BY kh.TenKH ORDER BY count(hd.MaHDBH) DESC");
+        }
         public void LoadBieuDo()
         {
             var chart = chart1.ChartAreas[0];
             chart.AxisX.IntervalType = DateTimeIntervalType.Number;
 
             chart.AxisX.LabelStyle.Format = "";
-            chart.AxisY.LabelStyle.Format = "{#,###}Đ";
+            chart.AxisY.LabelStyle.Format = "{#,###} Đ";
             chart.AxisY.LabelStyle.IsEndLabelVisible = true;
 
             chart.AxisX.Minimum = 1;
             chart.AxisX.Maximum = 12;
-
             chart.AxisY.Minimum = 0;
 
             //chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{0:0,}K";
@@ -177,6 +185,16 @@ namespace DoAnCShap
             {
                 string condition = comboBoxThang.Text;
                 Top3HDMuaNhieuTrongThang(condition);
+            }
+            if (radioButKhachMuaNhieeu.Checked == true)
+            {
+                string condition = comboBoxThang.Text;
+                Khachhangmuanhieutrongthang(condition);
+            }
+            if (radioBKhachmuanhieutrongnam.Checked == true)
+            {
+                string condition = comboBoxNam.Text;
+                KHMuaNhieuTrongNam(condition);
             }
         }
 

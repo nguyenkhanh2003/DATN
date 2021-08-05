@@ -58,16 +58,25 @@ namespace BUS
             return bus.LoadDoanhThuLenChart(condition);
         }
         public DataTable DoanhThuThang1(string condition)
-       {
-           return bus.DoanhThuThang1(condition);
-       }
-       public DataTable DoanhThuThang2(string condition)
-       {
-           return bus.DoanhThuThang2(condition);
-       }
-       public DataTable DoanhThuThang3(string condition)
-       {
-           return bus.DoanhThuThang3(condition);
-       }
+        {
+            return bus.DoanhThuThang1(condition);
+        }
+        public DataTable DoanhThuThang2(string condition)
+        {
+            return bus.DoanhThuThang2(condition);
+        }
+        public DataTable DoanhThuThang3(string condition)
+        {
+            return bus.DoanhThuThang3(condition);
+        }
+
+        public DataTable KhachhangMuaNhieu(string condition)
+        {
+            return bus.KhachHangMuaNhieu(condition);
+        }
+        public DataTable KhachHangMuaNhieuTrongNam(string condition)
+        {
+            return bus.KhachHangMuaNhieuTrongNam(condition);
+        }
     }
 }

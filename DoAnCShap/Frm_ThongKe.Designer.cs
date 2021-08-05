@@ -59,6 +59,8 @@ namespace DoAnCShap
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboDoanhThu = new System.Windows.Forms.ComboBox();
+            this.radioButKhachMuaNhieeu = new System.Windows.Forms.RadioButton();
+            this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -87,6 +89,8 @@ namespace DoAnCShap
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.radioBKhachmuanhieutrongnam);
+            this.panel2.Controls.Add(this.radioButKhachMuaNhieeu);
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.radioButTop3HDMua);
@@ -105,7 +109,7 @@ namespace DoAnCShap
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(402, 56);
+            this.radioButton1.Location = new System.Drawing.Point(402, 52);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(173, 24);
             this.radioButton1.TabIndex = 12;
@@ -141,7 +145,7 @@ namespace DoAnCShap
             // 
             this.radioDoanhThuYea.AutoSize = true;
             this.radioDoanhThuYea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioDoanhThuYea.Location = new System.Drawing.Point(3, 56);
+            this.radioDoanhThuYea.Location = new System.Drawing.Point(3, 52);
             this.radioDoanhThuYea.Name = "radioDoanhThuYea";
             this.radioDoanhThuYea.Size = new System.Drawing.Size(188, 24);
             this.radioDoanhThuYea.TabIndex = 10;
@@ -179,17 +183,17 @@ namespace DoAnCShap
             this.radioButMuaYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButMuaYear.Location = new System.Drawing.Point(3, 234);
             this.radioButMuaYear.Name = "radioButMuaYear";
-            this.radioButMuaYear.Size = new System.Drawing.Size(307, 24);
+            this.radioButMuaYear.Size = new System.Drawing.Size(314, 24);
             this.radioButMuaYear.TabIndex = 9;
             this.radioButMuaYear.TabStop = true;
-            this.radioButMuaYear.Text = "Top 3 Sản Phẩm Mua Nhiều Trong Năm\r\n";
+            this.radioButMuaYear.Text = "Top 3 Sản Phẩm Nhập Nhiều Trong Năm\r\n";
             this.radioButMuaYear.UseVisualStyleBackColor = true;
             // 
             // radioBanNhieuYear
             // 
             this.radioBanNhieuYear.AutoSize = true;
             this.radioBanNhieuYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBanNhieuYear.Location = new System.Drawing.Point(3, 146);
+            this.radioBanNhieuYear.Location = new System.Drawing.Point(3, 142);
             this.radioBanNhieuYear.Name = "radioBanNhieuYear";
             this.radioBanNhieuYear.Size = new System.Drawing.Size(305, 24);
             this.radioBanNhieuYear.TabIndex = 9;
@@ -201,12 +205,12 @@ namespace DoAnCShap
             // 
             this.radioButMuaMonth.AutoSize = true;
             this.radioButMuaMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButMuaMonth.Location = new System.Drawing.Point(3, 192);
+            this.radioButMuaMonth.Location = new System.Drawing.Point(3, 188);
             this.radioButMuaMonth.Name = "radioButMuaMonth";
-            this.radioButMuaMonth.Size = new System.Drawing.Size(319, 24);
+            this.radioButMuaMonth.Size = new System.Drawing.Size(326, 24);
             this.radioButMuaMonth.TabIndex = 9;
             this.radioButMuaMonth.TabStop = true;
-            this.radioButMuaMonth.Text = "Top 3 Sản Phẩm Mua Nhiều Trong Tháng";
+            this.radioButMuaMonth.Text = "Top 3 Sản Phẩm Nhập Nhiều Trong Tháng";
             this.radioButMuaMonth.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -375,6 +379,30 @@ namespace DoAnCShap
             this.cboDoanhThu.Size = new System.Drawing.Size(175, 28);
             this.cboDoanhThu.TabIndex = 45;
             // 
+            // radioButKhachMuaNhieeu
+            // 
+            this.radioButKhachMuaNhieeu.AutoSize = true;
+            this.radioButKhachMuaNhieeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButKhachMuaNhieeu.Location = new System.Drawing.Point(402, 96);
+            this.radioButKhachMuaNhieeu.Name = "radioButKhachMuaNhieeu";
+            this.radioButKhachMuaNhieeu.Size = new System.Drawing.Size(289, 24);
+            this.radioButKhachMuaNhieeu.TabIndex = 12;
+            this.radioButKhachMuaNhieeu.TabStop = true;
+            this.radioButKhachMuaNhieeu.Text = "Khách Hàng Mua Nhiều Trong Tháng";
+            this.radioButKhachMuaNhieeu.UseVisualStyleBackColor = true;
+            // 
+            // radioBKhachmuanhieutrongnam
+            // 
+            this.radioBKhachmuanhieutrongnam.AutoSize = true;
+            this.radioBKhachmuanhieutrongnam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBKhachmuanhieutrongnam.Location = new System.Drawing.Point(402, 142);
+            this.radioBKhachmuanhieutrongnam.Name = "radioBKhachmuanhieutrongnam";
+            this.radioBKhachmuanhieutrongnam.Size = new System.Drawing.Size(277, 24);
+            this.radioBKhachmuanhieutrongnam.TabIndex = 12;
+            this.radioBKhachmuanhieutrongnam.TabStop = true;
+            this.radioBKhachmuanhieutrongnam.Text = "Khách Hàng Mua Nhiều Trong Năm\r\n";
+            this.radioBKhachmuanhieutrongnam.UseVisualStyleBackColor = true;
+            // 
             // Frm_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +454,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboDoanhThu;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButKhachMuaNhieeu;
+        private System.Windows.Forms.RadioButton radioBKhachmuanhieutrongnam;
     }
 }
