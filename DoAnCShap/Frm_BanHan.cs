@@ -592,9 +592,16 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn xóa sản phẩm này không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
-                int rowIndex = dataGridViewHDBH.CurrentCell.RowIndex;
-                dataGridViewHDBH.Rows.RemoveAt(rowIndex);
-                TongTienSP();
+                try
+                {
+                    int rowIndex = dataGridViewHDBH.CurrentCell.RowIndex;
+                    dataGridViewHDBH.Rows.RemoveAt(rowIndex);
+                    TongTienSP();
+                }
+                catch
+                {
+
+                }
             }
         }
 

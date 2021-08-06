@@ -327,3 +327,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_InHoaDonNhap.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_LaylaiPass.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_MessageBox.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.ResolveComReference.cache

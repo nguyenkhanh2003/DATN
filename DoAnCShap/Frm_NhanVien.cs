@@ -13,6 +13,7 @@ using DTO;
 using System.Diagnostics;
 using System.IO;
 
+
 namespace DoAnCShap
 {
     public partial class Frm_NhanVien : Form
@@ -636,6 +637,21 @@ namespace DoAnCShap
             {
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
+        }
+
+
+        private void copyAlltoClipboard()
+        {
+            dataGridViewNhanVien.SelectAll();
+            DataObject dataObj = dataGridViewNhanVien.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
