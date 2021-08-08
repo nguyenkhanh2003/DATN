@@ -139,7 +139,6 @@ namespace DoAnCShap
             this.labelHienThiTenDangNhap.Size = new System.Drawing.Size(113, 35);
             this.labelHienThiTenDangNhap.TabIndex = 4;
             this.labelHienThiTenDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.labelHienThiTenDangNhap.TextChanged += new System.EventHandler(this.labelHienThiTenDangNhap_TextChanged);
             this.labelHienThiTenDangNhap.Click += new System.EventHandler(this.labelHienThiTenDangNhap_Click);
             // 
             // btnLogout
@@ -179,12 +178,12 @@ namespace DoAnCShap
             this.lbl_HienThiForm.BackColor = System.Drawing.Color.Transparent;
             this.lbl_HienThiForm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_HienThiForm.ForeColor = System.Drawing.Color.White;
-            this.lbl_HienThiForm.Location = new System.Drawing.Point(79, 9);
+            this.lbl_HienThiForm.Location = new System.Drawing.Point(64, 9);
             this.lbl_HienThiForm.Name = "lbl_HienThiForm";
             this.lbl_HienThiForm.Size = new System.Drawing.Size(295, 28);
             this.lbl_HienThiForm.TabIndex = 0;
             this.lbl_HienThiForm.Text = "\r\nHome";
-            this.lbl_HienThiForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_HienThiForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelSideMenu
             // 

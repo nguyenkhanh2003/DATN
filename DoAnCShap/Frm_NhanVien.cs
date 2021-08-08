@@ -651,7 +651,26 @@ namespace DoAnCShap
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+            if (dataGridViewNhanVien.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+                excelAp.Application.Workbooks.Add(Type.Missing);
+                for (int i = 1; i < dataGridViewNhanVien.Rows.Count + 1; i++)
+                {
+                    excelAp.Cells[1, i] = dataGridViewNhanVien.Columns[i - 1].HeaderText;
 
+                }
+                for (int i = 1; i < dataGridViewNhanVien.Rows.Count; i++)
+                {
+                    for (int j = 1; j < dataGridViewNhanVien.Rows.Count; j++)
+                    {
+                        excelAp.Cells[i + 1, j + 1] = dataGridViewNhanVien.Rows[i].Cells[j].Value.ToString();
+
+                    }
+                }
+                excelAp.Columns.AutoFit();
+                excelAp.Visible = true;
+            }
         }
     }
 }
