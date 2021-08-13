@@ -230,7 +230,7 @@ namespace DoAnCShap
             xulytextbox(true, false);
             Clear();
             xulychucnang(false, true, true);
-            if (dataGridViewNhanVien.Rows.Count <= 0)
+            if (bus.PhatSinhMa("").Rows.Count == 0)
             {
                 txtMaNV.Text = "NV00";
             }

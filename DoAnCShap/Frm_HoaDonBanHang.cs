@@ -519,5 +519,31 @@ namespace DoAnCShap
         {
             dataGridViewCTHD.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
+
+        private void btnXuatExel_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewHD.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+                excelAp.Application.Workbooks.Add(Type.Missing);
+                // Lưu trữ phần header
+                for (int i = 1; i < dataGridViewHD.Rows.Count + 1; i++)
+                {
+                    excelAp.Cells[1, i] = dataGridViewHD.Columns[i - 1].HeaderText;
+
+                }
+                //Lưu trữ hàng và cột vào excel
+                for (int i = 0; i < dataGridViewHD.Rows.Count; i++)
+                {
+                    for (int j = 1; j < dataGridViewHD.Rows.Count + 4; j++)
+                    {
+                        excelAp.Cells[i + 2, j + 1] = dataGridViewHD.Rows[i].Cells[j].Value.ToString();
+
+                    }
+                }
+                excelAp.Columns.AutoFit();
+                excelAp.Visible = true;
+            }
+        }
     }
 }
