@@ -179,7 +179,8 @@ namespace DoAnCShap
 
         private void Login_Load(object sender, EventArgs e)
         {
-            HienThiCV();
+            //HienThiCV();
+
         }
 
         private void txtMatKhau_TextChanged(object sender, EventArgs e)

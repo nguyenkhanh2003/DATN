@@ -109,6 +109,29 @@ namespace DoAnCShap
         {
             dataGridView1.DataSource = bus.KhachHangMuaNhieuTrongNam("SELECT TOP(1) kh.TenKH As'Tên Khách Hàng', count(hd.MaHDBH) AS 'Số Lần' FROM  HoaDonBanHang hd,KhachHang kh where kh.MaKH=hd.MaKH and year(hd.NgayLapHDBH) =" + condition + " GROUP BY kh.TenKH ORDER BY count(hd.MaHDBH) DESC");
         }
+
+        public void KhoanChiThangNay(string condition)
+        {
+            comboBoxChi.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
+              " FROM HoaDonNhapHang hd WHERE Month(hd.NgayLapHDNH)=" + condition + " ");
+            comboBoxChi.DisplayMember = "TT";
+
+            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
+              " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
+            cboDoanhThu.DisplayMember = "TT";
+
+        }
+
+        public void KhoanChiTheoNam(string condition)
+        {
+            comboBoxChi.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
+             " FROM HoaDonNhapHang hd WHERE Year(hd.NgayLapHDNH)=" + condition + " ");
+            comboBoxChi.DisplayMember = "TT";
+
+            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
+              " FROM HoaDonBanHang hd WHERE Year(hd.NgayLapHDBH)=" + condition + " ");
+            cboDoanhThu.DisplayMember = "TT";
+        }
         public void LoadBieuDo()
         {
             var chart = chart1.ChartAreas[0];
@@ -195,6 +218,16 @@ namespace DoAnCShap
             {
                 string condition = comboBoxNam.Text;
                 KHMuaNhieuTrongNam(condition);
+            }
+            if (radioButThuChi.Checked == true)
+            {
+                string condition = comboBoxThang.Text;
+                KhoanChiThangNay(condition);
+            }
+            if (radioButKhanChiNam.Checked == true)
+            {
+                string condition = comboBoxNam.Text;
+                KhoanChiTheoNam(condition);
             }
         }
 

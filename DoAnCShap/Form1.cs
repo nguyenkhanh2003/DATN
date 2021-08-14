@@ -129,24 +129,10 @@ namespace DoAnCShap
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            bool IsOpen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
+            if (activeForm != null) activeForm.Close();
+            Form1 frm1 = new Form1();
+            frm1.Show();
 
-            if (IsOpen == false)
-            {
-                Form1 f2 = new Form1();
-                f2.MdiParent = this;
-                f2.Show();
-
-            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -185,7 +171,6 @@ namespace DoAnCShap
         private void Form1_Load(object sender, EventArgs e)
         {
             lbl_HienThiForm.Text = "Trang Chủ";
-            fillChart();
             //Login frmDN = new Login();
             //frmDN.ShowDialog();
             //if (Login.IsClose) this.Close();
@@ -316,13 +301,6 @@ namespace DoAnCShap
             lbl_HienThiForm.Text = "Nhà Sản Xuất";
             openChildForm(new Frm_NSX());
         }
-
-        private void fillChart()
-        {
-          
-        }
-
-      
 
         public static string SetValueForText1 = "";
 

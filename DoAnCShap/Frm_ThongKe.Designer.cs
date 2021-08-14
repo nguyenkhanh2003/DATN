@@ -31,13 +31,15 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ThongKe));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
+            this.radioButKhachMuaNhieeu = new System.Windows.Forms.RadioButton();
+            this.radioButThuChi = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButTop3HDMua = new System.Windows.Forms.RadioButton();
             this.radioDoanhThuYea = new System.Windows.Forms.RadioButton();
@@ -59,14 +61,18 @@ namespace DoAnCShap
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboDoanhThu = new System.Windows.Forms.ComboBox();
-            this.radioButKhachMuaNhieeu = new System.Windows.Forms.RadioButton();
-            this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxChi = new System.Windows.Forms.ComboBox();
+            this.radioButKhanChiNam = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,7 +97,8 @@ namespace DoAnCShap
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.radioBKhachmuanhieutrongnam);
             this.panel2.Controls.Add(this.radioButKhachMuaNhieeu);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.radioButKhanChiNam);
+            this.panel2.Controls.Add(this.radioButThuChi);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.radioButTop3HDMua);
             this.panel2.Controls.Add(this.radioDoanhThuYea);
@@ -105,17 +112,41 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(766, 266);
             this.panel2.TabIndex = 11;
             // 
-            // radioButton1
+            // radioBKhachmuanhieutrongnam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(402, 52);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(173, 24);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tổng Tiền Chi Tháng";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioBKhachmuanhieutrongnam.AutoSize = true;
+            this.radioBKhachmuanhieutrongnam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBKhachmuanhieutrongnam.Location = new System.Drawing.Point(381, 96);
+            this.radioBKhachmuanhieutrongnam.Name = "radioBKhachmuanhieutrongnam";
+            this.radioBKhachmuanhieutrongnam.Size = new System.Drawing.Size(277, 24);
+            this.radioBKhachmuanhieutrongnam.TabIndex = 12;
+            this.radioBKhachmuanhieutrongnam.TabStop = true;
+            this.radioBKhachmuanhieutrongnam.Text = "Khách Hàng Mua Nhiều Trong Năm\r\n";
+            this.radioBKhachmuanhieutrongnam.UseVisualStyleBackColor = true;
+            // 
+            // radioButKhachMuaNhieeu
+            // 
+            this.radioButKhachMuaNhieeu.AutoSize = true;
+            this.radioButKhachMuaNhieeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButKhachMuaNhieeu.Location = new System.Drawing.Point(381, 52);
+            this.radioButKhachMuaNhieeu.Name = "radioButKhachMuaNhieeu";
+            this.radioButKhachMuaNhieeu.Size = new System.Drawing.Size(289, 24);
+            this.radioButKhachMuaNhieeu.TabIndex = 12;
+            this.radioButKhachMuaNhieeu.TabStop = true;
+            this.radioButKhachMuaNhieeu.Text = "Khách Hàng Mua Nhiều Trong Tháng";
+            this.radioButKhachMuaNhieeu.UseVisualStyleBackColor = true;
+            // 
+            // radioButThuChi
+            // 
+            this.radioButThuChi.AutoSize = true;
+            this.radioButThuChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButThuChi.Location = new System.Drawing.Point(381, 142);
+            this.radioButThuChi.Name = "radioButThuChi";
+            this.radioButThuChi.Size = new System.Drawing.Size(207, 24);
+            this.radioButThuChi.TabIndex = 12;
+            this.radioButThuChi.TabStop = true;
+            this.radioButThuChi.Text = "Xem Thu Chi Theo Tháng";
+            this.radioButThuChi.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -133,7 +164,7 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButTop3HDMua.AutoSize = true;
             this.radioButTop3HDMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButTop3HDMua.Location = new System.Drawing.Point(402, 10);
+            this.radioButTop3HDMua.Location = new System.Drawing.Point(381, 10);
             this.radioButTop3HDMua.Name = "radioButTop3HDMua";
             this.radioButTop3HDMua.Size = new System.Drawing.Size(309, 24);
             this.radioButTop3HDMua.TabIndex = 9;
@@ -284,19 +315,18 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(12, 339);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh Thu";
+            series2.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1160, 360);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -310,19 +340,19 @@ namespace DoAnCShap
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(796, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(376, 263);
+            this.dataGridView1.Size = new System.Drawing.Size(376, 205);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
             // 
@@ -379,35 +409,68 @@ namespace DoAnCShap
             this.cboDoanhThu.Size = new System.Drawing.Size(175, 28);
             this.cboDoanhThu.TabIndex = 45;
             // 
-            // radioButKhachMuaNhieeu
+            // panel4
             // 
-            this.radioButKhachMuaNhieeu.AutoSize = true;
-            this.radioButKhachMuaNhieeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButKhachMuaNhieeu.Location = new System.Drawing.Point(402, 96);
-            this.radioButKhachMuaNhieeu.Name = "radioButKhachMuaNhieeu";
-            this.radioButKhachMuaNhieeu.Size = new System.Drawing.Size(289, 24);
-            this.radioButKhachMuaNhieeu.TabIndex = 12;
-            this.radioButKhachMuaNhieeu.TabStop = true;
-            this.radioButKhachMuaNhieeu.Text = "Khách Hàng Mua Nhiều Trong Tháng";
-            this.radioButKhachMuaNhieeu.UseVisualStyleBackColor = true;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.comboBoxChi);
+            this.panel4.Location = new System.Drawing.Point(796, 223);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(376, 52);
+            this.panel4.TabIndex = 6;
             // 
-            // radioBKhachmuanhieutrongnam
+            // label6
             // 
-            this.radioBKhachmuanhieutrongnam.AutoSize = true;
-            this.radioBKhachmuanhieutrongnam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBKhachmuanhieutrongnam.Location = new System.Drawing.Point(402, 142);
-            this.radioBKhachmuanhieutrongnam.Name = "radioBKhachmuanhieutrongnam";
-            this.radioBKhachmuanhieutrongnam.Size = new System.Drawing.Size(277, 24);
-            this.radioBKhachmuanhieutrongnam.TabIndex = 12;
-            this.radioBKhachmuanhieutrongnam.TabStop = true;
-            this.radioBKhachmuanhieutrongnam.Text = "Khách Hàng Mua Nhiều Trong Năm\r\n";
-            this.radioBKhachmuanhieutrongnam.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(309, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 24);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Đ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 20);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Chi";
+            // 
+            // comboBoxChi
+            // 
+            this.comboBoxChi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBoxChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxChi.ForeColor = System.Drawing.Color.Red;
+            this.comboBoxChi.FormattingEnabled = true;
+            this.comboBoxChi.Location = new System.Drawing.Point(117, 12);
+            this.comboBoxChi.Name = "comboBoxChi";
+            this.comboBoxChi.Size = new System.Drawing.Size(175, 28);
+            this.comboBoxChi.TabIndex = 45;
+            // 
+            // radioButKhanChiNam
+            // 
+            this.radioButKhanChiNam.AutoSize = true;
+            this.radioButKhanChiNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButKhanChiNam.Location = new System.Drawing.Point(381, 188);
+            this.radioButKhanChiNam.Name = "radioButKhanChiNam";
+            this.radioButKhanChiNam.Size = new System.Drawing.Size(200, 24);
+            this.radioButKhanChiNam.TabIndex = 12;
+            this.radioButKhanChiNam.TabStop = true;
+            this.radioButKhanChiNam.Text = "Xem Thu Chi Trong Năm\r\n";
+            this.radioButKhanChiNam.UseVisualStyleBackColor = true;
             // 
             // Frm_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chart1);
@@ -424,6 +487,8 @@ namespace DoAnCShap
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -449,12 +514,17 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorMes;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButThuChi;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboDoanhThu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButKhachMuaNhieeu;
         private System.Windows.Forms.RadioButton radioBKhachmuanhieutrongnam;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxChi;
+        private System.Windows.Forms.RadioButton radioButKhanChiNam;
     }
 }

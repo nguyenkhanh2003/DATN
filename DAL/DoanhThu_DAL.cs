@@ -80,5 +80,15 @@ namespace DAL
         {
             return KetNoi.GetDataTable("" + condition);
         }
+
+        public DataTable KhoanChiThangNay(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
+
+        public DataTable ThuChiTheoNam(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }

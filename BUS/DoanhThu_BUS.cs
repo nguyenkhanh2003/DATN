@@ -78,5 +78,14 @@ namespace BUS
         {
             return bus.KhachHangMuaNhieuTrongNam(condition);
         }
+
+        public DataTable KhoanChiThangNay(string condition)
+        {
+            return bus.KhoanChiThangNay("" + condition);
+        }
+        public DataTable ThuChiTheoNam(string condition)
+        {
+            return bus.ThuChiTheoNam(condition);
+        }
     }
 }
