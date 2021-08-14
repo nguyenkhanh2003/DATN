@@ -232,10 +232,9 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn đẵng xuất hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
-                //Form1_Load(e, e);
                 this.Close();
                 Login lg = new Login();
-                lg.ShowDialog();
+                lg.Show();
             }
             else
             {
@@ -244,20 +243,6 @@ namespace DoAnCShap
 
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPhanQuyen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
