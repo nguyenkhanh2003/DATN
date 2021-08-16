@@ -40,7 +40,7 @@ namespace DoAnCShap
         {
             txtMaLoai.Enabled = b1;
             txtTenLoai.Enabled = b1;
-           
+
 
         }
 
@@ -56,7 +56,7 @@ namespace DoAnCShap
         {
             txtMaLoai.Clear();
             txtTenLoai.Clear();
-           
+
         }
 
         public string AuToCode(DataTable d)
@@ -97,7 +97,7 @@ namespace DoAnCShap
             xulytextbox(true, false);
             flag = 1;
             //PhatSinhMa();
-            if (int.Parse(AuToCode(bus.LayDuLieu(""))) <10)
+            if (int.Parse(AuToCode(bus.LayDuLieu(""))) < 10)
                 txtMaLoai.Text = "LLK0" + AuToCode(bus.LayDuLieu(""));
             else
                 txtMaLoai.Text = "LLK" + AuToCode(bus.LayDuLieu(""));
@@ -111,12 +111,12 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(txtTenLoai.Text=="")
+            if (txtTenLoai.Text == "")
             {
                 MessageBox.Show("Chưa nhập tên loại");
                 return;
             }
-           
+
 
             if (flag == 1)
             {
@@ -131,7 +131,7 @@ namespace DoAnCShap
                     xulytextbox(true, false);
                     clear();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -202,8 +202,8 @@ namespace DoAnCShap
             }
             else
             {
-                
-            }    
+
+            }
         }
 
         private void txtTenLoai_KeyPress(object sender, KeyPressEventArgs e)
@@ -216,7 +216,16 @@ namespace DoAnCShap
 
         private void dataGridViewKH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-           dataGridViewKH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+            dataGridViewKH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void dataGridViewKH_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewKH.SelectedRows)
+            {
+                txtMaLoai.Text = row.Cells[1].Value.ToString();
+                txtTenLoai.Text = row.Cells[2].Value.ToString();
+            }
         }
     }
 }

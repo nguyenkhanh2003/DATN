@@ -9,7 +9,7 @@ using System.Data;
 
 namespace BUS
 {
-   public class NhanVien_BUS
+    public class NhanVien_BUS
     {
         NhanVien_DAL bus = new NhanVien_DAL();
 
@@ -38,11 +38,15 @@ namespace BUS
         {
             bus.DeleteData(ex);
         }
-       
+
         public DataTable ThongTinNhanVien(string condition)
         {
             return bus.ThongTinNhanVien(condition);
         }
 
+        public DataTable LoadThongTin(string username)
+        {
+            return bus.LoadThongTin(username);
+        }
     }
 }

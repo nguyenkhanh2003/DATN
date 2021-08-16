@@ -291,7 +291,7 @@ namespace DoAnCShap
 
         private void labelHienThiTenDangNhap_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Thông Tin Nhân Viên";
+            lbl_HienThiForm.Text = "Thông Tin Cá Nhân";
             openChildForm(new Frm_ThongTinNhanVien());
         }
 

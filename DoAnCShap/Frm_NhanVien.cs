@@ -23,7 +23,6 @@ namespace DoAnCShap
             InitializeComponent();
             Display();
             hienthichucvu();
-
         }
 
         String DuongDanFolderHinh = @"C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Image";
