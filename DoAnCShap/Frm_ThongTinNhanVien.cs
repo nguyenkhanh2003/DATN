@@ -29,17 +29,19 @@ namespace DoAnCShap
 
         public void LoadThongnTin(string username)
         {
-            dataGridViewNhanVien.DataSource = bus.LoadThongTin("select * From NhanVien Where UserName=N'" + username + "' ");
+            dataGridViewNhanVien.DataSource = bus.LoadThongTin("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and NhanVien.TrangThai=N'1' and UserName=N'" + username + "'");
         }
 
         string MatKhau = "";
+        string TenHinh = "";
 
         private void dataGridViewNhanVien_SelectionChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridViewNhanVien.SelectedRows)
             {
-                txtMaNV.Text = row.Cells[1].Value.ToString();
-                txtTenNV.Text = row.Cells[3].Value.ToString();
+                txtMaNV.Text = row.Cells["ManV"].Value.ToString();
+                txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
+                txtChucVu.Text = row.Cells["MaCV"].Value.ToString();
                 txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
                 txtCMND.Text = row.Cells["CMND"].Value.ToString();
@@ -72,7 +74,7 @@ namespace DoAnCShap
                         pictureBox1.Controls.Add(p);
                         Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
                         p.Image = a;
-                        //TenHinh = b[i];
+                        TenHinh = b[i];
                     }
                 }
                 catch
@@ -90,11 +92,95 @@ namespace DoAnCShap
             this.Close();
         }
 
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Controls.Clear();
+            OpenFileDialog opFile = new OpenFileDialog();
+            opFile.Title = "Select a Image";
+            opFile.Filter = "Files|*.jpg;*.jpeg;*.png;....";
+            if (opFile.ShowDialog() == DialogResult.OK)
+            {
+                TenHinh = opFile.FileName;
+                pictureBox1.Image = new Bitmap(opFile.FileName);
+                pictureBox1.ImageLocation = opFile.FileName;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        public void LuuAnh()
+        {
+            try
+            {
+                File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ảnh đã tồn tại !");
+            }
+        }
+        public static string CreateMd5(string input)
+        {
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hasBytes = md5.ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hasBytes.Length; i++)
+            {
+                sb.Append(hasBytes[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            nv.MaCV = txtMaNV.Text;
-
+            nv.MaNV = txtMaNV.Text;
+            nv.TenNV = txtTenNV.Text;
+            if (radioButNam.Checked == true)
+            {
+                nv.GioiTinh = radioButNam.Text;
+            }
+            else
+            {
+                nv.GioiTinh = radioButNu.Text;
+            }
+            nv.NgaySinh = dateTimePickerNgaySinh.Value.Date;
+            nv.Email = txtEmail.Text;
+            nv.DienThoai = txtSDT.Text;
+            nv.UserName = txtUserName.Text;
+            nv.CMND = txtCMND.Text;
+            nv.DiaChi = txtDiaChi.Text;
+            if (txtPassWord.Text == "")
+            {
+                nv.PassWord = MatKhau;
+            }
+            else
+            {
+                string Pas1 = CreateMd5(txtPassWord.Text);
+                string Pas2 = CreateMd5(txtRePassWord.Text);
+                txtPassWord.Text = Pas1;
+                txtRePassWord.Text = Pas2;
+                if (Pas1 == Pas2)
+                {
+                    nv.PassWord = txtPassWord.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (pictureBox1.ImageLocation == null)
+            {
+                nv.HinhAnh = TenHinh;
+            }
+            else
+            {
+                nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                LuuAnh();
+            }
+            bus.UpateThongTinNV(nv);
+            MessageBox.Show("!");
         }
+
+
     }
 }

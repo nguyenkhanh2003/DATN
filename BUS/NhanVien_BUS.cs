@@ -48,5 +48,10 @@ namespace BUS
         {
             return bus.LoadThongTin(username);
         }
+
+        public void UpateThongTinNV(NhanVien nv)
+        {
+            bus.UpateThongTin(nv);
+        }
     }
 }
