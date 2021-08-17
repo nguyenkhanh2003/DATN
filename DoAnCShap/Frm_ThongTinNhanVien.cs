@@ -56,32 +56,6 @@ namespace DoAnCShap
                     radioButNu.Checked = true;
                 }
                 txtUserName.Text = row.Cells["UserName"].Value.ToString();
-                string[] b = row.Cells["HinhAnh"].Value.ToString().Split(';');
-                pictureBox1.Controls.Clear();
-                try
-                {
-                    int n;
-                    if (b.Length == 1)
-                        n = b.Length;
-                    else
-                        n = b.Length - 1;
-                    for (int i = 0; i < n; i++)
-                    {
-                        PictureBox p = new PictureBox();
-                        Size s = new Size(180, 180);
-                        p.Size = s;
-                        p.SizeMode = PictureBoxSizeMode.StretchImage;
-                        pictureBox1.Controls.Add(p);
-                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
-                        p.Image = a;
-                        TenHinh = b[i];
-                    }
-                }
-                catch
-                {
-
-                }
-
                 MatKhau = row.Cells["PassWord"].Value.ToString();
                 //...
             }
@@ -168,17 +142,8 @@ namespace DoAnCShap
                     MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (pictureBox1.ImageLocation == null)
-            {
-                nv.HinhAnh = TenHinh;
-            }
-            else
-            {
-                nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
-                LuuAnh();
-            }
             bus.UpateThongTinNV(nv);
-            MessageBox.Show("!");
+            MessageBox.Show("Thành Công", "Thông Báo");
         }
 
 

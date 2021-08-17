@@ -52,14 +52,6 @@ namespace DAL
             return KetNoi.GetDataTable("" + condition);
         }
 
-        //internal NhanVien LoadThongTim(string username)
-        // {
-        //     string query = "select * from NhanVien where UserName='" + username + "'";
-        //     DataTable dataTable = KetNoi.GetDataTable(query);
-        //     NhanVien nhanVien = new NhanVien(dataTable.Rows[0]);
-        //     return nhanVien;
-        // }
-
         public DataTable LoadThongTin(string username)
         {
             return KetNoi.GetDataTable("" + username);
@@ -67,7 +59,7 @@ namespace DAL
 
         public void UpateThongTin(NhanVien ex)
         {
-            KetNoi.ExecuteReader(@"UPDATE NhanVien SET TenNV=N'" + ex.TenNV + "',GioiTinh=N'" + ex.GioiTinh + "',Email=N'" + ex.Email + "',NgaySinh='" + ex.NgaySinh + "',DienThoai=N'" + ex.DienThoai + "',CMND=N'" + ex.CMND + "',DiaChi=N'" + ex.DiaChi + "',HinhAnh=N'" + ex.HinhAnh + "',UserName=N'" + ex.UserName + "',PassWord=N'" + ex.PassWord + "' Where MaNV='" + ex.MaNV + "' ");
+            KetNoi.ExecuteReader(@"UPDATE NhanVien SET TenNV=N'" + ex.TenNV + "',GioiTinh=N'" + ex.GioiTinh + "',Email=N'" + ex.Email + "',NgaySinh='" + ex.NgaySinh + "',DienThoai=N'" + ex.DienThoai + "',CMND=N'" + ex.CMND + "',DiaChi=N'" + ex.DiaChi + "',UserName=N'" + ex.UserName + "',PassWord=N'" + ex.PassWord + "' Where MaNV='" + ex.MaNV + "' ");
         }
     }
 }

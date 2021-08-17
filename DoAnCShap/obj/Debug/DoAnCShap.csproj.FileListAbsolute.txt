@@ -367,3 +367,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\es\DevExpress.Pdf.v1
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe.licenses
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\PictureBoxAbouAmmar.dll

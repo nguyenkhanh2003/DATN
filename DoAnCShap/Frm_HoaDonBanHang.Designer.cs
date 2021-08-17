@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HoaDonBanHang));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
@@ -63,6 +63,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBoxKH = new System.Windows.Forms.TextBox();
             this.comboBoxNhanVien = new MetroFramework.Controls.MetroComboBox();
             this.txtTienThua = new System.Windows.Forms.Label();
             this.txtTienKDua = new System.Windows.Forms.TextBox();
@@ -90,7 +91,6 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBoxKH = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -172,8 +172,8 @@
             // NgayLapHDBH
             // 
             this.NgayLapHDBH.DataPropertyName = "NgayLapHDBH";
-            dataGridViewCellStyle6.Format = "dd/MM/yyyyy";
-            this.NgayLapHDBH.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Format = "dd/MM/yyyyy";
+            this.NgayLapHDBH.DefaultCellStyle = dataGridViewCellStyle16;
             this.NgayLapHDBH.HeaderText = "Ngày Lập";
             this.NgayLapHDBH.Name = "NgayLapHDBH";
             this.NgayLapHDBH.ReadOnly = true;
@@ -181,8 +181,8 @@
             // TongT
             // 
             this.TongT.DataPropertyName = "TongTien";
-            dataGridViewCellStyle7.Format = "N";
-            this.TongT.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Format = "N";
+            this.TongT.DefaultCellStyle = dataGridViewCellStyle17;
             this.TongT.HeaderText = "Tổng Tiền";
             this.TongT.Name = "TongT";
             this.TongT.ReadOnly = true;
@@ -267,8 +267,8 @@
             // DonGia
             // 
             this.DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle8.Format = "N";
-            this.DonGia.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Format = "N";
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle18;
             this.DonGia.HeaderText = "Đơn Giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
@@ -276,8 +276,8 @@
             // KhuyenMai
             // 
             this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            dataGridViewCellStyle9.Format = "N";
-            this.KhuyenMai.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Format = "N";
+            this.KhuyenMai.DefaultCellStyle = dataGridViewCellStyle19;
             this.KhuyenMai.HeaderText = "Khuyến Mãi";
             this.KhuyenMai.Name = "KhuyenMai";
             this.KhuyenMai.ReadOnly = true;
@@ -285,8 +285,8 @@
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle10.Format = "N";
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Format = "N";
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle20;
             this.ThanhTien.HeaderText = "Thành Tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
@@ -428,13 +428,22 @@
             this.panel3.Size = new System.Drawing.Size(669, 262);
             this.panel3.TabIndex = 32;
             // 
+            // comboBoxKH
+            // 
+            this.comboBoxKH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxKH.Location = new System.Drawing.Point(78, 119);
+            this.comboBoxKH.Multiline = true;
+            this.comboBoxKH.Name = "comboBoxKH";
+            this.comboBoxKH.Size = new System.Drawing.Size(236, 29);
+            this.comboBoxKH.TabIndex = 51;
+            // 
             // comboBoxNhanVien
             // 
             this.comboBoxNhanVien.FormattingEnabled = true;
             this.comboBoxNhanVien.ItemHeight = 23;
-            this.comboBoxNhanVien.Location = new System.Drawing.Point(440, 91);
+            this.comboBoxNhanVien.Location = new System.Drawing.Point(353, 122);
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
-            this.comboBoxNhanVien.Size = new System.Drawing.Size(197, 29);
+            this.comboBoxNhanVien.Size = new System.Drawing.Size(219, 29);
             this.comboBoxNhanVien.TabIndex = 50;
             this.comboBoxNhanVien.UseSelectable = true;
             // 
@@ -443,7 +452,7 @@
             this.txtTienThua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTienThua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienThua.ForeColor = System.Drawing.Color.Red;
-            this.txtTienThua.Location = new System.Drawing.Point(272, 225);
+            this.txtTienThua.Location = new System.Drawing.Point(232, 225);
             this.txtTienThua.Name = "txtTienThua";
             this.txtTienThua.Size = new System.Drawing.Size(278, 29);
             this.txtTienThua.TabIndex = 45;
@@ -451,12 +460,12 @@
             // 
             // txtTienKDua
             // 
-            this.txtTienKDua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienKDua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienKDua.ForeColor = System.Drawing.Color.Red;
-            this.txtTienKDua.Location = new System.Drawing.Point(272, 181);
+            this.txtTienKDua.Location = new System.Drawing.Point(353, 183);
             this.txtTienKDua.Multiline = true;
             this.txtTienKDua.Name = "txtTienKDua";
-            this.txtTienKDua.Size = new System.Drawing.Size(278, 29);
+            this.txtTienKDua.Size = new System.Drawing.Size(219, 29);
             this.txtTienKDua.TabIndex = 44;
             this.txtTienKDua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTienKDua.TextChanged += new System.EventHandler(this.txtTienKDua_TextChanged);
@@ -466,16 +475,16 @@
             this.labelTongThanhToan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTongThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongThanhToan.ForeColor = System.Drawing.Color.Red;
-            this.labelTongThanhToan.Location = new System.Drawing.Point(272, 135);
+            this.labelTongThanhToan.Location = new System.Drawing.Point(78, 183);
             this.labelTongThanhToan.Name = "labelTongThanhToan";
-            this.labelTongThanhToan.Size = new System.Drawing.Size(278, 29);
+            this.labelTongThanhToan.Size = new System.Drawing.Size(233, 29);
             this.labelTongThanhToan.TabIndex = 48;
             this.labelTongThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtMaHD
             // 
             this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHD.Location = new System.Drawing.Point(108, 29);
+            this.txtMaHD.Location = new System.Drawing.Point(78, 50);
             this.txtMaHD.Multiline = true;
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(233, 29);
@@ -486,9 +495,9 @@
             this.dateTimePickerNgaylap.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNgaylap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgaylap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgaylap.Location = new System.Drawing.Point(440, 29);
+            this.dateTimePickerNgaylap.Location = new System.Drawing.Point(353, 50);
             this.dateTimePickerNgaylap.Name = "dateTimePickerNgaylap";
-            this.dateTimePickerNgaylap.Size = new System.Drawing.Size(197, 29);
+            this.dateTimePickerNgaylap.Size = new System.Drawing.Size(224, 29);
             this.dateTimePickerNgaylap.TabIndex = 46;
             // 
             // label15
@@ -496,7 +505,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(118, 185);
+            this.label15.Location = new System.Drawing.Point(349, 151);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(117, 21);
             this.label15.TabIndex = 42;
@@ -508,7 +517,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(118, 140);
+            this.label5.Location = new System.Drawing.Point(74, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 37;
@@ -520,7 +529,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(347, 36);
+            this.label4.Location = new System.Drawing.Point(349, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 38;
@@ -532,7 +541,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(347, 95);
+            this.label3.Location = new System.Drawing.Point(349, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 39;
@@ -544,7 +553,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 95);
+            this.label2.Location = new System.Drawing.Point(74, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 21);
             this.label2.TabIndex = 40;
@@ -556,7 +565,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(118, 228);
+            this.label16.Location = new System.Drawing.Point(139, 228);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(77, 21);
             this.label16.TabIndex = 42;
@@ -568,7 +577,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 36);
+            this.label12.Location = new System.Drawing.Point(74, 26);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 21);
             this.label12.TabIndex = 41;
@@ -738,15 +747,6 @@
             // errorMes
             // 
             this.errorMes.ContainerControl = this;
-            // 
-            // comboBoxKH
-            // 
-            this.comboBoxKH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxKH.Location = new System.Drawing.Point(104, 91);
-            this.comboBoxKH.Multiline = true;
-            this.comboBoxKH.Name = "comboBoxKH";
-            this.comboBoxKH.Size = new System.Drawing.Size(236, 29);
-            this.comboBoxKH.TabIndex = 51;
             // 
             // Frm_HoaDonBanHang
             // 
