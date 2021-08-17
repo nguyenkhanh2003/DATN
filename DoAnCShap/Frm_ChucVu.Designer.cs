@@ -57,29 +57,42 @@ namespace DoAnCShap
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMaCV = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTenCV = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtMaCV = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBoxSetting = new System.Windows.Forms.CheckBox();
-            this.checkBoxHoaDon = new System.Windows.Forms.CheckBox();
-            this.checkBoxThongKe = new System.Windows.Forms.CheckBox();
-            this.checkBoxBaoHanh = new System.Windows.Forms.CheckBox();
-            this.checkBoxNhapKho = new System.Windows.Forms.CheckBox();
-            this.checkBoxLoaiLLK = new System.Windows.Forms.CheckBox();
-            this.checkBoxPhanQuyen = new System.Windows.Forms.CheckBox();
-            this.checkBoxLinhKien = new System.Windows.Forms.CheckBox();
-            this.checkBoxNCC = new System.Windows.Forms.CheckBox();
-            this.checkBoxNhanViem = new System.Windows.Forms.CheckBox();
-            this.checkBoxkH = new System.Windows.Forms.CheckBox();
-            this.checkBoxBanHang = new System.Windows.Forms.CheckBox();
+            this.checkBoxThongKe = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxNCC = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxkH = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxBaoHanh = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxBanHang = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxNhanViem = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.checkBoxLinhKien = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBoxLoaiLLK = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.checkBoxHoaDon = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.checkBoxPhanQuyen = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBoxNhapKho = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBoxSetting = new Bunifu.Framework.UI.BunifuCheckbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,13 +140,13 @@ namespace DoAnCShap
             this.dataGridViewCV.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCV.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewCV.Location = new System.Drawing.Point(32, 356);
+            this.dataGridViewCV.Location = new System.Drawing.Point(12, 341);
             this.dataGridViewCV.Name = "dataGridViewCV";
             this.dataGridViewCV.ReadOnly = true;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -146,7 +159,7 @@ namespace DoAnCShap
             this.dataGridViewCV.RowHeadersVisible = false;
             this.dataGridViewCV.RowHeadersWidth = 51;
             this.dataGridViewCV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCV.Size = new System.Drawing.Size(1139, 182);
+            this.dataGridViewCV.Size = new System.Drawing.Size(1160, 182);
             this.dataGridViewCV.TabIndex = 25;
             this.dataGridViewCV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCV_CellClick);
             this.dataGridViewCV.DoubleClick += new System.EventHandler(this.dataGridViewCV_DoubleClick);
@@ -285,9 +298,9 @@ namespace DoAnCShap
             this.panel3.Controls.Add(this.btnThem);
             this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Controls.Add(this.btnXoa);
-            this.panel3.Location = new System.Drawing.Point(32, 270);
+            this.panel3.Location = new System.Drawing.Point(12, 265);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1139, 59);
+            this.panel3.Size = new System.Drawing.Size(1159, 59);
             this.panel3.TabIndex = 31;
             // 
             // btnClose
@@ -295,7 +308,7 @@ namespace DoAnCShap
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(988, 9);
+            this.btnClose.Location = new System.Drawing.Point(1050, 9);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(91, 39);
             this.btnClose.TabIndex = 0;
@@ -356,245 +369,403 @@ namespace DoAnCShap
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // label1
+            // groupBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Chức Vụ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên Chức Vụ";
-            // 
-            // txtMaCV
-            // 
-            this.txtMaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCV.Location = new System.Drawing.Point(177, 32);
-            this.txtMaCV.Multiline = true;
-            this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Size = new System.Drawing.Size(207, 25);
-            this.txtMaCV.TabIndex = 1;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtTenCV);
+            this.groupBox1.Controls.Add(this.txtMaCV);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 68);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(276, 182);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức Vụ";
             // 
             // txtTenCV
             // 
             this.txtTenCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenCV.Location = new System.Drawing.Point(177, 77);
+            this.txtTenCV.Location = new System.Drawing.Point(13, 140);
             this.txtTenCV.Multiline = true;
             this.txtTenCV.Name = "txtTenCV";
-            this.txtTenCV.Size = new System.Drawing.Size(207, 25);
-            this.txtTenCV.TabIndex = 1;
+            this.txtTenCV.Size = new System.Drawing.Size(250, 29);
+            this.txtTenCV.TabIndex = 4;
             // 
-            // panel2
+            // txtMaCV
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtTenCV);
-            this.panel2.Controls.Add(this.txtMaCV);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(32, 61);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 182);
-            this.panel2.TabIndex = 24;
+            this.txtMaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCV.Location = new System.Drawing.Point(13, 66);
+            this.txtMaCV.Multiline = true;
+            this.txtMaCV.Name = "txtMaCV";
+            this.txtMaCV.Size = new System.Drawing.Size(250, 29);
+            this.txtMaCV.TabIndex = 5;
             // 
-            // panel4
+            // label2
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên Chức Vụ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 21);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mã Chức Vụ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.checkBoxSetting);
-            this.panel4.Controls.Add(this.checkBoxHoaDon);
-            this.panel4.Controls.Add(this.checkBoxThongKe);
-            this.panel4.Controls.Add(this.checkBoxBaoHanh);
-            this.panel4.Controls.Add(this.checkBoxNhapKho);
-            this.panel4.Controls.Add(this.checkBoxLoaiLLK);
-            this.panel4.Controls.Add(this.checkBoxPhanQuyen);
-            this.panel4.Controls.Add(this.checkBoxLinhKien);
-            this.panel4.Controls.Add(this.checkBoxNCC);
-            this.panel4.Controls.Add(this.checkBoxNhanViem);
-            this.panel4.Controls.Add(this.checkBoxkH);
-            this.panel4.Controls.Add(this.checkBoxBanHang);
-            this.panel4.Location = new System.Drawing.Point(457, 61);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(715, 182);
-            this.panel4.TabIndex = 32;
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.checkBoxThongKe);
+            this.groupBox2.Controls.Add(this.checkBoxNCC);
+            this.groupBox2.Controls.Add(this.checkBoxHoaDon);
+            this.groupBox2.Controls.Add(this.checkBoxLoaiLLK);
+            this.groupBox2.Controls.Add(this.bunifuCheckbox1);
+            this.groupBox2.Controls.Add(this.checkBoxSetting);
+            this.groupBox2.Controls.Add(this.checkBoxNhapKho);
+            this.groupBox2.Controls.Add(this.checkBoxPhanQuyen);
+            this.groupBox2.Controls.Add(this.checkBoxLinhKien);
+            this.groupBox2.Controls.Add(this.checkBoxkH);
+            this.groupBox2.Controls.Add(this.checkBoxBaoHanh);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.checkBoxBanHang);
+            this.groupBox2.Controls.Add(this.checkBoxNhanViem);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(294, 68);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(877, 182);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Phân Quyền";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(52, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 21);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Bảo Hành";
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(713, 35);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Phân Quyền";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // checkBoxSetting
-            // 
-            this.checkBoxSetting.AutoSize = true;
-            this.checkBoxSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxSetting.Location = new System.Drawing.Point(519, 139);
-            this.checkBoxSetting.Name = "checkBoxSetting";
-            this.checkBoxSetting.Size = new System.Drawing.Size(68, 20);
-            this.checkBoxSetting.TabIndex = 12;
-            this.checkBoxSetting.Text = "Setting";
-            this.checkBoxSetting.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxHoaDon
-            // 
-            this.checkBoxHoaDon.AutoSize = true;
-            this.checkBoxHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxHoaDon.Location = new System.Drawing.Point(337, 139);
-            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
-            this.checkBoxHoaDon.Size = new System.Drawing.Size(159, 20);
-            this.checkBoxHoaDon.TabIndex = 12;
-            this.checkBoxHoaDon.Text = "Quản Lý Hóa Đơn Bán";
-            this.checkBoxHoaDon.UseVisualStyleBackColor = true;
+            this.label4.Size = new System.Drawing.Size(77, 21);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Bán Hàng";
             // 
             // checkBoxThongKe
             // 
-            this.checkBoxThongKe.AutoSize = true;
-            this.checkBoxThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxThongKe.Location = new System.Drawing.Point(156, 139);
+            this.checkBoxThongKe.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxThongKe.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxThongKe.Checked = false;
+            this.checkBoxThongKe.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxThongKe.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThongKe.Location = new System.Drawing.Point(237, 143);
+            this.checkBoxThongKe.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
             this.checkBoxThongKe.Name = "checkBoxThongKe";
-            this.checkBoxThongKe.Size = new System.Drawing.Size(85, 20);
-            this.checkBoxThongKe.TabIndex = 12;
-            this.checkBoxThongKe.Text = "Thống Kê";
-            this.checkBoxThongKe.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBaoHanh
-            // 
-            this.checkBoxBaoHanh.AutoSize = true;
-            this.checkBoxBaoHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBaoHanh.Location = new System.Drawing.Point(9, 139);
-            this.checkBoxBaoHanh.Name = "checkBoxBaoHanh";
-            this.checkBoxBaoHanh.Size = new System.Drawing.Size(87, 20);
-            this.checkBoxBaoHanh.TabIndex = 12;
-            this.checkBoxBaoHanh.Text = "Bảo Hành";
-            this.checkBoxBaoHanh.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNhapKho
-            // 
-            this.checkBoxNhapKho.AutoSize = true;
-            this.checkBoxNhapKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNhapKho.Location = new System.Drawing.Point(519, 86);
-            this.checkBoxNhapKho.Name = "checkBoxNhapKho";
-            this.checkBoxNhapKho.Size = new System.Drawing.Size(96, 20);
-            this.checkBoxNhapKho.TabIndex = 14;
-            this.checkBoxNhapKho.Text = "Nhập Hàng";
-            this.checkBoxNhapKho.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxLoaiLLK
-            // 
-            this.checkBoxLoaiLLK.AutoSize = true;
-            this.checkBoxLoaiLLK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxLoaiLLK.Location = new System.Drawing.Point(337, 85);
-            this.checkBoxLoaiLLK.Name = "checkBoxLoaiLLK";
-            this.checkBoxLoaiLLK.Size = new System.Drawing.Size(164, 20);
-            this.checkBoxLoaiLLK.TabIndex = 14;
-            this.checkBoxLoaiLLK.Text = "Quản Lý Loại Linh Kiiện";
-            this.checkBoxLoaiLLK.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxPhanQuyen
-            // 
-            this.checkBoxPhanQuyen.AutoSize = true;
-            this.checkBoxPhanQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPhanQuyen.Location = new System.Drawing.Point(519, 41);
-            this.checkBoxPhanQuyen.Name = "checkBoxPhanQuyen";
-            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(100, 20);
-            this.checkBoxPhanQuyen.TabIndex = 15;
-            this.checkBoxPhanQuyen.Text = "Phân Quyền";
-            this.checkBoxPhanQuyen.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxLinhKien
-            // 
-            this.checkBoxLinhKien.AutoSize = true;
-            this.checkBoxLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxLinhKien.Location = new System.Drawing.Point(337, 41);
-            this.checkBoxLinhKien.Name = "checkBoxLinhKien";
-            this.checkBoxLinhKien.Size = new System.Drawing.Size(132, 20);
-            this.checkBoxLinhKien.TabIndex = 15;
-            this.checkBoxLinhKien.Text = "Quản Lý Linh Kiện";
-            this.checkBoxLinhKien.UseVisualStyleBackColor = true;
+            this.checkBoxThongKe.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxThongKe.TabIndex = 32;
             // 
             // checkBoxNCC
             // 
-            this.checkBoxNCC.AutoSize = true;
-            this.checkBoxNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNCC.Location = new System.Drawing.Point(156, 85);
+            this.checkBoxNCC.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNCC.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNCC.Checked = false;
+            this.checkBoxNCC.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxNCC.ForeColor = System.Drawing.Color.White;
+            this.checkBoxNCC.Location = new System.Drawing.Point(237, 85);
+            this.checkBoxNCC.Margin = new System.Windows.Forms.Padding(21, 34, 21, 34);
             this.checkBoxNCC.Name = "checkBoxNCC";
-            this.checkBoxNCC.Size = new System.Drawing.Size(169, 20);
-            this.checkBoxNCC.TabIndex = 16;
-            this.checkBoxNCC.Text = "Quản Lý Nhà Cung  Cấp";
-            this.checkBoxNCC.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNhanViem
-            // 
-            this.checkBoxNhanViem.AutoSize = true;
-            this.checkBoxNhanViem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNhanViem.Location = new System.Drawing.Point(9, 41);
-            this.checkBoxNhanViem.Name = "checkBoxNhanViem";
-            this.checkBoxNhanViem.Size = new System.Drawing.Size(141, 20);
-            this.checkBoxNhanViem.TabIndex = 17;
-            this.checkBoxNhanViem.Text = "Quản Lý Nhân Viên";
-            this.checkBoxNhanViem.UseVisualStyleBackColor = true;
+            this.checkBoxNCC.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxNCC.TabIndex = 32;
             // 
             // checkBoxkH
             // 
-            this.checkBoxkH.AutoSize = true;
-            this.checkBoxkH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxkH.Location = new System.Drawing.Point(156, 41);
+            this.checkBoxkH.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxkH.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxkH.Checked = false;
+            this.checkBoxkH.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxkH.ForeColor = System.Drawing.Color.White;
+            this.checkBoxkH.Location = new System.Drawing.Point(237, 28);
+            this.checkBoxkH.Margin = new System.Windows.Forms.Padding(14, 21, 14, 21);
             this.checkBoxkH.Name = "checkBoxkH";
-            this.checkBoxkH.Size = new System.Drawing.Size(152, 20);
-            this.checkBoxkH.TabIndex = 18;
-            this.checkBoxkH.Text = "Quản Lý Khách Hàng";
-            this.checkBoxkH.UseVisualStyleBackColor = true;
+            this.checkBoxkH.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxkH.TabIndex = 32;
+            // 
+            // checkBoxBaoHanh
+            // 
+            this.checkBoxBaoHanh.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxBaoHanh.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxBaoHanh.Checked = false;
+            this.checkBoxBaoHanh.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxBaoHanh.ForeColor = System.Drawing.Color.White;
+            this.checkBoxBaoHanh.Location = new System.Drawing.Point(25, 144);
+            this.checkBoxBaoHanh.Margin = new System.Windows.Forms.Padding(9, 13, 9, 13);
+            this.checkBoxBaoHanh.Name = "checkBoxBaoHanh";
+            this.checkBoxBaoHanh.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxBaoHanh.TabIndex = 32;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(268, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 21);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Quản Lý Khách Hàng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 21);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Quản Lý Nhân Viên";
             // 
             // checkBoxBanHang
             // 
-            this.checkBoxBanHang.AutoSize = true;
-            this.checkBoxBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBanHang.Location = new System.Drawing.Point(9, 86);
+            this.checkBoxBanHang.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxBanHang.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxBanHang.Checked = false;
+            this.checkBoxBanHang.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxBanHang.ForeColor = System.Drawing.Color.White;
+            this.checkBoxBanHang.Location = new System.Drawing.Point(25, 85);
+            this.checkBoxBanHang.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.checkBoxBanHang.Name = "checkBoxBanHang";
-            this.checkBoxBanHang.Size = new System.Drawing.Size(87, 20);
-            this.checkBoxBanHang.TabIndex = 19;
-            this.checkBoxBanHang.Text = "Bán Hàng";
-            this.checkBoxBanHang.UseVisualStyleBackColor = true;
+            this.checkBoxBanHang.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxBanHang.TabIndex = 32;
+            // 
+            // checkBoxNhanViem
+            // 
+            this.checkBoxNhanViem.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhanViem.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhanViem.Checked = false;
+            this.checkBoxNhanViem.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxNhanViem.ForeColor = System.Drawing.Color.White;
+            this.checkBoxNhanViem.Location = new System.Drawing.Point(25, 30);
+            this.checkBoxNhanViem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkBoxNhanViem.Name = "checkBoxNhanViem";
+            this.checkBoxNhanViem.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxNhanViem.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(268, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(172, 21);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Quản Lý Nhà Cung Cấp";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(268, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 21);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Thống Kê\r\n";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(507, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 21);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Quản Lý Linh Kiện";
+            // 
+            // checkBoxLinhKien
+            // 
+            this.checkBoxLinhKien.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLinhKien.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLinhKien.Checked = false;
+            this.checkBoxLinhKien.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxLinhKien.ForeColor = System.Drawing.Color.White;
+            this.checkBoxLinhKien.Location = new System.Drawing.Point(476, 30);
+            this.checkBoxLinhKien.Margin = new System.Windows.Forms.Padding(21, 34, 21, 34);
+            this.checkBoxLinhKien.Name = "checkBoxLinhKien";
+            this.checkBoxLinhKien.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxLinhKien.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(507, 83);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(135, 21);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Quản Lý Linh Kiện";
+            // 
+            // bunifuCheckbox1
+            // 
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCheckbox1.Checked = false;
+            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox1.Location = new System.Drawing.Point(476, 83);
+            this.bunifuCheckbox1.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
+            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
+            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox1.TabIndex = 32;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(507, 85);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(168, 21);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Quản Lý Loại Linh Kiện";
+            // 
+            // checkBoxLoaiLLK
+            // 
+            this.checkBoxLoaiLLK.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLoaiLLK.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLoaiLLK.Checked = false;
+            this.checkBoxLoaiLLK.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxLoaiLLK.ForeColor = System.Drawing.Color.White;
+            this.checkBoxLoaiLLK.Location = new System.Drawing.Point(476, 85);
+            this.checkBoxLoaiLLK.Margin = new System.Windows.Forms.Padding(48, 89, 48, 89);
+            this.checkBoxLoaiLLK.Name = "checkBoxLoaiLLK";
+            this.checkBoxLoaiLLK.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxLoaiLLK.TabIndex = 32;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(507, 143);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 21);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Quản Lý Hóa Đơn Bán";
+            // 
+            // checkBoxHoaDon
+            // 
+            this.checkBoxHoaDon.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxHoaDon.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxHoaDon.Checked = false;
+            this.checkBoxHoaDon.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxHoaDon.ForeColor = System.Drawing.Color.White;
+            this.checkBoxHoaDon.Location = new System.Drawing.Point(476, 143);
+            this.checkBoxHoaDon.Margin = new System.Windows.Forms.Padding(72, 144, 72, 144);
+            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
+            this.checkBoxHoaDon.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxHoaDon.TabIndex = 32;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(728, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 21);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Phân Quyền";
+            // 
+            // checkBoxPhanQuyen
+            // 
+            this.checkBoxPhanQuyen.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxPhanQuyen.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxPhanQuyen.Checked = false;
+            this.checkBoxPhanQuyen.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxPhanQuyen.ForeColor = System.Drawing.Color.White;
+            this.checkBoxPhanQuyen.Location = new System.Drawing.Point(693, 30);
+            this.checkBoxPhanQuyen.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
+            this.checkBoxPhanQuyen.Name = "checkBoxPhanQuyen";
+            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxPhanQuyen.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(728, 85);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 21);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Nhập Hàng";
+            // 
+            // checkBoxNhapKho
+            // 
+            this.checkBoxNhapKho.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhapKho.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhapKho.Checked = false;
+            this.checkBoxNhapKho.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxNhapKho.ForeColor = System.Drawing.Color.White;
+            this.checkBoxNhapKho.Location = new System.Drawing.Point(693, 86);
+            this.checkBoxNhapKho.Margin = new System.Windows.Forms.Padding(48, 89, 48, 89);
+            this.checkBoxNhapKho.Name = "checkBoxNhapKho";
+            this.checkBoxNhapKho.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxNhapKho.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(728, 142);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 21);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Setting";
+            // 
+            // checkBoxSetting
+            // 
+            this.checkBoxSetting.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxSetting.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxSetting.Checked = false;
+            this.checkBoxSetting.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxSetting.ForeColor = System.Drawing.Color.White;
+            this.checkBoxSetting.Location = new System.Drawing.Point(693, 142);
+            this.checkBoxSetting.Margin = new System.Windows.Forms.Padding(72, 144, 72, 144);
+            this.checkBoxSetting.Name = "checkBoxSetting";
+            this.checkBoxSetting.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxSetting.TabIndex = 32;
             // 
             // Frm_ChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 711);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridViewCV);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Frm_ChucVu";
             this.Text = "Frm_PhanQuyen";
             this.Load += new System.EventHandler(this.Frm_ChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -609,25 +780,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMaCV;
-        private System.Windows.Forms.TextBox txtTenCV;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBoxBaoHanh;
-        private System.Windows.Forms.CheckBox checkBoxLoaiLLK;
-        private System.Windows.Forms.CheckBox checkBoxLinhKien;
-        private System.Windows.Forms.CheckBox checkBoxNCC;
-        private System.Windows.Forms.CheckBox checkBoxNhanViem;
-        private System.Windows.Forms.CheckBox checkBoxkH;
-        private System.Windows.Forms.CheckBox checkBoxBanHang;
-        private System.Windows.Forms.CheckBox checkBoxNhapKho;
-        private System.Windows.Forms.CheckBox checkBoxPhanQuyen;
-        private System.Windows.Forms.CheckBox checkBoxSetting;
-        private System.Windows.Forms.CheckBox checkBoxHoaDon;
-        private System.Windows.Forms.CheckBox checkBoxThongKe;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCV;
         private System.Windows.Forms.DataGridViewCheckBoxColumn QLNV;
@@ -643,5 +795,37 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewCheckBoxColumn HoaDon;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtTenCV;
+        private System.Windows.Forms.TextBox txtMaCV;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxNhanViem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxBaoHanh;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxBanHang;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxThongKe;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxNCC;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxkH;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxHoaDon;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxLoaiLLK;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxSetting;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxNhapKho;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxPhanQuyen;
+        private Bunifu.Framework.UI.BunifuCheckbox checkBoxLinhKien;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
     }
 }

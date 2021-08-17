@@ -217,13 +217,22 @@ namespace DoAnCShap
 
         private void iconBtnThuNho_Click(object sender, EventArgs e)
         {
-            if (panelSideMenu.Visible)
+            if (panelSideMenu.Width == 60)
             {
-                panelSideMenu.Hide();
+                panelSideMenu.Width = 229;
+                //panelTop.Width = 939;
+                //this.Width = 1116;
+                btnNhanVien.Text = "Quản Lý Nhân Viên";
+                btnKhachHang.Text = "Quản Lý Khách Hàng";
+
             }
             else
             {
-                panelSideMenu.Show();
+                panelSideMenu.Width = 60;
+                //panelTop.Width = 807;
+                //this.Width = 981;
+                btnNhanVien.Text = "";
+                btnKhachHang.Text = "";
             }
         }
 

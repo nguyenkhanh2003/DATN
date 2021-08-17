@@ -480,7 +480,7 @@ namespace DoAnCShap
                     for (int i = 0; i < n; i++)
                     {
                         PictureBox p = new PictureBox();
-                        Size s = new Size(197, 158);
+                        Size s = new Size(166, 153);
                         p.Size = s;
                         p.SizeMode = PictureBoxSizeMode.StretchImage;
                         pictureBox1.Controls.Add(p);
