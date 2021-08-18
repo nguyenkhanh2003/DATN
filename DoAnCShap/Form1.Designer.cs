@@ -33,9 +33,6 @@ namespace DoAnCShap
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelBot = new System.Windows.Forms.Panel();
@@ -62,6 +59,10 @@ namespace DoAnCShap
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panelChildForm.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBot.SuspendLayout();
@@ -83,65 +84,26 @@ namespace DoAnCShap
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(205, 122);
+            this.panel1.Location = new System.Drawing.Point(227, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 210);
+            this.panel1.Size = new System.Drawing.Size(458, 210);
             this.panel1.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label4.Location = new System.Drawing.Point(126, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 23);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Nguyễn Phi";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label3.Location = new System.Drawing.Point(126, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nguyễn Khánh";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Sinh Viên Thực Hiện";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(36, 24);
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(37, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 30);
+            this.label1.Size = new System.Drawing.Size(395, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phần Mềm Bán Linh Kiện Máy Tính";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,6 +248,7 @@ namespace DoAnCShap
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.Location = new System.Drawing.Point(0, 638);
             this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnSetting.Size = new System.Drawing.Size(212, 46);
             this.btnSetting.TabIndex = 1;
             this.btnSetting.Text = "Setting";
@@ -309,6 +272,7 @@ namespace DoAnCShap
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.Location = new System.Drawing.Point(0, 592);
             this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnProfile.Size = new System.Drawing.Size(212, 46);
             this.btnProfile.TabIndex = 18;
             this.btnProfile.Text = "Thông Tin Cá Nhân";
@@ -332,6 +296,7 @@ namespace DoAnCShap
             this.btnPhanQuyen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhanQuyen.Location = new System.Drawing.Point(0, 546);
             this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnPhanQuyen.Size = new System.Drawing.Size(212, 46);
             this.btnPhanQuyen.TabIndex = 17;
             this.btnPhanQuyen.Text = "Phân Quyền";
@@ -355,6 +320,7 @@ namespace DoAnCShap
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.Location = new System.Drawing.Point(0, 500);
             this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(212, 46);
             this.btnThongKe.TabIndex = 16;
             this.btnThongKe.Text = "Thống Kê";
@@ -378,6 +344,7 @@ namespace DoAnCShap
             this.btnBaohanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaohanh.Location = new System.Drawing.Point(0, 454);
             this.btnBaohanh.Name = "btnBaohanh";
+            this.btnBaohanh.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnBaohanh.Size = new System.Drawing.Size(212, 46);
             this.btnBaohanh.TabIndex = 15;
             this.btnBaohanh.Text = "Bảo Hành";
@@ -401,6 +368,7 @@ namespace DoAnCShap
             this.btnBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBanHang.Location = new System.Drawing.Point(0, 408);
             this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnBanHang.Size = new System.Drawing.Size(212, 46);
             this.btnBanHang.TabIndex = 14;
             this.btnBanHang.Text = "Bán Hàng";
@@ -424,6 +392,7 @@ namespace DoAnCShap
             this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhaCungCap.Location = new System.Drawing.Point(0, 362);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhaCungCap.Size = new System.Drawing.Size(212, 46);
             this.btnNhaCungCap.TabIndex = 13;
             this.btnNhaCungCap.Text = "Nhà Cung Cấp";
@@ -466,6 +435,7 @@ namespace DoAnCShap
             this.btnLoaiLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoaiLK.Location = new System.Drawing.Point(0, 317);
             this.btnLoaiLK.Name = "btnLoaiLK";
+            this.btnLoaiLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLoaiLK.Size = new System.Drawing.Size(212, 45);
             this.btnLoaiLK.TabIndex = 2;
             this.btnLoaiLK.Text = "Loại Linh Kiện";
@@ -489,6 +459,7 @@ namespace DoAnCShap
             this.btnLinhKien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLinhKien.Location = new System.Drawing.Point(0, 272);
             this.btnLinhKien.Name = "btnLinhKien";
+            this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLinhKien.Size = new System.Drawing.Size(212, 45);
             this.btnLinhKien.TabIndex = 2;
             this.btnLinhKien.Text = "Linh Kiện";
@@ -512,6 +483,7 @@ namespace DoAnCShap
             this.btnPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhieuNhap.Location = new System.Drawing.Point(0, 227);
             this.btnPhieuNhap.Name = "btnPhieuNhap";
+            this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnPhieuNhap.Size = new System.Drawing.Size(212, 45);
             this.btnPhieuNhap.TabIndex = 2;
             this.btnPhieuNhap.Text = "Nhập Hàng";
@@ -535,9 +507,10 @@ namespace DoAnCShap
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoaDon.Location = new System.Drawing.Point(0, 182);
             this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnHoaDon.Size = new System.Drawing.Size(212, 45);
             this.btnHoaDon.TabIndex = 2;
-            this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
+            this.btnHoaDon.Text = "Quản Lý Hóa Đơn Bán\r\n";
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHoaDon.UseVisualStyleBackColor = false;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
@@ -558,6 +531,7 @@ namespace DoAnCShap
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhachHang.Location = new System.Drawing.Point(0, 137);
             this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnKhachHang.Size = new System.Drawing.Size(212, 45);
             this.btnKhachHang.TabIndex = 2;
             this.btnKhachHang.Text = "Quản Lý Khách Hàng";
@@ -582,6 +556,7 @@ namespace DoAnCShap
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanVien.Location = new System.Drawing.Point(0, 92);
             this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhanVien.Size = new System.Drawing.Size(212, 45);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Quản Lý Nhân Viên";
@@ -611,6 +586,50 @@ namespace DoAnCShap
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(132, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 20);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "GVHD: Dương Hữu Phước";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(174, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Nhóm: 4-CKC";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(114, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(238, 20);
+            this.label4.TabIndex = 73;
+            this.label4.Text = "Nguyễn Quốc Khánh - 0306181326\r\n";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(114, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(201, 20);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Nguyễn Hữu Phi - 03061813?\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +649,7 @@ namespace DoAnCShap
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelChildForm.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panelBot.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
@@ -667,10 +687,11 @@ namespace DoAnCShap
         public System.Windows.Forms.Label labeldateTime;
         public System.Windows.Forms.Label lbl_HienThiForm;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

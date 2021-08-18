@@ -35,7 +35,7 @@ namespace DoAnCShap
 
         public void xulytextbox(Boolean b1, Boolean b2)
         {
-            txtMaNV.ReadOnly = b1;
+            //txtMaNV.ReadOnly = b1;
             txtMaNV.Enabled = b1;
             cboChucVu.Enabled = b1;
             txtUserName.Enabled = b1;
@@ -672,6 +672,11 @@ namespace DoAnCShap
                 excelAp.Columns.AutoFit();
                 excelAp.Visible = true;
             }
+        }
+
+        private void txtMaNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

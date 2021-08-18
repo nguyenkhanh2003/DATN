@@ -304,5 +304,10 @@ namespace DoAnCShap
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
