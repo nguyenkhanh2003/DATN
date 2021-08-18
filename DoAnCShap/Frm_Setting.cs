@@ -116,5 +116,10 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

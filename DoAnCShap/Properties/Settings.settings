@@ -17,7 +17,7 @@
       <Value Profile="(Default)">30, 130, 110</Value>
     </Setting>
     <Setting Name="ChangeFont" Type="System.Drawing.Font" Scope="User">
-      <Value Profile="(Default)">Microsoft Sans Serif, 12pt</Value>
+      <Value Profile="(Default)">Segoe UI, 12pt</Value>
     </Setting>
     <Setting Name="ChangeThongTIn" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -535,6 +535,10 @@ namespace DoAnCShap
             timer1.Enabled = true;
         }
 
-
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            lbl_HienThiForm.Text = "Thông Tin Cá Nhân";
+            openChildForm(new Frm_ThongTinNhanVien());
+        }
     }
 }

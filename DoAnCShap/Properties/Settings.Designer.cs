@@ -60,7 +60,7 @@ namespace DoAnCShap.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 12pt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Segoe UI, 12pt")]
         public global::System.Drawing.Font ChangeFont {
             get {
                 return ((global::System.Drawing.Font)(this["ChangeFont"]));

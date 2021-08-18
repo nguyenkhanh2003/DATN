@@ -32,13 +32,6 @@ namespace DoAnCShap
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Setting));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDong = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnChonFontChu = new System.Windows.Forms.Button();
-            this.btnThayDoi = new System.Windows.Forms.Button();
-            this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -49,11 +42,20 @@ namespace DoAnCShap
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnChonFontChu = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThayDoi = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -64,93 +66,10 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.groupBox3);
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.btnDong);
-            this.panel4.Controls.Add(this.btnSave);
-            this.panel4.Location = new System.Drawing.Point(32, 29);
+            this.panel4.Location = new System.Drawing.Point(32, 65);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1111, 604);
+            this.panel4.Size = new System.Drawing.Size(1111, 568);
             this.panel4.TabIndex = 4;
-            // 
-            // btnDong
-            // 
-            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
-            this.btnDong.Location = new System.Drawing.Point(484, 516);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(100, 46);
-            this.btnDong.TabIndex = 6;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(344, 516);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 46);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Lưu Thay Đổi";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnChonFontChu
-            // 
-            this.btnChonFontChu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChonFontChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonFontChu.Image = ((System.Drawing.Image)(resources.GetObject("btnChonFontChu.Image")));
-            this.btnChonFontChu.Location = new System.Drawing.Point(192, 28);
-            this.btnChonFontChu.Name = "btnChonFontChu";
-            this.btnChonFontChu.Size = new System.Drawing.Size(133, 45);
-            this.btnChonFontChu.TabIndex = 5;
-            this.btnChonFontChu.Text = "Chọn Font";
-            this.btnChonFontChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChonFontChu.UseVisualStyleBackColor = true;
-            this.btnChonFontChu.Click += new System.EventHandler(this.btnChonFontChu_Click);
-            // 
-            // btnThayDoi
-            // 
-            this.btnThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThayDoi.Image = ((System.Drawing.Image)(resources.GetObject("btnThayDoi.Image")));
-            this.btnThayDoi.Location = new System.Drawing.Point(121, 28);
-            this.btnThayDoi.Name = "btnThayDoi";
-            this.btnThayDoi.Size = new System.Drawing.Size(128, 45);
-            this.btnThayDoi.TabIndex = 2;
-            this.btnThayDoi.Text = "Chọn Màu";
-            this.btnThayDoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThayDoi.UseVisualStyleBackColor = true;
-            this.btnThayDoi.Click += new System.EventHandler(this.btnThayDoi_Click);
-            // 
-            // errorMes
-            // 
-            this.errorMes.ContainerControl = this;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnThayDoi);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(111, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(379, 87);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thay Đổi Màu Giao Diện";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btnChonFontChu);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(496, 20);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(491, 87);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thay Đổi Font Chữ Menu";
             // 
             // groupBox3
             // 
@@ -159,6 +78,7 @@ namespace DoAnCShap
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtSDT);
             this.groupBox3.Controls.Add(this.txtHotLine);
+            this.groupBox3.Controls.Add(this.btnSave);
             this.groupBox3.Controls.Add(this.txtWebSite);
             this.groupBox3.Controls.Add(this.txtDiaChi);
             this.groupBox3.Controls.Add(this.label5);
@@ -199,7 +119,7 @@ namespace DoAnCShap
             // 
             this.txtHotLine.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DoAnCShap.Properties.Settings.Default, "ChangeHotLine", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtHotLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHotLine.Location = new System.Drawing.Point(121, 195);
+            this.txtHotLine.Location = new System.Drawing.Point(121, 206);
             this.txtHotLine.Multiline = true;
             this.txtHotLine.Name = "txtHotLine";
             this.txtHotLine.Size = new System.Drawing.Size(237, 29);
@@ -211,10 +131,10 @@ namespace DoAnCShap
             // 
             this.txtWebSite.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DoAnCShap.Properties.Settings.Default, "ChangeWebsite", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtWebSite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWebSite.Location = new System.Drawing.Point(121, 263);
+            this.txtWebSite.Location = new System.Drawing.Point(442, 206);
             this.txtWebSite.Multiline = true;
             this.txtWebSite.Name = "txtWebSite";
-            this.txtWebSite.Size = new System.Drawing.Size(237, 25);
+            this.txtWebSite.Size = new System.Drawing.Size(310, 29);
             this.txtWebSite.TabIndex = 8;
             this.txtWebSite.Text = global::DoAnCShap.Properties.Settings.Default.ChangeWebsite;
             this.txtWebSite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -226,7 +146,7 @@ namespace DoAnCShap
             this.txtDiaChi.Location = new System.Drawing.Point(442, 123);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(310, 113);
+            this.txtDiaChi.Size = new System.Drawing.Size(310, 56);
             this.txtDiaChi.TabIndex = 14;
             this.txtDiaChi.Text = global::DoAnCShap.Properties.Settings.Default.ChangeDiaChi;
             // 
@@ -254,7 +174,7 @@ namespace DoAnCShap
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(117, 160);
+            this.label8.Location = new System.Drawing.Point(117, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 21);
             this.label8.TabIndex = 10;
@@ -264,11 +184,105 @@ namespace DoAnCShap
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(117, 234);
+            this.label9.Location = new System.Drawing.Point(438, 182);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 21);
             this.label9.TabIndex = 11;
             this.label9.Text = "WebSite";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnChonFontChu);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(496, 20);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(491, 87);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thay Đổi Font Chữ Menu";
+            // 
+            // btnChonFontChu
+            // 
+            this.btnChonFontChu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChonFontChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonFontChu.Image = ((System.Drawing.Image)(resources.GetObject("btnChonFontChu.Image")));
+            this.btnChonFontChu.Location = new System.Drawing.Point(192, 28);
+            this.btnChonFontChu.Name = "btnChonFontChu";
+            this.btnChonFontChu.Size = new System.Drawing.Size(133, 45);
+            this.btnChonFontChu.TabIndex = 5;
+            this.btnChonFontChu.Text = "Chọn Font";
+            this.btnChonFontChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChonFontChu.UseVisualStyleBackColor = true;
+            this.btnChonFontChu.Click += new System.EventHandler(this.btnChonFontChu_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnThayDoi);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(111, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(379, 87);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thay Đổi Màu Giao Diện";
+            // 
+            // btnThayDoi
+            // 
+            this.btnThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThayDoi.Image = ((System.Drawing.Image)(resources.GetObject("btnThayDoi.Image")));
+            this.btnThayDoi.Location = new System.Drawing.Point(121, 28);
+            this.btnThayDoi.Name = "btnThayDoi";
+            this.btnThayDoi.Size = new System.Drawing.Size(128, 45);
+            this.btnThayDoi.TabIndex = 2;
+            this.btnThayDoi.Text = "Chọn Màu";
+            this.btnThayDoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThayDoi.UseVisualStyleBackColor = true;
+            this.btnThayDoi.Click += new System.EventHandler(this.btnThayDoi_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(319, 262);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(144, 46);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Lưu Thay Đổi";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // errorMes
+            // 
+            this.errorMes.ContainerControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1184, 43);
+            this.panel1.TabIndex = 24;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1115, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(60, 35);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Frm_Setting
             // 
@@ -276,16 +290,18 @@ namespace DoAnCShap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Name = "Frm_Setting";
             this.Text = "Frm_Setting";
             this.Load += new System.EventHandler(this.Frm_Setting_Load);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -296,7 +312,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ErrorProvider errorMes;
-        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtSDT;
@@ -309,5 +324,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

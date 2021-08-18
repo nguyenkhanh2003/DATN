@@ -190,11 +190,22 @@ namespace DoAnCShap
             DataTable DSSP = bus.LayDSSP("select * From LinhKien Where TenLK=N'" + comboBoxTenLK.Text + "'");
             if (DSSP.Rows.Count > 0)
             {
-                if (comboBoxTenLK.Text == DSSP.Rows[0]["TenLK"].ToString())
+                try
                 {
-                    SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
+                    if (comboBoxTenLK.Text == DSSP.Rows[0]["TenLK"].ToString())
+                    {
+                        SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
+                    }
+                    else
+                    {
+
+                    }
+                    SoLuongConLai = SoLuongTon + int.Parse(textBoxSoLuong.Text);
                 }
-                SoLuongConLai = SoLuongTon + int.Parse(textBoxSoLuong.Text);
+                catch
+                {
+
+                }
             }
             if (textBoxSoLuong.Text == "")
             {
@@ -467,7 +478,7 @@ namespace DoAnCShap
 
         private void btnCane_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
                 XuLyChucNang(true, false, false, false, false);

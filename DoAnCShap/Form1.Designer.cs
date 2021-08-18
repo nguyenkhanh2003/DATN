@@ -46,7 +46,7 @@ namespace DoAnCShap
             this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnPhanQuyen = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnBaohanh = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@ namespace DoAnCShap
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSetting = new System.Windows.Forms.Button();
             this.panelChildForm.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBot.SuspendLayout();
@@ -250,6 +251,7 @@ namespace DoAnCShap
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
             this.panelSideMenu.Controls.Add(this.btnSetting);
+            this.panelSideMenu.Controls.Add(this.btnProfile);
             this.panelSideMenu.Controls.Add(this.btnPhanQuyen);
             this.panelSideMenu.Controls.Add(this.btnThongKe);
             this.panelSideMenu.Controls.Add(this.btnBaohanh);
@@ -270,29 +272,29 @@ namespace DoAnCShap
             this.panelSideMenu.Size = new System.Drawing.Size(229, 627);
             this.panelSideMenu.TabIndex = 0;
             // 
-            // btnSetting
+            // btnProfile
             // 
-            this.btnSetting.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
-            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 592);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(212, 46);
-            this.btnSetting.TabIndex = 18;
-            this.btnSetting.Text = " Setting";
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click_1);
+            this.btnProfile.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnProfile.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnProfile.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnProfile.ForeColor = System.Drawing.Color.White;
+            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(0, 592);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnProfile.Size = new System.Drawing.Size(212, 46);
+            this.btnProfile.TabIndex = 18;
+            this.btnProfile.Text = "Thông Tin Cá Nhân";
+            this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnPhanQuyen
             // 
@@ -424,7 +426,7 @@ namespace DoAnCShap
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 638);
+            this.btnExit.Location = new System.Drawing.Point(0, 684);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(212, 45);
@@ -521,7 +523,7 @@ namespace DoAnCShap
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoaDon.Location = new System.Drawing.Point(0, 182);
             this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5);
+            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnHoaDon.Size = new System.Drawing.Size(212, 45);
             this.btnHoaDon.TabIndex = 2;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
@@ -545,7 +547,7 @@ namespace DoAnCShap
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhachHang.Location = new System.Drawing.Point(0, 137);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5);
+            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnKhachHang.Size = new System.Drawing.Size(212, 45);
             this.btnKhachHang.TabIndex = 2;
             this.btnKhachHang.Text = "Quản Lý Khách Hàng";
@@ -570,7 +572,7 @@ namespace DoAnCShap
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanVien.Location = new System.Drawing.Point(0, 92);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5);
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhanVien.Size = new System.Drawing.Size(212, 45);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Quản Lý Nhân Viên";
@@ -599,6 +601,28 @@ namespace DoAnCShap
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::DoAnCShap.Properties.Settings.Default, "ChangeFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.Location = new System.Drawing.Point(0, 638);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(212, 46);
+            this.btnSetting.TabIndex = 1;
+            this.btnSetting.Text = "Setting";
+            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click_1);
             // 
             // Form1
             // 
@@ -645,7 +669,7 @@ namespace DoAnCShap
         public System.Windows.Forms.Button btnPhieuNhap;
         public System.Windows.Forms.Button btnNhaCungCap;
         public System.Windows.Forms.Button btnBanHang;
-        public System.Windows.Forms.Button btnSetting;
+        public System.Windows.Forms.Button btnProfile;
         public System.Windows.Forms.Button btnPhanQuyen;
         public System.Windows.Forms.Button btnThongKe;
         public System.Windows.Forms.Button btnBaohanh;
@@ -659,6 +683,7 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSetting;
     }
 }
 

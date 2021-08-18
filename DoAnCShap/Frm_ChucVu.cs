@@ -32,7 +32,6 @@ namespace DoAnCShap
             btnThem.Enabled = b1;
             btnHuy.Enabled = b2;
             btnLuu.Enabled = b2;
-            btnXoa.Enabled = b2;
         }
         public void XuLyTextBox(Boolean b1, Boolean b2)
         {
@@ -144,7 +143,7 @@ namespace DoAnCShap
             XuLyTextBox(true, false);
             if (txtMaCV.Text == "CV01")
             {
-                btnXoa.Enabled = false;
+
                 btnLuu.Enabled = false;
             }
             else
@@ -174,7 +173,6 @@ namespace DoAnCShap
                 checkBoxSetting.Checked = Convert.ToBoolean(row.Cells[13].Value.ToString());
                 if (txtMaCV.Text == "CV01")
                 {
-                    btnXoa.Enabled = false;
                     btnLuu.Enabled = false;
                 }
                 else
