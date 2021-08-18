@@ -293,6 +293,12 @@ namespace DoAnCShap
                 errorMes.SetError(txtTongThanhT, "? Tổng Thanh Toán");
                 return;
             }
+            if (txtMaKH.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtMaKH, "? Mã Khách Hàng");
+                return;
+            }
             if (flag == 1)
             {
                 hdbh.MaHDBH = txtMaHD.Text;
@@ -672,6 +678,11 @@ namespace DoAnCShap
                 }
                 TongTienSP();
             }
+        }
+
+        private void txtMaKH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 

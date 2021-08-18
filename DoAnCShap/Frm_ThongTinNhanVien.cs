@@ -55,6 +55,30 @@ namespace DoAnCShap
                 {
                     radioButNu.Checked = true;
                 }
+                string[] b = row.Cells["HinhAnh"].Value.ToString().Split(';');
+                try
+                {
+                    int n;
+                    if (b.Length == 1)
+                        n = b.Length;
+                    else
+                        n = b.Length - 1;
+                    for (int i = 0; i < n; i++)
+                    {
+                        PictureBox p = new PictureBox();
+                        Size s = new Size(172, 172);
+                        p.Size = s;
+                        p.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictureBox1.Controls.Add(p);
+                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        p.Image = a;
+                        //TenHinh = b[i];
+                    }
+                }
+                catch
+                {
+
+                }
                 txtUserName.Text = row.Cells["UserName"].Value.ToString();
                 MatKhau = row.Cells["PassWord"].Value.ToString();
                 //...
@@ -66,32 +90,19 @@ namespace DoAnCShap
             this.Close();
         }
 
-        private void btnChonAnh_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Controls.Clear();
-            OpenFileDialog opFile = new OpenFileDialog();
-            opFile.Title = "Select a Image";
-            opFile.Filter = "Files|*.jpg;*.jpeg;*.png;....";
-            if (opFile.ShowDialog() == DialogResult.OK)
-            {
-                TenHinh = opFile.FileName;
-                pictureBox1.Image = new Bitmap(opFile.FileName);
-                pictureBox1.ImageLocation = opFile.FileName;
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-        }
 
-        public void LuuAnh()
-        {
-            try
-            {
-                File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ảnh đã tồn tại !");
-            }
-        }
+
+        //public void LuuAnh()
+        //{
+        //    try
+        //    {
+        //        File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Ảnh đã tồn tại !");
+        //    }
+        //}
         public static string CreateMd5(string input)
         {
             MD5 md5 = System.Security.Cryptography.MD5.Create();
@@ -146,6 +157,14 @@ namespace DoAnCShap
             MessageBox.Show("Thành Công", "Thông Báo");
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void txtChucVu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
