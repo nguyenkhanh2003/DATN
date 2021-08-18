@@ -55,51 +55,47 @@ namespace DoAnCShap
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnIn = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnThemSP = new System.Windows.Forms.Button();
+            this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboKhachHang = new MetroFramework.Controls.MetroComboBox();
+            this.comboBoxNV = new MetroFramework.Controls.MetroComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.dateTimePickerNgaLap = new System.Windows.Forms.DateTimePicker();
             this.txtMaPhieu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxlK = new MetroFramework.Controls.MetroComboBox();
             this.dateTimePickerNgayLayHang = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnThemSP = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBoxlK = new MetroFramework.Controls.MetroComboBox();
-            this.comboBoxNV = new MetroFramework.Controls.MetroComboBox();
-            this.cboKhachHang = new MetroFramework.Controls.MetroComboBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTPBH)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1062, 6);
+            this.btnClose.Location = new System.Drawing.Point(1120, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(91, 39);
+            this.btnClose.Size = new System.Drawing.Size(60, 35);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Đóng";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -109,9 +105,9 @@ namespace DoAnCShap
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(34, 119);
+            this.btnHuy.Location = new System.Drawing.Point(1050, 6);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(79, 39);
+            this.btnHuy.Size = new System.Drawing.Size(90, 39);
             this.btnHuy.TabIndex = 0;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,7 +118,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(259, 6);
+            this.btnLuu.Location = new System.Drawing.Point(296, 6);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -135,7 +131,7 @@ namespace DoAnCShap
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(508, 6);
+            this.btnXoa.Location = new System.Drawing.Point(536, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 39);
             this.btnXoa.TabIndex = 0;
@@ -161,6 +157,7 @@ namespace DoAnCShap
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -340,7 +337,7 @@ namespace DoAnCShap
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnIn);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
@@ -354,7 +351,7 @@ namespace DoAnCShap
             // 
             this.btnIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(764, 6);
+            this.btnIn.Location = new System.Drawing.Point(800, 6);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(91, 39);
             this.btnIn.TabIndex = 0;
@@ -363,74 +360,102 @@ namespace DoAnCShap
             this.btnIn.UseVisualStyleBackColor = true;
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
-            // panel3
+            // btnThemSP
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.cboKhachHang);
-            this.panel3.Controls.Add(this.comboBoxNV);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.dateTimePickerNgaLap);
-            this.panel3.Controls.Add(this.txtMaPhieu);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(12, 51);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 252);
-            this.panel3.TabIndex = 12;
+            this.btnThemSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemSP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
+            this.btnThemSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemSP.Location = new System.Drawing.Point(542, 56);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(90, 38);
+            this.btnThemSP.TabIndex = 4;
+            this.btnThemSP.Text = "Thêm";
+            this.btnThemSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemSP.UseVisualStyleBackColor = true;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemPhieu_Click);
+            // 
+            // errorMes
+            // 
+            this.errorMes.ContainerControl = this;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cboKhachHang);
+            this.groupBox1.Controls.Add(this.comboBoxNV);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.dateTimePickerNgaLap);
+            this.groupBox1.Controls.Add(this.txtMaPhieu);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 50);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(503, 186);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông Tin Chung";
+            // 
+            // cboKhachHang
+            // 
+            this.cboKhachHang.FormattingEnabled = true;
+            this.cboKhachHang.ItemHeight = 23;
+            this.cboKhachHang.Location = new System.Drawing.Point(6, 125);
+            this.cboKhachHang.Name = "cboKhachHang";
+            this.cboKhachHang.Size = new System.Drawing.Size(227, 29);
+            this.cboKhachHang.TabIndex = 27;
+            this.cboKhachHang.UseSelectable = true;
+            // 
+            // comboBoxNV
+            // 
+            this.comboBoxNV.FormattingEnabled = true;
+            this.comboBoxNV.ItemHeight = 23;
+            this.comboBoxNV.Location = new System.Drawing.Point(245, 57);
+            this.comboBoxNV.Name = "comboBoxNV";
+            this.comboBoxNV.Size = new System.Drawing.Size(227, 29);
+            this.comboBoxNV.TabIndex = 26;
+            this.comboBoxNV.UseSelectable = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 145);
+            this.label4.Location = new System.Drawing.Point(6, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 21);
-            this.label4.TabIndex = 16;
+            this.label4.TabIndex = 25;
             this.label4.Text = "Khách Hàng";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.Teal;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(497, 26);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Thông Tin Bảo Hành";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateTimePickerNgaLap
             // 
             this.dateTimePickerNgaLap.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNgaLap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgaLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgaLap.Location = new System.Drawing.Point(170, 196);
+            this.dateTimePickerNgaLap.Location = new System.Drawing.Point(245, 125);
             this.dateTimePickerNgaLap.Name = "dateTimePickerNgaLap";
             this.dateTimePickerNgaLap.Size = new System.Drawing.Size(227, 29);
-            this.dateTimePickerNgaLap.TabIndex = 12;
+            this.dateTimePickerNgaLap.TabIndex = 24;
             // 
             // txtMaPhieu
             // 
             this.txtMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPhieu.Location = new System.Drawing.Point(170, 42);
+            this.txtMaPhieu.Location = new System.Drawing.Point(6, 57);
             this.txtMaPhieu.Multiline = true;
             this.txtMaPhieu.Name = "txtMaPhieu";
             this.txtMaPhieu.Size = new System.Drawing.Size(227, 29);
-            this.txtMaPhieu.TabIndex = 10;
+            this.txtMaPhieu.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 202);
+            this.label3.Location = new System.Drawing.Point(241, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 21);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 20;
             this.label3.Text = "Ngày Lập";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -439,10 +464,10 @@ namespace DoAnCShap
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(64, 95);
+            this.label5.Location = new System.Drawing.Point(241, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 21);
-            this.label5.TabIndex = 7;
+            this.label5.TabIndex = 21;
             this.label5.Text = "Nhân Viên";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -451,98 +476,71 @@ namespace DoAnCShap
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 43);
+            this.label1.Location = new System.Drawing.Point(4, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
-            this.label1.TabIndex = 8;
+            this.label1.TabIndex = 22;
             this.label1.Text = "Mã Phiếu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.comboBoxlK);
+            this.groupBox4.Controls.Add(this.btnThemSP);
+            this.groupBox4.Controls.Add(this.dateTimePickerNgayLayHang);
+            this.groupBox4.Controls.Add(this.txtGhiChu);
+            this.groupBox4.Controls.Add(this.txtSL);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(521, 51);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(645, 185);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thông Tin Bảo Hành";
+            // 
+            // comboBoxlK
+            // 
+            this.comboBoxlK.FormattingEnabled = true;
+            this.comboBoxlK.ItemHeight = 23;
+            this.comboBoxlK.Location = new System.Drawing.Point(6, 56);
+            this.comboBoxlK.Name = "comboBoxlK";
+            this.comboBoxlK.Size = new System.Drawing.Size(257, 29);
+            this.comboBoxlK.TabIndex = 26;
+            this.comboBoxlK.UseSelectable = true;
             // 
             // dateTimePickerNgayLayHang
             // 
             this.dateTimePickerNgayLayHang.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNgayLayHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayLayHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayLayHang.Location = new System.Drawing.Point(168, 200);
+            this.dateTimePickerNgayLayHang.Location = new System.Drawing.Point(292, 128);
             this.dateTimePickerNgayLayHang.Name = "dateTimePickerNgayLayHang";
-            this.dateTimePickerNgayLayHang.Size = new System.Drawing.Size(257, 29);
-            this.dateTimePickerNgayLayHang.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 204);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 21);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Ngày Lấy Hàng";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
-            this.btnThemSP.Location = new System.Drawing.Point(34, 32);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(79, 38);
-            this.btnThemSP.TabIndex = 4;
-            this.btnThemSP.Text = "Thêm";
-            this.btnThemSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemSP.UseVisualStyleBackColor = true;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemPhieu_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.comboBoxlK);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.dateTimePickerNgayLayHang);
-            this.panel4.Controls.Add(this.txtGhiChu);
-            this.panel4.Controls.Add(this.txtSL);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(521, 49);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(513, 252);
-            this.panel4.TabIndex = 13;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Teal;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(511, 26);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Chi Tiết Bảo Hành";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dateTimePickerNgayLayHang.Size = new System.Drawing.Size(193, 29);
+            this.dateTimePickerNgayLayHang.TabIndex = 20;
             // 
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(168, 145);
+            this.txtGhiChu.Location = new System.Drawing.Point(6, 128);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(257, 29);
-            this.txtGhiChu.TabIndex = 15;
+            this.txtGhiChu.TabIndex = 24;
             // 
             // txtSL
             // 
             this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.Location = new System.Drawing.Point(168, 95);
+            this.txtSL.Location = new System.Drawing.Point(292, 57);
             this.txtSL.Multiline = true;
             this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(257, 29);
-            this.txtSL.TabIndex = 16;
+            this.txtSL.Size = new System.Drawing.Size(193, 29);
+            this.txtSL.TabIndex = 25;
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -550,10 +548,10 @@ namespace DoAnCShap
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 151);
+            this.label8.Location = new System.Drawing.Point(6, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
-            this.label8.TabIndex = 12;
+            this.label8.TabIndex = 21;
             this.label8.Text = "Ghi Chú";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -562,69 +560,36 @@ namespace DoAnCShap
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 98);
+            this.label7.Location = new System.Drawing.Point(288, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 21);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 22;
             this.label7.Text = "Số Lượng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(288, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 21);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Ngày Lấy Hàng";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 45);
+            this.label6.Location = new System.Drawing.Point(6, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 21);
-            this.label6.TabIndex = 14;
+            this.label6.TabIndex = 23;
             this.label6.Text = "Tên linh Kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // errorMes
-            // 
-            this.errorMes.ContainerControl = this;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnThemSP);
-            this.panel5.Controls.Add(this.btnHuy);
-            this.panel5.Location = new System.Drawing.Point(1040, 51);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(132, 250);
-            this.panel5.TabIndex = 14;
-            // 
-            // comboBoxlK
-            // 
-            this.comboBoxlK.FormattingEnabled = true;
-            this.comboBoxlK.ItemHeight = 23;
-            this.comboBoxlK.Location = new System.Drawing.Point(168, 44);
-            this.comboBoxlK.Name = "comboBoxlK";
-            this.comboBoxlK.Size = new System.Drawing.Size(257, 29);
-            this.comboBoxlK.TabIndex = 18;
-            this.comboBoxlK.UseSelectable = true;
-            // 
-            // comboBoxNV
-            // 
-            this.comboBoxNV.FormattingEnabled = true;
-            this.comboBoxNV.ItemHeight = 23;
-            this.comboBoxNV.Location = new System.Drawing.Point(170, 93);
-            this.comboBoxNV.Name = "comboBoxNV";
-            this.comboBoxNV.Size = new System.Drawing.Size(227, 29);
-            this.comboBoxNV.TabIndex = 18;
-            this.comboBoxNV.UseSelectable = true;
-            // 
-            // cboKhachHang
-            // 
-            this.cboKhachHang.FormattingEnabled = true;
-            this.cboKhachHang.ItemHeight = 23;
-            this.cboKhachHang.Location = new System.Drawing.Point(170, 143);
-            this.cboKhachHang.Name = "cboKhachHang";
-            this.cboKhachHang.Size = new System.Drawing.Size(227, 29);
-            this.cboKhachHang.TabIndex = 19;
-            this.cboKhachHang.UseSelectable = true;
             // 
             // Frm_BaoHanh
             // 
@@ -632,9 +597,8 @@ namespace DoAnCShap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 711);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -649,12 +613,11 @@ namespace DoAnCShap
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTPBH)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
-            this.panel5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -673,29 +636,12 @@ namespace DoAnCShap
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridViewCTPBH;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgayLayHang;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgaLap;
-        private System.Windows.Forms.TextBox txtMaPhieu;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThemSP;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtGhiChu;
-        private System.Windows.Forms.TextBox txtSL;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.ErrorProvider errorMes;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
@@ -703,9 +649,23 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLayHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.GroupBox groupBox4;
         private MetroFramework.Controls.MetroComboBox comboBoxlK;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayLayHang;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtSL;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroComboBox cboKhachHang;
         private MetroFramework.Controls.MetroComboBox comboBoxNV;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgaLap;
+        private System.Windows.Forms.TextBox txtMaPhieu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
     }
 }

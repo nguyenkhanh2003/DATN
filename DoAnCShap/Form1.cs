@@ -71,20 +71,43 @@ namespace DoAnCShap
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_NhanVien());
-            lbl_HienThiForm.Text = "Quản Lý Nhân Viên";
+            if (PhanQuyen(15))
+            {
+                openChildForm(new Frm_NhanVien());
+                lbl_HienThiForm.Text = "Quản Lý Nhân Viên";
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_KH());
-            lbl_HienThiForm.Text = "Quản Lý Khách Hàng";
+            if (PhanQuyen(16))
+            {
+                openChildForm(new Frm_KH());
+                lbl_HienThiForm.Text = "Quản Lý Khách Hàng";
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnLinhKien_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_SanPham());
-            lbl_HienThiForm.Text = "Quản Lý Linh Kiện";
+            if (PhanQuyen(17))
+            {
+                openChildForm(new Frm_SanPham());
+                lbl_HienThiForm.Text = "Quản Lý Linh Kiện";
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
@@ -95,9 +118,15 @@ namespace DoAnCShap
 
         private void btnPhieuNhap_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Frm_DanhSachNhapPhieu());
-            openChildForm(new Frm_HoaDonNhap());
-            lbl_HienThiForm.Text = "Nhập Hàng";
+            if (PhanQuyen(21))
+            {
+                openChildForm(new Frm_HoaDonNhap());
+                lbl_HienThiForm.Text = "Nhập Hàng";
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void pictureBoxLogin_Click(object sender, EventArgs e)
@@ -112,9 +141,15 @@ namespace DoAnCShap
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Frm_DanhSachHoaDon());
-            openChildForm(new Frm_HoaDonBanHang());
-            lbl_HienThiForm.Text = "Quản Lý Hóa Đơn Bán";
+            if (PhanQuyen(25))
+            {
+                openChildForm(new Frm_HoaDonBanHang());
+                lbl_HienThiForm.Text = "Quản Lý Hóa Đơn Bán";
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
@@ -174,18 +209,18 @@ namespace DoAnCShap
             //Login frmDN = new Login();
             //frmDN.ShowDialog();
             //if (Login.IsClose) this.Close();
-            if (PhanQuyen(15)) btnNhanVien.Enabled = true; else btnNhanVien.Visible = false;
-            if (PhanQuyen(16)) btnKhachHang.Enabled = true; else btnKhachHang.Visible = false;
-            if (PhanQuyen(17)) btnLinhKien.Enabled = true; else btnLinhKien.Visible = false;
-            if (PhanQuyen(18)) btnBanHang.Enabled = true; else btnBanHang.Visible = false;
-            if (PhanQuyen(19)) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Visible = false;
-            if (PhanQuyen(20)) btnLoaiLK.Enabled = true; else btnLoaiLK.Visible = false;
-            if (PhanQuyen(21)) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Visible = false;
-            if (PhanQuyen(22)) btnBaohanh.Enabled = true; else btnBaohanh.Visible = false;
-            if (PhanQuyen(23)) btnPhanQuyen.Enabled = true; else btnPhanQuyen.Visible = false;
-            if (PhanQuyen(24)) btnThongKe.Enabled = true; else btnThongKe.Visible = false;
-            if (PhanQuyen(25)) btnHoaDon.Enabled = true; else btnHoaDon.Visible = false;
-            if (PhanQuyen(26)) btnSetting.Enabled = true; else btnSetting.Visible = false;
+            //if (PhanQuyen(15)) btnNhanVien.Enabled = true; else btnNhanVien.Visible = false;
+            //if (PhanQuyen(16)) btnKhachHang.Enabled = true; else btnKhachHang.Visible = false;
+            //if (PhanQuyen(17)) btnLinhKien.Enabled = true; else btnLinhKien.Visible = false;
+            //if (PhanQuyen(18)) btnBanHang.Enabled = true; else btnBanHang.Visible = false;
+            //if (PhanQuyen(19)) btnNhaCungCap.Enabled = true; else btnNhaCungCap.Visible = false;
+            //if (PhanQuyen(20)) btnLoaiLK.Enabled = true; else btnLoaiLK.Visible = false;
+            //if (PhanQuyen(21)) btnPhieuNhap.Enabled = true; else btnPhieuNhap.Visible = false;
+            //if (PhanQuyen(22)) btnBaohanh.Enabled = true; else btnBaohanh.Visible = false;
+            //if (PhanQuyen(23)) btnPhanQuyen.Enabled = true; else btnPhanQuyen.Visible = false;
+            //if (PhanQuyen(24)) btnThongKe.Enabled = true; else btnThongKe.Visible = false;
+            //if (PhanQuyen(25)) btnHoaDon.Enabled = true; else btnHoaDon.Visible = false;
+            //if (PhanQuyen(26)) btnSetting.Enabled = true; else btnSetting.Visible = false;
             labelHienThiTenDangNhap.Text = Login.TenTaiKhoan;
         }
 
@@ -196,8 +231,15 @@ namespace DoAnCShap
 
         private void btn_HoaDonBan_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_HoaDonBanHang());
-            lbl_HienThiForm.Text = "Hóa Đơn Bán Hàng";
+            if (PhanQuyen(25))
+            {
+                openChildForm(new Frm_HoaDonBanHang());
+                lbl_HienThiForm.Text = "Hóa Đơn Bán Hàng";
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void iconBtn_TaiKhoan_Click(object sender, EventArgs e)
@@ -220,8 +262,6 @@ namespace DoAnCShap
             if (panelSideMenu.Width == 60)
             {
                 panelSideMenu.Width = 229;
-                //panelTop.Width = 939;
-                //this.Width = 1116;
                 btnNhanVien.Text = "Quản Lý Nhân Viên";
                 btnKhachHang.Text = "Quản Lý Khách Hàng";
 
@@ -229,8 +269,6 @@ namespace DoAnCShap
             else
             {
                 panelSideMenu.Width = 60;
-                //panelTop.Width = 807;
-                //this.Width = 981;
                 btnNhanVien.Text = "";
                 btnKhachHang.Text = "";
             }
@@ -255,39 +293,80 @@ namespace DoAnCShap
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Nhà Cung Cấp";
-            openChildForm(new Frm_NhaCungCap());
+            if (PhanQuyen(19))
+            {
+                lbl_HienThiForm.Text = "Nhà Cung Cấp";
+                openChildForm(new Frm_NhaCungCap());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Bán Hàng";
-            //openChildForm(new Frm_BanHang());
-            openChildForm(new Frm_BanHan());
+            if (PhanQuyen(18))
+            {
+                lbl_HienThiForm.Text = "Bán Hàng";
+                openChildForm(new Frm_BanHan());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnBaohanh_Click_1(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Bảo Hành";
-            openChildForm(new Frm_BaoHanh());
+            if (PhanQuyen(22))
+            {
+                lbl_HienThiForm.Text = "Bảo Hành";
+                openChildForm(new Frm_BaoHanh());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnThongKe_Click_1(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Thống Kê";
-            openChildForm(new Frm_ThongKe());
+            if (PhanQuyen(24))
+            {
+                lbl_HienThiForm.Text = "Thống Kê";
+                openChildForm(new Frm_ThongKe());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnPhanQuyen_Click_1(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Phân Quyền Tài Khoản";
-            openChildForm(new Frm_ChucVu());
+            if (PhanQuyen(23))
+            {
+                lbl_HienThiForm.Text = "Phân Quyền Tài Khoản";
+                openChildForm(new Frm_ChucVu());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnLoaiLK_Click(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Loại Linh Kiện";
-            openChildForm(new Frm_LLinhKien());
+            if (PhanQuyen(20))
+            {
+                lbl_HienThiForm.Text = "Loại Linh Kiện";
+                openChildForm(new Frm_LLinhKien());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnNhaSanXuat_Click(object sender, EventArgs e)
@@ -306,8 +385,15 @@ namespace DoAnCShap
 
         private void btnSetting_Click_1(object sender, EventArgs e)
         {
-            lbl_HienThiForm.Text = "Setting";
-            openChildForm(new Frm_Setting());
+            if (PhanQuyen(26))
+            {
+                lbl_HienThiForm.Text = "Setting";
+                openChildForm(new Frm_Setting());
+            }
+            else
+            {
+                MessageBox.Show("Bạn Không Có Quyền Truy Cập", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         public void UpdateFormColor()

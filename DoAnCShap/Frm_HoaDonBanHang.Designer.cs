@@ -313,6 +313,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -347,7 +348,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnXuatExel);
             this.panel2.Controls.Add(this.btnInHD);
-            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Location = new System.Drawing.Point(12, 314);
@@ -359,7 +359,7 @@
             // 
             this.btnXuatExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuatExel.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExel.Image")));
-            this.btnXuatExel.Location = new System.Drawing.Point(822, 9);
+            this.btnXuatExel.Location = new System.Drawing.Point(1020, 9);
             this.btnXuatExel.Name = "btnXuatExel";
             this.btnXuatExel.Size = new System.Drawing.Size(84, 38);
             this.btnXuatExel.TabIndex = 5;
@@ -372,7 +372,7 @@
             // 
             this.btnInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInHD.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.Image")));
-            this.btnInHD.Location = new System.Drawing.Point(563, 9);
+            this.btnInHD.Location = new System.Drawing.Point(722, 9);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(74, 38);
             this.btnInHD.TabIndex = 4;
@@ -385,13 +385,13 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1072, 9);
+            this.btnClose.Location = new System.Drawing.Point(1114, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(81, 38);
+            this.btnClose.Size = new System.Drawing.Size(60, 35);
             this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "Đóng";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -400,7 +400,7 @@
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(272, 9);
+            this.btnXoa.Location = new System.Drawing.Point(374, 9);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(77, 38);
             this.btnXoa.TabIndex = 0;

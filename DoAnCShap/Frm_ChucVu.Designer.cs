@@ -29,10 +29,10 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChucVu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewCV = new System.Windows.Forms.DataGridView();
@@ -67,28 +67,29 @@ namespace DoAnCShap
             this.label4 = new System.Windows.Forms.Label();
             this.checkBoxThongKe = new Bunifu.Framework.UI.BunifuCheckbox();
             this.checkBoxNCC = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxHoaDon = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxLoaiLLK = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxSetting = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxNhapKho = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxPhanQuyen = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkBoxLinhKien = new Bunifu.Framework.UI.BunifuCheckbox();
             this.checkBoxkH = new Bunifu.Framework.UI.BunifuCheckbox();
             this.checkBoxBaoHanh = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBoxBanHang = new Bunifu.Framework.UI.BunifuCheckbox();
             this.checkBoxNhanViem = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkBoxLinhKien = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.checkBoxLoaiLLK = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.checkBoxHoaDon = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.checkBoxPhanQuyen = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.checkBoxNhapKho = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBoxSetting = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,6 +99,7 @@ namespace DoAnCShap
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -107,19 +109,19 @@ namespace DoAnCShap
             // dataGridViewCV
             // 
             this.dataGridViewCV.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridViewCV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewCV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCV,
@@ -138,24 +140,24 @@ namespace DoAnCShap
             this.Setting,
             this.TrangThai});
             this.dataGridViewCV.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCV.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewCV.Location = new System.Drawing.Point(12, 341);
             this.dataGridViewCV.Name = "dataGridViewCV";
             this.dataGridViewCV.ReadOnly = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCV.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCV.RowHeadersVisible = false;
             this.dataGridViewCV.RowHeadersWidth = 51;
             this.dataGridViewCV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -293,7 +295,6 @@ namespace DoAnCShap
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.btnHuy);
             this.panel3.Controls.Add(this.btnThem);
             this.panel3.Controls.Add(this.btnLuu);
@@ -306,22 +307,23 @@ namespace DoAnCShap
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1050, 9);
+            this.btnClose.Location = new System.Drawing.Point(1118, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(91, 39);
+            this.btnClose.Size = new System.Drawing.Size(60, 35);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Đóng";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(749, 9);
+            this.btnHuy.Location = new System.Drawing.Point(1041, 9);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(91, 39);
             this.btnHuy.TabIndex = 0;
@@ -347,7 +349,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(523, 9);
+            this.btnLuu.Location = new System.Drawing.Point(731, 9);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -360,7 +362,7 @@ namespace DoAnCShap
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(272, 9);
+            this.btnXoa.Location = new System.Drawing.Point(396, 9);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 39);
             this.btnXoa.TabIndex = 0;
@@ -504,6 +506,97 @@ namespace DoAnCShap
             this.checkBoxNCC.Size = new System.Drawing.Size(20, 20);
             this.checkBoxNCC.TabIndex = 32;
             // 
+            // checkBoxHoaDon
+            // 
+            this.checkBoxHoaDon.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxHoaDon.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxHoaDon.Checked = false;
+            this.checkBoxHoaDon.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxHoaDon.ForeColor = System.Drawing.Color.White;
+            this.checkBoxHoaDon.Location = new System.Drawing.Point(476, 143);
+            this.checkBoxHoaDon.Margin = new System.Windows.Forms.Padding(72, 144, 72, 144);
+            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
+            this.checkBoxHoaDon.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxHoaDon.TabIndex = 32;
+            // 
+            // checkBoxLoaiLLK
+            // 
+            this.checkBoxLoaiLLK.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLoaiLLK.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLoaiLLK.Checked = false;
+            this.checkBoxLoaiLLK.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxLoaiLLK.ForeColor = System.Drawing.Color.White;
+            this.checkBoxLoaiLLK.Location = new System.Drawing.Point(476, 85);
+            this.checkBoxLoaiLLK.Margin = new System.Windows.Forms.Padding(48, 89, 48, 89);
+            this.checkBoxLoaiLLK.Name = "checkBoxLoaiLLK";
+            this.checkBoxLoaiLLK.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxLoaiLLK.TabIndex = 32;
+            // 
+            // bunifuCheckbox1
+            // 
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCheckbox1.Checked = false;
+            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox1.Location = new System.Drawing.Point(476, 83);
+            this.bunifuCheckbox1.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
+            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
+            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox1.TabIndex = 32;
+            // 
+            // checkBoxSetting
+            // 
+            this.checkBoxSetting.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxSetting.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxSetting.Checked = false;
+            this.checkBoxSetting.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxSetting.ForeColor = System.Drawing.Color.White;
+            this.checkBoxSetting.Location = new System.Drawing.Point(693, 142);
+            this.checkBoxSetting.Margin = new System.Windows.Forms.Padding(72, 144, 72, 144);
+            this.checkBoxSetting.Name = "checkBoxSetting";
+            this.checkBoxSetting.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxSetting.TabIndex = 32;
+            // 
+            // checkBoxNhapKho
+            // 
+            this.checkBoxNhapKho.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhapKho.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhapKho.Checked = false;
+            this.checkBoxNhapKho.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxNhapKho.ForeColor = System.Drawing.Color.White;
+            this.checkBoxNhapKho.Location = new System.Drawing.Point(693, 86);
+            this.checkBoxNhapKho.Margin = new System.Windows.Forms.Padding(48, 89, 48, 89);
+            this.checkBoxNhapKho.Name = "checkBoxNhapKho";
+            this.checkBoxNhapKho.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxNhapKho.TabIndex = 32;
+            // 
+            // checkBoxPhanQuyen
+            // 
+            this.checkBoxPhanQuyen.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxPhanQuyen.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxPhanQuyen.Checked = false;
+            this.checkBoxPhanQuyen.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxPhanQuyen.ForeColor = System.Drawing.Color.White;
+            this.checkBoxPhanQuyen.Location = new System.Drawing.Point(693, 30);
+            this.checkBoxPhanQuyen.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
+            this.checkBoxPhanQuyen.Name = "checkBoxPhanQuyen";
+            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxPhanQuyen.TabIndex = 32;
+            // 
+            // checkBoxLinhKien
+            // 
+            this.checkBoxLinhKien.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLinhKien.ChechedOffColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxLinhKien.Checked = false;
+            this.checkBoxLinhKien.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkBoxLinhKien.ForeColor = System.Drawing.Color.White;
+            this.checkBoxLinhKien.Location = new System.Drawing.Point(476, 30);
+            this.checkBoxLinhKien.Margin = new System.Windows.Forms.Padding(21, 34, 21, 34);
+            this.checkBoxLinhKien.Name = "checkBoxLinhKien";
+            this.checkBoxLinhKien.Size = new System.Drawing.Size(20, 20);
+            this.checkBoxLinhKien.TabIndex = 32;
+            // 
             // checkBoxkH
             // 
             this.checkBoxkH.BackColor = System.Drawing.Color.SeaGreen;
@@ -529,6 +622,87 @@ namespace DoAnCShap
             this.checkBoxBaoHanh.Name = "checkBoxBaoHanh";
             this.checkBoxBaoHanh.Size = new System.Drawing.Size(20, 20);
             this.checkBoxBaoHanh.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(268, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 21);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Thống Kê\r\n";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(268, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(172, 21);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Quản Lý Nhà Cung Cấp";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(507, 143);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 21);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Quản Lý Hóa Đơn Bán";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(507, 85);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(168, 21);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Quản Lý Loại Linh Kiện";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(507, 83);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(135, 21);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Quản Lý Linh Kiện";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(728, 142);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 21);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Setting";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(728, 85);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 21);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Nhập Hàng";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(728, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 21);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Phân Quyền";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(507, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 21);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Quản Lý Linh Kiện";
             // 
             // label6
             // 
@@ -574,178 +748,6 @@ namespace DoAnCShap
             this.checkBoxNhanViem.Size = new System.Drawing.Size(20, 20);
             this.checkBoxNhanViem.TabIndex = 32;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(268, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 21);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Quản Lý Nhà Cung Cấp";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(268, 142);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 21);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Thống Kê\r\n";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(507, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 21);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Quản Lý Linh Kiện";
-            // 
-            // checkBoxLinhKien
-            // 
-            this.checkBoxLinhKien.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxLinhKien.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxLinhKien.Checked = false;
-            this.checkBoxLinhKien.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.checkBoxLinhKien.ForeColor = System.Drawing.Color.White;
-            this.checkBoxLinhKien.Location = new System.Drawing.Point(476, 30);
-            this.checkBoxLinhKien.Margin = new System.Windows.Forms.Padding(21, 34, 21, 34);
-            this.checkBoxLinhKien.Name = "checkBoxLinhKien";
-            this.checkBoxLinhKien.Size = new System.Drawing.Size(20, 20);
-            this.checkBoxLinhKien.TabIndex = 32;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(507, 83);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 21);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Quản Lý Linh Kiện";
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCheckbox1.Checked = false;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(476, 83);
-            this.bunifuCheckbox1.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 32;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(507, 85);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(168, 21);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Quản Lý Loại Linh Kiện";
-            // 
-            // checkBoxLoaiLLK
-            // 
-            this.checkBoxLoaiLLK.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxLoaiLLK.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxLoaiLLK.Checked = false;
-            this.checkBoxLoaiLLK.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.checkBoxLoaiLLK.ForeColor = System.Drawing.Color.White;
-            this.checkBoxLoaiLLK.Location = new System.Drawing.Point(476, 85);
-            this.checkBoxLoaiLLK.Margin = new System.Windows.Forms.Padding(48, 89, 48, 89);
-            this.checkBoxLoaiLLK.Name = "checkBoxLoaiLLK";
-            this.checkBoxLoaiLLK.Size = new System.Drawing.Size(20, 20);
-            this.checkBoxLoaiLLK.TabIndex = 32;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(507, 143);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(163, 21);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Quản Lý Hóa Đơn Bán";
-            // 
-            // checkBoxHoaDon
-            // 
-            this.checkBoxHoaDon.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxHoaDon.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxHoaDon.Checked = false;
-            this.checkBoxHoaDon.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.checkBoxHoaDon.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHoaDon.Location = new System.Drawing.Point(476, 143);
-            this.checkBoxHoaDon.Margin = new System.Windows.Forms.Padding(72, 144, 72, 144);
-            this.checkBoxHoaDon.Name = "checkBoxHoaDon";
-            this.checkBoxHoaDon.Size = new System.Drawing.Size(20, 20);
-            this.checkBoxHoaDon.TabIndex = 32;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(728, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 21);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "Phân Quyền";
-            // 
-            // checkBoxPhanQuyen
-            // 
-            this.checkBoxPhanQuyen.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxPhanQuyen.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxPhanQuyen.Checked = false;
-            this.checkBoxPhanQuyen.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.checkBoxPhanQuyen.ForeColor = System.Drawing.Color.White;
-            this.checkBoxPhanQuyen.Location = new System.Drawing.Point(693, 30);
-            this.checkBoxPhanQuyen.Margin = new System.Windows.Forms.Padding(32, 55, 32, 55);
-            this.checkBoxPhanQuyen.Name = "checkBoxPhanQuyen";
-            this.checkBoxPhanQuyen.Size = new System.Drawing.Size(20, 20);
-            this.checkBoxPhanQuyen.TabIndex = 32;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(728, 85);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 21);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Nhập Hàng";
-            // 
-            // checkBoxNhapKho
-            // 
-            this.checkBoxNhapKho.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxNhapKho.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxNhapKho.Checked = false;
-            this.checkBoxNhapKho.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.checkBoxNhapKho.ForeColor = System.Drawing.Color.White;
-            this.checkBoxNhapKho.Location = new System.Drawing.Point(693, 86);
-            this.checkBoxNhapKho.Margin = new System.Windows.Forms.Padding(48, 89, 48, 89);
-            this.checkBoxNhapKho.Name = "checkBoxNhapKho";
-            this.checkBoxNhapKho.Size = new System.Drawing.Size(20, 20);
-            this.checkBoxNhapKho.TabIndex = 32;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(728, 142);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 21);
-            this.label15.TabIndex = 33;
-            this.label15.Text = "Setting";
-            // 
-            // checkBoxSetting
-            // 
-            this.checkBoxSetting.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxSetting.ChechedOffColor = System.Drawing.Color.SeaGreen;
-            this.checkBoxSetting.Checked = false;
-            this.checkBoxSetting.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.checkBoxSetting.ForeColor = System.Drawing.Color.White;
-            this.checkBoxSetting.Location = new System.Drawing.Point(693, 142);
-            this.checkBoxSetting.Margin = new System.Windows.Forms.Padding(72, 144, 72, 144);
-            this.checkBoxSetting.Name = "checkBoxSetting";
-            this.checkBoxSetting.Size = new System.Drawing.Size(20, 20);
-            this.checkBoxSetting.TabIndex = 32;
-            // 
             // Frm_ChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -760,6 +762,7 @@ namespace DoAnCShap
             this.Name = "Frm_ChucVu";
             this.Text = "Frm_PhanQuyen";
             this.Load += new System.EventHandler(this.Frm_ChucVu_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
