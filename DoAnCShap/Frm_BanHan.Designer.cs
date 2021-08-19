@@ -56,12 +56,17 @@ namespace DoAnCShap
             this.SoLuongNguyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnThenKH = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnThenKH = new System.Windows.Forms.Button();
             this.btnTimKH = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxNV = new MetroFramework.Controls.MetroComboBox();
+            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.panelGioiTinh = new System.Windows.Forms.Panel();
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
@@ -70,11 +75,6 @@ namespace DoAnCShap
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenkH = new System.Windows.Forms.TextBox();
-            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
@@ -342,21 +342,6 @@ namespace DoAnCShap
             this.panel2.Size = new System.Drawing.Size(760, 57);
             this.panel2.TabIndex = 16;
             // 
-            // btnThenKH
-            // 
-            this.btnThenKH.BackColor = System.Drawing.Color.White;
-            this.btnThenKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThenKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThenKH.Image")));
-            this.btnThenKH.Location = new System.Drawing.Point(281, 6);
-            this.btnThenKH.Name = "btnThenKH";
-            this.btnThenKH.Size = new System.Drawing.Size(153, 40);
-            this.btnThenKH.TabIndex = 34;
-            this.btnThenKH.Text = "Thêm Khách Mới";
-            this.btnThenKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThenKH.UseVisualStyleBackColor = false;
-            this.btnThenKH.Click += new System.EventHandler(this.btnThenKH_Click);
-            // 
             // btnHuy
             // 
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -372,6 +357,21 @@ namespace DoAnCShap
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnThenKH
+            // 
+            this.btnThenKH.BackColor = System.Drawing.Color.White;
+            this.btnThenKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThenKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThenKH.Image")));
+            this.btnThenKH.Location = new System.Drawing.Point(281, 6);
+            this.btnThenKH.Name = "btnThenKH";
+            this.btnThenKH.Size = new System.Drawing.Size(153, 40);
+            this.btnThenKH.TabIndex = 34;
+            this.btnThenKH.Text = "Thêm Khách Mới";
+            this.btnThenKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThenKH.UseVisualStyleBackColor = false;
+            this.btnThenKH.Click += new System.EventHandler(this.btnThenKH_Click);
             // 
             // btnTimKH
             // 
@@ -417,97 +417,6 @@ namespace DoAnCShap
             this.comboBoxNV.Size = new System.Drawing.Size(186, 29);
             this.comboBoxNV.TabIndex = 54;
             this.comboBoxNV.UseSelectable = true;
-            // 
-            // panelGioiTinh
-            // 
-            this.panelGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelGioiTinh.Controls.Add(this.radioButtonNu);
-            this.panelGioiTinh.Controls.Add(this.radioButtonNam);
-            this.panelGioiTinh.Location = new System.Drawing.Point(15, 117);
-            this.panelGioiTinh.Name = "panelGioiTinh";
-            this.panelGioiTinh.Size = new System.Drawing.Size(177, 29);
-            this.panelGioiTinh.TabIndex = 53;
-            // 
-            // radioButtonNu
-            // 
-            this.radioButtonNu.AutoSize = true;
-            this.radioButtonNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNu.Location = new System.Drawing.Point(122, 3);
-            this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
-            this.radioButtonNu.TabIndex = 36;
-            this.radioButtonNu.TabStop = true;
-            this.radioButtonNu.Text = "Nữ";
-            this.radioButtonNu.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNam
-            // 
-            this.radioButtonNam.AutoSize = true;
-            this.radioButtonNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNam.Location = new System.Drawing.Point(13, 3);
-            this.radioButtonNam.Name = "radioButtonNam";
-            this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
-            this.radioButtonNam.TabIndex = 35;
-            this.radioButtonNam.TabStop = true;
-            this.radioButtonNam.Text = "Nam";
-            this.radioButtonNam.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(11, 93);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(73, 21);
-            this.label16.TabIndex = 44;
-            this.label16.Text = "Giới Tính";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(330, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 21);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Địa Chỉ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(497, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 21);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Tên Khách Hàng";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDiaChi.BackColor = System.Drawing.Color.White;
-            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(334, 117);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(412, 29);
-            this.txtDiaChi.TabIndex = 49;
-            // 
-            // txtTenkH
-            // 
-            this.txtTenkH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTenkH.BackColor = System.Drawing.Color.White;
-            this.txtTenkH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenkH.Location = new System.Drawing.Point(501, 59);
-            this.txtTenkH.Multiline = true;
-            this.txtTenkH.Name = "txtTenkH";
-            this.txtTenkH.Size = new System.Drawing.Size(245, 29);
-            this.txtTenkH.TabIndex = 50;
             // 
             // dateTimePickerNgayLap
             // 
@@ -561,6 +470,97 @@ namespace DoAnCShap
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(186, 29);
             this.txtMaHD.TabIndex = 41;
+            // 
+            // panelGioiTinh
+            // 
+            this.panelGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelGioiTinh.Controls.Add(this.radioButtonNu);
+            this.panelGioiTinh.Controls.Add(this.radioButtonNam);
+            this.panelGioiTinh.Location = new System.Drawing.Point(15, 117);
+            this.panelGioiTinh.Name = "panelGioiTinh";
+            this.panelGioiTinh.Size = new System.Drawing.Size(177, 29);
+            this.panelGioiTinh.TabIndex = 53;
+            // 
+            // radioButtonNu
+            // 
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNu.Location = new System.Drawing.Point(122, 3);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(43, 20);
+            this.radioButtonNu.TabIndex = 36;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNam
+            // 
+            this.radioButtonNam.AutoSize = true;
+            this.radioButtonNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNam.Location = new System.Drawing.Point(13, 3);
+            this.radioButtonNam.Name = "radioButtonNam";
+            this.radioButtonNam.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonNam.TabIndex = 35;
+            this.radioButtonNam.TabStop = true;
+            this.radioButtonNam.Text = "Nam";
+            this.radioButtonNam.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(11, 93);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(73, 21);
+            this.label16.TabIndex = 44;
+            this.label16.Text = "Giới Tính";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(306, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 21);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Địa Chỉ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(497, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 21);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Tên Khách Hàng";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiaChi.BackColor = System.Drawing.Color.White;
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(310, 117);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(436, 29);
+            this.txtDiaChi.TabIndex = 49;
+            // 
+            // txtTenkH
+            // 
+            this.txtTenkH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenkH.BackColor = System.Drawing.Color.White;
+            this.txtTenkH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenkH.Location = new System.Drawing.Point(501, 59);
+            this.txtTenkH.Multiline = true;
+            this.txtTenkH.Name = "txtTenkH";
+            this.txtTenkH.Size = new System.Drawing.Size(245, 29);
+            this.txtTenkH.TabIndex = 50;
             // 
             // label1
             // 
