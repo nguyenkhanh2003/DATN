@@ -482,6 +482,7 @@ namespace DoAnCShap
             if (KQ == DialogResult.OK)
             {
                 XuLyChucNang(true, false, false, false, false);
+                XuLyTextBox(false);
                 ClearTexBox();
             }
             else
@@ -619,6 +620,11 @@ namespace DoAnCShap
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtMaHDN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

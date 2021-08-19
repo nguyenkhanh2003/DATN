@@ -40,7 +40,7 @@ namespace DoAnCShap
 
         public void XuLyTexBox(Boolean b1)
         {
-            txtMaPhieu.ReadOnly = true;
+            txtMaPhieu.Enabled = b1;
             comboBoxNV.Enabled = b1;
             cboKhachHang.Enabled = b1;
             dateTimePickerNgaLap.Enabled = b1;
@@ -452,6 +452,11 @@ namespace DoAnCShap
         {
             string condition = txtSearch.Text;
             HienThiTimKiem(condition);
+        }
+
+        private void txtMaPhieu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -300,7 +300,7 @@ namespace DoAnCShap
 
                     else
                     {
-                        LuuAnh();
+
                         MaHoa();
                         nv.MaNV = txtMaNV.Text;
                         nv.MaCV = cboChucVu.SelectedValue.ToString();
@@ -332,6 +332,7 @@ namespace DoAnCShap
                         else
                         {
                             nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                            LuuAnh();
                         }
                         nv.UserName = txtUserName.Text;
                         nv.PassWord = txtPassWord.Text;
