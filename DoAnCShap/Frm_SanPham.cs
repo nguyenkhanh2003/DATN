@@ -75,7 +75,6 @@ namespace DoAnCShap
             txtDonGia.Enabled = b1;
             txtKhuyenMai.Enabled = b1;
             txtTinhTrang.Enabled = b1;
-            txtMaLinhKien.ReadOnly = b1;
             comboBoxBaoHanh.Enabled = b1;
             txtXuatXu.Enabled = b1;
         }
@@ -111,7 +110,7 @@ namespace DoAnCShap
             else
             {
                 chuoi = Convert.ToString(dataGridViewLK.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0,3)));
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
                 if (chuoi2 + 1 < 10)
                     txtMaLinhKien.Text = "LK0" + (chuoi2 + 1).ToString();
                 else if (chuoi2 + 1 < 100)
@@ -161,10 +160,17 @@ namespace DoAnCShap
             xulychucnang(false, true, true);
             XuLyTextBox(true, false);
             Clear();
-            if (int.Parse(PhatSinhMaSP(bus.PhatSinhMa(""))) < 10)
-                txtMaLinhKien.Text = "LK0" + PhatSinhMaSP(bus.PhatSinhMa(""));
+            if (bus.PhatSinhMa("").Rows.Count == 0)
+            {
+                txtMaLinhKien.Text = "LK00";
+            }
             else
-                txtMaLinhKien.Text = "LK" + PhatSinhMaSP(bus.PhatSinhMa(""));
+            {
+                if (int.Parse(PhatSinhMaSP(bus.PhatSinhMa(""))) < 10)
+                    txtMaLinhKien.Text = "LK0" + PhatSinhMaSP(bus.PhatSinhMa(""));
+                else
+                    txtMaLinhKien.Text = "LK" + PhatSinhMaSP(bus.PhatSinhMa(""));
+            }
             flag = 1;
         }
 
@@ -513,7 +519,12 @@ namespace DoAnCShap
 
         private void dataGridViewLK_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-           dataGridViewLK.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+            dataGridViewLK.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void txtMaLinhKien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

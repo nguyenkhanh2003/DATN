@@ -589,7 +589,7 @@ namespace DoAnCShap
             // 
             // txtXuatXu
             // 
-            this.txtXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXuatXu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXuatXu.Location = new System.Drawing.Point(252, 103);
             this.txtXuatXu.Multiline = true;
             this.txtXuatXu.Name = "txtXuatXu";
@@ -598,7 +598,7 @@ namespace DoAnCShap
             // 
             // txtTenLinhKien
             // 
-            this.txtTenLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLinhKien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLinhKien.Location = new System.Drawing.Point(252, 50);
             this.txtTenLinhKien.Multiline = true;
             this.txtTenLinhKien.Name = "txtTenLinhKien";
@@ -609,8 +609,8 @@ namespace DoAnCShap
             // 
             this.txtKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhuyenMai.Location = new System.Drawing.Point(582, 161);
+            this.txtKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhuyenMai.Location = new System.Drawing.Point(582, 163);
             this.txtKhuyenMai.Multiline = true;
             this.txtKhuyenMai.Name = "txtKhuyenMai";
             this.txtKhuyenMai.Size = new System.Drawing.Size(288, 29);
@@ -620,7 +620,7 @@ namespace DoAnCShap
             // 
             this.txtSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(582, 103);
             this.txtSoLuong.Multiline = true;
             this.txtSoLuong.Name = "txtSoLuong";
@@ -631,7 +631,7 @@ namespace DoAnCShap
             // 
             this.txtDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonGia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(582, 50);
             this.txtDonGia.Multiline = true;
             this.txtDonGia.Name = "txtDonGia";
@@ -640,7 +640,7 @@ namespace DoAnCShap
             // 
             // txtDonViTinh
             // 
-            this.txtDonViTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonViTinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonViTinh.Location = new System.Drawing.Point(252, 222);
             this.txtDonViTinh.Multiline = true;
             this.txtDonViTinh.Name = "txtDonViTinh";
@@ -649,8 +649,8 @@ namespace DoAnCShap
             // 
             // txtTinhTrang
             // 
-            this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinhTrang.Location = new System.Drawing.Point(252, 161);
+            this.txtTinhTrang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTinhTrang.Location = new System.Drawing.Point(252, 163);
             this.txtTinhTrang.Multiline = true;
             this.txtTinhTrang.Name = "txtTinhTrang";
             this.txtTinhTrang.Size = new System.Drawing.Size(302, 29);
@@ -658,12 +658,13 @@ namespace DoAnCShap
             // 
             // txtMaLinhKien
             // 
-            this.txtMaLinhKien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLinhKien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLinhKien.Location = new System.Drawing.Point(21, 50);
             this.txtMaLinhKien.Multiline = true;
             this.txtMaLinhKien.Name = "txtMaLinhKien";
             this.txtMaLinhKien.Size = new System.Drawing.Size(215, 29);
             this.txtMaLinhKien.TabIndex = 38;
+            this.txtMaLinhKien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaLinhKien_KeyPress);
             // 
             // groupBox3
             // 

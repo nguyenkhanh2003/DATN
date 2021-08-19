@@ -133,17 +133,11 @@
     <Compile Include="Frm_DangNhap.Designer.cs">
       <DependentUpon>Frm_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_DanhSachHoaDon.cs">
+    <Compile Include="Frm_GioiThieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_DanhSachHoaDon.Designer.cs">
-      <DependentUpon>Frm_DanhSachHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_DanhSachNhapPhieu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_DanhSachNhapPhieu.Designer.cs">
-      <DependentUpon>Frm_DanhSachNhapPhieu.cs</DependentUpon>
+    <Compile Include="Frm_GioiThieu.Designer.cs">
+      <DependentUpon>Frm_GioiThieu.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_LaylaiPass.cs">
       <SubType>Form</SubType>
@@ -275,11 +269,8 @@
     <EmbeddedResource Include="Frm_DangNhap.resx">
       <DependentUpon>Frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_DanhSachHoaDon.resx">
-      <DependentUpon>Frm_DanhSachHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_DanhSachNhapPhieu.resx">
-      <DependentUpon>Frm_DanhSachNhapPhieu.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_GioiThieu.resx">
+      <DependentUpon>Frm_GioiThieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_LaylaiPass.resx">
       <DependentUpon>Frm_LaylaiPass.cs</DependentUpon>

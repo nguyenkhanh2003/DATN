@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace DoAnCShap
 {
-    public partial class Frm_DanhSachHoaDon : Form
+    public partial class Frm_GioiThieu : Form
     {
-        public Frm_DanhSachHoaDon()
+        public Frm_GioiThieu()
         {
             InitializeComponent();
         }
 
-        Form1 frm = new Form1();
-        private void btnLapHoaDon_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            Frm_HoaDonBanHang HDB = new Frm_HoaDonBanHang();
-            HDB.ShowDialog();
+            this.Close();
         }
     }
 }
