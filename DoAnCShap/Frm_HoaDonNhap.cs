@@ -223,6 +223,13 @@ namespace DoAnCShap
             {
                 textBoxChietKhau.Text = "0";
             }
+
+            if (int.Parse(textBoxChietKhau.Text) > 101)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(textBoxChietKhau, "Chiết Khấu Không Chính Xác");
+                return;
+            }
             KM = decimal.Parse(textBoxChietKhau.Text) * decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) / 100;
             tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;
             labelThanhTien.Text = tt.ToString("0,00");

@@ -264,13 +264,34 @@ namespace DoAnCShap
                 panelSideMenu.Width = 229;
                 btnNhanVien.Text = "Quản Lý Nhân Viên";
                 btnKhachHang.Text = "Quản Lý Khách Hàng";
-
+                btnHoaDon.Text = "Quản Lý Hóa Đơn Bán";
+                btnPhieuNhap.Text = "Nhập Hàng";
+                btnLinhKien.Text = "Linh Kiện";
+                btnLoaiLK.Text = "Loại Linh Kiện";
+                btnNhaCungCap.Text = "Nhà Cung Cấp";
+                btnBanHang.Text = "Bán Hàng";
+                btnBaohanh.Text = "Bảo Hành";
+                btnThongKe.Text = "Thống Kê";
+                btnProfile.Text = "Thông Tin Cá Nhân";
+                btnSetting.Text = "Setting";
+                btnPhanQuyen.Text = "Phân Quyền";
             }
             else
             {
                 panelSideMenu.Width = 60;
                 btnNhanVien.Text = "";
                 btnKhachHang.Text = "";
+                btnHoaDon.Text = "";
+                btnPhieuNhap.Text = "";
+                btnLinhKien.Text = "";
+                btnLoaiLK.Text = "";
+                btnNhaCungCap.Text = "";
+                btnBanHang.Text = "";
+                btnBaohanh.Text = "";
+                btnThongKe.Text = "";
+                btnProfile.Text = "";
+                btnSetting.Text = "";
+                btnPhanQuyen.Text = "";
             }
         }
 
