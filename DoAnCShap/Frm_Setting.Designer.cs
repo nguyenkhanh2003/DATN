@@ -321,6 +321,7 @@ namespace DoAnCShap
             // 
             this.btnQuyDinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuyDinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuyDinh.Image = ((System.Drawing.Image)(resources.GetObject("btnQuyDinh.Image")));
             this.btnQuyDinh.Location = new System.Drawing.Point(81, 28);
             this.btnQuyDinh.Name = "btnQuyDinh";
             this.btnQuyDinh.Size = new System.Drawing.Size(133, 45);

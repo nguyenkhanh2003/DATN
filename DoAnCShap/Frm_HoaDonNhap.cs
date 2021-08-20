@@ -223,9 +223,9 @@ namespace DoAnCShap
             {
                 textBoxChietKhau.Text = "0";
             }
-            KM = decimal.Parse(textBoxChietKhau.Text);
+            KM = decimal.Parse(textBoxChietKhau.Text) * decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) / 100;
             tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;
-            labelThanhTien.Text = tt.ToString();
+            labelThanhTien.Text = tt.ToString("0,00");
             labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
 
 
@@ -243,10 +243,12 @@ namespace DoAnCShap
             {
                 int SL = int.Parse(textBoxSoLuong.Text) + int.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewCTHDNH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
+                decimal KMM = decimal.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["KhuyenMai"].Value.ToString()) + KM;
+                dataGridViewCTHDNH.Rows[vitri].Cells["KhuyenMai"].Value = KMM.ToString("0,00");
                 int SLTonMoi = int.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["SLConLai"].Value.ToString()) + int.Parse(textBoxSoLuong.Text);
                 dataGridViewCTHDNH.Rows[vitri].Cells["SLConLai"].Value = SLTonMoi.ToString();
                 decimal ThanhTienMoi = tt + decimal.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
-                dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString();
+                dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value = ThanhTienMoi.ToString("0,00");
             }
             else
             {
@@ -626,5 +628,6 @@ namespace DoAnCShap
         {
             e.Handled = true;
         }
+
     }
 }

@@ -296,7 +296,7 @@ namespace DoAnCShap
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(387, 10);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -522,9 +522,9 @@ namespace DoAnCShap
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(582, 138);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 21);
+            this.label12.Size = new System.Drawing.Size(108, 21);
             this.label12.TabIndex = 49;
-            this.label12.Text = "Khuyến Mãi";
+            this.label12.Text = "Chiết Khấu(%)";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label11
@@ -613,7 +613,7 @@ namespace DoAnCShap
             this.txtKhuyenMai.Location = new System.Drawing.Point(582, 163);
             this.txtKhuyenMai.Multiline = true;
             this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(288, 29);
+            this.txtKhuyenMai.Size = new System.Drawing.Size(270, 29);
             this.txtKhuyenMai.TabIndex = 42;
             // 
             // txtSoLuong

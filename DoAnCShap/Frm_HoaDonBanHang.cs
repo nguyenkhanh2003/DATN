@@ -75,8 +75,6 @@ namespace DoAnCShap
         }
         public void XulyTextBoxCTHD(Boolean b1, Boolean b2)
         {
-            txtDonGia.ReadOnly = b1;
-            txtKhuyenMai.ReadOnly = b1;
             comboBoxLK.Enabled = b2;
         }
         public void XuLyTextBoxHD(Boolean b1, Boolean b2)
@@ -527,15 +525,15 @@ namespace DoAnCShap
                 Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
                 excelAp.Application.Workbooks.Add(Type.Missing);
                 // Lưu trữ phần header
-                for (int i = 1; i < dataGridViewHD.Rows.Count + 1; i++)
+                for (int i = 1; i < dataGridViewHD.Rows.Count + 9; i++)
                 {
                     excelAp.Cells[1, i] = dataGridViewHD.Columns[i - 1].HeaderText;
 
                 }
-                //Lưu trữ hàng và cột vào excel
+                // Lưu trữ hàng và cột vào excel
                 for (int i = 0; i < dataGridViewHD.Rows.Count; i++)
                 {
-                    for (int j = 1; j < dataGridViewHD.Rows.Count + 4; j++)
+                    for (int j = 1; j < dataGridViewHD.Rows.Count + 8; j++)
                     {
                         excelAp.Cells[i + 2, j + 1] = dataGridViewHD.Rows[i].Cells[j].Value.ToString();
 
@@ -544,6 +542,16 @@ namespace DoAnCShap
                 excelAp.Columns.AutoFit();
                 excelAp.Visible = true;
             }
+        }
+
+        private void txtDonGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

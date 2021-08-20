@@ -206,6 +206,8 @@ namespace DoAnCShap
             this.btnSetting.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = global::DoAnCShap.Properties.Settings.Default.ChangeFont;
             this.btnSetting.ForeColor = System.Drawing.Color.White;
