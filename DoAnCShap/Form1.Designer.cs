@@ -38,7 +38,6 @@ namespace DoAnCShap
             this.panelTop = new System.Windows.Forms.Panel();
             this.labelHienThiTenDangNhap = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.iconBtnThuNho = new FontAwesome.Sharp.IconButton();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@ namespace DoAnCShap
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThuNho = new System.Windows.Forms.Button();
             this.panelBot.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
@@ -105,9 +105,9 @@ namespace DoAnCShap
             // panelTop
             // 
             this.panelTop.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.panelTop.Controls.Add(this.btnThuNho);
             this.panelTop.Controls.Add(this.labelHienThiTenDangNhap);
             this.panelTop.Controls.Add(this.btnLogout);
-            this.panelTop.Controls.Add(this.iconBtnThuNho);
             this.panelTop.Controls.Add(this.lbl_HienThiForm);
             this.panelTop.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -145,28 +145,12 @@ namespace DoAnCShap
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // iconBtnThuNho
-            // 
-            this.iconBtnThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnThuNho.ForeColor = System.Drawing.Color.Black;
-            this.iconBtnThuNho.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.iconBtnThuNho.IconColor = System.Drawing.Color.White;
-            this.iconBtnThuNho.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnThuNho.IconSize = 35;
-            this.iconBtnThuNho.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconBtnThuNho.Location = new System.Drawing.Point(6, 3);
-            this.iconBtnThuNho.Name = "iconBtnThuNho";
-            this.iconBtnThuNho.Size = new System.Drawing.Size(52, 41);
-            this.iconBtnThuNho.TabIndex = 1;
-            this.iconBtnThuNho.UseVisualStyleBackColor = true;
-            this.iconBtnThuNho.Click += new System.EventHandler(this.iconBtnThuNho_Click);
-            // 
             // lbl_HienThiForm
             // 
             this.lbl_HienThiForm.BackColor = System.Drawing.Color.Transparent;
             this.lbl_HienThiForm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_HienThiForm.ForeColor = System.Drawing.Color.White;
-            this.lbl_HienThiForm.Location = new System.Drawing.Point(64, 9);
+            this.lbl_HienThiForm.Location = new System.Drawing.Point(87, 9);
             this.lbl_HienThiForm.Name = "lbl_HienThiForm";
             this.lbl_HienThiForm.Size = new System.Drawing.Size(295, 28);
             this.lbl_HienThiForm.TabIndex = 0;
@@ -553,6 +537,18 @@ namespace DoAnCShap
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnThuNho
+            // 
+            this.btnThuNho.BackColor = System.Drawing.Color.White;
+            this.btnThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThuNho.Image = ((System.Drawing.Image)(resources.GetObject("btnThuNho.Image")));
+            this.btnThuNho.Location = new System.Drawing.Point(6, 6);
+            this.btnThuNho.Name = "btnThuNho";
+            this.btnThuNho.Size = new System.Drawing.Size(51, 35);
+            this.btnThuNho.TabIndex = 5;
+            this.btnThuNho.UseVisualStyleBackColor = false;
+            this.btnThuNho.Click += new System.EventHandler(this.iconBtnThuNho_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,7 +578,6 @@ namespace DoAnCShap
         #endregion
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton iconBtnThuNho;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogout;
         public System.Windows.Forms.Panel panelTop;
@@ -606,6 +601,7 @@ namespace DoAnCShap
         public System.Windows.Forms.Label labeldateTime;
         public System.Windows.Forms.Label lbl_HienThiForm;
         private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnThuNho;
     }
 }
 

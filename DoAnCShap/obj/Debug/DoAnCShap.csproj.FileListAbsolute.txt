@@ -246,7 +246,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\CrystalDecisions.Sha
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DevComponents.DotNetBar.Layout.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\DTO.dll
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Microsoft.ReportViewer.Design.dll

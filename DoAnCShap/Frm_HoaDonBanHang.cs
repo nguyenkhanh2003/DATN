@@ -554,5 +554,10 @@ namespace DoAnCShap
         {
             e.Handled = true;
         }
+
+        private void txtMaHD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
