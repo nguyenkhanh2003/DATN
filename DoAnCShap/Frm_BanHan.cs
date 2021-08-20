@@ -672,8 +672,8 @@ namespace DoAnCShap
             {
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
                 {
-                    ThanhTien = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()) - decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString());
-                    dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = ThanhTien.ToString();
+                    decimal KM = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString()) / 100;
+                    ThanhTien = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString()) * decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString()) - KM;
                     dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value = string.Format("{0:#,##0}", decimal.Parse(ThanhTien.ToString()));
                     SLTonKhoMoi = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuongNguyen"].Value.ToString()) - int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString());
                     dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value = SLTonKhoMoi.ToString();
@@ -683,6 +683,19 @@ namespace DoAnCShap
         }
 
         private void txtMaKH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtTienKhachDua_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMaHD_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }

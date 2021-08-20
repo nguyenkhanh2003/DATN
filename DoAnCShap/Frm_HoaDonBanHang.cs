@@ -256,7 +256,8 @@ namespace DoAnCShap
         public void ThanhTienSP()
         {
             decimal ThanhTienSP;
-            ThanhTienSP = decimal.Parse(txtDonGia.Text) * decimal.Parse(textBoxSL.Text) - decimal.Parse(txtKhuyenMai.Text);
+            decimal KM = decimal.Parse(textBoxSL.Text) * decimal.Parse(txtDonGia.Text) * decimal.Parse(txtKhuyenMai.Text) / 100;
+            ThanhTienSP = decimal.Parse(txtDonGia.Text) * decimal.Parse(textBoxSL.Text) - KM;
             txtThanhTien.Text = ThanhTienSP.ToString();
 
 

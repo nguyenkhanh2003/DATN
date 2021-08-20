@@ -243,8 +243,8 @@ namespace DoAnCShap
             {
                 int SL = int.Parse(textBoxSoLuong.Text) + int.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewCTHDNH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
-                decimal KMM = decimal.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["KhuyenMai"].Value.ToString()) + KM;
-                dataGridViewCTHDNH.Rows[vitri].Cells["KhuyenMai"].Value = KMM.ToString("0,00");
+                //decimal KMM = decimal.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["KhuyenMai"].Value.ToString()) + KM;
+                //dataGridViewCTHDNH.Rows[vitri].Cells["KhuyenMai"].Value = KMM.ToString("0,00");
                 int SLTonMoi = int.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["SLConLai"].Value.ToString()) + int.Parse(textBoxSoLuong.Text);
                 dataGridViewCTHDNH.Rows[vitri].Cells["SLConLai"].Value = SLTonMoi.ToString();
                 decimal ThanhTienMoi = tt + decimal.Parse(dataGridViewCTHDNH.Rows[vitri].Cells["ThanhTien"].Value.ToString());
@@ -255,7 +255,7 @@ namespace DoAnCShap
                 MaLK += comboBoxTenLK.SelectedValue.ToString() + ";";
                 //object[] t = { comboBoxTenLK.Text, textBoxSoLuong.Text, textBoxDonGia.Text, KM.ToString(), labelThanhTien.Text, SoLuongConLai };
                 //dataGridViewCTHDNH.Rows.Add(t);
-                Add_Datagrid(comboBoxTenLK.Text, int.Parse(textBoxSoLuong.Text), decimal.Parse(textBoxDonGia.Text), decimal.Parse(KM.ToString()), decimal.Parse(labelThanhTien.Text), SoLuongConLai);
+                Add_Datagrid(comboBoxTenLK.Text, int.Parse(textBoxSoLuong.Text), decimal.Parse(textBoxDonGia.Text), decimal.Parse(textBoxChietKhau.Text), decimal.Parse(labelThanhTien.Text), SoLuongConLai);
             }
             TongTienSP();
         }
