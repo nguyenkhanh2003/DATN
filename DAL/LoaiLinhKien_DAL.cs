@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-   public class LoaiLinhKien_DAL
+    public class LoaiLinhKien_DAL
     {
         KetNoiDatabase KetNoi = new KetNoiDatabase();
         //  LẤY DỮ LIỆU
@@ -22,7 +22,7 @@ namespace DAL
         //Tim Kiem
         public DataTable GetSearch(string condition)
         {
-            return KetNoi.GetDataTable(""+condition);
+            return KetNoi.GetDataTable("" + condition);
         }
         // THÊM DỮ LIỆU
         public void AddData(LoaiLinhKien ex)
@@ -33,7 +33,7 @@ namespace DAL
         //  SỬA DỮ LIỆU
         public void EditData(LoaiLinhKien ex)
         {
-            KetNoi.ExecuteReader(@"UPDATE LoaiLinhKien SET TenLLK='" + ex.TenLLK + "',TrangThai='"+ex.TrangThai+"' Where MaLLK='"+ex.MaLLK+"'");
+            KetNoi.ExecuteReader(@"UPDATE LoaiLinhKien SET TenLLK=N'" + ex.TenLLK + "',TrangThai='" + ex.TrangThai + "' Where MaLLK='" + ex.MaLLK + "'");
 
         }
         //  XÓA DỮ LIỆU

@@ -72,7 +72,7 @@ namespace DoAnCShap
             count = dataGridViewKH.Rows.Count;
             string chuoi = "";
             int chuoi2 = 0;
-            if (count <=0)
+            if (count <= 0)
             {
                 txtMaKh.Text = "KH00";
             }
@@ -149,7 +149,7 @@ namespace DoAnCShap
                     }
                     else
                     {
-                       
+
                         for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
                         {
                             if (txtSdt.Text == dataGridViewKH.Rows[i].Cells["DienThoai"].Value.ToString())
@@ -161,14 +161,14 @@ namespace DoAnCShap
                         }
                         kh.MaKH = txtMaKh.Text;
                         kh.TenKH = txtTenkh.Text;
-                        if(radioButtonNam.Checked==true)
+                        if (radioButtonNam.Checked == true)
                         {
                             kh.GioiTinh = radioButtonNam.Text;
-                        }    
+                        }
                         else
                         {
                             kh.GioiTinh = radioButtonNu.Text;
-                        }    
+                        }
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
                         kh.TrangThai = "1";
@@ -212,26 +212,26 @@ namespace DoAnCShap
                 }
                 else
                 {
-                    for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
-                    {
-                        if (txtSdt.Text == dataGridViewKH.Rows[i].Cells["DienThoai"].Value.ToString())
-                        {
-                            errorMes.BlinkRate = 100;
-                            errorMes.SetError(txtSdt, "Đã tồn tại");
-                            return;
-                        }
-                    }
+                    //for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
+                    //{
+                    //    if (txtSdt.Text == dataGridViewKH.Rows[i].Cells["DienThoai"].Value.ToString())
+                    //    {
+                    //        errorMes.BlinkRate = 100;
+                    //        errorMes.SetError(txtSdt, "Đã tồn tại");
+                    //        return;
+                    //    }
+                    //}
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
-                    if(radioButtonNam.Checked==true)
+                    if (radioButtonNam.Checked == true)
                     {
                         kh.GioiTinh = radioButtonNam.Text;
                     }
                     else
                     {
                         kh.GioiTinh = radioButtonNu.Text;
-                    }    
-                   
+                    }
+
                     kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = "1";
@@ -247,12 +247,10 @@ namespace DoAnCShap
 
         private void dataGridViewKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaKh.Enabled = false;
             if (e.RowIndex == -1) return;
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
             txtMaKh.Text = row.Cells[1].Value.ToString();
             txtTenkh.Text = row.Cells[2].Value.ToString();
-            //cboGioiTinh.Text = row.Cells[2].Value.ToString();
             string t = row.Cells[3].Value.ToString();
             if (t == "Nam")
                 radioButtonNam.Checked = true;
@@ -260,13 +258,15 @@ namespace DoAnCShap
                 radioButtonNu.Checked = true;
             txtSdt.Text = row.Cells[4].Value.ToString();
             txtDiaCh.Text = row.Cells[5].Value.ToString();
-            xulytextbox(false, true);
+            xulytextbox(true, false);
+            xulychucnang(true, true, true);
+            flag = 2;
         }
 
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
-            xulytextbox(true, false);
-            xulychucnang(false, true, true);
+            //xulytextbox(true, false);
+            //xulychucnang(false, true, true);
             flag = 2;
         }
 

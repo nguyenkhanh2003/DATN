@@ -70,15 +70,15 @@ namespace DoAnCShap
         {
             dataGridViewCTHDN2.DataSource = bus.HienThiCTHDNH("select LK.TenLK,CT.SoLuong,CT.DonGia,CT.KhuyenMai,CT.ThanhTien From CT_HoaDonNhapHang CT,LinhKien LK where LK.MaLK=CT.MaLK and CT.MaHDNH=N'" + txtMaHDN.Text + "' ");
         }
-        public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3)
+        public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3, Boolean b4)
         {
             btnTaoPhieu.Enabled = b1;
-            btnCane.Enabled = b2;
             btnLuu.Enabled = b2;
             btnChon.Enabled = b2;
             btnCapNhat.Enabled = b3;
             btnXoa.Enabled = b3;
             btnInHoaDon.Enabled = b3;
+            btnCane.Enabled = b4;
         }
 
         public void XuLyTextBox(Boolean b1)
@@ -145,7 +145,7 @@ namespace DoAnCShap
                     txtMaHDN.Text = "HDN" + PhatSinhMaHDN(bus.PhatSinhMa(""));
             }
             flag = 1;
-            XuLyChucNang(false, true, false);
+            XuLyChucNang(false, true, false, true);
         }
 
         public string MaLK = "";
@@ -305,7 +305,7 @@ namespace DoAnCShap
             HienThiSanPham();
             HienThiNCC();
             HienThiHoaDonN();
-            XuLyChucNang(true, false, false);
+            XuLyChucNang(true, false, false, false);
             comboBoxNCC.Text = "";
             XuLyTextBox(false);
         }
@@ -363,7 +363,7 @@ namespace DoAnCShap
                         bus.AddCTHD(cthdn);
                     }
                     MessageBox.Show("Tạo Hóa Đơn Thành Công ");
-                    XuLyChucNang(true, false, false);
+                    XuLyChucNang(true, false, false, false);
                     ClearTexBox();
                 }
             }
@@ -394,7 +394,8 @@ namespace DoAnCShap
             int vitri = dataGridViewHDN.CurrentCell.RowIndex;
             HieThiHoaDonNhapTextBox(vitri, bus.HienThiHDN(""));
             flag = 1;
-            XuLyChucNang(true, false, true);
+            XuLyChucNang(true, false, true, true);
+            XuLyTextBox(true);
         }
 
         private void textBoxSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -432,7 +433,7 @@ namespace DoAnCShap
                     bus.DeleteHoaDonNhap(hdn);
                     MessageBox.Show("Thành Công");
                     HienThiHoaDonN();
-                    XuLyChucNang(true, false, false);
+                    XuLyChucNang(true, false, false, false);
                     ClearTexBox();
                     HideDataGriview(true, false);
                 }
@@ -473,7 +474,7 @@ namespace DoAnCShap
             hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
             bus.UpdateHDN(hdn);
             MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            XuLyChucNang(true, false, false);
+            XuLyChucNang(true, false, false, false);
             ClearTexBox();
         }
 
@@ -482,7 +483,7 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
-                XuLyChucNang(true, false, false);
+                XuLyChucNang(true, false, false, false);
                 XuLyTextBox(false);
                 ClearTexBox();
             }
@@ -494,7 +495,7 @@ namespace DoAnCShap
 
         private void dataGridViewHDN_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(true, true, true);
+            XuLyChucNang(true, true, true, true);
             XuLyTextBox(true);
         }
 
@@ -522,13 +523,13 @@ namespace DoAnCShap
 
         private void dataGridViewCTHDNH_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(true, true, true);
+            XuLyChucNang(true, true, true, true);
         }
 
         private void dataGridViewCTHDN2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             flag = 2;
-            XuLyChucNang(true, false, true);
+            XuLyChucNang(true, false, true, true);
             try
             {
                 DataGridViewRow row = dataGridViewCTHDN2.Rows[e.RowIndex];

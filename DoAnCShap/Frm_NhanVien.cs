@@ -228,7 +228,7 @@ namespace DoAnCShap
             flag = 1;
             xulytextbox(true, false);
             Clear();
-            xulychucnang(false, true, true);
+            xulychucnang(false, true, false);
             if (bus.PhatSinhMa("").Rows.Count == 0)
             {
                 txtMaNV.Text = "NV00";
@@ -512,13 +512,7 @@ namespace DoAnCShap
         {
             int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
             HienThiNhanVien_TXT(vitri, bus.GetData(""));
-        }
-
-
-
-        private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
-        {
-            xulychucnang(false, true, true);
+            xulychucnang(true, true, true);
             xulytextbox(true, false);
             flag = 2;
             if (cboChucVu.SelectedValue.ToString() == "CV01")
@@ -530,6 +524,24 @@ namespace DoAnCShap
             {
 
             }
+        }
+
+
+
+        private void dataGridViewNhanVien_DoubleClick(object sender, EventArgs e)
+        {
+            //xulychucnang(false, true, true);
+            //xulytextbox(true, false);
+            //flag = 2;
+            //if (cboChucVu.SelectedValue.ToString() == "CV01")
+            //{
+            //    btnXoa.Enabled = false;
+            //    cboChucVu.Enabled = false;
+            //}
+            //else
+            //{
+
+            //}
 
         }
 

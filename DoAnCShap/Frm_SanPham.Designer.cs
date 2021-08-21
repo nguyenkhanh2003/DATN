@@ -334,7 +334,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(728, 10);
+            this.btnLuu.Location = new System.Drawing.Point(422, 10);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -347,7 +347,7 @@ namespace DoAnCShap
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(411, 10);
+            this.btnXoa.Location = new System.Drawing.Point(740, 10);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 39);
             this.btnXoa.TabIndex = 0;
@@ -413,7 +413,7 @@ namespace DoAnCShap
             this.groupBox2.Controls.Add(this.txtDonViTinh);
             this.groupBox2.Controls.Add(this.txtTinhTrang);
             this.groupBox2.Controls.Add(this.txtMaLinhKien);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(290, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(882, 266);
@@ -670,7 +670,7 @@ namespace DoAnCShap
             // 
             this.groupBox3.Controls.Add(this.btnChonAnh);
             this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 50);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(261, 266);

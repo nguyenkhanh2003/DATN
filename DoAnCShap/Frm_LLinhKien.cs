@@ -56,7 +56,6 @@ namespace DoAnCShap
         {
             txtMaLoai.Clear();
             txtTenLoai.Clear();
-
         }
 
         public string AuToCode(DataTable d)
@@ -111,13 +110,6 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTenLoai.Text == "")
-            {
-                MessageBox.Show("Chưa nhập tên loại");
-                return;
-            }
-
-
             if (flag == 1)
             {
                 try
@@ -143,9 +135,10 @@ namespace DoAnCShap
                 llk.TrangThai = "1";
                 bus.EditData(llk);
                 MessageBox.Show("Sửa Loại linh Kiện Thành Công");
+                clear();
                 xulychucnang(true, false, false);
                 xulytextbox(true, false);
-                clear();
+
             }
             Display();
         }
@@ -159,11 +152,12 @@ namespace DoAnCShap
 
         private void dataGridViewKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1) return;
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
             txtMaLoai.Text = row.Cells["MaLLK"].Value.ToString();
             txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
-            xulytextbox(false, true);
+            xulytextbox(true, false);
+            xulychucnang(true, true, true);
+            flag = 2;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

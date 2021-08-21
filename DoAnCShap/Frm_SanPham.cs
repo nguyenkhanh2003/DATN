@@ -157,7 +157,7 @@ namespace DoAnCShap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            xulychucnang(false, true, true);
+            xulychucnang(false, true, false);
             XuLyTextBox(true, false);
             Clear();
             if (bus.PhatSinhMa("").Rows.Count == 0)
@@ -442,6 +442,9 @@ namespace DoAnCShap
         {
             int vitri = dataGridViewLK.CurrentCell.RowIndex;
             HienThiLK_TXT(vitri, bus.GetData(""));
+            XuLyTextBox(true, false);
+            xulychucnang(true, true, true);
+            flag = 2;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

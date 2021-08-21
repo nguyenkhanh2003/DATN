@@ -195,6 +195,7 @@ namespace DoAnCShap
 
         private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            XuLyChucNang(true, true);
             int vitri = dataGridViewHD.CurrentCell.RowIndex;
             HienThiHoaDonTextBox(vitri, bus.GetHoaDon(""));
             flag = 1;

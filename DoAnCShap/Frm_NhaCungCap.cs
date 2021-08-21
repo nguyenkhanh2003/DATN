@@ -116,17 +116,17 @@ namespace DoAnCShap
         {
             XuLyChucNang(false, true, false);
             ClearTextBox();
-            if((bus.PhatSinhMa("")).Rows.Count==0)
+            if ((bus.PhatSinhMa("")).Rows.Count == 0)
             {
                 txtMaNCC.Text = "NCC00";
             }
             else
             {
                 if (int.Parse(PhatSinhMaNCC(bus.PhatSinhMa(""))) < 10)
-                    txtMaNCC.Text ="NCC0" + PhatSinhMaNCC(bus.PhatSinhMa(""));
+                    txtMaNCC.Text = "NCC0" + PhatSinhMaNCC(bus.PhatSinhMa(""));
                 else
-                    txtMaNCC.Text ="NCC" + PhatSinhMaNCC(bus.PhatSinhMa(""));
-            }    
+                    txtMaNCC.Text = "NCC" + PhatSinhMaNCC(bus.PhatSinhMa(""));
+            }
             addnew = true;
             btnCancel.Enabled = true;
             btnSave.Enabled = true;
@@ -151,9 +151,9 @@ namespace DoAnCShap
         //hien du lieu tu datatable len button
         private void dataGridViewNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaNCC.Enabled = false;
             int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
             HienThiNCC_TXT(vitri, bus.GetData(""));
+            XuLyChucNang(true, true, true);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
