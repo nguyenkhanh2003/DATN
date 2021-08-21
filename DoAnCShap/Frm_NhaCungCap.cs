@@ -22,12 +22,19 @@ namespace DoAnCShap
         NhaCungCap_BUS bus = new NhaCungCap_BUS();
         NhaCungCap ncc = new NhaCungCap();
         bool addnew;
+
         public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3)
         {
             btnAdd.Enabled = b1;
             btnDelete.Enabled = b3;
             btnCancel.Enabled = b2;
             btnSave.Enabled = b2;
+        }
+
+        public void VisiButton(Boolean b1, Boolean b2)
+        {
+            btnSave.Visible = b1;
+            btnCapNhat.Visible = b2;
         }
         public void XuLyTexBox(Boolean b1, Boolean b2)
         {
@@ -128,9 +135,8 @@ namespace DoAnCShap
                     txtMaNCC.Text = "NCC" + PhatSinhMaNCC(bus.PhatSinhMa(""));
             }
             addnew = true;
-            btnCancel.Enabled = true;
-            btnSave.Enabled = true;
-
+            XuLyTexBox(false, true);
+            VisiButton(true, false);
         }
 
         public void HienThiNCC_TXT(int vitri, DataTable d)
@@ -154,6 +160,8 @@ namespace DoAnCShap
             int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
             HienThiNCC_TXT(vitri, bus.GetData(""));
             XuLyChucNang(true, true, true);
+            XuLyTexBox(false, true);
+            VisiButton(false, true);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -241,73 +249,80 @@ namespace DoAnCShap
             }
             else
             {
-                try
-                {
-                    if (txtMaNCC.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtMaNCC, "? MaNCC");
-                        return;
-                    }
-                    if (txtTenNCC.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtTenNCC, "? TenNCC");
-                        return;
-                    }
-                    if (txtDienThoai.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDienThoai, "? Điện Thoại");
-                        return;
-                    }
-                    if (txtDienThoai.Text.Length < 10)
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
-                        return;
-                    }
-                    if (txtDiaChi.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDiaChi, "? Địa chỉ");
-                        return;
-                    }
 
-                    if (txtEmail.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtEmail, "? Email");
-                        return;
-                    }
-                    else
-                    {
-                        ncc.MaNCC = txtMaNCC.Text;
-                        ncc.TenNCC = txtTenNCC.Text;
-                        ncc.Email = txtEmail.Text;
-                        ncc.DienThoai = txtDienThoai.Text;
-                        ncc.DiaChi = txtDiaChi.Text;
-                        ncc.TrangThai = "1";
-                        bus.EditData(ncc);
-                        MessageBox.Show("Sửa Thành Công");
-                        ClearTextBox();
-                        XuLyChucNang(true, false, false);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Không thể sửa được !");
-                    return;
-                }
 
             }
             Display();
+        }
 
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMaNCC.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtMaNCC, "? MaNCC");
+                    return;
+                }
+                if (txtTenNCC.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenNCC, "? TenNCC");
+                    return;
+                }
+                if (txtDienThoai.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDienThoai, "? Điện Thoại");
+                    return;
+                }
+                if (txtDienThoai.Text.Length < 10)
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
+                    return;
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDiaChi, "? Địa chỉ");
+                    return;
+                }
+
+                if (txtEmail.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtEmail, "? Email");
+                    return;
+                }
+                else
+                {
+                    ncc.MaNCC = txtMaNCC.Text;
+                    ncc.TenNCC = txtTenNCC.Text;
+                    ncc.Email = txtEmail.Text;
+                    ncc.DienThoai = txtDienThoai.Text;
+                    ncc.DiaChi = txtDiaChi.Text;
+                    ncc.TrangThai = "1";
+                    bus.EditData(ncc);
+                    MessageBox.Show("Cập Nhật Thành Công");
+                    ClearTextBox();
+                    XuLyChucNang(true, false, false);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Không thể sửa được !");
+                return;
+            }
+            Display();
         }
 
         private void Frm_NhaCungCap_Load(object sender, EventArgs e)
         {
             XuLyChucNang(true, false, false);
+            XuLyTexBox(true, false);
+            VisiButton(true, false);
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

@@ -51,6 +51,11 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
+        public void VisiButTon(Boolean b1, Boolean b2)
+        {
+            btnLuu.Visible = b1;
+            btnCapNhat.Visible = b2;
+        }
 
         public void clear()
         {
@@ -94,18 +99,27 @@ namespace DoAnCShap
         {
             xulychucnang(false, true, false);
             xulytextbox(true, false);
+            VisiButTon(true, false);
+            clear();
             flag = 1;
-            //PhatSinhMa();
-            if (int.Parse(AuToCode(bus.LayDuLieu(""))) < 10)
-                txtMaLoai.Text = "LLK0" + AuToCode(bus.LayDuLieu(""));
+            if (bus.LayDuLieu("").Rows.Count == 0)
+            {
+                txtMaLoai.Text = "LLK00";
+            }
             else
-                txtMaLoai.Text = "LLK" + AuToCode(bus.LayDuLieu(""));
+            {
+                if (int.Parse(AuToCode(bus.LayDuLieu(""))) < 10)
+                    txtMaLoai.Text = "LLK0" + AuToCode(bus.LayDuLieu(""));
+                else
+                    txtMaLoai.Text = "LLK" + AuToCode(bus.LayDuLieu(""));
+            }
         }
 
         private void Frm_LLinhKien_Load(object sender, EventArgs e)
         {
             xulytextbox(false, true);
             xulychucnang(true, false, false);
+            VisiButTon(true, false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -142,6 +156,20 @@ namespace DoAnCShap
             }
             Display();
         }
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            llk.MaLLK = txtMaLoai.Text;
+            llk.TenLLK = txtTenLoai.Text;
+            llk.TrangThai = "1";
+            bus.EditData(llk);
+            MessageBox.Show("Sửa Loại linh Kiện Thành Công");
+            clear();
+            VisiButTon(true, false);
+            xulychucnang(true, false, false);
+            xulytextbox(true, false);
+            Display();
+
+        }
 
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
@@ -157,6 +185,7 @@ namespace DoAnCShap
             txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
             xulytextbox(true, false);
             xulychucnang(true, true, true);
+            VisiButTon(false, true);
             flag = 2;
         }
 
@@ -221,5 +250,7 @@ namespace DoAnCShap
                 txtTenLoai.Text = row.Cells[2].Value.ToString();
             }
         }
+
+
     }
 }

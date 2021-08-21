@@ -19,7 +19,10 @@ namespace BUS
         {
             return bus.GetData(Condition);
         }
-
+        public DataTable PhatSinhMa(string condition)
+        {
+            return bus.PhatSinhMa(condition);
+        }
         public DataTable GetSearch(string condition)
         {
             return bus.GetSearch(condition);

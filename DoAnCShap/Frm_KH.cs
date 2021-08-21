@@ -41,7 +41,6 @@ namespace DoAnCShap
         }
         public void xulytextbox(Boolean b1, Boolean b2)
         {
-            txtMaKh.ReadOnly = b1;
             txtMaKh.Enabled = b1;
             txtTenkh.Enabled = b1;
             radioButtonNam.Enabled = b1;
@@ -56,6 +55,11 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
+        public void VisiButton(Boolean b1, Boolean b2)
+        {
+            btnLuu.Visible = b1;
+            btnCapNhat.Visible = b2;
+        }
 
         public void Clear()
         {
@@ -66,34 +70,15 @@ namespace DoAnCShap
             txtSdt.Clear();
             errorMes.Clear();
         }
-        public void PhatSinhMa()
+
+        public String PhatSinhMa(DataTable d)
         {
-            int count = 0;
-            count = dataGridViewKH.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            if (count <= 0)
-            {
-                txtMaKh.Text = "KH00";
-            }
-            else
-            {
-                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
-                if (chuoi2 + 1 < 10)
-                    txtMaKh.Text = "KH0" + (chuoi2 + 1).ToString();
-                else if (chuoi2 + 1 < 100)
-                    txtMaKh.Text = "KH" + (chuoi2 + 1).ToString();
-            }
-        }
-        public String PhatSinhMa(DataTable dt)
-        {
-            int sodong = dataGridViewKH.Rows.Count;
+            int sodong = d.Rows.Count;
             string macuoi;
             if (sodong > 9)
-                macuoi = dt.Rows[0].ToString().Substring(2, 2);
+                macuoi = d.Rows[sodong - 1]["MaKH"].ToString().Substring(2, 2);
             else
-                macuoi = dt.Rows[sodong - 1][0].ToString().Substring(3, 1);
+                macuoi = d.Rows[sodong - 1]["MaKH"].ToString().Substring(3, 1);
             return (int.Parse(macuoi) + 1).ToString();
         }
 
@@ -105,6 +90,7 @@ namespace DoAnCShap
         {
             xulytextbox(false, true);
             xulychucnang(true, false, false);
+            VisiButton(true, false);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -113,7 +99,18 @@ namespace DoAnCShap
             xulytextbox(true, false);
             Clear();
             flag = 1;
-            PhatSinhMa();
+            VisiButton(true, false);
+            if (bus.PhatSinhMa("").Rows.Count == 0)
+            {
+                txtMaKh.Text = "KH00";
+            }
+            else
+            {
+                if (int.Parse(PhatSinhMa(bus.PhatSinhMa(""))) < 10)
+                    txtMaKh.Text = "KH0" + PhatSinhMa(bus.PhatSinhMa(""));
+                else
+                    txtMaKh.Text = "KH" + PhatSinhMa(bus.PhatSinhMa(""));
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -175,6 +172,7 @@ namespace DoAnCShap
                         bus.AddData(kh); ;
                         MessageBox.Show("Thêm Khách Hàng Thành Công");
                         xulychucnang(true, false, false);
+                        VisiButton(true, false);
                         Clear();
                     }
                 }
@@ -244,9 +242,59 @@ namespace DoAnCShap
 
             Display();
         }
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            if (txtTenkh.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTenkh, "? Tên Khách hàng");
+                return;
+            }
+            if (txtSdt.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSdt, "? Số điện thoại");
+                return;
+            }
+            if (txtSdt.Text.Length < 10)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSdt, "Số điện thoại không đúng");
+                return;
+            }
+            if (txtDiaCh.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtDiaCh, "? Địa chỉ");
+                return;
+            }
+            else
+            {
+                kh.MaKH = txtMaKh.Text;
+                kh.TenKH = txtTenkh.Text;
+                if (radioButtonNam.Checked == true)
+                {
+                    kh.GioiTinh = radioButtonNam.Text;
+                }
+                else
+                {
+                    kh.GioiTinh = radioButtonNu.Text;
+                }
+
+                kh.DienThoai = txtSdt.Text;
+                kh.DiaChi = txtDiaCh.Text;
+                kh.TrangThai = "1";
+                bus.EditData(kh); ;
+                MessageBox.Show("Cập Nhật Dữ Liệu Thành Công");
+                xulychucnang(true, false, false);
+                Clear();
+                Display();
+            }
+        }
 
         private void dataGridViewKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            VisiButton(false, true);
             if (e.RowIndex == -1) return;
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
             txtMaKh.Text = row.Cells[1].Value.ToString();
@@ -324,7 +372,7 @@ namespace DoAnCShap
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy tác vụ ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
                 xulychucnang(true, false, false);
@@ -340,6 +388,11 @@ namespace DoAnCShap
         private void dataGridViewKH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             dataGridViewKH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void txtMaKh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
