@@ -51,11 +51,6 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
-        public void VisiButTon(Boolean b1, Boolean b2)
-        {
-            btnLuu.Visible = b1;
-            btnCapNhat.Visible = b2;
-        }
 
         public void clear()
         {
@@ -99,7 +94,6 @@ namespace DoAnCShap
         {
             xulychucnang(false, true, false);
             xulytextbox(true, false);
-            VisiButTon(true, false);
             clear();
             flag = 1;
             if (bus.LayDuLieu("").Rows.Count == 0)
@@ -119,7 +113,6 @@ namespace DoAnCShap
         {
             xulytextbox(false, true);
             xulychucnang(true, false, false);
-            VisiButTon(true, false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -152,22 +145,11 @@ namespace DoAnCShap
                 clear();
                 xulychucnang(true, false, false);
                 xulytextbox(true, false);
-
             }
             Display();
         }
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            llk.MaLLK = txtMaLoai.Text;
-            llk.TenLLK = txtTenLoai.Text;
-            llk.TrangThai = "1";
-            bus.EditData(llk);
-            MessageBox.Show("Sửa Loại linh Kiện Thành Công");
-            clear();
-            VisiButTon(true, false);
-            xulychucnang(true, false, false);
-            xulytextbox(true, false);
-            Display();
 
         }
 
@@ -185,7 +167,6 @@ namespace DoAnCShap
             txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
             xulytextbox(true, false);
             xulychucnang(true, true, true);
-            VisiButTon(false, true);
             flag = 2;
         }
 

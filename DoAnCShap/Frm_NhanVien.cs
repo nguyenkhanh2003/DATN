@@ -70,12 +70,6 @@ namespace DoAnCShap
             btnHuy.Enabled = b2;
         }
 
-        public void VisiButton(Boolean b1, Boolean b2)
-        {
-            btnLuu.Visible = b1;
-            btnCapNhat.Visible = b2;
-        }
-
         public string PhatSinhMaNv(DataTable d)
         {
             int sodong = d.Rows.Count;
@@ -204,7 +198,6 @@ namespace DoAnCShap
         {
             xulytextbox(false, true);
             xulychucnang(true, false, false);
-            VisiButton(true, false);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -224,7 +217,7 @@ namespace DoAnCShap
                 else
                     txtMaNV.Text = "NV" + PhatSinhMaNv(bus.PhatSinhMa(""));
             }
-            VisiButton(true, false);
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -336,7 +329,102 @@ namespace DoAnCShap
             }
             if (flag == 2)
             {
+                if (cboChucVu.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(cboChucVu, "Chưa chọn chức vụ");
+                    return;
+                }
+                if (txtTenNV.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtTenNV, "? Tên nhân viên");
+                    return;
+                }
+                if (txtSDT.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtSDT, "? SDT");
+                    return;
+                }
+                if (txtSDT.Text.Length < 10)
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtSDT, "Số điện thoại không đúng");
+                    return;
+                }
+                if (txtCMND.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtCMND, "? CMND");
+                    return;
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtDiaChi, "? Địa chỉ");
+                    return;
+                }
 
+                if (txtUserName.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtUserName, "? UserName");
+                    return;
+                }
+
+                else
+                {
+                    int KiemTra = 0;
+                    for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                    {
+                        if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
+                        {
+                            KiemTra = 1;
+                            break;
+                        }
+                    }
+                    nv.MaNV = txtMaNV.Text;
+                    nv.MaCV = cboChucVu.SelectedValue.ToString();
+                    nv.TenNV = txtTenNV.Text;
+                    if (radioButtonNam.Checked == true)
+                    {
+                        nv.GioiTinh = radioButtonNam.Text;
+                    }
+                    else
+                    {
+                        nv.GioiTinh = radioButtonNu.Text;
+                    }
+                    nv.Email = txtEmail.Text;
+                    nv.NgaySinh = dateTirmNgaySinh.Value.Date;
+                    nv.DienThoai = txtSDT.Text;
+                    nv.CMND = txtCMND.Text;
+                    nv.DiaChi = txtDiaChi.Text;
+                    if (KiemTra == 1)
+                    {
+                        nv.HinhAnh = TenHinh;
+                    }
+                    else
+                    {
+                        nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                        LuuAnh();
+                    }
+                    nv.UserName = txtUserName.Text;
+                    if (txtPassWord.Text == "")
+                    {
+                        nv.PassWord = PassW;
+                    }
+                    else
+                    {
+                        MaHoa();
+                        nv.PassWord = txtPassWord.Text;
+                    }
+                    nv.TrangThai = "1";
+                    bus.EditData(nv);
+                    MessageBox.Show("Cập Nhật Nhân Viên Thành Công");
+                    Clear();
+                    xulychucnang(true, false, false);
+                }
             }
 
             Display();
@@ -344,102 +432,7 @@ namespace DoAnCShap
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            if (cboChucVu.Text == "")
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(cboChucVu, "Chưa chọn chức vụ");
-                return;
-            }
-            if (txtTenNV.Text == "")
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(txtTenNV, "? Tên nhân viên");
-                return;
-            }
-            if (txtSDT.Text == "")
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(txtSDT, "? SDT");
-                return;
-            }
-            if (txtSDT.Text.Length < 10)
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(txtSDT, "Số điện thoại không đúng");
-                return;
-            }
-            if (txtCMND.Text == "")
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(txtCMND, "? CMND");
-                return;
-            }
-            if (txtDiaChi.Text == "")
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(txtDiaChi, "? Địa chỉ");
-                return;
-            }
 
-            if (txtUserName.Text == "")
-            {
-                erroMes.BlinkRate = 100;
-                erroMes.SetError(txtUserName, "? UserName");
-                return;
-            }
-
-            else
-            {
-                int KiemTra = 0;
-                for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
-                {
-                    if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
-                    {
-                        KiemTra = 1;
-                        break;
-                    }
-                }
-                nv.MaNV = txtMaNV.Text;
-                nv.MaCV = cboChucVu.SelectedValue.ToString();
-                nv.TenNV = txtTenNV.Text;
-                if (radioButtonNam.Checked == true)
-                {
-                    nv.GioiTinh = radioButtonNam.Text;
-                }
-                else
-                {
-                    nv.GioiTinh = radioButtonNu.Text;
-                }
-                nv.Email = txtEmail.Text;
-                nv.NgaySinh = dateTirmNgaySinh.Value.Date;
-                nv.DienThoai = txtSDT.Text;
-                nv.CMND = txtCMND.Text;
-                nv.DiaChi = txtDiaChi.Text;
-                if (KiemTra == 1)
-                {
-                    nv.HinhAnh = TenHinh;
-                }
-                else
-                {
-                    nv.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
-                    LuuAnh();
-                }
-                nv.UserName = txtUserName.Text;
-                if (txtPassWord.Text == "")
-                {
-                    nv.PassWord = PassW;
-                }
-                else
-                {
-                    MaHoa();
-                    nv.PassWord = txtPassWord.Text;
-                }
-                nv.TrangThai = "1";
-                bus.EditData(nv);
-                MessageBox.Show("Cập Nhật Nhân Viên Thành Công");
-                Clear();
-                xulychucnang(true, false, false);
-            }
             Display();
         }
 
@@ -503,7 +496,6 @@ namespace DoAnCShap
         {
             int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
             HienThiNhanVien_TXT(vitri, bus.GetData(""));
-            VisiButton(false, true);
             xulychucnang(true, true, true);
             xulytextbox(true, false);
             flag = 2;

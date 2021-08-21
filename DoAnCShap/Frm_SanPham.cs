@@ -64,11 +64,6 @@ namespace DoAnCShap
             btnHuy.Enabled = b2;
         }
 
-        public void VisiButton(Boolean b1, Boolean b2)
-        {
-            btnLuu.Visible = b1;
-            btnCapNhat.Visible = b2;
-        }
 
         public void XuLyTextBox(Boolean b1, Boolean b2)
         {
@@ -144,7 +139,6 @@ namespace DoAnCShap
         {
             xulychucnang(false, true, false);
             XuLyTextBox(true, false);
-            VisiButton(true, false);
             Clear();
             if (bus.PhatSinhMa("").Rows.Count == 0)
             {
@@ -164,7 +158,6 @@ namespace DoAnCShap
         {
             xulychucnang(true, false, false);
             XuLyTextBox(false, true);
-            VisiButton(true, false);
             HienThiNhaCungCap();
             HienThiLoaiLK();
             DisPlay();
@@ -173,8 +166,6 @@ namespace DoAnCShap
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
-
             if (flag == 1)
             {
                 try
@@ -280,107 +271,106 @@ namespace DoAnCShap
             }
             if (flag == 2)
             {
+                if (cboMaLoai.SelectedValue.ToString() == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(cboMaLoai, "? Chưa chọn mã loại");
+                    return;
+                }
+
+                if (comboBoxNCC.SelectedValue.ToString() == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
+                    return;
+                }
+                if (txtTenLinhKien.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenLinhKien, "Tên linh kiện không được để trống");
+                    return;
+                }
+                if (comboBoxBaoHanh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxBaoHanh, "Chưa chọn bảo hành");
+                    return;
+                }
+                if (txtXuatXu.Text == "")
+                {
+                    errorMes.BlinkRate = 10; ;
+                    errorMes.SetError(txtXuatXu, "? Xuất Xứ");
+                    return;
+                }
+                if (txtTinhTrang.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTinhTrang, "? Tình Trạng");
+                    return;
+                }
+                if (txtDonViTinh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDonViTinh, "? Đơn Vị tính");
+                    return;
+                }
+                if (txtDonGia.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDonGia, "? Đơn Giá");
+                    return;
+                }
+                if (txtSoLuong.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSoLuong, "? Số Lượng");
+                    return;
+                }
+
+                else
+                {
+                    int KiemTra = 0;
+                    for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
+                    {
+                        if (TenHinh == dataGridViewLK.Rows[i].Cells["HinhAnh"].Value.ToString())
+                        {
+                            KiemTra = 1;
+                            break;
+                        }
+                    }
+                    lk.MaLK = txtMaLinhKien.Text;
+                    lk.MaLLK = cboMaLoai.SelectedValue.ToString();
+                    lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
+                    lk.TenLK = txtTenLinhKien.Text;
+                    lk.BaoHanh = comboBoxBaoHanh.Text;
+                    lk.XuatXu = txtXuatXu.Text;
+                    lk.TinhTrang = txtTinhTrang.Text;
+                    lk.DonViTinh = txtDonViTinh.Text;
+                    lk.DonGia = int.Parse(txtDonGia.Text);
+                    lk.SoLuongTon = int.Parse(txtSoLuong.Text);
+                    lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
+                    if (KiemTra == 1)
+                    {
+                        lk.HinhAnh = TenHinh;
+                    }
+                    else
+                    {
+                        lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                        LuuAnh();
+                    }
+                    lk.TrangThai = "1";
+                    bus.EditData(lk);
+                    MessageBox.Show("Cập Nhật Dữ Liệu Thành Công");
+                    xulychucnang(true, false, false);
+                    XuLyTextBox(false, true);
+                    Clear();
+                }
             }
             DisPlay();
         }
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
 
-            if (cboMaLoai.SelectedValue.ToString() == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(cboMaLoai, "? Chưa chọn mã loại");
-                return;
-            }
-
-            if (comboBoxNCC.SelectedValue.ToString() == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
-                return;
-            }
-            if (txtTenLinhKien.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtTenLinhKien, "Tên linh kiện không được để trống");
-                return;
-            }
-            if (comboBoxBaoHanh.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(comboBoxBaoHanh, "Chưa chọn bảo hành");
-                return;
-            }
-            if (txtXuatXu.Text == "")
-            {
-                errorMes.BlinkRate = 10; ;
-                errorMes.SetError(txtXuatXu, "? Xuất Xứ");
-                return;
-            }
-            if (txtTinhTrang.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtTinhTrang, "? Tình Trạng");
-                return;
-            }
-            if (txtDonViTinh.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtDonViTinh, "? Đơn Vị tính");
-                return;
-            }
-            if (txtDonGia.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtDonGia, "? Đơn Giá");
-                return;
-            }
-            if (txtSoLuong.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtSoLuong, "? Số Lượng");
-                return;
-            }
-
-            else
-            {
-                int KiemTra = 0;
-                for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
-                {
-                    if (TenHinh == dataGridViewLK.Rows[i].Cells["HinhAnh"].Value.ToString())
-                    {
-                        KiemTra = 1;
-                        break;
-                    }
-                }
-                lk.MaLK = txtMaLinhKien.Text;
-                lk.MaLLK = cboMaLoai.SelectedValue.ToString();
-                lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
-                lk.TenLK = txtTenLinhKien.Text;
-                lk.BaoHanh = comboBoxBaoHanh.Text;
-                lk.XuatXu = txtXuatXu.Text;
-                lk.TinhTrang = txtTinhTrang.Text;
-                lk.DonViTinh = txtDonViTinh.Text;
-                lk.DonGia = int.Parse(txtDonGia.Text);
-                lk.SoLuongTon = int.Parse(txtSoLuong.Text);
-                lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
-                if (KiemTra == 1)
-                {
-                    lk.HinhAnh = TenHinh;
-                }
-                else
-                {
-                    lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
-                    LuuAnh();
-                }
-                lk.TrangThai = "1";
-                bus.EditData(lk);
-                MessageBox.Show("Cập Nhật Dữ Liệu Thành Công");
-                xulychucnang(true, false, false);
-                XuLyTextBox(false, true);
-                Clear();
-            }
-            DisPlay();
         }
         public void HienThiLK_TXT(int vitri, DataTable d)
         {
@@ -436,7 +426,6 @@ namespace DoAnCShap
             HienThiLK_TXT(vitri, bus.GetData(""));
             XuLyTextBox(true, false);
             xulychucnang(true, true, true);
-            VisiButton(false, true);
             flag = 2;
         }
 
@@ -486,7 +475,7 @@ namespace DoAnCShap
             }
             else
             {
-                
+
             }
         }
 

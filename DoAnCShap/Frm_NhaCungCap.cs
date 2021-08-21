@@ -31,11 +31,6 @@ namespace DoAnCShap
             btnSave.Enabled = b2;
         }
 
-        public void VisiButton(Boolean b1, Boolean b2)
-        {
-            btnSave.Visible = b1;
-            btnCapNhat.Visible = b2;
-        }
         public void XuLyTexBox(Boolean b1, Boolean b2)
         {
             txtMaNCC.ReadOnly = b2;
@@ -136,7 +131,6 @@ namespace DoAnCShap
             }
             addnew = true;
             XuLyTexBox(false, true);
-            VisiButton(true, false);
         }
 
         public void HienThiNCC_TXT(int vitri, DataTable d)
@@ -161,7 +155,6 @@ namespace DoAnCShap
             HienThiNCC_TXT(vitri, bus.GetData(""));
             XuLyChucNang(true, true, true);
             XuLyTexBox(false, true);
-            VisiButton(false, true);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -250,71 +243,71 @@ namespace DoAnCShap
             else
             {
 
+                try
+                {
+                    if (txtMaNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtMaNCC, "? MaNCC");
+                        return;
+                    }
+                    if (txtTenNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtTenNCC, "? TenNCC");
+                        return;
+                    }
+                    if (txtDienThoai.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDienThoai, "? Điện Thoại");
+                        return;
+                    }
+                    if (txtDienThoai.Text.Length < 10)
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
+                        return;
+                    }
+                    if (txtDiaChi.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtDiaChi, "? Địa chỉ");
+                        return;
+                    }
 
+                    if (txtEmail.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtEmail, "? Email");
+                        return;
+                    }
+                    else
+                    {
+                        ncc.MaNCC = txtMaNCC.Text;
+                        ncc.TenNCC = txtTenNCC.Text;
+                        ncc.Email = txtEmail.Text;
+                        ncc.DienThoai = txtDienThoai.Text;
+                        ncc.DiaChi = txtDiaChi.Text;
+                        ncc.TrangThai = "1";
+                        bus.EditData(ncc);
+                        MessageBox.Show("Cập Nhật Thành Công");
+                        ClearTextBox();
+                        XuLyChucNang(true, false, false);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể sửa được !");
+                    return;
+                }
             }
             Display();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtMaNCC.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtMaNCC, "? MaNCC");
-                    return;
-                }
-                if (txtTenNCC.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtTenNCC, "? TenNCC");
-                    return;
-                }
-                if (txtDienThoai.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtDienThoai, "? Điện Thoại");
-                    return;
-                }
-                if (txtDienThoai.Text.Length < 10)
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
-                    return;
-                }
-                if (txtDiaChi.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtDiaChi, "? Địa chỉ");
-                    return;
-                }
 
-                if (txtEmail.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(txtEmail, "? Email");
-                    return;
-                }
-                else
-                {
-                    ncc.MaNCC = txtMaNCC.Text;
-                    ncc.TenNCC = txtTenNCC.Text;
-                    ncc.Email = txtEmail.Text;
-                    ncc.DienThoai = txtDienThoai.Text;
-                    ncc.DiaChi = txtDiaChi.Text;
-                    ncc.TrangThai = "1";
-                    bus.EditData(ncc);
-                    MessageBox.Show("Cập Nhật Thành Công");
-                    ClearTextBox();
-                    XuLyChucNang(true, false, false);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Không thể sửa được !");
-                return;
-            }
             Display();
         }
 
@@ -322,7 +315,6 @@ namespace DoAnCShap
         {
             XuLyChucNang(true, false, false);
             XuLyTexBox(true, false);
-            VisiButton(true, false);
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

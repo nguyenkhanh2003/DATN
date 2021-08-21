@@ -271,6 +271,31 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="btnTimKH.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAABHFJREFUWEfNlt1PHFUYxqfamBhTs39Aq71C48eV1Zgm6vrRRGMbbeOFSf2oabG2
+        hoQabbWmUqo2RKpLoumNicTWmJRFWlSoChSRIpSsXSgOisBuS5EFCmzBWlIsPD7v7Jlh2T27O6uAPskv
+        s9mdOe9v3j1zzhjzEhPLST5pIGEyQabJZdJIDhCvOnuBYiKH+MifBC5oJ5vU1fMYEy+SqBS5rhNY3QMU
+        DQC1I8CZKNB5EWgdA0qHgOfPxc6RcxW1RgeuUSP9y5gosQcWiROjQGQiM/t+nyPUZ7TiVjXiP4yJt2Sw
+        G38BCjh4v6ZoOqRzt/1GmQbiR49Rg+vVyFnGxJPk8lLKfDSoL+aGIP+6nCrKlFlCdWr0LGLCQ+RJQW6f
+        vogwMjSGK20/WEz0diX93sO/tI03Un0WWOJXQmW8yaxiIk9Ebu4Cujg5E4sIg9EpTLd8DTRVOETP9zu/
+        dysRm7yA050BVcVlTAREpiSSLGEzGuGEiBMRJn8+Zf1mdySeFj59nmNKqBIPqEoZYuJ2EZFJm6orgnQm
+        UeaP7s6kjsSzodHpzoeqWoaYeEFk7u/VS8QzOsDZSYmZ5kpcaW9EaHhKK2Hj47hKpldVyxATr4rMljQT
+        V7gQOodLFR/jatFmPvdPYXL/TvSVfamVsPmOY1oyZVxAXSW2tyDvvF5CuNAdwnTh08DudTE2PQg8cpfF
+        sK9EKyI09DsyM6pahpgoFpkdKWQGx6bwly9PK2ITrqrXysgjnq1Mgcg8GtLLjAWaZ0We8yaJCOO7XtHK
+        HOF2omTCqlqGxFZeePg06WTG6ypTdsTm6vqHtDK7TisZ1yuxiRuIvJ9YO3GizMS3XErTiAipZFbXKpkv
+        8Lqq5iImSkXmGf7HiTIXP/tUKxCPTuZQtxIpwzhZqSq5SOxFytr+W+K6Iyvrr4Eea4Kmo6c+kCRzr90V
+        Pz5XVbKIiWMicxP3J1sksYBbXvvJ6UrUOIpVqkLq7H7voIccJWusL2I7d0SE7mkFAtyndIUysZOT1tmx
+        /dhmjZ0plNhBoHg8Mo7l1SPovlZejDjQLdVAFeeQrqCORi5wG5uApeVOV3yqVObwcfUc3l8QsYWazoTO
+        yqbHiRfkQGE1oFXgCPctnYAgEnvbgRVfORKTRjneNuqxRJVKHxHBnrV1sn7433nTktnyRjEO13S0dQxh
+        hVGNZRy01BYSco4Da9m13BZgMxHJO78BlnEDd87zY5BH9y9TCHsdEZtP8vOxbutei/Xb921Qpxq8w7s5
+        +CGnWCr8OMVjPvGoKzPHEgl7j+PHh2eXeLWgvb8x1xF6YlvhY+qS2cgdl/OF3Y93+dnHzwe4mL3MF6c7
+        1Bnu44iEub8IzRRKWFmLnt16yZJ5qfB7ddn8J0lECJLS+2Zl1qwK8uhhV/ZQyH27s4lW5DQ5oYgJWSLq
+        koWJEqmZIyIdsUWEem+Qx4UVkbD4wTki8R2JsTgiEgoMOyKJHVlMEQklJv4XIhKKfKARObnoInY4QYvJ
+        DAWiPFb8NyKG8TcjCEGhoW6XhQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="errorMes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

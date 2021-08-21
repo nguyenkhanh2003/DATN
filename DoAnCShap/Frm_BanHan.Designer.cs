@@ -373,18 +373,19 @@ namespace DoAnCShap
             this.btnThenKH.Text = "Thêm Khách Mới";
             this.btnThenKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThenKH.UseVisualStyleBackColor = false;
-            this.btnThenKH.Click += new System.EventHandler(this.btnThenKH_Click);
+            this.btnThenKH.Click += new System.EventHandler(this.btnLuuKH_Click);
             // 
             // btnTimKH
             // 
             this.btnTimKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKH.Location = new System.Drawing.Point(208, 59);
+            this.btnTimKH.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKH.Image")));
+            this.btnTimKH.Location = new System.Drawing.Point(211, 51);
             this.btnTimKH.Name = "btnTimKH";
-            this.btnTimKH.Size = new System.Drawing.Size(76, 29);
+            this.btnTimKH.Size = new System.Drawing.Size(76, 95);
             this.btnTimKH.TabIndex = 33;
-            this.btnTimKH.Text = "Tìm Kiếm";
-            this.btnTimKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimKH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTimKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTimKH.UseVisualStyleBackColor = true;
             this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
             // 
@@ -512,7 +513,7 @@ namespace DoAnCShap
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(11, 93);
+            this.label16.Location = new System.Drawing.Point(11, 88);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 21);
             this.label16.TabIndex = 44;
@@ -523,7 +524,7 @@ namespace DoAnCShap
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(306, 93);
+            this.label8.Location = new System.Drawing.Point(306, 88);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 21);
             this.label8.TabIndex = 45;
@@ -534,7 +535,7 @@ namespace DoAnCShap
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(497, 35);
+            this.label7.Location = new System.Drawing.Point(497, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 21);
             this.label7.TabIndex = 46;
@@ -559,7 +560,7 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenkH.BackColor = System.Drawing.Color.White;
             this.txtTenkH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenkH.Location = new System.Drawing.Point(501, 59);
+            this.txtTenkH.Location = new System.Drawing.Point(501, 51);
             this.txtTenkH.Multiline = true;
             this.txtTenkH.Name = "txtTenkH";
             this.txtTenkH.Size = new System.Drawing.Size(245, 29);
@@ -569,7 +570,7 @@ namespace DoAnCShap
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(306, 35);
+            this.label1.Location = new System.Drawing.Point(306, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 44;
@@ -580,7 +581,7 @@ namespace DoAnCShap
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 35);
+            this.label6.Location = new System.Drawing.Point(11, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 21);
             this.label6.TabIndex = 47;
@@ -591,7 +592,7 @@ namespace DoAnCShap
             // 
             this.txtMaKH.BackColor = System.Drawing.Color.White;
             this.txtMaKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKH.Location = new System.Drawing.Point(310, 59);
+            this.txtMaKH.Location = new System.Drawing.Point(310, 51);
             this.txtMaKH.Multiline = true;
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.ReadOnly = true;
@@ -603,7 +604,7 @@ namespace DoAnCShap
             // 
             this.txtSDT.BackColor = System.Drawing.Color.White;
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(15, 59);
+            this.txtSDT.Location = new System.Drawing.Point(15, 51);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(177, 29);
@@ -836,7 +837,7 @@ namespace DoAnCShap
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.btnTimKH);
             this.groupBox5.Controls.Add(this.txtMaKH);
-            this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(10, 49);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(762, 155);

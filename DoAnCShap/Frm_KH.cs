@@ -55,11 +55,7 @@ namespace DoAnCShap
             btnLuu.Enabled = b2;
             btnHuy.Enabled = b2;
         }
-        public void VisiButton(Boolean b1, Boolean b2)
-        {
-            btnLuu.Visible = b1;
-            btnCapNhat.Visible = b2;
-        }
+
 
         public void Clear()
         {
@@ -90,7 +86,6 @@ namespace DoAnCShap
         {
             xulytextbox(false, true);
             xulychucnang(true, false, false);
-            VisiButton(true, false);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -99,7 +94,6 @@ namespace DoAnCShap
             xulytextbox(true, false);
             Clear();
             flag = 1;
-            VisiButton(true, false);
             if (bus.PhatSinhMa("").Rows.Count == 0)
             {
                 txtMaKh.Text = "KH00";
@@ -172,7 +166,6 @@ namespace DoAnCShap
                         bus.AddData(kh); ;
                         MessageBox.Show("Thêm Khách Hàng Thành Công");
                         xulychucnang(true, false, false);
-                        VisiButton(true, false);
                         Clear();
                     }
                 }
@@ -244,57 +237,11 @@ namespace DoAnCShap
         }
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            if (txtTenkh.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtTenkh, "? Tên Khách hàng");
-                return;
-            }
-            if (txtSdt.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtSdt, "? Số điện thoại");
-                return;
-            }
-            if (txtSdt.Text.Length < 10)
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtSdt, "Số điện thoại không đúng");
-                return;
-            }
-            if (txtDiaCh.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtDiaCh, "? Địa chỉ");
-                return;
-            }
-            else
-            {
-                kh.MaKH = txtMaKh.Text;
-                kh.TenKH = txtTenkh.Text;
-                if (radioButtonNam.Checked == true)
-                {
-                    kh.GioiTinh = radioButtonNam.Text;
-                }
-                else
-                {
-                    kh.GioiTinh = radioButtonNu.Text;
-                }
 
-                kh.DienThoai = txtSdt.Text;
-                kh.DiaChi = txtDiaCh.Text;
-                kh.TrangThai = "1";
-                bus.EditData(kh); ;
-                MessageBox.Show("Cập Nhật Dữ Liệu Thành Công");
-                xulychucnang(true, false, false);
-                Clear();
-                Display();
-            }
         }
 
         private void dataGridViewKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            VisiButton(false, true);
             if (e.RowIndex == -1) return;
             DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
             txtMaKh.Text = row.Cells[1].Value.ToString();
