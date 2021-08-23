@@ -923,7 +923,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ErrorProvider erroMes;
         private System.Windows.Forms.Button btnXuat;
@@ -969,5 +968,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.DataGridView dataGridViewNhanVien;
     }
 }

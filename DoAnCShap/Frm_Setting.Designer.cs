@@ -61,6 +61,7 @@ namespace DoAnCShap
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel4.SuspendLayout();
             this.groupGioiThieu.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -77,6 +78,7 @@ namespace DoAnCShap
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.groupBox6);
             this.panel4.Controls.Add(this.groupGioiThieu);
             this.panel4.Controls.Add(this.groupBox3);
             this.panel4.Controls.Add(this.groupBox5);
@@ -90,8 +92,6 @@ namespace DoAnCShap
             // 
             // groupGioiThieu
             // 
-            this.groupGioiThieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupGioiThieu.Controls.Add(this.label3);
             this.groupGioiThieu.Controls.Add(this.label4);
             this.groupGioiThieu.Controls.Add(this.label10);
@@ -100,7 +100,7 @@ namespace DoAnCShap
             this.groupGioiThieu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupGioiThieu.Location = new System.Drawing.Point(48, 337);
             this.groupGioiThieu.Name = "groupGioiThieu";
-            this.groupGioiThieu.Size = new System.Drawing.Size(1050, 197);
+            this.groupGioiThieu.Size = new System.Drawing.Size(476, 197);
             this.groupGioiThieu.TabIndex = 11;
             this.groupGioiThieu.TabStop = false;
             this.groupGioiThieu.Text = "Giới Thiệu";
@@ -110,7 +110,7 @@ namespace DoAnCShap
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(389, 164);
+            this.label3.Location = new System.Drawing.Point(151, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 20);
             this.label3.TabIndex = 84;
@@ -121,7 +121,7 @@ namespace DoAnCShap
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(375, 126);
+            this.label4.Location = new System.Drawing.Point(137, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(238, 20);
             this.label4.TabIndex = 83;
@@ -132,7 +132,7 @@ namespace DoAnCShap
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(422, 90);
+            this.label10.Location = new System.Drawing.Point(184, 90);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 20);
             this.label10.TabIndex = 82;
@@ -143,7 +143,7 @@ namespace DoAnCShap
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(389, 58);
+            this.label11.Location = new System.Drawing.Point(151, 58);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(180, 20);
             this.label11.TabIndex = 81;
@@ -154,7 +154,7 @@ namespace DoAnCShap
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(286, 25);
+            this.label2.Location = new System.Drawing.Point(48, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(353, 25);
             this.label2.TabIndex = 76;
@@ -431,6 +431,18 @@ namespace DoAnCShap
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(530, 337);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(568, 197);
+            this.groupBox6.TabIndex = 11;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Quy Định";
+            // 
             // Frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,5 +500,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }

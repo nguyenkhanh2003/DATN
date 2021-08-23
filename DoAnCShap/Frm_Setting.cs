@@ -46,10 +46,6 @@ namespace DoAnCShap
                 //this.BackColor = colDig.Color;
             }
 
-            //Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-            //form1.panelTop.BackColor = Color.FromArgb(255, 128, 128);
-            //Application.DoEvents();
-
         }
 
         private void btnChonFontChu_Click(object sender, EventArgs e)
@@ -108,11 +104,7 @@ namespace DoAnCShap
                     Properties.Settings.Default.ChangeWebsite = txtWebSite.Text;
                     Properties.Settings.Default.Save();
                 }
-                //MessageBox.Show("Thành Công", "Thông Báo");
-                this.Alert("Thành Công", Frm_Alert.enmType.Success);
-                //this.Alert("Warning Alert", Frm_Alert.enmType.Warning);
-                //this.Alert("Thất Bại", Frm_Alert.enmType.Error);
-                //this.Alert("Info Alert", Frm_Alert.enmType.Info);
+                MessageBox.Show("Thành Công", "Thông Báo");
             }
 
         }

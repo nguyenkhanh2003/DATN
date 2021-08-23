@@ -11,6 +11,7 @@ using DTO;
 using BUS;
 using System.Data.SqlClient;
 using System.Windows.Forms.DataVisualization.Charting;
+using Microsoft.Reporting.WinForms;
 
 namespace DoAnCShap
 {
@@ -22,6 +23,9 @@ namespace DoAnCShap
         }
 
         DoanhThu_BUS bus = new DoanhThu_BUS();
+        Frm_SanPham lk = new Frm_SanPham();
+        ReportDataSource rs = new ReportDataSource();
+        Frm_PrintHD frm = new Frm_PrintHD();
 
         public void HienThiDoanhThu()
         {
@@ -229,6 +233,7 @@ namespace DoAnCShap
                 string condition = comboBoxNam.Text;
                 KhoanChiTheoNam(condition);
             }
+           
         }
 
         private void fillChart()

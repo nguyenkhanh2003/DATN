@@ -343,6 +343,7 @@
     <None Include="Properties\DataSources\CT_HoaDon.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon1.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon2.datasource" />
+    <None Include="Properties\DataSources\DTO.LinhKien.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\Frm_BanHan.CT_HoaDon.datasource" />
     <None Include="Properties\DataSources\Frm_BaoHanh.PbaoHanh.datasource" />
