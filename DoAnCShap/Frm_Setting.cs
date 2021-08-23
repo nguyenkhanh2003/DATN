@@ -23,6 +23,11 @@ namespace DoAnCShap
         public static string SetValueForText2;
         public static string SetValueForText3;
 
+        public void Alert(string msg, Frm_Alert.enmType type)
+        {
+            Frm_Alert frm = new Frm_Alert();
+            frm.showAlert(msg, type);
+        }
 
         private void Frm_Setting_Load(object sender, EventArgs e)
         {
@@ -103,9 +108,11 @@ namespace DoAnCShap
                     Properties.Settings.Default.ChangeWebsite = txtWebSite.Text;
                     Properties.Settings.Default.Save();
                 }
-                //Frm_MessageBox messageBox = new Frm_MessageBox();
-                //messageBox.Show();
-                MessageBox.Show("Thành Công", "Thông Báo");
+                //MessageBox.Show("Thành Công", "Thông Báo");
+                this.Alert("Thành Công", Frm_Alert.enmType.Success);
+                //this.Alert("Warning Alert", Frm_Alert.enmType.Warning);
+                //this.Alert("Thất Bại", Frm_Alert.enmType.Error);
+                //this.Alert("Info Alert", Frm_Alert.enmType.Info);
             }
 
         }

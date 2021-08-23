@@ -323,7 +323,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.pdb
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_InHoaDonNhap.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_LaylaiPass.resources
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_MessageBox.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.ResolveComReference.cache
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\MetroFramework.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\Bunifu_UI_v1.52.dll
@@ -366,3 +365,4 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\ru\DevExpress.Pdf.v1
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe.licenses
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\PictureBoxAbouAmmar.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_GioiThieu.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_Alert.resources

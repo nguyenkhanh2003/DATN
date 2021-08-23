@@ -232,11 +232,11 @@
     <Compile Include="Frm_ThongTinNhanVien.Designer.cs">
       <DependentUpon>Frm_ThongTinNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_MessageBox.cs">
+    <Compile Include="Frm_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_MessageBox.Designer.cs">
-      <DependentUpon>Frm_MessageBox.cs</DependentUpon>
+    <Compile Include="Frm_Alert.Designer.cs">
+      <DependentUpon>Frm_Alert.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -317,8 +317,8 @@
     <EmbeddedResource Include="Frm_ThongTinNhanVien.resx">
       <DependentUpon>Frm_ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_MessageBox.resx">
-      <DependentUpon>Frm_MessageBox.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Alert.resx">
+      <DependentUpon>Frm_Alert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -332,6 +332,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="reportbc.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -370,6 +371,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\success.png" />
+    <None Include="Resources\error1.png" />
+    <None Include="Resources\icons8_cancel_25px.png" />
+    <None Include="Resources\info1.png" />
+    <None Include="Resources\warning1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
