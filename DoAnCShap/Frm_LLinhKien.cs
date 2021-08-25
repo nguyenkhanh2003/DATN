@@ -69,27 +69,6 @@ namespace DoAnCShap
             return (int.Parse(macuoi) + 1).ToString();
         }
 
-        public void PhatSinhMa()
-        {
-            int count = 0;
-            count = dataGridViewKH.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            if (count <= 0)
-            {
-                txtMaLoai.Text = "LLK00";
-            }
-            else
-            {
-                chuoi = Convert.ToString(dataGridViewKH.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
-                if (chuoi2 + 1 < 10)
-                    txtMaLoai.Text = "LLK0" + (chuoi2 + 1).ToString();
-                else if (chuoi2 + 1 < 100)
-                    txtMaLoai.Text = "LLK" + (chuoi2 + 1).ToString();
-            }
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             xulychucnang(false, true, false);
@@ -119,32 +98,42 @@ namespace DoAnCShap
         {
             if (flag == 1)
             {
-                try
+                if (txtTenLoai.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenLoai, "?");
+                    return;
+                }
+                else
                 {
                     llk.MaLLK = txtMaLoai.Text;
                     llk.TenLLK = txtTenLoai.Text;
                     llk.TrangThai = "1";
-                    bus.AddData(llk); ;
-                    MessageBox.Show("Thêm Loại Linh Kiện Thành Công");
+                    bus.AddData(llk);
                     xulychucnang(true, false, false);
                     xulytextbox(true, false);
                     clear();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
             if (flag == 2)
             {
-                llk.MaLLK = txtMaLoai.Text;
-                llk.TenLLK = txtTenLoai.Text;
-                llk.TrangThai = "1";
-                bus.EditData(llk);
-                MessageBox.Show("Sửa Loại linh Kiện Thành Công");
-                clear();
-                xulychucnang(true, false, false);
-                xulytextbox(true, false);
+                if (txtTenLoai.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenLoai, "?");
+                    return;
+                }
+                else
+                {
+                    llk.MaLLK = txtMaLoai.Text;
+                    llk.TenLLK = txtTenLoai.Text;
+                    llk.TrangThai = "1";
+                    bus.EditData(llk);
+                    MessageBox.Show("Sửa Loại linh Kiện Thành Công");
+                    clear();
+                    xulychucnang(true, false, false);
+                    xulytextbox(true, false);
+                }
             }
             Display();
         }
@@ -172,7 +161,7 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
                 llk.MaLLK = txtMaLoai.Text;

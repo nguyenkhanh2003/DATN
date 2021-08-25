@@ -21,17 +21,13 @@ namespace DoAnCShap
             InitializeComponent();
 
         }
-
-        Frm_KH kh = new Frm_KH();
-        Frm_SanPham sp = new Frm_SanPham();
-        Frm_HoaDonBanHang f = new Frm_HoaDonBanHang();
+        KhachHang_BUS kh = new KhachHang_BUS();
+        KhachHang ThemKH = new KhachHang();
         BanHang_BUS bus = new BanHang_BUS();
         HoaDonBanHang hdbh = new HoaDonBanHang();
         LinhKien lk = new LinhKien();
         CT_HoaDonBanHang cthdbh = new CT_HoaDonBanHang();
-        KhachHang AddKH = new KhachHang();
         Frm_Setting frm_Setting = new Frm_Setting();
-        Form1 f1 = new Form1();
         string MaLK = "";
         ReportDataSource rs = new ReportDataSource();
         public void HienThiSanPham()
@@ -119,6 +115,17 @@ namespace DoAnCShap
                 macuoi = d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(3, 2);
             else
                 macuoi = d.Rows[sodong - 1]["MaHDBH"].ToString().Substring(4, 1);
+            return (int.Parse(macuoi) + 1).ToString();
+        }
+
+        public string PhatSinhMaKH(DataTable d)
+        {
+            int sodong = d.Rows.Count;
+            string macuoi;
+            if (sodong > 9)
+                macuoi = d.Rows[sodong - 1]["MaKH"].ToString().Substring(2, 2);
+            else
+                macuoi = d.Rows[sodong - 1]["MaKH"].ToString().Substring(3, 1);
             return (int.Parse(macuoi) + 1).ToString();
         }
 
@@ -366,32 +373,21 @@ namespace DoAnCShap
                 else
                 {
                     MessageBox.Show("Không tìm thấy khách hàng");
-                    PhatSinhMa();
+                    if (kh.PhatSinhMa("").Rows.Count == 0)
+                    {
+                        txtMaKH.Text = "KH00";
+                    }
+                    else
+                    {
+                        if (int.Parse(PhatSinhMaKH(kh.PhatSinhMa(""))) < 10)
+                            txtMaKH.Text = "KH0" + PhatSinhMaKH(kh.PhatSinhMa(""));
+                        else
+                            txtMaKH.Text = "KH" + PhatSinhMaKH(kh.PhatSinhMa(""));
+                    }
                 }
             }
         }
 
-        public void PhatSinhMa()
-        {
-            int count = 0;
-            count = kh.dataGridViewKH.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            if (count <= 0)
-            {
-                txtMaKH.Text = "KH00";
-            }
-            else
-            {
-                chuoi = Convert.ToString(kh.dataGridViewKH.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
-                if (chuoi2 + 1 < 10)
-                    txtMaKH.Text = "KH0" + (chuoi2 + 1).ToString();
-                else if (chuoi2 + 1 < 100)
-                    txtMaKH.Text = "KH" + (chuoi2 + 1).ToString();
-
-            }
-        }
         bool add;
 
         private void Frm_BanHan_Load(object sender, EventArgs e)
@@ -440,28 +436,27 @@ namespace DoAnCShap
             }
             else
             {
-                AddKH.MaKH = txtMaKH.Text;
-                AddKH.TenKH = txtTenkH.Text;
+                ThemKH.MaKH = txtMaKH.Text;
+                ThemKH.TenKH = txtTenkH.Text;
                 if (radioButtonNam.Checked == true)
                 {
-                    AddKH.GioiTinh = radioButtonNam.Text;
+                    ThemKH.GioiTinh = radioButtonNam.Text;
                 }
                 else
                 {
-                    AddKH.GioiTinh = radioButtonNu.Text;
+                    ThemKH.GioiTinh = radioButtonNu.Text;
                 }
                 if (txtSDT.Text == "")
                 {
-                    AddKH.DienThoai = "Không";
+                    ThemKH.DienThoai = "Không";
                 }
                 else
                 {
-                    AddKH.DienThoai = txtSDT.Text;
+                    ThemKH.DienThoai = txtSDT.Text;
                 }
-                AddKH.DiaChi = txtDiaChi.Text;
-                AddKH.TrangThai = "1";
-                bus.AddKH(AddKH);
-                MessageBox.Show("Thêm Khách Hàng Thành Công !");
+                ThemKH.DiaChi = txtDiaChi.Text;
+                ThemKH.TrangThai = "1";
+                kh.AddData(ThemKH);
             }
         }
 

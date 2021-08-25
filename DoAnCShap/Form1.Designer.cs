@@ -36,6 +36,7 @@ namespace DoAnCShap
             this.panelBot = new System.Windows.Forms.Panel();
             this.labeldateTime = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.btnThuNho = new System.Windows.Forms.Button();
             this.labelHienThiTenDangNhap = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lbl_HienThiForm = new System.Windows.Forms.Label();
@@ -56,17 +57,25 @@ namespace DoAnCShap
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnThuNho = new System.Windows.Forms.Button();
+            this.groupGioiThieu = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelChildForm.SuspendLayout();
             this.panelBot.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupGioiThieu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
+            this.panelChildForm.Controls.Add(this.groupGioiThieu);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(229, 50);
             this.panelChildForm.Name = "panelChildForm";
@@ -115,6 +124,20 @@ namespace DoAnCShap
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(799, 50);
             this.panelTop.TabIndex = 23;
+            // 
+            // btnThuNho
+            // 
+            this.btnThuNho.BackColor = global::DoAnCShap.Properties.Settings.Default.BackGroundColoPanelTop;
+            this.btnThuNho.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DoAnCShap.Properties.Settings.Default, "BackGroundColoPanelTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnThuNho.FlatAppearance.BorderSize = 0;
+            this.btnThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThuNho.Image = ((System.Drawing.Image)(resources.GetObject("btnThuNho.Image")));
+            this.btnThuNho.Location = new System.Drawing.Point(6, 6);
+            this.btnThuNho.Name = "btnThuNho";
+            this.btnThuNho.Size = new System.Drawing.Size(51, 35);
+            this.btnThuNho.TabIndex = 5;
+            this.btnThuNho.UseVisualStyleBackColor = false;
+            this.btnThuNho.Click += new System.EventHandler(this.iconBtnThuNho_Click);
             // 
             // labelHienThiTenDangNhap
             // 
@@ -537,17 +560,76 @@ namespace DoAnCShap
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnThuNho
+            // groupGioiThieu
             // 
-            this.btnThuNho.BackColor = System.Drawing.Color.White;
-            this.btnThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThuNho.Image = ((System.Drawing.Image)(resources.GetObject("btnThuNho.Image")));
-            this.btnThuNho.Location = new System.Drawing.Point(6, 6);
-            this.btnThuNho.Name = "btnThuNho";
-            this.btnThuNho.Size = new System.Drawing.Size(51, 35);
-            this.btnThuNho.TabIndex = 5;
-            this.btnThuNho.UseVisualStyleBackColor = false;
-            this.btnThuNho.Click += new System.EventHandler(this.iconBtnThuNho_Click);
+            this.groupGioiThieu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupGioiThieu.Controls.Add(this.label3);
+            this.groupGioiThieu.Controls.Add(this.label4);
+            this.groupGioiThieu.Controls.Add(this.label10);
+            this.groupGioiThieu.Controls.Add(this.label11);
+            this.groupGioiThieu.Controls.Add(this.label2);
+            this.groupGioiThieu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupGioiThieu.Location = new System.Drawing.Point(174, 27);
+            this.groupGioiThieu.Name = "groupGioiThieu";
+            this.groupGioiThieu.Size = new System.Drawing.Size(476, 240);
+            this.groupGioiThieu.TabIndex = 12;
+            this.groupGioiThieu.TabStop = false;
+            this.groupGioiThieu.Text = "Giới Thiệu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(151, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(205, 20);
+            this.label3.TabIndex = 84;
+            this.label3.Text = "Nguyễn Hữu Phi- 030618135?";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(137, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(238, 20);
+            this.label4.TabIndex = 83;
+            this.label4.Text = "Nguyễn Quốc Khánh - 0306181326\r\n";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(184, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 20);
+            this.label10.TabIndex = 82;
+            this.label10.Text = "Nhóm: 4-CKC\r\n";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(151, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(180, 20);
+            this.label11.TabIndex = 81;
+            this.label11.Text = "GVHD: Dương Hữu Phước";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(48, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(353, 25);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "PHẦN MỀM BÁN LINH KIỆN MÁY TÍNH";
             // 
             // Form1
             // 
@@ -566,11 +648,14 @@ namespace DoAnCShap
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelChildForm.ResumeLayout(false);
             this.panelBot.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupGioiThieu.ResumeLayout(false);
+            this.groupGioiThieu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -602,6 +687,12 @@ namespace DoAnCShap
         public System.Windows.Forms.Label lbl_HienThiForm;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnThuNho;
+        private System.Windows.Forms.GroupBox groupGioiThieu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label2;
     }
 }
 

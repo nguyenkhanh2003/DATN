@@ -527,7 +527,7 @@ namespace DoAnCShap
                 Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
                 excelAp.Application.Workbooks.Add(Type.Missing);
                 // Lưu trữ phần header
-                for (int i = 1; i < dataGridViewHD.Rows.Count + 9; i++)
+                for (int i = 1; i < dataGridViewHD.Rows.Count + 6; i++)
                 {
                     excelAp.Cells[1, i] = dataGridViewHD.Columns[i - 1].HeaderText;
 
@@ -535,7 +535,7 @@ namespace DoAnCShap
                 // Lưu trữ hàng và cột vào excel
                 for (int i = 0; i < dataGridViewHD.Rows.Count; i++)
                 {
-                    for (int j = 1; j < dataGridViewHD.Rows.Count + 8; j++)
+                    for (int j = 1; j < dataGridViewHD.Rows.Count + 5; j++)
                     {
                         excelAp.Cells[i + 2, j + 1] = dataGridViewHD.Rows[i].Cells[j].Value.ToString();
 

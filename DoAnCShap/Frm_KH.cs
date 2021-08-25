@@ -28,7 +28,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(String Condition)
         {
-            dataGridViewKH.DataSource = bus.GetSearch("Select * From KhachHang Where TenKH Like N'%" + Condition + "%'");
+            dataGridViewKH.DataSource = bus.GetSearch("Select * From KhachHang Where TenKH Like N'%" + Condition + "%' ");
         }
         void Display()
         {

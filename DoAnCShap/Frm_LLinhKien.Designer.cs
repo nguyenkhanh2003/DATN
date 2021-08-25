@@ -29,6 +29,7 @@ namespace DoAnCShap
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_LLinhKien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -54,11 +55,13 @@ namespace DoAnCShap
             this.txtMaLoai = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -324,6 +327,10 @@ namespace DoAnCShap
             this.label2.Text = "Mã Loại";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // errorMes
+            // 
+            this.errorMes.ContainerControl = this;
+            // 
             // Frm_LLinhKien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +351,7 @@ namespace DoAnCShap
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +378,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLLk;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLLK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ErrorProvider errorMes;
     }
 }

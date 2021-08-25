@@ -39,7 +39,7 @@ namespace DAL
         //  XÓA DỮ LIỆU
         public void DeleteData(LoaiLinhKien ex)
         {
-            KetNoi.ExecuteReader(@"DELETE FROM LoaiLinhKien Where MaLLK=N'" + ex.MaLLK + "'");
+            KetNoi.ExecuteReader(@"Update LoaiLinhKien Set TrangThai=N'0' Where MaLLK=N'" + ex.MaLLK + "'");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace DoAnCShap
 
         private void Frm_Setting_Load(object sender, EventArgs e)
         {
-            groupGioiThieu.Visible = false;
+            //groupGioiThieu.Visible = false;
 
         }
         private void btnThayDoi_Click(object sender, EventArgs e)
@@ -117,11 +117,6 @@ namespace DoAnCShap
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnGioiThieu_Click(object sender, EventArgs e)
-        {
-            groupGioiThieu.Visible = true;
         }
 
         private void btnQuyDinh_Click(object sender, EventArgs e)
