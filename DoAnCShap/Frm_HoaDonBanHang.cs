@@ -527,7 +527,7 @@ namespace DoAnCShap
                 Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
                 excelAp.Application.Workbooks.Add(Type.Missing);
                 // Lưu trữ phần header
-                for (int i = 1; i < dataGridViewHD.Rows.Count + 6; i++)
+                for (int i = 1; i < dataGridViewHD.Rows.Count + 5; i++)
                 {
                     excelAp.Cells[1, i] = dataGridViewHD.Columns[i - 1].HeaderText;
 

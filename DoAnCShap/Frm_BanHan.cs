@@ -185,7 +185,6 @@ namespace DoAnCShap
                         txtDiaChi.Text = DSKH.Rows[0]["DiaChi"].ToString();
                         txtMaKH.Text = DSKH.Rows[0]["MaKH"].ToString();
                     }
-
                 }
             }
         }
@@ -220,6 +219,27 @@ namespace DoAnCShap
             }
             txtTongThanhT.Text = sum.ToString();
             txtTongThanhT.Text = string.Format("{0:#,##0}", decimal.Parse(txtTongThanhT.Text));
+        }
+
+        private void Add_Datagrid(string tenlk, int soluong, decimal dongia, decimal khuyenmai, decimal thanhtien, int soluongconlai, int soluongnguyen)
+        {
+            try
+            {
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(dataGridViewHDBH);
+                newRow.Cells[1].Value = tenlk;
+                newRow.Cells[2].Value = soluong;
+                newRow.Cells[3].Value = dongia;
+                newRow.Cells[4].Value = khuyenmai;
+                newRow.Cells[5].Value = thanhtien;
+                newRow.Cells[6].Value = soluongconlai;
+                newRow.Cells[7].Value = soluongnguyen;
+                dataGridViewHDBH.Rows.Add(newRow);
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnChonMua_Click(object sender, EventArgs e)
@@ -273,8 +293,9 @@ namespace DoAnCShap
             else
             {
                 MaLK += comboBoxSP.SelectedValue.ToString() + ";";
-                object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, txtKhuyenMai.Text, labelThanhTien.Text, SoluongConLai, SoLuongTonNguyen };
-                dataGridViewHDBH.Rows.Add(t);
+                //object[] t = { comboBoxSP.Text, NumreicSL.Value, txtDonGia.Text, txtKhuyenMai.Text, labelThanhTien.Text, SoluongConLai, SoLuongTonNguyen };
+                //dataGridViewHDBH.Rows.Add(t);
+                Add_Datagrid(comboBoxSP.Text, (((int)NumreicSL.Value)), decimal.Parse(txtDonGia.Text), decimal.Parse(txtKhuyenMai.Text), decimal.Parse(labelThanhTien.Text), SoluongConLai, SoLuongTonNguyen);
             }
             TongTienSP();
             XoaTextBoXSP();
@@ -321,11 +342,11 @@ namespace DoAnCShap
                 for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
                 {
                     string malk = b[i];
-                    int soluong = int.Parse(dataGridViewHDBH.Rows[i].Cells[1].Value.ToString());
-                    decimal dongia = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[2].Value.ToString());
-                    decimal khuyenmai = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[3].Value.ToString());
-                    decimal thanhtien = decimal.Parse(dataGridViewHDBH.Rows[i].Cells[4].Value.ToString());
-                    int slconlai = int.Parse(dataGridViewHDBH.Rows[i].Cells[5].Value.ToString());
+                    int soluong = int.Parse(dataGridViewHDBH.Rows[i].Cells["SoLuong"].Value.ToString());
+                    decimal dongia = decimal.Parse(dataGridViewHDBH.Rows[i].Cells["DonGia"].Value.ToString());
+                    decimal khuyenmai = decimal.Parse(dataGridViewHDBH.Rows[i].Cells["KhuyenMai"].Value.ToString());
+                    decimal thanhtien = decimal.Parse(dataGridViewHDBH.Rows[i].Cells["ThanhTien"].Value.ToString());
+                    int slconlai = int.Parse(dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value.ToString());
                     cthdbh.MaHDBH = txtMaHD.Text;
                     cthdbh.MaLK = malk;
                     cthdbh.SoLuong = soluong;
@@ -338,9 +359,8 @@ namespace DoAnCShap
                     bus.CapNhatSLTon(lk);
                     bus.AddCTHD(cthdbh);
                 }
-                MessageBox.Show("Tạo Hóa Đơn Thành Công ");
+                MessageBox.Show("Thanh Toán Thành Công");
                 btnInHD.Enabled = true;
-                //XuLyTextBox(true, false);
                 XuLyChucNang(true, false);
             }
         }
@@ -457,6 +477,7 @@ namespace DoAnCShap
                 ThemKH.DiaChi = txtDiaChi.Text;
                 ThemKH.TrangThai = "1";
                 kh.AddData(ThemKH);
+                MessageBox.Show("Thêm Khách Hàng Thành Công");
             }
         }
 
