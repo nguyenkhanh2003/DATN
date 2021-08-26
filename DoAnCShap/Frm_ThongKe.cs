@@ -233,7 +233,7 @@ namespace DoAnCShap
                 string condition = comboBoxNam.Text;
                 KhoanChiTheoNam(condition);
             }
-           
+
         }
 
         private void fillChart()

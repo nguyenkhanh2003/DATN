@@ -31,10 +31,10 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ThongKe));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
@@ -50,7 +50,6 @@ namespace DoAnCShap
             this.radioBanNhieuYear = new System.Windows.Forms.RadioButton();
             this.radioButMuaMonth = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBaoCaoThongKe = new System.Windows.Forms.Button();
             this.btnXemDoanhThu = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxNam = new System.Windows.Forms.ComboBox();
@@ -87,7 +86,6 @@ namespace DoAnCShap
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btnBaoCaoThongKe);
             this.panel1.Controls.Add(this.btnXemDoanhThu);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBoxNam);
@@ -265,30 +263,17 @@ namespace DoAnCShap
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 284);
+            this.label3.Location = new System.Drawing.Point(57, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tháng";
             // 
-            // btnBaoCaoThongKe
-            // 
-            this.btnBaoCaoThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaoCaoThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCaoThongKe.Image")));
-            this.btnBaoCaoThongKe.Location = new System.Drawing.Point(544, 274);
-            this.btnBaoCaoThongKe.Name = "btnBaoCaoThongKe";
-            this.btnBaoCaoThongKe.Size = new System.Drawing.Size(91, 41);
-            this.btnBaoCaoThongKe.TabIndex = 6;
-            this.btnBaoCaoThongKe.Text = "Báo Cáo";
-            this.btnBaoCaoThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBaoCaoThongKe.UseVisualStyleBackColor = true;
-            this.btnBaoCaoThongKe.Click += new System.EventHandler(this.btnXemDoanhThu_Click);
-            // 
             // btnXemDoanhThu
             // 
             this.btnXemDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemDoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDoanhThu.Image")));
-            this.btnXemDoanhThu.Location = new System.Drawing.Point(429, 274);
+            this.btnXemDoanhThu.Location = new System.Drawing.Point(581, 274);
             this.btnXemDoanhThu.Name = "btnXemDoanhThu";
             this.btnXemDoanhThu.Size = new System.Drawing.Size(91, 41);
             this.btnXemDoanhThu.TabIndex = 6;
@@ -301,7 +286,7 @@ namespace DoAnCShap
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(232, 284);
+            this.label2.Location = new System.Drawing.Point(244, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 3;
@@ -344,19 +329,19 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(12, 376);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh Thu";
+            series2.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1160, 323);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -370,14 +355,14 @@ namespace DoAnCShap
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(796, 49);
             this.dataGridView1.Name = "dataGridView1";
@@ -579,7 +564,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxChi;
         private System.Windows.Forms.RadioButton radioButKhanChiNam;
-        private System.Windows.Forms.Button btnBaoCaoThongKe;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label10;

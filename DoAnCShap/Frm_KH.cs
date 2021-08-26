@@ -163,7 +163,7 @@ namespace DoAnCShap
                         kh.DienThoai = txtSdt.Text;
                         kh.DiaChi = txtDiaCh.Text;
                         kh.TrangThai = "1";
-                        bus.AddData(kh); ;
+                        bus.AddData(kh);
                         MessageBox.Show("Thêm Khách Hàng Thành Công");
                         xulychucnang(true, false, false);
                         Clear();
