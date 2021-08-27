@@ -239,7 +239,7 @@ namespace DoAnCShap
                             ctpbh.SoLuong = soluong;
                             ctpbh.GhiChu = ghichu;
                             bus.ThemCTPhieuBH(ctpbh);
-                            MessageBox.Show("Thành Công", "Thông Báo");
+                            MessageBox.Show("Tạo Phiếu Bảo Hành Thành Công");
                         }
                     }
                     ClearTextBoxPBH();
@@ -257,7 +257,7 @@ namespace DoAnCShap
                 bus.Update_CTPBH(ctpbh);
                 pbh.MaPBH = txtMaPhieu.Text;
                 bus.Update_PBH(pbh);
-                MessageBox.Show("Success");
+                MessageBox.Show("Cập Nhật Thành Công");
             }
             HienThiDSPhieu();
             ClearTextBoxPBH();
@@ -289,7 +289,7 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Xóa Hau Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Xóa Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
                 if (flag == 1)

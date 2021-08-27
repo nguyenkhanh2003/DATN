@@ -236,6 +236,7 @@ namespace DoAnCShap
             this.dataGridViewHDBH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHDBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHDBH.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -270,6 +271,7 @@ namespace DoAnCShap
             this.dataGridViewHDBH.Size = new System.Drawing.Size(746, 296);
             this.dataGridViewHDBH.TabIndex = 0;
             this.dataGridViewHDBH.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDBH_CellValueChanged);
+            this.dataGridViewHDBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewHDBH_RowPostPaint);
             this.dataGridViewHDBH.DoubleClick += new System.EventHandler(this.dataGridViewHDBH_DoubleClick);
             // 
             // txtTienKhachDua
@@ -817,7 +819,6 @@ namespace DoAnCShap
             // 
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
-            this.STT.Width = 60;
             // 
             // TenLK
             // 
@@ -825,9 +826,9 @@ namespace DoAnCShap
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.TenLK.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.MinimumWidth = 6;
             this.TenLK.Name = "TenLK";
             this.TenLK.ReadOnly = true;
-            this.TenLK.Width = 150;
             // 
             // SoLuong
             // 
@@ -836,7 +837,6 @@ namespace DoAnCShap
             this.SoLuong.DefaultCellStyle = dataGridViewCellStyle3;
             this.SoLuong.HeaderText = "Số Lượng";
             this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 90;
             // 
             // DonGia
             // 
@@ -847,7 +847,6 @@ namespace DoAnCShap
             this.DonGia.HeaderText = "Đơn Giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 123;
             // 
             // KhuyenMai
             // 
@@ -857,7 +856,6 @@ namespace DoAnCShap
             this.KhuyenMai.HeaderText = "Chiết Khấu";
             this.KhuyenMai.Name = "KhuyenMai";
             this.KhuyenMai.ReadOnly = true;
-            this.KhuyenMai.Width = 124;
             // 
             // ThanhTien
             // 
@@ -867,7 +865,6 @@ namespace DoAnCShap
             this.ThanhTien.HeaderText = "Thành Tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Width = 124;
             // 
             // SLConLai
             // 

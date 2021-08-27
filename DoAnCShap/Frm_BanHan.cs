@@ -654,6 +654,11 @@ namespace DoAnCShap
         {
             e.Handled = true;
         }
+
+        private void dataGridViewHDBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dataGridViewHDBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
     }
 
     public class CT_HoaDon
