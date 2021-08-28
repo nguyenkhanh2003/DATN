@@ -154,7 +154,7 @@ namespace DoAnCShap
                 }
             }
             bus.UpateThongTinNV(nv);
-            MessageBox.Show("Thành Công", "Thông Báo");
+            MessageBox.Show("Cập Nhật Thành Công");
         }
 
         private void btnClose_Click(object sender, EventArgs e)
