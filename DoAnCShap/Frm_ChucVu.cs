@@ -131,29 +131,20 @@ namespace DoAnCShap
                 cv.Setting = checkBoxSetting.Checked;
                 cv.TrangThai = "1";
                 bus.EditCV(cv);
-                MessageBox.Show("Thành Công");
+                MessageBox.Show("Cập Nhật Thành Công");
             }
             HienThiDSCV();
         }
 
         private void dataGridViewCV_DoubleClick(object sender, EventArgs e)
         {
-            flag = 2;
-            XuLyChucNang(false, true);
-            XuLyTextBox(true, false);
-            if (txtMaCV.Text == "CV01")
-            {
 
-                btnLuu.Enabled = false;
-            }
-            else
-            {
-
-            }
         }
 
         private void dataGridViewCV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            flag = 2;
+            XuLyChucNang(false, true);
             try
             {
                 DataGridViewRow row = dataGridViewCV.Rows[e.RowIndex];

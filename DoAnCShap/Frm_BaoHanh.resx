@@ -228,16 +228,17 @@
   <data name="btnIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAhJJREFUSEvt1j1oFEEAhuHVWIhJkTQRRIw/CAGDUUFRiMZeEIVYq9haBBEDKv4U
-        phUSRRKCYhFQGwXxpwgEbGwUSyEQbSwkkKCVre+7ewPHeZfZWS+F4AcPN3sh9+3M7c5e1pDd+LoGfmA7
-        WuYcbhfDtuYW/OyW8Y83i2Fb42f+G8XjeIefeIYemD04j1W/t7okFV/CA3TnR1l2BgvFMC+8gX35UTxJ
-        xV6NvRjEI1jyGAfhzE+UEE5sGMeLYfPUF6/UXt/gbTHMT+AU9uJeCVdgwqq1TH3xQ4Sx/7gDi7WxDpWw
-        C+YqSi/1BszC2b6Cpc7WuIRPS5iC8TNLF4dswQFEl2uVVCq20PK/SVKxhXfxHvP4iAEYl/o6juZH8SQV
-        u2db3IkuHMZ3mG24gDXZQLyPnfUoXsDdahrej854rIRQllT8DR2YwX3fIE/gle1MPaGYSsV34JZpXG6/
-        z09wFZy9Sx0TdqukYjOBZXzAS/TDOGMvrphKM65PX+21aioVO8tjxbBykorDTuVF4lXtMzl8Z766JYYt
-        NJak4kmMFMP8JHwULmGdbxAfApuLYTRJxd7HG3ENr+FV7YbibPej2WOw0WWYpOIvcMfykWaheY6T2IRm
-        D/5GR2CSis/CPXo9vI/DsZuKO5c/fWIuwiQVGy+sz3DZ57AVxr3aH3sxp2GSi9uV/8V/ZCd+we+03YZQ
-        S5b9Bj4VwuE5gpm+AAAAAElFTkSuQmCC
+        wwAADsMBx2+oZAAAAk1JREFUSEvF1t9LU2Ecx/Fd9Ad01Y1QWEFIP5AwEEmwy67ypoJQChKvRxFRNw1a
+        0CyzMhaLtCwpFdJtoqtYHUastjI3L87WftCaNK2rQUKtGH77nuM5tnPO1+c8Owt94MWu9nnz3DybjTqF
+        QsGDlhGwpFIp2de3w7+WPTuala9bPzgq6COU1XD4IWC49jiOWgnXHsdRq2GVtTiO1hrmjx8/2rEZXUZC
+        NPK+SIX0WOGSeyecO9YsHGw5JJlCfWiTkvt3MBhCIAmF3pAhPTWcm31hCKvx7iMtgEFVUsmtHIw1qVEr
+        YRa/b7IyLGlQsnK4bR3DbUp2A8P7XYFTrRfuQ+vFFWe8cej98N2Uc/qbKfsjEXZ39sv2dNyCvSeut8vR
+        utGiHS0hqNYWV9mqdimc0w/yIgZ5FaUwOcqDGOSmCXcJSyB++SObEEuaCIUa5KUJHw78AH+iBMHUbxhf
+        z3C1qEFemvC24QXY1xfitt3Op/5shB0+4JxYfUR46B4GpobTQ2uHt+KNm6744MbgGDx9MmrqTr/blN05
+        ALu6x6DOsbh2WOVPLJJPpB71ROqNhOc1Qe5wPj8PzwNB0r27DwweD42AKCb+T9jnnSbd7HWTYrF47WEW
+        dZyFFc6bhTPpLCSTnwzC4Xck03BPOS+FT7LCmUwWxp9Nkq5dvU2ai8+xwj8x3KX+NDaiS8ghiWQXcpU3
+        /jgTg2h0xsDvnTIIvnytufGr2c85jDlkPeXz+NkoR6mDsar+3poQlFnzg6MbFnbpIxQiYpBOpz3KbMWx
+        2f4Cu/AGPW+g+EQAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="errorMes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
