@@ -478,6 +478,35 @@ namespace DoAnCShap
             ClearTexBox();
         }
 
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewHDN.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+                excelAp.Application.Workbooks.Add(Type.Missing);
+                // Lưu trữ phần header
+                for (int i = 1; i < dataGridViewHDN.Rows.Count + 6; i++)
+                {
+                    excelAp.Cells[1, i] = dataGridViewHDN.Columns[i - 1].HeaderText;
+
+                }
+                // Lưu trữ hàng và cột vào excel
+                for (int i = 0; i < dataGridViewHDN.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridViewHDN.Rows.Count + 5; j++)
+                    {
+                        excelAp.Cells[i + 2, j + 1] = dataGridViewHDN.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                excelAp.Columns.AutoFit();
+                excelAp.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu");
+            }
+        }
+
         private void btnCane_Click(object sender, EventArgs e)
         {
             DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);

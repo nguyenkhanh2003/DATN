@@ -368,5 +368,34 @@ namespace DoAnCShap
         {
             this.Close();
         }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewNhaCungCap.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+                excelAp.Application.Workbooks.Add(Type.Missing);
+                // Lưu trữ phần header
+                for (int i = 1; i < dataGridViewNhaCungCap.Rows.Count + 3; i++)
+                {
+                    excelAp.Cells[1, i] = dataGridViewNhaCungCap.Columns[i - 1].HeaderText;
+
+                }
+                // Lưu trữ hàng và cột vào excel
+                for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridViewNhaCungCap.Rows.Count + 2; j++)
+                    {
+                        excelAp.Cells[i + 2, j + 1] = dataGridViewNhaCungCap.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                excelAp.Columns.AutoFit();
+                excelAp.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu");
+            }
+        }
     }
 }

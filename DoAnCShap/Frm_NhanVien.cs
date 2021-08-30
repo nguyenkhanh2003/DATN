@@ -617,10 +617,7 @@ namespace DoAnCShap
 
         private void dataGridViewNhanVien_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            using (SolidBrush b = new SolidBrush(dataGridViewNhanVien.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
-            }
+            dataGridViewNhanVien.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
 
@@ -648,7 +645,7 @@ namespace DoAnCShap
                 // Lưu trữ hàng và cột vào excel
                 for (int i = 0; i < dataGridViewNhanVien.Rows.Count; i++)
                 {
-                    for (int j = 1; j < dataGridViewNhanVien.Rows.Count + 6; j++)
+                    for (int j = 0; j < dataGridViewNhanVien.Rows.Count + 6; j++)
                     {
                         excelAp.Cells[i + 2, j + 1] = dataGridViewNhanVien.Rows[i].Cells[j].Value.ToString();
 

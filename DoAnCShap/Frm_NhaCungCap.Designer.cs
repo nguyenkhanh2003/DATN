@@ -65,6 +65,7 @@ namespace DoAnCShap
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhaCungCap)).BeginInit();
@@ -298,7 +299,7 @@ namespace DoAnCShap
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(1034, 12);
+            this.btnCancel.Location = new System.Drawing.Point(1053, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 39);
             this.btnCancel.TabIndex = 0;
@@ -311,7 +312,7 @@ namespace DoAnCShap
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(396, 12);
+            this.btnSave.Location = new System.Drawing.Point(283, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(91, 39);
             this.btnSave.TabIndex = 0;
@@ -324,7 +325,7 @@ namespace DoAnCShap
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(706, 12);
+            this.btnDelete.Location = new System.Drawing.Point(552, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(91, 39);
             this.btnDelete.TabIndex = 0;
@@ -352,6 +353,7 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnXuat);
             this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.btnCancel);
@@ -433,6 +435,19 @@ namespace DoAnCShap
             this.label1.Text = "Tên Nhà Cung Cấp";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnXuat
+            // 
+            this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
+            this.btnXuat.Location = new System.Drawing.Point(807, 12);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(91, 39);
+            this.btnXuat.TabIndex = 3;
+            this.btnXuat.Text = "Xuất";
+            this.btnXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // Frm_NhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,5 +506,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnXuat;
     }
 }
