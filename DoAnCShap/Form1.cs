@@ -164,10 +164,9 @@ namespace DoAnCShap
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (activeForm != null) activeForm.Close();
-            Form1 frm1 = new Form1();
-            frm1.Show();
-
+            //if (activeForm != null) activeForm.Close();
+            //Form1 frm1 = new Form1();
+            //frm1.Show();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

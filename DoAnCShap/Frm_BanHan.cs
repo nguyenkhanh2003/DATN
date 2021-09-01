@@ -478,6 +478,8 @@ namespace DoAnCShap
                 ThemKH.TrangThai = "1";
                 kh.AddData(ThemKH);
                 MessageBox.Show("Thêm Khách Hàng Thành Công");
+                //Console.WriteLine("Thành Công");
+
             }
         }
 
@@ -658,6 +660,16 @@ namespace DoAnCShap
         private void dataGridViewHDBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             dataGridViewHDBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void txtDonGia_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtKhuyenMai_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 

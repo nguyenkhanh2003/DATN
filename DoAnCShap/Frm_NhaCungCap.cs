@@ -46,27 +46,6 @@ namespace DoAnCShap
             dataGridViewNhaCungCap.DataSource = bus.GetData("");
         }
 
-        public void PhatSinhMa()
-        {
-            int count = 0;
-            count = dataGridViewNhaCungCap.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            if (count <= 0)
-            {
-                txtMaNCC.Text = "NCC00";
-            }
-            else
-            {
-                chuoi = Convert.ToString(dataGridViewNhaCungCap.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
-                if (chuoi2 + 1 < 10)
-                    txtMaNCC.Text = "NCC0" + (chuoi2 + 1).ToString();
-                else if (chuoi2 + 1 < 100)
-                    txtMaNCC.Text = "NCC" + (chuoi2 + 1).ToString();
-            }
-        }
-
         public string PhatSinhMaNCC(DataTable d)
         {
             int sodong = d.Rows.Count;
@@ -371,31 +350,95 @@ namespace DoAnCShap
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            if (dataGridViewNhaCungCap.Rows.Count > 0)
-            {
-                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
-                excelAp.Application.Workbooks.Add(Type.Missing);
-                // Lưu trữ phần header
-                for (int i = 1; i < dataGridViewNhaCungCap.Rows.Count + 3; i++)
-                {
-                    excelAp.Cells[1, i] = dataGridViewNhaCungCap.Columns[i - 1].HeaderText;
+            //if (dataGridViewNhaCungCap.Rows.Count > 0)
+            //{
+            //    Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+            //    excelAp.Application.Workbooks.Add(Type.Missing);
+            //    // Lưu trữ phần header
+            //    for (int i = 1; i < dataGridViewNhaCungCap.Rows.Count + 3; i++)
+            //    {
+            //        excelAp.Cells[1, i] = dataGridViewNhaCungCap.Columns[i - 1].HeaderText;
 
-                }
-                // Lưu trữ hàng và cột vào excel
-                for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count; i++)
+            //    }
+            //    // Lưu trữ hàng và cột vào excel
+            //    for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count; i++)
+            //    {
+            //        for (int j = 0; j < dataGridViewNhaCungCap.Rows.Count + 2; j++)
+            //        {
+            //            excelAp.Cells[i + 2, j + 1] = dataGridViewNhaCungCap.Rows[i].Cells[j].Value.ToString();
+            //        }
+            //    }
+            //    excelAp.Columns.AutoFit();
+            //    excelAp.Visible = true;
+            //    //SaveFileDialog saveDialog = new SaveFileDialog();
+            //    //saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+            //    //saveDialog.FilterIndex = 1;
+
+            //    //if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //    //{
+            //    //    excelAp.Application.Workbooks.Add(Type.Missing).SaveAs(saveDialog.FileName);
+            //    //    MessageBox.Show("Export Successful!");
+            //    //}
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu");
+            //}
+            try
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                app.Visible = true;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                worksheet.Name = "Records";
+
+                try
                 {
-                    for (int j = 0; j < dataGridViewNhaCungCap.Rows.Count + 2; j++)
+                    for (int i = 0; i < dataGridViewNhaCungCap.Columns.Count; i++)
                     {
-                        excelAp.Cells[i + 2, j + 1] = dataGridViewNhaCungCap.Rows[i].Cells[j].Value.ToString();
+                        worksheet.Cells[1, i + 1] = dataGridViewNhaCungCap.Columns[i].HeaderText;
+                    }
+                    for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridViewNhaCungCap.Columns.Count; j++)
+                        {
+                            if (dataGridViewNhaCungCap.Rows[i].Cells[j].Value != null)
+                            {
+                                worksheet.Cells[i + 2, j + 1] = dataGridViewNhaCungCap.Rows[i].Cells[j].Value.ToString();
+                            }
+                            else
+                            {
+                                worksheet.Cells[i + 2, j + 1] = "";
+                            }
+                        }
+                    }
+
+                    //Getting the location and file name of the excel to save from user. 
+                    SaveFileDialog saveDialog = new SaveFileDialog();
+                    saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    saveDialog.FilterIndex = 2;
+
+                    if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        workbook.SaveAs(saveDialog.FileName);
+                        MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                excelAp.Columns.AutoFit();
-                excelAp.Visible = true;
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                finally
+                {
+                    app.Quit();
+                    workbook = null;
+                    worksheet = null;
+                }
             }
-            else
-            {
-                MessageBox.Show("Không có dữ liệu");
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
         }
     }
 }
