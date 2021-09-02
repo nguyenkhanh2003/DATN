@@ -33,7 +33,7 @@ namespace DoAnCShap
 
         public void XuLyTexBox(Boolean b1, Boolean b2)
         {
-            txtMaNCC.ReadOnly = b2;
+            //txtMaNCC.ReadOnly = b2;
             txtMaNCC.Enabled = b2;
             txtEmail.Enabled = b2;
             txtDiaChi.Enabled = b2;

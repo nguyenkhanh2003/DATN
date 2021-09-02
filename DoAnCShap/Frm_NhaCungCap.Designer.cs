@@ -59,13 +59,13 @@ namespace DoAnCShap
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhaCungCap)).BeginInit();
@@ -249,7 +249,7 @@ namespace DoAnCShap
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(10, 318);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -258,7 +258,7 @@ namespace DoAnCShap
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(10, 244);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -267,7 +267,7 @@ namespace DoAnCShap
             // 
             // txtDienThoai
             // 
-            this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDienThoai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDienThoai.Location = new System.Drawing.Point(10, 184);
             this.txtDienThoai.Multiline = true;
             this.txtDienThoai.Name = "txtDienThoai";
@@ -277,7 +277,7 @@ namespace DoAnCShap
             // 
             // txtTenNCC
             // 
-            this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNCC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNCC.Location = new System.Drawing.Point(10, 118);
             this.txtTenNCC.Multiline = true;
             this.txtTenNCC.Name = "txtTenNCC";
@@ -287,7 +287,7 @@ namespace DoAnCShap
             // 
             // txtMaNCC
             // 
-            this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNCC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNCC.Location = new System.Drawing.Point(10, 54);
             this.txtMaNCC.Multiline = true;
             this.txtMaNCC.Name = "txtMaNCC";
@@ -363,6 +363,19 @@ namespace DoAnCShap
             this.panel3.Size = new System.Drawing.Size(1160, 67);
             this.panel3.TabIndex = 25;
             // 
+            // btnXuat
+            // 
+            this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
+            this.btnXuat.Location = new System.Drawing.Point(807, 12);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(91, 39);
+            this.btnXuat.TabIndex = 3;
+            this.btnXuat.Text = "Xuất";
+            this.btnXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // errorMes
             // 
             this.errorMes.ContainerControl = this;
@@ -434,19 +447,6 @@ namespace DoAnCShap
             this.label1.TabIndex = 27;
             this.label1.Text = "Tên Nhà Cung Cấp";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnXuat
-            // 
-            this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
-            this.btnXuat.Location = new System.Drawing.Point(807, 12);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(91, 39);
-            this.btnXuat.TabIndex = 3;
-            this.btnXuat.Text = "Xuất";
-            this.btnXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXuat.UseVisualStyleBackColor = true;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // Frm_NhaCungCap
             // 

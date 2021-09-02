@@ -54,7 +54,6 @@ namespace DoAnCShap
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTenCV = new System.Windows.Forms.TextBox();
@@ -129,12 +128,13 @@ namespace DoAnCShap
             this.dataGridViewCV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewCV.ColumnHeadersHeight = 25;
             this.dataGridViewCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCV,
@@ -309,11 +309,10 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnHuy);
-            this.panel3.Controls.Add(this.btnThem);
             this.panel3.Controls.Add(this.btnLuu);
-            this.panel3.Location = new System.Drawing.Point(12, 265);
+            this.panel3.Location = new System.Drawing.Point(319, 265);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1159, 59);
+            this.panel3.Size = new System.Drawing.Size(555, 59);
             this.panel3.TabIndex = 31;
             // 
             // btnHuy
@@ -321,7 +320,7 @@ namespace DoAnCShap
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(1041, 9);
+            this.btnHuy.Location = new System.Drawing.Point(375, 9);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(91, 39);
             this.btnHuy.TabIndex = 0;
@@ -330,24 +329,11 @@ namespace DoAnCShap
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnThem
-            // 
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(11, 9);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(91, 39);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // btnLuu
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(500, 9);
+            this.btnLuu.Location = new System.Drawing.Point(86, 9);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -373,7 +359,7 @@ namespace DoAnCShap
             // 
             // txtTenCV
             // 
-            this.txtTenCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenCV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenCV.Location = new System.Drawing.Point(13, 140);
             this.txtTenCV.Multiline = true;
             this.txtTenCV.Name = "txtTenCV";
@@ -382,7 +368,7 @@ namespace DoAnCShap
             // 
             // txtMaCV
             // 
-            this.txtMaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCV.Location = new System.Drawing.Point(13, 66);
             this.txtMaCV.Multiline = true;
             this.txtMaCV.Name = "txtMaCV";
@@ -765,7 +751,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCV;

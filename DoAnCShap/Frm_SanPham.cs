@@ -436,7 +436,6 @@ namespace DoAnCShap
                 lk.MaLK = txtMaLinhKien.Text;
                 bus.DeleteData(lk);
                 MessageBox.Show("Xóa Linh Kiện Thành Công");
-                //xulychucnang(true, false, false);
                 XuLyTextBox(false, true);
                 Clear();
                 DisPlay();
@@ -512,6 +511,28 @@ namespace DoAnCShap
             e.Handled = true;
         }
 
+        private void txtDonGia_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void txtSoLuong_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

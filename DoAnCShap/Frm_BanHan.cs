@@ -478,7 +478,6 @@ namespace DoAnCShap
                 ThemKH.TrangThai = "1";
                 kh.AddData(ThemKH);
                 MessageBox.Show("Thêm Khách Hàng Thành Công");
-                //Console.WriteLine("Thành Công");
 
             }
         }

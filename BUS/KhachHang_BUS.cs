@@ -9,7 +9,7 @@ using DTO;
 
 namespace BUS
 {
-   public class KhachHang_BUS
+    public class KhachHang_BUS
     {
         KetNoiDatabase c = new KetNoiDatabase();
         KhachHang_DAL bus = new KhachHang_DAL();

@@ -29,7 +29,7 @@ namespace DoAnCShap
 
         public void XuLyChucNang(Boolean b1, Boolean b2)
         {
-            btnThem.Enabled = b1;
+            //btnThem.Enabled = b1;
             btnHuy.Enabled = b2;
             btnLuu.Enabled = b2;
         }
@@ -131,7 +131,7 @@ namespace DoAnCShap
                 cv.Setting = checkBoxSetting.Checked;
                 cv.TrangThai = "1";
                 bus.EditCV(cv);
-                MessageBox.Show("Cập Nhật Thành Công");
+                MessageBox.Show("Phân Quyền Thành Công");
             }
             HienThiDSCV();
         }
