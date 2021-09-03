@@ -131,7 +131,7 @@ namespace DoAnCShap
                 cv.Setting = checkBoxSetting.Checked;
                 cv.TrangThai = "1";
                 bus.EditCV(cv);
-                MessageBox.Show("Phân Quyền Thành Công");
+                MessageBox.Show("Cấp Quyền Thành Công");
             }
             HienThiDSCV();
         }

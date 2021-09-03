@@ -31,10 +31,10 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_BaoHanh));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -79,7 +79,6 @@ namespace DoAnCShap
             this.comboBoxlK = new MetroFramework.Controls.MetroComboBox();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -89,7 +88,6 @@ namespace DoAnCShap
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -111,7 +109,7 @@ namespace DoAnCShap
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(34, 79);
+            this.btnHuy.Location = new System.Drawing.Point(807, 6);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(90, 38);
             this.btnHuy.TabIndex = 0;
@@ -124,7 +122,7 @@ namespace DoAnCShap
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(370, 6);
+            this.btnLuu.Location = new System.Drawing.Point(278, 6);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 39);
             this.btnLuu.TabIndex = 0;
@@ -137,7 +135,7 @@ namespace DoAnCShap
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(706, 6);
+            this.btnXoa.Location = new System.Drawing.Point(533, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 39);
             this.btnXoa.TabIndex = 0;
@@ -183,7 +181,7 @@ namespace DoAnCShap
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(441, 9);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -213,14 +211,14 @@ namespace DoAnCShap
             this.dataGridViewPBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPBH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewPBH.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewPBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -230,14 +228,14 @@ namespace DoAnCShap
             this.NgayLap,
             this.NgayLayHang,
             this.TrangThai});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewPBH.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewPBH.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewPBH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPBH.Location = new System.Drawing.Point(3, 25);
             this.dataGridViewPBH.Name = "dataGridViewPBH";
@@ -317,27 +315,27 @@ namespace DoAnCShap
             this.dataGridViewCTPBH.AllowUserToAddRows = false;
             this.dataGridViewCTPBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCTPBH.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCTPBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCTPBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewCTPBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCTPBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLKK,
             this.SoLuong,
             this.GhiChu});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCTPBH.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCTPBH.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCTPBH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCTPBH.Location = new System.Drawing.Point(3, 25);
             this.dataGridViewCTPBH.Name = "dataGridViewCTPBH";
@@ -375,6 +373,7 @@ namespace DoAnCShap
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnIn);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
@@ -386,9 +385,10 @@ namespace DoAnCShap
             // 
             // btnIn
             // 
+            this.btnIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(1011, 6);
+            this.btnIn.Location = new System.Drawing.Point(1047, 6);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(91, 39);
             this.btnIn.TabIndex = 0;
@@ -404,19 +404,17 @@ namespace DoAnCShap
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboKhachHang);
-            this.groupBox1.Controls.Add(this.dateTimePickerNgayLayHang);
             this.groupBox1.Controls.Add(this.comboBoxNV);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dateTimePickerNgaLap);
             this.groupBox1.Controls.Add(this.txtMaPhieu);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(487, 236);
+            this.groupBox1.Size = new System.Drawing.Size(581, 236);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Chung";
@@ -425,7 +423,7 @@ namespace DoAnCShap
             // 
             this.cboKhachHang.FormattingEnabled = true;
             this.cboKhachHang.ItemHeight = 23;
-            this.cboKhachHang.Location = new System.Drawing.Point(11, 125);
+            this.cboKhachHang.Location = new System.Drawing.Point(29, 125);
             this.cboKhachHang.Name = "cboKhachHang";
             this.cboKhachHang.Size = new System.Drawing.Size(210, 29);
             this.cboKhachHang.TabIndex = 27;
@@ -438,16 +436,16 @@ namespace DoAnCShap
             this.dateTimePickerNgayLayHang.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNgayLayHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayLayHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayLayHang.Location = new System.Drawing.Point(11, 189);
+            this.dateTimePickerNgayLayHang.Location = new System.Drawing.Point(272, 125);
             this.dateTimePickerNgayLayHang.Name = "dateTimePickerNgayLayHang";
-            this.dateTimePickerNgayLayHang.Size = new System.Drawing.Size(210, 29);
+            this.dateTimePickerNgayLayHang.Size = new System.Drawing.Size(255, 29);
             this.dateTimePickerNgayLayHang.TabIndex = 20;
             // 
             // comboBoxNV
             // 
             this.comboBoxNV.FormattingEnabled = true;
             this.comboBoxNV.ItemHeight = 23;
-            this.comboBoxNV.Location = new System.Drawing.Point(246, 56);
+            this.comboBoxNV.Location = new System.Drawing.Point(294, 56);
             this.comboBoxNV.Name = "comboBoxNV";
             this.comboBoxNV.Size = new System.Drawing.Size(208, 29);
             this.comboBoxNV.TabIndex = 26;
@@ -457,7 +455,7 @@ namespace DoAnCShap
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 93);
+            this.label4.Location = new System.Drawing.Point(25, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 21);
             this.label4.TabIndex = 25;
@@ -468,7 +466,7 @@ namespace DoAnCShap
             this.dateTimePickerNgaLap.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNgaLap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgaLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgaLap.Location = new System.Drawing.Point(246, 128);
+            this.dateTimePickerNgaLap.Location = new System.Drawing.Point(294, 125);
             this.dateTimePickerNgaLap.Name = "dateTimePickerNgaLap";
             this.dateTimePickerNgaLap.Size = new System.Drawing.Size(208, 29);
             this.dateTimePickerNgaLap.TabIndex = 24;
@@ -476,7 +474,7 @@ namespace DoAnCShap
             // txtMaPhieu
             // 
             this.txtMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPhieu.Location = new System.Drawing.Point(11, 56);
+            this.txtMaPhieu.Location = new System.Drawing.Point(29, 56);
             this.txtMaPhieu.Multiline = true;
             this.txtMaPhieu.Name = "txtMaPhieu";
             this.txtMaPhieu.Size = new System.Drawing.Size(210, 29);
@@ -488,7 +486,7 @@ namespace DoAnCShap
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(249, 93);
+            this.label3.Location = new System.Drawing.Point(290, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 21);
             this.label3.TabIndex = 20;
@@ -500,7 +498,7 @@ namespace DoAnCShap
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 157);
+            this.label9.Location = new System.Drawing.Point(268, 97);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 21);
             this.label9.TabIndex = 19;
@@ -512,7 +510,7 @@ namespace DoAnCShap
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(242, 32);
+            this.label5.Location = new System.Drawing.Point(290, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 21);
             this.label5.TabIndex = 21;
@@ -524,7 +522,7 @@ namespace DoAnCShap
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 32);
+            this.label1.Location = new System.Drawing.Point(25, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 22;
@@ -536,7 +534,7 @@ namespace DoAnCShap
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 32);
+            this.label6.Location = new System.Drawing.Point(15, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 21);
             this.label6.TabIndex = 23;
@@ -548,7 +546,7 @@ namespace DoAnCShap
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(283, 32);
+            this.label7.Location = new System.Drawing.Point(268, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 21);
             this.label7.TabIndex = 22;
@@ -560,7 +558,7 @@ namespace DoAnCShap
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 94);
+            this.label8.Location = new System.Drawing.Point(15, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 21;
@@ -569,30 +567,32 @@ namespace DoAnCShap
             // 
             // txtSL
             // 
+            this.txtSL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.Location = new System.Drawing.Point(287, 57);
+            this.txtSL.Location = new System.Drawing.Point(272, 59);
             this.txtSL.Multiline = true;
             this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(155, 29);
+            this.txtSL.Size = new System.Drawing.Size(255, 29);
             this.txtSL.TabIndex = 25;
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(6, 125);
+            this.txtGhiChu.Location = new System.Drawing.Point(19, 125);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(257, 93);
+            this.txtGhiChu.Size = new System.Drawing.Size(233, 29);
             this.txtGhiChu.TabIndex = 24;
             // 
             // comboBoxlK
             // 
             this.comboBoxlK.FormattingEnabled = true;
             this.comboBoxlK.ItemHeight = 23;
-            this.comboBoxlK.Location = new System.Drawing.Point(6, 56);
+            this.comboBoxlK.Location = new System.Drawing.Point(19, 59);
             this.comboBoxlK.Name = "comboBoxlK";
-            this.comboBoxlK.Size = new System.Drawing.Size(257, 29);
+            this.comboBoxlK.Size = new System.Drawing.Size(233, 29);
             this.comboBoxlK.TabIndex = 26;
             this.comboBoxlK.UseSelectable = true;
             // 
@@ -602,7 +602,7 @@ namespace DoAnCShap
             this.btnThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemSP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
-            this.btnThemSP.Location = new System.Drawing.Point(34, 17);
+            this.btnThemSP.Location = new System.Drawing.Point(245, 182);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(90, 38);
             this.btnThemSP.TabIndex = 4;
@@ -615,29 +615,21 @@ namespace DoAnCShap
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.comboBoxlK);
+            this.groupBox4.Controls.Add(this.btnThemSP);
+            this.groupBox4.Controls.Add(this.dateTimePickerNgayLayHang);
             this.groupBox4.Controls.Add(this.txtGhiChu);
             this.groupBox4.Controls.Add(this.txtSL);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(510, 51);
+            this.groupBox4.Location = new System.Drawing.Point(599, 51);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(511, 236);
+            this.groupBox4.Size = new System.Drawing.Size(573, 236);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Bảo Hành";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnHuy);
-            this.panel3.Controls.Add(this.btnThemSP);
-            this.panel3.Location = new System.Drawing.Point(1027, 65);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(142, 222);
-            this.panel3.TabIndex = 17;
             // 
             // Frm_BaoHanh
             // 
@@ -645,7 +637,6 @@ namespace DoAnCShap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 711);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
@@ -667,7 +658,6 @@ namespace DoAnCShap
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -717,6 +707,5 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLayHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.Panel panel3;
     }
 }

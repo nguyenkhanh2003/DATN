@@ -322,7 +322,7 @@ namespace DoAnCShap
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.Location = new System.Drawing.Point(375, 9);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(91, 39);
+            this.btnHuy.Size = new System.Drawing.Size(105, 40);
             this.btnHuy.TabIndex = 0;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -332,12 +332,13 @@ namespace DoAnCShap
             // btnLuu
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(86, 9);
+            this.btnLuu.Location = new System.Drawing.Point(85, 9);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(91, 39);
+            this.btnLuu.Size = new System.Drawing.Size(117, 40);
             this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Text = "Cấp Quyền";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);

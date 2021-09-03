@@ -123,5 +123,10 @@ namespace DoAnCShap
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(34, 36, 49);
+        }
     }
 }

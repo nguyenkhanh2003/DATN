@@ -285,6 +285,9 @@ namespace DoAnCShap
         {
             int vitri = dataGridViewPBH.CurrentCell.RowIndex;
             HienThiPhieuBHTextBox(vitri, bus.GetPBH(""));
+            XuLyChucNang(true, true, true, false);
+            flag = 1;
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -317,8 +320,6 @@ namespace DoAnCShap
         private void dataGridViewCTPBH_DoubleClick(object sender, EventArgs e)
         {
             flag = 2;
-            XuLyChucNang(false, true, false, false);
-            XuLyTexBox(true);
         }
 
         private void dataGridViewCTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -330,13 +331,13 @@ namespace DoAnCShap
             flag = 2;
             btnThemSP.Enabled = false;
             XuLyTexBox(true);
+            XuLyChucNang(true, true, false, false);
+            XuLyTexBox(true);
         }
 
         private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(false, true, true, false);
 
-            flag = 1;
         }
 
         private void btnXoaCT_Click(object sender, EventArgs e)
@@ -434,7 +435,7 @@ namespace DoAnCShap
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không", "Thông Bán", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn hủy hay không", "Thông Bán", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
                 XuLyChucNang(true, false, false, false);
