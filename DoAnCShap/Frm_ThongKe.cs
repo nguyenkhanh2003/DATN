@@ -208,11 +208,11 @@ namespace DoAnCShap
                 Top3SPMuaNhieuTrongThang(condition);
             }
 
-            if (radioButTop3HDMua.Checked == true)
-            {
-                string condition = comboBoxThang.Text;
-                Top3HDMuaNhieuTrongThang(condition);
-            }
+            //if (radioButTop3HDMua.Checked == true)
+            //{
+            //    string condition = comboBoxThang.Text;
+            //    Top3HDMuaNhieuTrongThang(condition);
+            //}
             if (radioButKhachMuaNhieeu.Checked == true)
             {
                 string condition = comboBoxThang.Text;

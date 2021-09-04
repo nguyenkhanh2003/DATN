@@ -32,7 +32,7 @@ namespace DoAnCShap
         private void Frm_Setting_Load(object sender, EventArgs e)
         {
             //groupGioiThieu.Visible = false;
-
+            groupTroGiup.Visible = false;
         }
         private void btnThayDoi_Click(object sender, EventArgs e)
         {
@@ -70,18 +70,6 @@ namespace DoAnCShap
                 errorMes.SetError(txtSDT, "? Số Điện Thoại");
                 return;
             }
-            //if (txtHotLine.Text == "")
-            //{
-            //    errorMes.BlinkRate = 100;
-            //    errorMes.SetError(txtHotLine, "? Hotline");
-            //    return;
-            //}
-            //if (txtDiaChi.Text == "")
-            //{
-            //    errorMes.BlinkRate = 100;
-            //    errorMes.SetError(txtDiaChi, "? Địa Chỉ");
-            //    return;
-            //}
             else
             {
                 if (txtSDT.Text != "")
@@ -126,7 +114,7 @@ namespace DoAnCShap
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(34, 36, 49);
+            groupTroGiup.Visible = true;
         }
     }
 }

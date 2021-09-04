@@ -75,7 +75,7 @@ namespace DoAnCShap
             btnTaoPhieu.Enabled = b1;
             btnLuu.Enabled = b2;
             btnChon.Enabled = b2;
-            btnCapNhat.Enabled = b3;
+            //btnCapNhat.Enabled = b3;
             btnXoa.Enabled = b3;
             btnInHoaDon.Enabled = b3;
             btnCane.Enabled = b4;
@@ -367,6 +367,56 @@ namespace DoAnCShap
                     ClearTexBox();
                 }
             }
+            if (flag == 2)
+            {
+                if (comboBoxNCC.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
+                    return;
+                }
+                if (comboBoxMaNV.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxMaNV, "Tên Nhân Viên Không được để trống");
+                    return;
+                }
+                if (labelTongThanhToan.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(labelTongThanhToan, "? TT");
+                    return;
+                }
+                else
+                {
+                    UpateThanhTienSP();
+                    cthdn.MaHDNH = txtMaHDN.Text;
+                    cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+                    cthdn.SoLuong = int.Parse(textBoxSoLuong.Text);
+                    cthdn.DonGia = decimal.Parse(textBoxDonGia.Text);
+                    cthdn.KhuyenMai = decimal.Parse(textBoxChietKhau.Text);
+                    cthdn.ThanhTien = decimal.Parse(labelThanhTien.Text);
+                    bus.UpdateCTHDN(cthdn);
+                    HienThicTHDN();
+                    TongThanhToanCTHDN2();
+                    hdn.MaHDNH = txtMaHDN.Text;
+                    hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
+                    hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
+                    bus.UpdateHDN(hdn);
+                    for (int i = 0; i < dataGridViewCTHDN2.Rows.Count - 0; i++)
+                    {
+                        string malk = comboBoxTenLK.SelectedValue.ToString();
+                        int SoLuongKho = int.Parse(dataGridViewCTHDN2.Rows[i].Cells["SoLuong1"].Value.ToString());
+                        LK.MaLK = malk;
+                        LK.SoLuongTon = SoLuongKho;
+                        bus.CapNhatSLKho(LK);
+                    }
+                    MessageBox.Show("Cập Nhật Thành Công");
+                    XuLyChucNang(true, false, false, false);
+                    ClearTexBox();
+                }
+            }
+
             HienThiHoaDonN();
         }
 
@@ -394,7 +444,7 @@ namespace DoAnCShap
             int vitri = dataGridViewHDN.CurrentCell.RowIndex;
             HieThiHoaDonNhapTextBox(vitri, bus.HienThiHDN(""));
             flag = 1;
-            XuLyChucNang(true, false, true, true);
+            XuLyChucNang(true, true, true, true);
             XuLyTextBox(true);
         }
 
@@ -524,8 +574,7 @@ namespace DoAnCShap
 
         private void dataGridViewHDN_DoubleClick(object sender, EventArgs e)
         {
-            XuLyChucNang(true, true, true, true);
-            XuLyTextBox(true);
+
         }
 
         private void dataGridViewHDN_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -558,7 +607,8 @@ namespace DoAnCShap
         private void dataGridViewCTHDN2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             flag = 2;
-            XuLyChucNang(true, false, true, true);
+            //XuLyChucNang(true, false, true, true);
+            XuLyChucNang(true, true, true, true);
             try
             {
                 DataGridViewRow row = dataGridViewCTHDN2.Rows[e.RowIndex];
