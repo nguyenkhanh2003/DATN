@@ -209,8 +209,6 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.csproj.Ass
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Form1.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_BanHan.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_BaoHanh.resources
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_ChiTietHoaDon.resources
-C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_ChiTietNhapPhieu.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_DangNhap.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_HoaDonBanHang.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_KH.resources

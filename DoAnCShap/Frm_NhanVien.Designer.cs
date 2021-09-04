@@ -477,6 +477,7 @@ namespace DoAnCShap
             // 
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.Location = new System.Drawing.Point(1061, 10);
             this.btnHuy.Name = "btnHuy";
@@ -490,6 +491,7 @@ namespace DoAnCShap
             // btnLuu
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.Location = new System.Drawing.Point(273, 10);
             this.btnLuu.Name = "btnLuu";
@@ -503,6 +505,7 @@ namespace DoAnCShap
             // btnXoa
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.Location = new System.Drawing.Point(538, 10);
             this.btnXoa.Name = "btnXoa";
@@ -516,6 +519,7 @@ namespace DoAnCShap
             // btnThem
             // 
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.Location = new System.Drawing.Point(5, 10);
             this.btnThem.Name = "btnThem";
@@ -544,6 +548,7 @@ namespace DoAnCShap
             // btnXuat
             // 
             this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
             this.btnXuat.Location = new System.Drawing.Point(818, 10);
             this.btnXuat.Name = "btnXuat";

@@ -642,6 +642,7 @@ namespace DoAnCShap
             // btnLuu
             // 
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.Location = new System.Drawing.Point(295, 11);
             this.btnLuu.Name = "btnLuu";
@@ -655,10 +656,11 @@ namespace DoAnCShap
             // btnTaoPhieu
             // 
             this.btnTaoPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoPhieu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoPhieu.Image")));
             this.btnTaoPhieu.Location = new System.Drawing.Point(17, 11);
             this.btnTaoPhieu.Name = "btnTaoPhieu";
-            this.btnTaoPhieu.Size = new System.Drawing.Size(101, 40);
+            this.btnTaoPhieu.Size = new System.Drawing.Size(115, 40);
             this.btnTaoPhieu.TabIndex = 0;
             this.btnTaoPhieu.Text = "Tạo Phiếu";
             this.btnTaoPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -669,10 +671,11 @@ namespace DoAnCShap
             // 
             this.btnInHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.Image")));
-            this.btnInHoaDon.Location = new System.Drawing.Point(1058, 11);
+            this.btnInHoaDon.Location = new System.Drawing.Point(1041, 12);
             this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.Size = new System.Drawing.Size(103, 40);
+            this.btnInHoaDon.Size = new System.Drawing.Size(114, 40);
             this.btnInHoaDon.TabIndex = 24;
             this.btnInHoaDon.Text = "In Hóa Đơn";
             this.btnInHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -682,6 +685,7 @@ namespace DoAnCShap
             // btnXoa
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.Location = new System.Drawing.Point(556, 11);
             this.btnXoa.Name = "btnXoa";
@@ -720,6 +724,7 @@ namespace DoAnCShap
             // btnXuat
             // 
             this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
             this.btnXuat.Location = new System.Drawing.Point(818, 12);
             this.btnXuat.Name = "btnXuat";

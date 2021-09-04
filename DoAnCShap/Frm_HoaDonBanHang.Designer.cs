@@ -379,9 +379,11 @@
             // 
             // btnXuatExel
             // 
+            this.btnXuatExel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXuatExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatExel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuatExel.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExel.Image")));
-            this.btnXuatExel.Location = new System.Drawing.Point(1020, 9);
+            this.btnXuatExel.Location = new System.Drawing.Point(1051, 9);
             this.btnXuatExel.Name = "btnXuatExel";
             this.btnXuatExel.Size = new System.Drawing.Size(84, 40);
             this.btnXuatExel.TabIndex = 5;
@@ -393,10 +395,11 @@
             // btnInHD
             // 
             this.btnInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInHD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInHD.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.Image")));
             this.btnInHD.Location = new System.Drawing.Point(722, 9);
             this.btnInHD.Name = "btnInHD";
-            this.btnInHD.Size = new System.Drawing.Size(105, 40);
+            this.btnInHD.Size = new System.Drawing.Size(119, 40);
             this.btnInHD.TabIndex = 4;
             this.btnInHD.Text = "In Hóa Đơn";
             this.btnInHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -407,10 +410,11 @@
             // btnXoa
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(374, 9);
+            this.btnXoa.Location = new System.Drawing.Point(352, 9);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(77, 40);
+            this.btnXoa.Size = new System.Drawing.Size(84, 40);
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -420,6 +424,7 @@
             // btnEdit
             // 
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(13, 9);

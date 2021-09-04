@@ -298,6 +298,7 @@ namespace DoAnCShap
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.Location = new System.Drawing.Point(1053, 12);
             this.btnCancel.Name = "btnCancel";
@@ -311,6 +312,7 @@ namespace DoAnCShap
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.Location = new System.Drawing.Point(283, 12);
             this.btnSave.Name = "btnSave";
@@ -324,6 +326,7 @@ namespace DoAnCShap
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Location = new System.Drawing.Point(552, 12);
             this.btnDelete.Name = "btnDelete";
@@ -337,6 +340,7 @@ namespace DoAnCShap
             // btnAdd
             // 
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Location = new System.Drawing.Point(20, 12);
             this.btnAdd.Name = "btnAdd";
@@ -366,6 +370,7 @@ namespace DoAnCShap
             // btnXuat
             // 
             this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
             this.btnXuat.Location = new System.Drawing.Point(807, 12);
             this.btnXuat.Name = "btnXuat";

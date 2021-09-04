@@ -319,6 +319,7 @@ namespace DoAnCShap
             // 
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.Location = new System.Drawing.Point(375, 9);
             this.btnHuy.Name = "btnHuy";
