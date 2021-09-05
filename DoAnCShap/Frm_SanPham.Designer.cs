@@ -617,7 +617,7 @@ namespace DoAnCShap
             this.txtKhuyenMai.Location = new System.Drawing.Point(582, 163);
             this.txtKhuyenMai.Multiline = true;
             this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(270, 29);
+            this.txtKhuyenMai.Size = new System.Drawing.Size(288, 29);
             this.txtKhuyenMai.TabIndex = 42;
             this.txtKhuyenMai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhuyenMai_KeyPress);
             // 
