@@ -286,6 +286,7 @@ namespace DoAnCShap
             int vitri = dataGridViewPBH.CurrentCell.RowIndex;
             HienThiPhieuBHTextBox(vitri, bus.GetPBH(""));
             XuLyChucNang(true, true, true, false);
+            XuLyTexBox(true);
             flag = 1;
 
         }
