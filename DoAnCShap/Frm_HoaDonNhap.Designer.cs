@@ -77,7 +77,6 @@ namespace DoAnCShap
             this.TongThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCane = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxNCC = new MetroFramework.Controls.MetroComboBox();
@@ -107,17 +106,18 @@ namespace DoAnCShap
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTHDN2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTHDNH)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDN)).BeginInit();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -375,7 +375,7 @@ namespace DoAnCShap
             this.btnChon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnChon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChon.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.Image")));
-            this.btnChon.Location = new System.Drawing.Point(24, 21);
+            this.btnChon.Location = new System.Drawing.Point(18, 21);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(93, 40);
             this.btnChon.TabIndex = 0;
@@ -492,7 +492,7 @@ namespace DoAnCShap
             this.btnCane.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCane.Image = ((System.Drawing.Image)(resources.GetObject("btnCane.Image")));
-            this.btnCane.Location = new System.Drawing.Point(24, 94);
+            this.btnCane.Location = new System.Drawing.Point(18, 79);
             this.btnCane.Name = "btnCane";
             this.btnCane.Size = new System.Drawing.Size(93, 40);
             this.btnCane.TabIndex = 0;
@@ -500,17 +500,6 @@ namespace DoAnCShap
             this.btnCane.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCane.UseVisualStyleBackColor = true;
             this.btnCane.Click += new System.EventHandler(this.btnCane_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnCane);
-            this.panel5.Controls.Add(this.btnChon);
-            this.panel5.Location = new System.Drawing.Point(1029, 65);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(143, 251);
-            this.panel5.TabIndex = 64;
             // 
             // errorMes
             // 
@@ -852,6 +841,18 @@ namespace DoAnCShap
             this.label10.TabIndex = 27;
             this.label10.Text = "Tên Linh Kiện";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.btnCane);
+            this.groupBox5.Controls.Add(this.btnChon);
+            this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(1020, 52);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(136, 264);
+            this.groupBox5.TabIndex = 67;
+            this.groupBox5.TabStop = false;
+            // 
             // Frm_HoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -859,9 +860,9 @@ namespace DoAnCShap
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1174, 711);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -876,13 +877,13 @@ namespace DoAnCShap
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHDN)).EndInit();
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -897,7 +898,6 @@ namespace DoAnCShap
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewHDN;
         private System.Windows.Forms.Button btnCane;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ErrorProvider errorMes;
         private System.Windows.Forms.DataGridView dataGridViewCTHDN2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -949,5 +949,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien1;
         private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

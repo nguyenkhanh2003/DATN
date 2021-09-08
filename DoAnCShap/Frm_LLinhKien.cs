@@ -151,9 +151,16 @@ namespace DoAnCShap
 
         private void dataGridViewKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
-            txtMaLoai.Text = row.Cells["MaLLK"].Value.ToString();
-            txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
+            try
+            {
+                DataGridViewRow row = dataGridViewKH.Rows[e.RowIndex];
+                txtMaLoai.Text = row.Cells["MaLLK"].Value.ToString();
+                txtTenLoai.Text = row.Cells["TenLLK"].Value.ToString();
+            }
+            catch
+            {
+
+            }
             xulytextbox(true, false);
             xulychucnang(true, true, true);
             flag = 2;
