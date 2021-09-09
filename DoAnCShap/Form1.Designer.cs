@@ -213,7 +213,7 @@ namespace DoAnCShap
             // labelHienThiTenDangNhap
             // 
             this.labelHienThiTenDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHienThiTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.labelHienThiTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelHienThiTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHienThiTenDangNhap.ForeColor = System.Drawing.Color.White;
             this.labelHienThiTenDangNhap.Location = new System.Drawing.Point(544, 6);
@@ -447,7 +447,7 @@ namespace DoAnCShap
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
