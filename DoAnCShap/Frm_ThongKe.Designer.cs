@@ -31,11 +31,13 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ThongKe));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxThang = new MetroFramework.Controls.MetroComboBox();
+            this.comboBoxNam = new MetroFramework.Controls.MetroComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
             this.radioButKhachMuaNhieeu = new System.Windows.Forms.RadioButton();
@@ -66,8 +68,6 @@ namespace DoAnCShap
             this.btnClose = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.comboBoxNam = new MetroFramework.Controls.MetroComboBox();
-            this.comboBoxThang = new MetroFramework.Controls.MetroComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -93,6 +93,39 @@ namespace DoAnCShap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(778, 321);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBoxThang
+            // 
+            this.comboBoxThang.FormattingEnabled = true;
+            this.comboBoxThang.ItemHeight = 23;
+            this.comboBoxThang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.comboBoxThang.Location = new System.Drawing.Point(117, 279);
+            this.comboBoxThang.Name = "comboBoxThang";
+            this.comboBoxThang.Size = new System.Drawing.Size(99, 29);
+            this.comboBoxThang.TabIndex = 13;
+            this.comboBoxThang.UseSelectable = true;
+            // 
+            // comboBoxNam
+            // 
+            this.comboBoxNam.FormattingEnabled = true;
+            this.comboBoxNam.ItemHeight = 23;
+            this.comboBoxNam.Location = new System.Drawing.Point(294, 280);
+            this.comboBoxNam.Name = "comboBoxNam";
+            this.comboBoxNam.Size = new System.Drawing.Size(121, 29);
+            this.comboBoxNam.TabIndex = 12;
+            this.comboBoxNam.UseSelectable = true;
             // 
             // panel2
             // 
@@ -282,19 +315,20 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 376);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.Legend = "Legend1";
-            series2.Name = "Doanh Thu";
-            series2.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series2);
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Doanh Thu";
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1160, 323);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -308,14 +342,14 @@ namespace DoAnCShap
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(796, 49);
             this.dataGridView1.Name = "dataGridView1";
@@ -456,39 +490,6 @@ namespace DoAnCShap
             this.txtSearch.Size = new System.Drawing.Size(306, 25);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBoxNam
-            // 
-            this.comboBoxNam.FormattingEnabled = true;
-            this.comboBoxNam.ItemHeight = 23;
-            this.comboBoxNam.Location = new System.Drawing.Point(294, 280);
-            this.comboBoxNam.Name = "comboBoxNam";
-            this.comboBoxNam.Size = new System.Drawing.Size(121, 29);
-            this.comboBoxNam.TabIndex = 12;
-            this.comboBoxNam.UseSelectable = true;
-            // 
-            // comboBoxThang
-            // 
-            this.comboBoxThang.FormattingEnabled = true;
-            this.comboBoxThang.ItemHeight = 23;
-            this.comboBoxThang.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.comboBoxThang.Location = new System.Drawing.Point(117, 279);
-            this.comboBoxThang.Name = "comboBoxThang";
-            this.comboBoxThang.Size = new System.Drawing.Size(99, 29);
-            this.comboBoxThang.TabIndex = 13;
-            this.comboBoxThang.UseSelectable = true;
             // 
             // Frm_ThongKe
             // 

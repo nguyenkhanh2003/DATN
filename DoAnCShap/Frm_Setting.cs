@@ -92,7 +92,7 @@ namespace DoAnCShap
                     Properties.Settings.Default.ChangeWebsite = txtWebSite.Text;
                     Properties.Settings.Default.Save();
                 }
-                MessageBox.Show("Thành Công", "Thông Báo");
+                MessageBox.Show("Cập Nhật Thành Công");
             }
 
         }

@@ -257,6 +257,11 @@ namespace DoAnCShap
                 errorMes.SetError(txtKhuyenMai, "Khuyến Mãi Không được để trống");
                 return;
             }
+            if (((int)NumreicSL.Value) > SoLuongTon)
+            {
+                MessageBox.Show("Sản Phẩm Này Chỉ Còn " + SoLuongTon);
+                return;
+            }
             int KiemTra = 0;
             int vitri = 0;
             decimal KM;

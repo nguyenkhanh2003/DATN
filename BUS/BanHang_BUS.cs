@@ -8,7 +8,7 @@ using DAL;
 using System.Data;
 namespace BUS
 {
-   public class BanHang_BUS
+    public class BanHang_BUS
     {
         BanHang_DAL bus = new BanHang_DAL();
         //  LẤY DỮ LIỆU
@@ -27,11 +27,11 @@ namespace BUS
 
         public void AddHoaDon(HoaDonBanHang ex)
         {
-             bus.AddHoaDon(ex);
+            bus.AddHoaDon(ex);
         }
         public void AddCTHD(CT_HoaDonBanHang exx)
         {
-             bus.AddCTHD(exx);
+            bus.AddCTHD(exx);
         }
 
         public void AddKH(KhachHang ex)
@@ -67,5 +67,6 @@ namespace BUS
         {
             bus.CapNhatSLTon(lk);
         }
+
     }
 }
