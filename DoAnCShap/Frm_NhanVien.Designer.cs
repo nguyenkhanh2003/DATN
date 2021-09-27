@@ -654,7 +654,7 @@ namespace DoAnCShap
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(545, 190);
+            this.txtUserName.Location = new System.Drawing.Point(545, 193);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(246, 29);

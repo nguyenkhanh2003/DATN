@@ -354,7 +354,7 @@ namespace DoAnCShap
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(276, 182);
+            this.groupBox1.Size = new System.Drawing.Size(263, 182);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức Vụ";
@@ -365,7 +365,7 @@ namespace DoAnCShap
             this.txtTenCV.Location = new System.Drawing.Point(13, 140);
             this.txtTenCV.Multiline = true;
             this.txtTenCV.Name = "txtTenCV";
-            this.txtTenCV.Size = new System.Drawing.Size(250, 29);
+            this.txtTenCV.Size = new System.Drawing.Size(232, 29);
             this.txtTenCV.TabIndex = 4;
             // 
             // txtMaCV
@@ -374,7 +374,7 @@ namespace DoAnCShap
             this.txtMaCV.Location = new System.Drawing.Point(13, 66);
             this.txtMaCV.Multiline = true;
             this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Size = new System.Drawing.Size(250, 29);
+            this.txtMaCV.Size = new System.Drawing.Size(232, 29);
             this.txtMaCV.TabIndex = 5;
             // 
             // label2
@@ -428,9 +428,9 @@ namespace DoAnCShap
             this.groupBox2.Controls.Add(this.checkBoxBanHang);
             this.groupBox2.Controls.Add(this.checkBoxNhanViem);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(294, 68);
+            this.groupBox2.Location = new System.Drawing.Point(281, 68);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(877, 182);
+            this.groupBox2.Size = new System.Drawing.Size(890, 182);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phân Quyền";

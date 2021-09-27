@@ -216,7 +216,7 @@ namespace DoAnCShap
             this.labelHienThiTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelHienThiTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHienThiTenDangNhap.ForeColor = System.Drawing.Color.White;
-            this.labelHienThiTenDangNhap.Location = new System.Drawing.Point(544, 6);
+            this.labelHienThiTenDangNhap.Location = new System.Drawing.Point(601, 6);
             this.labelHienThiTenDangNhap.Name = "labelHienThiTenDangNhap";
             this.labelHienThiTenDangNhap.Size = new System.Drawing.Size(141, 35);
             this.labelHienThiTenDangNhap.TabIndex = 4;
@@ -231,7 +231,7 @@ namespace DoAnCShap
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(714, 6);
+            this.btnLogout.Location = new System.Drawing.Point(758, 6);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(38, 35);
             this.btnLogout.TabIndex = 2;
