@@ -156,6 +156,23 @@ namespace DoAnCShap
 
         string MaLK = "";
 
+        private void Add_Datagrid(string tenlk, int soluong, string tinhtrang)
+        {
+            try
+            {
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(dataGridViewCTPBH);
+                newRow.Cells[1].Value = tenlk;
+                newRow.Cells[2].Value = soluong;
+                newRow.Cells[3].Value = tinhtrang;
+                dataGridViewCTPBH.Rows.Add(newRow);
+            }
+            catch
+            {
+
+            }
+        }
+
         private void btnThemPhieu_Click(object sender, EventArgs e)
         {
             int KiemTra = 0;
@@ -190,8 +207,9 @@ namespace DoAnCShap
             }
             else
             {
-                object[] t = { comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
-                dataGridViewCTPBH.Rows.Add(t);
+                //    object[] t = { comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
+                //    dataGridViewCTPBH.Rows.Add(t);
+                Add_Datagrid(comboBoxlK.Text, int.Parse(txtSL.Text), txtGhiChu.Text);
             }
         }
 
