@@ -249,9 +249,9 @@ namespace DoAnCShap
                         string[] b = MaLK.Split(';');
                         for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
                         {
-                            string tenlk = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString();
-                            int soluong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString());
-                            string ghichu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString();
+                            string tenlk = dataGridViewCTPBH.Rows[i].Cells["MaLKK"].Value.ToString();
+                            int soluong = int.Parse(dataGridViewCTPBH.Rows[i].Cells["SoLuong"].Value.ToString());
+                            string ghichu = dataGridViewCTPBH.Rows[i].Cells["GhiChu"].Value.ToString();
                             ctpbh.MaPBH = txtMaPhieu.Text;
                             ctpbh.TenLK = tenlk;
                             ctpbh.SoLuong = soluong;
