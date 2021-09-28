@@ -75,10 +75,10 @@
                   <Width>1.95368in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.64654in</Width>
+                  <Width>0.82245in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.95368in</Width>
+                  <Width>2.90277in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -192,7 +192,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Ghi Chú</Value>
+                                  <Value>Tình Trạng</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -368,7 +368,7 @@
             <Top>0.22792in</Top>
             <Left>0.1389in</Left>
             <Height>0.5in</Height>
-            <Width>6.38068in</Width>
+            <Width>6.50568in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

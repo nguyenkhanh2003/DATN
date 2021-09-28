@@ -274,7 +274,7 @@ namespace DoAnCShap
                 comboBoxNV.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaLap.Text = d.Rows[vitri]["NgayLapPhieu"].ToString();
                 dateTimePickerNgayLayHang.Text = d.Rows[vitri]["NgayLayHang"].ToString();
-                dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh Where MaPBH=N'" + txtMaPhieu.Text + "'");
+                dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh  Where MaPBH=N'" + txtMaPhieu.Text + "'");
             }
             catch
             {
@@ -367,6 +367,11 @@ namespace DoAnCShap
             dataGridViewPBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
+        private void dataGridViewCTPBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dataGridViewCTPBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
         string SoDienThoai = "";
         private void btnIn_Click(object sender, EventArgs e)
         {
@@ -390,9 +395,9 @@ namespace DoAnCShap
                     TenNV = comboBoxNV.Text,
                     NgayLap = dateTimePickerNgaLap.Text,
                     NgayLay = dateTimePickerNgayLayHang.Text,
-                    TenLK = dataGridViewCTPBH.Rows[i].Cells[0].Value.ToString(),
-                    SoLuong = int.Parse(dataGridViewCTPBH.Rows[i].Cells[1].Value.ToString()),
-                    GhiChu = dataGridViewCTPBH.Rows[i].Cells[2].Value.ToString(),
+                    TenLK = dataGridViewCTPBH.Rows[i].Cells["MaLKK"].Value.ToString(),
+                    SoLuong = int.Parse(dataGridViewCTPBH.Rows[i].Cells["SoLuong"].Value.ToString()),
+                    GhiChu = dataGridViewCTPBH.Rows[i].Cells["GhiChu"].Value.ToString(),
                     TenKH = cboKhachHang.Text,
                     SDT = SoDienThoai,
                 };
@@ -460,5 +465,6 @@ namespace DoAnCShap
         {
             e.Handled = true;
         }
+
     }
 }
