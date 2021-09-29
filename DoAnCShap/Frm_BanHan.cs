@@ -339,7 +339,7 @@ namespace DoAnCShap
                 hdbh.MaHDBH = txtMaHD.Text;
                 hdbh.MaKH = txtMaKH.Text;
                 hdbh.MaNV = comboBoxNV.SelectedValue.ToString();
-                hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value.Date;
+                hdbh.NgayLapHDBH = dateTimePickerNgayLap.Value;
                 hdbh.TongTien = decimal.Parse(txtTongThanhT.Text);
                 hdbh.TrangThai = "1";
                 bus.AddHoaDon(hdbh);
@@ -523,7 +523,7 @@ namespace DoAnCShap
                     DienThoai = txtSDT.Text,
                     DiaChi = txtDiaChi.Text,
                     TenNV = comboBoxNV.Text,
-                    NgayLap = dateTimePickerNgayLap.Text,
+                    NgayLap = dateTimePickerNgayLap.Value,
                     TienKhachDua = decimal.Parse(txtTienKhachDua.Text),
                     TienThua = decimal.Parse(txtTienThua.Text),
                     MaHD = txtMaHD.Text,
@@ -675,6 +675,31 @@ namespace DoAnCShap
         {
             e.Handled = true;
         }
+
+        private void comboBoxSP_TextChanged(object sender, EventArgs e)
+        {
+            DataTable DSSP = bus.LaySP("Select * From LinhKien Where TenLK=N'" + comboBoxSP.Text + "'");
+            if (DSSP.Rows.Count > 0)
+            {
+                if (comboBoxSP.Text == DSSP.Rows[0]["TenLK"].ToString())
+                {
+                    if (int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString()) == 0)
+                    {
+                        MessageBox.Show("Sản Phẩm Này Đã Hết Hàng");
+                    }
+                    else
+                    {
+                        txtDonGia.Text = DSSP.Rows[0]["DonGia"].ToString();
+                        txtDonGia.Text = string.Format("{0:#,##0}", double.Parse(txtDonGia.Text));
+                        txtKhuyenMai.Text = DSSP.Rows[0]["KhuyenMai"].ToString();
+                        txtKhuyenMai.Text = string.Format("{0:#,##0}", double.Parse(txtKhuyenMai.Text));
+                        NumreicSL.Value = 1;
+                        SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
+                        SoLuongTonNguyen = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
+                    }
+                }
+            }
+        }
     }
 
     public class CT_HoaDon
@@ -690,7 +715,7 @@ namespace DoAnCShap
         public string DiaChi { get; set; }
         public string DienThoai { get; set; }
         public string TenNV { get; set; }
-        public string NgayLap { get; set; }
+        public DateTime NgayLap { get; set; }
         public string MaHD { get; set; }
         public decimal TienKhachDua { get; set; }
         public decimal TienThua { get; set; }

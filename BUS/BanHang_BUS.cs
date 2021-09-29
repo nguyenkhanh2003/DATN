@@ -68,5 +68,9 @@ namespace BUS
             bus.CapNhatSLTon(lk);
         }
 
+        public DataTable LaySP(string condition)
+        {
+            return bus.LaySP(condition);
+        }
     }
 }

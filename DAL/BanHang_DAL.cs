@@ -43,6 +43,11 @@ values(N'" + exx.MaHDBH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
             return KetNoi.GetDataTable("" + Condition);
         }
 
+        public DataTable LaySP(string Condition)
+        {
+            return KetNoi.GetDataTable("" + Condition);
+        }
+
         public DataTable GetNhanVien(string Condition)
         {
             return KetNoi.GetDataTable("" + Condition);

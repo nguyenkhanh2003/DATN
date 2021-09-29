@@ -451,7 +451,7 @@ namespace DoAnCShap
                     DienThoai = DienThoaiKH,
                     DiaChi = DiaChiKH,
                     TenNV = comboBoxNhanVien.Text,
-                    NgayLap = dateTimePickerNgaylap.Text,
+                    NgayLap = dateTimePickerNgaylap.Value,
                     TienKhachDua = decimal.Parse(txtTienKDua.Text),
                     TienThua = decimal.Parse(txtTienThua.Text),
                     MaHD = txtMaHD.Text,

@@ -337,7 +337,7 @@ namespace DoAnCShap
                     hdn.MaHDNH = txtMaHDN.Text;
                     hdn.MaNCC = comboBoxNCC.SelectedValue.ToString();
                     hdn.MaNV = comboBoxMaNV.SelectedValue.ToString();
-                    hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
+                    hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value;
                     hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
                     hdn.TrangThai = "1";
                     bus.AddHoaDon(hdn);
