@@ -105,6 +105,7 @@ namespace DoAnCShap
             comboBoxSP.ResetText();
             txtDonGia.ResetText();
             txtKhuyenMai.ResetText();
+            labelThanhTien.ResetText();
         }
 
         public string PhatSinhMaHDBH(DataTable d)
@@ -308,6 +309,17 @@ namespace DoAnCShap
 
         decimal tongtien = 0;
 
+        public void ThanhTienLinhKien()
+        {
+            decimal ThanhTien;
+            decimal ChietKhau;
+            ChietKhau = (int.Parse(txtKhuyenMai.Text) * decimal.Parse(txtDonGia.Text) * (((int)NumreicSL.Value)) / 100);
+            ThanhTien = decimal.Parse(txtDonGia.Text) * (((int)NumreicSL.Value)) - ChietKhau;
+            labelThanhTien.Text = ThanhTien.ToString();
+            labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
+
+        }
+
         private void btnLuuHd_Click(object sender, EventArgs e)
         {
             if (txtMaHD.Text == "")
@@ -419,6 +431,10 @@ namespace DoAnCShap
         {
             btnInHD.Enabled = false;
             HienThiSanPham();
+            comboBoxSP.Text = null;
+            labelThanhTien.ResetText();
+            txtDonGia.ResetText();
+            txtKhuyenMai.ResetText();
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
             XuLyChucNang(true, false);
@@ -696,9 +712,20 @@ namespace DoAnCShap
                         NumreicSL.Value = 1;
                         SoLuongTon = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
                         SoLuongTonNguyen = int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString());
+                        ThanhTienLinhKien();
                     }
                 }
             }
+        }
+
+        private void NumreicSL_MouseUp(object sender, MouseEventArgs e)
+        {
+            ThanhTienLinhKien();
+        }
+
+        private void NumreicSL_MouseDown(object sender, MouseEventArgs e)
+        {
+            ThanhTienLinhKien();
         }
     }
 
