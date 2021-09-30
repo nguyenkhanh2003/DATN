@@ -68,6 +68,9 @@ namespace DoAnCShap
             this.btnClose = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboloinhuan = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -353,7 +356,7 @@ namespace DoAnCShap
             this.dataGridView1.Location = new System.Drawing.Point(796, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(376, 208);
+            this.dataGridView1.Size = new System.Drawing.Size(376, 172);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
             // 
@@ -396,21 +399,25 @@ namespace DoAnCShap
             this.cboDoanhThu.Name = "cboDoanhThu";
             this.cboDoanhThu.Size = new System.Drawing.Size(175, 28);
             this.cboDoanhThu.TabIndex = 45;
+            this.cboDoanhThu.SelectedIndexChanged += new System.EventHandler(this.cboDoanhThu_SelectedIndexChanged);
             // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.comboloinhuan);
             this.panel4.Controls.Add(this.cboDoanhThu);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.comboBoxChi);
-            this.panel4.Location = new System.Drawing.Point(796, 263);
+            this.panel4.Location = new System.Drawing.Point(796, 227);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(376, 107);
+            this.panel4.Size = new System.Drawing.Size(376, 143);
             this.panel4.TabIndex = 6;
             // 
             // label6
@@ -490,6 +497,38 @@ namespace DoAnCShap
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(13, 110);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 21);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "Lợi Nhuận";
+            // 
+            // comboloinhuan
+            // 
+            this.comboloinhuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboloinhuan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboloinhuan.ForeColor = System.Drawing.Color.Red;
+            this.comboloinhuan.FormattingEnabled = true;
+            this.comboloinhuan.Location = new System.Drawing.Point(117, 102);
+            this.comboloinhuan.Name = "comboloinhuan";
+            this.comboloinhuan.Size = new System.Drawing.Size(175, 28);
+            this.comboloinhuan.TabIndex = 45;
+            this.comboloinhuan.SelectedIndexChanged += new System.EventHandler(this.cboDoanhThu_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(309, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 24);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "Đ";
+            // 
             // Frm_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,5 +592,8 @@ namespace DoAnCShap
         public System.Windows.Forms.TextBox txtSearch;
         private MetroFramework.Controls.MetroComboBox comboBoxNam;
         private MetroFramework.Controls.MetroComboBox comboBoxThang;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboloinhuan;
     }
 }

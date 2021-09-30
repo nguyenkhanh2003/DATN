@@ -242,8 +242,9 @@ namespace DoAnCShap
                         pbh.MaPBH = txtMaPhieu.Text;
                         pbh.MaKH = cboKhachHang.SelectedValue.ToString();
                         pbh.MaNV = comboBoxNV.SelectedValue.ToString();
-                        pbh.NgayLap = dateTimePickerNgaLap.Value.Date;
+                        pbh.NgayLap = dateTimePickerNgaLap.Value;
                         pbh.NgayLayHang = dateTimePickerNgayLayHang.Value.Date;
+                        pbh.QuyTrinh = comboQuyTrinh.Text;
                         pbh.TrangThai = "1";
                         bus.ThemPBH(pbh);
                         string[] b = MaLK.Split(';');
@@ -256,6 +257,7 @@ namespace DoAnCShap
                             ctpbh.TenLK = tenlk;
                             ctpbh.SoLuong = soluong;
                             ctpbh.GhiChu = ghichu;
+                            ctpbh.TrangThai = "1";
                             bus.ThemCTPhieuBH(ctpbh);
                             MessageBox.Show("Tạo Phiếu Bảo Hành Thành Công");
                         }

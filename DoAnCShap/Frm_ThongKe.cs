@@ -123,7 +123,17 @@ namespace DoAnCShap
             cboDoanhThu.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
               " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
             cboDoanhThu.DisplayMember = "TT";
+            try
+            {
+                decimal LoiNhuan;
+                LoiNhuan = decimal.Parse(cboDoanhThu.Text) - decimal.Parse(comboBoxChi.Text);
+                comboloinhuan.Text = LoiNhuan.ToString();
+                comboloinhuan.Text = string.Format("{0:#,##0}", decimal.Parse(comboloinhuan.Text));
+            }
+            catch
+            {
 
+            }
         }
 
         public void KhoanChiTheoNam(string condition)
@@ -135,6 +145,18 @@ namespace DoAnCShap
             cboDoanhThu.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS TT" +
               " FROM HoaDonBanHang hd WHERE Year(hd.NgayLapHDBH)=" + condition + " ");
             cboDoanhThu.DisplayMember = "TT";
+
+            try
+            {
+                decimal LoiNhuan;
+                LoiNhuan = decimal.Parse(cboDoanhThu.Text) - decimal.Parse(comboBoxChi.Text);
+                comboloinhuan.Text = LoiNhuan.ToString();
+                comboloinhuan.Text = string.Format("{0:#,##0}", decimal.Parse(comboloinhuan.Text));
+            }
+            catch
+            {
+
+            }
         }
         public void LoadBieuDo()
         {
@@ -313,6 +335,11 @@ namespace DoAnCShap
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboDoanhThu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

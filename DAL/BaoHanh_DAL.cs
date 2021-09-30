@@ -13,7 +13,7 @@ namespace DAL
 
         public DataTable GetPBH(string condition)
         {
-            return KetNoi.GetDataTable("Select pbh.MaPBH,kh.TenKH,nv.TenNV,NgayLapPhieu,NgayLayHang From PhieuBaoHanh pbh, CT_PhieuBaoHanh ct ,KhachHang kh,NhanVien nv where kh.MaKH=pbh.MaKH and pbh.MaPBH=ct.MaPBH and nv.MaNV=pbh.MaNV and pbh.TrangThai=N'1'" + condition);
+            return KetNoi.GetDataTable(" select MaPBH,kH.TenKH,NV.TenNV,NgayLapPhieu,NgayLayHang,QuyTrinh From PhieuBaoHanh PBH,NhanVien NV,KhachHang KH Where PBH.TrangThai=N'1' and PBH.MaNV=NV.MaNV and KH.MaKH=PBH.MaKH" + condition);
         }
         public DataTable PhatSinhMa(string condition)
         {
@@ -26,7 +26,7 @@ namespace DAL
 
         public DataTable HienThiCT_PhieuBaoHanh(string conditon)
         {
-            return KetNoi.GetDataTable("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh" + conditon);
+            return KetNoi.GetDataTable("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh Where TrangThai=N'1'" + conditon);
         }
 
         public DataTable HienThiCT_PhieuBaoHanhTheoMa(string condition)
@@ -35,12 +35,12 @@ namespace DAL
         }
         public void ThemPBH(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaKH + "',N'" + ex.MaNV + "','" + ex.NgayLap + "','" + ex.NgayLayHang + "',N'" + ex.TrangThai + "')");
+            KetNoi.ExecuteReader(@"Insert Into PhieuBaoHanh Values(N'" + ex.MaPBH + "',N'" + ex.MaKH + "',N'" + ex.MaNV + "','" + ex.NgayLap + "','" + ex.NgayLayHang + "',N'" + ex.QuyTrinh + "' ,N'" + ex.TrangThai + "')");
         }
 
         public void ThemCTPhieuBaoHanh(CT_PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"Insert Into CT_PhieuBaoHanh values(N'" + ex.MaPBH + "',N'" + ex.TenLK + "',N'" + ex.SoLuong + "',N'" + ex.GhiChu + "')");
+            KetNoi.ExecuteReader(@"insert into CT_PhieuBaoHanh values(N'" + ex.MaPBH + "',N'" + ex.TenLK + "'," + ex.SoLuong + ",N'" + ex.GhiChu + "',N'" + ex.TrangThai + "')");
         }
 
         public DataTable GetNhanVien(string Condition)
@@ -74,7 +74,7 @@ namespace DAL
         }
         public void Update_PBH(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"update PhieuBaoHanh Set Where MaPBH=N'" + ex.MaPBH + "'");
+            KetNoi.ExecuteReader(@"update PhieuBaoHanh Set Where MaPBH=N'" + ex.MaPBH + "' ,N'" + ex.QuyTrinh + "'");
         }
 
         public DataTable TimHD(string condition)
