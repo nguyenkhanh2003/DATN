@@ -90,5 +90,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable("" + condition);
         }
+
+        public DataTable SanPhamTonKho(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
     }
 }

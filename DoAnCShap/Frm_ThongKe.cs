@@ -158,6 +158,11 @@ namespace DoAnCShap
 
             }
         }
+
+        public void SanPhamTonKho()
+        {
+            dataGridView1.DataSource = bus.SanPhamTonKho("Select TenLK,SoLuongTon From LinhKien Where TrangThai=N'1'");
+        }
         public void LoadBieuDo()
         {
             var chart = chart1.ChartAreas[0];
@@ -254,6 +259,11 @@ namespace DoAnCShap
             {
                 string condition = comboBoxNam.Text;
                 KhoanChiTheoNam(condition);
+            }
+
+            if (radioSPTonKho.Checked == true)
+            {
+                SanPhamTonKho();
             }
 
         }
