@@ -13,7 +13,7 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select * from LoaiLinhKien Where TrangThai=N'1'" + Condition);
+            return KetNoi.GetDataTable("Select * from LoaiLinhKien Where TrangThai=N'1' Order By TenLLK ASC" + Condition);
         }
         public DataTable LayDuLieu(string condition)
         {

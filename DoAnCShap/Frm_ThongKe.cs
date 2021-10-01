@@ -161,7 +161,7 @@ namespace DoAnCShap
 
         public void SanPhamTonKho()
         {
-            dataGridView1.DataSource = bus.SanPhamTonKho("Select TenLK,SoLuongTon From LinhKien Where TrangThai=N'1'");
+            dataGridView1.DataSource = bus.SanPhamTonKho("Select TenLK as 'Tên Linh Kiện',SoLuongTon as 'Số Lượng Tồn' From LinhKien Where TrangThai=N'1'");
         }
         public void LoadBieuDo()
         {

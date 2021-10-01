@@ -28,7 +28,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(String Condition)
         {
-            dataGridViewKH.DataSource = bus.GetSearch("Select * From KhachHang Where TenKH Like N'%" + Condition + "%' ");
+            dataGridViewKH.DataSource = bus.GetSearch("Select * From KhachHang Where TenKH Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' ");
         }
         void Display()
         {
@@ -227,7 +227,7 @@ namespace DoAnCShap
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = "1";
                     bus.EditData(kh); ;
-                    MessageBox.Show("Sửa Dữ Liệu Thành Công");
+                    //MessageBox.Show("Sửa Dữ Liệu Thành Công");
                     xulychucnang(true, false, false);
                     Clear();
                 }

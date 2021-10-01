@@ -296,7 +296,7 @@ namespace DoAnCShap
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn đẵng xuất hay không ?", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn đăng xuất hay không ?", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
                 this.Close();

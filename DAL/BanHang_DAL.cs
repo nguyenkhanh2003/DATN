@@ -14,7 +14,7 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien" + Condition);
+            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien Order By TenLK ASC" + Condition);
         }
         public DataTable PhatSinhMaHD(string condition)
         {

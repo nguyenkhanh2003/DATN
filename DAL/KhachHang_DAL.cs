@@ -14,7 +14,7 @@ namespace DAL
         //  LẤY DỮ LIỆU
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select * from KhachHang Where TrangThai=N'1'" + Condition);
+            return KetNoi.GetDataTable("Select * from KhachHang Where TrangThai=N'1' Order By TenKH ASC" + Condition);
         }
         public DataTable PhatSinhMa(string condition)
         {

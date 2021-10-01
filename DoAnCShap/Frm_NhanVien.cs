@@ -88,7 +88,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(string Condition)
         {
-            dataGridViewNhanVien.DataSource = bus.GetTimKiem("Select * From NhanVien Where TenNV Like N'%" + Condition + "%'");
+            dataGridViewNhanVien.DataSource = bus.GetTimKiem("Select * From NhanVien Where TenNV Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' or CMND Like N'%" + Condition + "%'");
         }
         public void hienthichucvu()
         {
@@ -244,7 +244,7 @@ namespace DoAnCShap
                         erroMes.SetError(txtSDT, "? SDT");
                         return;
                     }
-                    if (txtSDT.Text.Length < 10)
+                    if (txtSDT.Text.Length < 10 && txtSDT.Text.Length > 13)
                     {
                         erroMes.BlinkRate = 100;
                         erroMes.SetError(txtSDT, "Số điện thoại không đúng");
