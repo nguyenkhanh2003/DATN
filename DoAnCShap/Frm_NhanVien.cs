@@ -421,7 +421,7 @@ namespace DoAnCShap
                     }
                     nv.TrangThai = "1";
                     bus.EditData(nv);
-                    MessageBox.Show("Cập Nhật Nhân Viên Thành Công");
+                    //MessageBox.Show("Cập Nhật Nhân Viên Thành Công");
                     Clear();
                     xulychucnang(true, false, false);
                 }

@@ -360,7 +360,7 @@ namespace DoAnCShap
                     }
                     lk.TrangThai = "1";
                     bus.EditData(lk);
-                    MessageBox.Show("Cập Nhật Dữ Liệu Thành Công");
+                    //MessageBox.Show("Cập Nhật Dữ Liệu Thành Công");
                     xulychucnang(true, false, false);
                     XuLyTextBox(false, true);
                     Clear();

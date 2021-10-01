@@ -270,7 +270,7 @@ namespace DoAnCShap
                         ncc.DiaChi = txtDiaChi.Text;
                         ncc.TrangThai = "1";
                         bus.EditData(ncc);
-                        MessageBox.Show("Cập Nhật Thành Công");
+                        //MessageBox.Show("Cập Nhật Thành Công");
                         ClearTextBox();
                         XuLyChucNang(true, false, false);
                     }

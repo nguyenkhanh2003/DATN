@@ -294,6 +294,7 @@ namespace DoAnCShap
                 comboBoxNV.Text = d.Rows[vitri]["TenNV"].ToString();
                 dateTimePickerNgaLap.Text = d.Rows[vitri]["NgayLapPhieu"].ToString();
                 dateTimePickerNgayLayHang.Text = d.Rows[vitri]["NgayLayHang"].ToString();
+                comboQuyTrinh.Text = d.Rows[vitri]["QuyTrinh"].ToString();
                 dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh  Where MaPBH=N'" + txtMaPhieu.Text + "'");
             }
             catch

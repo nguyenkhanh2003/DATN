@@ -129,7 +129,7 @@ namespace DoAnCShap
                     llk.TenLLK = txtTenLoai.Text;
                     llk.TrangThai = "1";
                     bus.EditData(llk);
-                    MessageBox.Show("Sửa Loại linh Kiện Thành Công");
+                    //MessageBox.Show("Sửa Loại linh Kiện Thành Công");
                     clear();
                     xulychucnang(true, false, false);
                     xulytextbox(true, false);
