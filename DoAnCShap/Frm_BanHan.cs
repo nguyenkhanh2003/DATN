@@ -108,6 +108,14 @@ namespace DoAnCShap
             labelThanhTien.ResetText();
         }
 
+        public void KhoaTextKH(Boolean b1)
+        {
+            txtMaKH.Enabled = b1;
+            txtSDT.Enabled = b1;
+            txtDiaChi.Enabled = b1;
+            txtTenkH.Enabled = b1;
+        }
+
         public string PhatSinhMaHDBH(DataTable d)
         {
             int sodong = d.Rows.Count;
@@ -195,6 +203,7 @@ namespace DoAnCShap
         private void btnThemHD_Click(object sender, EventArgs e)
         {
             ClearTextBox();
+            KhoaTextKH(true);
             if ((bus.PhatSinhMaHDBH("")).Rows.Count == 0)
             {
                 txtMaHD.Text = "HDB00";
@@ -396,6 +405,7 @@ namespace DoAnCShap
                 {
                     if (txtSDT.Text == DSKH.Rows[0]["DienThoai"].ToString())
                     {
+                        KhoaTextKH(false);
                         txtTenkH.Text = DSKH.Rows[0]["TenKH"].ToString();
                         txtDiaChi.Text = DSKH.Rows[0]["DiaChi"].ToString();
                         txtMaKH.Text = DSKH.Rows[0]["MaKH"].ToString();
@@ -643,7 +653,7 @@ namespace DoAnCShap
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Hủy Hay Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn Có Muốn Hủy Hay Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
                 ClearTextBox();
