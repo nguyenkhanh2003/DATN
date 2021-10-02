@@ -435,6 +435,18 @@ namespace DoAnCShap
                 errorMes.SetError(txtTienThua, "? Tiền Thừa");
                 return;
             }
+            if (decimal.Parse(txtTienKDua.Text) < 0)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienKDua, "Sai Số");
+                return;
+            }
+            if (decimal.Parse(txtTienThua.Text) < 0)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienThua, "Sai Số");
+                return;
+            }
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
             for (int i = 0; i < dataGridViewCTHD.Rows.Count - 0; i++)
@@ -473,7 +485,7 @@ namespace DoAnCShap
   };
             frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
             this.frm_in.reportViewer1.RefreshReport();
-            frm_in.ShowDialog();
+            frm_in.Show();
         }
 
         private void dataGridViewHD_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -560,6 +572,14 @@ namespace DoAnCShap
         private void txtMaHD_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void txtTienKDua_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

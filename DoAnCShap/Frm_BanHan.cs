@@ -522,6 +522,19 @@ namespace DoAnCShap
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(txtTienThua, "");
+                return;
+            }
+            if (decimal.Parse(txtTienKhachDua.Text) < 0)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienKhachDua, "Sai Số");
+                return;
+            }
+            if (decimal.Parse(txtTienThua.Text) < 0)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienThua, "Sai Số");
+                return;
             }
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
