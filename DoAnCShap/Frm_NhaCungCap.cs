@@ -202,7 +202,16 @@ namespace DoAnCShap
                     {
                         ncc.MaNCC = txtMaNCC.Text;
                         ncc.TenNCC = txtTenNCC.Text;
-                        ncc.Email = txtEmail.Text;
+                        if (txtEmail.Text.Contains("@"))
+                        {
+                            ncc.Email = txtEmail.Text;
+                        }
+                        else
+                        {
+                            errorMes.BlinkRate = 100;
+                            errorMes.SetError(txtEmail, "Email phải có @");
+                            return;
+                        }
                         ncc.DienThoai = txtDienThoai.Text;
                         ncc.DiaChi = txtDiaChi.Text;
                         ncc.TrangThai = "1";

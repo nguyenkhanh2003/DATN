@@ -297,7 +297,16 @@ namespace DoAnCShap
                         }
                         else
                         {
-                            nv.Email = txtEmail.Text;
+                            if (txtEmail.Text.Contains("@"))
+                            {
+                                nv.Email = txtEmail.Text;
+                            }
+                            else
+                            {
+                                erroMes.BlinkRate = 100;
+                                erroMes.SetError(txtEmail, "Emal phải có @");
+                                return;
+                            }
                         }
                         nv.NgaySinh = dateTirmNgaySinh.Value.Date;
                         nv.DienThoai = txtSDT.Text;

@@ -467,6 +467,8 @@ namespace DoAnCShap
 
         private void btnLuuKH_Click(object sender, EventArgs e)
         {
+            int KiemTra;
+            int vitri;
             if (txtSDT.Text == "")
             {
                 errorMes.BlinkRate = 100;

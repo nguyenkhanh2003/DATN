@@ -41,6 +41,7 @@ namespace DoAnCShap
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
             this.radioButKhachMuaNhieeu = new System.Windows.Forms.RadioButton();
+            this.radioSPTonKho = new System.Windows.Forms.RadioButton();
             this.radioButKhanChiNam = new System.Windows.Forms.RadioButton();
             this.radioButThuChi = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,9 +70,6 @@ namespace DoAnCShap
             this.comboBoxChi = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.radioSPTonKho = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -174,6 +172,18 @@ namespace DoAnCShap
             this.radioButKhachMuaNhieeu.TabStop = true;
             this.radioButKhachMuaNhieeu.Text = "Khách Hàng Mua Nhiều Trong Tháng";
             this.radioButKhachMuaNhieeu.UseVisualStyleBackColor = true;
+            // 
+            // radioSPTonKho
+            // 
+            this.radioSPTonKho.AutoSize = true;
+            this.radioSPTonKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioSPTonKho.Location = new System.Drawing.Point(384, 186);
+            this.radioSPTonKho.Name = "radioSPTonKho";
+            this.radioSPTonKho.Size = new System.Drawing.Size(159, 25);
+            this.radioSPTonKho.TabIndex = 12;
+            this.radioSPTonKho.TabStop = true;
+            this.radioSPTonKho.Text = "Sản Phẩm Tồn Kho";
+            this.radioSPTonKho.UseVisualStyleBackColor = true;
             // 
             // radioButKhanChiNam
             // 
@@ -489,8 +499,6 @@ namespace DoAnCShap
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel5.Controls.Add(this.btnClose);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.txtSearch);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -510,38 +518,6 @@ namespace DoAnCShap
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(338, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 21);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Tìm Kiếm Nhanh";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(503, 12);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(306, 25);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // radioSPTonKho
-            // 
-            this.radioSPTonKho.AutoSize = true;
-            this.radioSPTonKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioSPTonKho.Location = new System.Drawing.Point(384, 186);
-            this.radioSPTonKho.Name = "radioSPTonKho";
-            this.radioSPTonKho.Size = new System.Drawing.Size(159, 25);
-            this.radioSPTonKho.TabIndex = 12;
-            this.radioSPTonKho.TabStop = true;
-            this.radioSPTonKho.Text = "Sản Phẩm Tồn Kho";
-            this.radioSPTonKho.UseVisualStyleBackColor = true;
             // 
             // Frm_ThongKe
             // 
@@ -566,7 +542,6 @@ namespace DoAnCShap
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -602,8 +577,6 @@ namespace DoAnCShap
         private System.Windows.Forms.RadioButton radioButKhanChiNam;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.TextBox txtSearch;
         private MetroFramework.Controls.MetroComboBox comboBoxNam;
         private MetroFramework.Controls.MetroComboBox comboBoxThang;
         private System.Windows.Forms.Label label8;
