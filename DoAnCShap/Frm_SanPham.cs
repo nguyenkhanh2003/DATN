@@ -422,8 +422,53 @@ namespace DoAnCShap
 
         private void dataGridViewLK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int vitri = dataGridViewLK.CurrentCell.RowIndex;
-            HienThiLK_TXT(vitri, bus.GetData(""));
+            //int vitri = dataGridViewLK.CurrentCell.RowIndex;
+            //HienThiLK_TXT(vitri, bus.GetData(""));
+            try
+            {
+                DataGridViewRow row = dataGridViewLK.Rows[e.RowIndex];
+                txtMaLinhKien.Text = row.Cells["MaLK"].Value.ToString();
+                cboMaLoai.Text = row.Cells["MaLLK"].Value.ToString();
+                comboBoxNCC.Text = row.Cells["MaNCC"].Value.ToString();
+                txtTenLinhKien.Text = row.Cells["TenLK"].Value.ToString();
+                comboBoxBaoHanh.Text = row.Cells["BaoHanh"].Value.ToString();
+                txtXuatXu.Text = row.Cells["XuatXu"].Value.ToString(); ;
+                txtTinhTrang.Text = row.Cells["TinhTrang"].Value.ToString();
+                txtDonViTinh.Text = row.Cells["DonViTinh"].Value.ToString();
+                txtDonGia.Text = row.Cells["DonGia"].Value.ToString();
+                txtSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
+                txtKhuyenMai.Text = row.Cells["KhuyenMai"].Value.ToString();
+                string[] b = row.Cells["HinhAnh"].Value.ToString().Split(';');
+                pictureBox1.Controls.Clear();
+                try
+                {
+                    int n;
+                    if (b.Length == 1)
+                        n = b.Length;
+                    else
+                        n = b.Length - 1;
+                    for (int i = 0; i < n; i++)
+                    {
+                        PictureBox p = new PictureBox();
+                        Size s = new Size(197, 158);
+                        p.Size = s;
+                        p.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictureBox1.Controls.Add(p);
+                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        p.Image = a;
+                        TenHinh = b[i];
+
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+            catch
+            {
+
+            }
             XuLyTextBox(true, false);
             xulychucnang(true, true, true);
             flag = 2;

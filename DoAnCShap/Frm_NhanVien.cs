@@ -503,11 +503,68 @@ namespace DoAnCShap
 
         private void dataGridViewNhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
-            HienThiNhanVien_TXT(vitri, bus.GetData(""));
+            //int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
+            //HienThiNhanVien_TXT(vitri, bus.GetData(""));
             xulychucnang(true, true, true);
             xulytextbox(true, false);
             flag = 2;
+            //if (cboChucVu.SelectedValue.ToString() == "CV01")
+            //{
+            //    btnXoa.Enabled = false;
+            //    cboChucVu.Enabled = false;
+            //}
+            //else
+            //{
+
+            //}
+            try
+            {
+                DataGridViewRow row = dataGridViewNhanVien.Rows[e.RowIndex];
+                txtMaNV.Text = row.Cells["MaNV"].Value.ToString();
+                cboChucVu.Text = row.Cells["MaCV"].Value.ToString();
+                txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
+                txtEmail.Text = row.Cells["Email"].Value.ToString();
+                dateTirmNgaySinh.Text = row.Cells["NgaySinh"].Value.ToString();
+                txtSDT.Text = row.Cells["DienThoai"].Value.ToString();
+                txtCMND.Text = row.Cells["CMND"].Value.ToString();
+                txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+                string[] b = row.Cells["HinhAnh"].Value.ToString().Split(';');
+                pictureBox1.Controls.Clear();
+                try
+                {
+                    int n;
+                    if (b.Length == 1)
+                        n = b.Length;
+                    else
+                        n = b.Length - 1;
+                    for (int i = 0; i < n; i++)
+                    {
+                        PictureBox p = new PictureBox();
+                        Size s = new Size(166, 153);
+                        p.Size = s;
+                        p.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictureBox1.Controls.Add(p);
+                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        p.Image = a;
+                        TenHinh = b[i];
+                    }
+                }
+                catch
+                {
+
+                }
+                txtUserName.Text = row.Cells["UserName"].Value.ToString();
+                PassW = row.Cells["Password"].Value.ToString();
+                string t = row.Cells["GioiTinh"].Value.ToString();
+                if (t == "Nam")
+                    radioButtonNam.Checked = true;
+                else
+                    radioButtonNu.Checked = true;
+            }
+            catch
+            {
+
+            }
             if (cboChucVu.SelectedValue.ToString() == "CV01")
             {
                 btnXoa.Enabled = false;
