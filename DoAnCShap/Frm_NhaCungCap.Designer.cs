@@ -41,13 +41,6 @@ namespace DoAnCShap
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewNhaCungCap = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -66,6 +59,13 @@ namespace DoAnCShap
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhaCungCap)).BeginInit();
@@ -187,54 +187,6 @@ namespace DoAnCShap
             this.dataGridViewNhaCungCap.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewNhaCungCap_RowPostPaint_1);
             this.dataGridViewNhaCungCap.DoubleClick += new System.EventHandler(this.dataGridViewNhaCungCap_DoubleClick);
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // MaNCC
-            // 
-            this.MaNCC.DataPropertyName = "MaNCC";
-            this.MaNCC.HeaderText = "Mã Nhà Cung Cấp";
-            this.MaNCC.Name = "MaNCC";
-            // 
-            // TenNCC
-            // 
-            this.TenNCC.DataPropertyName = "TenNCC";
-            this.TenNCC.HeaderText = "Tên Nhà Cung Cấp";
-            this.TenNCC.MinimumWidth = 6;
-            this.TenNCC.Name = "TenNCC";
-            // 
-            // DienThoai
-            // 
-            this.DienThoai.DataPropertyName = "DienThoai";
-            this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.MinimumWidth = 6;
-            this.DienThoai.Name = "DienThoai";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.MinimumWidth = 6;
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.Visible = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -242,9 +194,9 @@ namespace DoAnCShap
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 21);
+            this.label2.Size = new System.Drawing.Size(128, 21);
             this.label2.TabIndex = 27;
-            this.label2.Text = "Mã Nhà Cung Cấp";
+            this.label2.Text = "Mã nhà cung cấp";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtDiaChi
@@ -412,9 +364,9 @@ namespace DoAnCShap
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 286);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 21);
+            this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Địa Chỉ";
+            this.label5.Text = "Địa chỉ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -436,9 +388,9 @@ namespace DoAnCShap
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 21);
+            this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Số Điện Thoại";
+            this.label3.Text = "Số điện thoại";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
@@ -448,10 +400,58 @@ namespace DoAnCShap
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 21);
+            this.label1.Size = new System.Drawing.Size(129, 21);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Tên Nhà Cung Cấp";
+            this.label1.Text = "Tên nhà cung cấp";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaNCC
+            // 
+            this.MaNCC.DataPropertyName = "MaNCC";
+            this.MaNCC.HeaderText = "Mã nhà cung cấp";
+            this.MaNCC.Name = "MaNCC";
+            // 
+            // TenNCC
+            // 
+            this.TenNCC.DataPropertyName = "TenNCC";
+            this.TenNCC.HeaderText = "Tên nhà cung cấp";
+            this.TenNCC.MinimumWidth = 6;
+            this.TenNCC.Name = "TenNCC";
+            // 
+            // DienThoai
+            // 
+            this.DienThoai.DataPropertyName = "DienThoai";
+            this.DienThoai.HeaderText = "Điện thoại";
+            this.DienThoai.MinimumWidth = 6;
+            this.DienThoai.Name = "DienThoai";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.MinimumWidth = 6;
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Visible = false;
             // 
             // Frm_NhaCungCap
             // 
@@ -499,6 +499,12 @@ namespace DoAnCShap
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ErrorProvider errorMes;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNCC;
@@ -506,11 +512,5 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnXuat;
     }
 }

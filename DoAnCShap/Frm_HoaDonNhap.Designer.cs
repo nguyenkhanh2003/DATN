@@ -63,13 +63,6 @@ namespace DoAnCShap
             this.btnChon = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewHDN = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHDNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLapHDNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCane = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -101,6 +94,13 @@ namespace DoAnCShap
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHDNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLapHDNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLK1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -301,9 +301,9 @@ namespace DoAnCShap
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(281, 13);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(142, 20);
+            this.label13.Size = new System.Drawing.Size(132, 20);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Tìm Kiếm Linh Kiện";
+            this.label13.Text = "Tìm kiếm linh kiện";
             // 
             // txtSearch
             // 
@@ -339,6 +339,7 @@ namespace DoAnCShap
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(93, 40);
             this.btnChon.TabIndex = 0;
+            this.btnChon.Text = "Thêm";
             this.btnChon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChon.UseVisualStyleBackColor = true;
             this.btnChon.Click += new System.EventHandler(this.btnChonNhap_Click);
@@ -393,59 +394,6 @@ namespace DoAnCShap
             this.dataGridViewHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHDN_CellClick);
             this.dataGridViewHDN.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewHDN_RowPostPaint);
             this.dataGridViewHDN.DoubleClick += new System.EventHandler(this.dataGridViewHDN_DoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // MaHDNH
-            // 
-            this.MaHDNH.DataPropertyName = "MaHDNH";
-            this.MaHDNH.HeaderText = "Mã Hóa Đơn";
-            this.MaHDNH.Name = "MaHDNH";
-            this.MaHDNH.ReadOnly = true;
-            // 
-            // MaNCC
-            // 
-            this.MaNCC.DataPropertyName = "TenNCC";
-            this.MaNCC.HeaderText = "Nhà Cung Cấp";
-            this.MaNCC.Name = "MaNCC";
-            this.MaNCC.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "TenNV";
-            this.MaNV.HeaderText = "Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // NgayLapHDNH
-            // 
-            this.NgayLapHDNH.DataPropertyName = "NgayLapHDNH";
-            dataGridViewCellStyle13.Format = "dd/MM/yyyy  HH:mm:ss";
-            this.NgayLapHDNH.DefaultCellStyle = dataGridViewCellStyle13;
-            this.NgayLapHDNH.HeaderText = "Ngày Lập";
-            this.NgayLapHDNH.Name = "NgayLapHDNH";
-            this.NgayLapHDNH.ReadOnly = true;
-            // 
-            // TongThanhToan
-            // 
-            this.TongThanhToan.DataPropertyName = "TongTien";
-            dataGridViewCellStyle14.Format = "N";
-            this.TongThanhToan.DefaultCellStyle = dataGridViewCellStyle14;
-            this.TongThanhToan.HeaderText = "Tổng Tiền";
-            this.TongThanhToan.Name = "TongThanhToan";
-            this.TongThanhToan.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            this.TrangThai.Visible = false;
             // 
             // btnCane
             // 
@@ -544,9 +492,9 @@ namespace DoAnCShap
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(57, 215);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 21);
+            this.label12.Size = new System.Drawing.Size(124, 21);
             this.label12.TabIndex = 19;
-            this.label12.Text = "Tổng Thanh Toán";
+            this.label12.Text = "Tổng thanh toán";
             // 
             // label4
             // 
@@ -554,9 +502,9 @@ namespace DoAnCShap
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(57, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 21);
+            this.label4.Size = new System.Drawing.Size(72, 21);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Ngày Lập";
+            this.label4.Text = "Ngày lập";
             // 
             // label3
             // 
@@ -564,9 +512,9 @@ namespace DoAnCShap
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(57, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 21);
+            this.label3.Size = new System.Drawing.Size(105, 21);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Tên Nhân Viên";
+            this.label3.Text = "Tên nhân viên";
             // 
             // label2
             // 
@@ -574,9 +522,9 @@ namespace DoAnCShap
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(57, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 21);
+            this.label2.Size = new System.Drawing.Size(105, 21);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Nhà Cung Cấp";
+            this.label2.Text = "Nhà cung cấp";
             // 
             // label14
             // 
@@ -584,9 +532,9 @@ namespace DoAnCShap
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(57, 29);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(140, 21);
+            this.label14.Size = new System.Drawing.Size(133, 21);
             this.label14.TabIndex = 23;
-            this.label14.Text = "Mã Hóa Đơn Nhập";
+            this.label14.Text = "Mã hóa đơn nhập";
             // 
             // btnLuu
             // 
@@ -756,9 +704,9 @@ namespace DoAnCShap
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(51, 213);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 21);
+            this.label7.Size = new System.Drawing.Size(83, 21);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Thành Tiền";
+            this.label7.Text = "Thành tiền";
             // 
             // label8
             // 
@@ -766,9 +714,9 @@ namespace DoAnCShap
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(51, 166);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 21);
+            this.label8.Size = new System.Drawing.Size(107, 21);
             this.label8.TabIndex = 24;
-            this.label8.Text = "Chiết Khấu(%)";
+            this.label8.Text = "Chiết khấu(%)";
             // 
             // label11
             // 
@@ -776,9 +724,9 @@ namespace DoAnCShap
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(51, 121);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 21);
+            this.label11.Size = new System.Drawing.Size(65, 21);
             this.label11.TabIndex = 25;
-            this.label11.Text = "Đơn Giá";
+            this.label11.Text = "Đơn giá";
             // 
             // label9
             // 
@@ -786,9 +734,9 @@ namespace DoAnCShap
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(51, 77);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 21);
+            this.label9.Size = new System.Drawing.Size(73, 21);
             this.label9.TabIndex = 26;
-            this.label9.Text = "Số Lượng";
+            this.label9.Text = "Số lượng";
             // 
             // label10
             // 
@@ -796,9 +744,9 @@ namespace DoAnCShap
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(47, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 21);
+            this.label10.Size = new System.Drawing.Size(96, 21);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Tên Linh Kiện";
+            this.label10.Text = "Tên linh kiện";
             // 
             // groupBox5
             // 
@@ -813,6 +761,59 @@ namespace DoAnCShap
             this.groupBox5.TabIndex = 67;
             this.groupBox5.TabStop = false;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // MaHDNH
+            // 
+            this.MaHDNH.DataPropertyName = "MaHDNH";
+            this.MaHDNH.HeaderText = "Mã hóa đơn";
+            this.MaHDNH.Name = "MaHDNH";
+            this.MaHDNH.ReadOnly = true;
+            // 
+            // MaNCC
+            // 
+            this.MaNCC.DataPropertyName = "TenNCC";
+            this.MaNCC.HeaderText = "Nhà cung cấp";
+            this.MaNCC.Name = "MaNCC";
+            this.MaNCC.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "TenNV";
+            this.MaNV.HeaderText = "Nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // NgayLapHDNH
+            // 
+            this.NgayLapHDNH.DataPropertyName = "NgayLapHDNH";
+            dataGridViewCellStyle13.Format = "dd/MM/yyyy  HH:mm:ss";
+            this.NgayLapHDNH.DefaultCellStyle = dataGridViewCellStyle13;
+            this.NgayLapHDNH.HeaderText = "Ngày lập";
+            this.NgayLapHDNH.Name = "NgayLapHDNH";
+            this.NgayLapHDNH.ReadOnly = true;
+            // 
+            // TongThanhToan
+            // 
+            this.TongThanhToan.DataPropertyName = "TongTien";
+            dataGridViewCellStyle14.Format = "N";
+            this.TongThanhToan.DefaultCellStyle = dataGridViewCellStyle14;
+            this.TongThanhToan.HeaderText = "Tổng tiền";
+            this.TongThanhToan.Name = "TongThanhToan";
+            this.TongThanhToan.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            this.TrangThai.Visible = false;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "STT";
@@ -822,13 +823,13 @@ namespace DoAnCShap
             // TenLK1
             // 
             this.TenLK1.DataPropertyName = "TenLK";
-            this.TenLK1.HeaderText = "Tên Linh Kiện";
+            this.TenLK1.HeaderText = "Tên linh kiện";
             this.TenLK1.Name = "TenLK1";
             // 
             // SoLuong1
             // 
             this.SoLuong1.DataPropertyName = "SoLuong";
-            this.SoLuong1.HeaderText = "Số Lượng";
+            this.SoLuong1.HeaderText = "Số lượng";
             this.SoLuong1.Name = "SoLuong1";
             // 
             // DonGia1
@@ -836,13 +837,13 @@ namespace DoAnCShap
             this.DonGia1.DataPropertyName = "DonGia";
             dataGridViewCellStyle3.Format = "0,00";
             this.DonGia1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DonGia1.HeaderText = "Đơn Giá";
+            this.DonGia1.HeaderText = "Đơn giá";
             this.DonGia1.Name = "DonGia1";
             // 
             // KhuyenMai1
             // 
             this.KhuyenMai1.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai1.HeaderText = "Chiết Khấu";
+            this.KhuyenMai1.HeaderText = "Chiết khấu";
             this.KhuyenMai1.Name = "KhuyenMai1";
             // 
             // ThanhTien1
@@ -850,7 +851,7 @@ namespace DoAnCShap
             this.ThanhTien1.DataPropertyName = "ThanhTien";
             dataGridViewCellStyle4.Format = "0,00";
             this.ThanhTien1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ThanhTien1.HeaderText = "Thành Tiền";
+            this.ThanhTien1.HeaderText = "Thành tiền";
             this.ThanhTien1.Name = "ThanhTien1";
             // 
             // Frm_HoaDonNhap
@@ -937,6 +938,12 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn SLConLai;
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLK1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHDNH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
@@ -944,11 +951,5 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLapHDNH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLK1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien1;
     }
 }

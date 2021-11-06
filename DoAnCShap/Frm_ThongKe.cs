@@ -178,7 +178,7 @@ namespace DoAnCShap
 
             //chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{0:0,}K";
             chart1.DataSource = bus.DoanhThuThang3("SELECT Month(hd.NgayLapHDBH) as Thang, sum(hd.TongTien) as TongTien " +
-            " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)>0 and MONTH(hd.NgayLapHDBH)<13  and Year(hd.NgayLapHDBH)=" + comboBoxNam.Text + " Group By Month(hd.NgayLapHDBH) ");
+            " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)>0 and MONTH(hd.NgayLapHDBH)<13  Group By Month(hd.NgayLapHDBH) ");
             chart1.Series["Doanh Thu"].XValueMember = "Thang";
             chart1.Series["Doanh Thu"].YValueMembers = "TongTien";
             chart1.Titles.Add("Doanh Thu Các Tháng Năm 2021");

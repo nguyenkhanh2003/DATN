@@ -56,7 +56,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(530, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thay Đổi Mật Khẩu";
+            this.label1.Text = "Quên Mật Khẩu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTenDangNhap
@@ -148,9 +148,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(238, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 21);
+            this.label2.Size = new System.Drawing.Size(111, 21);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Tên Đăng Nhập";
+            this.label2.Text = "Tên đăng nhập";
             // 
             // label3
             // 
@@ -158,9 +158,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(238, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 21);
+            this.label3.Size = new System.Drawing.Size(107, 21);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Mật Khẩu Mới";
+            this.label3.Text = "Mật khẩu mới";
             // 
             // label4
             // 
@@ -168,9 +168,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(238, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 21);
+            this.label4.Size = new System.Drawing.Size(92, 21);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Mã Xác Thực";
+            this.label4.Text = "Mã xác thực";
             // 
             // Frm_LaylaiPass
             // 

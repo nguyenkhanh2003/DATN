@@ -132,9 +132,9 @@ namespace DoAnCShap
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(316, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 21);
+            this.label13.Size = new System.Drawing.Size(137, 21);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Tìm Kiếm Linh Kiện";
+            this.label13.Text = "Tìm kiếm linh kiện";
             // 
             // btnClose
             // 
@@ -168,6 +168,7 @@ namespace DoAnCShap
             this.btnChonMua.Name = "btnChonMua";
             this.btnChonMua.Size = new System.Drawing.Size(93, 41);
             this.btnChonMua.TabIndex = 3;
+            this.btnChonMua.Text = "Thêm";
             this.btnChonMua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChonMua.UseVisualStyleBackColor = true;
             this.btnChonMua.Click += new System.EventHandler(this.btnChonMua_Click);
@@ -284,7 +285,7 @@ namespace DoAnCShap
             this.TenLK.DataPropertyName = "TenLK";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.TenLK.DefaultCellStyle = dataGridViewCellStyle9;
-            this.TenLK.HeaderText = "Tên Linh Kiện";
+            this.TenLK.HeaderText = "Tên linh kiện";
             this.TenLK.MinimumWidth = 6;
             this.TenLK.Name = "TenLK";
             this.TenLK.ReadOnly = true;
@@ -294,7 +295,7 @@ namespace DoAnCShap
             this.SoLuong.DataPropertyName = "SoLuong";
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.SoLuong.DefaultCellStyle = dataGridViewCellStyle10;
-            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.Name = "SoLuong";
             // 
             // DonGia
@@ -303,7 +304,7 @@ namespace DoAnCShap
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.Format = "0,00";
             this.DonGia.DefaultCellStyle = dataGridViewCellStyle11;
-            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
             // 
@@ -312,7 +313,7 @@ namespace DoAnCShap
             this.KhuyenMai.DataPropertyName = "KhuyenMai";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.KhuyenMai.DefaultCellStyle = dataGridViewCellStyle12;
-            this.KhuyenMai.HeaderText = "Chiết Khấu";
+            this.KhuyenMai.HeaderText = "Chiết khấu";
             this.KhuyenMai.Name = "KhuyenMai";
             this.KhuyenMai.ReadOnly = true;
             // 
@@ -321,7 +322,7 @@ namespace DoAnCShap
             this.ThanhTien.DataPropertyName = "ThanhTien";
             dataGridViewCellStyle13.Format = "0,00";
             this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle13;
-            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
             // 
@@ -416,7 +417,7 @@ namespace DoAnCShap
             this.groupBox1.Size = new System.Drawing.Size(758, 87);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Chung";
+            this.groupBox1.Text = "Thông tin chung";
             // 
             // comboBoxNV
             // 
@@ -444,9 +445,9 @@ namespace DoAnCShap
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(458, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 21);
+            this.label11.Size = new System.Drawing.Size(72, 21);
             this.label11.TabIndex = 39;
-            this.label11.Text = "Ngày Lập";
+            this.label11.Text = "Ngày lập";
             this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label10
@@ -455,9 +456,9 @@ namespace DoAnCShap
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(243, 25);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 21);
+            this.label10.Size = new System.Drawing.Size(81, 21);
             this.label10.TabIndex = 38;
-            this.label10.Text = "Nhân Viên";
+            this.label10.Text = "Nhân viên";
             this.label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label19
@@ -466,9 +467,9 @@ namespace DoAnCShap
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(16, 25);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(98, 21);
+            this.label19.Size = new System.Drawing.Size(94, 21);
             this.label19.TabIndex = 40;
-            this.label19.Text = "Mã Hóa Đơn";
+            this.label19.Text = "Mã hóa đơn";
             this.label19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // txtMaHD
@@ -522,9 +523,9 @@ namespace DoAnCShap
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(11, 79);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(73, 21);
+            this.label16.Size = new System.Drawing.Size(70, 21);
             this.label16.TabIndex = 44;
-            this.label16.Text = "Giới Tính";
+            this.label16.Text = "Giới tính";
             this.label16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label8
@@ -533,9 +534,9 @@ namespace DoAnCShap
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(259, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 21);
+            this.label8.Size = new System.Drawing.Size(57, 21);
             this.label8.TabIndex = 45;
-            this.label8.Text = "Địa Chỉ";
+            this.label8.Text = "Địa chỉ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label7
@@ -544,9 +545,9 @@ namespace DoAnCShap
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(11, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 21);
+            this.label7.Size = new System.Drawing.Size(117, 21);
             this.label7.TabIndex = 46;
-            this.label7.Text = "Tên Khách Hàng";
+            this.label7.Text = "Tên khách hàng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // txtDiaChi
@@ -577,9 +578,9 @@ namespace DoAnCShap
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(430, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.Size = new System.Drawing.Size(116, 21);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Mã Khách Hàng";
+            this.label1.Text = "Mã khách hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label6
@@ -588,9 +589,9 @@ namespace DoAnCShap
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(18, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 21);
+            this.label6.Size = new System.Drawing.Size(101, 21);
             this.label6.TabIndex = 47;
-            this.label6.Text = "Số Điện Thoại";
+            this.label6.Text = "Số điện thoại";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // txtMaKH
@@ -637,7 +638,7 @@ namespace DoAnCShap
             this.groupBox2.Size = new System.Drawing.Size(388, 312);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông Tin Sản Phẩm";
+            this.groupBox2.Text = "Thông tin sản phẩm";
             // 
             // comboBoxSP
             // 
@@ -648,6 +649,7 @@ namespace DoAnCShap
             this.comboBoxSP.Size = new System.Drawing.Size(247, 29);
             this.comboBoxSP.TabIndex = 35;
             this.comboBoxSP.UseSelectable = true;
+            this.comboBoxSP.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSP_SelectionChangeCommitted);
             this.comboBoxSP.TextChanged += new System.EventHandler(this.comboBoxSP_TextChanged);
             this.comboBoxSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxSP_KeyDown);
             // 
@@ -710,9 +712,9 @@ namespace DoAnCShap
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(15, 207);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 21);
+            this.label12.Size = new System.Drawing.Size(83, 21);
             this.label12.TabIndex = 26;
-            this.label12.Text = "Thành Tiền";
+            this.label12.Text = "Thành tiền";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label4
@@ -721,9 +723,9 @@ namespace DoAnCShap
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(16, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 21);
+            this.label4.Size = new System.Drawing.Size(107, 21);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Chiết Khấu(%)";
+            this.label4.Text = "Chiết khấu(%)";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label3
@@ -732,9 +734,9 @@ namespace DoAnCShap
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(15, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 21);
+            this.label3.Size = new System.Drawing.Size(73, 21);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Số Lượng";
+            this.label3.Text = "Số lượng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label14
@@ -743,9 +745,9 @@ namespace DoAnCShap
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(16, 75);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 21);
+            this.label14.Size = new System.Drawing.Size(65, 21);
             this.label14.TabIndex = 29;
-            this.label14.Text = "Đơn Giá";
+            this.label14.Text = "Đơn giá";
             this.label14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label20
@@ -754,9 +756,9 @@ namespace DoAnCShap
             this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(15, 28);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 21);
+            this.label20.Size = new System.Drawing.Size(96, 21);
             this.label20.TabIndex = 30;
-            this.label20.Text = "Tên Linh Kiện";
+            this.label20.Text = "Tên linh kiện";
             this.label20.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // groupBox3
@@ -775,7 +777,7 @@ namespace DoAnCShap
             this.groupBox3.Size = new System.Drawing.Size(388, 200);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông Tin Thanh Toán";
+            this.groupBox3.Text = "Thông tin thanh toán";
             // 
             // txtTienThua
             // 
@@ -849,7 +851,7 @@ namespace DoAnCShap
             this.groupBox5.Size = new System.Drawing.Size(762, 67);
             this.groupBox5.TabIndex = 23;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tìm Kiếm Khách Hàng";
+            this.groupBox5.Text = "Tìm kiếm khách hàng";
             // 
             // panel3
             // 
@@ -881,7 +883,7 @@ namespace DoAnCShap
             this.groupBox6.Size = new System.Drawing.Size(762, 148);
             this.groupBox6.TabIndex = 25;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Thông Tin Khách Hàng";
+            this.groupBox6.Text = "Thông tin khách hàng";
             // 
             // Frm_BanHan
             // 

@@ -162,9 +162,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(198, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 21);
+            this.label2.Size = new System.Drawing.Size(111, 21);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Tên Đăng Nhập";
+            this.label2.Text = "Tên đăng nhập";
             // 
             // label3
             // 
@@ -172,9 +172,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(198, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Mật Khẩu";
+            this.label3.Text = "Mật khẩu";
             // 
             // Login
             // 

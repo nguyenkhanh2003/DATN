@@ -441,7 +441,7 @@ namespace DoAnCShap
         {
             btnInHD.Enabled = false;
             HienThiSanPham();
-            comboBoxSP.Text = null;
+            comboBoxSP.Text = "";
             labelThanhTien.ResetText();
             txtDonGia.ResetText();
             txtKhuyenMai.ResetText();
@@ -457,7 +457,8 @@ namespace DoAnCShap
             {
                 decimal TienThua = 0;
                 TienThua = decimal.Parse(txtTienKhachDua.Text) - decimal.Parse(txtTongThanhT.Text);
-                txtTienThua.Text = TienThua.ToString();
+                txtTienThua.Text = TienThua.ToString("0,00");
+
             }
             catch
             {
@@ -719,6 +720,27 @@ namespace DoAnCShap
 
         private void comboBoxSP_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void NumreicSL_MouseUp(object sender, MouseEventArgs e)
+        {
+            ThanhTienLinhKien();
+        }
+
+        private void NumreicSL_MouseDown(object sender, MouseEventArgs e)
+        {
+            ThanhTienLinhKien();
+        }
+
+        private void comboBoxSP_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("?");
+        }
+
+        private void comboBoxSP_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //MessageBox.Show("?");
             DataTable DSSP = bus.LaySP("Select * From LinhKien Where TenLK=N'" + comboBoxSP.Text + "'");
             if (DSSP.Rows.Count > 0)
             {
@@ -727,6 +749,7 @@ namespace DoAnCShap
                     if (int.Parse(DSSP.Rows[0]["SoLuongTon"].ToString()) == 0)
                     {
                         MessageBox.Show("Sản Phẩm Này Đã Hết Hàng");
+                        return;
                     }
                     else
                     {
@@ -741,16 +764,7 @@ namespace DoAnCShap
                     }
                 }
             }
-        }
 
-        private void NumreicSL_MouseUp(object sender, MouseEventArgs e)
-        {
-            ThanhTienLinhKien();
-        }
-
-        private void NumreicSL_MouseDown(object sender, MouseEventArgs e)
-        {
-            ThanhTienLinhKien();
         }
     }
 

@@ -31,10 +31,10 @@ namespace DoAnCShap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ThongKe));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxThang = new MetroFramework.Controls.MetroComboBox();
             this.comboBoxNam = new MetroFramework.Controls.MetroComboBox();
@@ -155,10 +155,10 @@ namespace DoAnCShap
             this.radioBKhachmuanhieutrongnam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBKhachmuanhieutrongnam.Location = new System.Drawing.Point(381, 52);
             this.radioBKhachmuanhieutrongnam.Name = "radioBKhachmuanhieutrongnam";
-            this.radioBKhachmuanhieutrongnam.Size = new System.Drawing.Size(274, 25);
+            this.radioBKhachmuanhieutrongnam.Size = new System.Drawing.Size(264, 25);
             this.radioBKhachmuanhieutrongnam.TabIndex = 12;
             this.radioBKhachmuanhieutrongnam.TabStop = true;
-            this.radioBKhachmuanhieutrongnam.Text = "Khách Hàng Mua Nhiều Trong Năm\r\n";
+            this.radioBKhachmuanhieutrongnam.Text = "Khách hàng mua nhiều trong năm\r\n";
             this.radioBKhachmuanhieutrongnam.UseVisualStyleBackColor = true;
             // 
             // radioButKhachMuaNhieeu
@@ -167,10 +167,10 @@ namespace DoAnCShap
             this.radioButKhachMuaNhieeu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButKhachMuaNhieeu.Location = new System.Drawing.Point(381, 10);
             this.radioButKhachMuaNhieeu.Name = "radioButKhachMuaNhieeu";
-            this.radioButKhachMuaNhieeu.Size = new System.Drawing.Size(283, 25);
+            this.radioButKhachMuaNhieeu.Size = new System.Drawing.Size(273, 25);
             this.radioButKhachMuaNhieeu.TabIndex = 12;
             this.radioButKhachMuaNhieeu.TabStop = true;
-            this.radioButKhachMuaNhieeu.Text = "Khách Hàng Mua Nhiều Trong Tháng";
+            this.radioButKhachMuaNhieeu.Text = "Khách hàng mua nhiều trong tháng";
             this.radioButKhachMuaNhieeu.UseVisualStyleBackColor = true;
             // 
             // radioSPTonKho
@@ -179,10 +179,10 @@ namespace DoAnCShap
             this.radioSPTonKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioSPTonKho.Location = new System.Drawing.Point(384, 186);
             this.radioSPTonKho.Name = "radioSPTonKho";
-            this.radioSPTonKho.Size = new System.Drawing.Size(159, 25);
+            this.radioSPTonKho.Size = new System.Drawing.Size(155, 25);
             this.radioSPTonKho.TabIndex = 12;
             this.radioSPTonKho.TabStop = true;
-            this.radioSPTonKho.Text = "Sản Phẩm Tồn Kho";
+            this.radioSPTonKho.Text = "Sản phẩm tồn kho";
             this.radioSPTonKho.UseVisualStyleBackColor = true;
             // 
             // radioButKhanChiNam
@@ -191,10 +191,10 @@ namespace DoAnCShap
             this.radioButKhanChiNam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButKhanChiNam.Location = new System.Drawing.Point(384, 142);
             this.radioButKhanChiNam.Name = "radioButKhanChiNam";
-            this.radioButKhanChiNam.Size = new System.Drawing.Size(198, 25);
+            this.radioButKhanChiNam.Size = new System.Drawing.Size(187, 25);
             this.radioButKhanChiNam.TabIndex = 12;
             this.radioButKhanChiNam.TabStop = true;
-            this.radioButKhanChiNam.Text = "Xem Thu Chi Trong Năm\r\n";
+            this.radioButKhanChiNam.Text = "Xem thu chi trong năm\r\n";
             this.radioButKhanChiNam.UseVisualStyleBackColor = true;
             // 
             // radioButThuChi
@@ -203,10 +203,10 @@ namespace DoAnCShap
             this.radioButThuChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButThuChi.Location = new System.Drawing.Point(381, 96);
             this.radioButThuChi.Name = "radioButThuChi";
-            this.radioButThuChi.Size = new System.Drawing.Size(201, 25);
+            this.radioButThuChi.Size = new System.Drawing.Size(189, 25);
             this.radioButThuChi.TabIndex = 12;
             this.radioButThuChi.TabStop = true;
-            this.radioButThuChi.Text = "Xem Thu Chi Theo Tháng";
+            this.radioButThuChi.Text = "Xem thu chi theo tháng";
             this.radioButThuChi.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -225,10 +225,10 @@ namespace DoAnCShap
             this.radioDoanhThuYea.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioDoanhThuYea.Location = new System.Drawing.Point(3, 52);
             this.radioDoanhThuYea.Name = "radioDoanhThuYea";
-            this.radioDoanhThuYea.Size = new System.Drawing.Size(186, 25);
+            this.radioDoanhThuYea.Size = new System.Drawing.Size(178, 25);
             this.radioDoanhThuYea.TabIndex = 10;
             this.radioDoanhThuYea.TabStop = true;
-            this.radioDoanhThuYea.Text = "Doanh Thu Trong Năm";
+            this.radioDoanhThuYea.Text = "Doanh thu trong năm";
             this.radioDoanhThuYea.UseVisualStyleBackColor = true;
             // 
             // radioTheoThang
@@ -237,10 +237,10 @@ namespace DoAnCShap
             this.radioTheoThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioTheoThang.Location = new System.Drawing.Point(3, 10);
             this.radioTheoThang.Name = "radioTheoThang";
-            this.radioTheoThang.Size = new System.Drawing.Size(189, 25);
+            this.radioTheoThang.Size = new System.Drawing.Size(180, 25);
             this.radioTheoThang.TabIndex = 1;
             this.radioTheoThang.TabStop = true;
-            this.radioTheoThang.Text = "Doanh Thu Theo Tháng";
+            this.radioTheoThang.Text = "Doanh thu theo tháng";
             this.radioTheoThang.UseVisualStyleBackColor = true;
             // 
             // radioBanNhieuMonth
@@ -249,10 +249,10 @@ namespace DoAnCShap
             this.radioBanNhieuMonth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBanNhieuMonth.Location = new System.Drawing.Point(3, 96);
             this.radioBanNhieuMonth.Name = "radioBanNhieuMonth";
-            this.radioBanNhieuMonth.Size = new System.Drawing.Size(300, 25);
+            this.radioBanNhieuMonth.Size = new System.Drawing.Size(289, 25);
             this.radioBanNhieuMonth.TabIndex = 9;
             this.radioBanNhieuMonth.TabStop = true;
-            this.radioBanNhieuMonth.Text = "Top 3 Sản Phẩm Bán Nhiều Theo Tháng";
+            this.radioBanNhieuMonth.Text = "Top 3 sản phẩm bán nhiều theo tháng";
             this.radioBanNhieuMonth.UseVisualStyleBackColor = true;
             // 
             // radioButMuaYear
@@ -261,10 +261,10 @@ namespace DoAnCShap
             this.radioButMuaYear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButMuaYear.Location = new System.Drawing.Point(3, 234);
             this.radioButMuaYear.Name = "radioButMuaYear";
-            this.radioButMuaYear.Size = new System.Drawing.Size(309, 25);
+            this.radioButMuaYear.Size = new System.Drawing.Size(296, 25);
             this.radioButMuaYear.TabIndex = 9;
             this.radioButMuaYear.TabStop = true;
-            this.radioButMuaYear.Text = "Top 3 Sản Phẩm Nhập Nhiều Trong Năm\r\n";
+            this.radioButMuaYear.Text = "Top 3 sản phẩm nhập nhiều trong năm\r\n";
             this.radioButMuaYear.UseVisualStyleBackColor = true;
             // 
             // radioBanNhieuYear
@@ -273,10 +273,10 @@ namespace DoAnCShap
             this.radioBanNhieuYear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBanNhieuYear.Location = new System.Drawing.Point(3, 142);
             this.radioBanNhieuYear.Name = "radioBanNhieuYear";
-            this.radioBanNhieuYear.Size = new System.Drawing.Size(297, 25);
+            this.radioBanNhieuYear.Size = new System.Drawing.Size(287, 25);
             this.radioBanNhieuYear.TabIndex = 9;
             this.radioBanNhieuYear.TabStop = true;
-            this.radioBanNhieuYear.Text = "Top 3 Sản Phẩm Bán Nhiều Trong Năm";
+            this.radioBanNhieuYear.Text = "Top 3 sản phẩm bán nhiều trong năm";
             this.radioBanNhieuYear.UseVisualStyleBackColor = true;
             // 
             // radioButMuaMonth
@@ -285,10 +285,10 @@ namespace DoAnCShap
             this.radioButMuaMonth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButMuaMonth.Location = new System.Drawing.Point(3, 188);
             this.radioButMuaMonth.Name = "radioButMuaMonth";
-            this.radioButMuaMonth.Size = new System.Drawing.Size(318, 25);
+            this.radioButMuaMonth.Size = new System.Drawing.Size(305, 25);
             this.radioButMuaMonth.TabIndex = 9;
             this.radioButMuaMonth.TabStop = true;
-            this.radioButMuaMonth.Text = "Top 3 Sản Phẩm Nhập Nhiều Trong Tháng";
+            this.radioButMuaMonth.Text = "Top 3 sản phẩm nhập nhiều trong tháng";
             this.radioButMuaMonth.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -330,19 +330,19 @@ namespace DoAnCShap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(12, 376);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            series1.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh Thu";
+            series2.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1160, 323);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -356,14 +356,14 @@ namespace DoAnCShap
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(796, 49);
             this.dataGridView1.Name = "dataGridView1";

@@ -33,9 +33,9 @@ namespace DoAnCShap
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_BaoHanh));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -46,20 +46,8 @@ namespace DoAnCShap
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPBH = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLayHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuyTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnIn = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
@@ -84,6 +72,18 @@ namespace DoAnCShap
             this.comboBoxlK = new MetroFramework.Controls.MetroComboBox();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLayHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuyTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
@@ -116,8 +116,9 @@ namespace DoAnCShap
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.Location = new System.Drawing.Point(243, 189);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(52, 45);
+            this.btnHuy.Size = new System.Drawing.Size(86, 45);
             this.btnHuy.TabIndex = 0;
+            this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -182,9 +183,9 @@ namespace DoAnCShap
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(281, 16);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(142, 20);
+            this.label13.Size = new System.Drawing.Size(132, 20);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Tìm Kiếm Linh Kiện";
+            this.label13.Text = "Tìm kiếm linh kiện";
             // 
             // txtSearch
             // 
@@ -209,7 +210,7 @@ namespace DoAnCShap
             this.groupBox2.Size = new System.Drawing.Size(628, 325);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh Sách Phiếu Bảo Hành";
+            this.groupBox2.Text = "Danh sách phiếu bảo hành";
             // 
             // dataGridViewPBH
             // 
@@ -254,64 +255,6 @@ namespace DoAnCShap
             this.dataGridViewPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewPBH_RowPostPaint);
             this.dataGridViewPBH.DoubleClick += new System.EventHandler(this.dataGridViewPBH_DoubleClick);
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // MaPBH
-            // 
-            this.MaPBH.DataPropertyName = "MaPBH";
-            this.MaPBH.HeaderText = "Mã Phiếu";
-            this.MaPBH.Name = "MaPBH";
-            this.MaPBH.ReadOnly = true;
-            // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "TenKH";
-            this.MaKH.HeaderText = "Khách Hàng";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "TenNV";
-            this.MaNV.HeaderText = "Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLapPhieu";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy HH:mm:ss";
-            this.NgayLap.DefaultCellStyle = dataGridViewCellStyle2;
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.ReadOnly = true;
-            // 
-            // NgayLayHang
-            // 
-            this.NgayLayHang.DataPropertyName = "NgayLayHang";
-            this.NgayLayHang.HeaderText = "Ngày Lấy";
-            this.NgayLayHang.Name = "NgayLayHang";
-            this.NgayLayHang.ReadOnly = true;
-            // 
-            // QuyTrinh
-            // 
-            this.QuyTrinh.DataPropertyName = "QuyTrinh";
-            this.QuyTrinh.HeaderText = "Quy Trình";
-            this.QuyTrinh.Name = "QuyTrinh";
-            this.QuyTrinh.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            this.TrangThai.Visible = false;
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -323,7 +266,7 @@ namespace DoAnCShap
             this.groupBox3.Size = new System.Drawing.Size(526, 325);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Danh Sách Chi Tiết Phiếu";
+            this.groupBox3.Text = "Danh sách chi tiết phiếu";
             // 
             // dataGridViewCTPBH
             // 
@@ -363,33 +306,6 @@ namespace DoAnCShap
             this.dataGridViewCTPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTPBH_CellClick);
             this.dataGridViewCTPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewCTPBH_RowPostPaint);
             this.dataGridViewCTPBH.DoubleClick += new System.EventHandler(this.dataGridViewCTPBH_DoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // MaLKK
-            // 
-            this.MaLKK.DataPropertyName = "TenLK";
-            this.MaLKK.HeaderText = "Tên Linh Kiện";
-            this.MaLKK.Name = "MaLKK";
-            this.MaLKK.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Tình Trạng";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.ReadOnly = true;
             // 
             // panel2
             // 
@@ -446,7 +362,7 @@ namespace DoAnCShap
             this.groupBox1.Size = new System.Drawing.Size(717, 240);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Chung";
+            this.groupBox1.Text = "Thông tin chung";
             // 
             // comboQuyTrinh
             // 
@@ -502,9 +418,9 @@ namespace DoAnCShap
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(451, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 21);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Quy Trình";
+            this.label2.Text = "Quy trình";
             // 
             // label4
             // 
@@ -512,9 +428,9 @@ namespace DoAnCShap
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(212, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 21);
+            this.label4.Size = new System.Drawing.Size(91, 21);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Khách Hàng";
+            this.label4.Text = "Khách hàng";
             // 
             // label9
             // 
@@ -523,9 +439,9 @@ namespace DoAnCShap
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(451, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 21);
+            this.label9.Size = new System.Drawing.Size(109, 21);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Ngày Trả Hàng";
+            this.label9.Text = "Ngày trả hàng";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePickerNgaLap
@@ -555,9 +471,9 @@ namespace DoAnCShap
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(212, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.Size = new System.Drawing.Size(72, 21);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Ngày Lập";
+            this.label3.Text = "Ngày lập";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -567,9 +483,9 @@ namespace DoAnCShap
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 102);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 21);
+            this.label5.Size = new System.Drawing.Size(81, 21);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Nhân Viên";
+            this.label5.Text = "Nhân viên";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
@@ -581,7 +497,7 @@ namespace DoAnCShap
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Mã Phiếu";
+            this.label1.Text = "Mã phiếu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -591,9 +507,9 @@ namespace DoAnCShap
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(15, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 21);
+            this.label6.Size = new System.Drawing.Size(96, 21);
             this.label6.TabIndex = 23;
-            this.label6.Text = "Tên linh Kiện";
+            this.label6.Text = "Tên linh kiện";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
@@ -603,9 +519,9 @@ namespace DoAnCShap
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(25, 102);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 21);
+            this.label7.Size = new System.Drawing.Size(73, 21);
             this.label7.TabIndex = 22;
-            this.label7.Text = "Số Lượng";
+            this.label7.Text = "Số lượng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
@@ -615,9 +531,9 @@ namespace DoAnCShap
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(249, 33);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Tình Trạng";
+            this.label8.Text = "Tình trạng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtSL
@@ -654,10 +570,11 @@ namespace DoAnCShap
             this.btnThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemSP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
-            this.btnThemSP.Location = new System.Drawing.Point(171, 189);
+            this.btnThemSP.Location = new System.Drawing.Point(139, 189);
             this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(55, 45);
+            this.btnThemSP.Size = new System.Drawing.Size(87, 45);
             this.btnThemSP.TabIndex = 4;
+            this.btnThemSP.Text = "Thêm";
             this.btnThemSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemSP.UseVisualStyleBackColor = true;
             this.btnThemSP.Click += new System.EventHandler(this.btnThemPhieu_Click);
@@ -679,7 +596,92 @@ namespace DoAnCShap
             this.groupBox4.Size = new System.Drawing.Size(437, 240);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông Tin Bảo Hành";
+            this.groupBox4.Text = "Thông tin bảo hành";
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaPBH
+            // 
+            this.MaPBH.DataPropertyName = "MaPBH";
+            this.MaPBH.HeaderText = "Mã phiếu";
+            this.MaPBH.Name = "MaPBH";
+            this.MaPBH.ReadOnly = true;
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "TenKH";
+            this.MaKH.HeaderText = "Khách hàng";
+            this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "TenNV";
+            this.MaNV.HeaderText = "Nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLapPhieu";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy HH:mm:ss";
+            this.NgayLap.DefaultCellStyle = dataGridViewCellStyle2;
+            this.NgayLap.HeaderText = "Ngày lập";
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            // 
+            // NgayLayHang
+            // 
+            this.NgayLayHang.DataPropertyName = "NgayLayHang";
+            this.NgayLayHang.HeaderText = "Ngày lấy";
+            this.NgayLayHang.Name = "NgayLayHang";
+            this.NgayLayHang.ReadOnly = true;
+            // 
+            // QuyTrinh
+            // 
+            this.QuyTrinh.DataPropertyName = "QuyTrinh";
+            this.QuyTrinh.HeaderText = "Quy trình";
+            this.QuyTrinh.Name = "QuyTrinh";
+            this.QuyTrinh.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            this.TrangThai.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // MaLKK
+            // 
+            this.MaLKK.DataPropertyName = "TenLK";
+            this.MaLKK.HeaderText = "Tên linh kiện";
+            this.MaLKK.Name = "MaLKK";
+            this.MaLKK.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Tình trạng";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
             // 
             // Frm_BaoHanh
             // 
@@ -747,10 +749,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private MetroFramework.Controls.MetroComboBox comboQuyTrinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
@@ -761,5 +759,9 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLayHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuyTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLKK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }

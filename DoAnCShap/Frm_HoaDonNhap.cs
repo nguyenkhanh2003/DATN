@@ -530,30 +530,88 @@ namespace DoAnCShap
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            if (dataGridViewHDN.Rows.Count > 0)
-            {
-                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
-                excelAp.Application.Workbooks.Add(Type.Missing);
-                // Lưu trữ phần header
-                for (int i = 1; i < dataGridViewHDN.Rows.Count + 6; i++)
-                {
-                    excelAp.Cells[1, i] = dataGridViewHDN.Columns[i - 1].HeaderText;
+            //if (dataGridViewHDN.Rows.Count > 0)
+            //{
+            //    Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+            //    excelAp.Application.Workbooks.Add(Type.Missing);
+            //    // Lưu trữ phần header
+            //    for (int i = 1; i < dataGridViewHDN.Rows.Count + 6; i++)
+            //    {
+            //        excelAp.Cells[1, i] = dataGridViewHDN.Columns[i - 1].HeaderText;
 
-                }
-                // Lưu trữ hàng và cột vào excel
-                for (int i = 0; i < dataGridViewHDN.Rows.Count; i++)
+            //    }
+            //    // Lưu trữ hàng và cột vào excel
+            //    for (int i = 0; i < dataGridViewHDN.Rows.Count; i++)
+            //    {
+            //        for (int j = 0; j < dataGridViewHDN.Rows.Count + 5; j++)
+            //        {
+            //            excelAp.Cells[i + 2, j + 1] = dataGridViewHDN.Rows[i].Cells[j].Value.ToString();
+            //        }
+            //    }
+            //    excelAp.Columns.AutoFit();
+            //    excelAp.Visible = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu");
+            //}
+            try
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                app.Visible = true;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                worksheet.Name = "Records";
+
+                try
                 {
-                    for (int j = 0; j < dataGridViewHDN.Rows.Count + 5; j++)
+                    for (int i = 0; i < dataGridViewHDN.Columns.Count; i++)
                     {
-                        excelAp.Cells[i + 2, j + 1] = dataGridViewHDN.Rows[i].Cells[j].Value.ToString();
+                        worksheet.Cells[1, i + 1] = dataGridViewHDN.Columns[i].HeaderText;
+                    }
+                    for (int i = 0; i < dataGridViewHDN.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridViewHDN.Columns.Count; j++)
+                        {
+                            if (dataGridViewHDN.Rows[i].Cells[j].Value != null)
+                            {
+                                worksheet.Cells[i + 2, j + 1] = dataGridViewHDN.Rows[i].Cells[j].Value.ToString();
+                            }
+                            else
+                            {
+                                worksheet.Cells[i + 2, j + 1] = "";
+                            }
+                        }
+                    }
+
+                    //Getting the location and file name of the excel to save from user. 
+                    SaveFileDialog saveDialog = new SaveFileDialog();
+                    saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    saveDialog.FilterIndex = 2;
+
+                    if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        workbook.SaveAs(saveDialog.FileName);
+                        MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                excelAp.Columns.AutoFit();
-                excelAp.Visible = true;
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                finally
+                {
+                    app.Quit();
+                    workbook = null;
+                    worksheet = null;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không có dữ liệu");
+                MessageBox.Show(ex.Message.ToString());
             }
         }
 

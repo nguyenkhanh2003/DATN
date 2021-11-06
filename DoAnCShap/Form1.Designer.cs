@@ -105,9 +105,9 @@ namespace DoAnCShap
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(151, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 20);
+            this.label3.Size = new System.Drawing.Size(206, 20);
             this.label3.TabIndex = 84;
-            this.label3.Text = "Nguyễn Hữu Phi- 030618135?";
+            this.label3.Text = "Nguyễn Hữu Phi- 0306181350";
             // 
             // label4
             // 
@@ -320,7 +320,7 @@ namespace DoAnCShap
             this.btnProfile.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnProfile.Size = new System.Drawing.Size(212, 46);
             this.btnProfile.TabIndex = 18;
-            this.btnProfile.Text = "Thông Tin Cá Nhân";
+            this.btnProfile.Text = "Thông tin cá nhân";
             this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
@@ -344,7 +344,7 @@ namespace DoAnCShap
             this.btnPhanQuyen.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnPhanQuyen.Size = new System.Drawing.Size(212, 46);
             this.btnPhanQuyen.TabIndex = 17;
-            this.btnPhanQuyen.Text = "Phân Quyền";
+            this.btnPhanQuyen.Text = "Phân quyền";
             this.btnPhanQuyen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhanQuyen.UseVisualStyleBackColor = false;
             this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click_1);
@@ -368,7 +368,7 @@ namespace DoAnCShap
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(212, 46);
             this.btnThongKe.TabIndex = 16;
-            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
@@ -392,7 +392,7 @@ namespace DoAnCShap
             this.btnBaohanh.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnBaohanh.Size = new System.Drawing.Size(212, 46);
             this.btnBaohanh.TabIndex = 15;
-            this.btnBaohanh.Text = "Bảo Hành";
+            this.btnBaohanh.Text = "Bảo hành";
             this.btnBaohanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBaohanh.UseVisualStyleBackColor = false;
             this.btnBaohanh.Click += new System.EventHandler(this.btnBaohanh_Click_1);
@@ -416,7 +416,7 @@ namespace DoAnCShap
             this.btnBanHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnBanHang.Size = new System.Drawing.Size(212, 46);
             this.btnBanHang.TabIndex = 14;
-            this.btnBanHang.Text = "Bán Hàng";
+            this.btnBanHang.Text = "Bán hàng";
             this.btnBanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBanHang.UseVisualStyleBackColor = false;
             this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
@@ -440,7 +440,7 @@ namespace DoAnCShap
             this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhaCungCap.Size = new System.Drawing.Size(212, 46);
             this.btnNhaCungCap.TabIndex = 13;
-            this.btnNhaCungCap.Text = "Nhà Cung Cấp";
+            this.btnNhaCungCap.Text = "Nhà cung cấp";
             this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNhaCungCap.UseVisualStyleBackColor = false;
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
@@ -483,7 +483,7 @@ namespace DoAnCShap
             this.btnLoaiLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLoaiLK.Size = new System.Drawing.Size(212, 45);
             this.btnLoaiLK.TabIndex = 2;
-            this.btnLoaiLK.Text = "Loại Linh Kiện";
+            this.btnLoaiLK.Text = "Loại linh kiện";
             this.btnLoaiLK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoaiLK.UseVisualStyleBackColor = false;
             this.btnLoaiLK.Click += new System.EventHandler(this.btnLoaiLK_Click);
@@ -507,7 +507,7 @@ namespace DoAnCShap
             this.btnLinhKien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnLinhKien.Size = new System.Drawing.Size(212, 45);
             this.btnLinhKien.TabIndex = 2;
-            this.btnLinhKien.Text = "Linh Kiện";
+            this.btnLinhKien.Text = "Linh kiện";
             this.btnLinhKien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLinhKien.UseVisualStyleBackColor = false;
             this.btnLinhKien.Click += new System.EventHandler(this.btnLinhKien_Click);
@@ -531,7 +531,7 @@ namespace DoAnCShap
             this.btnPhieuNhap.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnPhieuNhap.Size = new System.Drawing.Size(212, 45);
             this.btnPhieuNhap.TabIndex = 2;
-            this.btnPhieuNhap.Text = "Nhập Hàng";
+            this.btnPhieuNhap.Text = "Nhập hàng";
             this.btnPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhieuNhap.UseVisualStyleBackColor = false;
             this.btnPhieuNhap.Click += new System.EventHandler(this.btnPhieuNhap_Click);
@@ -555,7 +555,7 @@ namespace DoAnCShap
             this.btnHoaDon.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnHoaDon.Size = new System.Drawing.Size(212, 45);
             this.btnHoaDon.TabIndex = 2;
-            this.btnHoaDon.Text = "Quản Lý Hóa Đơn Bán\r\n";
+            this.btnHoaDon.Text = "Quản lý hóa đơn bán";
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHoaDon.UseVisualStyleBackColor = false;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
@@ -579,7 +579,7 @@ namespace DoAnCShap
             this.btnKhachHang.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnKhachHang.Size = new System.Drawing.Size(212, 45);
             this.btnKhachHang.TabIndex = 2;
-            this.btnKhachHang.Text = "Quản Lý Khách Hàng";
+            this.btnKhachHang.Text = "Quản lý khách hàng";
             this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhachHang.UseVisualStyleBackColor = false;
@@ -604,7 +604,7 @@ namespace DoAnCShap
             this.btnNhanVien.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNhanVien.Size = new System.Drawing.Size(212, 45);
             this.btnNhanVien.TabIndex = 2;
-            this.btnNhanVien.Text = "Quản Lý Nhân Viên";
+            this.btnNhanVien.Text = "Quản lý nhân viên";
             this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNhanVien.UseVisualStyleBackColor = false;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);

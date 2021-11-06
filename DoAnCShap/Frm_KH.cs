@@ -28,7 +28,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(String Condition)
         {
-            dataGridViewKH.DataSource = bus.GetSearch("Select * From KhachHang Where TenKH Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' ");
+            dataGridViewKH.DataSource = bus.GetSearch("Select MaKh,TenKH,GioiTinh,DienThoai,DiaChi From KhachHang Where TenKH Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' ");
         }
         void Display()
         {
@@ -287,30 +287,88 @@ namespace DoAnCShap
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            if (dataGridViewKH.Rows.Count > 0)
-            {
-                Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
-                excelAp.Application.Workbooks.Add(Type.Missing);
-                // Lưu trữ phần header
-                for (int i = 1; i < dataGridViewKH.Rows.Count - 1; i++)
-                {
-                    excelAp.Cells[1, i] = dataGridViewKH.Columns[i - 1].HeaderText;
+            //if (dataGridViewKH.Rows.Count > 0)
+            //{
+            //    Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
+            //    excelAp.Application.Workbooks.Add(Type.Missing);
+            //    // Lưu trữ phần header
+            //    for (int i = 1; i < dataGridViewKH.Rows.Count - 1; i++)
+            //    {
+            //        excelAp.Cells[1, i] = dataGridViewKH.Columns[i - 1].HeaderText;
 
-                }
-                // Lưu trữ hàng và cột vào excel
-                for (int i = 0; i < dataGridViewKH.Rows.Count; i++)
+            //    }
+            //    // Lưu trữ hàng và cột vào excel
+            //    for (int i = 0; i < dataGridViewKH.Rows.Count; i++)
+            //    {
+            //        for (int j = 0; j < dataGridViewKH.Rows.Count - 1; j++)
+            //        {
+            //            excelAp.Cells[i + 2, j + 1] = dataGridViewKH.Rows[i].Cells[j].Value.ToString();
+            //        }
+            //    }
+            //    excelAp.Columns.AutoFit();
+            //    excelAp.Visible = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu");
+            //}
+            try
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                app.Visible = true;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                worksheet.Name = "Records";
+
+                try
                 {
-                    for (int j = 0; j < dataGridViewKH.Rows.Count - 1; j++)
+                    for (int i = 0; i < dataGridViewKH.Columns.Count; i++)
                     {
-                        excelAp.Cells[i + 2, j + 1] = dataGridViewKH.Rows[i].Cells[j].Value.ToString();
+                        worksheet.Cells[1, i + 1] = dataGridViewKH.Columns[i].HeaderText;
+                    }
+                    for (int i = 0; i < dataGridViewKH.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridViewKH.Columns.Count; j++)
+                        {
+                            if (dataGridViewKH.Rows[i].Cells[j].Value != null)
+                            {
+                                worksheet.Cells[i + 2, j + 1] = dataGridViewKH.Rows[i].Cells[j].Value.ToString();
+                            }
+                            else
+                            {
+                                worksheet.Cells[i + 2, j + 1] = "";
+                            }
+                        }
+                    }
+
+                    //Getting the location and file name of the excel to save from user. 
+                    SaveFileDialog saveDialog = new SaveFileDialog();
+                    saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    saveDialog.FilterIndex = 2;
+
+                    if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        workbook.SaveAs(saveDialog.FileName);
+                        MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                excelAp.Columns.AutoFit();
-                excelAp.Visible = true;
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                finally
+                {
+                    app.Quit();
+                    workbook = null;
+                    worksheet = null;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không có dữ liệu");
+                MessageBox.Show(ex.Message.ToString());
             }
         }
 

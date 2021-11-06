@@ -463,9 +463,9 @@ namespace DoAnCShap
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(248, 198);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 21);
+            this.label9.Size = new System.Drawing.Size(87, 21);
             this.label9.TabIndex = 49;
-            this.label9.Text = "Đơn Vị Tính";
+            this.label9.Text = "Đơn vị tính";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label5
@@ -475,9 +475,9 @@ namespace DoAnCShap
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(17, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 21);
+            this.label5.Size = new System.Drawing.Size(75, 21);
             this.label5.TabIndex = 49;
-            this.label5.Text = "Bảo Hành";
+            this.label5.Text = "Bảo hành";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label7
@@ -487,9 +487,9 @@ namespace DoAnCShap
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(248, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.Size = new System.Drawing.Size(81, 21);
             this.label7.TabIndex = 49;
-            this.label7.Text = "Tình Trạng";
+            this.label7.Text = "Tình trạng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label4
@@ -499,9 +499,9 @@ namespace DoAnCShap
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(17, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 21);
+            this.label4.Size = new System.Drawing.Size(105, 21);
             this.label4.TabIndex = 49;
-            this.label4.Text = "Nhà Cung Cấp";
+            this.label4.Text = "Nhà cung cấp";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label1
@@ -511,9 +511,9 @@ namespace DoAnCShap
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 21);
+            this.label1.Size = new System.Drawing.Size(102, 21);
             this.label1.TabIndex = 49;
-            this.label1.Text = "Loại";
+            this.label1.Text = "Loại linh kiện";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label12
@@ -523,9 +523,9 @@ namespace DoAnCShap
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(582, 138);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 21);
+            this.label12.Size = new System.Drawing.Size(84, 21);
             this.label12.TabIndex = 49;
-            this.label12.Text = "Chiết Khấu(%)";
+            this.label12.Text = "Chiết khấu";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label11
@@ -535,9 +535,9 @@ namespace DoAnCShap
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(582, 79);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 21);
+            this.label11.Size = new System.Drawing.Size(73, 21);
             this.label11.TabIndex = 49;
-            this.label11.Text = "Số Lượng";
+            this.label11.Text = "Số lượng";
             this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label6
@@ -547,9 +547,9 @@ namespace DoAnCShap
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(248, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 21);
+            this.label6.Size = new System.Drawing.Size(61, 21);
             this.label6.TabIndex = 49;
-            this.label6.Text = "Xuất Xứ";
+            this.label6.Text = "Xuất xứ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label10
@@ -559,9 +559,9 @@ namespace DoAnCShap
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(578, 24);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 21);
+            this.label10.Size = new System.Drawing.Size(65, 21);
             this.label10.TabIndex = 49;
-            this.label10.Text = "Đơn Giá";
+            this.label10.Text = "Đơn giá";
             this.label10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
@@ -571,9 +571,9 @@ namespace DoAnCShap
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(248, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 49;
-            this.label3.Text = "Tên Linh Kiện";
+            this.label3.Text = "Tên linh kiện";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
@@ -583,9 +583,9 @@ namespace DoAnCShap
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(17, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 21);
+            this.label2.Size = new System.Drawing.Size(95, 21);
             this.label2.TabIndex = 49;
-            this.label2.Text = "Mã Linh Kiện";
+            this.label2.Text = "Mã linh kiện";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtXuatXu

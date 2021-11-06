@@ -102,20 +102,30 @@ namespace DoAnCShap
                 {
                     if (txtTenDangNhap.Text == layusername.Rows[0]["UserName"].ToString())
                     {
-                        if (txtMaXacThuc.Text == "007x")
+                        if (txtMaXacThuc.Text == "" && txtMatKhau.Text == "")
                         {
-                            MaHoa();
-                            nv.UserName = txtTenDangNhap.Text;
-                            nv.PassWord = txtMatKhau.Text;
-                            bus.UpdateTaiKhoan(nv);
-                            labelMesage.Text = "Thành Công";
-                            txtMatKhau.ResetText();
-                            txtMaXacThuc.ResetText();
-                            txtTenDangNhap.ResetText();
+                            errorMes.BlinkRate = 100;
+                            errorMes.SetError(txtMaXacThuc, "?");
+                            errorMes.SetError(txtMatKhau, "?");
+                            return;
                         }
                         else
                         {
-                            labelMesage.Text = "Mã Xác Thực Không Đúng";
+                            if (txtMaXacThuc.Text == "007x")
+                            {
+                                MaHoa();
+                                nv.UserName = txtTenDangNhap.Text;
+                                nv.PassWord = txtMatKhau.Text;
+                                bus.UpdateTaiKhoan(nv);
+                                labelMesage.Text = "Thành Công";
+                                txtMatKhau.ResetText();
+                                txtMaXacThuc.ResetText();
+                                txtTenDangNhap.ResetText();
+                            }
+                            else
+                            {
+                                labelMesage.Text = "Mã Xác Thực Không Đúng";
+                            }
                         }
                     }
                     else

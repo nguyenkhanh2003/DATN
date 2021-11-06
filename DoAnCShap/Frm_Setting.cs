@@ -32,7 +32,7 @@ namespace DoAnCShap
         private void Frm_Setting_Load(object sender, EventArgs e)
         {
             //groupGioiThieu.Visible = false;
-            groupTroGiup.Visible = false;
+            //groupTroGiup.Visible = false;
         }
         private void btnThayDoi_Click(object sender, EventArgs e)
         {
@@ -112,9 +112,14 @@ namespace DoAnCShap
 
         }
 
+        string urrl = "https://www.youtube.com/watch?v=9FqaMehDsUc&list=WL&index=1";
         private void button1_Click(object sender, EventArgs e)
         {
-            groupTroGiup.Visible = true;
+            string html = "html head";
+            html += " meta content='IE=Edge' http-equiv='X-UA-Compatible'/ ";
+            html += " iframe id='video' src= 'https://www.youtube.com/embed/{0}' width='600' height='300' frameborder='0' allowfullscreen  /iframe ";
+            html += " /body  /html ";
+            this.webBrowser1.DocumentText = string.Format(html, urrl.Split('=')[1]);
         }
     }
 }

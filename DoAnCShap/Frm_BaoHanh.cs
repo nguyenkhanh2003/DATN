@@ -347,9 +347,9 @@ namespace DoAnCShap
         private void dataGridViewCTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dataGridViewCTPBH.Rows[e.RowIndex];
-            comboBoxlK.Text = row.Cells[0].Value.ToString();
-            txtSL.Text = row.Cells[1].Value.ToString();
-            txtGhiChu.Text = row.Cells[2].Value.ToString();
+            comboBoxlK.Text = row.Cells[1].Value.ToString();
+            txtSL.Text = row.Cells[2].Value.ToString();
+            txtGhiChu.Text = row.Cells[3].Value.ToString();
             flag = 2;
             btnThemSP.Enabled = false;
             XuLyTexBox(true);
