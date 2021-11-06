@@ -46,7 +46,9 @@ namespace DoAnCShap
 
         public void HienThiTimKiem(string condition)
         {
-            comboBoxSP.DataSource = bus.GetTimKiem("select TenLK From LinhKien Where TenLK Like N'%" + condition + "%'");
+            comboBoxSP.DataSource = bus.GetTimKiem("select TenLK,MaLK From LinhKien Where TenLK Like N'%" + condition + "%'");
+            comboBoxSP.DisplayMember = "TenLK";
+            comboBoxSP.ValueMember = "MaLK";
         }
 
         public void HienThiDSSTheoMaSP(string condition)

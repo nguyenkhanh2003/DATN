@@ -130,8 +130,21 @@ namespace DoAnCShap
         //hien du lieu tu datatable len button
         private void dataGridViewNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
-            HienThiNCC_TXT(vitri, bus.GetData(""));
+            //int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
+            //HienThiNCC_TXT(vitri, bus.GetData(""));
+            try
+            {
+                DataGridViewRow row = dataGridViewNhaCungCap.Rows[e.RowIndex];
+                txtMaNCC.Text = row.Cells["MaNCC"].Value.ToString();
+                txtTenNCC.Text = row.Cells["TenNCC"].Value.ToString();
+                txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+                txtDienThoai.Text = row.Cells["DienThoai"].Value.ToString();
+                txtEmail.Text = row.Cells["Email"].Value.ToString();
+            }
+            catch
+            {
+
+            }
             XuLyChucNang(true, true, true);
             XuLyTexBox(false, true);
         }
