@@ -126,7 +126,7 @@ namespace DoAnCShap
                         errorMes.SetError(txtSdt, "? Số điện thoại");
                         return;
                     }
-                    if (txtSdt.Text.Length < 10)
+                    if (txtSdt.Text.Length < 10 || txtSdt.Text.Length > 13)
                     {
                         errorMes.BlinkRate = 100;
                         errorMes.SetError(txtSdt, "Số điện thoại không đúng");
@@ -189,7 +189,7 @@ namespace DoAnCShap
                     errorMes.SetError(txtSdt, "? Số điện thoại");
                     return;
                 }
-                if (txtSdt.Text.Length < 10)
+                if (txtSdt.Text.Length < 10 || txtSdt.Text.Length > 13)
                 {
                     errorMes.BlinkRate = 100;
                     errorMes.SetError(txtSdt, "Số điện thoại không đúng");

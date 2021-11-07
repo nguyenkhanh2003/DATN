@@ -244,7 +244,7 @@ namespace DoAnCShap
                         erroMes.SetError(txtSDT, "? SDT");
                         return;
                     }
-                    if (txtSDT.Text.Length < 10 && txtSDT.Text.Length > 13)
+                    if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 13)
                     {
                         erroMes.BlinkRate = 100;
                         erroMes.SetError(txtSDT, "Số điện thoại không đúng");
@@ -356,7 +356,7 @@ namespace DoAnCShap
                     erroMes.SetError(txtSDT, "? SDT");
                     return;
                 }
-                if (txtSDT.Text.Length < 10)
+                if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 13)
                 {
                     erroMes.BlinkRate = 100;
                     erroMes.SetError(txtSDT, "Số điện thoại không đúng");
