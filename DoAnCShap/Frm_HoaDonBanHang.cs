@@ -125,7 +125,7 @@ namespace DoAnCShap
         }
         public void ShowCTHD()
         {
-            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.MaLK, LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text + "'");
+            dataGridViewCTHD.DataSource = bus.GetCtHoaDon("select LinhKien.MaLK, LinhKien.TenLK,CT_HoaDonBanHang.SoLuong,CT_HoaDonBanHang.DonGia,CT_HoaDonBanHang.KhuyenMai,ThanhTien from CT_HoaDonBanHang ,LinhKien Where LinhKien.MaLK=CT_HoaDonBanHang.MaLK and CT_HoaDonBanHang.MaHDBH=N'" + txtMaHD.Text + "' and CT_HoaDonBanHang.TrangThai=N'1'");
         }
 
         int flag = 0;
@@ -198,6 +198,7 @@ namespace DoAnCShap
             XuLyChucNang(true, true);
             int vitri = dataGridViewHD.CurrentCell.RowIndex;
             HienThiHoaDonTextBox(vitri, bus.GetHoaDon(""));
+
             flag = 1;
             DataTable TTKH = bus.LayTTKH("Select * From KhachHang Where TenKH=N'" + comboBoxKH.Text + "'");
             if (comboBoxKH.Text == TTKH.Rows[0]["TenKH"].ToString())
@@ -283,18 +284,18 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không?", "Thông Báo !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (KQ == DialogResult.Yes)
             {
                 cthd.MaHDBH = txtMaHD.Text;
                 bus.DeleteCTHd(cthd);
                 hdbh.MaHDBH = txtMaHD.Text;
                 bus.DeleteHoaDon(hdbh);
-                MessageBox.Show("Success !");
+                MessageBox.Show("Thành Công !");
                 ClearTextBoxCTHD();
-
             }
             HienThiHoaDon();
+            //HienThiCTHD();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -485,7 +486,9 @@ namespace DoAnCShap
   };
             frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
             this.frm_in.reportViewer1.RefreshReport();
-            frm_in.Show();
+            frm_in.ShowDialog();
+            txtTienKDua.ResetText();
+            txtTienThua.ResetText();
         }
 
         private void dataGridViewHD_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)

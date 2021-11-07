@@ -13,7 +13,7 @@ namespace DAL
 
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien" + Condition);
+            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien where TrangThai=N'1' " + Condition);
         }
         public DataTable GetDSSP(string Condition)
         {
@@ -62,7 +62,7 @@ values(N'" + exx.MaHDNH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
 
         public void DeleteCT_HoaDonNhap(CT_HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From CT_HoaDonNhapHang Where MaHDNH=N'" + ex.MaHDNH + "' and MaLK=N'" + ex.MaLK + "'");
+            KetNoi.ExecuteReader(@"Update CT_HoaDonNhapHang set TrangThai=N'0' Where MaHDNH=N'" + ex.MaHDNH + "' ");
         }
 
         public void XoaCTHoaDonNhap(CT_HoaDonNhapHang ex)

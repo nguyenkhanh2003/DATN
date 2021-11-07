@@ -266,6 +266,10 @@ namespace DoAnCShap
                 Add_Datagrid(comboBoxTenLK.Text, int.Parse(textBoxSoLuong.Text), decimal.Parse(textBoxDonGia.Text), decimal.Parse(textBoxChietKhau.Text), decimal.Parse(labelThanhTien.Text), SoLuongConLai);
             }
             TongTienSP();
+            textBoxChietKhau.ResetText();
+            textBoxDonGia.ResetText();
+            textBoxSoLuong.ResetText();
+            labelThanhTien.ResetText();
         }
 
         public void TongThanhToanMoi()
@@ -474,27 +478,37 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
-                if (flag == 1)
-                {
-                    hdn.MaHDNH = txtMaHDN.Text;
-                    bus.DeleteHoaDonNhap(hdn);
-                    MessageBox.Show("Thành Công");
-                    HienThiHoaDonN();
-                    XuLyChucNang(true, false, false, false);
-                    ClearTexBox();
-                    HideDataGriview(true, false);
-                }
-                if (flag == 2)
-                {
-                    cthdn.MaHDNH = txtMaHDN.Text;
-                    cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
-                    bus.DeleteCT_HoaDonNhap(cthdn);
-                    MessageBox.Show("Thành Công");
-                    TongTienSP();
-                }
+                //if (flag == 1)
+                //{
+                //    hdn.MaHDNH = txtMaHDN.Text;
+                //    bus.DeleteHoaDonNhap(hdn);
+                //    MessageBox.Show("Thành Công");
+                //    HienThiHoaDonN();
+                //    XuLyChucNang(true, false, false, false);
+                //    ClearTexBox();
+                //    HideDataGriview(true, false);
+                //}
+                //if (flag == 2)
+                //{
+                //    cthdn.MaHDNH = txtMaHDN.Text;
+                //    cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+                //    bus.DeleteCT_HoaDonNhap(cthdn);
+                //    MessageBox.Show("Thành Công");
+                //    TongTienSP();
+                //}
+                cthdn.MaHDNH = txtMaHDN.Text;
+                bus.DeleteCT_HoaDonNhap(cthdn);
+                hdn.MaHDNH = txtMaHDN.Text;
+                bus.DeleteHoaDonNhap(hdn);
+                HienThiHoaDonN();
+                XuLyChucNang(true, false, false, false);
+                MessageBox.Show("Thành Công");
+                ClearTexBox();
+                HideDataGriview(true, false);
+
             }
             else
             {

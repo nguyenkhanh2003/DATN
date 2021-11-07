@@ -25,8 +25,8 @@ namespace DoAnCShap
         ReportDataSource rs = new ReportDataSource();
         int flag = 0;
         Frm_Setting frm_Setting = new Frm_Setting();
-
         BanHang_BUS banhang = new BanHang_BUS();
+        KhachHang_BUS kh = new KhachHang_BUS();
 
         public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3, Boolean b4)
         {
@@ -48,6 +48,13 @@ namespace DoAnCShap
             comboBoxlK.Enabled = b1;
             txtSL.Enabled = b1;
             txtGhiChu.Enabled = b1;
+        }
+        public void ClearTextBox()
+        {
+            txtsdtkh.ResetText();
+            txtMaPhieu.ResetText();
+            txtGhiChu.ResetText();
+            txtSL.ResetText();
         }
 
         public void HienThiNhanVien(string labelHienTenDN)
@@ -82,9 +89,15 @@ namespace DoAnCShap
         }
         public void HienThiCTPhieu()
         {
-            dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "'");
+            dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select LK.TenLK,CT.SoLuong,CT.GhiChu From CT_PhieuBaoHanh CT , LinhKien LK Where LK.MaLK=CT.MaLK and MaPBH=N'" + txtMaPhieu.Text + "' and CT.TrangThai=N'1' ");
         }
 
+        public void TimKiemKH(string condition)
+        {
+            cboKhachHang.DataSource = kh.GetSearch("select MaKH,TenKH from KhachHang Where DienThoai like N'%" + condition + "%' ");
+            cboKhachHang.DisplayMember = "TenKH";
+            cboKhachHang.ValueMember = "MaKH";
+        }
 
         public void HienThiTimKiem(string condition)
         {
@@ -98,6 +111,7 @@ namespace DoAnCShap
 
         public void ClearTextBoxPBH()
         {
+            txtsdtkh.ResetText();
             txtMaPhieu.ResetText();
             dateTimePickerNgaLap.ResetText();
             dateTimePickerNgayLayHang.ResetText();
@@ -136,6 +150,9 @@ namespace DoAnCShap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            //ClearTextBox();
+            ClearTextBoxPBH();
+            ClearTextBoxCTPBH();
             flag = 1;
             XuLyChucNang(false, true, false, true);
             XuLyTexBox(true);
@@ -317,21 +334,28 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn Có Muốn Xóa Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
-                if (flag == 1)
-                {
-                    pbh.MaPBH = txtMaPhieu.Text;
-                    bus.XoaPhieuBaoHanh(pbh);
-                    MessageBox.Show("Thành Công");
-                    HienThiDSPhieu();
-                }
-                if (flag == 2)
-                {
-                    ctpbh.MaPBH = txtMaPhieu.Text;
-                    ctpbh.TenLK = comboBoxlK.Text;
-                    bus.XoaCTPhieuBaoHanh(ctpbh);
-                    MessageBox.Show("Thành Công");
-                    HienThiDSPhieu();
-                }
+                //if (flag == 1)
+                //{
+                //    pbh.MaPBH = txtMaPhieu.Text;
+                //    bus.XoaPhieuBaoHanh(pbh);
+                //    MessageBox.Show("Thành Công");
+                //    HienThiDSPhieu();
+                //}
+                //if (flag == 2)
+                //{
+                //    ctpbh.MaPBH = txtMaPhieu.Text;
+                //    ctpbh.TenLK = comboBoxlK.Text;
+                //    bus.XoaCTPhieuBaoHanh(ctpbh);
+                //    MessageBox.Show("Thành Công");
+                //    HienThiDSPhieu();
+                //}
+                ctpbh.MaPBH = txtMaPhieu.Text;
+                bus.XoaCTPhieuBaoHanh(ctpbh);
+                pbh.MaPBH = txtMaPhieu.Text;
+                bus.XoaPhieuBaoHanh(pbh);
+                MessageBox.Show("Thành Công");
+                HienThiDSPhieu();
+                ClearTextBox();
             }
             else
             {
@@ -487,5 +511,10 @@ namespace DoAnCShap
             e.Handled = true;
         }
 
+        private void btntimkiem_Click(object sender, EventArgs e)
+        {
+            string condition = txtsdtkh.Text;
+            TimKiemKH(condition);
+        }
     }
 }

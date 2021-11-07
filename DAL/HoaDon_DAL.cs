@@ -13,7 +13,7 @@ namespace DAL
 
         public DataTable GetHoaDon(string Condition)
         {
-            return KetNoi.GetDataTable("Select HoaDonBanHang.MaHDBH,TenKH,TennV,HoaDonBanHang.NgayLapHDBH,TongTien From HoaDonBanHang,NhanVien,KhachHang Where NhanVien.MaNV=HoaDonBanHang.MaNV and KhachHang.MaKH=HoaDonBanHang.MaKH" + Condition);
+            return KetNoi.GetDataTable("Select HoaDonBanHang.MaHDBH,TenKH,TennV,HoaDonBanHang.NgayLapHDBH,TongTien From HoaDonBanHang,NhanVien,KhachHang Where NhanVien.MaNV=HoaDonBanHang.MaNV and KhachHang.MaKH=HoaDonBanHang.MaKH and HoaDonBanHang.TrangThai=N'1'" + Condition);
         }
 
         public DataTable HienThiHDTheoMa(string condition)
@@ -69,11 +69,11 @@ namespace DAL
 
         public void DeleteCTHd(CT_HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From CT_HoaDonBanhang Where MaHDBH=N'" + ex.MaHDBH + "'");
+            KetNoi.ExecuteReader(@"Update CT_HoaDonBanhang Set TrangThai=N'0' Where MaHDBH=N'" + ex.MaHDBH + "'");
         }
         public void DeleteHoaDon(HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"Delete From HoaDonBanHang Where MaHDBH=N'" + ex.MaHDBH + "'");
+            KetNoi.ExecuteReader(@"Update HoaDonBanHang Set TrangThai=N'0' Where MaHDBH=N'" + ex.MaHDBH + "'");
         }
 
         public DataTable GetSearch(string Condition)

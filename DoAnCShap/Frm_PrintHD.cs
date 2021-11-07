@@ -21,7 +21,6 @@ namespace DoAnCShap
 
         private void Frm_PrintHD_Load(object sender, EventArgs e)
         {
-
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
