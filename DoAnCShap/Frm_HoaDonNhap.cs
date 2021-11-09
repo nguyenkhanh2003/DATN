@@ -765,7 +765,7 @@ namespace DoAnCShap
             }
             rss.Name = "DataSet2";
             rss.Value = lst;
-            frm_in.reportViewer1.LocalReport.DataSources.Clear();
+            this.frm_in.reportViewer1.LocalReport.DataSources.Clear();
             frm_in.reportViewer1.LocalReport.DataSources.Add(rss);
             frm_in.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnCShap.ReportHDN.rdlc";
             Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]

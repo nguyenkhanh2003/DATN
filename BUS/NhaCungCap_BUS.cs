@@ -9,7 +9,7 @@ using DTO;
 
 namespace BUS
 {
-   public class NhaCungCap_BUS
+    public class NhaCungCap_BUS
     {
         NhaCungCap_DAL bus = new NhaCungCap_DAL();
         //  LẤY DỮ LIỆU
@@ -20,6 +20,10 @@ namespace BUS
         public DataTable PhatSinhMa(string condition)
         {
             return bus.PhatSinhMa(condition);
+        }
+        public DataTable KiemTraDuLieu(string condition)
+        {
+            return bus.KiemTraDuLieu(condition);
         }
         // Tim Kiem
         public DataTable GetSearch(string condition)

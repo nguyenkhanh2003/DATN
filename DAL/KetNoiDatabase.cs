@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-  public class KetNoiDatabase
+    public class KetNoiDatabase
     {
         public static SqlConnection ConnectDB;
 
@@ -17,9 +17,9 @@ namespace DAL
         public void OpenConnect()
         {
             if (KetNoiDatabase.ConnectDB == null)
-               // KetNoiDatabase.ConnectDB = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK;Initial Catalog=PM_BanLinhKienPC;Integrated Security=True");
-                  KetNoiDatabase.ConnectDB = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
-           
+                // KetNoiDatabase.ConnectDB = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK;Initial Catalog=PM_BanLinhKienPC;Integrated Security=True");
+                KetNoiDatabase.ConnectDB = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
+
             if (KetNoiDatabase.ConnectDB.State != ConnectionState.Open)
                 KetNoiDatabase.ConnectDB.Open();
         }

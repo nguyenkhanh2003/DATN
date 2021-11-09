@@ -74,7 +74,7 @@ namespace DAL
         }
         public void Update_PBH(PhieuBaoHanh ex)
         {
-            KetNoi.ExecuteReader(@"update PhieuBaoHanh Set Where MaPBH=N'" + ex.MaPBH + "' ,N'" + ex.QuyTrinh + "'");
+            KetNoi.ExecuteReader(@"update PhieuBaoHanh Set QuyTrinh=N'" + ex.QuyTrinh + "'  Where MaPBH=N'" + ex.MaPBH + "' ");
         }
 
         public DataTable TimHD(string condition)

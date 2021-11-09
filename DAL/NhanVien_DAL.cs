@@ -21,6 +21,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select * From NhanVien" + condition);
         }
+        public DataTable KiemTraDuLieu(string condition)
+        {
+            return KetNoi.GetDataTable("" + condition);
+        }
         //Hien Thị Tìm Kiếm
         public DataTable GetTimKiem(string Condition)
         {

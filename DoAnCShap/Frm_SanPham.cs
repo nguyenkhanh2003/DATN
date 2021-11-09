@@ -168,105 +168,115 @@ namespace DoAnCShap
         {
             if (flag == 1)
             {
-                try
+                //try
+                //{
+                if (cboMaLoai.Text == "")
                 {
-                    if (cboMaLoai.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(cboMaLoai, "? Chưa chọn mã loại");
-                        return;
-                    }
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(cboMaLoai, "? Chưa chọn mã loại");
+                    return;
+                }
 
-                    if (comboBoxNCC.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
-                        return;
-                    }
-                    if (txtTenLinhKien.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtTenLinhKien, "Tên linh kiện không được để trống");
-                        return;
-                    }
-                    if (comboBoxBaoHanh.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(comboBoxBaoHanh, "Chưa chọn bảo hành");
-                        return;
-                    }
-                    if (txtXuatXu.Text == "")
-                    {
-                        errorMes.BlinkRate = 10; ;
-                        errorMes.SetError(txtXuatXu, "? Xuất Xứ");
-                        return;
-                    }
-                    if (txtTinhTrang.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtTinhTrang, "? Tình Trạng");
-                        return;
-                    }
-                    if (txtDonViTinh.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDonViTinh, "? Đơn Vị tính");
-                        return;
-                    }
-                    if (txtDonGia.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDonGia, "? Đơn Giá");
-                        return;
-                    }
-                    if (txtSoLuong.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtSoLuong, "? Số Lượng");
-                        return;
-                    }
+                if (comboBoxNCC.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
+                    return;
+                }
+                if (txtTenLinhKien.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenLinhKien, "Tên linh kiện không được để trống");
+                    return;
+                }
+                for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
+                {
 
+                    if (txtTenLinhKien.Text == dataGridViewLK.Rows[i].Cells["TenLK"].Value.ToString())
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtTenLinhKien, "Đã Tồn Tại");
+                        return;
+                    }
+                }
+                if (comboBoxBaoHanh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxBaoHanh, "Chưa chọn bảo hành");
+                    return;
+                }
+                if (txtXuatXu.Text == "")
+                {
+                    errorMes.BlinkRate = 10; ;
+                    errorMes.SetError(txtXuatXu, "? Xuất Xứ");
+                    return;
+                }
+                if (txtTinhTrang.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTinhTrang, "? Tình Trạng");
+                    return;
+                }
+                if (txtDonViTinh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDonViTinh, "? Đơn Vị tính");
+                    return;
+                }
+                if (txtDonGia.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDonGia, "? Đơn Giá");
+                    return;
+                }
+                if (txtSoLuong.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSoLuong, "? Số Lượng");
+                    return;
+                }
+
+                else
+                {
+                    lk.MaLK = txtMaLinhKien.Text;
+                    lk.MaLLK = cboMaLoai.SelectedValue.ToString();
+                    lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
+                    lk.TenLK = txtTenLinhKien.Text;
+                    lk.BaoHanh = comboBoxBaoHanh.Text;
+                    lk.XuatXu = txtXuatXu.Text;
+                    lk.TinhTrang = txtTinhTrang.Text;
+                    lk.DonViTinh = txtDonViTinh.Text;
+                    lk.DonGia = int.Parse(txtDonGia.Text);
+                    lk.SoLuongTon = int.Parse(txtSoLuong.Text);
+                    if (txtKhuyenMai.Text == "")
+                    {
+                        lk.KhuyenMai = 0;
+                    }
                     else
                     {
-                        lk.MaLK = txtMaLinhKien.Text;
-                        lk.MaLLK = cboMaLoai.SelectedValue.ToString();
-                        lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
-                        lk.TenLK = txtTenLinhKien.Text;
-                        lk.BaoHanh = comboBoxBaoHanh.Text;
-                        lk.XuatXu = txtXuatXu.Text;
-                        lk.TinhTrang = txtTinhTrang.Text;
-                        lk.DonViTinh = txtDonViTinh.Text;
-                        lk.DonGia = int.Parse(txtDonGia.Text);
-                        lk.SoLuongTon = int.Parse(txtSoLuong.Text);
-                        if (txtKhuyenMai.Text == "")
-                        {
-                            lk.KhuyenMai = 0;
-                        }
-                        else
-                        {
-                            lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
-                        }
-                        if (pictureBox1.Image == null)
-                        {
-                            lk.HinhAnh = "Không";
-                        }
-                        else
-                        {
-                            lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
-                            LuuAnh();
-                        }
-                        lk.TrangThai = "1";
-                        bus.AddData(lk);
-                        MessageBox.Show("Thành Công");
-                        xulychucnang(true, false, false);
-                        XuLyTextBox(false, true);
-                        Clear();
+                        lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
                     }
+                    if (pictureBox1.Image == null)
+                    {
+                        lk.HinhAnh = "Không";
+                    }
+                    else
+                    {
+                        lk.HinhAnh = Path.GetFileName(pictureBox1.ImageLocation);
+                        LuuAnh();
+                    }
+                    lk.TrangThai = "1";
+                    bus.AddData(lk);
+                    MessageBox.Show("Thành Công");
+                    xulychucnang(true, false, false);
+                    XuLyTextBox(false, true);
+                    Clear();
                 }
-                catch
-                {
-                    MessageBox.Show("Không thể thêm được");
-                }
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Không thể thêm được");
+                //}
 
             }
             if (flag == 2)

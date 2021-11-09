@@ -293,6 +293,7 @@ namespace DoAnCShap
                 ctpbh.GhiChu = txtGhiChu.Text;
                 bus.Update_CTPBH(ctpbh);
                 pbh.MaPBH = txtMaPhieu.Text;
+                pbh.QuyTrinh = comboQuyTrinh.Text;
                 bus.Update_PBH(pbh);
                 MessageBox.Show("Cập Nhật Thành Công");
             }
@@ -325,7 +326,7 @@ namespace DoAnCShap
             HienThiPhieuBHTextBox(vitri, bus.GetPBH(""));
             XuLyChucNang(true, true, true, false);
             XuLyTexBox(true);
-            flag = 1;
+            flag = 2;
 
         }
 

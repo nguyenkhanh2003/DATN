@@ -398,7 +398,15 @@ namespace DoAnCShap
             add = true;
             if (txtSDT.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập số điện thoại !");
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSDT, "Vui lòng nhập số điện thoại");
+                return;
+            }
+            if (txtSDT.Text.Length < 9)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtSDT, "?");
+                return;
             }
             else
             {
@@ -472,48 +480,72 @@ namespace DoAnCShap
         {
             int KiemTra;
             int vitri;
-            if (txtSDT.Text == "")
+            try
             {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
-                return;
-            }
-            if (txtMaKH.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
-                return;
-            }
-            if (txtDiaChi.Text == "")
-            {
-                errorMes.BlinkRate = 100;
-                errorMes.SetError(txtDiaChi, "Địa Chỉ Không được để trống");
-                return;
-            }
-            else
-            {
-                ThemKH.MaKH = txtMaKH.Text;
-                ThemKH.TenKH = txtTenkH.Text;
-                if (radioButtonNam.Checked == true)
-                {
-                    ThemKH.GioiTinh = radioButtonNam.Text;
-                }
-                else
-                {
-                    ThemKH.GioiTinh = radioButtonNu.Text;
-                }
                 if (txtSDT.Text == "")
                 {
-                    ThemKH.DienThoai = "Không";
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
+                    return;
+                }
+                if (txtSDT.Text.Length < 10)
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSDT, "Số điện thoại không đúng");
+                    return;
+                }
+
+                if (txtMaKH.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtMaKH, "Mã Khách Hàng Không được để trống");
+                    return;
+                }
+                DataTable DSKH = bus.GetDSkH("Select * From KhachHang Where DienThoai=N'" + txtSDT.Text + "'");
+                {
+                    if (DSKH.Rows.Count > 0)
+                    {
+                        if (txtMaKH.Text == DSKH.Rows[0]["MakH"].ToString())
+                        {
+                            MessageBox.Show("Không thể thêm mới được");
+                            return;
+                        }
+                    }
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDiaChi, "Địa Chỉ Không được để trống");
+                    return;
                 }
                 else
                 {
-                    ThemKH.DienThoai = txtSDT.Text;
+                    ThemKH.MaKH = txtMaKH.Text;
+                    ThemKH.TenKH = txtTenkH.Text;
+                    if (radioButtonNam.Checked == true)
+                    {
+                        ThemKH.GioiTinh = radioButtonNam.Text;
+                    }
+                    else
+                    {
+                        ThemKH.GioiTinh = radioButtonNu.Text;
+                    }
+                    if (txtSDT.Text == "")
+                    {
+                        ThemKH.DienThoai = "Không";
+                    }
+                    else
+                    {
+                        ThemKH.DienThoai = txtSDT.Text;
+                    }
+                    ThemKH.DiaChi = txtDiaChi.Text;
+                    ThemKH.TrangThai = "1";
+                    kh.AddData(ThemKH);
+                    MessageBox.Show("Thêm Khách Hàng Thành Công");
                 }
-                ThemKH.DiaChi = txtDiaChi.Text;
-                ThemKH.TrangThai = "1";
-                kh.AddData(ThemKH);
-                MessageBox.Show("Thêm Khách Hàng Thành Công");
+            }
+            catch
+            {
 
             }
         }
@@ -767,6 +799,14 @@ namespace DoAnCShap
                 }
             }
 
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
         }
     }
 

@@ -98,6 +98,18 @@ namespace DoAnCShap
         {
             if (flag == 1)
             {
+                for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
+                {
+
+                    if (txtTenLoai.Text == dataGridViewKH.Rows[i].Cells["TenLLK"].Value.ToString())
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(txtTenLoai, "Đã Tồn Tại");
+                        return;
+                    }
+                }
+
+
                 if (txtTenLoai.Text == "")
                 {
                     errorMes.BlinkRate = 100;
@@ -114,6 +126,7 @@ namespace DoAnCShap
                     xulytextbox(true, false);
                     clear();
                 }
+
             }
             if (flag == 2)
             {

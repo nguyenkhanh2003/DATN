@@ -21,6 +21,10 @@ namespace BUS
         {
             return bus.PhatSinhMa(condition);
         }
+        public DataTable KiemTraDuLieu(string condition)
+        {
+            return bus.KiemTraDuLieu(condition);
+        }
         public DataTable GetTimKiem(string condition)
         {
             return bus.GetTimKiem(condition);

@@ -66,7 +66,7 @@ namespace DoAnCShap
 
         public void HienThiTimKiemHD(string condition)
         {
-            dataGridViewHD.DataSource = bus.GetSearch("Select * From HoaDonBanHang Where MaHDBH Like N'%" + condition + "%'");
+            dataGridViewHD.DataSource = bus.GetSearch("Select HoaDonBanHang.MaHDBH,TenKH,TennV,HoaDonBanHang.NgayLapHDBH,TongTien From HoaDonBanHang,NhanVien,KhachHang Where NhanVien.MaNV=HoaDonBanHang.MaNV and KhachHang.MaKH=HoaDonBanHang.MaKH and HoaDonBanHang.TrangThai=N'1' and MaHDBH Like N'%" + condition + "%'");
         }
 
         public void HienThiCTHD()

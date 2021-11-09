@@ -169,7 +169,6 @@ namespace DoAnCShap
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             if (addnew == true)
             {
                 try
@@ -192,11 +191,32 @@ namespace DoAnCShap
                         errorMes.SetError(txtDienThoai, "? Điện Thoại");
                         return;
                     }
-                    if (txtDienThoai.Text.Length < 10)
+                    if (txtDienThoai.Text.Length < 10 || txtDienThoai.Text.Length > 13)
                     {
                         errorMes.BlinkRate = 100;
                         errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
                         return;
+                    }
+                    for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
+                    {
+                        if (txtTenNCC.Text == dataGridViewNhaCungCap.Rows[i].Cells["TenNCC"].Value.ToString())
+                        {
+                            errorMes.BlinkRate = 100;
+                            errorMes.SetError(txtTenNCC, "Đã Tồn Tại");
+                            return;
+                        }
+                        if (txtDienThoai.Text == dataGridViewNhaCungCap.Rows[i].Cells["DienThoai"].Value.ToString())
+                        {
+                            errorMes.BlinkRate = 100;
+                            errorMes.SetError(txtDienThoai, "Đã Tồn Tại");
+                            return;
+                        }
+                        if (txtEmail.Text == dataGridViewNhaCungCap.Rows[i].Cells["Email"].Value.ToString())
+                        {
+                            errorMes.BlinkRate = 100;
+                            errorMes.SetError(txtEmail, "Đã Tồn Tại");
+                            return;
+                        }
                     }
                     if (txtDiaChi.Text == "")
                     {
@@ -243,64 +263,111 @@ namespace DoAnCShap
             }
             else
             {
-
-                try
+                if (txtMaNCC.Text == "")
                 {
-                    if (txtMaNCC.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtMaNCC, "? MaNCC");
-                        return;
-                    }
-                    if (txtTenNCC.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtTenNCC, "? TenNCC");
-                        return;
-                    }
-                    if (txtDienThoai.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDienThoai, "? Điện Thoại");
-                        return;
-                    }
-                    if (txtDienThoai.Text.Length < 10)
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
-                        return;
-                    }
-                    if (txtDiaChi.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtDiaChi, "? Địa chỉ");
-                        return;
-                    }
-
-                    if (txtEmail.Text == "")
-                    {
-                        errorMes.BlinkRate = 100;
-                        errorMes.SetError(txtEmail, "? Email");
-                        return;
-                    }
-                    else
-                    {
-                        ncc.MaNCC = txtMaNCC.Text;
-                        ncc.TenNCC = txtTenNCC.Text;
-                        ncc.Email = txtEmail.Text;
-                        ncc.DienThoai = txtDienThoai.Text;
-                        ncc.DiaChi = txtDiaChi.Text;
-                        ncc.TrangThai = "1";
-                        bus.EditData(ncc);
-                        //MessageBox.Show("Cập Nhật Thành Công");
-                        ClearTextBox();
-                        XuLyChucNang(true, false, false);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Không thể sửa được !");
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtMaNCC, "? MaNCC");
                     return;
+                }
+                if (txtTenNCC.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtTenNCC, "? TenNCC");
+                    return;
+                }
+                if (txtDienThoai.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDienThoai, "? Điện Thoại");
+                    return;
+                }
+                if (txtDienThoai.Text.Length < 10 || txtDienThoai.Text.Length > 13)
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDienThoai, "Số điện thoại không đúng");
+                    return;
+                }
+                if (txtDiaChi.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtDiaChi, "? Địa chỉ");
+                    return;
+                }
+
+                if (txtEmail.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtEmail, "? Email");
+                    return;
+                }
+                else
+                {
+                    ncc.MaNCC = txtMaNCC.Text;
+                    //ncc.TenNCC = txtTenNCC.Text;
+                    DataTable DSNCC = bus.KiemTraDuLieu("Select * From NhaCungCap Where MaNCC=N'" + txtMaNCC.Text + "' and TrangThai=N'1' ");
+                    try
+                    {
+                        if (txtMaNCC.Text == DSNCC.Rows[0]["MaNCC"].ToString() && txtDienThoai.Text == DSNCC.Rows[0]["DienThoai"].ToString())
+                        {
+                            ncc.DienThoai = txtDienThoai.Text;
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
+                            {
+                                if (txtDienThoai.Text == dataGridViewNhaCungCap.Rows[i].Cells["DienThoai"].Value.ToString())
+                                {
+                                    errorMes.BlinkRate = 100;
+                                    errorMes.SetError(txtDienThoai, "Đã tồn tại");
+                                    return;
+                                }
+                                else
+                                {
+                                    ncc.DienThoai = txtDienThoai.Text;
+                                }
+                            }
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                    ncc.Email = txtEmail.Text;
+
+                    DataTable DSNCC1 = bus.KiemTraDuLieu("Select * From NhaCungCap Where MaNCC=N'" + txtMaNCC.Text + "' and TrangThai=N'1' ");
+                    try
+                    {
+                        if (txtMaNCC.Text == DSNCC1.Rows[0]["MaNCC"].ToString() && txtTenNCC.Text == DSNCC1.Rows[0]["TenNCC"].ToString())
+                        {
+                            ncc.TenNCC = txtTenNCC.Text;
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
+                            {
+                                if (txtTenNCC.Text == dataGridViewNhaCungCap.Rows[i].Cells["TenNCC"].Value.ToString())
+                                {
+                                    errorMes.BlinkRate = 100;
+                                    errorMes.SetError(txtTenNCC, "Đã tồn tại");
+                                    return;
+                                }
+                                else
+                                {
+                                    ncc.TenNCC = txtTenNCC.Text;
+                                }
+                            }
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+
+                    ncc.DiaChi = txtDiaChi.Text;
+                    ncc.TrangThai = "1";
+                    bus.EditData(ncc);
+                    ClearTextBox();
+                    XuLyChucNang(true, false, false);
                 }
             }
             Display();
@@ -330,10 +397,10 @@ namespace DoAnCShap
 
         private void txtTenNCC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) == false && char.IsControl(e.KeyChar) == false && char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            //if (char.IsLetter(e.KeyChar) == false && char.IsControl(e.KeyChar) == false && char.IsDigit(e.KeyChar))
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
