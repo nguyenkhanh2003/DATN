@@ -169,6 +169,7 @@ namespace DoAnCShap
             this.dataGridViewCTHDN2.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCTHDN2.Location = new System.Drawing.Point(6, 21);
             this.dataGridViewCTHDN2.Name = "dataGridViewCTHDN2";
+            this.dataGridViewCTHDN2.ReadOnly = true;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -191,18 +192,21 @@ namespace DoAnCShap
             this.dataGridViewTextBoxColumn1.DataPropertyName = "STT";
             this.dataGridViewTextBoxColumn1.HeaderText = "STT";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // TenLK1
             // 
             this.TenLK1.DataPropertyName = "TenLK";
             this.TenLK1.HeaderText = "Tên linh kiện";
             this.TenLK1.Name = "TenLK1";
+            this.TenLK1.ReadOnly = true;
             // 
             // SoLuong1
             // 
             this.SoLuong1.DataPropertyName = "SoLuong";
             this.SoLuong1.HeaderText = "Số lượng";
             this.SoLuong1.Name = "SoLuong1";
+            this.SoLuong1.ReadOnly = true;
             // 
             // DonGia1
             // 
@@ -211,12 +215,14 @@ namespace DoAnCShap
             this.DonGia1.DefaultCellStyle = dataGridViewCellStyle3;
             this.DonGia1.HeaderText = "Đơn giá";
             this.DonGia1.Name = "DonGia1";
+            this.DonGia1.ReadOnly = true;
             // 
             // KhuyenMai1
             // 
             this.KhuyenMai1.DataPropertyName = "KhuyenMai";
             this.KhuyenMai1.HeaderText = "Chiết khấu";
             this.KhuyenMai1.Name = "KhuyenMai1";
+            this.KhuyenMai1.ReadOnly = true;
             // 
             // ThanhTien1
             // 
@@ -225,6 +231,7 @@ namespace DoAnCShap
             this.ThanhTien1.DefaultCellStyle = dataGridViewCellStyle4;
             this.ThanhTien1.HeaderText = "Thành tiền";
             this.ThanhTien1.Name = "ThanhTien1";
+            this.ThanhTien1.ReadOnly = true;
             // 
             // dataGridViewCTHDNH
             // 
@@ -276,6 +283,7 @@ namespace DoAnCShap
             this.dataGridViewCTHDNH.TabIndex = 5;
             this.dataGridViewCTHDNH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCTHDNH_CellClick);
             this.dataGridViewCTHDNH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewCTHDNH_RowPostPaint);
+            this.dataGridViewCTHDNH.DoubleClick += new System.EventHandler(this.dataGridViewCTHDNH_DoubleClick_1);
             // 
             // STT
             // 

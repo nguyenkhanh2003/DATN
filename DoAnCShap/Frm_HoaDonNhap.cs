@@ -28,6 +28,7 @@ namespace DoAnCShap
         LinhKien LK = new LinhKien();
         ReportDataSource rss = new ReportDataSource();
         int flag = 0;
+        bool addnew = false;
         Frm_Setting frm_Setting = new Frm_Setting();
         public void HienThiSanPham()
         {
@@ -393,6 +394,34 @@ namespace DoAnCShap
                 }
                 else
                 {
+                    hdn.MaHDNH = txtMaHDN.Text;
+                    hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
+                    hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
+                    bus.UpdateHDN(hdn);
+                }
+            }
+            if (addnew == true)
+            {
+                if (comboBoxNCC.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
+                    return;
+                }
+                if (comboBoxMaNV.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboBoxMaNV, "Tên Nhân Viên Không được để trống");
+                    return;
+                }
+                if (labelTongThanhToan.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(labelTongThanhToan, "? TT");
+                    return;
+                }
+                else
+                {
                     UpateThanhTienSP();
                     cthdn.MaHDNH = txtMaHDN.Text;
                     cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
@@ -418,6 +447,7 @@ namespace DoAnCShap
                     MessageBox.Show("Cập Nhật Thành Công");
                     XuLyChucNang(true, false, false, false);
                     ClearTexBox();
+                    flag = 0;
                 }
             }
 
@@ -447,7 +477,7 @@ namespace DoAnCShap
             HideDataGriview(false, true);
             int vitri = dataGridViewHDN.CurrentCell.RowIndex;
             HieThiHoaDonNhapTextBox(vitri, bus.HienThiHDN(""));
-            flag = 1;
+            flag = 2;
             XuLyChucNang(true, true, true, true);
             XuLyTextBox(true);
         }
@@ -678,7 +708,7 @@ namespace DoAnCShap
 
         private void dataGridViewCTHDN2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            flag = 2;
+            addnew = true;
             //XuLyChucNang(true, false, true, true);
             XuLyChucNang(true, true, true, true);
             try
@@ -778,6 +808,24 @@ namespace DoAnCShap
             frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
             this.frm_in.reportViewer1.RefreshReport();
             frm_in.ShowDialog();
+        }
+
+        private void dataGridViewCTHDNH_DoubleClick_1(object sender, EventArgs e)
+        {
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa sản phẩm này không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (KQ == DialogResult.Yes)
+            {
+                try
+                {
+                    int rowIndex = dataGridViewCTHDNH.CurrentCell.RowIndex;
+                    dataGridViewCTHDNH.Rows.RemoveAt(rowIndex);
+                    TongTienSP();
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }

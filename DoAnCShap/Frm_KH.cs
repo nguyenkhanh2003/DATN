@@ -205,20 +205,12 @@ namespace DoAnCShap
                 {
                     kh.MaKH = txtMaKh.Text;
                     kh.TenKH = txtTenkh.Text;
-                    if (radioButtonNam.Checked == true)
+                    int vitri = dataGridViewKH.CurrentCell.RowIndex;
+                    if (dataGridViewKH.Rows.Count > 0)
                     {
-                        kh.GioiTinh = radioButtonNam.Text;
-                    }
-                    else
-                    {
-                        kh.GioiTinh = radioButtonNu.Text;
-                    }
-                    DataTable DSKH = bus.KiemTraDuLieu("Select * From KhachHang Where MaKH=N'" + txtMaKh.Text + "' and TrangThai=N'1' ");
-                    if (DSKH.Rows.Count > 0)
-                    {
-                        if (txtMaKh.Text == DSKH.Rows[0]["MaKH"].ToString() && txtSdt.Text == DSKH.Rows[0]["DienThoai"].ToString())
+                        if (txtSdt.Text == dataGridViewKH.Rows[vitri].Cells["DienThoai"].Value.ToString())
                         {
-                            kh.DienThoai = txtSdt.Text;
+                            // Bỏ Qua
                         }
                         else
                         {
@@ -230,17 +222,18 @@ namespace DoAnCShap
                                     errorMes.SetError(txtSdt, "Đã tồn tại");
                                     return;
                                 }
-                                else
-                                {
-                                    kh.DienThoai = txtSdt.Text;
-                                }
                             }
                         }
                     }
+                    if (radioButtonNam.Checked == true)
+                    {
+                        kh.GioiTinh = radioButtonNam.Text;
+                    }
                     else
                     {
-
+                        kh.GioiTinh = radioButtonNu.Text;
                     }
+                    kh.DienThoai = txtSdt.Text;
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = "1";
                     bus.EditData(kh); ;

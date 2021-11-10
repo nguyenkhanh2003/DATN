@@ -15,6 +15,10 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select HoaDonBanHang.MaHDBH,TenKH,TennV,HoaDonBanHang.NgayLapHDBH,TongTien From HoaDonBanHang,NhanVien,KhachHang Where NhanVien.MaNV=HoaDonBanHang.MaNV and KhachHang.MaKH=HoaDonBanHang.MaKH and HoaDonBanHang.TrangThai=N'1'" + Condition);
         }
+        public DataTable LayDSHD(string condition)
+        {
+            return KetNoi.GetDataTable("Select HoaDonBanHang.MaHDBH,TenKH,TennV,HoaDonBanHang.NgayLapHDBH,TongTien From HoaDonBanHang,NhanVien,KhachHang Where NhanVien.MaNV=HoaDonBanHang.MaNV and KhachHang.MaKH=HoaDonBanHang.MaKH and HoaDonBanHang.TrangThai=N'1'" + condition);
+        }
 
         public DataTable HienThiHDTheoMa(string condition)
         {
@@ -50,12 +54,12 @@ namespace DAL
         }
         public void UpdateHoaDon(HoaDonBanHang ex)
         {
-            KetNoi.ExecuteReader(@"update HoaDonBanHang Set NgayLapHDBH=N'" + ex.NgayLapHDBH + "',TongTien=" + ex.TongTien + ",TrangThai=N'" + ex.TrangThai + "' Where MaHDBH=N'" + ex.MaHDBH + "'");
+            KetNoi.ExecuteReader(@"update HoaDonBanHang Set MaNV=N'" + ex.MaNV + "', NgayLapHDBH=N'" + ex.NgayLapHDBH + "',TongTien=" + ex.TongTien + " Where MaHDBH=N'" + ex.MaHDBH + "'");
         }
 
         public void UpdateCTHoaDon(CT_HoaDonBanHang exx)
         {
-            KetNoi.ExecuteReader(@"Update CT_HoaDonBanHang Set SoLuong=" + exx.SoLuong + ",DonGia=" + exx.DonGia + ",KhuyenMai=" + exx.KhuyenMai + ",ThanhTien=" + exx.ThanhTien + ",TrangThai=N'" + exx.TrangThai + "' Where MaLK=N'" + exx.MaLK + "'");
+            KetNoi.ExecuteReader(@"Update CT_HoaDonBanHang Set SoLuong=" + exx.SoLuong + ",DonGia=" + exx.DonGia + ",KhuyenMai=" + exx.KhuyenMai + ",ThanhTien=" + exx.ThanhTien + " Where MaLK=N'" + exx.MaLK + "'");
         }
 
         public void UpdateSoLuongKho(LinhKien ex)
