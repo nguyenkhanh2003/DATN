@@ -303,43 +303,12 @@ namespace DoAnCShap
                 else
                 {
                     ncc.MaNCC = txtMaNCC.Text;
-                    //ncc.TenNCC = txtTenNCC.Text;
-                    DataTable DSNCC = bus.KiemTraDuLieu("Select * From NhaCungCap Where MaNCC=N'" + txtMaNCC.Text + "' and TrangThai=N'1' ");
-                    try
+                    int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
+                    if (dataGridViewNhaCungCap.Rows.Count > 0)
                     {
-                        if (txtMaNCC.Text == DSNCC.Rows[0]["MaNCC"].ToString() && txtDienThoai.Text == DSNCC.Rows[0]["DienThoai"].ToString())
+                        if (txtTenNCC.Text == dataGridViewNhaCungCap.Rows[vitri].Cells["TenNCC"].Value.ToString())
                         {
-                            ncc.DienThoai = txtDienThoai.Text;
-                        }
-                        else
-                        {
-                            for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
-                            {
-                                if (txtDienThoai.Text == dataGridViewNhaCungCap.Rows[i].Cells["DienThoai"].Value.ToString())
-                                {
-                                    errorMes.BlinkRate = 100;
-                                    errorMes.SetError(txtDienThoai, "Đã tồn tại");
-                                    return;
-                                }
-                                else
-                                {
-                                    ncc.DienThoai = txtDienThoai.Text;
-                                }
-                            }
-                        }
-                    }
-                    catch
-                    {
-
-                    }
-                    ncc.Email = txtEmail.Text;
-
-                    DataTable DSNCC1 = bus.KiemTraDuLieu("Select * From NhaCungCap Where MaNCC=N'" + txtMaNCC.Text + "' and TrangThai=N'1' ");
-                    try
-                    {
-                        if (txtMaNCC.Text == DSNCC1.Rows[0]["MaNCC"].ToString() && txtTenNCC.Text == DSNCC1.Rows[0]["TenNCC"].ToString())
-                        {
-                            ncc.TenNCC = txtTenNCC.Text;
+                            // Bỏ Qua
                         }
                         else
                         {
@@ -351,18 +320,44 @@ namespace DoAnCShap
                                     errorMes.SetError(txtTenNCC, "Đã tồn tại");
                                     return;
                                 }
-                                else
+                            }
+                        }
+                        if (txtDienThoai.Text == dataGridViewNhaCungCap.Rows[vitri].Cells["DienThoai"].Value.ToString())
+                        {
+                            // Bỏ Qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
+                            {
+                                if (txtDienThoai.Text == dataGridViewNhaCungCap.Rows[i].Cells["DienThoai"].Value.ToString())
                                 {
-                                    ncc.TenNCC = txtTenNCC.Text;
+                                    errorMes.BlinkRate = 100;
+                                    errorMes.SetError(txtDienThoai, "Đã tồn tại");
+                                    return;
+                                }
+                            }
+                        }
+                        if (txtEmail.Text == dataGridViewNhaCungCap.Rows[vitri].Cells["Email"].Value.ToString())
+                        {
+                            // Bỏ Qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
+                            {
+                                if (txtEmail.Text == dataGridViewNhaCungCap.Rows[i].Cells["Email"].Value.ToString())
+                                {
+                                    errorMes.BlinkRate = 100;
+                                    errorMes.SetError(txtEmail, "Đã tồn tại");
+                                    return;
                                 }
                             }
                         }
                     }
-                    catch
-                    {
-
-                    }
-
+                    ncc.TenNCC = txtTenNCC.Text;
+                    ncc.DienThoai = txtDienThoai.Text;
+                    ncc.Email = txtEmail.Text;
                     ncc.DiaChi = txtDiaChi.Text;
                     ncc.TrangThai = "1";
                     bus.EditData(ncc);

@@ -417,13 +417,12 @@ namespace DoAnCShap
                     {
                         nv.GioiTinh = radioButtonNu.Text;
                     }
-                    DataTable DSNV = bus.KiemTraDuLieu("Select * From NhanVien Where MaNV=N'" + txtMaNV.Text + "'");
-                    if (DSNV.Rows.Count > 0)
+                    int vitri = dataGridViewNhanVien.CurrentCell.RowIndex;
+                    if (dataGridViewNhanVien.Rows.Count > 0)
                     {
-                        if (txtMaNV.Text == DSNV.Rows[0]["MaNV"].ToString() && txtSDT.Text == DSNV.Rows[0]["DienThoai"].ToString() && txtUserName.Text == DSNV.Rows[0]["UserName"].ToString())
+                        if (txtSDT.Text == dataGridViewNhanVien.Rows[vitri].Cells["DienThoai"].Value.ToString())
                         {
-                            nv.DienThoai = txtSDT.Text;
-                            nv.UserName = txtUserName.Text;
+                            // Bỏ Qua
                         }
                         else
                         {
@@ -435,24 +434,61 @@ namespace DoAnCShap
                                     erroMes.SetError(txtSDT, "Đã tồn tại");
                                     return;
                                 }
+                            }
+                        }
+                        if (txtEmail.Text == dataGridViewNhanVien.Rows[vitri].Cells["Email"].Value.ToString())
+                        {
+                            // bỏ qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                            {
+                                if (txtEmail.Text == dataGridViewNhanVien.Rows[i].Cells["Email"].Value.ToString())
+                                {
+                                    erroMes.BlinkRate = 100;
+                                    erroMes.SetError(txtSDT, "Đã tồn tại");
+                                    return;
+                                }
+                            }
+                        }
+                        if (txtCMND.Text == dataGridViewNhanVien.Rows[vitri].Cells["CMND"].Value.ToString())
+                        {
+                            // bỏ qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                            {
+                                if (txtCMND.Text == dataGridViewNhanVien.Rows[i].Cells["CMND"].Value.ToString())
+                                {
+                                    erroMes.BlinkRate = 100;
+                                    erroMes.SetError(txtSDT, "Đã tồn tại");
+                                    return;
+                                }
+                            }
+                        }
+                        if (txtUserName.Text == dataGridViewNhanVien.Rows[vitri].Cells["UserName"].Value.ToString())
+                        {
+                            // bỏ qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                            {
                                 if (txtUserName.Text == dataGridViewNhanVien.Rows[i].Cells["UserName"].Value.ToString())
                                 {
                                     erroMes.BlinkRate = 100;
-                                    erroMes.SetError(txtUserName, "Đã tồn tại");
+                                    erroMes.SetError(txtSDT, "Đã tồn tại");
                                     return;
-                                }
-
-                                else
-                                {
-                                    nv.DienThoai = txtSDT.Text;
-                                    nv.UserName = txtUserName.Text;
                                 }
                             }
                         }
                     }
+                    nv.DienThoai = txtSDT.Text;
+                    nv.UserName = txtUserName.Text;
                     nv.Email = txtEmail.Text;
                     nv.NgaySinh = dateTirmNgaySinh.Value.Date;
-                    //nv.DienThoai = txtSDT.Text;
                     nv.CMND = txtCMND.Text;
                     nv.DiaChi = txtDiaChi.Text;
                     if (KiemTra == 1)

@@ -139,10 +139,29 @@ namespace DoAnCShap
                 else
                 {
                     llk.MaLLK = txtMaLoai.Text;
+                    int vitri = dataGridViewKH.CurrentCell.RowIndex;
+                    if (dataGridViewKH.Rows.Count > 0)
+                    {
+                        if (txtTenLoai.Text == dataGridViewKH.Rows[vitri].Cells["TenLLK"].Value.ToString())
+                        {
+                            // Bỏ Qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
+                            {
+                                if (txtTenLoai.Text == dataGridViewKH.Rows[i].Cells["TenLLK"].Value.ToString())
+                                {
+                                    errorMes.BlinkRate = 100;
+                                    errorMes.SetError(txtTenLoai, "Đã tồn tại");
+                                    return;
+                                }
+                            }
+                        }
+                    }
                     llk.TenLLK = txtTenLoai.Text;
                     llk.TrangThai = "1";
                     bus.EditData(llk);
-                    //MessageBox.Show("Sửa Loại linh Kiện Thành Công");
                     clear();
                     xulychucnang(true, false, false);
                     xulytextbox(true, false);

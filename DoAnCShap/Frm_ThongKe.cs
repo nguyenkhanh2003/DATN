@@ -329,7 +329,7 @@ namespace DoAnCShap
                 //add default item
                 comboBoxNam.Items.Add("Select");
                 //loop array for add items
-                for (int i = DateTime.Now.Year; i < DateTime.Now.Year + 100; i++)
+                for (int i = DateTime.Now.Year; i < DateTime.Now.Year + 5; i++)
                 {
                     comboBoxNam.Items.Add(i);
                 }
