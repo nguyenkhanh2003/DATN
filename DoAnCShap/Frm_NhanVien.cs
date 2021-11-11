@@ -176,9 +176,9 @@ namespace DoAnCShap
             {
                 File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Ảnh đã tồn tại !");
+
             }
         }
 
@@ -242,7 +242,7 @@ namespace DoAnCShap
                     erroMes.SetError(txtSDT, "? SDT");
                     return;
                 }
-                if (txtSDT.Text.Length < 10 && txtSDT.Text.Length > 13)
+                if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 12)
                 {
                     erroMes.BlinkRate = 100;
                     erroMes.SetError(txtSDT, "Số điện thoại không đúng");
@@ -381,6 +381,12 @@ namespace DoAnCShap
                     erroMes.SetError(txtCMND, "? CMND");
                     return;
                 }
+                if (txtCMND.Text.Length < 9)
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtCMND, "? CMND");
+                    return;
+                }
                 if (txtDiaChi.Text == "")
                 {
                     erroMes.BlinkRate = 100;
@@ -398,14 +404,14 @@ namespace DoAnCShap
                 else
                 {
                     int KiemTra = 0;
-                    for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
-                    {
-                        if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
-                        {
-                            KiemTra = 1;
-                            break;
-                        }
-                    }
+                    //for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                    //{
+                    //    if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
+                    //    {
+                    //        KiemTra = 1;
+                    //        break;
+                    //    }
+                    //}
                     nv.MaNV = txtMaNV.Text;
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
@@ -480,6 +486,25 @@ namespace DoAnCShap
                                 {
                                     erroMes.BlinkRate = 100;
                                     erroMes.SetError(txtSDT, "Đã tồn tại");
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                    if (dataGridViewNhanVien.Rows.Count > 0)
+                    {
+                        if (TenHinh == dataGridViewNhanVien.Rows[vitri].Cells["HinhAnh"].Value.ToString())
+                        {
+                            // Bỏ Qua
+                            KiemTra = 1;
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
+                            {
+                                if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
+                                {
+                                    MessageBox.Show(TenHinh);
                                     return;
                                 }
                             }
@@ -633,7 +658,7 @@ namespace DoAnCShap
                 }
                 catch
                 {
-
+                    TenHinh = "Không";
                 }
                 txtUserName.Text = row.Cells["UserName"].Value.ToString();
                 PassW = row.Cells["Password"].Value.ToString();
