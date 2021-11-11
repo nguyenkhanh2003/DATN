@@ -45,6 +45,10 @@ namespace BUS
         {
             return bus.PhatSinhMa(condition);
         }
+        public DataTable LoadNCC(string codition)
+        {
+            return bus.LoadNCC(codition);
+        }
         public DataTable HienThiCTHDNH(string condition)
         {
             return bus.HienThiCTHDNH(condition);
@@ -59,9 +63,9 @@ namespace BUS
             bus.DeleteCT_HoaDonNhap(ex);
         }
         public void XoaCTHoaDonNhap(CT_HoaDonNhapHang ex)
-       {
-           bus.XoaCTHoaDonNhap(ex);
-       }
+        {
+            bus.XoaCTHoaDonNhap(ex);
+        }
         public void UpdateCTHDN(CT_HoaDonNhapHang ex)
         {
             bus.UpdateCTHDN(ex);

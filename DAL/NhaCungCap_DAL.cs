@@ -28,7 +28,7 @@ namespace DAL
         // Tim Kiem
         public DataTable GetSearch(string condition)
         {
-            return KetNoi.GetDataTable("" + condition);
+            return KetNoi.GetDataTable("Select * from NhaCungCap Where TenNCC Like N'%" + condition + "%' and TrangThai=N'1'");
         }
         // THÊM DỮ LIỆU
         public void AddData(NhaCungCap ex)

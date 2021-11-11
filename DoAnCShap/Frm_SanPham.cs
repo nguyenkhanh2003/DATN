@@ -351,6 +351,26 @@ namespace DoAnCShap
                     lk.MaLK = txtMaLinhKien.Text;
                     lk.MaLLK = cboMaLoai.SelectedValue.ToString();
                     lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
+                    int vitri = dataGridViewLK.CurrentCell.RowIndex;
+                    if (dataGridViewLK.Rows.Count > 0)
+                    {
+                        if (txtTenLinhKien.Text == dataGridViewLK.Rows[vitri].Cells["TenLK"].Value.ToString())
+                        {
+                            // Bỏ Qua
+                        }
+                        else
+                        {
+                            for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
+                            {
+                                if (txtTenLinhKien.Text == dataGridViewLK.Rows[i].Cells["TenLK"].Value.ToString())
+                                {
+                                    errorMes.BlinkRate = 100;
+                                    errorMes.SetError(txtTenLinhKien, "Đã tồn tại");
+                                    return;
+                                }
+                            }
+                        }
+                    }
                     lk.TenLK = txtTenLinhKien.Text;
                     lk.BaoHanh = comboBoxBaoHanh.Text;
                     lk.XuatXu = txtXuatXu.Text;

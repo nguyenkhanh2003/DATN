@@ -59,7 +59,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(string condition)
         {
-            dataGridViewNhaCungCap.DataSource = bus.GetSearch("Select * from NhaCungCap Where TenNCC Like N'%" + condition + "%'");
+            dataGridViewNhaCungCap.DataSource = bus.GetSearch("" + condition);
         }
         public void ClearTextBox()
         {

@@ -30,13 +30,28 @@ namespace DoAnCShap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChucVu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.dataGridViewCV = new System.Windows.Forms.DataGridView();
+            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QLNV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLKH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLBH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLNCC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLNK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.QLBaoHanh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ToanQ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ThongKe = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.HoaDon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -72,21 +87,6 @@ namespace DoAnCShap
             this.label3 = new System.Windows.Forms.Label();
             this.checkBoxBanHang = new Bunifu.Framework.UI.BunifuCheckbox();
             this.checkBoxNhanViem = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QLNV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLKH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLBH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLNCC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLLLK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLNK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QLBaoHanh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ToanQ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ThongKe = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.HoaDon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Setting = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCV)).BeginInit();
             this.panel3.SuspendLayout();
@@ -121,19 +121,19 @@ namespace DoAnCShap
             // dataGridViewCV
             // 
             this.dataGridViewCV.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridViewCV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGridViewCV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewCV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewCV.ColumnHeadersHeight = 25;
             this.dataGridViewCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -153,24 +153,24 @@ namespace DoAnCShap
             this.Setting,
             this.TrangThai});
             this.dataGridViewCV.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCV.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewCV.Location = new System.Drawing.Point(12, 341);
             this.dataGridViewCV.Name = "dataGridViewCV";
             this.dataGridViewCV.ReadOnly = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCV.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewCV.RowHeadersVisible = false;
             this.dataGridViewCV.RowHeadersWidth = 51;
             this.dataGridViewCV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -178,6 +178,130 @@ namespace DoAnCShap
             this.dataGridViewCV.TabIndex = 25;
             this.dataGridViewCV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCV_CellClick);
             this.dataGridViewCV.DoubleClick += new System.EventHandler(this.dataGridViewCV_DoubleClick);
+            // 
+            // MaCV
+            // 
+            this.MaCV.DataPropertyName = "MaCV";
+            this.MaCV.HeaderText = "Mã chức vụ";
+            this.MaCV.MinimumWidth = 6;
+            this.MaCV.Name = "MaCV";
+            this.MaCV.ReadOnly = true;
+            // 
+            // TenCV
+            // 
+            this.TenCV.DataPropertyName = "TenCV";
+            this.TenCV.HeaderText = "Tên chức vụ";
+            this.TenCV.MinimumWidth = 6;
+            this.TenCV.Name = "TenCV";
+            this.TenCV.ReadOnly = true;
+            // 
+            // QLNV
+            // 
+            this.QLNV.DataPropertyName = "NhanVien";
+            this.QLNV.HeaderText = "Nhân viên";
+            this.QLNV.Name = "QLNV";
+            this.QLNV.ReadOnly = true;
+            this.QLNV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // QLKH
+            // 
+            this.QLKH.DataPropertyName = "KhachHang";
+            this.QLKH.HeaderText = "Khách hàng";
+            this.QLKH.Name = "QLKH";
+            this.QLKH.ReadOnly = true;
+            this.QLKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // QLLK
+            // 
+            this.QLLK.DataPropertyName = "LinhKien";
+            this.QLLK.HeaderText = "Linh kiện";
+            this.QLLK.Name = "QLLK";
+            this.QLLK.ReadOnly = true;
+            this.QLLK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.QLLK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // QLBH
+            // 
+            this.QLBH.DataPropertyName = "BanHang";
+            this.QLBH.HeaderText = "Bán hàng";
+            this.QLBH.Name = "QLBH";
+            this.QLBH.ReadOnly = true;
+            // 
+            // QLNCC
+            // 
+            this.QLNCC.DataPropertyName = "NhaCungCap";
+            this.QLNCC.HeaderText = "Nhà cung cấp";
+            this.QLNCC.Name = "QLNCC";
+            this.QLNCC.ReadOnly = true;
+            this.QLNCC.Visible = false;
+            // 
+            // QLLLK
+            // 
+            this.QLLLK.DataPropertyName = "LoaiLK";
+            this.QLLLK.HeaderText = "Loại linh kiện";
+            this.QLLLK.Name = "QLLLK";
+            this.QLLLK.ReadOnly = true;
+            this.QLLLK.Visible = false;
+            // 
+            // QLNK
+            // 
+            this.QLNK.DataPropertyName = "NhapKho";
+            this.QLNK.HeaderText = "Hóa Đơn Nhập";
+            this.QLNK.Name = "QLNK";
+            this.QLNK.ReadOnly = true;
+            this.QLNK.Visible = false;
+            // 
+            // QLBaoHanh
+            // 
+            this.QLBaoHanh.DataPropertyName = "BaoHanh";
+            this.QLBaoHanh.HeaderText = "Bảo Hành";
+            this.QLBaoHanh.Name = "QLBaoHanh";
+            this.QLBaoHanh.ReadOnly = true;
+            this.QLBaoHanh.Visible = false;
+            // 
+            // ToanQ
+            // 
+            this.ToanQ.DataPropertyName = "PhanQuyen";
+            this.ToanQ.HeaderText = "Phân Quyền";
+            this.ToanQ.Name = "ToanQ";
+            this.ToanQ.ReadOnly = true;
+            this.ToanQ.Visible = false;
+            // 
+            // ThongKe
+            // 
+            this.ThongKe.DataPropertyName = "ThongKe";
+            this.ThongKe.HeaderText = "Thống Kê";
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.ReadOnly = true;
+            this.ThongKe.Visible = false;
+            // 
+            // HoaDon
+            // 
+            this.HoaDon.DataPropertyName = "HoaDon";
+            this.HoaDon.HeaderText = "Hóa Đơn";
+            this.HoaDon.Name = "HoaDon";
+            this.HoaDon.ReadOnly = true;
+            this.HoaDon.Visible = false;
+            // 
+            // Setting
+            // 
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.ReadOnly = true;
+            this.Setting.Visible = false;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TrangThai.Visible = false;
             // 
             // panel3
             // 
@@ -586,7 +710,7 @@ namespace DoAnCShap
             // 
             // checkBoxNhanViem
             // 
-            this.checkBoxNhanViem.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkBoxNhanViem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.checkBoxNhanViem.ChechedOffColor = System.Drawing.Color.SeaGreen;
             this.checkBoxNhanViem.Checked = false;
             this.checkBoxNhanViem.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -596,130 +720,6 @@ namespace DoAnCShap
             this.checkBoxNhanViem.Name = "checkBoxNhanViem";
             this.checkBoxNhanViem.Size = new System.Drawing.Size(20, 20);
             this.checkBoxNhanViem.TabIndex = 32;
-            // 
-            // MaCV
-            // 
-            this.MaCV.DataPropertyName = "MaCV";
-            this.MaCV.HeaderText = "Mã chức vụ";
-            this.MaCV.MinimumWidth = 6;
-            this.MaCV.Name = "MaCV";
-            this.MaCV.ReadOnly = true;
-            // 
-            // TenCV
-            // 
-            this.TenCV.DataPropertyName = "TenCV";
-            this.TenCV.HeaderText = "Tên chức vụ";
-            this.TenCV.MinimumWidth = 6;
-            this.TenCV.Name = "TenCV";
-            this.TenCV.ReadOnly = true;
-            // 
-            // QLNV
-            // 
-            this.QLNV.DataPropertyName = "NhanVien";
-            this.QLNV.HeaderText = "Nhân viên";
-            this.QLNV.Name = "QLNV";
-            this.QLNV.ReadOnly = true;
-            this.QLNV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLKH
-            // 
-            this.QLKH.DataPropertyName = "KhachHang";
-            this.QLKH.HeaderText = "Khách hàng";
-            this.QLKH.Name = "QLKH";
-            this.QLKH.ReadOnly = true;
-            this.QLKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLLK
-            // 
-            this.QLLK.DataPropertyName = "LinhKien";
-            this.QLLK.HeaderText = "Linh kiện";
-            this.QLLK.Name = "QLLK";
-            this.QLLK.ReadOnly = true;
-            this.QLLK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QLLK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // QLBH
-            // 
-            this.QLBH.DataPropertyName = "BanHang";
-            this.QLBH.HeaderText = "Bán hàng";
-            this.QLBH.Name = "QLBH";
-            this.QLBH.ReadOnly = true;
-            // 
-            // QLNCC
-            // 
-            this.QLNCC.DataPropertyName = "NhaCungCap";
-            this.QLNCC.HeaderText = "Nhà cung cấp";
-            this.QLNCC.Name = "QLNCC";
-            this.QLNCC.ReadOnly = true;
-            this.QLNCC.Visible = false;
-            // 
-            // QLLLK
-            // 
-            this.QLLLK.DataPropertyName = "LoaiLK";
-            this.QLLLK.HeaderText = "Loại linh kiện";
-            this.QLLLK.Name = "QLLLK";
-            this.QLLLK.ReadOnly = true;
-            this.QLLLK.Visible = false;
-            // 
-            // QLNK
-            // 
-            this.QLNK.DataPropertyName = "NhapKho";
-            this.QLNK.HeaderText = "Hóa Đơn Nhập";
-            this.QLNK.Name = "QLNK";
-            this.QLNK.ReadOnly = true;
-            this.QLNK.Visible = false;
-            // 
-            // QLBaoHanh
-            // 
-            this.QLBaoHanh.DataPropertyName = "BaoHanh";
-            this.QLBaoHanh.HeaderText = "Bảo Hành";
-            this.QLBaoHanh.Name = "QLBaoHanh";
-            this.QLBaoHanh.ReadOnly = true;
-            this.QLBaoHanh.Visible = false;
-            // 
-            // ToanQ
-            // 
-            this.ToanQ.DataPropertyName = "PhanQuyen";
-            this.ToanQ.HeaderText = "Phân Quyền";
-            this.ToanQ.Name = "ToanQ";
-            this.ToanQ.ReadOnly = true;
-            this.ToanQ.Visible = false;
-            // 
-            // ThongKe
-            // 
-            this.ThongKe.DataPropertyName = "ThongKe";
-            this.ThongKe.HeaderText = "Thống Kê";
-            this.ThongKe.Name = "ThongKe";
-            this.ThongKe.ReadOnly = true;
-            this.ThongKe.Visible = false;
-            // 
-            // HoaDon
-            // 
-            this.HoaDon.DataPropertyName = "HoaDon";
-            this.HoaDon.HeaderText = "Hóa Đơn";
-            this.HoaDon.Name = "HoaDon";
-            this.HoaDon.ReadOnly = true;
-            this.HoaDon.Visible = false;
-            // 
-            // Setting
-            // 
-            this.Setting.DataPropertyName = "Setting";
-            this.Setting.HeaderText = "Setting";
-            this.Setting.Name = "Setting";
-            this.Setting.ReadOnly = true;
-            this.Setting.Visible = false;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TrangThai.Visible = false;
             // 
             // Frm_ChucVu
             // 

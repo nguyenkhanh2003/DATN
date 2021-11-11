@@ -51,6 +51,13 @@ namespace DoAnCShap
             comboBoxNCC.ValueMember = "MaNCC";
         }
 
+        public void LoadNCC(string condition)
+        {
+            comboBoxNCC.DataSource = bus.LoadNCC("" + condition);
+            comboBoxNCC.DisplayMember = "TenNCC";
+            comboBoxNCC.ValueMember = "MaNCC";
+        }
+
         public void HienThiHoaDonN()
         {
             dataGridViewHDN.DataSource = bus.HienThiHDN("");
@@ -308,7 +315,7 @@ namespace DoAnCShap
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
             HienThiSanPham();
-            HienThiNCC();
+            //HienThiNCC();
             HienThiHoaDonN();
             XuLyChucNang(true, false, false, false);
             comboBoxNCC.Text = "";
@@ -826,6 +833,12 @@ namespace DoAnCShap
 
                 }
             }
+        }
+
+        private void comboBoxTenLK_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string condition = comboBoxTenLK.SelectedValue.ToString();
+            LoadNCC(condition);
         }
     }
 }

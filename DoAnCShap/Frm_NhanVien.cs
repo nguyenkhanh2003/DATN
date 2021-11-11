@@ -88,7 +88,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(string Condition)
         {
-            dataGridViewNhanVien.DataSource = bus.GetTimKiem("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and NhanVien.TrangThai=N'1' and TenNV Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' or CMND Like N'%" + Condition + "%'");
+            dataGridViewNhanVien.DataSource = bus.GetTimKiem("" + Condition);
         }
         public void hienthichucvu()
         {

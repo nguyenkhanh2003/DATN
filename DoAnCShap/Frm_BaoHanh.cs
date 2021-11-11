@@ -24,6 +24,7 @@ namespace DoAnCShap
         CT_PhieuBaoHanh ctpbh = new CT_PhieuBaoHanh();
         ReportDataSource rs = new ReportDataSource();
         int flag = 0;
+        bool addnew = false;
         Frm_Setting frm_Setting = new Frm_Setting();
         BanHang_BUS banhang = new BanHang_BUS();
         KhachHang_BUS kh = new KhachHang_BUS();
@@ -287,6 +288,12 @@ namespace DoAnCShap
             }
             if (flag == 2)
             {
+                pbh.MaPBH = txtMaPhieu.Text;
+                pbh.QuyTrinh = comboQuyTrinh.Text;
+                bus.Update_PBH(pbh);
+            }
+            if (flag == 2 && addnew == true)
+            {
                 ctpbh.MaPBH = txtMaPhieu.Text;
                 ctpbh.TenLK = comboBoxlK.Text;
                 ctpbh.SoLuong = int.Parse(txtSL.Text);
@@ -295,7 +302,7 @@ namespace DoAnCShap
                 pbh.MaPBH = txtMaPhieu.Text;
                 pbh.QuyTrinh = comboQuyTrinh.Text;
                 bus.Update_PBH(pbh);
-                MessageBox.Show("Cập Nhật Thành Công");
+                //MessageBox.Show("Cập Nhật Thành Công");
             }
             HienThiDSPhieu();
             ClearTextBoxPBH();
@@ -375,7 +382,7 @@ namespace DoAnCShap
             comboBoxlK.Text = row.Cells[1].Value.ToString();
             txtSL.Text = row.Cells[2].Value.ToString();
             txtGhiChu.Text = row.Cells[3].Value.ToString();
-            flag = 2;
+            addnew = true;
             btnThemSP.Enabled = false;
             XuLyTexBox(true);
             XuLyChucNang(true, true, false, false);

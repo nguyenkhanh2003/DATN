@@ -703,6 +703,7 @@ namespace DoAnCShap
             this.comboBoxTenLK.Size = new System.Drawing.Size(256, 29);
             this.comboBoxTenLK.TabIndex = 23;
             this.comboBoxTenLK.UseSelectable = true;
+            this.comboBoxTenLK.SelectionChangeCommitted += new System.EventHandler(this.comboBoxTenLK_SelectionChangeCommitted);
             // 
             // panel3
             // 

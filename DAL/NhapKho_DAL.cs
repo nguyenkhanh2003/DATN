@@ -39,6 +39,10 @@ namespace DAL
             return KetNoi.GetDataTable("Select * From HoaDonNhapHang" + condition);
         }
 
+        public DataTable LoadNCC(string codition)
+        {
+            return KetNoi.GetDataTable("select ncc.TenNCC,ncc.MaNCC  from NhaCungCap ncc,LinhKien lk where lk.MaNCC=ncc.MaNCC and lk.MaLK=N'" + codition + "'");
+        }
         public DataTable HienThiCTHDNH(string condition)
         {
             return KetNoi.GetDataTable("" + condition);
