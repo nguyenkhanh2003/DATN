@@ -29,6 +29,7 @@ namespace DoAnCShap
         ReportDataSource rss = new ReportDataSource();
         int flag = 0;
         bool addnew = false;
+
         Frm_Setting frm_Setting = new Frm_Setting();
         public void HienThiSanPham()
         {
@@ -39,11 +40,15 @@ namespace DoAnCShap
 
         public void HienThiNhanVien(string labelHienTenDN)
         {
-            comboBoxMaNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV,MaCV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
+            comboBoxMaNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
             comboBoxMaNV.DisplayMember = "TenNV";
             comboBoxMaNV.ValueMember = "MaNV";
         }
-
+        public void LayChucVu(string labelTenDN)
+        {
+            cbochucvu.DataSource = bus.GetNhanVien("select nv.MaCV from NHANVIEN nv,ChucVu cv where nv.MaCV=cv.MaCV and nv.UserName=N'" + labelTenDN + "'");
+            cbochucvu.ValueMember = "MaCV";
+        }
         public void HienThiNCC()
         {
             comboBoxNCC.DataSource = bus.GetNCC("");
@@ -320,6 +325,7 @@ namespace DoAnCShap
         {
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
+            LayChucVu(condition);
             HienThiSanPham();
             HienThiNCC();
             HienThiHoaDonN();
@@ -387,83 +393,91 @@ namespace DoAnCShap
                 HienThiHoaDonN();
                 return;
             }
-            if (flag == 2)
+            if (cbochucvu.SelectedValue.ToString() == "CV01")
             {
-                if (comboBoxNCC.Text == "")
+                if (flag == 2)
                 {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
-                    return;
+                    if (comboBoxNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
+                        return;
+                    }
+                    if (comboBoxMaNV.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(comboBoxMaNV, "Tên Nhân Viên Không được để trống");
+                        return;
+                    }
+                    if (labelTongThanhToan.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(labelTongThanhToan, "? TT");
+                        return;
+                    }
+                    else
+                    {
+                        hdn.MaHDNH = txtMaHDN.Text;
+                        hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
+                        hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
+                        bus.UpdateHDN(hdn);
+                    }
                 }
-                if (comboBoxMaNV.Text == "")
+                if (addnew == true)
                 {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(comboBoxMaNV, "Tên Nhân Viên Không được để trống");
-                    return;
-                }
-                if (labelTongThanhToan.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(labelTongThanhToan, "? TT");
-                    return;
-                }
-                else
-                {
-                    hdn.MaHDNH = txtMaHDN.Text;
-                    hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
-                    hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
-                    bus.UpdateHDN(hdn);
+                    if (comboBoxNCC.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
+                        return;
+                    }
+                    if (comboBoxMaNV.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(comboBoxMaNV, "Tên Nhân Viên Không được để trống");
+                        return;
+                    }
+                    if (labelTongThanhToan.Text == "")
+                    {
+                        errorMes.BlinkRate = 100;
+                        errorMes.SetError(labelTongThanhToan, "? TT");
+                        return;
+                    }
+                    else
+                    {
+                        UpateThanhTienSP();
+                        cthdn.MaHDNH = txtMaHDN.Text;
+                        cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
+                        cthdn.SoLuong = int.Parse(textBoxSoLuong.Text);
+                        cthdn.DonGia = decimal.Parse(textBoxDonGia.Text);
+                        cthdn.KhuyenMai = decimal.Parse(textBoxChietKhau.Text);
+                        cthdn.ThanhTien = decimal.Parse(labelThanhTien.Text);
+                        bus.UpdateCTHDN(cthdn);
+                        HienThicTHDN();
+                        TongThanhToanCTHDN2();
+                        hdn.MaHDNH = txtMaHDN.Text;
+                        hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
+                        hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
+                        bus.UpdateHDN(hdn);
+                        for (int i = 0; i < dataGridViewCTHDN2.Rows.Count - 0; i++)
+                        {
+                            string malk = comboBoxTenLK.SelectedValue.ToString();
+                            int SoLuongKho = int.Parse(dataGridViewCTHDN2.Rows[i].Cells["SoLuong1"].Value.ToString());
+                            LK.MaLK = malk;
+                            LK.SoLuongTon = SoLuongKho;
+                            bus.CapNhatSLKho(LK);
+                        }
+                        MessageBox.Show("Cập Nhật Thành Công");
+                        XuLyChucNang(true, false, false, false);
+                        ClearTexBox();
+                        flag = 0;
+                    }
                 }
             }
-            if (addnew == true)
+            else
             {
-                if (comboBoxNCC.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(comboBoxNCC, "Chưa chọn nhà cung cấp");
-                    return;
-                }
-                if (comboBoxMaNV.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(comboBoxMaNV, "Tên Nhân Viên Không được để trống");
-                    return;
-                }
-                if (labelTongThanhToan.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(labelTongThanhToan, "? TT");
-                    return;
-                }
-                else
-                {
-                    UpateThanhTienSP();
-                    cthdn.MaHDNH = txtMaHDN.Text;
-                    cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
-                    cthdn.SoLuong = int.Parse(textBoxSoLuong.Text);
-                    cthdn.DonGia = decimal.Parse(textBoxDonGia.Text);
-                    cthdn.KhuyenMai = decimal.Parse(textBoxChietKhau.Text);
-                    cthdn.ThanhTien = decimal.Parse(labelThanhTien.Text);
-                    bus.UpdateCTHDN(cthdn);
-                    HienThicTHDN();
-                    TongThanhToanCTHDN2();
-                    hdn.MaHDNH = txtMaHDN.Text;
-                    hdn.NgayLapHDNH = dateTimePickerNgayLapHDN.Value.Date;
-                    hdn.TongTien = decimal.Parse(labelTongThanhToan.Text);
-                    bus.UpdateHDN(hdn);
-                    for (int i = 0; i < dataGridViewCTHDN2.Rows.Count - 0; i++)
-                    {
-                        string malk = comboBoxTenLK.SelectedValue.ToString();
-                        int SoLuongKho = int.Parse(dataGridViewCTHDN2.Rows[i].Cells["SoLuong1"].Value.ToString());
-                        LK.MaLK = malk;
-                        LK.SoLuongTon = SoLuongKho;
-                        bus.CapNhatSLKho(LK);
-                    }
-                    MessageBox.Show("Cập Nhật Thành Công");
-                    XuLyChucNang(true, false, false, false);
-                    ClearTexBox();
-                    flag = 0;
-                }
+                MessageBox.Show("Không được phép");
+                return;
             }
             HienThiHoaDonN();
         }

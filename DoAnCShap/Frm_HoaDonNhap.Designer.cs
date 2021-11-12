@@ -107,6 +107,7 @@ namespace DoAnCShap
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cbochucvu = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTHDN2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTHDNH)).BeginInit();
@@ -334,6 +335,7 @@ namespace DoAnCShap
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.cbochucvu);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnThoat);
@@ -370,7 +372,7 @@ namespace DoAnCShap
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(1116, 3);
+            this.btnThoat.Location = new System.Drawing.Point(1102, 3);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(60, 35);
             this.btnThoat.TabIndex = 0;
@@ -863,6 +865,16 @@ namespace DoAnCShap
             this.groupBox5.TabIndex = 67;
             this.groupBox5.TabStop = false;
             // 
+            // cbochucvu
+            // 
+            this.cbochucvu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbochucvu.FormattingEnabled = true;
+            this.cbochucvu.Location = new System.Drawing.Point(1059, 12);
+            this.cbochucvu.Name = "cbochucvu";
+            this.cbochucvu.Size = new System.Drawing.Size(10, 21);
+            this.cbochucvu.TabIndex = 27;
+            this.cbochucvu.Visible = false;
+            // 
             // Frm_HoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -960,5 +972,6 @@ namespace DoAnCShap
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLapHDNH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.ComboBox cbochucvu;
     }
 }
