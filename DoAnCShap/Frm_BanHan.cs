@@ -296,6 +296,7 @@ namespace DoAnCShap
             }
             if (KiemTra == 1)
             {
+
                 int SL = ((int)NumreicSL.Value) + int.Parse(dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value.ToString());
                 dataGridViewHDBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
                 //decimal KMM = decimal.Parse(dataGridViewHDBH.Rows[vitri].Cells["KhuyenMai"].Value.ToString()) + KM;

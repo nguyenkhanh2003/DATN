@@ -536,41 +536,31 @@ namespace DoAnCShap
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (KQ == DialogResult.OK)
+            if (cbochucvu.SelectedValue.ToString() == "CV01")
             {
-                //if (flag == 1)
-                //{
-                //    hdn.MaHDNH = txtMaHDN.Text;
-                //    bus.DeleteHoaDonNhap(hdn);
-                //    MessageBox.Show("Thành Công");
-                //    HienThiHoaDonN();
-                //    XuLyChucNang(true, false, false, false);
-                //    ClearTexBox();
-                //    HideDataGriview(true, false);
-                //}
-                //if (flag == 2)
-                //{
-                //    cthdn.MaHDNH = txtMaHDN.Text;
-                //    cthdn.MaLK = comboBoxTenLK.SelectedValue.ToString();
-                //    bus.DeleteCT_HoaDonNhap(cthdn);
-                //    MessageBox.Show("Thành Công");
-                //    TongTienSP();
-                //}
-                cthdn.MaHDNH = txtMaHDN.Text;
-                bus.DeleteCT_HoaDonNhap(cthdn);
-                hdn.MaHDNH = txtMaHDN.Text;
-                bus.DeleteHoaDonNhap(hdn);
-                HienThiHoaDonN();
-                XuLyChucNang(true, false, false, false);
-                MessageBox.Show("Thành Công");
-                ClearTexBox();
-                HideDataGriview(true, false);
+                DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (KQ == DialogResult.OK)
+                {
+                    cthdn.MaHDNH = txtMaHDN.Text;
+                    bus.DeleteCT_HoaDonNhap(cthdn);
+                    hdn.MaHDNH = txtMaHDN.Text;
+                    bus.DeleteHoaDonNhap(hdn);
+                    HienThiHoaDonN();
+                    XuLyChucNang(true, false, false, false);
+                    MessageBox.Show("Thành Công");
+                    ClearTexBox();
+                    HideDataGriview(true, false);
 
+                }
+                else
+                {
+
+                }
             }
             else
             {
-
+                MessageBox.Show("Không được phép");
+                return;
             }
         }
 
@@ -602,31 +592,6 @@ namespace DoAnCShap
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            //if (dataGridViewHDN.Rows.Count > 0)
-            //{
-            //    Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
-            //    excelAp.Application.Workbooks.Add(Type.Missing);
-            //    // Lưu trữ phần header
-            //    for (int i = 1; i < dataGridViewHDN.Rows.Count + 6; i++)
-            //    {
-            //        excelAp.Cells[1, i] = dataGridViewHDN.Columns[i - 1].HeaderText;
-
-            //    }
-            //    // Lưu trữ hàng và cột vào excel
-            //    for (int i = 0; i < dataGridViewHDN.Rows.Count; i++)
-            //    {
-            //        for (int j = 0; j < dataGridViewHDN.Rows.Count + 5; j++)
-            //        {
-            //            excelAp.Cells[i + 2, j + 1] = dataGridViewHDN.Rows[i].Cells[j].Value.ToString();
-            //        }
-            //    }
-            //    excelAp.Columns.AutoFit();
-            //    excelAp.Visible = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Không có dữ liệu");
-            //}
             try
             {
                 Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
@@ -860,6 +825,20 @@ namespace DoAnCShap
         {
             //string condition = comboBoxTenLK.SelectedValue.ToString();
             //LoadNCC(condition);
+        }
+
+        private void textBoxDonGia_Leave(object sender, EventArgs e)
+        {
+            decimal value;
+            if (decimal.TryParse(textBoxDonGia.Text, out value))
+                textBoxDonGia.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:N0}", value);
+            else
+                textBoxDonGia.Text = String.Empty;
+        }
+
+        private void textBoxDonGia_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

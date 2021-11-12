@@ -125,6 +125,12 @@ namespace DoAnCShap
             txtSL.ResetText();
             txtGhiChu.ResetText();
         }
+        public void HideDGV(Boolean b1, Boolean b2)
+        {
+            dataGridViewCTPBH.Visible = b1;
+            dataGridView2CTPBH.Visible = b2;
+            dataGridViewCTPBH.Rows.Clear();
+        }
         private void Frm_BaoHanh_Load(object sender, EventArgs e)
         {
             HienThiDSPhieu();
@@ -151,8 +157,8 @@ namespace DoAnCShap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //ClearTextBox();
             ClearTextBoxPBH();
+            HideDGV(true, false);
             ClearTextBoxCTPBH();
             flag = 1;
             XuLyChucNang(false, true, false, true);
@@ -282,6 +288,7 @@ namespace DoAnCShap
                     }
                     ClearTextBoxPBH();
                     ClearTextBoxCTPBH();
+                    HideDGV(true, false);
                     XuLyChucNang(true, false, false, false);
                     XuLyTexBox(false);
                 }
@@ -291,18 +298,35 @@ namespace DoAnCShap
                 pbh.MaPBH = txtMaPhieu.Text;
                 pbh.QuyTrinh = comboQuyTrinh.Text;
                 bus.Update_PBH(pbh);
+                HideDGV(true, false);
             }
-            if (flag == 2 && addnew == true)
+            if (addnew == true)
             {
-                ctpbh.MaPBH = txtMaPhieu.Text;
-                ctpbh.TenLK = comboBoxlK.Text;
-                ctpbh.SoLuong = int.Parse(txtSL.Text);
-                ctpbh.GhiChu = txtGhiChu.Text;
-                bus.Update_CTPBH(ctpbh);
-                pbh.MaPBH = txtMaPhieu.Text;
-                pbh.QuyTrinh = comboQuyTrinh.Text;
-                bus.Update_PBH(pbh);
-                //MessageBox.Show("Cập Nhật Thành Công");
+                if (txtSL.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtSL, "?");
+                    return;
+                }
+                if (txtGhiChu.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(txtGhiChu, "?");
+                    return;
+                }
+                else
+                {
+                    ctpbh.MaPBH = txtMaPhieu.Text;
+                    ctpbh.TenLK = comboBoxlK.Text;
+                    ctpbh.SoLuong = int.Parse(txtSL.Text);
+                    ctpbh.GhiChu = txtGhiChu.Text;
+                    bus.Update_CTPBH(ctpbh);
+                    pbh.MaPBH = txtMaPhieu.Text;
+                    pbh.QuyTrinh = comboQuyTrinh.Text;
+                    bus.Update_PBH(pbh);
+                    HideDGV(true, false);
+                }
+
             }
             HienThiDSPhieu();
             ClearTextBoxPBH();
@@ -320,7 +344,7 @@ namespace DoAnCShap
                 dateTimePickerNgaLap.Text = d.Rows[vitri]["NgayLapPhieu"].ToString();
                 dateTimePickerNgayLayHang.Text = d.Rows[vitri]["NgayLayHang"].ToString();
                 comboQuyTrinh.Text = d.Rows[vitri]["QuyTrinh"].ToString();
-                dataGridViewCTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh  Where MaPBH=N'" + txtMaPhieu.Text + "'");
+                dataGridView2CTPBH.DataSource = bus.LoadCT_PhieuTheoMa("select TenLK,SoLuong,GhiChu From CT_PhieuBaoHanh  Where MaPBH=N'" + txtMaPhieu.Text + "'");
             }
             catch
             {
@@ -334,7 +358,7 @@ namespace DoAnCShap
             XuLyChucNang(true, true, true, false);
             XuLyTexBox(true);
             flag = 2;
-
+            HideDGV(false, true);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -342,21 +366,6 @@ namespace DoAnCShap
             DialogResult KQ = MessageBox.Show("Bạn Có Muốn Xóa Hay Không", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (KQ == DialogResult.OK)
             {
-                //if (flag == 1)
-                //{
-                //    pbh.MaPBH = txtMaPhieu.Text;
-                //    bus.XoaPhieuBaoHanh(pbh);
-                //    MessageBox.Show("Thành Công");
-                //    HienThiDSPhieu();
-                //}
-                //if (flag == 2)
-                //{
-                //    ctpbh.MaPBH = txtMaPhieu.Text;
-                //    ctpbh.TenLK = comboBoxlK.Text;
-                //    bus.XoaCTPhieuBaoHanh(ctpbh);
-                //    MessageBox.Show("Thành Công");
-                //    HienThiDSPhieu();
-                //}
                 ctpbh.MaPBH = txtMaPhieu.Text;
                 bus.XoaCTPhieuBaoHanh(ctpbh);
                 pbh.MaPBH = txtMaPhieu.Text;
@@ -374,19 +383,6 @@ namespace DoAnCShap
         private void dataGridViewCTPBH_DoubleClick(object sender, EventArgs e)
         {
             flag = 2;
-        }
-
-        private void dataGridViewCTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = dataGridViewCTPBH.Rows[e.RowIndex];
-            comboBoxlK.Text = row.Cells[1].Value.ToString();
-            txtSL.Text = row.Cells[2].Value.ToString();
-            txtGhiChu.Text = row.Cells[3].Value.ToString();
-            addnew = true;
-            btnThemSP.Enabled = false;
-            XuLyTexBox(true);
-            XuLyChucNang(true, true, false, false);
-            XuLyTexBox(true);
         }
 
         private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
@@ -440,7 +436,7 @@ namespace DoAnCShap
 
             List<PbaoHanh> lst = new List<PbaoHanh>();
             lst.Clear();
-            for (int i = 0; i < dataGridViewCTPBH.Rows.Count - 0; i++)
+            for (int i = 0; i < dataGridView2CTPBH.Rows.Count - 0; i++)
             {
                 PbaoHanh pbaoHanh = new PbaoHanh
                 {
@@ -448,9 +444,9 @@ namespace DoAnCShap
                     TenNV = comboBoxNV.Text,
                     NgayLap = dateTimePickerNgaLap.Text,
                     NgayLay = dateTimePickerNgayLayHang.Text,
-                    TenLK = dataGridViewCTPBH.Rows[i].Cells["MaLKK"].Value.ToString(),
-                    SoLuong = int.Parse(dataGridViewCTPBH.Rows[i].Cells["SoLuong"].Value.ToString()),
-                    GhiChu = dataGridViewCTPBH.Rows[i].Cells["GhiChu"].Value.ToString(),
+                    TenLK = dataGridView2CTPBH.Rows[i].Cells["TenLK1"].Value.ToString(),
+                    SoLuong = int.Parse(dataGridView2CTPBH.Rows[i].Cells["SoLuong1"].Value.ToString()),
+                    GhiChu = dataGridView2CTPBH.Rows[i].Cells["TinhTrang1"].Value.ToString(),
                     TenKH = cboKhachHang.Text,
                     SDT = SoDienThoai,
                 };
@@ -523,6 +519,24 @@ namespace DoAnCShap
         {
             string condition = txtsdtkh.Text;
             TimKiemKH(condition);
+        }
+
+        private void dataGridView2CTPBH_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dataGridView2CTPBH.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void dataGridView2CTPBH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridView2CTPBH.Rows[e.RowIndex];
+            comboBoxlK.Text = row.Cells[1].Value.ToString();
+            txtSL.Text = row.Cells[2].Value.ToString();
+            txtGhiChu.Text = row.Cells[3].Value.ToString();
+            addnew = true;
+            btnThemSP.Enabled = false;
+            XuLyTexBox(true);
+            XuLyChucNang(true, true, false, false);
+            XuLyTexBox(true);
         }
     }
 }
