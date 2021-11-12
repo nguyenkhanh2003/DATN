@@ -103,7 +103,7 @@ namespace DAL
 
         public DataTable SanPhamTonKho(string condition)
         {
-            return KetNoi.GetDataTable("Select TenLK as 'Tên Linh Kiện',SoLuongTon as 'Số Lượng Tồn' From LinhKien Where TrangThai=N'1'" + condition);
+            return KetNoi.GetDataTable("Select TenLK as 'Tên Linh Kiện',SoLuongTon as 'Số Lượng Tồn' From LinhKien Where TrangThai=N'1' and SoLuongTon>5" + condition);
         }
     }
 }

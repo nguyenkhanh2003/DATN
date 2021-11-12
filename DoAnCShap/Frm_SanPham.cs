@@ -192,7 +192,7 @@ namespace DoAnCShap
                 for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
                 {
 
-                    if (txtTenLinhKien.Text == dataGridViewLK.Rows[i].Cells["TenLK"].Value.ToString())
+                    if (txtTenLinhKien.Text.ToLower() == dataGridViewLK.Rows[i].Cells["TenLK"].Value.ToString().ToLower())
                     {
                         errorMes.BlinkRate = 100;
                         errorMes.SetError(txtTenLinhKien, "Đã Tồn Tại");
@@ -354,7 +354,7 @@ namespace DoAnCShap
                     int vitri = dataGridViewLK.CurrentCell.RowIndex;
                     if (dataGridViewLK.Rows.Count > 0)
                     {
-                        if (txtTenLinhKien.Text == dataGridViewLK.Rows[vitri].Cells["TenLK"].Value.ToString())
+                        if (txtTenLinhKien.Text.ToLower() == dataGridViewLK.Rows[vitri].Cells["TenLK"].Value.ToString().ToLower())
                         {
                             // Bỏ Qua
                         }
@@ -362,7 +362,7 @@ namespace DoAnCShap
                         {
                             for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
                             {
-                                if (txtTenLinhKien.Text == dataGridViewLK.Rows[i].Cells["TenLK"].Value.ToString())
+                                if (txtTenLinhKien.Text.ToLower() == dataGridViewLK.Rows[i].Cells["TenLK"].Value.ToString().ToLower())
                                 {
                                     errorMes.BlinkRate = 100;
                                     errorMes.SetError(txtTenLinhKien, "Đã tồn tại");

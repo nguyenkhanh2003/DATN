@@ -372,6 +372,12 @@ namespace DoAnCShap
                     errorMes.SetError(textBoxSL, "? Số Lượng");
                     return;
                 }
+                if (int.Parse(textBoxSL.Text) < 1)
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(textBoxSL, "Số lượng phải lớn hơn 1");
+                    return;
+                }
                 if (txtDonGia.Text == "")
                 {
                     errorMes.BlinkRate = 100;

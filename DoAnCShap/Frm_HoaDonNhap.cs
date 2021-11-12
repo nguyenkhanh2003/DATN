@@ -39,7 +39,7 @@ namespace DoAnCShap
 
         public void HienThiNhanVien(string labelHienTenDN)
         {
-            comboBoxMaNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
+            comboBoxMaNV.DataSource = bus.GetNhanVien("Select MaNV,TenNV,MaCV From NhanVien Where UserName=N'" + labelHienTenDN + "'");
             comboBoxMaNV.DisplayMember = "TenNV";
             comboBoxMaNV.ValueMember = "MaNV";
         }
@@ -141,7 +141,7 @@ namespace DoAnCShap
             ClearTexBox();
             XuLyTextBox(true);
             HideDataGriview(true, false);
-            if (dataGridViewHDN.Rows.Count <= 0)
+            if (bus.PhatSinhMa("").Rows.Count == 0)
             {
                 txtMaHDN.Text = "HDN00";
             }
@@ -220,6 +220,12 @@ namespace DoAnCShap
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(textBoxSoLuong, "Chưa nhập số lượng");
+                return;
+            }
+            if (int.Parse(textBoxSoLuong.Text) < 1)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(textBoxSoLuong, "Số lượng không đúng");
                 return;
             }
             if (textBoxDonGia.Text == "")
@@ -315,7 +321,7 @@ namespace DoAnCShap
             string condition = Login.SetValueForText1;
             HienThiNhanVien(condition);
             HienThiSanPham();
-            //HienThiNCC();
+            HienThiNCC();
             HienThiHoaDonN();
             XuLyChucNang(true, false, false, false);
             comboBoxNCC.Text = "";
@@ -378,6 +384,8 @@ namespace DoAnCShap
                     XuLyChucNang(true, false, false, false);
                     ClearTexBox();
                 }
+                HienThiHoaDonN();
+                return;
             }
             if (flag == 2)
             {
@@ -457,7 +465,6 @@ namespace DoAnCShap
                     flag = 0;
                 }
             }
-
             HienThiHoaDonN();
         }
 
@@ -837,8 +844,8 @@ namespace DoAnCShap
 
         private void comboBoxTenLK_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string condition = comboBoxTenLK.SelectedValue.ToString();
-            LoadNCC(condition);
+            //string condition = comboBoxTenLK.SelectedValue.ToString();
+            //LoadNCC(condition);
         }
     }
 }

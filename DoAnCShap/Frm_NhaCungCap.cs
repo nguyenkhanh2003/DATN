@@ -199,19 +199,19 @@ namespace DoAnCShap
                     }
                     for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
                     {
-                        if (txtTenNCC.Text == dataGridViewNhaCungCap.Rows[i].Cells["TenNCC"].Value.ToString())
+                        if (txtTenNCC.Text.ToLower() == dataGridViewNhaCungCap.Rows[i].Cells["TenNCC"].Value.ToString().ToLower())
                         {
                             errorMes.BlinkRate = 100;
                             errorMes.SetError(txtTenNCC, "Đã Tồn Tại");
                             return;
                         }
-                        if (txtDienThoai.Text == dataGridViewNhaCungCap.Rows[i].Cells["DienThoai"].Value.ToString())
+                        if (txtDienThoai.Text.ToLower() == dataGridViewNhaCungCap.Rows[i].Cells["DienThoai"].Value.ToString().ToLower())
                         {
                             errorMes.BlinkRate = 100;
                             errorMes.SetError(txtDienThoai, "Đã Tồn Tại");
                             return;
                         }
-                        if (txtEmail.Text == dataGridViewNhaCungCap.Rows[i].Cells["Email"].Value.ToString())
+                        if (txtEmail.Text.ToLower() == dataGridViewNhaCungCap.Rows[i].Cells["Email"].Value.ToString().ToLower())
                         {
                             errorMes.BlinkRate = 100;
                             errorMes.SetError(txtEmail, "Đã Tồn Tại");
@@ -306,7 +306,7 @@ namespace DoAnCShap
                     int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
                     if (dataGridViewNhaCungCap.Rows.Count > 0)
                     {
-                        if (txtTenNCC.Text == dataGridViewNhaCungCap.Rows[vitri].Cells["TenNCC"].Value.ToString())
+                        if (txtTenNCC.Text.ToLower() == dataGridViewNhaCungCap.Rows[vitri].Cells["TenNCC"].Value.ToString().ToLower())
                         {
                             // Bỏ Qua
                         }
@@ -314,7 +314,7 @@ namespace DoAnCShap
                         {
                             for (int i = 0; i < dataGridViewNhaCungCap.Rows.Count - 0; i++)
                             {
-                                if (txtTenNCC.Text == dataGridViewNhaCungCap.Rows[i].Cells["TenNCC"].Value.ToString())
+                                if (txtTenNCC.Text.ToLower() == dataGridViewNhaCungCap.Rows[i].Cells["TenNCC"].Value.ToString().ToLower())
                                 {
                                     errorMes.BlinkRate = 100;
                                     errorMes.SetError(txtTenNCC, "Đã tồn tại");
@@ -338,7 +338,7 @@ namespace DoAnCShap
                                 }
                             }
                         }
-                        if (txtEmail.Text == dataGridViewNhaCungCap.Rows[vitri].Cells["Email"].Value.ToString())
+                        if (txtEmail.Text.ToLower() == dataGridViewNhaCungCap.Rows[vitri].Cells["Email"].Value.ToString().ToLower())
                         {
                             // Bỏ Qua
                         }

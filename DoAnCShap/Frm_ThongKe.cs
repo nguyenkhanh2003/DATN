@@ -47,9 +47,6 @@ namespace DoAnCShap
 
         public void DoanhThuTheoThang(string condition)
         {
-            //dataGridView1.DataSource = bus.DoanhThuTheoThang("SELECT   format(sum([TongTien]),'N0') AS'Donh Thu'" +
-            //    " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
-
             cboDoanhThu.DataSource = bus.DoanhThuTheoThang("" + condition);
             cboDoanhThu.DisplayMember = "TT";
         }

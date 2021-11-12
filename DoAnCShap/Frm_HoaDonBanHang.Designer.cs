@@ -467,7 +467,7 @@
             // 
             this.comboBoxNhanVien.FormattingEnabled = true;
             this.comboBoxNhanVien.ItemHeight = 23;
-            this.comboBoxNhanVien.Location = new System.Drawing.Point(358, 117);
+            this.comboBoxNhanVien.Location = new System.Drawing.Point(358, 114);
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
             this.comboBoxNhanVien.Size = new System.Drawing.Size(224, 29);
             this.comboBoxNhanVien.TabIndex = 64;

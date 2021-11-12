@@ -98,18 +98,17 @@ namespace DoAnCShap
         {
             if (flag == 1)
             {
+                string s = txtTenLoai.Text.Trim();
+
                 for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
                 {
-
-                    if (txtTenLoai.Text == dataGridViewKH.Rows[i].Cells["TenLLK"].Value.ToString())
+                    if (txtTenLoai.Text.ToLower() == dataGridViewKH.Rows[i].Cells["TenLLK"].Value.ToString().ToLower())
                     {
                         errorMes.BlinkRate = 100;
                         errorMes.SetError(txtTenLoai, "Đã Tồn Tại");
                         return;
                     }
                 }
-
-
                 if (txtTenLoai.Text == "")
                 {
                     errorMes.BlinkRate = 100;
@@ -142,7 +141,7 @@ namespace DoAnCShap
                     int vitri = dataGridViewKH.CurrentCell.RowIndex;
                     if (dataGridViewKH.Rows.Count > 0)
                     {
-                        if (txtTenLoai.Text == dataGridViewKH.Rows[vitri].Cells["TenLLK"].Value.ToString())
+                        if (txtTenLoai.Text.ToLower() == dataGridViewKH.Rows[vitri].Cells["TenLLK"].Value.ToString().ToLower())
                         {
                             // Bỏ Qua
                         }
@@ -150,7 +149,7 @@ namespace DoAnCShap
                         {
                             for (int i = 0; i < dataGridViewKH.Rows.Count - 0; i++)
                             {
-                                if (txtTenLoai.Text == dataGridViewKH.Rows[i].Cells["TenLLK"].Value.ToString())
+                                if (txtTenLoai.Text.ToLower() == dataGridViewKH.Rows[i].Cells["TenLLK"].Value.ToString().ToLower())
                                 {
                                     errorMes.BlinkRate = 100;
                                     errorMes.SetError(txtTenLoai, "Đã tồn tại");
