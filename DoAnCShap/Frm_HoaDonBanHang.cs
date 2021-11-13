@@ -195,33 +195,40 @@ namespace DoAnCShap
 
         private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            XuLyChucNang(true, true);
-            //int vitri = dataGridViewHD.CurrentCell.RowIndex;
-            //HienThiHoaDonTextBox(vitri, bus.GetHoaDon(""));
             try
             {
-                DataGridViewRow row = dataGridViewHD.Rows[e.RowIndex];
-                txtMaHD.Text = row.Cells["MaHDBH"].Value.ToString();
-                comboBoxKH.Text = row.Cells["TenKH"].Value.ToString();
-                //comboBoxNhanVien.Text = d.Rows[vitri]["TenNV"].ToString();
-                dateTimePickerNgaylap.Text = row.Cells["NgayLapHDBH"].Value.ToString();
-                labelTongThanhToan.Text = row.Cells["TongT"].Value.ToString();
-                labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
-                ShowCTHD();
+                XuLyChucNang(true, true);
+                //int vitri = dataGridViewHD.CurrentCell.RowIndex;
+                //HienThiHoaDonTextBox(vitri, bus.GetHoaDon(""));
+                try
+                {
+                    DataGridViewRow row = dataGridViewHD.Rows[e.RowIndex];
+                    txtMaHD.Text = row.Cells["MaHDBH"].Value.ToString();
+                    comboBoxKH.Text = row.Cells["TenKH"].Value.ToString();
+                    //comboBoxNhanVien.Text = d.Rows[vitri]["TenNV"].ToString();
+                    dateTimePickerNgaylap.Text = row.Cells["NgayLapHDBH"].Value.ToString();
+                    labelTongThanhToan.Text = row.Cells["TongT"].Value.ToString();
+                    labelTongThanhToan.Text = string.Format("{0:#,##0}", double.Parse(labelTongThanhToan.Text));
+                    ShowCTHD();
 
+                }
+                catch
+                {
+
+                }
+
+                flag = 1;
+                DataTable TTKH = bus.LayTTKH("Select * From KhachHang Where TenKH=N'" + comboBoxKH.Text + "'");
+                if (comboBoxKH.Text == TTKH.Rows[0]["TenKH"].ToString())
+                {
+                    TenKhachHang = TTKH.Rows[0]["TenKH"].ToString();
+                    DienThoaiKH = TTKH.Rows[0]["DienThoai"].ToString();
+                    DiaChiKH = TTKH.Rows[0]["DiaChi"].ToString();
+                }
             }
             catch
             {
 
-            }
-
-            flag = 1;
-            DataTable TTKH = bus.LayTTKH("Select * From KhachHang Where TenKH=N'" + comboBoxKH.Text + "'");
-            if (comboBoxKH.Text == TTKH.Rows[0]["TenKH"].ToString())
-            {
-                TenKhachHang = TTKH.Rows[0]["TenKH"].ToString();
-                DienThoaiKH = TTKH.Rows[0]["DienThoai"].ToString();
-                DiaChiKH = TTKH.Rows[0]["DiaChi"].ToString();
             }
         }
 

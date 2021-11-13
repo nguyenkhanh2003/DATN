@@ -383,9 +383,9 @@ namespace DoAnCShap
                     cthdbh.KhuyenMai = khuyenmai;
                     cthdbh.ThanhTien = thanhtien;
                     cthdbh.TrangThai = "1";
-                    //lk.MaLK = malk;
-                    //lk.SoLuongTon = slconlai;
-                    //bus.CapNhatSLTon(lk);
+                    lk.MaLK = malk;
+                    lk.SoLuongTon = slconlai;
+                    bus.CapNhatSLTon(lk);
                     bus.AddCTHD(cthdbh);
                 }
                 MessageBox.Show("Thanh Toán Thành Công");
@@ -584,15 +584,15 @@ namespace DoAnCShap
                 errorMes.SetError(txtTienThua, "Sai Số");
                 return;
             }
-            string[] b = MaLK.Split(';');
-            for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
-            {
-                string malk = b[i];
-                int slconlai = int.Parse(dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value.ToString());
-                lk.MaLK = malk;
-                lk.SoLuongTon = slconlai;
-                bus.CapNhatSLTon(lk);
-            }
+            //string[] b = MaLK.Split(';');
+            //for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
+            //{
+            //    string malk = b[i];
+            //    int slconlai = int.Parse(dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value.ToString());
+            //    lk.MaLK = malk;
+            //    lk.SoLuongTon = slconlai;
+            //    bus.CapNhatSLTon(lk);
+            //}
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)

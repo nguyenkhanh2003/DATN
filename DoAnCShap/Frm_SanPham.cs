@@ -129,9 +129,9 @@ namespace DoAnCShap
             {
                 File.Copy(TenHinh, Application.StartupPath + @"\ImageLK\" + Path.GetFileName(pictureBox1.ImageLocation));
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Ảnh đã tồn tại !");
+
             }
         }
 
@@ -168,8 +168,6 @@ namespace DoAnCShap
         {
             if (flag == 1)
             {
-                //try
-                //{
                 if (cboMaLoai.Text == "")
                 {
                     errorMes.BlinkRate = 100;
@@ -272,12 +270,6 @@ namespace DoAnCShap
                     XuLyTextBox(false, true);
                     Clear();
                 }
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Không thể thêm được");
-                //}
-
             }
             if (flag == 2)
             {
