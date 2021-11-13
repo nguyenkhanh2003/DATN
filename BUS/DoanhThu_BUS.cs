@@ -84,5 +84,9 @@ namespace BUS
         {
             return bus.SanPhamTonKho(condition);
         }
+        public DataTable SanPhamHetHang(string condition)
+        {
+            return bus.SanPhamHetHang(condition);
+        }
     }
 }

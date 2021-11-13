@@ -190,6 +190,12 @@
     <Compile Include="Frm_PrintHD.Designer.cs">
       <DependentUpon>Frm_PrintHD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report.Designer.cs">
+      <DependentUpon>Frm_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,11 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM_BanLinhKienPCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PM_BanLinhKienPCDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,6 +295,9 @@
     <EmbeddedResource Include="Frm_PrintHD.resx">
       <DependentUpon>Frm_PrintHD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report.resx">
+      <DependentUpon>Frm_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_SanPham.resx">
       <DependentUpon>Frm_SanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,7 +335,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportHDN.rdlc" />
     <EmbeddedResource Include="ReportPhieuBaoHanh.rdlc" />
+    <EmbeddedResource Include="TKSPHetHang.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PM_BanLinhKienPCDataSet.xsc">
+      <DependentUpon>PM_BanLinhKienPCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PM_BanLinhKienPCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PM_BanLinhKienPCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PM_BanLinhKienPCDataSet.xss">
+      <DependentUpon>PM_BanLinhKienPCDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\CT_HoaDon.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon1.datasource" />
     <None Include="Properties\DataSources\CT_HoaDon2.datasource" />

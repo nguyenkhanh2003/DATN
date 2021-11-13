@@ -26,6 +26,7 @@ namespace DoAnCShap
         Frm_SanPham lk = new Frm_SanPham();
         ReportDataSource rs = new ReportDataSource();
         Frm_PrintHD frm = new Frm_PrintHD();
+        Frm_Report frm_Report = new Frm_Report();
 
         public void HienThiDoanhThu()
         {
@@ -230,6 +231,28 @@ namespace DoAnCShap
             if (radioSPTonKho.Checked == true)
             {
                 SanPhamTonKho();
+            }
+            if (radioSPHetHang.Checked == true)
+            {
+                //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
+                frm_Report.reportViewer2.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
+                //Đường dẫn báo cáo
+                frm_Report.reportViewer2.LocalReport.ReportPath = "TKSPHetHang.rdlc";
+                //Nếu có dữ liệu
+                if (bus.SanPhamHetHang("").Rows.Count > 0)
+                {
+                    //Tạo nguồn dữ liệu cho báo cáo
+                    ReportDataSource rds = new ReportDataSource();
+                    rds.Name = "DataSet5";
+                    rds.Value = bus.SanPhamHetHang("");
+                    //Xóa dữ liệu của báo cáo cũ trong trường hợp người dùng thực hiện câu truy vấn khác
+                    frm_Report.reportViewer2.LocalReport.DataSources.Clear();
+                    //Add dữ liệu vào báo cáo
+                    frm_Report.reportViewer2.LocalReport.DataSources.Add(rds);
+                    //Refresh lại báo cáo
+                    frm_Report.reportViewer2.RefreshReport();
+                    frm_Report.ShowDialog();
+                }
             }
 
         }

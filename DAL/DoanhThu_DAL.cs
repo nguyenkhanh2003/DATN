@@ -105,5 +105,9 @@ namespace DAL
         {
             return KetNoi.GetDataTable("Select TenLK as 'Tên Linh Kiện',SoLuongTon as 'Số Lượng Tồn' From LinhKien Where TrangThai=N'1' and SoLuongTon>5" + condition);
         }
+        public DataTable SanPhamHetHang(string condition)
+        {
+            return KetNoi.GetDataTable("Select MaLK,TenLK,SoLuongTon From LinhKien Where SoLuongTon<5" + condition);
+        }
     }
 }

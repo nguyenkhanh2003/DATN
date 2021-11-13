@@ -328,3 +328,5 @@ C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.exe.licens
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\PictureBoxAbouAmmar.dll
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_GioiThieu.resources
 C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_Alert.resources
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\bin\Debug\TKSPHetHang.rdlc
+C:\Users\Nguyen Khanh\source\repos\DATN\DoAnCShap\obj\Debug\DoAnCShap.Frm_Report.resources
