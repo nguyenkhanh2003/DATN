@@ -32,6 +32,7 @@ namespace DoAnCShap
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Setting));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -44,8 +45,6 @@ namespace DoAnCShap
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnTroGiup = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnChonFontChu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,10 +52,8 @@ namespace DoAnCShap
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
@@ -70,13 +67,22 @@ namespace DoAnCShap
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.webBrowser1);
             this.panel4.Controls.Add(this.groupBox3);
-            this.panel4.Controls.Add(this.groupBox4);
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Location = new System.Drawing.Point(32, 48);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1126, 585);
             this.panel4.TabIndex = 4;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(31, 324);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1031, 240);
+            this.webBrowser1.TabIndex = 11;
             // 
             // groupBox3
             // 
@@ -222,29 +228,6 @@ namespace DoAnCShap
             this.label9.TabIndex = 11;
             this.label9.Text = "WebSite";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnTroGiup);
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(31, 221);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(228, 87);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Trợ Giúp";
-            // 
-            // btnTroGiup
-            // 
-            this.btnTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTroGiup.Image = ((System.Drawing.Image)(resources.GetObject("btnTroGiup.Image")));
-            this.btnTroGiup.Location = new System.Drawing.Point(53, 28);
-            this.btnTroGiup.Name = "btnTroGiup";
-            this.btnTroGiup.Size = new System.Drawing.Size(128, 45);
-            this.btnTroGiup.TabIndex = 5;
-            this.btnTroGiup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTroGiup.UseVisualStyleBackColor = true;
-            this.btnTroGiup.Click += new System.EventHandler(this.button1_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnChonFontChu);
@@ -322,16 +305,6 @@ namespace DoAnCShap
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(31, 324);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1031, 240);
-            this.webBrowser1.TabIndex = 11;
-            // 
             // Frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,7 +319,6 @@ namespace DoAnCShap
             this.panel4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
@@ -376,8 +348,6 @@ namespace DoAnCShap
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnTroGiup;
         private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

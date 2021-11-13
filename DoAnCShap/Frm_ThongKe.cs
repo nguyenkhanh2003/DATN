@@ -153,7 +153,7 @@ namespace DoAnCShap
             chart1.DataSource = bus.DoanhThuCacThang();
             chart1.Series["Doanh Thu"].XValueMember = "Thang";
             chart1.Series["Doanh Thu"].YValueMembers = "TongTien";
-            chart1.Titles.Add("Doanh Thu Các Tháng Năm 2021");
+            chart1.Titles.Add("Doanh Thu Các Tháng");
         }
 
 
