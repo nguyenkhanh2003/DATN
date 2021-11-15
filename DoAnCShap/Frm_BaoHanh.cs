@@ -201,6 +201,7 @@ namespace DoAnCShap
         private void btnThemPhieu_Click(object sender, EventArgs e)
         {
             int KiemTra = 0;
+            int vitri = 0;
             if (comboBoxlK.Text == "")
             {
                 errorMes.BlinkRate = 100;
@@ -223,12 +224,14 @@ namespace DoAnCShap
                 if (comboBoxlK.Text == dataGridViewCTPBH.Rows[i].Cells["MaLKK"].Value.ToString())
                 {
                     KiemTra = 1;
+                    vitri = i;
                     break;
                 }
             }
             if (KiemTra == 1)
             {
-
+                int SL = (int.Parse(txtSL.Text) + int.Parse(dataGridViewCTPBH.Rows[vitri].Cells["SoLuong"].Value.ToString()));
+                dataGridViewCTPBH.Rows[vitri].Cells["SoLuong"].Value = SL.ToString();
             }
             else
             {
@@ -251,6 +254,12 @@ namespace DoAnCShap
                 {
                     errorMes.BlinkRate = 100;
                     errorMes.SetError(comboBoxNV, "? Tên Nhân Viên");
+                    return;
+                }
+                if (comboQuyTrinh.Text == "")
+                {
+                    errorMes.BlinkRate = 100;
+                    errorMes.SetError(comboQuyTrinh, "?");
                     return;
                 }
                 else

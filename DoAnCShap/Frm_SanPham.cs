@@ -546,8 +546,8 @@ namespace DoAnCShap
 
         private void dataGridViewLK_DoubleClick_1(object sender, EventArgs e)
         {
-            xulychucnang(false, true, true);
-            XuLyTextBox(true, false);
+            //xulychucnang(false, true, true);
+            //XuLyTextBox(true, false);
             flag = 2;
         }
 
