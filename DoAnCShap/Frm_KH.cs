@@ -269,8 +269,6 @@ namespace DoAnCShap
 
         private void dataGridViewKH_DoubleClick(object sender, EventArgs e)
         {
-            //xulytextbox(true, false);
-            //xulychucnang(false, true, true);
             flag = 2;
         }
 
@@ -296,31 +294,6 @@ namespace DoAnCShap
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            //if (dataGridViewKH.Rows.Count > 0)
-            //{
-            //    Microsoft.Office.Interop.Excel.Application excelAp = new Microsoft.Office.Interop.Excel.Application();
-            //    excelAp.Application.Workbooks.Add(Type.Missing);
-            //    // Lưu trữ phần header
-            //    for (int i = 1; i < dataGridViewKH.Rows.Count - 1; i++)
-            //    {
-            //        excelAp.Cells[1, i] = dataGridViewKH.Columns[i - 1].HeaderText;
-
-            //    }
-            //    // Lưu trữ hàng và cột vào excel
-            //    for (int i = 0; i < dataGridViewKH.Rows.Count; i++)
-            //    {
-            //        for (int j = 0; j < dataGridViewKH.Rows.Count - 1; j++)
-            //        {
-            //            excelAp.Cells[i + 2, j + 1] = dataGridViewKH.Rows[i].Cells[j].Value.ToString();
-            //        }
-            //    }
-            //    excelAp.Columns.AutoFit();
-            //    excelAp.Visible = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Không có dữ liệu");
-            //}
             try
             {
                 Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
@@ -352,7 +325,6 @@ namespace DoAnCShap
                         }
                     }
 
-                    //Getting the location and file name of the excel to save from user. 
                     SaveFileDialog saveDialog = new SaveFileDialog();
                     saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
                     saveDialog.FilterIndex = 2;

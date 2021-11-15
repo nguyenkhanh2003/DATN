@@ -21,7 +21,7 @@ namespace DoAnCShap
         }
         NhaCungCap_BUS bus = new NhaCungCap_BUS();
         NhaCungCap ncc = new NhaCungCap();
-        bool addnew;
+        int flag = 0;
 
         public void XuLyChucNang(Boolean b1, Boolean b2, Boolean b3)
         {
@@ -108,7 +108,7 @@ namespace DoAnCShap
                 else
                     txtMaNCC.Text = "NCC" + PhatSinhMaNCC(bus.PhatSinhMa(""));
             }
-            addnew = true;
+            flag = 1;
             XuLyTexBox(false, true);
         }
 
@@ -130,6 +130,7 @@ namespace DoAnCShap
         //hien du lieu tu datatable len button
         private void dataGridViewNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            flag = 2;
             //int vitri = dataGridViewNhaCungCap.CurrentCell.RowIndex;
             //HienThiNCC_TXT(vitri, bus.GetData(""));
             try
@@ -158,7 +159,7 @@ namespace DoAnCShap
                     MessageBox.Show("Vui lòng nhấp chọn bên dưới !", "Thông báo !");
                     return;
                 }
-                addnew = false;
+
                 btnSave.Enabled = true;
                 btnCancel.Enabled = true;
                 Display();
@@ -169,7 +170,7 @@ namespace DoAnCShap
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (addnew == true)
+            if (flag == 1)
             {
                 try
                 {
@@ -261,7 +262,7 @@ namespace DoAnCShap
                     return;
                 }
             }
-            else
+            if (flag == 2)
             {
                 if (txtMaNCC.Text == "")
                 {

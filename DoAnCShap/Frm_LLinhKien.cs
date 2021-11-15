@@ -34,7 +34,7 @@ namespace DoAnCShap
 
         public void HienThiSearch(string condition)
         {
-            dataGridViewKH.DataSource = bus.GetSearch("Select * from LoaiLinhKien Where TenLLK Like N'%" + condition + "%'");
+            dataGridViewKH.DataSource = bus.GetSearch("" + condition);
         }
         public void xulytextbox(Boolean b1, Boolean b2)
         {

@@ -22,7 +22,7 @@ namespace DAL
         //Tim Kiem
         public DataTable GetSearch(string condition)
         {
-            return KetNoi.GetDataTable("" + condition);
+            return KetNoi.GetDataTable("Select * from LoaiLinhKien Where TenLLK Like N'%" + condition + "%'");
         }
         // THÊM DỮ LIỆU
         public void AddData(LoaiLinhKien ex)

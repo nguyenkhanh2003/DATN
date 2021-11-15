@@ -262,7 +262,7 @@ namespace DoAnCShap
                         erroMes.SetError(txtCMND, "Đã tồn tại");
                         return;
                     }
-                    if (txtUserName.Text == dataGridViewNhanVien.Rows[i].Cells["UserName"].Value.ToString())
+                    if (txtUserName.Text.ToLower() == dataGridViewNhanVien.Rows[i].Cells["UserName"].Value.ToString().ToLower())
                     {
                         erroMes.BlinkRate = 100;
                         erroMes.SetError(txtUserName, "Đã tồn tại");
@@ -270,6 +270,12 @@ namespace DoAnCShap
                     }
                 }
                 if (txtCMND.Text == "")
+                {
+                    erroMes.BlinkRate = 100;
+                    erroMes.SetError(txtCMND, "? CMND");
+                    return;
+                }
+                if (txtCMND.Text.Length < 10)
                 {
                     erroMes.BlinkRate = 100;
                     erroMes.SetError(txtCMND, "? CMND");
@@ -404,14 +410,6 @@ namespace DoAnCShap
                 else
                 {
                     int KiemTra = 0;
-                    //for (int i = 0; i < dataGridViewNhanVien.Rows.Count - 0; i++)
-                    //{
-                    //    if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
-                    //    {
-                    //        KiemTra = 1;
-                    //        break;
-                    //    }
-                    //}
                     nv.MaNV = txtMaNV.Text;
                     nv.MaCV = cboChucVu.SelectedValue.ToString();
                     nv.TenNV = txtTenNV.Text;
@@ -495,7 +493,6 @@ namespace DoAnCShap
                     {
                         if (TenHinh == dataGridViewNhanVien.Rows[vitri].Cells["HinhAnh"].Value.ToString())
                         {
-                            // Bỏ Qua
                             KiemTra = 1;
                         }
                         else
@@ -504,7 +501,7 @@ namespace DoAnCShap
                             {
                                 if (TenHinh == dataGridViewNhanVien.Rows[i].Cells["HinhAnh"].Value.ToString())
                                 {
-                                    MessageBox.Show(TenHinh);
+                                    //MessageBox.Show(TenHinh);
                                     return;
                                 }
                             }
@@ -615,15 +612,6 @@ namespace DoAnCShap
             xulychucnang(true, true, true);
             xulytextbox(true, false);
             flag = 2;
-            //if (cboChucVu.SelectedValue.ToString() == "CV01")
-            //{
-            //    btnXoa.Enabled = false;
-            //    cboChucVu.Enabled = false;
-            //}
-            //else
-            //{
-
-            //}
             try
             {
                 DataGridViewRow row = dataGridViewNhanVien.Rows[e.RowIndex];

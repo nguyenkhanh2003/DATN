@@ -583,15 +583,6 @@ namespace DoAnCShap
                 errorMes.SetError(txtTienThua, "Sai Số");
                 return;
             }
-            //string[] b = MaLK.Split(';');
-            //for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
-            //{
-            //    string malk = b[i];
-            //    int slconlai = int.Parse(dataGridViewHDBH.Rows[i].Cells["SLConLai"].Value.ToString());
-            //    lk.MaLK = malk;
-            //    lk.SoLuongTon = slconlai;
-            //    bus.CapNhatSLTon(lk);
-            //}
             List<CT_HoaDon> lst = new List<CT_HoaDon>();
             lst.Clear();
             for (int i = 0; i < dataGridViewHDBH.Rows.Count - 0; i++)
@@ -778,12 +769,12 @@ namespace DoAnCShap
 
         private void comboBoxSP_SelectedValueChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("?");
+
         }
 
         private void comboBoxSP_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //MessageBox.Show("?");
+
             DataTable DSSP = bus.LaySP("Select * From LinhKien Where TenLK=N'" + comboBoxSP.Text + "'");
             if (DSSP.Rows.Count > 0)
             {
@@ -821,7 +812,6 @@ namespace DoAnCShap
 
     public class CT_HoaDon
     {
-        //public int STT { get; set; }
         public string TenSP { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }

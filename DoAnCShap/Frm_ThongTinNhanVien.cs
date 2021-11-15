@@ -70,7 +70,7 @@ namespace DoAnCShap
                         p.Size = s;
                         p.SizeMode = PictureBoxSizeMode.StretchImage;
                         pictureBox1.Controls.Add(p);
-                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        Bitmap a = new Bitmap(Application.StartupPath + @"\Image\" + b[i]);
                         p.Image = a;
                         //TenHinh = b[i];
                     }
@@ -89,20 +89,6 @@ namespace DoAnCShap
         {
             this.Close();
         }
-
-
-
-        //public void LuuAnh()
-        //{
-        //    try
-        //    {
-        //        File.Copy(TenHinh, Application.StartupPath + @"\Image\" + Path.GetFileName(pictureBox1.ImageLocation));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Ảnh đã tồn tại !");
-        //    }
-        //}
         public static string CreateMd5(string input)
         {
             MD5 md5 = System.Security.Cryptography.MD5.Create();
@@ -163,6 +149,16 @@ namespace DoAnCShap
         }
 
         private void txtChucVu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtTenNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }

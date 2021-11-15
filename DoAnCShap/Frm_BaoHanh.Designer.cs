@@ -34,10 +34,10 @@ namespace DoAnCShap
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -57,7 +57,16 @@ namespace DoAnCShap
             this.QuyTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2CTPBH = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLK1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCTPBH = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnIn = new System.Windows.Forms.Button();
             this.errorMes = new System.Windows.Forms.ErrorProvider(this.components);
@@ -86,26 +95,17 @@ namespace DoAnCShap
             this.btntimkiem = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtsdtkh = new System.Windows.Forms.TextBox();
-            this.dataGridView2CTPBH = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLK1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2CTPBH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTPBH)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2CTPBH)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -340,6 +340,74 @@ namespace DoAnCShap
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách chi tiết phiếu";
             // 
+            // dataGridView2CTPBH
+            // 
+            this.dataGridView2CTPBH.AllowUserToAddRows = false;
+            this.dataGridView2CTPBH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2CTPBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2CTPBH.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2CTPBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2CTPBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2CTPBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.TenLK1,
+            this.SoLuong1,
+            this.TinhTrang1});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2CTPBH.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView2CTPBH.Location = new System.Drawing.Point(0, 21);
+            this.dataGridView2CTPBH.Name = "dataGridView2CTPBH";
+            this.dataGridView2CTPBH.ReadOnly = true;
+            this.dataGridView2CTPBH.RowHeadersVisible = false;
+            this.dataGridView2CTPBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2CTPBH.Size = new System.Drawing.Size(523, 301);
+            this.dataGridView2CTPBH.TabIndex = 0;
+            this.dataGridView2CTPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2CTPBH_CellClick);
+            this.dataGridView2CTPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView2CTPBH_RowPostPaint);
+            this.dataGridView2CTPBH.DoubleClick += new System.EventHandler(this.dataGridViewCTPBH_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "STT";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // TenLK1
+            // 
+            this.TenLK1.DataPropertyName = "TenLK";
+            this.TenLK1.HeaderText = "Tên linh kiện";
+            this.TenLK1.Name = "TenLK1";
+            this.TenLK1.ReadOnly = true;
+            // 
+            // SoLuong1
+            // 
+            this.SoLuong1.DataPropertyName = "SoLuong";
+            this.SoLuong1.HeaderText = "Số lượng";
+            this.SoLuong1.Name = "SoLuong1";
+            this.SoLuong1.ReadOnly = true;
+            // 
+            // TinhTrang1
+            // 
+            this.TinhTrang1.DataPropertyName = "GhiChu";
+            this.TinhTrang1.HeaderText = "Tình trạng";
+            this.TinhTrang1.Name = "TinhTrang1";
+            this.TinhTrang1.ReadOnly = true;
+            // 
             // dataGridViewCTPBH
             // 
             this.dataGridViewCTPBH.AllowUserToAddRows = false;
@@ -379,6 +447,30 @@ namespace DoAnCShap
             this.dataGridViewCTPBH.TabIndex = 0;
             this.dataGridViewCTPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewCTPBH_RowPostPaint);
             this.dataGridViewCTPBH.DoubleClick += new System.EventHandler(this.dataGridViewCTPBH_DoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // MaLKK
+            // 
+            this.MaLKK.HeaderText = "Tên linh kiện";
+            this.MaLKK.Name = "MaLKK";
+            this.MaLKK.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.HeaderText = "Tình trạng";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
             // 
             // panel2
             // 
@@ -718,98 +810,6 @@ namespace DoAnCShap
             this.txtsdtkh.Size = new System.Drawing.Size(221, 29);
             this.txtsdtkh.TabIndex = 23;
             // 
-            // dataGridView2CTPBH
-            // 
-            this.dataGridView2CTPBH.AllowUserToAddRows = false;
-            this.dataGridView2CTPBH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2CTPBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2CTPBH.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2CTPBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView2CTPBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2CTPBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.TenLK1,
-            this.SoLuong1,
-            this.TinhTrang1});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2CTPBH.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2CTPBH.Location = new System.Drawing.Point(0, 21);
-            this.dataGridView2CTPBH.Name = "dataGridView2CTPBH";
-            this.dataGridView2CTPBH.ReadOnly = true;
-            this.dataGridView2CTPBH.RowHeadersVisible = false;
-            this.dataGridView2CTPBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2CTPBH.Size = new System.Drawing.Size(523, 301);
-            this.dataGridView2CTPBH.TabIndex = 0;
-            this.dataGridView2CTPBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2CTPBH_CellClick);
-            this.dataGridView2CTPBH.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView2CTPBH_RowPostPaint);
-            this.dataGridView2CTPBH.DoubleClick += new System.EventHandler(this.dataGridViewCTPBH_DoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // MaLKK
-            // 
-            this.MaLKK.HeaderText = "Tên linh kiện";
-            this.MaLKK.Name = "MaLKK";
-            this.MaLKK.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.HeaderText = "Tình trạng";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "STT";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // TenLK1
-            // 
-            this.TenLK1.DataPropertyName = "TenLK";
-            this.TenLK1.HeaderText = "Tên linh kiện";
-            this.TenLK1.Name = "TenLK1";
-            this.TenLK1.ReadOnly = true;
-            // 
-            // SoLuong1
-            // 
-            this.SoLuong1.DataPropertyName = "SoLuong";
-            this.SoLuong1.HeaderText = "Số lượng";
-            this.SoLuong1.Name = "SoLuong1";
-            this.SoLuong1.ReadOnly = true;
-            // 
-            // TinhTrang1
-            // 
-            this.TinhTrang1.DataPropertyName = "GhiChu";
-            this.TinhTrang1.HeaderText = "Tình trạng";
-            this.TinhTrang1.Name = "TinhTrang1";
-            this.TinhTrang1.ReadOnly = true;
-            // 
             // Frm_BaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -831,6 +831,7 @@ namespace DoAnCShap
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPBH)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2CTPBH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTPBH)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorMes)).EndInit();
@@ -840,7 +841,6 @@ namespace DoAnCShap
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2CTPBH)).EndInit();
             this.ResumeLayout(false);
 
         }

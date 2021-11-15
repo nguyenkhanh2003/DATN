@@ -232,8 +232,6 @@ namespace DoAnCShap
             }
             else
             {
-                //    object[] t = { comboBoxlK.Text, txtSL.Text, txtGhiChu.Text };
-                //    dataGridViewCTPBH.Rows.Add(t);
                 Add_Datagrid(comboBoxlK.Text, int.Parse(txtSL.Text), txtGhiChu.Text);
             }
         }
@@ -383,7 +381,19 @@ namespace DoAnCShap
 
         private void dataGridViewCTPBH_DoubleClick(object sender, EventArgs e)
         {
-            flag = 2;
+            DialogResult KQ = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (KQ == DialogResult.Yes)
+            {
+                try
+                {
+                    int rowIndex = dataGridViewCTPBH.CurrentCell.RowIndex;
+                    dataGridViewCTPBH.Rows.RemoveAt(rowIndex);
+                }
+                catch
+                {
+
+                }
+            }
         }
 
         private void dataGridViewPBH_DoubleClick(object sender, EventArgs e)
