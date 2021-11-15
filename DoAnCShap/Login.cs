@@ -80,8 +80,6 @@ namespace DoAnCShap
         public static string SetValueForText2 = "";
 
         public static string BtnPhanQuyen;
-
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-L3VUEAK; Initial Catalog =PM_BanLinhKienPC;Integrated Security = True");
         public static string ID_USER = "";
         public static bool IsClose = false;
         public static bool QLNV;//4

@@ -651,7 +651,7 @@ namespace DoAnCShap
                         p.Size = s;
                         p.SizeMode = PictureBoxSizeMode.StretchImage;
                         pictureBox1.Controls.Add(p);
-                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        Bitmap a = new Bitmap(Application.StartupPath + @"\Image\" + b[i]);
                         p.Image = a;
                         TenHinh = b[i];
                     }

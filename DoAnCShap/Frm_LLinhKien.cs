@@ -56,6 +56,7 @@ namespace DoAnCShap
         {
             txtMaLoai.Clear();
             txtTenLoai.Clear();
+            errorMes.Clear();
         }
 
         public string AuToCode(DataTable d)

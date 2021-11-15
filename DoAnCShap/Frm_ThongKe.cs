@@ -139,6 +139,7 @@ namespace DoAnCShap
         }
         public void LoadBieuDo()
         {
+            int year = DateTime.Now.Year;
             var chart = chart1.ChartAreas[0];
             chart.AxisX.IntervalType = DateTimeIntervalType.Number;
 
@@ -154,7 +155,7 @@ namespace DoAnCShap
             chart1.DataSource = bus.DoanhThuCacThang();
             chart1.Series["Doanh Thu"].XValueMember = "Thang";
             chart1.Series["Doanh Thu"].YValueMembers = "TongTien";
-            chart1.Titles.Add("Doanh Thu Các Tháng");
+            chart1.Titles.Add("Doanh Thu Các Tháng Của Năm" + " " + year);
         }
 
 
@@ -315,15 +316,15 @@ namespace DoAnCShap
             {
                 comboBoxNam.Items.Clear();
                 comboBoxNam.Items.Add("Select");
-                for (int i = DateTime.Now.Year; i < DateTime.Now.Year + 5; i++)
+                for (int i = DateTime.Now.Year - 1; i < DateTime.Now.Year + 1; i++)
                 {
                     comboBoxNam.Items.Add(i);
                 }
-                comboBoxNam.Text = DateTime.Now.Year.ToString();
+                //comboBoxNam.Text = DateTime.Now.Year.ToString();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message.ToString());
+
             }
         }
 

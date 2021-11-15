@@ -86,7 +86,6 @@ namespace DoAnCShap
             txtMaHD.ResetText();
             comboBoxNV.ResetText();
             comboBoxSP.ResetText();
-
             txtSDT.ResetText();
             txtMaKH.ResetText();
             txtTenkH.ResetText();
@@ -489,7 +488,7 @@ namespace DoAnCShap
                     errorMes.SetError(txtSDT, "Số điện thoại không được để trống");
                     return;
                 }
-                if (txtSDT.Text.Length < 10)
+                if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 12)
                 {
                     errorMes.BlinkRate = 100;
                     errorMes.SetError(txtSDT, "Số điện thoại không đúng");
@@ -633,8 +632,8 @@ namespace DoAnCShap
             frm_in.reportViewer1.LocalReport.SetParameters(reportParameters);
             this.frm_in.reportViewer1.RefreshReport();
             frm_in.ShowDialog();
-
             XuLyChucNang(true, false);
+            btnInHD.Enabled = false;
         }
 
         private void txtMaHD_KeyDown(object sender, KeyEventArgs e)

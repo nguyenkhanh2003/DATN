@@ -27,7 +27,7 @@ namespace DAL
         //TÌM KIẾM
         public DataTable GetSearch(string Condition)
         {
-            return KetNoi.GetDataTable("" + Condition);
+            return KetNoi.GetDataTable("select MaLK,LoaiLinhKien.TenLLK,NhaCungCap.TenNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuongTon,KhuyenMai,HinhAnh from LinhKien, NhaCungCap,LoaiLinhKien Where NhaCungCap.MaNCC=LinhKien.MaNCC and LoaiLinhKien.MaLLK=LinhKien.MaLLK and LinhKien.TrangThai=N'1' and (TenLK like N'%" + Condition + "%' or MaLK Like N'%" + Condition + "%')");
         }
         // THÊM DỮ LIỆU
         public void AddData(LinhKien ex)

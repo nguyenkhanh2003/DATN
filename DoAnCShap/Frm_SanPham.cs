@@ -35,7 +35,7 @@ namespace DoAnCShap
 
         public void HienThiTimKiem(string condition)
         {
-            dataGridViewLK.DataSource = bus.GetSearch("select MaLK,LoaiLinhKien.TenLLK,NhaCungCap.TenNCC,TenLK,BaoHanh,XuatXu,TinhTrang,DonViTinh,DonGia,SoLuongTon,KhuyenMai,HinhAnh from LinhKien, NhaCungCap,LoaiLinhKien Where NhaCungCap.MaNCC=LinhKien.MaNCC and LoaiLinhKien.MaLLK=LinhKien.MaLLK and LinhKien.TrangThai=N'1' and TenLK like N'%" + condition + "%' ");
+            dataGridViewLK.DataSource = bus.GetSearch("" + condition);
         }
         public void HienThiNSX()
         {
@@ -475,7 +475,7 @@ namespace DoAnCShap
                         p.Size = s;
                         p.SizeMode = PictureBoxSizeMode.StretchImage;
                         pictureBox1.Controls.Add(p);
-                        Bitmap a = new Bitmap(DuongDanFolderHinh + "\\" + b[i]);
+                        Bitmap a = new Bitmap(Application.StartupPath + @"\ImageLK\" + b[i]);
                         p.Image = a;
                         TenHinh = b[i];
 

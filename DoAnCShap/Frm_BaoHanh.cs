@@ -124,6 +124,7 @@ namespace DoAnCShap
             comboBoxlK.ResetText();
             txtSL.ResetText();
             txtGhiChu.ResetText();
+            errorMes.Clear();
         }
         public void HideDGV(Boolean b1, Boolean b2)
         {

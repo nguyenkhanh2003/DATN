@@ -237,7 +237,6 @@ namespace DoAnCShap
                     kh.DiaChi = txtDiaCh.Text;
                     kh.TrangThai = "1";
                     bus.EditData(kh); ;
-                    //MessageBox.Show("Sửa Dữ Liệu Thành Công");
                     xulychucnang(true, false, false);
                     Clear();
                 }

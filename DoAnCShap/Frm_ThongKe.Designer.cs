@@ -41,6 +41,7 @@ namespace DoAnCShap
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioBKhachmuanhieutrongnam = new System.Windows.Forms.RadioButton();
             this.radioButKhachMuaNhieeu = new System.Windows.Forms.RadioButton();
+            this.radioSPHetHang = new System.Windows.Forms.RadioButton();
             this.radioSPTonKho = new System.Windows.Forms.RadioButton();
             this.radioButKhanChiNam = new System.Windows.Forms.RadioButton();
             this.radioButThuChi = new System.Windows.Forms.RadioButton();
@@ -70,7 +71,6 @@ namespace DoAnCShap
             this.comboBoxChi = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.radioSPHetHang = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -94,7 +94,7 @@ namespace DoAnCShap
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 321);
+            this.panel1.Size = new System.Drawing.Size(726, 321);
             this.panel1.TabIndex = 0;
             // 
             // comboBoxThang
@@ -148,7 +148,7 @@ namespace DoAnCShap
             this.panel2.Controls.Add(this.radioButMuaMonth);
             this.panel2.Location = new System.Drawing.Point(7, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(766, 266);
+            this.panel2.Size = new System.Drawing.Size(716, 266);
             this.panel2.TabIndex = 11;
             // 
             // radioBKhachmuanhieutrongnam
@@ -174,6 +174,18 @@ namespace DoAnCShap
             this.radioButKhachMuaNhieeu.TabStop = true;
             this.radioButKhachMuaNhieeu.Text = "Khách hàng mua nhiều trong tháng";
             this.radioButKhachMuaNhieeu.UseVisualStyleBackColor = true;
+            // 
+            // radioSPHetHang
+            // 
+            this.radioSPHetHang.AutoSize = true;
+            this.radioSPHetHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioSPHetHang.Location = new System.Drawing.Point(381, 234);
+            this.radioSPHetHang.Name = "radioSPHetHang";
+            this.radioSPHetHang.Size = new System.Drawing.Size(191, 25);
+            this.radioSPHetHang.TabIndex = 12;
+            this.radioSPHetHang.TabStop = true;
+            this.radioSPHetHang.Text = "Sản phẩm sắp hết hàng";
+            this.radioSPHetHang.UseVisualStyleBackColor = true;
             // 
             // radioSPTonKho
             // 
@@ -213,10 +225,9 @@ namespace DoAnCShap
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(369, -1);
+            this.label1.Location = new System.Drawing.Point(340, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(6, 274);
             this.label1.TabIndex = 11;
@@ -367,10 +378,10 @@ namespace DoAnCShap
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(796, 49);
+            this.dataGridView1.Location = new System.Drawing.Point(744, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(376, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 172);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
             // 
@@ -429,9 +440,9 @@ namespace DoAnCShap
             this.panel4.Controls.Add(this.cboDoanhThu);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.comboBoxChi);
-            this.panel4.Location = new System.Drawing.Point(796, 227);
+            this.panel4.Location = new System.Drawing.Point(744, 227);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(376, 143);
+            this.panel4.Size = new System.Drawing.Size(428, 143);
             this.panel4.TabIndex = 6;
             // 
             // label9
@@ -520,18 +531,6 @@ namespace DoAnCShap
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // radioSPHetHang
-            // 
-            this.radioSPHetHang.AutoSize = true;
-            this.radioSPHetHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioSPHetHang.Location = new System.Drawing.Point(381, 234);
-            this.radioSPHetHang.Name = "radioSPHetHang";
-            this.radioSPHetHang.Size = new System.Drawing.Size(191, 25);
-            this.radioSPHetHang.TabIndex = 12;
-            this.radioSPHetHang.TabStop = true;
-            this.radioSPHetHang.Text = "Sản phẩm sắp hết hàng";
-            this.radioSPHetHang.UseVisualStyleBackColor = true;
             // 
             // Frm_ThongKe
             // 

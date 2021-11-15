@@ -43,7 +43,6 @@ namespace DAL
         {
             KetNoi.ExecuteReader(@"UPDATE NhanVien SET MaCV=N'" + ex.MaCV + "',TenNV=N'" + ex.TenNV + "',GioiTinh=N'" + ex.GioiTinh + "',Email=N'" + ex.Email + "',NgaySinh='" + ex.NgaySinh + "',DienThoai=N'" + ex.DienThoai + "',CMND=N'" + ex.CMND + "',DiaChi=N'" + ex.DiaChi + "',HinhAnh=N'" + ex.HinhAnh + "',UserName=N'" + ex.UserName + "',PassWord=N'" + ex.PassWord + "',TrangThai=N'" + ex.TrangThai + "' Where MaNV='" + ex.MaNV + "' ");
         }
-        // Sửa dữ liệu khi không sửa mật khẩu
 
         //  XÓA DỮ LIỆU
         public void DeleteData(NhanVien ex)
