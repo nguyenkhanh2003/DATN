@@ -80,6 +80,10 @@ namespace BUS
         {
             bus.CapNhatSLKho(ex);
         }
+        public void CapNhatSLKho1(LinhKien ex)
+        {
+            bus.CapNhatSLKho1(ex);
+        }
         public DataTable LayDSSP(string condition)
         {
             return bus.LayDSSP(condition);

@@ -23,10 +23,10 @@ namespace DAL
                 " From HoaDonBanHang Where YEAR(NgayLapHDBH) =" + condition + "");
         }
 
-        public DataTable DoanhThuTheoThang(string condition)
+        public DataTable DoanhThuTheoThang(string condition, string condition1)
         {
             return KetNoi.GetDataTable("SELECT   format(sum([TongTien]),'N0') AS TT" +
-              " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " ");
+              " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=" + condition + " and Year(hd.NgayLapHDBH)=" + condition1 + " ");
         }
         public DataTable KhoanChiTheoThang(string condition)
         {
@@ -38,11 +38,11 @@ namespace DAL
             return KetNoi.GetDataTable("" + condiiton);
         }
 
-        public DataTable SPBanChayTheoThang(string condiiton)
+        public DataTable SPBanChayTheoThang(string condiiton, string condition2)
         {
             return KetNoi.GetDataTable("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng'  " +
                 "FROM CT_HoaDonBanHang ct, HoaDonBanHang hd, LinhKien lk " +
-                "where ct.MaHDBH = hd.MaHDBH and lk.MaLK = ct.MaLK  and MONTH(hd.NgayLapHDBH) =" + condiiton + "" +
+                "where ct.MaHDBH = hd.MaHDBH and lk.MaLK = ct.MaLK  and MONTH(hd.NgayLapHDBH) =" + condiiton + " and Year(hd.NgayLapHDBH)=" + condition2 + "" +
                 " GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC ");
         }
 
@@ -53,11 +53,11 @@ namespace DAL
                 " where ct.MaHDBH = hd.MaHDBH and lk.MaLK = ct.MaLK  and Year(hd.NgayLapHDBH) =" + condiiton + " " +
                 "GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC");
         }
-        public DataTable Top3SPMuaNhieuTrongThang(string condition)
+        public DataTable Top3SPMuaNhieuTrongThang(string condition, string condition1)
         {
             return KetNoi.GetDataTable("SELECT TOP(3) lk.TenLK As'Tên Sản Phẩm', SUM(ct.SoLuong) AS 'Số Lượng'" +
                 " FROM CT_HoaDonNhapHang ct, HoaDonNhapHang hd, LinhKien lk " +
-                "where ct.MaHDNH = hd.MaHDNH and lk.MaLK = ct.MaLK  and Month(hd.NgayLapHDNH) =" + condition + " " +
+                "where ct.MaHDNH = hd.MaHDNH and lk.MaLK = ct.MaLK  and Month(hd.NgayLapHDNH) =" + condition + "and Year(hd.NgayLapHDNH)=" + condition1 + " " +
                 "GROUP BY lk.TenLK ORDER BY SUM(ct.SoLuong) DESC");
         }
         public DataTable Top3SPMuaNhieuTrongName(string condition)
@@ -85,9 +85,9 @@ namespace DAL
             " FROM HoaDonBanHang hd WHERE hd.TrangThai=N'1' and Month(hd.NgayLapHDBH)>0 and MONTH(hd.NgayLapHDBH)<13  Group By Month(hd.NgayLapHDBH) ");
         }
 
-        public DataTable KhachHangMuaNhieu(string condition)
+        public DataTable KhachHangMuaNhieu(string condition, string condition1)
         {
-            return KetNoi.GetDataTable("SELECT TOP(1) kh.TenKH As'Tên Khách Hàng', count(hd.MaHDBH) AS 'Số Lần' FROM  HoaDonBanHang hd,KhachHang kh where kh.MaKH=hd.MaKH and month(hd.NgayLapHDBH) =" + condition + " GROUP BY kh.TenKH ORDER BY count(hd.MaHDBH) DESC");
+            return KetNoi.GetDataTable("SELECT TOP(1) kh.TenKH As'Tên Khách Hàng', count(hd.MaHDBH) AS 'Số Lần' FROM  HoaDonBanHang hd,KhachHang kh where kh.MaKH=hd.MaKH and month(hd.NgayLapHDBH) =" + condition + " and Year(hd.NgayLapHDBH)=" + condition1 + " GROUP BY kh.TenKH ORDER BY count(hd.MaHDBH) DESC");
         }
 
         public DataTable KhachHangMuaNhieuTrongNam(string condition)

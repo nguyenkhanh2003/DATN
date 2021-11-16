@@ -331,19 +331,16 @@ namespace DoAnCShap
 
                 else
                 {
+                    int vitri = dataGridViewLK.CurrentCell.RowIndex;
                     int KiemTra = 0;
-                    for (int i = 0; i < dataGridViewLK.Rows.Count - 0; i++)
+                    if (TenHinh == dataGridViewLK.Rows[vitri].Cells["HinhAnh"].Value.ToString())
                     {
-                        if (TenHinh == dataGridViewLK.Rows[i].Cells["HinhAnh"].Value.ToString())
-                        {
-                            KiemTra = 1;
-                            break;
-                        }
+                        // Bỏ Qua
+                        KiemTra = 1;
                     }
                     lk.MaLK = txtMaLinhKien.Text;
                     lk.MaLLK = cboMaLoai.SelectedValue.ToString();
                     lk.MaNCC = comboBoxNCC.SelectedValue.ToString();
-                    int vitri = dataGridViewLK.CurrentCell.RowIndex;
                     if (dataGridViewLK.Rows.Count > 0)
                     {
                         if (txtTenLinhKien.Text.ToLower() == dataGridViewLK.Rows[vitri].Cells["TenLK"].Value.ToString().ToLower())

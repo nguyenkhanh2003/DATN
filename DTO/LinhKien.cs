@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-   public class LinhKien
+    public class LinhKien
     {
         public string MaLK { get; set; }
         public string MaLLK { get; set; }
@@ -15,7 +15,7 @@ namespace DTO
         public string XuatXu { get; set; }
         public string TinhTrang { get; set; }
         public string DonViTinh { get; set; }
-        public int DonGia { get; set; }
+        public decimal DonGia { get; set; }
         public int SoLuongTon { get; set; }
         public int KhuyenMai { get; set; }
         public string HinhAnh { get; set; }

@@ -87,6 +87,10 @@ values(N'" + exx.MaHDNH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
         {
             KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon=" + ex.SoLuongTon + " Where MaLK=N'" + ex.MaLK + "'");
         }
+        public void CapNhatSLKho1(LinhKien ex)
+        {
+            KetNoi.ExecuteReader(@"Update LinhKien Set SoLuongTon=" + ex.SoLuongTon + ",DonGia=" + ex.DonGia + " Where MaLK=N'" + ex.MaLK + "'");
+        }
         public DataTable LayDSSP(string condition)
         {
             return KetNoi.GetDataTable("" + condition);

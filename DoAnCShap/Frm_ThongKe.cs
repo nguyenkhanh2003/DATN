@@ -46,24 +46,24 @@ namespace DoAnCShap
 
         }
 
-        public void DoanhThuTheoThang(string condition)
+        public void DoanhThuTheoThang(string condition, string condition1)
         {
-            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("" + condition);
+            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("" + condition, condition1);
             cboDoanhThu.DisplayMember = "TT";
         }
 
-        public void SPBanChayTheoThang(string condition)
+        public void SPBanChayTheoThang(string condition, string condition2)
         {
-            dataGridView1.DataSource = bus.SPBanChayTheoThang("" + condition);
+            dataGridView1.DataSource = bus.SPBanChayTheoThang("" + condition, condition2);
         }
 
         public void Top3SanPhamBanTrongNam(string condition)
         {
             dataGridView1.DataSource = bus.Top3SanPhamBanTrongNam("" + condition);
         }
-        public void Top3SPMuaNhieuTrongThang(string condition)
+        public void Top3SPMuaNhieuTrongThang(string condition, string condition1)
         {
-            dataGridView1.DataSource = bus.Top3MuaMonth("" + condition);
+            dataGridView1.DataSource = bus.Top3MuaMonth("" + condition, condition1);
         }
 
         public void Top3SPMuaNhieuTrongNam(string condition)
@@ -82,9 +82,9 @@ namespace DoAnCShap
         //        " FROM HoaDonBanHang hd WHERE Month(hd.NgayLapHDBH)=1 and Year(hd.NgayLapHDBH)=" + comboBoxNam.Text + "");
         //}
 
-        public void Khachhangmuanhieutrongthang(string condition)
+        public void Khachhangmuanhieutrongthang(string condition, string condition1)
         {
-            dataGridView1.DataSource = bus.KhachhangMuaNhieu("" + condition);
+            dataGridView1.DataSource = bus.KhachhangMuaNhieu("" + condition, condition1);
         }
 
         public void KHMuaNhieuTrongNam(string condition)
@@ -92,12 +92,12 @@ namespace DoAnCShap
             dataGridView1.DataSource = bus.KhachHangMuaNhieuTrongNam("" + condition);
         }
 
-        public void KhoanChiThangNay(string condition)
+        public void KhoanChiThangNay(string condition, string condition1)
         {
             comboBoxChi.DataSource = bus.KhoanChiTheoThang("" + condition);
             comboBoxChi.DisplayMember = "TT";
 
-            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("" + condition);
+            cboDoanhThu.DataSource = bus.DoanhThuTheoThang("" + condition, condition1);
             cboDoanhThu.DisplayMember = "TT";
             try
             {
@@ -171,22 +171,15 @@ namespace DoAnCShap
 
             if (radioTheoThang.Checked == true)
             {
-                if (comboBoxThang.Text == "")
-                {
-                    errorMes.BlinkRate = 100;
-                    errorMes.SetError(comboBoxThang, "Chưa chọn tháng");
-                    return;
-                }
-                else
-                {
-                    string condition = comboBoxThang.Text;
-                    DoanhThuTheoThang(condition);
-                }
+                string condition = comboBoxThang.Text;
+                string condition1 = comboBoxNam.Text;
+                DoanhThuTheoThang(condition, condition1);
             }
             if (radioBanNhieuMonth.Checked == true)
             {
                 string condition1 = comboBoxThang.Text;
-                SPBanChayTheoThang(condition1);
+                string condition2 = comboBoxNam.Text;
+                SPBanChayTheoThang(condition1, condition2);
             }
             if (radioDoanhThuYea.Checked == true)
             {
@@ -206,12 +199,14 @@ namespace DoAnCShap
             if (radioButMuaMonth.Checked == true)
             {
                 string condition = comboBoxThang.Text;
-                Top3SPMuaNhieuTrongThang(condition);
+                string condition1 = comboBoxNam.Text;
+                Top3SPMuaNhieuTrongThang(condition, condition1);
             }
             if (radioButKhachMuaNhieeu.Checked == true)
             {
                 string condition = comboBoxThang.Text;
-                Khachhangmuanhieutrongthang(condition);
+                string condition1 = comboBoxNam.Text;
+                Khachhangmuanhieutrongthang(condition, condition1);
             }
             if (radioBKhachmuanhieutrongnam.Checked == true)
             {
@@ -221,7 +216,8 @@ namespace DoAnCShap
             if (radioButThuChi.Checked == true)
             {
                 string condition = comboBoxThang.Text;
-                KhoanChiThangNay(condition);
+                string condition1 = comboBoxNam.Text;
+                KhoanChiThangNay(condition, condition1);
             }
             if (radioButKhanChiNam.Checked == true)
             {

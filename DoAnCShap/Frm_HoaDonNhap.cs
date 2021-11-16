@@ -74,7 +74,7 @@ namespace DoAnCShap
         }
         public void HienThiLK(string condition)
         {
-            comboBoxTenLK.DataSource = lk.GetSearch("Select MaLK,TenLK From LinhKien Where TenLK Like N'%" + condition + "%'");
+            comboBoxTenLK.DataSource = lk.GetSearch("" + condition);
             comboBoxTenLK.DisplayMember = "TenLK";
             comboBoxTenLK.ValueMember = "MaLK";
         }
@@ -383,7 +383,8 @@ namespace DoAnCShap
                         cthdn.TrangThai = "1";
                         LK.MaLK = malk;
                         LK.SoLuongTon = SoLuongKho;
-                        bus.CapNhatSLKho(LK);
+                        LK.DonGia = dongia;
+                        bus.CapNhatSLKho1(LK);
                         bus.AddCTHD(cthdn);
                     }
                     MessageBox.Show("Tạo Hóa Đơn Thành Công ");

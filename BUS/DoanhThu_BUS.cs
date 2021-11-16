@@ -22,9 +22,9 @@ namespace BUS
             return bus.DoanhThuTheoNam(condition);
         }
 
-        public DataTable DoanhThuTheoThang(string condition)
+        public DataTable DoanhThuTheoThang(string condition, string condition1)
         {
-            return bus.DoanhThuTheoThang(condition);
+            return bus.DoanhThuTheoThang(condition, condition1);
         }
 
         public DataTable DoanhThuTheoNgay(string condition)
@@ -32,18 +32,18 @@ namespace BUS
             return bus.DoanhThuTheoNgay(condition);
         }
 
-        public DataTable SPBanChayTheoThang(string condition)
+        public DataTable SPBanChayTheoThang(string condition, string condition2)
         {
-            return bus.SPBanChayTheoThang(condition);
+            return bus.SPBanChayTheoThang(condition, condition2);
         }
 
         public DataTable Top3SanPhamBanTrongNam(string condition)
         {
             return bus.Top3SanPhamBanTrongNam(condition);
         }
-        public DataTable Top3MuaMonth(string condition)
+        public DataTable Top3MuaMonth(string condition, string condition1)
         {
-            return bus.Top3SPMuaNhieuTrongThang(condition);
+            return bus.Top3SPMuaNhieuTrongThang(condition, condition1);
         }
         public DataTable Top3SPMuaYear(string condition)
         {
@@ -63,9 +63,9 @@ namespace BUS
             return bus.DoanhThuCacThang();
         }
 
-        public DataTable KhachhangMuaNhieu(string condition)
+        public DataTable KhachhangMuaNhieu(string condition, string condition1)
         {
-            return bus.KhachHangMuaNhieu(condition);
+            return bus.KhachHangMuaNhieu(condition, condition1);
         }
         public DataTable KhachHangMuaNhieuTrongNam(string condition)
         {

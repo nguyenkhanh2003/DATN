@@ -298,10 +298,10 @@ namespace DoAnCShap
             this.radioButMuaMonth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButMuaMonth.Location = new System.Drawing.Point(3, 188);
             this.radioButMuaMonth.Name = "radioButMuaMonth";
-            this.radioButMuaMonth.Size = new System.Drawing.Size(305, 25);
+            this.radioButMuaMonth.Size = new System.Drawing.Size(298, 25);
             this.radioButMuaMonth.TabIndex = 9;
             this.radioButMuaMonth.TabStop = true;
-            this.radioButMuaMonth.Text = "Top 3 sản phẩm nhập nhiều trong tháng";
+            this.radioButMuaMonth.Text = "Top 3 sản phẩm nhập nhiều theo tháng";
             this.radioButMuaMonth.UseVisualStyleBackColor = true;
             // 
             // label3
