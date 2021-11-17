@@ -13,7 +13,7 @@ namespace DAL
 
         public DataTable GetData(string Condition)
         {
-            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien where TrangThai=N'1' " + Condition);
+            return KetNoi.GetDataTable("Select MaLK,TenLK from LinhKien where TrangThai=N'1' Order By TenLK ASC " + Condition);
         }
         public DataTable GetDSSP(string Condition)
         {

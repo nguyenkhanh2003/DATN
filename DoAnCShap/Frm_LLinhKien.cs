@@ -259,7 +259,5 @@ namespace DoAnCShap
                 txtTenLoai.Text = row.Cells[2].Value.ToString();
             }
         }
-
-
     }
 }

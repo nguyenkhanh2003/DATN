@@ -333,6 +333,7 @@ namespace DoAnCShap
 
         private void btnLuuHd_Click(object sender, EventArgs e)
         {
+
             if (txtMaHD.Text == "")
             {
                 errorMes.BlinkRate = 100;
@@ -355,6 +356,24 @@ namespace DoAnCShap
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(txtMaKH, "? Mã Khách Hàng");
+                return;
+            }
+            if (txtTienKhachDua.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienKhachDua, "?");
+                return;
+            }
+            if (txtTienThua.Text == "")
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienThua, "?");
+                return;
+            }
+            if (decimal.Parse(txtTienThua.Text) < 0)
+            {
+                errorMes.BlinkRate = 100;
+                errorMes.SetError(txtTienThua, "?");
                 return;
             }
             if (flag == 1)
@@ -402,7 +421,7 @@ namespace DoAnCShap
                 errorMes.SetError(txtSDT, "Vui lòng nhập số điện thoại");
                 return;
             }
-            if (txtSDT.Text.Length < 9)
+            if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 13)
             {
                 errorMes.BlinkRate = 100;
                 errorMes.SetError(txtSDT, "?");

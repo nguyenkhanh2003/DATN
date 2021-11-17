@@ -28,7 +28,7 @@ namespace DAL
         // Tim Kiem
         public DataTable GetSearch(string condition)
         {
-            return KetNoi.GetDataTable("Select * from NhaCungCap Where TenNCC Like N'%" + condition + "%' and TrangThai=N'1'");
+            return KetNoi.GetDataTable("Select * from NhaCungCap Where (TenNCC Like N'%" + condition + "%' or Dienthoai Like N'%" + condition + "%' or DiaChi Like N'%" + condition + "%' or Email Like N'%" + condition + "%') and TrangThai=N'1'");
         }
         // THÊM DỮ LIỆU
         public void AddData(NhaCungCap ex)
@@ -46,7 +46,7 @@ namespace DAL
         //  XÓA DỮ LIỆU
         public void DeleteData(NhaCungCap ex)
         {
-            KetNoi.ExecuteReader(@"DELETE FROM NhaCungCap Where MaNCC=N'" + ex.MaNCC + "'");
+            KetNoi.ExecuteReader(@"Update NhaCungCap Set TrangThai=N'0' Where MaNCC=N'" + ex.MaNCC + "'");
         }
 
     }

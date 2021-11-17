@@ -31,6 +31,7 @@ namespace DoAnCShap
         bool addnew = false;
 
         Frm_Setting frm_Setting = new Frm_Setting();
+
         public void HienThiSanPham()
         {
             comboBoxTenLK.DataSource = bus.GetData("");
@@ -253,7 +254,7 @@ namespace DoAnCShap
             KM = decimal.Parse(textBoxChietKhau.Text) * decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) / 100;
             tt = decimal.Parse(textBoxDonGia.Text) * int.Parse(textBoxSoLuong.Text) - KM;
             labelThanhTien.Text = tt.ToString("0,00");
-            labelThanhTien.Text = string.Format("{0:#,##0}", double.Parse(labelThanhTien.Text));
+            labelThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(labelThanhTien.Text));
 
 
             for (int i = 0; i < dataGridViewCTHDNH.Rows.Count - 0; i++)
@@ -383,8 +384,8 @@ namespace DoAnCShap
                         cthdn.TrangThai = "1";
                         LK.MaLK = malk;
                         LK.SoLuongTon = SoLuongKho;
-                        LK.DonGia = dongia;
-                        bus.CapNhatSLKho1(LK);
+                        //LK.DonGia = dongia;
+                        bus.CapNhatSLKho(LK);
                         bus.AddCTHD(cthdn);
                     }
                     MessageBox.Show("Tạo Hóa Đơn Thành Công ");

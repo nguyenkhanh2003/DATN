@@ -232,12 +232,12 @@ namespace DoAnCShap
             // 
             this.groupBox2.Controls.Add(this.btnChonFontChu);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(31, 117);
+            this.groupBox2.Location = new System.Drawing.Point(31, 125);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(228, 87);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thay Đổi Font Chữ Menu";
+            this.groupBox2.Text = "Thay đổi font chữ menu";
             // 
             // btnChonFontChu
             // 
@@ -261,7 +261,7 @@ namespace DoAnCShap
             this.groupBox1.Size = new System.Drawing.Size(228, 87);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thay Đổi Màu Giao Diện";
+            this.groupBox1.Text = "Thay đổi màu giao diện";
             // 
             // btnThayDoi
             // 

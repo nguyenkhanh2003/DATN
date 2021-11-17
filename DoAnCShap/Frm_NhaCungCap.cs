@@ -413,6 +413,8 @@ namespace DoAnCShap
             if (KQ == DialogResult.OK)
             {
                 XuLyChucNang(true, false, false);
+                ClearTextBox();
+                XuLyTexBox(true, false);
             }
         }
 

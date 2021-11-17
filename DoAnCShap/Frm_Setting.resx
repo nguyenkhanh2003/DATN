@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnChonFontChu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAM1JREFUSEvtl9sNgzAMRTNCR2CEjtBRugndpCMwAiMwAqO0vh+WriLHlnmoQs2R
+        zgdxzBWPRFB+yXCQNzHF5yBnMYV1ki1eM3gV3+Qicn0Suc61XcF180vk+kNkuJYOHsknBogo2OvdRRR8
+        Gj24DsYLtVWXKJhrWV16sBeszw3rmcd1faPO4y5RMLZYFdspaAVji+X5LlGwRSs4RQ/uwRbXCr6L/GkT
+        ffow2ltvFDjGOOpNcEXcFMlEve7d+r9gYP2etKyx5qjpX5wTKOULJGdJMX3gi0kAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -132,15 +141,6 @@
         KclvWI00B23tdmS22hLMQ83j0koQ9klsxEzajthEMAa22utqNw7CqCe/ObPgtCpG1AP3JU05EwfW/rtF
         cgoeXZv6Oh37MG/SlsSIbKUPJJ2EXg01DpJhyappSowkCjOSpmF9dwmi/no01DDlVGgLk4fhikQmdL9e
         aLyZ2g0TJ6EoUbVwUId0JwhsxxYkuwNN3POBwB+QkzY8O/OPqgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnChonFontChu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAM1JREFUSEvtl9sNgzAMRTNCR2CEjtBRugndpCMwAiMwAqO0vh+WriLHlnmoQs2R
-        zgdxzBWPRFB+yXCQNzHF5yBnMYV1ki1eM3gV3+Qicn0Suc61XcF180vk+kNkuJYOHsknBogo2OvdRRR8
-        Gj24DsYLtVWXKJhrWV16sBeszw3rmcd1faPO4y5RMLZYFdspaAVji+X5LlGwRSs4RQ/uwRbXCr6L/GkT
-        ffow2ltvFDjGOOpNcEXcFMlEve7d+r9gYP2etKyx5qjpX5wTKOULJGdJMX3gi0kAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnThayDoi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

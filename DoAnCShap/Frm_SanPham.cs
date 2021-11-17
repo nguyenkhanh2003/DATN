@@ -365,7 +365,7 @@ namespace DoAnCShap
                     lk.XuatXu = txtXuatXu.Text;
                     lk.TinhTrang = txtTinhTrang.Text;
                     lk.DonViTinh = txtDonViTinh.Text;
-                    lk.DonGia = int.Parse(txtDonGia.Text);
+                    lk.DonGia = decimal.Parse(txtDonGia.Text);
                     lk.SoLuongTon = int.Parse(txtSoLuong.Text);
                     lk.KhuyenMai = int.Parse(txtKhuyenMai.Text);
                     if (KiemTra == 1)
@@ -454,6 +454,7 @@ namespace DoAnCShap
                 txtTinhTrang.Text = row.Cells["TinhTrang"].Value.ToString();
                 txtDonViTinh.Text = row.Cells["DonViTinh"].Value.ToString();
                 txtDonGia.Text = row.Cells["DonGia"].Value.ToString();
+                txtDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(txtDonGia.Text));
                 txtSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
                 txtKhuyenMai.Text = row.Cells["KhuyenMai"].Value.ToString();
                 string[] b = row.Cells["HinhAnh"].Value.ToString().Split(';');

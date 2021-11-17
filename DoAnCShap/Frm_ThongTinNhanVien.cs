@@ -34,7 +34,7 @@ namespace DoAnCShap
 
         string MatKhau = "";
         string TenHinh = "";
-
+        string TenDN = "";
         private void dataGridViewNhanVien_SelectionChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridViewNhanVien.SelectedRows)
@@ -46,6 +46,7 @@ namespace DoAnCShap
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
                 txtCMND.Text = row.Cells["CMND"].Value.ToString();
                 txtSDT.Text = row.Cells["DienThoai"].Value.ToString();
+                dateTimePickerNgaySinh.Text = row.Cells["NgaySinh"].Value.ToString();
                 string t = row.Cells["GioiTinh"].Value.ToString();
                 if (t == "Nam")
                 {
@@ -80,6 +81,7 @@ namespace DoAnCShap
 
                 }
                 txtUserName.Text = row.Cells["UserName"].Value.ToString();
+                TenDN = row.Cells["UserName"].Value.ToString();
                 MatKhau = row.Cells["PassWord"].Value.ToString();
                 //...
             }
@@ -159,6 +161,16 @@ namespace DoAnCShap
         }
 
         private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtMaNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }

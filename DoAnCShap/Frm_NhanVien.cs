@@ -217,6 +217,7 @@ namespace DoAnCShap
                 else
                     txtMaNV.Text = "NV" + PhatSinhMaNv(bus.PhatSinhMa(""));
             }
+            radioButtonNam.Checked = true;
 
         }
 
@@ -451,7 +452,7 @@ namespace DoAnCShap
                                 if (txtEmail.Text == dataGridViewNhanVien.Rows[i].Cells["Email"].Value.ToString())
                                 {
                                     erroMes.BlinkRate = 100;
-                                    erroMes.SetError(txtSDT, "Đã tồn tại");
+                                    erroMes.SetError(txtEmail, "Đã tồn tại");
                                     return;
                                 }
                             }
@@ -467,7 +468,7 @@ namespace DoAnCShap
                                 if (txtCMND.Text == dataGridViewNhanVien.Rows[i].Cells["CMND"].Value.ToString())
                                 {
                                     erroMes.BlinkRate = 100;
-                                    erroMes.SetError(txtSDT, "Đã tồn tại");
+                                    erroMes.SetError(txtCMND, "Đã tồn tại");
                                     return;
                                 }
                             }
@@ -483,7 +484,7 @@ namespace DoAnCShap
                                 if (txtUserName.Text == dataGridViewNhanVien.Rows[i].Cells["UserName"].Value.ToString())
                                 {
                                     erroMes.BlinkRate = 100;
-                                    erroMes.SetError(txtSDT, "Đã tồn tại");
+                                    erroMes.SetError(txtUserName, "Đã tồn tại");
                                     return;
                                 }
                             }
@@ -886,6 +887,14 @@ namespace DoAnCShap
         }
 
         private void txtSDT_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
             {

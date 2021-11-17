@@ -732,6 +732,7 @@
             this.textBoxSL.Name = "textBoxSL";
             this.textBoxSL.Size = new System.Drawing.Size(277, 29);
             this.textBoxSL.TabIndex = 47;
+            this.textBoxSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSL_KeyPress_1);
             // 
             // txtDonGia
             // 

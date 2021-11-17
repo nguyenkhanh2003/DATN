@@ -28,7 +28,7 @@ namespace DAL
         //Hien Thị Tìm Kiếm
         public DataTable GetTimKiem(string Condition)
         {
-            return KetNoi.GetDataTable("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and NhanVien.TrangThai=N'1' and (TenNV Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' or CMND Like N'%" + Condition + "%')");
+            return KetNoi.GetDataTable("select MaNV,ChucVu.TenCV,TenNV,GioiTinh,Email,NgaySinh,DienThoai,CMND,DiaChi,HinhAnh,UserName,PassWord,NhanVien.TrangThai From NhanVien,ChucVu where NhanVien.MaCV=ChucVu.MaCV and NhanVien.TrangThai=N'1' and (TenNV Like N'%" + Condition + "%' or Email Like N'%" + Condition + "%' or TenCV Like N'%" + Condition + "%' or UserName Like N'%" + Condition + "%' or DiaChi Like N'%" + Condition + "%' or GioiTinh Like N'%" + Condition + "%' or Email Like N'%" + Condition + "%' or DienThoai Like N'%" + Condition + "%' or CMND Like N'%" + Condition + "%')");
         }
 
         // THÊM DỮ LIỆU

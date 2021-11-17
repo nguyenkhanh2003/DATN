@@ -304,6 +304,8 @@ namespace DoAnCShap
             if (flag == 2)
             {
                 pbh.MaPBH = txtMaPhieu.Text;
+                pbh.NgayLap = dateTimePickerNgaLap.Value;
+                pbh.NgayLayHang = dateTimePickerNgayLayHang.Value;
                 pbh.QuyTrinh = comboQuyTrinh.Text;
                 bus.Update_PBH(pbh);
                 HideDGV(true, false);
@@ -330,6 +332,8 @@ namespace DoAnCShap
                     ctpbh.GhiChu = txtGhiChu.Text;
                     bus.Update_CTPBH(ctpbh);
                     pbh.MaPBH = txtMaPhieu.Text;
+                    pbh.NgayLap = dateTimePickerNgaLap.Value;
+                    pbh.NgayLayHang = dateTimePickerNgayLayHang.Value;
                     pbh.QuyTrinh = comboQuyTrinh.Text;
                     bus.Update_PBH(pbh);
                     HideDGV(true, false);
@@ -381,6 +385,7 @@ namespace DoAnCShap
                 MessageBox.Show("Thành Công");
                 HienThiDSPhieu();
                 ClearTextBox();
+                HideDGV(true, false);
             }
             else
             {
@@ -557,6 +562,14 @@ namespace DoAnCShap
             XuLyTexBox(true);
             XuLyChucNang(true, true, false, false);
             XuLyTexBox(true);
+        }
+
+        private void txtSL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

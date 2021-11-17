@@ -216,7 +216,6 @@ namespace DoAnCShap
                 {
 
                 }
-
                 flag = 1;
                 DataTable TTKH = bus.LayTTKH("Select * From KhachHang Where TenKH=N'" + comboBoxKH.Text + "'");
                 if (comboBoxKH.Text == TTKH.Rows[0]["TenKH"].ToString())
@@ -237,15 +236,23 @@ namespace DoAnCShap
         string DiaChiKH;
         private void dataGridViewCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            flag = 2;
             XulyTextBoxCTHD(true, false);
-            DataGridViewRow row = dataGridViewCTHD.Rows[e.RowIndex];
-            comboBoxLK.Text = row.Cells["MaLK"].Value.ToString();
-            textBoxSL.Text = row.Cells["SoLuong"].Value.ToString();
-            txtDonGia.Text = row.Cells["DonGia"].Value.ToString();
-            txtDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(txtDonGia.Text));
-            txtKhuyenMai.Text = row.Cells["KhuyenMai"].Value.ToString();
-            txtThanhTien.Text = row.Cells["ThanhTien"].Value.ToString();
-            txtThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(txtThanhTien.Text));
+            try
+            {
+                DataGridViewRow row = dataGridViewCTHD.Rows[e.RowIndex];
+                comboBoxLK.Text = row.Cells["MaLK"].Value.ToString();
+                textBoxSL.Text = row.Cells["SoLuong"].Value.ToString();
+                txtDonGia.Text = row.Cells["DonGia"].Value.ToString();
+                txtDonGia.Text = string.Format("{0:#,##0}", decimal.Parse(txtDonGia.Text));
+                txtKhuyenMai.Text = row.Cells["KhuyenMai"].Value.ToString();
+                txtThanhTien.Text = row.Cells["ThanhTien"].Value.ToString();
+                txtThanhTien.Text = string.Format("{0:#,##0}", decimal.Parse(txtThanhTien.Text));
+            }
+            catch
+            {
+
+            }
         }
 
         private void dataGridViewHD_DoubleClick(object sender, EventArgs e)
@@ -341,7 +348,7 @@ namespace DoAnCShap
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            try
+            if (flag == 1)
             {
                 if (txtMaHD.Text == "")
                 {
@@ -367,6 +374,28 @@ namespace DoAnCShap
                     errorMes.SetError(labelTongThanhToan, "?  Tổng Tiền");
                     return;
                 }
+
+                else
+                {
+                    //ThanhTienSP();
+                    //cthd.MaHDBH = txtMaHD.Text;
+                    //cthd.MaLK = comboBoxLK.SelectedValue.ToString();
+                    //cthd.SoLuong = int.Parse(textBoxSL.Text);
+                    //cthd.DonGia = decimal.Parse(txtDonGia.Text);
+                    //cthd.KhuyenMai = decimal.Parse(txtKhuyenMai.Text);
+                    //cthd.ThanhTien = decimal.Parse(txtThanhTien.Text);
+                    //bus.UpdateCTHoaDon(cthd);
+                    //HienThiCTHD();
+                    //TongThanhToan();
+                    hdbh.MaHDBH = txtMaHD.Text;
+                    hdbh.MaNV = comboBoxNhanVien.SelectedValue.ToString();
+                    hdbh.NgayLapHDBH = dateTimePickerNgaylap.Value.Date;
+                    hdbh.TongTien = decimal.Parse(labelTongThanhToan.Text);
+                    bus.UpdateHoaDon(hdbh);
+                }
+            }
+            if (flag == 2)
+            {
                 if (comboBoxLK.Text == "")
                 {
                     errorMes.BlinkRate = 100;
@@ -422,11 +451,6 @@ namespace DoAnCShap
                     bus.UpdateHoaDon(hdbh);
                 }
             }
-            catch
-            {
-
-            }
-
             HienThiHoaDon();
         }
 
@@ -642,6 +666,14 @@ namespace DoAnCShap
         }
 
         private void txtTienKDua_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSL_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
             {

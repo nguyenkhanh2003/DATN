@@ -827,6 +827,7 @@ namespace DoAnCShap
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(222, 29);
             this.txtCMND.TabIndex = 41;
+            this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             // 
             // txtPassWord
             // 

@@ -105,6 +105,7 @@ namespace DoAnCShap
                 else
                     txtMaKh.Text = "KH" + PhatSinhMa(bus.PhatSinhMa(""));
             }
+            radioButtonNam.Checked = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -408,6 +409,19 @@ namespace DoAnCShap
         private void txtMaKh_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void txtSdt_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTenkh_Leave(object sender, EventArgs e)
+        {
+            errorMes.Clear();
         }
     }
 }
