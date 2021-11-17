@@ -80,7 +80,7 @@ values(N'" + exx.MaHDNH + "',N'" + exx.MaLK + "'," + exx.SoLuong + "," + exx.Don
 
         public void UpdateHDN(HoaDonNhapHang ex)
         {
-            KetNoi.ExecuteReader(@" update HoaDonNhapHang Set NgayLapHDNH='" + ex.NgayLapHDNH + "',TongTien=" + ex.TongTien + " Where MaHDNH=N'" + ex.MaHDNH + "'");
+            KetNoi.ExecuteReader(@" update HoaDonNhapHang Set MaNCC=N'" + ex.MaNCC + "', NgayLapHDNH='" + ex.NgayLapHDNH + "',TongTien=" + ex.TongTien + " Where MaHDNH=N'" + ex.MaHDNH + "'");
         }
 
         public void CapNhatSLKho(LinhKien ex)

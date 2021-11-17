@@ -310,7 +310,7 @@ namespace DoAnCShap
                 bus.Update_PBH(pbh);
                 HideDGV(true, false);
             }
-            if (addnew == true)
+            if (flag == 3)
             {
                 if (txtSL.Text == "")
                 {
@@ -557,7 +557,7 @@ namespace DoAnCShap
             comboBoxlK.Text = row.Cells[1].Value.ToString();
             txtSL.Text = row.Cells[2].Value.ToString();
             txtGhiChu.Text = row.Cells[3].Value.ToString();
-            addnew = true;
+            flag = 3;
             btnThemSP.Enabled = false;
             XuLyTexBox(true);
             XuLyChucNang(true, true, false, false);
